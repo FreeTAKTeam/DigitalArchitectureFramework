@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="4.2" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" cx="190" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dGoal" type="" description="" unit="" values="" default="Goal"/>
+					<Tag name="DAF::dRequirement" type="" description="" unit="" values="" default="Requirement"/>
+					<Tag name="DAF::dFeature" type="" description="" unit="" values="" default="Feature"/>
+					<Tag name="DAF::dRisk(UML::Class)" type="" description="" unit="" values="" default="Risk"/>
+					<Tag name="DAF::dIssue" type="" description="" unit="" values="" default="Issue"/>
+					<Tag name="DAF::dDecision" type="" description="" unit="" values="" default="Decision"/>
+					<Tag name="DAF::dUserStory" type="" description="" unit="" values="" default="User Story"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stakeholder" alias="Stakeholder" notes="Contains the various elements for Stakeholder. " cx="292" cy="106" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dOpinion" type="" description="" unit="" values="" default="Opinion"/>
+					<Tag name="DAF::dAccord" type="" description="" unit="" values="" default="Accord"/>
+					<Tag name="DAF::dOpinionInner" type="" description="" unit="" values="" default="Opinion Inner"/>
+					<Tag name="DAF::dDiscord" type="" description="" unit="" values="" default="Discord"/>
+					<Tag name="DAF::dStakeHolder" type="" description="" unit="" values="" default="Stakeholder"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="BPMN" notes="" cx="325" cy="231" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="BPMN2.0::BusinessProcess" type="" description="" unit="" values="" default="Activity"/>
+					<Tag name="BPMN2.0::Activity" type="" description="" unit="" values="" default="Activity"/>
+					<Tag name="BPMN2.0::DataObject" type="" description="" unit="" values="" default="DataObject"/>
+					<Tag name="BPMN2.0::GlobalTask" type="" description="" unit="" values="" default="Activity"/>
+					<Tag name="BPMN2.0::DataStore" type="" description="" unit="" values="" default="DataStore"/>
+					<Tag name="BPMN2.0::Group" type="" description="" unit="" values="" default="Group"/>
+					<Tag name="BPMN2.0::Pool" type="" description="" unit="" values="" default="Pool"/>
+					<Tag name="BPMN2.0::Lane" type="" description="" unit="" values="" default="Lane"/>
+					<Tag name="BPMN2.0::Message" type="" description="" unit="" values="" default="Message"/>
+					<Tag name="BPMN2.0::StartEvent" type="" description="" unit="" values="" default="StartEvent"/>
+					<Tag name="BPMN2.0::IntermediateEvent" type="" description="" unit="" values="" default="IntermediateEvent"/>
+					<Tag name="BPMN2.0::EndEvent" type="" description="" unit="" values="" default="EndEvent"/>
+					<Tag name="BPMN2.0::Gateway" type="" description="" unit="" values="" default="Gateway"/>
+					<Tag name="BPMN2.0::TextAnnotation" type="" description="" unit="" values="" default="TextAnnotation"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Requirements Relationships" notes="" cx="387" cy="101" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="Relationships::is related to risk(UML::Dependency)" type="" description="" unit="" values="" default="Related Risk"/>
+					<Tag name="Relationships::is related to(UML::Association)" type="" description="" unit="" values="" default="Goal-Req."/>
+					<Tag name="Relationships::isSatisfiedBy(UML::Realization)" type="" description="" unit="" values="" default="Requirement Feature"/>
+					<Tag name="Relationships::realized by Issue(UML::Realization)" type="" description="" unit="" values="" default="Issue- Risk"/>
+					<Tag name="Relationships::StopTheRealizationOf(UML::Association)" type="" description="" unit="" values="" default="Requirement Issue "/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

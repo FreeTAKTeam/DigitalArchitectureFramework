@@ -1,0 +1,80 @@
+shape main
+{
+	layouttype="topdown";
+	v_align="top";
+	h_align="center";
+	noShadow="true";
+		
+	if(hasproperty("rectanglenotation","0"))
+	{		
+				
+		defsize(100,100);
+		Rectangle(0,0,100,100);
+		AddSubShape("pip",100,20);
+		AddSubShape("Tags",100,110);
+		
+		shape pip
+		{		         	
+			v_align="top";
+			h_align="center";
+			editablefield = "name";
+			//setfillcolor(255,0,0);
+			rectangle(0, 0, 100, 100);	
+			//println("Tag Notation");
+		
+			println("#name#");
+		}	
+	shape Tags
+		{		
+		h_align="Left";
+		v_align="top";
+			
+		SetPenColor(GetUserBorderColor());
+		//setfillcolor(0,255,0);	
+		Rectangle(0,0,100,100);
+		println("Subject Area: #TAG:Subject Area#");
+		println("Topic: #TAG:Topic#");
+		println("Assumptions: #TAG:Assumptions#");
+		println("Alternatives: #TAG:Alternatives#");
+		println("Implications: #TAG:Implications#");
+		println("Decision: #TAG:Decision#");
+		println("Motivation: #TAG:Motivation#");
+		println("Related Decisions: #TAG:Alternatives#");				
+		}
+	}
+	else
+	{
+		defsize(100,100);
+		Rectangle(0,0,100,100);
+		addsubshape("padding");
+		addsubshape("name");
+		
+		shape padding
+		{
+			preferredheight=20;
+			h_align="center";
+			v_align="top";
+			//println("padding");
+		}
+
+		shape name
+		{
+			h_align="center";
+			v_align="center";
+			setfillcolor(230,255,0);
+			SetPenColor(255,0,0);
+					
+			if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}  
+			println("#name#");
+		}
+	}
+}
+
+decoration dDecisionDecoration
+{
+	orientation="NE";
+	Image("dafDecision", 0,0,100,100);
+}

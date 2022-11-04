@@ -1,0 +1,16 @@
+﻿Name,Author,BaseType,ID,Category,BizSatisfaction,ITSatisfaction,Cost,InvestmentStrategy,LastStandardReviewDate,NextStandardReviewDate,RetireDate,Owner,Source,Guid
+Browser,Giuseppe Platania,Component,01,Packaged,23,45,10,Retain,01-01-2010,,12-31-2026,Stefan Gläser,,{DF4D539C-87AD-4618-983A-A77956A3D7E9}
+EC Call center,Giuseppe Platania,Component,02,Database,25,55,145,Rehost,01-01-2015,,01-01-2022,Björn Wagner,,{5403CB4E-C446-4d45-935A-3ABCFE282FC5}
+Field Sale web server,Giuseppe Platania,Component,03,Custom,25,33,21,Refactor,4/21/2019,,04-17-2024,Björn Wagner,,{0AF8C25D-7E46-4979-A9BB-B1FD114A12F2}
+Field Service,Giuseppe Platania,Component,04,Custom,5,70,22,Rewrite,4/21/2019,,04-25-2025,Florian Merz,,{E0152652-F140-4947-9B13-F14E6357F506}
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,

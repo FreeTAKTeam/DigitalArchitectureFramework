@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<RefData version="1.0" exporter="EA.25">
+	<DataSet name="Diagram Matrix Profiles" table="t_trxtypes where Description='matrixitem'" filter="TRX='#TRX#' AND NumericWeight=#NumericWeight#" stoplist=";TRX_ID;">
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Capability ,Maturity ,Model,0,0,0,0,0,0,0,0,Arial,Arial,Arial,22,22,22,0,0,0,0,0,0,0,0,0,0,0,0,200,55,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="1"/>
+			<Column name="Style" value="{A1CEE2B9-0485-4016-881C-6491009190E3}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,Lev 5,Measured,Innovative approaches@&amp;coma&amp; transformational culture,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="2"/>
+			<Column name="Style" value="{676A4F84-933C-44ce-8CDC-952AB3BFBD42}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Multi channel ,Capabilities,,0,0,0,0,16777215,0,0,8421504,Arial,Arial,Arial,18,16,12,0,0,0,0,1,0,0,0,0,0,0,0,107,59,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="3"/>
+			<Column name="Style" value="{ABE28F54-D374-45e7-A4D5-30C9AA9DE968}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Search,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,0,0,0,0,0,0,90,200,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="4"/>
+			<Column name="Style" value="{3AAC4AF4-6A5A-4926-8CEE-AE77C7783D8B}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,Choose,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,0,0,0,0,0,0,84,200,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="5"/>
+			<Column name="Style" value="{E4695B3A-85F2-4aa5-83A8-0668F330FE1D}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,Purchase,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,0,0,0,0,0,0,96,200,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="6"/>
+			<Column name="Style" value="{5F5D0A16-9781-42ab-ADAB-153EC53C3B80}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Column,Return,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,0,0,0,0,0,0,89,200,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="7"/>
+			<Column name="Style" value="{A9FC261B-5C40-4377-B272-5B26DD708873}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Row,Stores,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,1,0,0,0,0,0,200,70,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="8"/>
+			<Column name="Style" value="{CD8842F1-0340-475b-BA07-A8A2579BB9DB}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,Online,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,1,0,0,0,0,0,200,70,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="9"/>
+			<Column name="Style" value="{44874EC7-B31C-4be5-A42F-304A72C6652A}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="7.000000"/>
+			<Column name="Notes" value="Row,Call center,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,1,0,0,0,0,0,200,78,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="10"/>
+			<Column name="Style" value="{F30D2C37-F6AB-4654-B882-3244768163A2}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="8.000000"/>
+			<Column name="Notes" value="Row,Sale agent,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,1,0,0,0,0,0,200,77,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="11"/>
+			<Column name="Style" value="{FDF58783-C240-46b4-9172-1E29D5AAE3A6}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="9.000000"/>
+			<Column name="Notes" value="Row,Smart Phone,,,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,18,12,12,0,0,0,0,0,0,1,0,0,0,0,0,200,88,"/>
+			<Column name="TRX" value="Multichannel"/>
+			<Column name="TRX_ID" value="12"/>
+			<Column name="Style" value="{710B8AC8-DC5E-40da-8593-64CD23038654}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Row,,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,361,"/>
+			<Column name="TRX" value="Magic Quadrant"/>
+			<Column name="TRX_ID" value="13"/>
+			<Column name="Style" value="{EC9099D7-AC15-4c99-B6B3-8B9D5EA2EC5E}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Column,Support,Enhancing Systems and Infrastructure,,0,0,0,0,16777215,16777215,0,16711935,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,292,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="14"/>
+			<Column name="Style" value="{FD0A2616-D2D8-486b-8B47-B2A6CCF0BDD5}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,Customer,Increasing Customer Value,,0,0,0,0,16777215,16777215,0,128,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,282,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="15"/>
+			<Column name="Style" value="{AA0751B8-B44A-4e16-8F53-DAEB24EDC5DF}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="8.000000"/>
+			<Column name="Notes" value="Row,Lev 3,Defined,Proactive approach to customer engagement ,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="16"/>
+			<Column name="Style" value="{62412A24-CFF2-432c-BE70-5A87747BC8D7}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,707,200,"/>
+			<Column name="TRX" value="Magic Quadrant"/>
+			<Column name="TRX_ID" value="17"/>
+			<Column name="Style" value="{FEED37AB-437D-4088-B361-B8C90E21CE8D}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Column,Process Management,Improving Visibility and accountability,,0,0,0,0,16777215,16777215,0,17151,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,276,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="18"/>
+			<Column name="Style" value="{24F094DA-DD63-49df-94FD-621A9B7708D3}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="10.000000"/>
+			<Column name="Notes" value="Row,Lev 1,Initial,Ad hoc approaches,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="19"/>
+			<Column name="Style" value="{6C3C16A4-9A00-48dc-93BF-C248A85357CC}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Row,,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,552,"/>
+			<Column name="TRX" value="Magic Quadrant"/>
+			<Column name="TRX_ID" value="20"/>
+			<Column name="Style" value="{3E2C8E26-DA02-4ef5-9CA8-15B453DF23F9}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,735,200,"/>
+			<Column name="TRX" value="Magic Quadrant"/>
+			<Column name="TRX_ID" value="21"/>
+			<Column name="Style" value="{B5C09FC4-9EB7-41a2-86EC-B7EF5118C66D}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,People,Extending Competencies and teams,,0,0,0,0,15793151,16777215,0,32768,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,284,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="22"/>
+			<Column name="Style" value="{50188780-E077-4d93-A566-1BC43061CC01}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="9.000000"/>
+			<Column name="Notes" value="Row,Lev 2,Under Development,Reactive approach to customer requests ,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="23"/>
+			<Column name="Style" value="{D94F12AA-D08B-44a7-B984-923BB966578D}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Capabilities,Investment,Plan,0,0,0,0,0,0,0,0,Arial,Arial,Arial,28,28,28,0,0,0,0,0,0,0,0,0,0,0,0,216,94,"/>
+			<Column name="TRX" value="Magic Quadrant"/>
+			<Column name="TRX_ID" value="24"/>
+			<Column name="Style" value="{A8745D18-4B52-44d2-9A2E-1463BBE1BD7F}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Leadership,Building Vision and performance,,0,0,0,0,16777215,15793151,0,16711680,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,326,122,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="25"/>
+			<Column name="Style" value="{EA4DF347-A1FE-40b3-89F0-B8FEDEAE8CD3}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="7.000000"/>
+			<Column name="Notes" value="Row,Lev 4, Managed,Quantifiable performance management,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability Domain / lev"/>
+			<Column name="TRX_ID" value="26"/>
+			<Column name="Style" value="{6ED8CC51-A06E-42b7-9B60-DBDA978B46EC}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Capability ,Maturity ,Model,0,0,0,0,0,0,0,0,Arial,Arial,Arial,22,22,22,0,0,0,0,0,0,0,0,0,0,0,0,200,55,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="27"/>
+			<Column name="Style" value="{00F4FE32-A65E-4cbb-88C9-2A9229AFF370}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Leadership,Building Vision and performance,Capabilities that respond to  change and action the necessary steps for evolving business,0,0,0,0,16777215,15793151,16777215,16711680,Arial,Arial,Arial,16,12,8,0,0,0,0,1,0,0,0,0,0,0,0,326,122,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="28"/>
+			<Column name="Style" value="{A970503B-9488-4013-AD78-D8EB73C9244A}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,Customer,Increasing Customer Value,,0,0,0,0,16777215,16777215,0,128,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,282,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="29"/>
+			<Column name="Style" value="{D5B39493-23B3-4c47-B203-ED54DC569C63}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,People,Extending Competencies and teams,,0,0,0,0,15793151,16777215,0,32768,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,284,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="30"/>
+			<Column name="Style" value="{DD126F04-813D-48da-B087-3787FA8A49B2}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Column,Process Management,Improving Visibility and accountability,Capabilities that are core to the Retail business.,0,0,0,0,16777215,16777215,15793151,17151,Arial,Arial,Arial,16,12,10,0,0,0,0,1,0,0,0,0,0,0,0,276,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="31"/>
+			<Column name="Style" value="{20FE100B-6A94-4358-BF75-B90CFC035BF1}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Column,Support,Enhancing Systems and Infrastructure,,0,0,0,0,16777215,16777215,0,16711935,Arial,Arial,Arial,16,12,12,0,0,0,0,1,0,0,0,0,0,0,0,292,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="32"/>
+			<Column name="Style" value="{F65A67BB-22A6-42da-9563-310C01ECDFF5}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,Lev 5,Measured,Innovative approaches@&amp;coma&amp; transformational culture,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="33"/>
+			<Column name="Style" value="{BE01C0BE-4469-4644-92EC-AA7A0FBCA5E2}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="7.000000"/>
+			<Column name="Notes" value="Row,Lev 4, Managed,Quantifiable performance management,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="34"/>
+			<Column name="Style" value="{5CD30241-1C21-4928-A371-1E29F5ABC715}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="8.000000"/>
+			<Column name="Notes" value="Row,Lev 3,Defined,Proactive approach to customer engagement ,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="35"/>
+			<Column name="Style" value="{72F752EE-32CE-4406-AC7A-D0AE0953FF35}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="9.000000"/>
+			<Column name="Notes" value="Row,Lev 2,Under Development,Reactive approach to customer requests ,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="36"/>
+			<Column name="Style" value="{CE8B0013-F292-461f-B705-672CF7AE3889}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="10.000000"/>
+			<Column name="Notes" value="Row,Lev 1,Initial,Ad hoc approaches,0,0,0,0,0,0,0,10789024,Arial,Arial,Arial,12,20,9,0,0,0,0,1,0,1,0,0,0,0,0,200,202,"/>
+			<Column name="TRX" value="Capability / Domain matrix"/>
+			<Column name="TRX_ID" value="37"/>
+			<Column name="Style" value="{DAF0A2E0-84CA-4289-89C1-4424C5CEE987}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Stake Holders Matrix,Architecture only,,0,0,0,0,0,11119017,0,14474460,Arial,Arial,Arial,12,12,12,0,1,0,0,0,0,0,0,0,0,0,0,124,50,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="38"/>
+			<Column name="Style" value="{7E2D9025-8C30-423a-A273-FF0BF591E556}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Low,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="39"/>
+			<Column name="Style" value="{7F42FF13-775F-402b-98EE-7F6D6ECA08B0}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,Medium,Legitimacy,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,14,12,0,1,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="40"/>
+			<Column name="Style" value="{B1F98B67-E511-4b61-A65F-B64363C8A04F}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,High,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="41"/>
+			<Column name="Style" value="{7172961C-C6E6-411a-84C3-1E8B18FD2D64}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Row,High,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,160,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="42"/>
+			<Column name="Style" value="{FA16D148-CE07-4113-88FF-7A829315CE35}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Row,Medium,Urgency,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,14,12,0,1,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="43"/>
+			<Column name="Style" value="{44C43867-FE7A-4012-9FD9-D9D89614CFD2}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,Low,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="User"/>
+			<Column name="TRX_ID" value="44"/>
+			<Column name="Style" value="{633DAE38-B80A-42fa-B086-7047B0D0E68E}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Stake Holders Matrix,,,0,0,0,0,0,0,0,0,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,124,50,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="45"/>
+			<Column name="Style" value="{5C0AAC3F-87A5-4f6d-B8DC-D051310C91C1}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Low,,,0,0,0,0,0,0,0,15130800,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="46"/>
+			<Column name="Style" value="{64B1AAFC-0D02-4d67-B4E4-E46987444DE5}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,Medium,Legitimacy,,0,0,0,0,0,0,0,15130800,Arial,Arial,Arial,12,14,12,0,1,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="47"/>
+			<Column name="Style" value="{D9D7CF64-E26A-445d-82EE-55486D2D34B8}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,High,,,0,0,0,0,0,0,0,15130800,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="48"/>
+			<Column name="Style" value="{407E1A91-DDD3-403e-9772-D63C6ABF0544}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Row,High,,,0,0,0,0,0,0,0,14481663,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,160,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="49"/>
+			<Column name="Style" value="{5DCD7A6E-1424-4861-A3EC-25F9540D9F3F}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Row,Medium,Urgency,,0,0,0,0,0,0,0,14481663,Arial,Arial,Arial,12,14,12,0,1,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="50"/>
+			<Column name="Style" value="{9F73B9A4-5547-4abf-ADB5-2F2F4C7BB92B}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,Low,,,0,0,0,0,0,0,0,14481663,Arial,Arial,Arial,12,12,12,0,0,0,0,0,0,0,0,0,0,0,0,200,200,"/>
+			<Column name="TRX" value="Stakeholders"/>
+			<Column name="TRX_ID" value="51"/>
+			<Column name="Style" value="{CE1A29A3-B1BE-4d99-929D-ACCDE8F8B8B8}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="0.000000"/>
+			<Column name="Notes" value="Heading,Product Lifecycle ,Diagram,,0,0,1,0,8388608,8388608,0,15780518,Georgia,Georgia,Arial,22,22,12,0,0,0,1,1,0,0,0,0,0,0,0,171,55,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="106"/>
+			<Column name="Style" value="{043355BE-E06E-42a0-A506-F1CC66903841}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="1.000000"/>
+			<Column name="Notes" value="Column,Development,pre stage,,0,0,1,0,0,8421504,0,15780518,Arial,Arial,Arial,20,20,12,1,0,0,0,0,0,0,0,0,0,0,0,176,200,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="107"/>
+			<Column name="Style" value="{DEC3F209-5F2A-4195-AE62-6D0C064CD050}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="2.000000"/>
+			<Column name="Notes" value="Column,introduction,initial,,0,0,1,0,0,8421504,0,15780518,Arial,Arial,Arial,20,20,12,1,0,0,0,0,0,0,0,0,0,0,0,167,200,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="108"/>
+			<Column name="Style" value="{B822D56C-9D16-4933-AF30-64AFA30B786B}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="3.000000"/>
+			<Column name="Notes" value="Column,Growth,innovation,,0,0,1,0,0,8421504,0,15780518,Arial,Arial,Arial,20,20,12,1,0,0,0,0,0,0,0,0,0,0,0,171,200,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="109"/>
+			<Column name="Style" value="{4450AB20-CB32-4136-BBCA-8209037EC9DC}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="4.000000"/>
+			<Column name="Notes" value="Column,Maturity,limit,,0,0,1,0,0,8421504,0,15780518,Arial,Arial,Arial,20,20,12,1,0,0,0,0,0,0,0,0,0,0,0,165,200,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="110"/>
+			<Column name="Style" value="{AADD2D77-74CD-42aa-9DE3-8A6FA7D890CB}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="5.000000"/>
+			<Column name="Notes" value="Column,Decline,exit,,0,0,1,0,0,8421504,0,15780518,Arial,Arial,Arial,20,20,12,1,0,0,0,0,0,0,0,0,0,0,0,176,200,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="111"/>
+			<Column name="Style" value="{FBB45074-29AC-4f89-BEF4-07344B2B4F01}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="6.000000"/>
+			<Column name="Notes" value="Row,High,,,0,0,0,0,0,0,0,15780518,Arial,Arial,Arial,20,14,12,1,0,0,0,0,0,0,0,0,0,0,0,200,142,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="112"/>
+			<Column name="Style" value="{8250DED5-B9B4-4d72-BC62-4A454AED8714}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="7.000000"/>
+			<Column name="Notes" value="Row,Medium,,,0,0,0,0,0,0,0,15780518,Arial,Arial,Arial,20,14,12,1,0,0,0,0,0,0,0,0,0,0,0,200,141,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="113"/>
+			<Column name="Style" value="{1F038B3A-48F8-43d4-9B57-1320279BFA1A}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="8.000000"/>
+			<Column name="Notes" value="Row,Low,,,0,0,0,0,0,0,0,15780518,Arial,Arial,Arial,20,14,12,1,0,0,0,0,0,0,0,0,0,0,0,200,144,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="114"/>
+			<Column name="Style" value="{2CC0D1A2-46EE-478d-A31D-36C601246770}"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Description" value="matrixitem"/>
+			<Column name="NumericWeight" value="9.000000"/>
+			<Column name="Notes" value="Row,sub zero,,,0,0,0,0,0,0,0,15780518,Arial,Arial,Arial,20,14,12,1,0,0,0,0,0,0,0,0,0,0,0,200,131,"/>
+			<Column name="TRX" value="ProductLifeCycle"/>
+			<Column name="TRX_ID" value="115"/>
+			<Column name="Style" value="{8EAE4770-E20F-4454-AE7D-EBA70FC228FC}"/>
+		</DataRow>
+	</DataSet>
+</RefData>

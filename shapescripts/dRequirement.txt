@@ -1,0 +1,49 @@
+shape main
+{
+ layouttype = "border";
+ h_align = "left";
+ v_align = "center";
+ DefSize(150,55);
+ Addsubshape("borderBlock","W");
+
+ SetFillColor(GetDefaultFillColor());
+ SetPenColor(GetDefaultFillColor());	
+addsubshape("padding","n");
+ AddSubShape("nameCompartment","CENTER");
+
+	shape borderBlock
+{
+	layouttype = "leftright";
+	preferredWidth=20;
+	SetFillColor(GetStatusColor());
+	SetPenColor(GetUserBorderColor());	
+	rectangle(0,0,120,100);
+	
+	}
+	
+	
+shape nameCompartment
+{
+	h_align = "left";
+	v_align = "center";
+	editablefield = "name";
+	SetPenColor(GetUserBorderColor());
+	Rectangle(0,0,100,100);
+	SetFontColor(0,0,0);
+	println("#name#");
+	//Println("#GetStatusColor()#");
+}
+
+	shape padding
+	{
+		preferredheight=20;
+	}
+	
+	
+}	
+
+decoration dRequirementDecoration
+{
+	orientation="NE";
+	Image("dafRequirement", 0,0,100,100);
+}

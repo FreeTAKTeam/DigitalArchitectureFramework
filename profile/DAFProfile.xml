@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha" notes="Initial version created on 13-Jan-2016. &#xA;Added all shapes. &#xA;Added Icons. &#xA;Modified Delta to Lowercase (S type symbol) from Upper case (triangle) &#xA;3.0.0.M: Added diagram and remaining toolbox profiles. &#xA;3.0.0.N: Added all the quick linker for component creation. &#xA;3.0.0.O - Added quick linker for existing components and modified icons. &#xA;3.0.0.P - updated with views and tool boxes. &#xA;3.0.0.Q - updated with Default size and colors&#xA;3.0.0.R - Added table, model and physical service and quick linker for the components. &#xA;3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation. &#xA;3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile. &#xA;3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram. &#xA;3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram)&#xA;3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output. &#xA;3.1 - new revamped 2018 version updated to Sparx 14&#xA;3.1.3 added Event&#xA;3.2 Updated for EA 14.1&#xA;3.3 update to comply with TOGAF 9.2&#xA;3.3.8 fixed quicklinker, diagrams&#xA;3.3.9 added Application Investment disposition&#xA;3.3.12 added KPI tagged value&#xA;3.3.15 Added Dots for evaluation&#xA;3.4 added masked types for tagged values&#xA;3.4.2 consolidated actors, shape script &#xA;3.4.5 consolidated colors&#xA;3.4.10 shape script functions&#xA;3.5 adding additional shape script functions&#xA;4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???)&#xA;4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
+	<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha11" notes="Initial version created on 13-Jan-2016. &#xA;Added all shapes. &#xA;Added Icons. &#xA;Modified Delta to Lowercase (S type symbol) from Upper case (triangle) &#xA;3.0.0.M: Added diagram and remaining toolbox profiles. &#xA;3.0.0.N: Added all the quick linker for component creation. &#xA;3.0.0.O - Added quick linker for existing components and modified icons. &#xA;3.0.0.P - updated with views and tool boxes. &#xA;3.0.0.Q - updated with Default size and colors&#xA;3.0.0.R - Added table, model and physical service and quick linker for the components. &#xA;3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation. &#xA;3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile. &#xA;3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram. &#xA;3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram)&#xA;3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output. &#xA;3.1 - new revamped 2018 version updated to Sparx 14&#xA;3.1.3 added Event&#xA;3.2 Updated for EA 14.1&#xA;3.3 update to comply with TOGAF 9.2&#xA;3.3.8 fixed quicklinker, diagrams&#xA;3.3.9 added Application Investment disposition&#xA;3.3.12 added KPI tagged value&#xA;3.3.15 Added Dots for evaluation&#xA;3.4 added masked types for tagged values&#xA;3.4.2 consolidated actors, shape script &#xA;3.4.5 consolidated colors&#xA;3.4.10 shape script functions&#xA;3.5 adding additional shape script functions&#xA;4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???)&#xA;4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="dAction" alias="Action" metatype="Action" notes="A specialized activity. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -130,7 +130,7 @@ AABzdHIuZGF0VVQFAAc9hAtdUEsFBgAAAAABAAEAPgAAANYDAAAAAA==</Image>
 					<Tag name="purpose" type="String" description="Purpose of the initiative. " unit="" values="" default=""/>
 					<Tag name="Rank" type="String" description="The rank of the initiative. " unit="" values="" default=""/>
 					<Tag name="Description" type="String" description="Description for the initiative. " unit="" values="" default=""/>
-					<Tag name="initiativeStatus" type="enumeration" description="" unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
+					<Tag name="initiativeStatus" type="enumeration" description="a set of colors to Visually describe the health of the initiative." unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dBusinessProcess" alias="Business Process" metatype="BusinessProcess" notes="A business Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into Business Services. It ensures the correct operation of business capabilities. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -229,8 +229,8 @@ FAAAAAgA3HV2Te/af8QIAQAAkgIAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABzbB
 			</Stereotype>
 			<Stereotype name="dApplicationComponent" alias="Application Component" metatype="Application Component" notes="An encapsulation of application functionality aligned to implementation structure which	is modular and replaceable. It encapsulates	its behavior and data, provides services, and makes them  available through interfaces." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2KAwAAAAAAAIoAAAB8AAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-aQBwAHQAaQBjAGEAbAAgAGEAbgB0AGkAYwBsAG8AYwBrAHcAaQBzAGUAIABhAHIAYwAgAHcA
-aQB0AGgAIAB0AGgAZQAgAGUAbABsAGkAcABzAGUA+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
+LAAgAHQAYwBvAG4ALgBFAG4AZABfAE8AYgBqAGUA+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ
 +GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ
@@ -289,8 +289,8 @@ UEsFBgAAAAABAAEAPgAAACIDAAAAAA==</Image>
 			</Stereotype>
 			<Stereotype name="dLogicalAppComponent" alias="Logical Application Component" metatype="Logical Application Component" notes="An encapsulation of application functionality that is independent of a particular implementation." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" generalizes="dApplicationComponent" baseStereotypes="dApplicationComponent">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-aQBwAHQAaQBjAGEAbAAgAGEAbgB0AGkAYwBsAG8AYwBrAHcAaQBzAGUAIABhAHIAYwAgAHcA
-aQB0AGgAIAB0AGgAZQD/////////////////////////////////////////////////////
+UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
+LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
 //////////////////////////////8307s307s307s307s307s307s307s307s307v/////
 //////////////////////8307v///////////////////////////8307v/////////////
 //////8307s307s307s307s307v///////////////////8307v///////////////////83
@@ -363,8 +363,8 @@ BQAHioQLXVBLBQYAAAAAAQABAD4AAAC9AgAAAAA=</Image>
 			</Stereotype>
 			<Stereotype name="dSystem" alias="System" metatype="System Configuration" notes="A system configuration. Settings are modeled as attributes with default values" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-aQBwAHQAaQBjAGEAbAAgAGEAbgB0AGkAYwBsAG8AYwBrAHcAaQBzAGUAIABhAHIAYwAgAHcA
-aQB0AGgAIAB0AGgAZQD/////////////////////////////////////////////////////
+UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
+LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
 //////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////
 //////////////////////8AAAD///////////////////////////8AAAD/////////////
 //////8AAAAAAAAAAAAAAAAAAAD///////////////////8AAAD///////////////////8A
@@ -401,7 +401,7 @@ VAUAB0nrQl1QSwUGAAAAAAEAAQA+AAAAHAIAAAAA</Image>
 					<Tag name="plattform" type="String" description="The plattform to which the configuration settings apply." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="16777215" fontcolor="0" bordercolor="5197615" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////
 ////////////////////////////////////////////////////AAAAAAAA////////////
@@ -480,7 +480,7 @@ AADQAQAAAAA=</Image>
 					<Tag name="Stakeholder"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dRequirement" alias="Requirement" metatype="Requirement" notes="A Business guide line about the Enterprise or the project." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dRequirement" alias="Requirement" metatype="Requirement" notes="A Business guide line about the Enterprise or the project." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////joz1RUH/
 NzP/My//Lir/KSX/JSD/JiL/Ix//GBT/EQz/DAf/BgH/AgD/BgH/GRX1iYfzGBP/x8X/trT/
@@ -518,13 +518,13 @@ AAAAAAAAgAAAAABzdHIuZGF0VVQFAAfHJC1gUEsFBgAAAAABAAEAPgAAAC8CAAAAAA==</Image>
 				<TaggedValues>
 					<Tag name="ID" type="String" description="Unique identifier for the requirement. " unit="" values="" default=""/>
 					<Tag name="Author" type="String" description="This requirement's author's name and role in the project" unit="" values="" default="myName, Analyst"/>
-					<Tag name="Status" type="String" description="" unit="" values="" default=""/>
-					<Tag name="Priority" type="" description="A priority in %. Requirements are ordered by priority." unit="" values="" default="50"/>
+					<Tag name="Status" type="String" description="the status of the Requirement in the workflow." unit="" values="" default=""/>
+					<Tag name="Priority" type="Integer" description="A priority in %. Requirements are ordered by priority." unit="" values="" default="50"/>
 					<Tag name="Proofreader" type="String" description="Each requirement needs to be confirmed.&#xA;This requirement's proofreader	's name and role in the project" unit="" values="" default="aName, Client"/>
 					<Tag name="Type" type="enumeration" description="The type of requirement. " unit="" values="Business Rule,Security,Performance,Persistence,Scalability,Transport" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
+			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="25600" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -535,7 +535,7 @@ AAAAAAAAgAAAAABzdHIuZGF0VVQFAAfHJC1gUEsFBgAAAAABAAEAPgAAAC8CAAAAAA==</Image>
 					<Tag name="_Bezier" type="int" description="" unit="" values="" default="1"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dCapability" alias="Capability" metatype="Capability" notes="A business outcome that is current available in an Organization Unit (or) A business-focused outcome that is delivered by the completion of one or more work packages." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dCapability" alias="Capability" metatype="Capability" notes="A business outcome that is current available in an Organization Unit (or) A business-focused outcome that is delivered by the completion of one or more work packages." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 ////////////////////////gICAN9O7N9O7gICA////////////////////////////////
 ////wMDAwMDA////N9O7wMDAwMDAN9O7////////wMDA////////////////////gICAN9O7
@@ -593,7 +593,7 @@ AABzdHIuZGF0VVQFAAegH/teUEsFBgAAAAABAAEAPgAAAP4CAAAAAA==</Image>
 					<DiagramProperty name="ActivateFlags" option="ActivateFlags" default="0"/>
 				</DiagramProperties>
 			</Stereotype>
-			<Stereotype name="dController" alias="Controller" metatype="Controller" notes="The Controller defines application behavior and the Business Logic involving more than one ModelClass. It dispatches requests and selects views for presentation. It interprets user inputs and maps them into actions.&#xA;Controller, with Views and Associations define the application flow. A controller represents the Business logic where a certain flow is physically implemented.&#xA;In a Service Oriented Architecture (SOA) a Controller can be exposed by a Physical Service." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dController" alias="Controller" metatype="Controller" notes="The Controller defines application behavior and the Business Logic involving more than one ModelClass. It dispatches requests and selects views for presentation. It interprets user inputs and maps them into actions.&#xA;Controller, with Views and Associations define the application flow. A controller represents the Business logic where a certain flow is physically implemented.&#xA;In a Service Oriented Architecture (SOA) a Controller can be exposed by a Physical Service." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 3ri8+zpQ/D9U/EBU/EBU/EBU/EBU/EBU/EBV/EBU/EBU/EBU/EBU/D9U+j1SybK0/Uxg/3mI
 /6Ks/56p/56p/6Cq/663/7O7/7C5/7O7/622/56p/56p/6Ou/2x94EhZ/0ld/8/U////////
@@ -630,7 +630,7 @@ gAAAAABzdHIuZGF0VVQFAAdR5EZiUEsFBgAAAAABAAEAPgAAAF8CAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dDataEntity" alias="Data Entity" metatype="DataEntity" notes="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dDataEntity" alias="Data Entity" metatype="DataEntity" notes="An encapsulation of data that is recognized by a business domain expert as a thing. Logical data entities can be tied to applications, repositories, and services and may be structured according to implementation considerations." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////1PXwxfLr
@@ -671,7 +671,7 @@ AQAAAAA=</Image>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
+			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="2237106" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -682,7 +682,7 @@ AQAAAAA=</Image>
 					<Tag name="_Bezier" type="int" description="" unit="" values="" default="1"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dFeature" alias="Feature" metatype="Feature" notes="A Feature is a fact that set his related Requirement to be true" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dFeature" alias="Feature" metatype="Feature" notes="A Feature is a fact that set his related Requirement to be true" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 +Pj4+/v7+/v7+///+/X1+4aT+0JW+iE5+yI6+0RZ+4qW+/j5+///+/v7+/v7+Pj4+/v7////
 /////36M/wAW/2R1/77F/+fp/+bo/7vD/19x/wAW/4iV////////+/v7+/v7/////0ld/yc/
@@ -720,7 +720,7 @@ AAA=</Image>
 					<Tag name="Status" type="enumeration" description="This feature's status" unit="" values="true,false" default="false"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dGoal" alias="Goal" metatype="Goal" notes="A &lt;b&gt;measurable &lt;/b&gt;scope that the enterprise wants to achieve. Can be hierarchically decomposed." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dGoal" alias="Goal" metatype="Goal" notes="A &lt;b&gt;measurable &lt;/b&gt;scope that the enterprise wants to achieve. Can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////0/Xwi+XXaN3LZt3KguPUw/Hq////////////////////////////////3Pfz
@@ -755,12 +755,12 @@ AAAAAACAAAAAAHN0ci5kYXRVVAUAB9ADjl5QSwUGAAAAAAEAAQA+AAAAVgEAAAAA</Image>
 					<Tag name="ID" type="String" description="Unique identifier for the Goal." unit="" values="" default=""/>
 					<Tag name="Value_amount" type="String" description="The actual amount of the value this goal intends to alter" unit="" values="" default=""/>
 					<Tag name="Value_Goal" type="String" description="The amount by which the value is to be altered" unit="" values="" default=""/>
-					<Tag name="Priority" type="" description="A priority in %" unit="" values="" default="50"/>
+					<Tag name="Priority" type="Integer" description="A priority in %" unit="" values="" default="50"/>
 					<Tag name="Value_Name" type="String" description="The name of the value this goal intends to alter" unit="" values="" default=""/>
 					<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. A lso a fact that sets a Requirement to be false." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. Also a fact that sets a Requirement to be false." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////hoT3My/3DAf3DQj3NjL3i4j3////////////////////////////
 ////hoP/AAD/Ix7/kpD/w8L/wsH/j43/HBj/AAD/ko//////////////////////QD3/AAD/
@@ -797,10 +797,10 @@ AA==</Image>
 					<Tag name="Responsible" type="String" description="The responsible to close the present issue" unit="" values="" default="none"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
-UEsDBBQAAAAIAFBa3lD4bWRRyAIAAGQLAAAHABEAc3RyLmRhdFVUDQAHoB/7XqAf+16gH/te
-vVbbbtNAEJ3XIPEPq/b/////////////////////////////////////////////////////
+UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
+LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
 ///////////X8uvO7+fO7+fO7+fO7+fO7+fO7+fO7+fQ7+j////7/f286t+46N246N3n9/P/
 //9u2cXO7+fO7+fO7+fO7+fO7+fO7+fO7+eB3Mr////p9/SS38/d8+7A6+G46N3///+F3cv/
 //////////////////////////+d4tP////p9/RP1b9s2cWn5Ne46N3///+F3cv/////////
@@ -835,7 +835,7 @@ AD4AAABnAQAAAAA=</Image>
 					<Tag name="Definition" type="String" description="Definition of the Measurement Area. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 ////////////////QODAQODAQODAQODAQODAQODAQODAQODAQODAQODAQODAQODA////8Pv/
 gODggODgQODAgODgwNzAwNzAwNzAgODggODgwNzAwNzAwNzAgODggODA////wNzAQODAgODg
@@ -873,7 +873,7 @@ AAEAPgAAAGkBAAAAAA==</Image>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Category. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 gODggODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODgQODAgODg
 gODggODggODggODggODggODggODggODggODggODggODggODggODgQODAQODA8Pv/8Pv/wNzA
@@ -911,7 +911,7 @@ AQABAD4AAABqAQAAAAA=</Image>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Grouping. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -967,7 +967,7 @@ PgAAAFoEAAAAAA==</Image>
 					<Tag name="Measurement Grouping"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dObject" alias="Object" metatype="Object" notes="An Object is a candidate for a Node repppresented in an activity diagram" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dObject" alias="Object" metatype="Object" notes="A dObject is a candidate for a dModelClass represented in an activity diagram. In alternative can be an instance of a Model Class" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADDDgAAww4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////HbWeHbWeHbWeHbWe
@@ -1000,7 +1000,7 @@ BQYAAAAAAQABAD4AAABwAQAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dObjective" alias="Objective" metatype="Objective" notes="A  time-bounded &lt;b&gt;milestone &lt;/b&gt;for an organization used to demonstrate progress towards a goal." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dObjective" alias="Objective" metatype="Objective" notes="A time-bounded &lt;b&gt;milestone &lt;/b&gt;for an organization used to demonstrate progress towards a goal. The Objective is a non material achievement, other than a Goal, the objective has no specific value to be measured" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////3/f01vbx////////////////////////////////////
 ////////////////////U9nEPdS8////////////////////////////////////////////
@@ -1035,13 +1035,13 @@ c3RyLmRhdFVUBQAHSz4KXVBLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="Category" type="String" description="User-definable categorization." unit="" values="" default=""/>
-					<Tag name="finishDate" type="" description="" unit="" values="" default=""/>
+					<Tag name="finishDate" type="" description="the date in which the objective is achieved." unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Objective. " unit="" values="" default=""/>
 					<Tag name="Owner" type="String" description="Owner for the Objective. " unit="" values="" default=""/>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgement formed about an architecture entity. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgment formed about a Topic. That is formulated in an explicit fashion" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////0NDQYGBg////////////////////////////////////
 ////////////////////YGBgAwMD0NDQ////////////////////////////////////////
@@ -1074,7 +1074,7 @@ AAAAAAAAgAAAAABzdHIuZGF0VVQFAAeArPZbUEsFBgAAAAABAAEAPgAAAI0BAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A specialized opinion created by internal team. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 /////////////////////5+q/5Sf/5Ke/////////+3v////////////////////////////
 //v8/9XZ/5ei/5mk/////////29//3SD/5ql/1Vo//////////////////////Lz/0xg/9Xa
@@ -1107,7 +1107,7 @@ dKz2W1BLBQYAAAAAAQABAD4AAAB2AQAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 StfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfB1/bx////
 ////////////////////////////////////////////////////////////4/n1UNjDWtrH
@@ -1151,7 +1151,7 @@ AQAAAAA=</Image>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 3K2y/DtQ/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV+j5TybK1/T1S/4GP
 /6Cq/5yn/5yn/5yn/6Gr/7O7/6iy/5yn/5yn/5yn/5yn/6Ks/2p74EhZ/zlP/+Dk////////
@@ -1184,21 +1184,7 @@ AA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="contains" alias="Contains" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Aggregation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
 			<Stereotype name="isOrganizedIn" alias="Is Organized In" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Aggregation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="hosts" alias="Hosts" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="direction" value="Source -&gt; Destination"/>
@@ -1213,67 +1199,6 @@ AA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isDetailedBy" alias="Is Detailed By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isMakingUseOf" alias="Is Making Use Of" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isHostedBy" alias="Is Hosted By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isScaffoldedIn" alias="Is Scaffolded In" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isMeasuredBy" alias="Is Measured By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isDescribedBy" alias="Is Described By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isPhysicallyHostedBy" alias="Is Physically Hosted By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isFunctionallyImplementedBy" alias="Is Functionally Implemented By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
 			<Stereotype name="IncreasesMaturityOf" alias="Increases Maturity Of" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Realisation">
@@ -1281,35 +1206,7 @@ AA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isSatisfiedBy" alias="Is Satisfied By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isImplementedBy" alias="Is Implemented By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isOperationalizedBy" alias="Is Operationalized By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="isPerformedBy" alias="Is Performed By" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Realisation">
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////iObYStjC/v//////////////////dOHQL9K55P76////////////////////
@@ -1363,7 +1260,7 @@ AAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHErTIYFBLBQYAAAAAAQABAD4AAAA+AwAAAAA=</Image>
 					<Tag name="Derived Requirement"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dManyToMany" alias="Many to Many Relationship" notes="A many to many node used in Chronos. It is used to realize a many to many relation between two Nodes." bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="dManyToMany" alias="Many to Many Relationship" notes="A many to many node used in DAF. It is used to realize a many to many relation between two Nodes." bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -1421,7 +1318,7 @@ AAAAAQABAD4AAAB7AgAAAAA=</Image>
 					<Tag name="Source" type="String" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dTable" alias="Table" metatype="Table" notes="a physical Table in a Database" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dTable" alias="Table" metatype="Table" notes="a physical Table in a Database" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -1450,10 +1347,10 @@ W1BLBQYAAAAAAQABAD4AAACbAAAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Database" type="int" description="The DB schama hosting the table" unit="" values="" default=""/>
+					<Tag name="Database" type="int" description="The DB schema hosting the table" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dValue" alias="Value" notes="A Node value type used in DAF. These values are persistent" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dValue" alias="Value" notes="A Node value type used in DAF. These values are persistent" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -1494,7 +1391,7 @@ AACAAAAAAHN0ci5kYXRVVAUAB0doTFdQSwUGAAAAAAEAAQA+AAAAiQEAAAAA</Image>
 					<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAlFgAAJRYAAAAAAAAAAAAA
 ////////////////////////////wuvkRsGu////////////////////////////////////
 ////////////////////bM6/HbSd2vPv////////////////////////////////////////
@@ -1540,7 +1437,7 @@ YXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA</Image>
 					<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADFDgAAxQ4AAAAAAAAAAAAA
 qqqq////////////////////////////////////////////////e3t7fX19f39/qqqq////
 ////////////////////////////////////////////e3t7fX19f39/qqqq////////////
@@ -1557,14 +1454,14 @@ qqqq////////wMDA////////yMjI/f39////wMDA////////////xMTE////zMzMqqqq////
 ////////////////////e3t7fX19f39/srKy////////////////////////////////////
 ////////////fn5+fX19f39/aWlpdHR0cnJycnJycnJycnJycnJycnJycnJycnJycnJycnJy
 dHR0bGxsgICAf39/</Icon>
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAGp90k7qWQetCAEAAOwDAAAHABEAc3RyLmRhdFVUDQAHmQYJXZkGCV2ZBgld
-jZPNDoIwEITnionvQDhp4sF/Y4w3vXrQJzCikQQQC5oY47s7bREsYkNMl7rz7bS0i48jDrhA
-YI8MAWcxXPjYMn/FjRnBWcQRU1/V0G208FTRyaOjiCCvKcklPGywZlwUZETlTjLjs4M+ehzd
-Qg9ZGRfqvJE+tRBN9G/V3N1Q6TL+q9fE2OIhNbuHJmwe8g3sHpqweeizsnkMqDVlzJXqbsUk
-XPV8qfgZPn57y1WZCAljylxGRrLP3Od/n+2MPgtw4k7OZFJ6CVIJqwQrHsx71NOalTzu2+NM
-8DuQ/7r8ab/P+g7zoXrfhFXHvIPKG6x22y9f3lSvOM1qjXlzI8VMKox55rMa5oU3UEsBAhcL
-FAAAAAgAan3STupZB60IAQAA7AMAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB5kG
-CV1QSwUGAAAAAAEAAQA+AAAAPgEAAAAA</Image>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAG53WVWWBjUBBwEAAOgDAAAHABEAc3RyLmRhdFVUDQAHu/lXY7v5V2O7+Vdj
+jZPNCsIwEITnquA7lJ4UPPgvIt706kGfQKxiwdaaVkHEd3fyY2tqDUWyjTvfTtJkG+CAPS4Q
+2CFDyFkMDwE2zF9xY0ZwFnHE1JcVdAtNPFVsmCj10FQU3AI+1lgxzg0XMX8nl/HZRg9djk6u
+nlkX5+qslj5xEHX0b9Xe3UDpMv6r18TI4SE1t4cmXB7yDdwemnB56LNyefSp1WXslapuxSY8
+9Xyp+BkBfvvKU5kICWPKXEZGsk/j87/LtlaXhThyJycyKb0EqYRVghUP5n3qacVKPvftcyb4
+Dch/Hf6032f9BvNn9b4Jqw6mg4obLHfbL1/cVDc/zXKNfXNDxYxLjH3m0wrmhTdQSwECFwsU
+AAAACABud1lVlgY1AQcBAADoAwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHu/lX
+Y1BLBQYAAAAAAQABAD4AAAA9AQAAAAA=</Image>
 				<AppliesTo>
 					<Apply type="Class">
 						<Property name="isActive" value=""/>
@@ -1604,8 +1501,8 @@ Gq32W1BLBQYAAAAAAQABAD4AAABAAQAAAAA=</Image>
 					<Apply type="UseCase"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="TestScenario" type="" description="" unit="" values="" default=""/>
-					<Tag name="EstimatedEffort" type="" description="" unit="" values="" default="8"/>
+					<Tag name="TestScenario" type="" description="The situation  that verifies the user story is realized" unit="" values="" default=""/>
+					<Tag name="EstimatedEffort" type="" description="Effort expressed in hours" unit="" values="" default="8"/>
 					<Tag name="StoryDetails" type="structured" description="" unit="" values="" default="">
 						<Property name="Role" type="" description="" unit="" values="" default="As a Actor"/>
 						<Property name="Scope" type="" description="" unit="" values="" default="I want to do something"/>
@@ -1613,7 +1510,7 @@ Gq32W1BLBQYAAAAAAQABAD4AAABAAQAAAAA=</Image>
 					</Tag>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////wEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBA8Mqm////////////wEBA
 8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8MqmwEBAwEBA8Mqm////////wEBA8Mqm////
@@ -1654,11 +1551,11 @@ SwUGAAAAAAEAAQA+AAAASQIAAAAA</Image>
 					<Tag name="CPU" type="int" description="the number and type of CPU" unit="" values="" default=""/>
 					<Tag name="RAM" type="int" description="the Memory dimension " unit="" values="" default=""/>
 					<Tag name="Owner" type="int" description="THe owner / responsible for this node" unit="" values="" default=""/>
+					<Tag name="ArchitectureType" type="enumeration" description="the type of  CPU Architecture (e.g. AMD 64)" unit="" values="AMD64,ARM64,RISC-V" default="AMD64"/>
 					<Tag name="Disk" type="int" description="the dimension of the disk" unit="" values="" default=""/>
-					<Tag name="ArchitectureType" type="enumeration" description="" unit="" values="AMD64,ARM64,RISC-V" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 TLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEi////
 ////////////////////////////////////////////////////TLEiTLEi////////////
@@ -1689,7 +1586,7 @@ AACAAAAAAHN0ci5kYXRVVAUAB/4JCV1QSwUGAAAAAAEAAQA+AAAAUwEAAAAA</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -1719,13 +1616,13 @@ AABzdHIuZGF0VVQFAAcyF8tgUEsFBgAAAAABAAEAPgAAAIQBAAAAAA==</Image>
 					<Apply type="Actor"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Legitimacy" type="enumeration" description="" unit="" values="Low,Medium,High" default="medium"/>
-					<Tag name="Power" type="enumeration" description="the measure of the possibilities in context that this person has to realiza his objectives." unit="" values="Low,Medium,High" default="medium"/>
-					<Tag name="Urgency" type="enumeration" description="" unit="" values="Low,Medium,High" default="medium"/>
+					<Tag name="Legitimacy" type="enumeration" description="Measure the degree of general acceptance of this stakeholder influence" unit="" values="Low,Medium,High" default="medium"/>
+					<Tag name="Power" type="enumeration" description="the measure of the possibilities in context that this person has to realize his objectives." unit="" values="Low,Medium,High" default="medium"/>
+					<Tag name="Urgency" type="enumeration" description="the timely  importance of the Stakeholder opinions" unit="" values="Low,Medium,High" default="medium"/>
 					<Tag name="stakeHolderRole"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 /////////////////87U/////////////////////////+Hk////////////////////////
 /////+rs/0dc/3KB/+zu//////////r7/5ai/0dc/9bb////////////////////////////
@@ -1767,7 +1664,7 @@ FAAAAAgAwFreUOLIjKaCAgAAthEAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB1gg
 					<Tag name="ActorTasks" type="String" description="Tasks that this actor performs, in general terms." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk3mBAAAAAAAADYAAAAoAAAAFAAAABQAAAABABgAAAAAALAEAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 /////////////622/5Of/5Of/5Of/8jO/////////622/5Of/5Of/5Of/8jO/////622/5Of
@@ -1820,7 +1717,7 @@ gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==</Image>
 					<Tag name="Organization Owner"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////gODggODggODggODggODggODggODggODg////////////////////////////gODg
@@ -1855,7 +1752,7 @@ BQYAAAAAAQABAD4AAAAEAQAAAAA=</Image>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Rappresent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Represent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 //n6/xkz/x43/x43/x43/x43/x43/x43/x43/x43/x43/x43/x43/x43/xgy//n6/ipC/7C5
 /83T/8rP/9vf/87U/8rP/8rP/8rP/8rP/93h/87T/8rP/83S/7a//yQ9/ylC/+ns////////
@@ -1898,14 +1795,14 @@ AAEAPgAAAK0CAAAAAA==</Image>
 					<Tag name="display_value" type="String" description="The display value of a node e.g. for Recipe: name|AdminInfo/status|Info/status" unit="" values="" default=""/>
 					<Tag name="initparams" type="String" description="The configuration section that is used on initialization of the corresponding mapper." unit="" values="" default="database"/>
 					<Tag name="is_searchable" type="enumeration" description="Indicates wether this type should be included in the default search." unit="" values="true,false" default="true"/>
-					<Tag name="is_soap" type="enumeration" description="Indicates wether a SOAP interface should be generated for this type." unit="" values="true,false" default=""/>
-					<Tag name="orderby" type="String" description="Definition of default sorting. Possible values: 'none' (no order), 'sortkey' (generates a 'sortkey' column, that is used for explicit sorting) or any the name of any ChiValue defined in the node optionally followed by [ASC|DESC] e.g. 'name ASC'" unit="" values="" default="none"/>
+					<Tag name="is_soap" type="enumeration" description="Indicates wennever an interface (e.g SOAP or REST)  should be generated for this type." unit="" values="true,false" default=""/>
+					<Tag name="orderby" type="String" description="Definition of default sorting. Possible values: 'none' (no order), 'sortkey' (generates a 'sortkey' column, that is used for explicit sorting) or any the name of any dValue defined in the node optionally followed by [ASC|DESC] e.g. 'name ASC'" unit="" values="" default="none"/>
 					<Tag name="parent_order" type="String" description="The order of the associated parents." unit="" values="" default=""/>
 					<Tag name="pk_name" type="String" description="The name of the primary key column. The generator will add this if there is no appropriate attribute." unit="" values="" default="id"/>
 					<Tag name="table_name" type="String" description="The name of the database table. If not given the name will be taken." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dValueRef" alias="Value Ref." notes="A Node value type used in DAF that reference another Node Value, similar to a foreign Key. These values are persistent&#xA;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="dValue" baseStereotypes="dValue">
+			<Stereotype name="dValueRef" alias="Value Ref." notes="A Node value type used in DAF that reference another Node Value, similar to a foreign Key. These values are persistent&#xA;" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" generalizes="dValue" baseStereotypes="dValue">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -1937,7 +1834,7 @@ AA==</Image>
 					<Tag name="Referenced Value"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers processing events; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 lNzRHbSdHLSdHLSdHLSdHLSdHLSdScOx7Pn3////////////////////////////////puLZ
 IbafHrWeHrWeHrWeHrWeHrWeQcGt5Pbz////////////////////////////////tujgJbmi
@@ -2017,7 +1914,7 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					<Tag name="exit criteria" type="Integer" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Controlls" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Controlls" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2025,7 +1922,7 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isRunBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="isRunBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2033,7 +1930,7 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="participatesIn" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="participatesIn" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2041,27 +1938,14 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="ProvidesPersistenceFor" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="compositionKind" value="none"/>
-						<Property name="direction" value="Source -&gt; Destination"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="Realizes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Realizes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="direction" value="Source -&gt; Destination"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="refersTo" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="Dependency"/>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2072,7 +1956,7 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					<Tag name="fk_name" type="String" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dEnsureCorrectOperationOf" alias="Ensure Correct Operation Of" metatype="Ensure the correct operation of" notes="A relationship entity used to represent the correct operator relationship. " bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="dEnsureCorrectOperationOf" alias="Ensure Correct Operation Of" metatype="Ensure the correct operation of" notes="A relationship entity used to represent the correct operator relationship. " bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2080,7 +1964,7 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dRisk" alias="Risk" metatype="RIsk" notes="the potential for an Issue" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
+			<Stereotype name="dRisk" alias="Risk" metatype="RIsk" notes="the potential for an Issue" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAA5PWVD/4gCC0AEAACIGAAAHABEAc3RyLmRhdFVUDQAHZ+9UXmfvVF5n71Re
 rVRNT8JAEH3XmvgfGrhAQqJoPBkOih/xQgjVeDQFFBpL0VJM0PDffTPbpcu3GtPMdDt983a+
 dicYIsQbnuFjxFWEBIc4wJdqHzFtM4wxRcZnliMblBK6tKfo05Ly6zz3GOKJPjGZBuSy2Jio
@@ -2105,7 +1989,7 @@ AAAGAgAAAAA=</Image>
 					<Tag name="RiskStrategy" type="enumeration" description="" unit="" values="Terminate,Treat,Tollerate,Transfer" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Includes Processes" metatype="ncludes Processes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Processes" metatype="ncludes Processes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of Value Stream"/>
@@ -2113,7 +1997,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Application Owner" metatype="pplication Owner" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Application Owner" metatype="pplication Owner" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="has Owner"/>
@@ -2121,7 +2005,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is consumed by Role"/>
@@ -2129,7 +2013,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Contains Activities" metatype="ontains Activities" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Contains Activities" metatype="ontains Activities" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of UseCase"/>
@@ -2137,7 +2021,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Exposes Service" metatype="xposes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Exposes Service" metatype="xposes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Exposes Phy Service"/>
@@ -2145,7 +2029,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Flows to" metatype="lows to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Flows to" metatype="lows to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Sequence Flow From"/>
@@ -2153,7 +2037,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Impact Resource" metatype="mpact Resource" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Impact Resource" metatype="mpact Resource" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is impacted by Risk"/>
@@ -2161,7 +2045,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Abstraction">
 						<Property name="_MeaningBackwards" value="Informs Capability"/>
@@ -2169,7 +2053,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Source Risk"/>
@@ -2177,7 +2061,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports Capability" metatype="upports Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports Capability" metatype="upports Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2185,7 +2069,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates categories" metatype="ggregates categories" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates categories" metatype="ggregates categories" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Measurement Area"/>
@@ -2193,7 +2077,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates Groups" metatype="ggregates Groups" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates Groups" metatype="ggregates Groups" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Category"/>
@@ -2201,7 +2085,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates KPI" metatype="ggregates KPI" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates KPI" metatype="ggregates KPI" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of a Grouping"/>
@@ -2209,7 +2093,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="configures Application"/>
@@ -2217,7 +2101,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Ensure the correct  Operation of" metatype="nsure the correct  Operation of" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Ensure the correct  Operation of" metatype="nsure the correct  Operation of" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Ensure the correct  Operation of Capability"/>
@@ -2225,7 +2109,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Executes" metatype="xecutes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Executes" metatype="xecutes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="executes Capability"/>
@@ -2233,7 +2117,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="exposes Biz Service" metatype="xposes Biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="exposes Biz Service" metatype="xposes Biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="service run by application"/>
@@ -2241,7 +2125,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Governs" metatype="overns" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Governs" metatype="overns" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is Governed by Controller"/>
@@ -2249,7 +2133,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is thinked by Stakeholder"/>
@@ -2257,7 +2141,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Milestone" metatype="as Milestone" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Milestone" metatype="as Milestone" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is related to Goal"/>
@@ -2265,7 +2149,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Opinion" metatype="as Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Opinion" metatype="as Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is expressed by Stakeholder"/>
@@ -2273,7 +2157,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Stakeholders" metatype="as Stakeholders" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Stakeholders" metatype="as Stakeholders" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is concerned with Organization"/>
@@ -2281,7 +2165,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Hosts Node" metatype="osts Node" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Hosts Node" metatype="osts Node" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is hosted in Location"/>
@@ -2289,7 +2173,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implement Biz Service" metatype="Implement Biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implement Biz Service" metatype="Implement Biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="Implement Biz Service"/>
@@ -2297,7 +2181,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implements" metatype="mplements" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implements" metatype="mplements" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Implemented by physical service"/>
@@ -2305,7 +2189,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implements Service" metatype="mplements Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implements Service" metatype="mplements Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Implements Service"/>
@@ -2313,7 +2197,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Includes Process" metatype="ncludes Process" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Process" metatype="ncludes Process" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is part of Product"/>
@@ -2321,7 +2205,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is Associated To" metatype="s Associated To" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value=" has Role"/>
@@ -2329,15 +2213,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="_MeaningBackwards" value=" has Role"/>
-						<Property name="_MeaningForwards" value="works in Organization"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="is delivered by" metatype="s delivered by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is delivered by" metatype="s delivered by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of a Package"/>
@@ -2345,15 +2221,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Is Hosted By" metatype="Is Hosted By" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
-				<AppliesTo>
-					<Apply type="Association">
-						<Property name="_MeaningBackwards" value="Implements Service"/>
-						<Property name="_MeaningForwards" value="has Controller"/>
-					</Apply>
-				</AppliesTo>
-			</Stereotype>
-			<Stereotype name="is organized In" metatype="s organized In" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is organized In" metatype="s organized In" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of a Program"/>
@@ -2361,7 +2229,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to" metatype="s related to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to" metatype="s related to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is specified by Requirement"/>
@@ -2369,7 +2237,79 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Orchestrates service" metatype="rchestrates service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isDescribedBy" metatype="sDescribedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Realisation">
+						<Property name="_MeaningBackwards" value="described by Use Case"/>
+						<Property name="_MeaningForwards" value="Has service"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isFunctionallyImplementedBy" metatype="sFunctionallyImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Realisation">
+						<Property name="_MeaningBackwards" value="is Functionally Implemented By Table"/>
+						<Property name="_MeaningForwards" value="Implements Entity"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Realisation">
+						<Property name="_MeaningBackwards" value="Is implemented by Controller"/>
+						<Property name="_MeaningForwards" value="implements Use Case"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isMakingUseOf" metatype="sMakingUseOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="Makes Use Of Decision"/>
+						<Property name="_MeaningForwards" value="is used in Initiative"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isMeasuredBy" metatype="sMeasuredBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="is measuring Capability"/>
+						<Property name="_MeaningForwards" value="is Measured By Indicator"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isOperationalizedBy" metatype="sOperationalizedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Realisation">
+						<Property name="_MeaningBackwards" value="is Operationalized By Capability"/>
+						<Property name="_MeaningForwards" value="support Goal"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isPerformedBy" metatype="sPerformedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="is executed by Actor"/>
+						<Property name="_MeaningForwards" value="has Role"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isPhysicallyHostedBy" metatype="sPhysicallyHostedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="is Hosted By Node"/>
+						<Property name="_MeaningForwards" value="Hosts Application"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="isSatisfiedBy" metatype="sSatisfiedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Realisation">
+						<Property name="_MeaningBackwards" value="is realized by Feature"/>
+						<Property name="_MeaningForwards" value="realizes Requirement"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Orchestrates service" metatype="rchestrates service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of Process"/>
@@ -2377,7 +2317,15 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="ProvidesPersistenceFor" metatype="rovidesPersistenceFor" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="Provides Persistence For Model"/>
+						<Property name="_MeaningForwards" value="is Saved in a Table"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is realized by Class"/>
@@ -2385,7 +2333,15 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="StopTheRealizationOf" metatype="topTheRealizationOf" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="refersTo" metatype="efersTo" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Dependency">
+						<Property name="_MeaningBackwards" value="is referenced by Decision"/>
+						<Property name="_MeaningForwards" value="refers To Principle"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="StopTheRealizationOf" metatype="topTheRealizationOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is stopped by Issue"/>
@@ -2393,7 +2349,7 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports" metatype="upports" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports" metatype="upports" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2441,10 +2397,65 @@ AAAGAgAAAAA=</Image>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="action" type="int" description="The action, which is triggered by this Dependency. If empty, any action is valid" unit="" values="" default=""/>
-					<Tag name="context" type="int" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
-					<Tag name="config" type="int" description="The configuration, in which this association is defined" unit="" values="" default="config.ini"/>
+					<Tag name="action" type="String" description="The action, which is triggered by this Dependency. If empty, any action is valid" unit="" values="" default=""/>
+					<Tag name="method" type="String" description="the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." unit="" values="" default=""/>
+					<Tag name="context" type="String" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
+					<Tag name="config" type="String" description="The configuration, in which this association is defined" unit="" values="" default="config.ini"/>
+					<Tag name="decorator" type="String" description="Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this endpoint as a REST service." unit="" values="" default=""/>
 				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Resource Risk" metatype="Resource impacted" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="is impacted by Risk"/>
+						<Property name="_MeaningForwards" value="impact Resouce"/>
+						<Property name="_relatedTo" value="Resource impacted"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Uses Data" metatype="Uses Data" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="is used by service"/>
+						<Property name="_MeaningForwards" value="uses Data"/>
+						<Property name="_relatedTo" value="Uses Data"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="dNetwork" metatype="Network" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIALZUW1XO7tGHhgIAAHoLAAAHABEAc3RyLmRhdFVUDQAHh19aY4dfWmOHX1pj
+7VbLbtswENyrC+QfCueiAA7QpGmaokhv/YJ+QGFbjiPUVgw9EqRF/70zu6JI0Ywc+BagEEBR
+5OyDw+GKtdzLXHaykveyRa+QUk7knfzRdiIbjD3Lg7TS4HlW5K1MZYGxSnJ8Vfj62qFLjNbq
+MUfvCcgG8y1QDkGLO2AK+Y1eJl/kg8zkM9qzDmO4AqhMPdWIWcEbI1eaQ4aILpcprKeKqoFZ
+wm6OuQL9EuNneMyfW88EuBUQtC2RYYGMGsTJ5LLPgKgtPDwq8gFzzNFnyPmNMuXmLzAbY/52
+7xWwjBnnUWFsCfs5/KyBIRvmY9b7s3cYl8zm8NdiB4xproSM7Lo55rXueDEOXmNdor/t+Vwq
+O40y7j14Br1mhlEdwq9yorvHPacv9nJYr4Bf491AIZdYoc/QWEtFchmmYtzLT8xyT9bAUZ/D
+FXj/lg+zbXTdp73f04grt3/29nlRwUtVv1cas6MWnnT8l+Jcfhwpumy8BXOkjc/NWlPnHVAb
+PIyzUQ8ZVsaZVhHV4PyFKCreeaTyyMlObahwp68rbfn9MpqImx63r8UYb9hQveP+r4MI1sYR
+hmfwY4/xiOEptFoyhmCdmSnuJQStxxH7eRzSBke2WDdrY6GafJ0+fsj3QB+HKmKB8f1Idp5d
+FU5XxHhnvEKs5U6FJyPG204a1u19bJPay08RJrVXQ0x8FsP6wPrf6mkY8nuIN9YuV4vdf4Oc
+LfB1nphlnUnzeMyf5QJMzRDneoQJ8jDGlPkIPbjadezaqeNax7her+Rz+RYx/TaYSCuG563q
+6irn/ivm+LWHmnA6SavobTDhFcMb8EJY83hDZma58LbGPzDvxKy4HkMLt6rhTcPfLsz3P1BL
+AQIXCxQAAAAIALZUW1XO7tGHhgIAAHoLAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQF
+AAeHX1pjUEsFBgAAAAABAAEAPgAAALwCAAAAAA==</Image>
+				<AppliesTo>
+					<Apply type="Node">
+						<Property name="isExecutionEnvironment" value="false"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="NetworkQuality" type="int" description="" unit="" values="" default=""/>
+					<Tag name="NetworkType" type="enumeration" description="" unit="" values="LAN,WAN,Mesh" default=""/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Aggregation">
+						<Property name="_MeaningBackwards" value="is contained in a network"/>
+						<Property name="_MeaningForwards" value="Contain sNode"/>
+						<Property name="_relatedTo" value="Contains Node"/>
+					</Apply>
+				</AppliesTo>
 			</Stereotype>
 		</Stereotypes>
 		<TaggedValueTypes>

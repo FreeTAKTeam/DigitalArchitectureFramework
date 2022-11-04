@@ -1,0 +1,97 @@
+decoration organization{
+	orientation="NE";
+	noshadow=true;
+	if(hasproperty("rectanglenotation","1"))
+	{	
+	//Rectangle(0,0,100,100);
+//dark blue
+		SetPenColor(GetUserBorderColor());	
+
+	SetFillColor(GetUserBorderColor());
+	Ellipse(34,0,67,34);
+	//Green
+	SetPenColor(GetUserFillColor());	
+	SetPenWidth(1);
+	MoveTo(50, 37);
+	LineTo(50,50);
+	
+	LineTo(75,50);
+	LineTo(50,50);
+	LineTo(25,50);
+	MoveTo(25,50);
+	LineTo(25,75);
+	moveto(50,50);
+	LineTo(50,75);
+	MoveTo(75,50);
+	LineTo(75,75);
+	SetPenColor(GetUserBorderColor());
+	SetFillColor(GetUserBorderColor());
+	Rectangle(10,80,25,100);
+	Rectangle(45,80,60,100);
+	Rectangle(80,80,95,100);
+	}
+	else{}
+}
+
+shape main
+{
+	layouttype="border";
+	noshadow=true;
+	if(hasproperty("rectanglenotation","1"))
+	{	
+		defsize(100,70);
+		rectangle(0,0,100,100);
+		addsubshape("padding","n");
+		addsubshape("name","center");
+		
+		shape padding
+		{
+			preferredheight=20;
+		}
+		
+		shape name
+		{
+			h_align="center";
+				if(hasproperty("stereotypehidden","false"))
+				{
+				 Println("<<#stereotype#>>");
+				}  
+			print("#name#");
+	}
+}
+	else
+	{
+		SetPenColor(GetUserBorderColor());	
+
+	SetFillColor(GetUserBorderColor());
+	Ellipse(34,0,67,34);
+	//Green
+	SetPenColor(GetUserFillColor());	
+	SetPenWidth(4);
+	MoveTo(50, 37);
+	LineTo(50,50);
+	LineTo(75,50);
+	LineTo(50,50);
+	LineTo(25,50);
+	MoveTo(25,50);
+	LineTo(25,75);
+	moveto(50,50);
+	LineTo(50,75);
+	MoveTo(75,50);
+	LineTo(75,75);
+	SetPenColor(GetUserBorderColor());
+	SetFillColor(GetUserBorderColor());
+	Rectangle(5,80,30,100);
+	Rectangle(35,80,60,100);
+	Rectangle(65,80,90,100);
+	}
+}
+
+shape label
+{
+	if(hasproperty("rectanglenotation","0"))
+	{
+	setOrigin ("SW",0,0);
+	println ("#NAME#");
+	}
+}

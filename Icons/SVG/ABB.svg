@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   inkscape:export-ydpi="20.48"
+   inkscape:export-xdpi="20.48"
+   inkscape:export-filename="C:\Users\broth\Dropbox\work\Method\EA method\3.1\Icons\png\abb.png"
+   sodipodi:docname="ABB.svg"
+   version="1.1"
+   overflow="hidden"
+   id="Icons_BuildingBrickWall_M"
+   viewBox="0 0 96 96">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     inkscape:current-layer="Icons_BuildingBrickWall_M"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="0"
+     inkscape:cy="48"
+     inkscape:cx="48"
+     inkscape:zoom="9.2708333"
+     showgrid="false"
+     id="namedview8"
+     inkscape:window-height="850"
+     inkscape:window-width="1781"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <g
+     id="Icons">
+    <path
+       id="path2"
+       fill="#FFFFFF"
+       stroke-width="1.33333"
+       stroke="#5B9BD5"
+       d="M61 30 12 30 12 80 84 80 84 42 61 42ZM59 42 37 42 37 32 59 32ZM47 44 47 54 25 54 25 44ZM37 66 37 56 59 56 59 66ZM35 56 35 66 14 66 14 56ZM47 68 47 78 25 78 25 68ZM49 68 71 68 71 78 49 78ZM61 66 61 56 82 56 82 66ZM49 54 49 44 71 44 71 54ZM14 32 35 32 35 42 14 42ZM23 44 23 54 14 54 14 44ZM14 68 23 68 23 78 14 78ZM73 78 73 68 82 68 82 78ZM82 54 73 54 73 44 82 44Z" />
+    <path
+       id="path4"
+       fill="#FFFFFF"
+       stroke-width="1.33333"
+       stroke="#5B9BD5"
+       d="M85.467 18.747 80.805 7.69 58.69 17.014 63.352 28.071ZM79.738 10.31 82.848 17.682 64.418 25.451 61.31 18.08Z" />
+  </g>
+</svg>
