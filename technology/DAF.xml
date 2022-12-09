@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MDG.Technology version="1.0"><Documentation id="DAF" name="DeltaArchitectureFramework" version="5.0 Alpha11" notes="the Delta Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYAAAABAAAAAAAA
+<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.0 Alpha20" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYAAAABAAAAAAAA
 N9O7ADvUvABC1b4ARdbAAErXwQBN2MIAUtnEAFraxwBd28gAZd3KAGzezQBx4M8AduHQAHvh
 0gCC49QAiOXXAIzl2ACS59oAlujbAJvp3QCh6t8Ao+vgAK3s4wC07uUAuO/nALrw5wC78OgA
 wfHpAMv07QDQ9e8A0vXwANv38gDd+PQA4/j1AOj69wDs+/gA8/z7AP7+/gD7A/wAAAAAAP//
@@ -20,69 +20,69 @@ AQwDAAAAAR8EAAolAQoDAAEFDSUBBgMAAQoPJQEFAwAAAAEcAwABBQolARUEAAEeCyUBIQQA
 AQ4PJQEVAwAAAAEaAwABBgolASEEAAEOCyUBFQQAAR4PJQEXAwAAAAEaAwABCAslARAEAAEc
 CiUBBgMAAQUQJQEaAwAAAAEaAwABCAslASEFAAklARUEAAEVECUBGQMAAAABGwQADCUBGiUl
 JSUlJSUlJSUlJSUlJSUlJSUfEwkAAAAAAAAAAAAAAAAAAAIOGiUlJSUlJSUlJSUlJSUlJSUl
-JQBpACUlJSUlJSUlJSUlJSUlJSUlGQoAAAAAAAAAAAAAAAAAAAAAAAAAAAURIyUlJSUlJSUl
-JSUlJSUlJQB0ACUlJSUlJSUlJSUlJSUlJRkHAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAABAk
-JSUlJSUlJSUlJSUlJQB2ACUlJSUlJSUlJSUlJSUfCgAAAAAAAAEAAQoOFQkaGhcVAQwGAQAA
-AAAAAAABFiUlJSUlJSUlJSUlJQBvACUlJSUlJSUlJSUlJRUAAAAAAAAABREcJSUlJSUlJSUl
-JSUlGxYKAQAAAAAAAAohJSUlJSUlJSUlJQBjACUlJSUlJSUlJSUkCwAAAAAAAAkaJSUlJSUl
-JSUlJSUlJSUlJSUlIRAAAAAAAAABGSUlJSUlJSUlJQBlACUlJSUlJSUlJSEHAAAAAAAHGiUl
-JSUlJSUlJSUlJSUlJSUlJSUlJSUjAgEAAAAAABUlJSUlJSUlJQBFACUlJSUlJSUlHwYAAAAA
-AAUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJQBlACUlJSUlJSUj
-BgAAAAAFHCUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlEAAAAAAAFSUlJSUlJQBsACUl
+JQBvACUlJSUlJSUlJSUlJSUlJSUlGQoAAAAAAAAAAAAAAAAAAAAAAAAAAAURIyUlJSUlJSUl
+JSUlJSUlJQBpACUlJSUlJSUlJSUlJSUlJRkHAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAABAk
+JSUlJSUlJSUlJSUlJQBzACUlJSUlJSUlJSUlJSUfCgAAAAAAAAEAAQoOFQkaGhcVAQwGAQAA
+AAAAAAABFiUlJSUlJSUlJSUlJQAgACUlJSUlJSUlJSUlJRUAAAAAAAAABREcJSUlJSUlJSUl
+JSUlGxYKAQAAAAAAAAohJSUlJSUlJSUlJQBlACUlJSUlJSUlJSUkCwAAAAAAAAkaJSUlJSUl
+JSUlJSUlJSUlJSUlIRAAAAAAAAABGSUlJSUlJSUlJQBDACUlJSUlJSUlJSEHAAAAAAAHGiUl
+JSUlJSUlJSUlJSUlJSUlJSUlJSUjAgEAAAAAABUlJSUlJSUlJQB0ACUlJSUlJSUlHwYAAAAA
+AAUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJQBGACUlJSUlJSUj
+BgAAAAAFHCUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlEAAAAAAAFSUlJSUlJQBtACUl
 JSUlJSUJAAAAAAkjJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRUBAAAAABklJSUl
-JQBrACUlJSUlJRAAAAAACiUlJSUlJSUlJSUZAAAAAAAAABklJSUlJSUlJSUlJSUlJSUJAAAA
-AAEhJSUlJQBzACUlJSUlFwAAAAAJJCUlJSUlJSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUl
-JSUlFQAAAAAKJSUlJQByACUlJSUlBQAAAAAgJSUlJSUlJRwAAAAAAAAAAAAAAAAAAAAhJSUl
-JSUlJSUlJSUlJRAAAAAAFiUlJQBvACUlJSUQAAAAABclJSUlJSUlHAAAAAAACiUlJSUlEAAA
-AAAAISUlJSUlJSUlJSUlJSUIAAAAASQlJQBvACUlJSEAAAAADSUlJSUlJSUlAAAAAAAhJSUl
-JSUlJSUAAAAAACUlJSUlJSUlJSUlJSUcAAAAABAlJQBkACUlJQ4AAAAAISUlJSUlJSUQAAAA
-ABwlJSUlJSUlJSUlAAAAAA4lJSUlJSUlJSUlJSUlAAAAAAAjJQBuACUlIwAAAAARJSUlJSUl
-JSUAAAAAECUlJSUlJSUlJSUlFQAAAAAlJSUlJSUlJSUlJSUlIwAAAAARJQByACUlFQAAAAEj
-JSUlJSUlJRoAAAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJQBBACUl
+JQB4ACUlJSUlJRAAAAAACiUlJSUlJSUlJSUZAAAAAAAAABklJSUlJSUlJSUlJSUlJSUJAAAA
+AAEhJSUlJQBhACUlJSUlFwAAAAAJJCUlJSUlJSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUl
+JSUlFQAAAAAKJSUlJQBlACUlJSUlBQAAAAAgJSUlJSUlJRwAAAAAAAAAAAAAAAAAAAAhJSUl
+JSUlJSUlJSUlJRAAAAAAFiUlJQBsACUlJSUQAAAAABclJSUlJSUlHAAAAAAACiUlJSUlEAAA
+AAAAISUlJSUlJSUlJSUlJSUIAAAAASQlJQBcACUlJSEAAAAADSUlJSUlJSUlAAAAAAAhJSUl
+JSUlJSUAAAAAACUlJSUlJSUlJSUlJSUcAAAAABAlJQBtACUlJQ4AAAAAISUlJSUlJSUQAAAA
+ABwlJSUlJSUlJSUlAAAAAA4lJSUlJSUlJSUlJSUlAAAAAAAjJQBjACUlIwAAAAARJSUlJSUl
+JSUAAAAAECUlJSUlJSUlJSUlFQAAAAAlJSUlJSUlJSUlJSUlIwAAAAARJQA6ACUlFQAAAAEj
+JSUlJSUlJRoAAAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJQBoACUl
 BwAAAAMlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJQYAAAAOJSUlJSUlJSUlJSUlJSEAAAAA
-GgBpACUfAAAAAB4lJSUlJSUlJQoAAAAKJSUlJSUlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUl
-JSUKAAAADgBlACUVAAAABiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUlJQ4AAAAFJSUlJSUl
-JSUlJSUlJSUWAAAABQBFACUMAAAAECUlJSUlJSUlJQAAAAAOJSUlJSUlJSUlJSUlJRUAAAAA
-JSUlJSUlJSUlJSUlJSUbAAAAAABzACUFAAAAGiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUl
-JRUAAAAAJSUlJSUlJSUlJSUlJSUlBgAAAAA6ACQAAAAAISUlJSUlJSUlJQYAAAAKJSUlJSUl
-JSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJSUlDAAAAABoAB8AAAAAJSUlJSUlJSUlJQoAAAAF
-JSUlJSUlJSUlJSUlJQYAAAAKJSUlJSUlJSUlJSUlJSUlBQAAAABGABwAAAAFJSUlJSUlJSUl
-JRUAAAAAHiUlJSUlJSUlJSUlIQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAAA6ABoAAAAGJSUl
-JSUlJSUlJSEAAAAADiUlJSUlJSUlJSUlFQAAAAAeJSUlJSUlJSUlJSUlJSUlFwAAAABoABoA
+GgBGACUfAAAAAB4lJSUlJSUlJQoAAAAKJSUlJSUlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUl
+JSUKAAAADgBDACUVAAAABiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUlJQ4AAAAFJSUlJSUl
+JSUlJSUlJSUWAAAABQB0ACUMAAAAECUlJSUlJSUlJQAAAAAOJSUlJSUlJSUlJSUlJRUAAAAA
+JSUlJSUlJSUlJSUlJSUbAAAAAABBACUFAAAAGiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUl
+JRUAAAAAJSUlJSUlJSUlJSUlJSUlBgAAAABsACQAAAAAISUlJSUlJSUlJQYAAAAKJSUlJSUl
+JSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJSUlDAAAAABrAB8AAAAAJSUlJSUlJSUlJQoAAAAF
+JSUlJSUlJSUlJSUlJQYAAAAKJSUlJSUlJSUlJSUlJSUlBQAAAABlABwAAAAFJSUlJSUlJSUl
+JRUAAAAAHiUlJSUlJSUlJSUlIQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAABsABoAAAAGJSUl
+JSUlJSUlJSEAAAAADiUlJSUlJSUlJSUlFQAAAAAeJSUlJSUlJSUlJSUlJSUlFwAAAABrABoA
 AAAIJSUlJSUlJSUlJSUQAAAAABwlJSUlJSUlJSUlBgAAAAUlJSUlJSUlJSUlJSUlJSUlGgAA
-AABGABoAAAAIJSUlJSUlJSUlJSUhAAAAAAAlJSUlJSUlJSUVAAAAABUlJSUlJSUlJSUlJSUl
-JSUlGQAAAAByABsAAAAAJSUlJSUlJSUlJSUlGgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUl
-JSUlJSUlJSUlCQAAAABBAB4AAAADJSUlJSUlJSUlJSUlJRUAAAAAACElJSUlJQoAAAAAGiUl
-JSUlJSUlJSUlJSUlJSUlFQAAAABoACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
-AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAABzACUBAAAAESUlJSUlJSUlJSUlJSUlIQEAAAAA
-AAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAABcACUIAAAAFSUlJSUlJSUlJSUlJSUl
-JSUVAAAAAAAAAAAAACUlJSUlJSUlJSUlJSUlJSUlJSUlAQAAAABvACUQAAAADCUlJSUlJSUl
-JSUlJSUlJSUlJR0AAAAAAAAAISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAABzACUaAAAAASQl
-JSUlJSUlJSUlJSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACQBlACUk
+AABlABoAAAAIJSUlJSUlJSUlJSUhAAAAAAAlJSUlJSUlJSUVAAAAABUlJSUlJSUlJSUlJSUl
+JSUlGQAAAAA6ABsAAAAAJSUlJSUlJSUlJSUlGgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUl
+JSUlJSUlJSUlCQAAAABoAB4AAAADJSUlJSUlJSUlJSUlJRUAAAAAACElJSUlJQoAAAAAGiUl
+JSUlJSUlJSUlJSUlJSUlFQAAAABGACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
+AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAAAgACUBAAAAESUlJSUlJSUlJSUlJSUlIQEAAAAA
+AAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAABlACUIAAAAFSUlJSUlJSUlJSUlJSUl
+JSUVAAAAAAAAAAAAACUlJSUlJSUlJSUlJSUlJSUlJSUlAQAAAABEACUQAAAADCUlJSUlJSUl
+JSUlJSUlJSUlJR0AAAAAAAAAISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAAAgACUaAAAAASQl
+JSUlJSUlJSUlJSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACQBuACUk
 AAAAABclJSUlJSUlJSUlJSUlJSUlJR0AAAAAAB0lJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAA
-EwBmACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUlJSUlJSUlJSUlJSUlJSUlJSUl
-JRoAAAAAHwBzACUlGwAAAAAOJSUlJSUlJSUlJSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJQkAAAAKJQBpACUlJQgAAAAJJSUlJSUlJSUlJSUlJSUAAAAAABolJSUlJSUlJSUl
-JSUlJSUlJSUlJSUlGgAAAAAaJQBwACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
-JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQBEACUlJSUIAAAABSQlJSUlJSUlJSUlBgAAAAAV
-JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJQBzACUlJSUbAAAAAA0lJSUlJSUlJSUK
-AAAAABUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRwAAAAACiUlJQBlACUlJSUlDQAAAAAVJSUl
-JSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQBwACUlJSUlIwUA
-AAAAFyUlJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQBTACUl
+EwBTACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUlJSUlJSUlJSUlJSUlJSUlJSUl
+JRoAAAAAHwAKACUlGwAAAAAOJSUlJSUlJSUlJSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJQkAAAAKJQAgACUlJQgAAAAJJSUlJSUlJSUlJSUlJSUAAAAAABolJSUlJSUlJSUl
+JSUlJSUlJSUlJSUlGgAAAAAaJQAKACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
+JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQBhACUlJSUIAAAABSQlJSUlJSUlJSUlBgAAAAAV
+JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJQAKACUlJSUbAAAAAA0lJSUlJSUlJSUK
+AAAAABUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRwAAAAACiUlJQBkACUlJSUlDQAAAAAVJSUl
+JSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQBhACUlJSUlIwUA
+AAAAFyUlJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQAgACUl
 JSUlJRsAAAAAABclJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSQKAAAAAA0lJSUl
 JQByACUlJSUlJSUVAAAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlHwgAAAAA
-ByQlJSUlJQAKACUlJSUlJSUlEQEAAAAADSQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUX
-AAAAAAAGISUlJSUlJQBlACUlJSUlJSUlJREAAAAAAAUXJSUlJSUlJSUlJSUlJSUlJSUlJSUl
-JSUlIQ0AAAAAAAYgJSUlJSUlJQBpACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
-JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBlACUlJSUlJSUlJSUlGwUAAAAAAAAJFyMlJSUl
-JSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQAKACUlJSUlJSUlJSUlJSMNAQAAAAAA
-AAEMFREkJSUlJSUlJR8aEAYAAAAAAAAABRolJSUlJSUlJSUlJQBlACUlJSUlJSUlJSUlJSUl
+ByQlJSUlJQBvACUlJSUlJSUlEQEAAAAADSQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUX
+AAAAAAAGISUlJSUlJQBzACUlJSUlJSUlJREAAAAAAAUXJSUlJSUlJSUlJSUlJSUlJSUlJSUl
+JSUlIQ0AAAAAAAYgJSUlJSUlJQBlACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
+JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQAgACUlJSUlJSUlJSUlGwUAAAAAAAAJFyMlJSUl
+JSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQBuACUlJSUlJSUlJSUlJSMNAQAAAAAA
+AAEMFREkJSUlJSUlJR8aEAYAAAAAAAAABRolJSUlJSUlJSUlJQAgACUlJSUlJSUlJSUlJSUl
 GwgAAAAAAAAAAAAAAwAICAcFAQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQBkACUlJSUlJSUl
-JSUlJSUlJSUXBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJQAgACUl
+JSUlJSUlJSUXBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJQBsACUl
 JSUlJSUlJSUlJSUlJSUlJRsNAQAAAAAAAAAAAAAAAAAAAAAABxUjJSUlJSUlJSUlJSUlJSUl
-JQAgACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAAAAAFDRUfJSUlJSUlJSUlJSUl
-JSUlJSUlJQBvACUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUl
-JSUlJSUlJSUlJSUlJQB0AA==</Image></Logo><Icon><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
+JQBzACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAAAAAFDRUfJSUlJSUlJSUlJSUl
+JSUlJSUlJQAgACUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUl
+JSUlJSUlJSUlJSUlJQByAA==</Image></Logo><Icon><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////0/Xwi+XXaN3LZt3KguPUw/Hq////////////////////////////////3Pfz
 JM60LNC3jubYue/nvPDomOjcQdW+Ecquu+/n////////////////////tO7lBsiqv/Hp////
@@ -98,7 +98,7 @@ BMepMtK5K9C3IM2zNdO6////////QNW+gePU////////////duHQI860+P38////////////
 ////////////////RNW/R9bA////////////////////oerfBciqa97MxvLr8vz69fz70fTv
 f+PTCMire+LS////////////////////////////////nendWNrGNdK6MtK5T9jDjubY9/38
 ////////////////</Image></Icon><UMLProfiles><UMLProfile profiletype="uml2">
-			<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha11" notes="Initial version created on 13-Jan-2016. &#xA;Added all shapes. &#xA;Added Icons. &#xA;Modified Delta to Lowercase (S type symbol) from Upper case (triangle) &#xA;3.0.0.M: Added diagram and remaining toolbox profiles. &#xA;3.0.0.N: Added all the quick linker for component creation. &#xA;3.0.0.O - Added quick linker for existing components and modified icons. &#xA;3.0.0.P - updated with views and tool boxes. &#xA;3.0.0.Q - updated with Default size and colors&#xA;3.0.0.R - Added table, model and physical service and quick linker for the components. &#xA;3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation. &#xA;3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile. &#xA;3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram. &#xA;3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram)&#xA;3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output. &#xA;3.1 - new revamped 2018 version updated to Sparx 14&#xA;3.1.3 added Event&#xA;3.2 Updated for EA 14.1&#xA;3.3 update to comply with TOGAF 9.2&#xA;3.3.8 fixed quicklinker, diagrams&#xA;3.3.9 added Application Investment disposition&#xA;3.3.12 added KPI tagged value&#xA;3.3.15 Added Dots for evaluation&#xA;3.4 added masked types for tagged values&#xA;3.4.2 consolidated actors, shape script &#xA;3.4.5 consolidated colors&#xA;3.4.10 shape script functions&#xA;3.5 adding additional shape script functions&#xA;4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???)&#xA;4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
+			<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha20" notes="Initial version created on 13-Jan-2016. &#xA;Added all shapes. &#xA;Added Icons. &#xA;Modified Delta to Lowercase (S type symbol) from Upper case (triangle) &#xA;3.0.0.M: Added diagram and remaining toolbox profiles. &#xA;3.0.0.N: Added all the quick linker for component creation. &#xA;3.0.0.O - Added quick linker for existing components and modified icons. &#xA;3.0.0.P - updated with views and tool boxes. &#xA;3.0.0.Q - updated with Default size and colors&#xA;3.0.0.R - Added table, model and physical service and quick linker for the components. &#xA;3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation. &#xA;3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile. &#xA;3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram. &#xA;3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram)&#xA;3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output. &#xA;3.1 - new revamped 2018 version updated to Sparx 14&#xA;3.1.3 added Event&#xA;3.2 Updated for EA 14.1&#xA;3.3 update to comply with TOGAF 9.2&#xA;3.3.8 fixed quicklinker, diagrams&#xA;3.3.9 added Application Investment disposition&#xA;3.3.12 added KPI tagged value&#xA;3.3.15 Added Dots for evaluation&#xA;3.4 added masked types for tagged values&#xA;3.4.2 consolidated actors, shape script &#xA;3.4.5 consolidated colors&#xA;3.4.10 shape script functions&#xA;3.5 adding additional shape script functions&#xA;4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???)&#xA;4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
 			<Content>
 				<Stereotypes>
 					<Stereotype name="dAction" alias="Action" metatype="Action" notes="A specialized activity. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -218,17 +218,17 @@ AABzdHIuZGF0VVQFAAc9hAtdUEsFBgAAAAABAAEAPgAAANYDAAAAAA==</Image>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
+							<Tag name="Description" type="String" description="Description for the initiative. " unit="" values="" default=""/>
 							<Tag name="DetailedDescription" type="" description="Detailed Description of the initiative. " unit="" values="" default=""/>
-							<Tag name="Impacted Capability" type="dCapability" description="Describes the contribution this work package makes to capability delivery." unit="" values="" default=""/>
-							<Tag name="RelatedProgram" type="String" description="The Growth Package or Program associated to the Initiative. " unit="" values="" default=""/>
-							<Tag name="startDate" type="" description="The start date for the initiative. " unit="" values="" default=""/>
 							<Tag name="finishDate" type="" description="The finish date of the initiative. " unit="" values="" default=""/>
+							<Tag name="Impacted Capability" type="dCapability" description="Describes the contribution this work package makes to capability delivery." unit="" values="" default=""/>
 							<Tag name="InitiativeDuration" type="String" description="The expected duration of the initiative in Months/ Weeks or Years. " unit="" values="" default=""/>
+							<Tag name="initiativeStatus" type="enumeration" description="a set of colors to Visually describe the health of the initiative." unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
 							<Tag name="kind" type="String" description="To capture the type of initiative. " unit="" values="" default=""/>
 							<Tag name="purpose" type="String" description="Purpose of the initiative. " unit="" values="" default=""/>
 							<Tag name="Rank" type="String" description="The rank of the initiative. " unit="" values="" default=""/>
-							<Tag name="Description" type="String" description="Description for the initiative. " unit="" values="" default=""/>
-							<Tag name="initiativeStatus" type="enumeration" description="a set of colors to Visually describe the health of the initiative." unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
+							<Tag name="RelatedProgram" type="String" description="The Growth Package or Program associated to the Initiative. " unit="" values="" default=""/>
+							<Tag name="startDate" type="" description="The start date for the initiative. " unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dBusinessProcess" alias="Business Process" metatype="BusinessProcess" notes="A business Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into Business Services. It ensures the correct operation of business capabilities. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -327,8 +327,8 @@ FAAAAAgA3HV2Te/af8QIAQAAkgIAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABzbB
 					</Stereotype>
 					<Stereotype name="dApplicationComponent" alias="Application Component" metatype="Application Component" notes="An encapsulation of application functionality aligned to implementation structure which	is modular and replaceable. It encapsulates	its behavior and data, provides services, and makes them  available through interfaces." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2KAwAAAAAAAIoAAAB8AAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
-LAAgAHQAYwBvAG4ALgBFAG4AZABfAE8AYgBqAGUA+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwqIhlAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAABDAAAAAAAAAAAAAAAAAAAA+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ
 +GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ
@@ -366,19 +366,19 @@ UEsFBgAAAAABAAEAPgAAACIDAAAAAA==</Image>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="ID" type="String" description="Unique identifier for the element, useful for referring to third party systems" unit="" values="" default=""/>
-							<Tag name="Category" type="String" description="User-definable categorization taxonomy for each element." unit="" values="" default=""/>
-							<Tag name="BizSatisfaction" type="Integer" description="How much is the business happy with the application, expressed in 1-100" unit="" values="" default="50"/>
-							<Tag name="ITSatisfaction" type="Integer" description="how is IT happy with this application, often related to technical debt." unit="" values="" default="50"/>
-							<Tag name="BizCriticality" type="Integer" description="how is Business happy with this application, often related to business debt." unit="" values="" default="50"/>
-							<Tag name="Cost" type="Integer" description="the cost of this application in 1000 of $" unit="" values="" default="10"/>
-							<Tag name="InvestmentStrategy" type="enumeration" description="" unit="" values="Retain,Rehost,Replatform,Refactor,Rewrite,Retire" default="Retain"/>
 							<Tag name="ApplicationType" type="enumeration" description="the type of Application, e.g. if it's a COTS, Custom and so on" unit="" values="COTS,Custom,Module,Web Site,Instance,DB" default="Custom"/>
+							<Tag name="BizCriticality" type="Integer" description="how is Business happy with this application, often related to business debt." unit="" values="" default="50"/>
+							<Tag name="BizSatisfaction" type="Integer" description="How much is the business happy with the application, expressed in 1-100" unit="" values="" default="50"/>
+							<Tag name="Category" type="String" description="User-definable categorization taxonomy for each element." unit="" values="" default=""/>
+							<Tag name="Cost" type="Integer" description="the cost of this application in 1000 of $" unit="" values="" default="10"/>
+							<Tag name="ID" type="String" description="Unique identifier for the element, useful for referring to third party systems" unit="" values="" default=""/>
+							<Tag name="InvestmentStrategy" type="enumeration" description="" unit="" values="Retain,Rehost,Replatform,Refactor,Rewrite,Retire" default="Retain"/>
+							<Tag name="ITSatisfaction" type="Integer" description="how is IT happy with this application, often related to technical debt." unit="" values="" default="50"/>
 							<Tag name="LastStandardReviewDate" type="" description="Last review date for the application component. " unit="" values="" default=""/>
 							<Tag name="NextStandardReviewDate" type="" description="Next review date for the application component. " unit="" values="" default=""/>
-							<Tag name="RetireDate" type="" description="The retire date for the Application Component. " unit="" values="" default=""/>
 							<Tag name="Owner" type="String" description="The owner for the application Component. " unit="" values="" default=""/>
 							<Tag name="Port" type="int" description="" unit="" values="" default=""/>
+							<Tag name="RetireDate" type="" description="The retire date for the Application Component. " unit="" values="" default=""/>
 							<Tag name="Source" type="String" description="The original source of the element's information" unit="" values="" default=""/>
 						</TaggedValues>
 						<DiagramProperties>
@@ -387,8 +387,8 @@ UEsFBgAAAAABAAEAPgAAACIDAAAAAA==</Image>
 					</Stereotype>
 					<Stereotype name="dLogicalAppComponent" alias="Logical Application Component" metatype="Logical Application Component" notes="An encapsulation of application functionality that is independent of a particular implementation." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" generalizes="dApplicationComponent" baseStereotypes="dApplicationComponent">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
-LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
+ZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQAXwBvAGIAagBlAGMAdAAgAHcA
+aABlAHIAZQAgACAAdAD/////////////////////////////////////////////////////
 //////////////////////////////8307s307s307s307s307s307s307s307s307v/////
 //////////////////////8307v///////////////////////////8307v/////////////
 //////8307s307s307s307s307v///////////////////8307v///////////////////83
@@ -454,15 +454,15 @@ BQAHioQLXVBLBQYAAAAAAQABAD4AAAC9AgAAAAA=</Image>
 						<TaggedValues>
 							<Tag name="ID" type="String" description="Unique identifier for the Product. " unit="" values="" default=""/>
 							<Tag name="Owner" type="String" description="Owner of the Product. " unit="" values="" default=""/>
-							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
-							<Tag name="RetireDate" type="" description="" unit="" values="" default=""/>
 							<Tag name="Price" type="int" description="" unit="" values="" default=""/>
+							<Tag name="RetireDate" type="" description="" unit="" values="" default=""/>
+							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dSystem" alias="System" metatype="System Configuration" notes="A system configuration. Settings are modeled as attributes with default values" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
-UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
-LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
+ZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQAXwBvAGIAagBlAGMAdAAgAHcA
+aABlAHIAZQAgACAAdAD/////////////////////////////////////////////////////
 //////////////////////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////
 //////////////////////8AAAD///////////////////////////8AAAD/////////////
 //////8AAAAAAAAAAAAAAAAAAAD///////////////////8AAAD///////////////////8A
@@ -499,7 +499,7 @@ VAUAB0nrQl1QSwUGAAAAAAEAAQA+AAAAHAIAAAAA</Image>
 							<Tag name="plattform" type="String" description="The plattform to which the configuration settings apply." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="16777215" fontcolor="0" bordercolor="5197615" borderwidth="1" hideicon="0">
+					<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////
 ////////////////////////////////////////////////////AAAAAAAA////////////
@@ -565,15 +565,15 @@ AADQAQAAAAA=</Image>
 							<Apply type="UseCase"/>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="GoalInContext" type="String" description="The goal should implicitly express the actor's intent or purpose of the use case, such as &quot;Enrol Student in Seminar.&quot;" unit="" values="" default=""/>
-							<Tag name="Precondition" type="String" description="A list of the conditions, if any, that must be met before a use case may be invoked. Can be a previous Use case or self the presence of the system in Scope." unit="" values="" default=""/>
-							<Tag name="Trigger" type="String" description="Event that is responsible for invocation of the use case." unit="" values="" default=""/>
-							<Tag name="Scope" type="String" description="Boundaries in which the use case is operated when invoked (E.g. CMS)" unit="" values="" default=""/>
-							<Tag name="Level" type="String" description="Authorizations for operations/actions to be performed against the Chi business objects in scope. Against every object/process 4 CRUD basic operations are possible:&#xA;Create (Write)&#xA;Read (Open)&#xA;Update (Change)&#xA;Delete  (Destroy)" unit="" values="" default=""/>
-							<Tag name="OtherActors" type="String" description="The list of actors associated with the use case. Although this information is contained in the use case itself, it helps to increase the understandability of the use case when the diagram is unavailable." unit="" values="" default=""/>
-							<Tag name="MainSuccessScenario" type="String" description="The main path of logic an actor follows through a use case. Often referred to as the &quot;happy path&quot; or the &quot;main path&quot; because it describes how the use case works when everything works as it normally should." unit="" values="" default=""/>
 							<Tag name="Extensions" type="String" description="" unit="" values="" default=""/>
+							<Tag name="GoalInContext" type="String" description="The goal should implicitly express the actor's intent or purpose of the use case, such as &quot;Enrol Student in Seminar.&quot;" unit="" values="" default=""/>
 							<Tag name="isCore" type="Boolean" description="" unit="" values="True,False" default="False"/>
+							<Tag name="Level" type="String" description="Authorizations for operations/actions to be performed against the Chi business objects in scope. Against every object/process 4 CRUD basic operations are possible:&#xA;Create (Write)&#xA;Read (Open)&#xA;Update (Change)&#xA;Delete  (Destroy)" unit="" values="" default=""/>
+							<Tag name="MainSuccessScenario" type="String" description="The main path of logic an actor follows through a use case. Often referred to as the &quot;happy path&quot; or the &quot;main path&quot; because it describes how the use case works when everything works as it normally should." unit="" values="" default=""/>
+							<Tag name="OtherActors" type="String" description="The list of actors associated with the use case. Although this information is contained in the use case itself, it helps to increase the understandability of the use case when the diagram is unavailable." unit="" values="" default=""/>
+							<Tag name="Precondition" type="String" description="A list of the conditions, if any, that must be met before a use case may be invoked. Can be a previous Use case or self the presence of the system in Scope." unit="" values="" default=""/>
+							<Tag name="Scope" type="String" description="Boundaries in which the use case is operated when invoked (E.g. CMS)" unit="" values="" default=""/>
+							<Tag name="Trigger" type="String" description="Event that is responsible for invocation of the use case." unit="" values="" default=""/>
 							<Tag name="Primary Actor"/>
 							<Tag name="Stakeholder"/>
 						</TaggedValues>
@@ -609,16 +609,16 @@ s5OfimIvbdM3L872RDxjXwPJkYNTzvM7fA+E3/QWf7X20cxiPOMb7gbGZoge4h3gC5L1w738
 AAAAAAAAgAAAAABzdHIuZGF0VVQFAAfHJC1gUEsFBgAAAAABAAEAPgAAAC8CAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="ID" type="String" description="Unique identifier for the requirement. " unit="" values="" default=""/>
 							<Tag name="Author" type="String" description="This requirement's author's name and role in the project" unit="" values="" default="myName, Analyst"/>
-							<Tag name="Status" type="String" description="the status of the Requirement in the workflow." unit="" values="" default=""/>
+							<Tag name="ID" type="String" description="Unique identifier for the requirement. " unit="" values="" default=""/>
 							<Tag name="Priority" type="Integer" description="A priority in %. Requirements are ordered by priority." unit="" values="" default="50"/>
 							<Tag name="Proofreader" type="String" description="Each requirement needs to be confirmed.&#xA;This requirement's proofreader	's name and role in the project" unit="" values="" default="aName, Client"/>
+							<Tag name="Status" type="String" description="the status of the Requirement in the workflow." unit="" values="" default=""/>
 							<Tag name="Type" type="enumeration" description="The type of requirement. " unit="" values="Business Rule,Security,Performance,Persistence,Scalability,Transport" default=""/>
 						</TaggedValues>
 					</Stereotype>
@@ -668,24 +668,24 @@ nSbDf4xFmbU8AFBLAQIXCxQAAAAIAFBa3lD4bWRRyAIAAGQLAAAHAAkAAAAAAAAAAAAAgAAA
 AABzdHIuZGF0VVQFAAegH/teUEsFBgAAAAABAAEAPgAAAP4CAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="BusinessValue" type="enumeration" description="assess how this capability provides value to the enterprise." unit="" values="Support,Differentiator,Low,Medium,High" default="Low"/>
+							<Tag name="CapabilityLevel" type="int" description="the level of this category in the hierarchy" unit="" values="" default=""/>
 							<Tag name="Category" type="String" description="User-definable categorization for Capability" unit="" values="" default=""/>
-							<Tag name="ID" type="String" description="Unique identifier for the Capability" unit="" values="" default=""/>
-							<Tag name="Owner" type="String" description="Owner of the architecture entity." unit="" values="" default=""/>
-							<Tag name="Source" type="String" description="Source from where the information was collected." unit="" values="" default=""/>
-							<Tag name="Increments" type="enumeration" description="Current (AS-IS) maturity level for the entity. &#xA;0- none&#xA;1- Initial&#xA;2- UnderDevelopment&#xA;3 - Defined&#xA;4- Managed&#xA;5 - Measured" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
-							<Tag name="IncrementsToBe" type="enumeration" description="Future (To-Be) maturity level for the entity. " unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="Initial"/>
-							<Tag name="IncrementVertical" type="enumeration" description="The maturity level of your vertical (the industry)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
-							<Tag name="IncrementSupplyChain" type="enumeration" description="The maturity level of your supply chain (Partners)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
 							<Tag name="Cost" type="" description="the aggregated cost of this Capability. Includes all the aggregated cost's elements " unit="" values="" default="1"/>
 							<Tag name="Criticality" type="" description="What is the criticality of this capability, what would be the cost of failure" unit="" values="" default="50"/>
+							<Tag name="ID" type="String" description="Unique identifier for the Capability" unit="" values="" default=""/>
+							<Tag name="Increments" type="enumeration" description="Current (AS-IS) maturity level for the entity. &#xA;0- none&#xA;1- Initial&#xA;2- UnderDevelopment&#xA;3 - Defined&#xA;4- Managed&#xA;5 - Measured" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
+							<Tag name="IncrementsToBe" type="enumeration" description="Future (To-Be) maturity level for the entity. " unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="Initial"/>
+							<Tag name="IncrementSupplyChain" type="enumeration" description="The maturity level of your supply chain (Partners)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
+							<Tag name="IncrementVertical" type="enumeration" description="The maturity level of your vertical (the industry)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
+							<Tag name="Owner" type="String" description="Owner of the architecture entity." unit="" values="" default=""/>
 							<Tag name="Risk" type="" description="How much Risk connected to this business Capability. 1 low risk, 100 max risk." unit="" values="" default="50"/>
-							<Tag name="CapabilityLevel" type="int" description="the level of this category in the hierarchy" unit="" values="" default=""/>
+							<Tag name="Source" type="String" description="Source from where the information was collected." unit="" values="" default=""/>
 						</TaggedValues>
 						<DiagramProperties>
 							<DiagramProperty name="ActivateFlags" option="ActivateFlags" default="0"/>
@@ -723,8 +723,8 @@ XeoVu+n9i/xZ5Bt5A1BLAQIXCxQAAAAIANJcgVQBHWoXKQIAAJwGAAAHAAkAAAAAAAAAAAAA
 gAAAAABzdHIuZGF0VVQFAAdR5EZiUEsFBgAAAAABAAEAPgAAAF8CAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
@@ -756,16 +756,16 @@ AwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAH3JY8YlBLBQYAAAAAAQABAD4AAABh
 AQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="PrivacyClassification" type="String" description="Level of restriction placed on access to the data." unit="" values="" default=""/>
-							<Tag name="RetentionClassification" type="String" description="Level of retention to be placed on the data." unit="" values="" default=""/>
 							<Tag name="Category" type="String" description="User-definable categorization." unit="" values="" default=""/>
 							<Tag name="ID" type="String" description="Unique identifier for the Data Entity. " unit="" values="" default=""/>
 							<Tag name="Owner" type="String" description="Owner of the Data Entity. " unit="" values="" default=""/>
+							<Tag name="PrivacyClassification" type="String" description="Level of restriction placed on access to the data." unit="" values="" default=""/>
+							<Tag name="RetentionClassification" type="String" description="Level of retention to be placed on the data." unit="" values="" default=""/>
 							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
@@ -808,8 +808,8 @@ BwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHQ44LXVBLBQYAAAAAAQABAD4AAABeAQAA
 AAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -845,17 +845,17 @@ d2KOOkxh416nB8bpyF1UsNcvUEsBAhcLFAAAAAgAeIiIUO/AJ8cgAQAA5AIAAAcACQAAAAAA
 AAAAAACAAAAAAHN0ci5kYXRVVAUAB9ADjl5QSwUGAAAAAAEAAQA+AAAAVgEAAAAA</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
+							<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 							<Tag name="ID" type="String" description="Unique identifier for the Goal." unit="" values="" default=""/>
+							<Tag name="Priority" type="Integer" description="A priority in %" unit="" values="" default="50"/>
 							<Tag name="Value_amount" type="String" description="The actual amount of the value this goal intends to alter" unit="" values="" default=""/>
 							<Tag name="Value_Goal" type="String" description="The amount by which the value is to be altered" unit="" values="" default=""/>
-							<Tag name="Priority" type="Integer" description="A priority in %" unit="" values="" default="50"/>
 							<Tag name="Value_Name" type="String" description="The name of the value this goal intends to alter" unit="" values="" default=""/>
-							<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. Also a fact that sets a Requirement to be false." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
@@ -886,8 +886,8 @@ AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdQjgtdUEsFBgAAAAABAAEAPgAAAF0BAAAA
 AA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -897,8 +897,8 @@ AA==</Image>
 					</Stereotype>
 					<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
-UwB0AGEAcgB0AF8ATwBiAGoAZQBjAHQAXwBJAEQAIABhAHMAIABTAG8AdQByAGMAZQBJAEQA
-LAAgAHQAYwBvAG4ALgD/////////////////////////////////////////////////////
+ZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQAXwBvAGIAagBlAGMAdAAgAHcA
+aABlAHIAZQAgACAAdAD/////////////////////////////////////////////////////
 ///////////X8uvO7+fO7+fO7+fO7+fO7+fO7+fO7+fQ7+j////7/f286t+46N246N3n9/P/
 //9u2cXO7+fO7+fO7+fO7+fO7+fO7+fO7+eB3Mr////p9/SS38/d8+7A6+G46N3///+F3cv/
 //////////////////////////+d4tP////p9/RP1b9s2cWn5Ne46N3///+F3cv/////////
@@ -924,13 +924,13 @@ ZTEBAAAYAwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAH8Og3XlBLBQYAAAAAAQAB
 AD4AAABnAQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="ID" type="String" description="Unique identifier for the Measurement Area. " unit="" values="" default=""/>
 							<Tag name="Definition" type="String" description="Definition of the Measurement Area. " unit="" values="" default=""/>
+							<Tag name="ID" type="String" description="Unique identifier for the Measurement Area. " unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -961,14 +961,14 @@ tZ9hMwEAACADAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAdmBwldUEsFBgAAAAAB
 AAEAPgAAAGkBAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="MeasurementArea" type="Classifier:MeasurementArea" description="The reference Measurement Area to which this category belongs to. " unit="dMeasurementArea" values="" default=""/>
 							<Tag name="Definition" type="String" description="Definition of the measurement category. " unit="" values="" default=""/>
 							<Tag name="ID" type="String" description="Unique identifier for the Measurement Category. " unit="" values="" default=""/>
+							<Tag name="MeasurementArea" type="Classifier:MeasurementArea" description="The reference Measurement Area to which this category belongs to. " unit="dMeasurementArea" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -999,14 +999,14 @@ gBc0VjQBAAAaAwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHyo0LXVBLBQYAAAAA
 AQABAD4AAABqAQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="MeasurementCategory" type="Classifier:MeasurementCategory" description="Related Measurement Category to which the group belongs to. " unit="dMeasurementCategory" values="" default=""/>
 							<Tag name="Definition" type="String" description="Definition of the Measurement Grouping. " unit="" values="" default=""/>
 							<Tag name="ID" type="String" description="Unique identifier for the Measurement Grouping. " unit="" values="" default=""/>
+							<Tag name="MeasurementCategory" type="Classifier:MeasurementCategory" description="Related Measurement Category to which the group belongs to. " unit="dMeasurementCategory" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1051,17 +1051,17 @@ JAQAAE4rAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAcKSC5gUEsFBgAAAAABAAEA
 PgAAAFoEAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="ID" type="String" description="Unique identifier for the Measurement Indicator. " unit="" values="" default=""/>
-							<Tag name="Definition" type="String" description="Definition of the Measurement Indicator. " unit="" values="" default=""/>
-							<Tag name="UnitOfMeasure" type="String" description="The unit of measure (if available) for the Measurement Indicator. " unit="" values="" default=""/>
 							<Tag name="CurrentLevel" type="int" description="the level of the Measurment Indicator the last time that was measured. " unit="" values="" default=""/>
-							<Tag name="SatisfactionLevel" type="int" description="Satisfaction level for the Measurement Indicator, desidered amount to be reached and/or Max value" unit="" values="" default=""/>
+							<Tag name="Definition" type="String" description="Definition of the Measurement Indicator. " unit="" values="" default=""/>
+							<Tag name="ID" type="String" description="Unique identifier for the Measurement Indicator. " unit="" values="" default=""/>
 							<Tag name="LastStandardReviewDate" type="Date" description="last time this KPI was reviewed" unit="" values="" default=""/>
+							<Tag name="SatisfactionLevel" type="int" description="Satisfaction level for the Measurement Indicator, desidered amount to be reached and/or Max value" unit="" values="" default=""/>
+							<Tag name="UnitOfMeasure" type="String" description="The unit of measure (if available) for the Measurement Indicator. " unit="" values="" default=""/>
 							<Tag name="Measurement Grouping"/>
 						</TaggedValues>
 					</Stereotype>
@@ -1093,8 +1093,8 @@ CACSdtROBsVaDToBAAAiAwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHqZ0LXVBL
 BQYAAAAAAQABAD4AAABwAQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
@@ -1127,8 +1127,8 @@ nfS6NUrcGhG/bPkd+5N+7XHjZch4jRd6/A4z45TfsvF2dHbGhst50O1fzs9KVcgbyy+KKj1B
 c3RyLmRhdFVUBQAHSz4KXVBLBQYAAAAAAQABAD4AAAC4AQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1167,12 +1167,12 @@ KnOBvcdUbM+qCSxzoWma20I0rF8qc1+dyPWrTtVB2759Bn/qOl4QUWnfSJeE72WL1Y5m4FV3
 AAAAAAAAgAAAAABzdHIuZGF0VVQFAAeArPZbUEsFBgAAAAABAAEAPgAAAI0BAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+					<Stereotype name="Class1" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholderâ€™s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 /////////////////////5+q/5Sf/5Ke/////////+3v////////////////////////////
 //v8/9XZ/5ei/5mk/////////29//3SD/5ql/1Vo//////////////////////Lz/0xg/9Xa
@@ -1200,8 +1200,8 @@ FwsUAAAACAAwanZNJg4uYkABAAA+AwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAH
 dKz2W1BLBQYAAAAAAQABAD4AAAB2AQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
@@ -1233,20 +1233,20 @@ AgAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHUgcJXVBLBQYAAAAAAQABAD4AAABh
 AQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="PrincipleID" type="String" description="Unique identifier for the Principle expressed as text. " unit="" values="" default=""/>
 							<Tag name="Implications" type="String" description="Statement of what the principle means in practical terms." unit="" values="" default=""/>
+							<Tag name="Owner" type="String" description="Owner for the Principle" unit="" values="" default=""/>
+							<Tag name="PrincipleID" type="String" description="Unique identifier for the Principle expressed as text. " unit="" values="" default=""/>
 							<Tag name="PrincipleMeasurement" type="Classifier:PrincipleMeasurement" description="Identifies mechanisms that will be used to measure whether the principle has been met or not." unit="dMeasurementIndicator" values="" default=""/>
 							<Tag name="Priority" type="int" description="Priority of this principle relative to other principles." unit="" values="" default=""/>
 							<Tag name="Rationale" type="String" description="Statement of why the principle is required and the outcome to be reached." unit="" values="" default=""/>
+							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 							<Tag name="Statement" type="String" description="Statement of what the principle is." unit="" values="" default=""/>
 							<Tag name="Type" type="enumeration" description="The category of the principle. " unit="" values="Guiding Principle,Business Principle,Data Principle,Application Principle,Integration Principle,Technology Principle" default=""/>
-							<Tag name="Owner" type="String" description="Owner for the Principle" unit="" values="" default=""/>
-							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -1277,8 +1277,8 @@ AAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAcroDFdUEsFBgAAAAABAAEAPgAAAF0BAAAA
 AA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
@@ -1340,20 +1340,20 @@ at44rDoT0LOKLSJt96jmXmEe/AFQSwECFwsUAAAACAD8cM9S6+xpLggDAACkDAAABwAJAAAA
 AAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHErTIYFBLBQYAAAAAAQABAD4AAAA+AwAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
+							<Tag name="Alternatives" type="" description="A list of alternatives and explanations" unit="" values="" default=""/>
+							<Tag name="Assumptions" type="" description="What is believed to be true about the context of the problem, constraints on the solution." unit="" values="" default=""/>
+							<Tag name="Decision" type="String" description="The decision taken, possibly with references to related work products" unit="" values="" default=""/>
+							<Tag name="Implications" type="String" description="What impact the decision will have" unit="" values="" default=""/>
+							<Tag name="Justification" type="Memo" description="Why the decision was made and a list of compliance to Architecture Principles and explanations of deviations from compliance." unit="" values="" default=""/>
+							<Tag name="Motivation" type="" description="Why this decision is important." unit="" values="" default=""/>
+							<Tag name="RelatedDecisions" type="Classifier:RelatedDecisions" description="A list of related decisions" unit="dDecision" values="" default=""/>
 							<Tag name="Subject Area" type="" description="Area of Concern" unit="" values="" default=""/>
 							<Tag name="Topic" type="" description="Topic of Interest" unit="" values="" default=""/>
-							<Tag name="Assumptions" type="" description="What is believed to be true about the context of the problem, constraints on the solution." unit="" values="" default=""/>
-							<Tag name="Motivation" type="" description="Why this decision is important." unit="" values="" default=""/>
-							<Tag name="Alternatives" type="" description="A list of alternatives and explanations" unit="" values="" default=""/>
-							<Tag name="Decision" type="String" description="The decision taken, possibly with references to related work products" unit="" values="" default=""/>
-							<Tag name="Justification" type="Memo" description="Why the decision was made and a list of compliance to Architecture Principles and explanations of deviations from compliance." unit="" values="" default=""/>
-							<Tag name="Implications" type="String" description="What impact the decision will have" unit="" values="" default=""/>
-							<Tag name="RelatedDecisions" type="Classifier:RelatedDecisions" description="A list of related decisions" unit="dDecision" values="" default=""/>
 							<Tag name="Issue to Solve"/>
 							<Tag name="Derived Requirement"/>
 						</TaggedValues>
@@ -1440,8 +1440,8 @@ AAAACACeg25N43/xzGUAAACwAAAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHP03s
 W1BLBQYAAAAAAQABAD4AAACbAAAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1479,14 +1479,14 @@ AACAAAAAAHN0ci5kYXRVVAUAB0doTFdQSwUGAAAAAAEAAQA+AAAAiQEAAAAA</Image>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="app_data_type" type="String" description="The datatype used in the application e.g. DATATYPE_DONTCARE, DATATYPE_ATTRIBUTE, DATATYPE_ELEMENT or DATATYPE_IGNORE" unit="" values="" default="DATATYPE_ATTRIBUTE"/>
+							<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 							<Tag name="db_data_type" type="String" description="The datatype used in the database" unit="" values="" default="VARCHAR(255)"/>
-							<Tag name="is_editable" type="enumeration" description="Whether the attribute is editable or not" unit="" values="true,false" default="true"/>
-							<Tag name="input_type" type="String" description="The HTML input type for the attribute e.g. select#fix:key1[val1]|key2[val2]" unit="" values="" default="text"/>
 							<Tag name="display_type" type="String" description="The HTML display type for the attribute e.g. image" unit="" values="" default="text"/>
+							<Tag name="input_type" type="String" description="The HTML input type for the attribute e.g. select#fix:key1[val1]|key2[val2]" unit="" values="" default="text"/>
+							<Tag name="is_editable" type="enumeration" description="Whether the attribute is editable or not" unit="" values="true,false" default="true"/>
+							<Tag name="restrictions_description" type="String" description="A text describing the restrictions" unit="" values="" default=""/>
 							<Tag name="restrictions_match" type="String" description="A regular expression that the value must match (e.g. '[0-3][0-9]\.[0-1][0-9]\.[0-9][0-9][0-9][0-9]' for date values)" unit="" values="" default=""/>
 							<Tag name="restrictions_not_match" type="String" description="A regular expression that the value must NOT match" unit="" values="" default=""/>
-							<Tag name="restrictions_description" type="String" description="A text describing the restrictions" unit="" values="" default=""/>
-							<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1520,8 +1520,8 @@ un4DUEsBAhcLFAAAAAgAjl18VJ+5VW7pAQAAaAcAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5k
 YXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1529,10 +1529,10 @@ YXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA</Image>
 							<Tag name="City" type="String" description="The City of the Location. " unit="" values="" default=""/>
 							<Tag name="Country" type="String" description="The City of the Location. " unit="" values="" default=""/>
 							<Tag name="EmailID" type="String" description="The contact e-mail Id for the Location. " unit="" values="" default=""/>
+							<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 							<Tag name="PhoneNumber" type="String" description="The contact phone number for the Location. " unit="" values="" default=""/>
 							<Tag name="Province" type="String" description="The Province of the Location. " unit="" values="" default=""/>
 							<Tag name="Street" type="String" description="The street part of the Location. " unit="" values="" default=""/>
-							<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1562,8 +1562,8 @@ AAAACABud1lVlgY1AQcBAADoAwAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHu/lX
 Y1BLBQYAAAAAAQABAD4AAAA9AQAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1599,16 +1599,16 @@ Gq32W1BLBQYAAAAAAQABAD4AAABAAQAAAAA=</Image>
 							<Apply type="UseCase"/>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="TestScenario" type="" description="The situation  that verifies the user story is realized" unit="" values="" default=""/>
 							<Tag name="EstimatedEffort" type="" description="Effort expressed in hours" unit="" values="" default="8"/>
 							<Tag name="StoryDetails" type="structured" description="" unit="" values="" default="">
 								<Property name="Role" type="" description="" unit="" values="" default="As a Actor"/>
 								<Property name="Scope" type="" description="" unit="" values="" default="I want to do something"/>
 								<Property name="Value" type="" description="" unit="" values="" default="So that I achieve Value"/>
 							</Tag>
+							<Tag name="TestScenario" type="" description="The situation  that verifies the user story is realized" unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+					<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 ////wEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBA8Mqm////////////wEBA
 8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8MqmwEBAwEBA8Mqm////////wEBA8Mqm////
@@ -1644,16 +1644,16 @@ SwUGAAAAAAEAAQA+AAAASQIAAAAA</Image>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
-							<Tag name="IP" type="int" description="The Ip of this machine" unit="" values="" default=""/>
-							<Tag name="PublicIP" type="int" description="" unit="" values="" default=""/>
-							<Tag name="CPU" type="int" description="the number and type of CPU" unit="" values="" default=""/>
-							<Tag name="RAM" type="int" description="the Memory dimension " unit="" values="" default=""/>
-							<Tag name="Owner" type="int" description="THe owner / responsible for this node" unit="" values="" default=""/>
 							<Tag name="ArchitectureType" type="enumeration" description="the type of  CPU Architecture (e.g. AMD 64)" unit="" values="AMD64,ARM64,RISC-V" default="AMD64"/>
+							<Tag name="CPU" type="int" description="the number and type of CPU" unit="" values="" default=""/>
 							<Tag name="Disk" type="int" description="the dimension of the disk" unit="" values="" default=""/>
+							<Tag name="IP" type="int" description="The Ip of this machine" unit="" values="" default=""/>
+							<Tag name="Owner" type="int" description="THe owner / responsible for this node" unit="" values="" default=""/>
+							<Tag name="PublicIP" type="int" description="" unit="" values="" default=""/>
+							<Tag name="RAM" type="int" description="the Memory dimension " unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+					<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 TLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEi////
 ////////////////////////////////////////////////////TLEiTLEi////////////
@@ -1684,7 +1684,7 @@ AACAAAAAAHN0ci5kYXRVVAUAB/4JCV1QSwUGAAAAAAEAAQA+AAAAUwEAAAAA</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+					<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -1720,7 +1720,7 @@ AABzdHIuZGF0VVQFAAcyF8tgUEsFBgAAAAABAAEAPgAAAIQBAAAAAA==</Image>
 							<Tag name="stakeHolderRole"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+					<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAA
 /////////////////87U/////////////////////////+Hk////////////////////////
 /////+rs/0dc/3KB/+zu//////////r7/5ai/0dc/9bb////////////////////////////
@@ -1758,8 +1758,8 @@ FAAAAAgAwFreUOLIjKaCAgAAthEAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUAB1gg
 						<TaggedValues>
 							<Tag name="#FTEs" type="Integer" description="Estimated number of FTEs that operate as this Actor." unit="" values="" default="5"/>
 							<Tag name="ActorGoal" type="String" description="Objectives that this actor has, in general terms." unit="" values="" default=""/>
-							<Tag name="ActorType" type="enumeration" description="the type of Actor" unit="" values="Not Set,Worker,External Worker,Internal Worker,Business Partner,Active Business Partner,Passive Business Partner" default="Not Set"/>
 							<Tag name="ActorTasks" type="String" description="Tasks that this actor performs, in general terms." unit="" values="" default=""/>
+							<Tag name="ActorType" type="enumeration" description="the type of Actor" unit="" values="Not Set,Worker,External Worker,Internal Worker,Business Partner,Active Business Partner,Passive Business Partner" default="Not Set"/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1805,8 +1805,8 @@ JtvEP5SXiJXBjkz1A1BLAQIXCxQAAAAIAFhO3lInH0H6ywIAABQNAAAHAAkAAAAAAAAAAAAA
 gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1815,7 +1815,7 @@ gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==</Image>
 							<Tag name="Organization Owner"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+					<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4AAAAAAAAAAAAA
 ////////////////////////////////////////////////////////////////////////
 ////////gODggODggODggODggODggODggODggODg////////////////////////////gODg
@@ -1844,10 +1844,10 @@ BQYAAAAAAQABAD4AAAAEAQAAAAA=</Image>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="#FTEs" type="int" description="Number of Full time Equivalent employees working in the Role. " unit="" values="" default=""/>
-							<Tag name="User" type="String" description="User-definable categorization." unit="" values="" default=""/>
 							<Tag name="ID" type="String" description="Unique identifier for the Role ." unit="" values="" default=""/>
 							<Tag name="Owner" type="String" description="Owner of the Role. " unit="" values="" default=""/>
 							<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
+							<Tag name="User" type="String" description="User-definable categorization." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Represent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -1884,8 +1884,8 @@ kSWQdwIAAGQIAAAHAAkAAAAAAAAAAAAAgAAAAABzdHIuZGF0VVQFAAeaGFBjUEsFBgAAAAAB
 AAEAPgAAAK0CAAAAAA==</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
@@ -1932,7 +1932,7 @@ AA==</Image>
 							<Tag name="Referenced Value"/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+					<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4AAAAAAAAAAAAA
 lNzRHbSdHLSdHLSdHLSdHLSdHLSdScOx7Pn3////////////////////////////////puLZ
 IbafHrWeHrWeHrWeHrWeHrWeQcGt5Pbz////////////////////////////////tujgJbmi
@@ -1970,13 +1970,13 @@ AAABAAEAPgAAAJQAAAAAAA==</Image>
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////TLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEi
-TLEiTLEiTLEiTLEi////////////////////TLEiTLEi////////TLEi////////////////
-////TLEiTLEi////////////////////TLEiTLEi////////TLEi////////////////////
-TLEiTLEi////////////////////TLEiTLEi////////TLEi////////////////////TLEi
-TLEi////////////////////TLEiTLEi////////TLEi////////////////////TLEiTLEi
-////////////TLEiTLEi////////TLEi////////////////////TLEiTLEi////////////
-TLEiTLEi////////TLEi////////////////////TLEiTLEi////////////TLEiTLEi////
-////TLEi////////////////////TLEiTLEi////////////TLEiTLEiTLEiTLEiTLEiTLEi
+TLEiTLEiTLEiTLEi////////////////////TLEiTLEi////////////////////////////
+////TLEiTLEi////////////////////TLEiTLEi////////////////////////////////
+TLEiTLEi////////////////////TLEiTLEi////////////////////////////////TLEi
+TLEi////////////////////TLEiTLEi////////////////////////////////TLEiTLEi
+////////////TLEiTLEi////////////////////////////////TLEiTLEi////////////
+TLEiTLEi////////////////////////////////TLEiTLEi////////////TLEiTLEi////
+////////////////////////////TLEiTLEi////////////TLEiTLEiTLEiTLEiTLEiTLEi
 TLEiTLEiTLEiTLEiTLEiTLEi////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////
@@ -2007,9 +2007,9 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="Criticality" type="enumeration" description="" unit="" values="Not Analyzed,Negligible Impact,Limited Impact,Moderate Impact,Noticeable Impact,Significant Impact" default=""/>
-							<Tag name="is Decomposed" type="Boolean" description="" unit="" values="True,False" default=""/>
 							<Tag name="entrance criteria" type="Integer" description="" unit="" values="" default=""/>
 							<Tag name="exit criteria" type="Integer" description="" unit="" values="" default=""/>
+							<Tag name="is Decomposed" type="Boolean" description="" unit="" values="True,False" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Controlls" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
@@ -2063,6 +2063,22 @@ AAABAAEAPgAAALACAAAAAA==</Image>
 						</AppliesTo>
 					</Stereotype>
 					<Stereotype name="dRisk" alias="Risk" metatype="RIsk" notes="the potential for an Issue" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+						<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAASFwAAEhcAAAAAAAAAAAAA
+tbP/joz/hoT/gX7/e3j/dXP/cG3/bWr/aGX/X1z/Wlb/VFH/T0v/SUb/SUX/e3j/NjL/NTH/
+aWb/aWb/b2z/dXP/hYP/g4D/iYb/mJb/lJL/mpj/oJ7/srD/VFH/VFD/29r/CQT/////////
+////////6OnZAAAAAAAA4uPV////////////////AAD/w8PDw8PDHhr/srD/////////////
+e3t7AAAAAAAAb29v////////////iYf/S0j/w8PDw8PD6un/AAD/////////////9/f3AAAA
+AAAA9vb2////////////AAD/w8PDw8PDw8PDw8PDNzP/mpj/////////////hISEhoaG8/Pz
+////////f3z/VlP/w8PDw8PDw8PDw8PD+vr/AAD/////////////AAAAAAAA3Nzc////////
+AAD/w8PDw8PDw8PDw8PDw8PDw8PDUEz/goD/////+/v7AAAAAAAA3d3d////dHH/YV7/w8PD
+w8PDw8PDw8PDw8PDw8PDw8PDAAD/////9vb0AAAAAAAA3Nza////AAD/w8PDw8PDw8PDw8PD
+w8PDw8PDw8PDw8PDaGX/b2z////tAAAAAAAA6uvXcG3/bGn/w8PDw8PDw8PDw8PDw8PDw8PD
+w8PDw8PDw8PDAAD/6enfAAAAAAAA3NzOAAD/w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PD
+w8PDgn//Tkv88fHb7/DbWlb6eXb/w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PD
+AAD/////////AAD/w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDmZf/S0f/
+Z2T/goD/w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDAAD/AAD/w8PD
+w8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDw8PDurj/pqT/w8PDw8PDw8PD
+w8PDw8PDw8PDw8PD</Icon>
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAA5PWVD/4gCC0AEAACIGAAAHABEAc3RyLmRhdFVUDQAHZ+9UXmfvVF5n71Re
 rVRNT8JAEH3XmvgfGrhAQqJoPBkOih/xQgjVeDQFFBpL0VJM0PDffTPbpcu3GtPMdDt983a+
 dicYIsQbnuFjxFWEBIc4wJdqHzFtM4wxRcZnliMblBK6tKfo05Ly6zz3GOKJPjGZBuSy2Jio
@@ -2077,14 +2093,14 @@ AAAiBgAABwAJAAAAAAAAAAAAAIAAAAAAc3RyLmRhdFVUBQAHZ+9UXlBLBQYAAAAAAQABAD4A
 AAAGAgAAAAA=</Image>
 						<AppliesTo>
 							<Apply type="Class">
-								<Property name="isActive" value=""/>
 								<Property name="_HideUmlLinks" value="False"/>
+								<Property name="isActive" value=""/>
 							</Apply>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="Likehood" type="int" description="" unit="" values="" default="50"/>
-							<Tag name="Severity" type="int" description="" unit="" values="" default="50"/>
 							<Tag name="RiskStrategy" type="enumeration" description="" unit="" values="Terminate,Treat,Tollerate,Transfer" default=""/>
+							<Tag name="Severity" type="int" description="" unit="" values="" default="50"/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Includes Processes" metatype="ncludes Processes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
@@ -2196,6 +2212,8 @@ AAAGAgAAAAA=</Image>
 							<Apply type="Aggregation">
 								<Property name="_MeaningBackwards" value="configures Application"/>
 								<Property name="_MeaningForwards" value="has configuration"/>
+								<Property name="_SourceNavigability" value="navigable"/>
+								<Property name="_TargetNavigability" value="navigable"/>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
@@ -2327,7 +2345,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="is related to" metatype="s related to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="is related to" metatype="s related to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="is specified by Requirement"/>
@@ -2335,7 +2353,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isDescribedBy" metatype="sDescribedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isDescribedBy" metatype="sDescribedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="described by Use Case"/>
@@ -2343,7 +2361,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isFunctionallyImplementedBy" metatype="sFunctionallyImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isFunctionallyImplementedBy" metatype="sFunctionallyImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="is Functionally Implemented By Table"/>
@@ -2351,7 +2369,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="Is implemented by Controller"/>
@@ -2359,7 +2377,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isMakingUseOf" metatype="sMakingUseOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isMakingUseOf" metatype="sMakingUseOf" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="Makes Use Of Decision"/>
@@ -2367,7 +2385,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isMeasuredBy" metatype="sMeasuredBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isMeasuredBy" metatype="sMeasuredBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="is measuring Capability"/>
@@ -2375,7 +2393,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isOperationalizedBy" metatype="sOperationalizedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isOperationalizedBy" metatype="sOperationalizedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="is Operationalized By Capability"/>
@@ -2383,7 +2401,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isPerformedBy" metatype="sPerformedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isPerformedBy" metatype="sPerformedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="is executed by Actor"/>
@@ -2391,7 +2409,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isPhysicallyHostedBy" metatype="sPhysicallyHostedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isPhysicallyHostedBy" metatype="sPhysicallyHostedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="is Hosted By Node"/>
@@ -2399,7 +2417,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="isSatisfiedBy" metatype="sSatisfiedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="isSatisfiedBy" metatype="sSatisfiedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="is realized by Feature"/>
@@ -2407,7 +2425,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="Orchestrates service" metatype="rchestrates service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="Orchestrates service" metatype="rchestrates service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Aggregation">
 								<Property name="_MeaningBackwards" value="part of Process"/>
@@ -2415,7 +2433,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="ProvidesPersistenceFor" metatype="rovidesPersistenceFor" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="ProvidesPersistenceFor" metatype="rovidesPersistenceFor" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="Provides Persistence For Model"/>
@@ -2423,7 +2441,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Realisation">
 								<Property name="_MeaningBackwards" value="is realized by Class"/>
@@ -2431,7 +2449,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="refersTo" metatype="efersTo" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="refersTo" metatype="efersTo" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Dependency">
 								<Property name="_MeaningBackwards" value="is referenced by Decision"/>
@@ -2439,7 +2457,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="StopTheRealizationOf" metatype="topTheRealizationOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="StopTheRealizationOf" metatype="topTheRealizationOf" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Association">
 								<Property name="_MeaningBackwards" value="is stopped by Issue"/>
@@ -2447,7 +2465,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="Supports" metatype="upports" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="Supports" metatype="upports" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Aggregation">
 								<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2496,10 +2514,10 @@ AAAGAgAAAAA=</Image>
 						</AppliesTo>
 						<TaggedValues>
 							<Tag name="action" type="String" description="The action, which is triggered by this Dependency. If empty, any action is valid" unit="" values="" default=""/>
-							<Tag name="method" type="String" description="the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." unit="" values="" default=""/>
-							<Tag name="context" type="String" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
 							<Tag name="config" type="String" description="The configuration, in which this association is defined" unit="" values="" default="config.ini"/>
+							<Tag name="context" type="String" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
 							<Tag name="decorator" type="String" description="Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this endpoint as a REST service." unit="" values="" default=""/>
+							<Tag name="method" type="String" description="the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." unit="" values="" default=""/>
 						</TaggedValues>
 					</Stereotype>
 					<Stereotype name="Resource Risk" metatype="Resource impacted" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
@@ -2520,7 +2538,7 @@ AAAGAgAAAAA=</Image>
 							</Apply>
 						</AppliesTo>
 					</Stereotype>
-					<Stereotype name="dNetwork" metatype="Network" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="dNetwork" metatype="Network" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIALZUW1XO7tGHhgIAAHoLAAAHABEAc3RyLmRhdFVUDQAHh19aY4dfWmOHX1pj
 7VbLbtswENyrC+QfCueiAA7QpGmaokhv/YJ+QGFbjiPUVgw9EqRF/70zu6JI0Ywc+BagEEBR
 5OyDw+GKtdzLXHaykveyRa+QUk7knfzRdiIbjD3Lg7TS4HlW5K1MZYGxSnJ8Vfj62qFLjNbq
@@ -2546,7 +2564,7 @@ AAeHX1pjUEsFBgAAAAABAAEAPgAAALwCAAAAAA==</Image>
 							<Tag name="NetworkType" type="enumeration" description="" unit="" values="LAN,WAN,Mesh" default=""/>
 						</TaggedValues>
 					</Stereotype>
-					<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+					<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 						<AppliesTo>
 							<Apply type="Aggregation">
 								<Property name="_MeaningBackwards" value="is contained in a network"/>
@@ -2832,7 +2850,7 @@ AQAAAAAAAAAAAAAAAAAAACUAAAAMAAAAAQAAACUAAAAMAAAABwAAgCgAAAAMAAAAAgAAACYA
 AAAcAAAAAgAAAAUAAAAAAAAAAAAAAP///wAlAAAADAAAAAIAAAADAAAAVAAAAPoEAABAAQAA
 HgUAANUDAAAHAAAA+gQAAEABAAAMBQAAQAEAAB4FAABAAQAAHgUAANUDAAAMBQAA1QMAAPoE
 AADVAwAA+gQAAEABAAAiAAAADAAAAP////8UAAAADAAAAA0AAABGAAAAHAAAABAAAABFTUYr
-AkAAAAwAAAAAAAAADgAAABQAAAAAAAAAEAAAABQAAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1391189593"/><Column name="Name" value="dafObject"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAGwAAAAAAAAAAAAAALsBAAAnAQAAAAAAAAAAAADbLQAAmR4AACBFTUYAAAEAmAsAAH8A
+AkAAAAwAAAAAAAAADgAAABQAAAAAAAAAEAAAABQAAAA=</Column></DataRow><DataRow><Column name="ImageID" value="559442057"/><Column name="Name" value="dafObject"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAGwAAAAAAAAAAAAAALsBAAAnAQAAAAAAAAAAAADbLQAAmR4AACBFTUYAAAEAmAsAAH8A
 AAADAAAAAAAAAAAAAAAAAAAAvAEAACgBAAB1AAAATgAAAAAAAAAAAAAAAAAAAJjKAQAEMgEA
 RgAAACwAAAAgAAAARU1GKwFAAQAcAAAAEAAAAAIQwNsBAAAAXgAAAF4AAABGAAAATAAAAEAA
 AABFTUYrIkAAAAwAAAAAAAAAHkAJAAwAAAAAAAAAJEAAAQwAAAAAAAAAIUAAAAwAAAAAAAAA
@@ -2944,7 +2962,7 @@ AAAYAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAJkAAABAAAAAEAAAAAAAAAAhABAQYAAAA
 DAAAAAIQwNsAAAAAAwAAEDRABAAMAAAAAAAAACEAAAAIAAAAYgAAAAwAAAABAAAATAAAAGQA
 AAAhCAAAEAkAAFcMAADZDAAAIQgAABAJAAA3BAAAygMAACkAqgAAAAAAAAAAAAAAgD8AAAAA
 AAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAMAAAA/////0YA
-AAAcAAAAEAAAAEVNRisCQAAADAAAAAAAAAAOAAAAFAAAAAAAAAAQAAAAFAAAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955363"/><Column name="Name" value="dafCapability"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAUC8AAEsB
+AAAcAAAAEAAAAEVNRisCQAAADAAAAAAAAAAOAAAAFAAAAAAAAAAQAAAAFAAAAA==</Column></DataRow><DataRow><Column name="ImageID" value="798351267"/><Column name="Name" value="dafCapability"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAUC8AAEsB
 AAADAAAANQAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAQwBhAHAAYQBiAGkAbABpAHQAeQAuAGUAbQBmAAAAAAAAAAAA
@@ -3168,7 +3186,7 @@ dQAAAEwAAAB2AAAATwAAAHsAAAAFAAAANAAAAAAAAAAAAAAA//////////8DAAAAUgAAAIAA
 AABZAAAAhwAAAF4AAACJAAAABQAAADQAAAAAAAAAAAAAAP//////////AwAAAGUAAACNAAAA
 bgAAAI0AAAB2AAAAigAAAD0AAAAIAAAAPAAAAAgAAAA/AAAAGAAAAAAAAAAAAAAA////////
 //8lAAAADAAAAAUAAIAoAAAADAAAAAIAAAAlAAAADAAAAAgAAIAoAAAADAAAAAEAAAAOAAAA
-FAAAAAAAAAAAAAAAUC8AAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955364"/><Column name="Name" value="dafFeature"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANAAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA5AgAAEEA
+FAAAAAAAAAAAAAAAUC8AAA==</Column></DataRow><DataRow><Column name="ImageID" value="1641341341"/><Column name="Name" value="dafFeature"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANAAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA5AgAAEEA
 AAACAAAAMgAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQARgBlAGEAdAB1AHIAZQAuAGUAbQBmAAAAAAAAABEAAAAMAAAA
@@ -3210,7 +3228,7 @@ AAD//////////wMAAABOAAAAhwAAAFEAAACQAAAAVgAAAJUAAAAFAAAANAAAAAAAAAAAAAAA
 ////////AwAAAHQAAACeAAAAewAAAJsAAACAAAAAlQAAAAUAAAA0AAAAAAAAAAAAAAD/////
 /////wMAAACFAAAAjwAAAIgAAACHAAAAiAAAAHwAAAA9AAAACAAAADwAAAAIAAAAPgAAABgA
 AAAAAAAAAAAAAP//////////JQAAAAwAAAAFAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAA
-AAAAAOQIAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955365"/><Column name="Name" value="dafGoal"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA4AgAAEEA
+AAAAAOQIAAA=</Column></DataRow><DataRow><Column name="ImageID" value="454260797"/><Column name="Name" value="dafGoal"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA4AgAAEEA
 AAACAAAALwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQARwBvAGEAbAAuAGUAbQBmAAAAAAAAAAAAEQAAAAwAAAABAAAA
@@ -3252,7 +3270,7 @@ AAD//////////wMAAABYAAAAZAAAAFUAAABoAAAAUgAAAG0AAAAFAAAANAAAAAAAAAAAAAAA
 //8DAAAAdQAAAKAAAAB8AAAAnQAAAIEAAACXAAAABQAAADQAAAAAAAAAAAAAAP//////////
 AwAAAIYAAACRAAAAiAAAAIkAAACIAAAAfQAAAD0AAAAIAAAAPAAAAAgAAAA+AAAAGAAAAAAA
 AAAAAAAA//////////8lAAAADAAAAAUAAIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAA
-4AgAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955367"/><Column name="Name" value="dafRequirement"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAlAkAAFIA
+4AgAAA==</Column></DataRow><DataRow><Column name="ImageID" value="2055865375"/><Column name="Name" value="dafRequirement"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAlAkAAFIA
 AAACAAAANwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAUgBlAHEAdQBpAHIAZQBtAGUAbgB0AHMALgBlAG0AZgAAAAAA
@@ -3297,7 +3315,7 @@ AAAAAAAAAAAAAP//////////JQAAAAwAAAAIAACAKAAAAAwAAAABAAAAXwAAADgAAAABAAAA
 AAAAAAAAAAAAAAAAAAAAAAAiAQANAAAAAAAAAP8ABQAGAAAAAAAAAAAAAAAlAAAADAAAAAEA
 AAA6AAAADAAAAAQAAAA7AAAACAAAABsAAAAQAAAABAAAAL4AAAA2AAAAEAAAANUAAADBAAAA
 PAAAAAgAAABAAAAAGAAAAAAAAAAAAAAA//////////8lAAAADAAAAAgAAIAoAAAADAAAAAEA
-AAAOAAAAFAAAAAAAAAAAAAAAlAkAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955368"/><Column name="Name" value="dafController"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAsA4AAHsA
+AAAOAAAAFAAAAAAAAAAAAAAAlAkAAA==</Column></DataRow><DataRow><Column name="ImageID" value="648323684"/><Column name="Name" value="dafController"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAsA4AAHsA
 AAACAAAANQAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAQwBvAG4AdAByAG8AbABsAGUAcgAuAGUAbQBmAAAAAAAAAAAA
@@ -3366,7 +3384,7 @@ AAD//////////wMAAABNAAAAggAAAE0AAACHAAAATQAAAI4AAAAFAAAANAAAAAAAAAAAAAAA
 AwAAAHcAAACzAAAAfgAAALIAAACDAAAAsAAAAAUAAAA0AAAAAAAAAAAAAAD//////////wMA
 AACJAAAArgAAAI8AAACrAAAAlAAAAKcAAAA2AAAAEAAAAJUAAACnAAAANgAAABAAAACVAAAA
 tgAAAD0AAAAIAAAAPAAAAAgAAAA+AAAAGAAAAAAAAAAAAAAA//////////8lAAAADAAAAAUA
-AIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAAsA4AAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955369"/><Column name="Name" value="dafModel"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAdAkAAFoA
+AIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAAsA4AAA==</Column></DataRow><DataRow><Column name="ImageID" value="653694403"/><Column name="Name" value="dafModel"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAdAkAAFoA
 AAACAAAAMAAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATQBvAGQAZQBsAC4AZQBtAGYAAAAAAAAAEQAAAAwAAAABAAAA
@@ -3410,7 +3428,7 @@ BQAAgCgAAAAMAAAAAQAAACcAAAAYAAAAAQAAAAAAAABHMP8ABgAAACUAAAAMAAAAAQAAACUA
 AAAMAAAACAAAgCUAAAAMAAAACAAAgAMAAACMAAAAAAAAAAAAAAD//////////w4AAACVAAAA
 uwAAAIcAAAC7AAAAhwAAAGoAAABqAAAAoQAAAGIAAAChAAAARQAAAGoAAABFAAAAuwAAADgA
 AAC7AAAAOAAAAF0AAABLAAAAXQAAAGcAAACRAAAAggAAAF0AAACVAAAAXQAAAJUAAAC7AAAA
-JQAAAAwAAAAFAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAAAAAAAHQJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955370"/><Column name="Name" value="dafView"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEARAkAAFoA
+JQAAAAwAAAAFAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAAAAAAAHQJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="999120925"/><Column name="Name" value="dafView"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEARAkAAFoA
 AAACAAAALwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAVgBpAGUAdwAuAGUAbQBmAAAAAAAAAAAAEQAAAAwAAAABAAAA
@@ -3453,7 +3471,7 @@ AAA4AAAAPQAAAAgAAAA8AAAACAAAAD4AAAAYAAAAAAAAAAAAAAD//////////yUAAAAMAAAA
 BQAAgCgAAAAMAAAAAQAAACcAAAAYAAAAAQAAAAAAAABHMP8ABgAAACUAAAAMAAAAAQAAACUA
 AAAMAAAACAAAgCUAAAAMAAAACAAAgAMAAABcAAAAAAAAAAAAAAD//////////wgAAACXAAAA
 XwAAAHAAAAC8AAAAXgAAALwAAAA4AAAAXwAAAEcAAABfAAAAaAAAALEAAACIAAAAXwAAAJcA
-AABfAAAAJQAAAAwAAAAFAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAAAAAAAEQJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955371"/><Column name="Name" value="dafIssue"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAkAkAAEsA
+AABfAAAAJQAAAAwAAAAFAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAAAAAAAEQJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1389199861"/><Column name="Name" value="dafIssue"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAkAkAAEsA
 AAACAAAAMAAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQASQBzAHMAdQBlAC4AZQBtAGYAAAAAAAAAEQAAAAwAAAABAAAA
@@ -3498,7 +3516,7 @@ AAAAAAAA//////////8lAAAADAAAAAUAAIAoAAAADAAAAAEAAABfAAAAOAAAAAEAAAAAAAAA
 AAAAAAAAAAAAAAAAACIBAA0AAAAAAAAA/wAFAAYAAAAAAAAAAAAAACUAAAAMAAAAAQAAADoA
 AAAMAAAABAAAADsAAAAIAAAAGwAAABAAAAAkAAAAJQAAADYAAAAQAAAAswAAALMAAAA8AAAA
 CAAAAEAAAAAYAAAAAAAAAAAAAAD//////////yUAAAAMAAAACAAAgCgAAAAMAAAAAQAAAA4A
-AAAUAAAAAAAAAAAAAACQCQAA</Column></DataRow><DataRow><Column name="ImageID" value="1971955372"/><Column name="Name" value="dafMeasurementArea"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOAAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA/AoAAJMA
+AAAUAAAAAAAAAAAAAACQCQAA</Column></DataRow><DataRow><Column name="ImageID" value="1333654490"/><Column name="Name" value="dafMeasurementArea"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOAAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEA/AoAAJMA
 AAACAAAAOgAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATQBlAGEAcwB1AHIAZQBtAGUAbgB0AEEAcgBlAGEALgBlAG0A
@@ -3550,7 +3568,7 @@ JQAAAAwAAAAIAACAKAAAAAwAAAABAAAAXwAAADgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAi
 AQANAAAAAAAAALvTNwAGAAAAAAAAAAAAAAAlAAAADAAAAAEAAAA6AAAADAAAAAQAAAA7AAAA
 CAAAABsAAAAQAAAAqwAAAJ8AAAA2AAAAEAAAALgAAACgAAAAPAAAAAgAAABAAAAAGAAAAAAA
 AAAAAAAA//////////8lAAAADAAAAAgAAIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAA
-/AoAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955373"/><Column name="Name" value="dafMeasurementCategory"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAUA0AALUA
+/AoAAA==</Column></DataRow><DataRow><Column name="ImageID" value="259574216"/><Column name="Name" value="dafMeasurementCategory"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAUA0AALUA
 AAADAAAAPgAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATQBlAGEAcwB1AHIAZQBtAGUAbgB0AEMAYQB0AGUAZwBvAHIA
@@ -3613,7 +3631,7 @@ GwAAAHUAAAA2AAAAEAAAADUAAAB1AAAAPAAAAAgAAABAAAAAGAAAAAAAAAAAAAAA////////
 ACIBAA0AAAAAAAAAu9M3AAYAAAAAAAAAAAAAACUAAAAMAAAAAgAAADoAAAAMAAAABAAAADsA
 AAAIAAAAGwAAABAAAAAcAAAAwQAAADYAAAAQAAAAHAAAAC4AAAA8AAAACAAAAEAAAAAYAAAA
 AAAAAAAAAAD//////////yUAAAAMAAAACAAAgCgAAAAMAAAAAgAAAA4AAAAUAAAAAAAAAAAA
-AABQDQAA</Column></DataRow><DataRow><Column name="ImageID" value="1971955374"/><Column name="Name" value="dafMeasurementGroup"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAAAsAAJMA
+AABQDQAA</Column></DataRow><DataRow><Column name="ImageID" value="291025587"/><Column name="Name" value="dafMeasurementGroup"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAAAsAAJMA
 AAACAAAAOwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATQBlAGEAcwB1AHIAZQBtAGUAbgB0AEcAcgBvAHUAcAAuAGUA
@@ -3665,7 +3683,7 @@ AABqAAAAYQAAADYAAAAQAAAAagAAAEYAAAA8AAAACAAAAEAAAAAYAAAAAAAAAAAAAAD/////
 AAAAIgEADQAAAAAAAABHMP8ABgAAAAAAAAAAAAAAJQAAAAwAAAABAAAAOgAAAAwAAAAEAAAA
 OwAAAAgAAAAbAAAAEAAAAIUAAABhAAAANgAAABAAAACFAAAAUwAAADwAAAAIAAAAQAAAABgA
 AAAAAAAAAAAAAP//////////JQAAAAwAAAAIAACAKAAAAAwAAAABAAAADgAAABQAAAAAAAAA
-AAAAAAALAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955375"/><Column name="Name" value="dafMeasurementIndicator"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAKAcAAFsA
+AAAAAAALAAA=</Column></DataRow><DataRow><Column name="ImageID" value="666889450"/><Column name="Name" value="dafMeasurementIndicator"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAOwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAKAcAAFsA
 AAADAAAAPwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATQBlAGEAcwB1AHIAZQBtAGUAbgB0AEkAbgBkAGkAYwBhAHQA
@@ -3698,7 +3716,7 @@ AAAAAAAAAAAAAAAAAAAAAgEABgAAAAAAAABHMP8ABgAAAAAAAAAAAAAAJQAAAAwAAAACAAAA
 OwAAAAgAAAAbAAAAEAAAAIIAAACYAAAANgAAABAAAABpAAAAlwAAADYAAAAQAAAAUwAAAJcA
 AAA2AAAAEAAAAGAAAACAAAAANgAAABAAAABrAAAAbAAAADYAAAAQAAAAdwAAAIMAAAA9AAAA
 CAAAADwAAAAIAAAAPwAAABgAAAAAAAAAAAAAAP//////////JQAAAAwAAAAFAACAKAAAAAwA
-AAABAAAAJQAAAAwAAAAIAACAKAAAAAwAAAACAAAADgAAABQAAAAAAAAAAAAAACgHAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955376"/><Column name="Name" value="dafDataEntity"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAHAYAAEQA
+AAABAAAAJQAAAAwAAAAIAACAKAAAAAwAAAACAAAADgAAABQAAAAAAAAAAAAAACgHAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1625952202"/><Column name="Name" value="dafDataEntity"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANgAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAHAYAAEQA
 AAACAAAANQAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQARABhAHQAYQBFAG4AdABpAHQAeQAuAGUAbQBmAAAAAAAAAAAA
@@ -3727,7 +3745,7 @@ AAAIAACAKAAAAAwAAAABAAAAXwAAADgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAiAQANAAAA
 AAAAALvTNwAGAAAAAAAAAAAAAAAlAAAADAAAAAEAAAA6AAAADAAAAAQAAAA7AAAACAAAABsA
 AAAQAAAAiAAAACYAAAA2AAAAEAAAAIgAAACeAAAAPAAAAAgAAABAAAAAGAAAAAAAAAAAAAAA
 //////////8lAAAADAAAAAgAAIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAAHAYA
-AA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955377"/><Column name="Name" value="dafTable"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAEAYAAEQA
+AA==</Column></DataRow><DataRow><Column name="ImageID" value="1882729560"/><Column name="Name" value="dafTable"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAMwAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAEAYAAEQA
 AAACAAAAMAAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAVABhAGIAbABlAC4AZQBtAGYAAAAAAAAAEQAAAAwAAAABAAAA
@@ -3755,7 +3773,7 @@ nQAAADwAAAAIAAAAQAAAABgAAAAAAAAAAAAAAP//////////JQAAAAwAAAAIAACAKAAAAAwA
 AAABAAAAXwAAADgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAiAQANAAAAAAAAAEcw/wAGAAAA
 AAAAAAAAAAAlAAAADAAAAAEAAAA6AAAADAAAAAQAAAA7AAAACAAAABsAAAAQAAAAiAAAACYA
 AAA2AAAAEAAAAIgAAACeAAAAPAAAAAgAAABAAAAAGAAAAAAAAAAAAAAA//////////8lAAAA
-DAAAAAgAAIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAAEAYAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1971955378"/><Column name="Name" value="dafDecision"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAmAkAAHcA
+DAAAAAgAAIAoAAAADAAAAAEAAAAOAAAAFAAAAAAAAAAAAAAAEAYAAA==</Column></DataRow><DataRow><Column name="ImageID" value="1571734840"/><Column name="Name" value="dafDecision"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAmAkAAHcA
 AAACAAAAMwAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQARABlAGMAaQBzAGkAbwBuAC4AZQBtAGYAAAAAAAAAAAARAAAA
@@ -3800,7 +3818,7 @@ AAAYAAAAAAAAAAAAAAD//////////yUAAAAMAAAACAAAgCgAAAAMAAAAAQAAAF8AAAA4AAAA
 AQAAAAAAAAAAAAAAAAAAAAAAAAAAIgEADQAAAAAAAAC70zcABgAAAAAAAAAAAAAAJQAAAAwA
 AAABAAAAOgAAAAwAAAAEAAAAOwAAAAgAAAAbAAAAEAAAANEAAACsAAAANgAAABAAAAC2AAAA
 wgAAADwAAAAIAAAAQAAAABgAAAAAAAAAAAAAAP//////////JQAAAAwAAAAIAACAKAAAAAwA
-AAABAAAADgAAABQAAAAAAAAAAAAAAJgJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955379"/><Column name="Name" value="dafObjective"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAAAgAAEUA
+AAABAAAADgAAABQAAAAAAAAAAAAAAJgJAAA=</Column></DataRow><DataRow><Column name="ImageID" value="605262724"/><Column name="Name" value="dafObjective"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAAAgAAEUA
 AAADAAAANAAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQATwBiAGoAZQBjAHQAaQB2AGUALgBlAG0AZgAAAAAAAAARAAAA
@@ -3837,7 +3855,7 @@ AAAIAAAAGwAAABAAAAB1AAAAqAAAADYAAAAQAAAAdQAAAI4AAAAFAAAANAAAAAAAAAAAAAAA
 //////////8DAAAAggAAAIsAAACMAAAAgQAAAI8AAAB1AAAANgAAABAAAACpAAAAdQAAAAUA
 AAA0AAAAAAAAAAAAAAD//////////wMAAAClAAAAjwAAAJAAAACjAAAAdQAAAKgAAAA9AAAA
 CAAAADwAAAAIAAAAPwAAABgAAAAAAAAAAAAAAP//////////JQAAAAwAAAAFAACAKAAAAAwA
-AAABAAAAJQAAAAwAAAAIAACAKAAAAAwAAAACAAAADgAAABQAAAAAAAAAAAAAAAAIAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1971955380"/><Column name="Name" value="dafPrinciple"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAPBAAAM4A
+AAABAAAAJQAAAAwAAAAIAACAKAAAAAwAAAACAAAADgAAABQAAAAAAAAAAAAAAAAIAAA=</Column></DataRow><DataRow><Column name="ImageID" value="1378408857"/><Column name="Name" value="dafPrinciple"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAANQAAAAAAAAAAAAAAOsAAADrAAAAAAAAAAAAAADzAQAA8wEAACBFTUYAAAEAPBAAAM4A
 AAADAAAANAAAAGwAAAAAAAAA3ScAAH0zAADYAAAAFwEAAAAAAAAAAAAAAAAAAMBLAwDYQQQA
 SQBuAGsAcwBjAGEAcABlACAAMAAuADkAMQAgAHIAMQAzADcAMgA1ACAAKABKAGEAbgAgADMA
 MAAgADIAMAAxADUAKQAAAGQAUAByAGkAbgBjAGkAcABsAGUALgBlAG0AZgAAAAAAAAARAAAA
