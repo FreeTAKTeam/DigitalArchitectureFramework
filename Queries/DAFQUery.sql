@@ -138,7 +138,7 @@ AND dMeasurementGrouping.Stereotype = ('dMeasurementGrouping')
 GROUP BY dMeasurementGrouping.Name
 ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
--- select all Measuremnt indicator under a Business capability
+-- select all Measuremnt indicators under a Business capability
 SELECT KPI.Name AS Name, AVG(CAST(CurrentLevel.Value as INT)) AS CurrentValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS TargetValue
 FROM t_object AS KPI
 INNER JOIN t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
@@ -152,8 +152,21 @@ AND BusinessCapability.Stereotype = ('dCapability')
 GROUP BY Name
 ORDER BY CurrentValue DESC
 
+-- variation select all Measuremnt indicators under a Business capability
+SELECT BusinessCapability.Name As "Capability", KPI.Name AS Name, AVG(CAST(CurrentLevel.Value as INT)) AS CurrentValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS TargetValue 
+FROM t_object AS KPI
+INNER JOIN t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
+INNER JOIN t_objectproperties AS SatisfactionLevel ON SatisfactionLevel.Object_ID = KPI.Object_ID
+INNER JOIN t_connector AS conn ON conn.End_Object_ID= KPI.Object_ID
+INNER JOIN t_object AS BusinessCapability ON conn.Start_Object_ID  = BusinessCapability.Object_ID
+WHERE KPI.Stereotype = ('dMeasurementIndicator')  
+AND SatisfactionLevel.Property = ('SatisfactionLevel')
+AND CurrentLevel.Property = ('CurrentLevel')
+AND BusinessCapability.Stereotype = ('dCapability')
 
--- SELECT all the features that are set to be true and realize the maturty level of a Business capability
+
+
+-- SELECT all the features that are set to be true and realize the maturity level of a Business capability
 SELECT feature.Name AS FeatName, Capability.Name AS CapName 
 FROM t_object AS feature
 
