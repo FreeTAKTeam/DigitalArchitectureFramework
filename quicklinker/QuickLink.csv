@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:10/24/2022 2:11:07 PM
+//generated:2022-12-20 4:08:41 PM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -26,10 +26,10 @@ Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,t
 Component,dApplicationComponent,,,,Component,dSystem,Aggregation,configured by,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dSystem,,,,Component,dApplicationComponent,Aggregation,configured by,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> Exposes Service -> dPhysicalService
-Component,dApplicationComponent,Activity,dPhysicalService,,,,Association,Exposes Service,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dPhysicalService,Component,dApplicationComponent,,,,Association,Exposes Service,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Activity,dPhysicalService,Association,Exposes Service,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dPhysicalService,,,,Component,dApplicationComponent,Association,Exposes Service,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,Exposes Service,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,Exposes Service,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,Exposes Service,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,Exposes Service,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> Application Owner -> dStakeholder
 Component,dApplicationComponent,Actor,dStakeholder,,,,Association,Application Owner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,Component,dApplicationComponent,,,,Association,Application Owner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -111,10 +111,10 @@ Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Infor
 Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> Implements Service -> dPhysicalService
-Class,dController,Activity,dPhysicalService,,,,Association,Implements Service,directed,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dPhysicalService,Class,dController,,,,Association,Implements Service,from,Implements Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Activity,dPhysicalService,Association,Implements Service,directed,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dPhysicalService,,,,Class,dController,Association,Implements Service,from,,Implements Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dController,Interface,dPhysicalService,,,,Association,Implements Service,directed,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Class,dController,,,,Association,Implements Service,from,Implements Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Interface,dPhysicalService,Association,Implements Service,directed,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Class,dController,Association,Implements Service,from,,Implements Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> Governs -> dView
 Class,dController,Class,dView,,,,Association,Governs,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dView,Class,dController,,,,Association,Governs,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -226,10 +226,10 @@ Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,from,Provid
 Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceFor,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dNetwork -> NetworkContainsNode -> dDeploymentNode
-Class,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contain sNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,Class,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contain sNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Class,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contain sNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contain sNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dObject -> InstanceofModel -> dModelClass
 Class,dObject,Class,dModelClass,,,,Dependency,InstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dObject,,,,Dependency,InstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -261,10 +261,10 @@ Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,has Stakeholders,from,
 Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,has Stakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,has Stakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dPhysicalService -> Implements -> dBusinessService
-Activity,dPhysicalService,Activity,dBusinessService,,,,Realization,Implements,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,Activity,dPhysicalService,,,,Realization,Implements,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dPhysicalService,,,,Activity,dBusinessService,Realization,Implements,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Activity,dPhysicalService,Realization,Implements,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,Implements,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,Implements,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,Implements,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,Implements,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dProduct -> Includes Process -> dBusinessProcess
 Component,dProduct,Activity,dBusinessProcess,,,,Aggregation,Includes Process,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessProcess,Component,dProduct,,,,Aggregation,Includes Process,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,
