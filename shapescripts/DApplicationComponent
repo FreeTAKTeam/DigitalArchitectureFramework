@@ -1,0 +1,101 @@
+//dapplicationcomponent
+shape main
+{
+	layouttype="border";
+	defsize(90,70);
+	rectangle(0,0,100,100);
+	addsubshape("padding","n");
+	if(hasproperty("rectanglenotation","0"))
+	{
+		addsubshape("port","w");
+	}
+	addsubshape("name","center");
+	
+	shape port
+	{
+		preferredwidth=20;
+		scalable=false;
+		rectangle(-10,-10,10,0);
+		rectangle(-10,10,10,20);
+	}
+		
+	shape padding
+	{
+		preferredheight=15;
+	}
+	
+	shape name
+	{
+		h_align="center";
+		if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}  
+		print("#name#");
+	}
+}
+
+decoration component
+{
+	orientation="ne";
+	
+	if(hasproperty("rectanglenotation","0"))
+	{
+	}
+	else
+	{
+		rectangle(0,0,60,100);
+		rectangle(-10,10,10,30);
+		rectangle(-10,50,10,70);
+	}
+}
+
+decoration Botton_left
+{
+	orientation= "SW";
+	 if (HasProperty("ActivateFlags","1"))
+      {
+		if(HasTag("InvestmentStrategy","Retain"))
+		{
+			//blue
+			SetPenColor(107,203,236);
+			SetFillColor(107,203,236);
+			ellipse(0,0,100,100);
+		}
+			if(HasTag("InvestmentStrategy","Rehost"))
+		{
+			//Green
+			SetPenColor(155,187,89);
+			SetFillColor(155,187,89);
+			ellipse(0,0,100,100);
+		}
+			if(HasTag("InvestmentStrategy","Replatform"))
+		{
+			//dark blue
+			SetPenColor(79,129,189);
+			SetFillColor(79,129,189);
+			ellipse(0,0,100,100);
+		}
+			if(HasTag("InvestmentStrategy","Refactor"))
+		{
+			//Orange
+			SetPenColor(247,150,70);
+			SetFillColor(247,150,70);
+			ellipse(0,0,100,100);
+		}
+		if(HasTag("InvestmentStrategy","Retire"))
+		{
+			//red
+			SetPenColor(222,103,103);
+			SetFillColor(222,103,103);
+			ellipse(0,0,100,100);
+		}
+		if(HasTag("InvestmentStrategy","Rewrite"))
+		{
+			//yellow
+			SetPenColor(241,224,151);
+			SetFillColor(241,224,151);
+			ellipse(0,0,100,100);
+		}
+	}
+}

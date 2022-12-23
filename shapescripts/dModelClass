@@ -1,0 +1,63 @@
+decoration dModelClassDecoration
+{
+	orientation="NE";
+	Image("dafModel", 0,0,100,100);
+}
+
+shape main
+{
+	layouttype="topdown";
+	v_align="top";
+	h_align="center";
+	noShadow="true";
+		
+	if(hasproperty("rectanglenotation","0"))
+	{		
+		//rectangle is not activate, we print the tags		
+		defsize(100,100);
+		RoundRect(0,0,100,100,5,5);
+		//AddSubShape("padding",100,20);
+		AddSubShape("pip",100,20);
+		AddSubShape("Tags",100,80);
+		
+			
+		shape pip
+		{		         	
+			v_align="top";
+			h_align="center";
+			editablefield = "name";			
+			rectangle(0, 0, 100, 100);				
+			println("#name#");
+		}	
+	shape Tags
+		{		
+		h_align="Left";
+		v_align="top";
+			
+		SetPenColor(GetUserBorderColor());
+		//setfillcolor(0,255,0);	
+		Rectangle(0,0,100,100);
+						
+				if (HasTag("TableName", ""))
+					{
+					}
+				else
+					{
+						println("Table: #TAG:TableName#");
+					}
+				if (HasTag("is_soap", ""))
+					{
+					}
+				else
+					{
+						println("API: #TAG:is_SOAP#");
+					}
+							
+		}
+	}
+	else
+	{
+		DrawNativeShape();
+	}
+}
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="16B9391C-A" name="DAF Enterprise Architecture" version="4.1 Beta" notes="DAF Enterprise Architecture"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Component Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="Component Diagram"/>
+						<Property name="diagramID" value="DAF-AA-CD"/>
+						<Property name="toolbox" value="DAF_Application_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Process Flow Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Activity">
+						<Property name="alias" value="Process Flow Diagram"/>
+						<Property name="diagramID" value="DAF-BA-PFD"/>
+						<Property name="toolbox" value="DAF_Business_Analysis_"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Data Entity Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="alias" value="Table Diagram"/>
+						<Property name="diagramID" value="DAF_DA_LDD"/>
+						<Property name="toolbox" value="DAF_Data_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Roadmap Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="Component Diagram"/>
+						<Property name="diagramID" value="DAF-AA-CD"/>
+						<Property name="toolbox" value="DAF_Application_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Process Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Activity">
+						<Property name="alias" value="Process Flow Diagram"/>
+						<Property name="diagramID" value="DAF-BA-PFD"/>
+						<Property name="toolbox" value="DAF_Business_Analysis_"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="ASIS vs TO-BE Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="Component Diagram"/>
+						<Property name="diagramID" value="DAF-AA-CD"/>
+						<Property name="toolbox" value="DAF_Application_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Analysis Diagram" notes="Diagrams for Requirements">
+				<AppliesTo>
+					<Apply type="Diagram_Analysis">
+						<Property name="toolbox" value="DAF_Requirements_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Issues Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Analysis">
+						<Property name="toolbox" value="DAF_Requirements_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Class Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="alias" value="Class Diagram"/>
+						<Property name="diagramID" value="DAF_DA_LDD"/>
+						<Property name="toolbox" value="DAF_Data_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name=" Entity / Table" notes="the purpose of the Entity / Table Diagram is to show the relation between the abstract data entity and a concrete table">
+				<AppliesTo>
+					<Apply type="Diagram_Custom">
+						<Property name="alias" value=" Entity / Table"/>
+						<Property name="diagramID" value="DAF_DA_ETD"/>
+						<Property name="toolbox" value="DAF_Data_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Features Diagram" notes="">
+				<AppliesTo>
+					<Apply type="Diagram_Analysis">
+						<Property name="toolbox" value="DAF_DAF_Requirements_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

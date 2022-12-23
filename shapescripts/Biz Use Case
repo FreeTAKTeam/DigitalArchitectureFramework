@@ -1,0 +1,35 @@
+// Biz Use Case
+shape Main
+{
+     noShadow="true";
+     //layoutType="border";
+if(hastag("isCore","true"))
+{
+	
+	Ellipse(0,0,100,100);
+	 MoveTo(65,96);
+	 LineTo(97,65);
+	 MoveTo(98,60);
+	 LineTo(57,99);
+}
+else
+{
+	Ellipse(0,0,100,100);
+	 MoveTo(98,60);
+	 LineTo(57,99);
+ 
+}
+	 AddSubShape("name",100,100);
+	//Image("dBusinessUseCase",42,2,58,18);
+     
+	shape name{
+             h_align="center";
+		v_align="center";
+			if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}         
+			Println("#NAME#");
+         }
+     
+}

@@ -1,0 +1,16 @@
+﻿Name,Author,BaseType,BusinessValue,Category,ID,Owner,Source,Increments,IncrementsToBe,IncrementVertical,IncrementSupplyChain,Cost,Criticality,Risk,Guid
+Customer,Giuseppe Platania,Class,Low,1,014,Florian Merz,,Under Development,Defined,None,None,20,45,,{095FE4A4-7AAD-4288-A34F-0685CCBED859}
+Application Development Services,Giuseppe Platania,Class,Medium,3,015,Florian Merz,,None,Under Development,None,None,20,32,,{CB2537E8-9766-44bf-91B0-66B77512EEA1}
+Asset Management,Giuseppe Platania,Class,Low,2,016,Florian Merz,,None,Initial,None,None,44,76,,{7FC843A3-D484-45cf-BDE3-E3E04BEBC0FD}
+Customer Interacting,Corvo,Class,Differentiator,3,014,Florian Merz,,None,Initial,None,Defined,11,22,,{EA01B4C6-DBE0-4e1a-B1BC-0EA767E9DF05}
+Customer Acquisition,Giuseppe.Platania,Class,Support,2,2,Florian Merz,,Defined,Managed,Defined,UnderDevelopment,15,3,,{385ACF0E-5E9F-461a-831E-C4FCF35500AC}
+Customer service,Giuseppe.Platania,Class,High,3,3,Florian Merz,,Initial,Under Development,None,None,3,76,,{3A4411F5-7B64-4f2a-9CE6-906BB095E7AB}
+Device Management,Giuseppe Platania,Class,Medium,3,4,Florian Merz,,None,Initial,None,None,7,34,,{AAFAB0CD-C1F9-47c4-A544-8DDBE4B58698}
+Employees Security Management,Giuseppe Platania,Class,Medium,3,5,Florian Merz,,None,Initial,None,None,4,26,,{08C0558C-4FA5-4642-83AC-32DC435B5E19}
+Customer Support,Giuseppe Platania,Class,Differentiator,2,6,Florian Merz,,Initial,Managed,None,None,2,12,,{120954CF-FA85-4ac4-BA69-5267E4F9F61D}
+Device,Giuseppe Platania,Class,Low,1,7,Florian Merz,,None,Initial,None,None,5,33,,{AC67B395-7866-40dd-9597-44D49930AF7D}
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

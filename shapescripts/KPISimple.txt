@@ -1,0 +1,295 @@
+shape main
+{
+	layouttype="border";
+
+	defsize(100,70);
+	rectangle(0,0,100,100);
+
+	addsubshape("padding","n");
+	addsubshape("name","center");
+	
+	shape padding
+	{
+		preferredheight=20;
+	}
+	
+		shape name
+		{
+		h_align="center";	
+				v_align="center";
+			
+		setpencolor(GetUserBorderColor()); 
+		setfillcolor(GetUserFillColor()); 
+		rectangle(15,15,85,85);
+		
+			print("#name#");
+		}
+//level
+if(hastag("CurrentLevel","0"))
+	{
+		setpencolor(GetUserBorderColor()); 
+		setfillcolor(GetUserFillColor()); 
+		//top left
+		MoveTo(5,5);
+		StartPath();
+		lineto(20,5);
+		lineto(20,10);
+		lineto(10,10);
+		lineto(10,20);
+		lineto(5,20);
+		lineto(5,5);
+		EndPath();
+		FillAndStrokePath();
+	
+	//top right
+		MoveTo(95,5);
+		StartPath();
+		lineto(80,5);
+		lineto(80,10);
+		lineto(90,10);
+		lineto(90,20);
+		lineto(95,20);
+		lineto(95,5);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom Left
+		MoveTo(5,95);
+		StartPath();
+		lineto(20,95);
+		lineto(20,90);
+		lineto(10,90);
+		lineto(10,80);
+		lineto(5,80);
+		lineto(5,95);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom right	
+		MoveTo(80,95);
+		StartPath();
+		lineto(95,95);
+		lineto(95,80);
+		lineto(90,80);
+		lineto(90,90);
+		lineto(80,90);
+		lineto(80,95);
+		EndPath();
+		FillAndStrokePath(); 
+	}
+	if(HasTag("CurrentLevel","25"))
+	{
+		setpencolor(67,174,119); // Daf green
+		setfillcolor(79,129,189); // Daf blue
+		//top left
+		MoveTo(5,5);
+		StartPath();
+		lineto(20,5);
+		lineto(20,10);
+		lineto(10,10);
+		lineto(10,20);
+		lineto(5,20);
+		lineto(5,5);
+		EndPath();
+		FillAndStrokePath();
+		setpencolor(GetUserBorderColor()); 
+		setfillcolor(GetUserFillColor()); 
+	//top right
+		MoveTo(95,5);
+		StartPath();
+		lineto(80,5);
+		lineto(80,10);
+		lineto(90,10);
+		lineto(90,20);
+		lineto(95,20);
+		lineto(95,5);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom Left
+		MoveTo(5,95);
+		StartPath();
+		lineto(20,95);
+		lineto(20,90);
+		lineto(10,90);
+		lineto(10,80);
+		lineto(5,80);
+		lineto(5,95);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom right	
+		MoveTo(80,95);
+		StartPath();
+		lineto(95,95);
+		lineto(95,80);
+		lineto(90,80);
+		lineto(90,90);
+		lineto(80,90);
+		lineto(80,95);
+		EndPath();
+		FillAndStrokePath(); 
+	
+		}
+	if(HasTag("CurrentLevel","50"))
+	{
+	setpencolor(67,174,119); // Daf green
+	setfillcolor(79,129,189); // Daf blue
+		//top left
+		MoveTo(5,5);
+		StartPath();
+		lineto(20,5);
+		lineto(20,10);
+		lineto(10,10);
+		lineto(10,20);
+		lineto(5,20);
+		lineto(5,5);
+		EndPath();
+		FillAndStrokePath();
+		
+	//top right
+		MoveTo(95,5);
+		StartPath();
+		lineto(80,5);
+		lineto(80,10);
+		lineto(90,10);
+		lineto(90,20);
+		lineto(95,20);
+		lineto(95,5);
+		EndPath();
+		FillAndStrokePath(); 
+		setpencolor(GetUserBorderColor()); 
+		setfillcolor(GetUserFillColor()); 
+	//bottom Left
+		MoveTo(5,95);
+		StartPath();
+		lineto(20,95);
+		lineto(20,90);
+		lineto(10,90);
+		lineto(10,80);
+		lineto(5,80);
+		lineto(5,95);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom right	
+		MoveTo(80,95);
+		StartPath();
+		lineto(95,95);
+		lineto(95,80);
+		lineto(90,80);
+		lineto(90,90);
+		lineto(80,90);
+		lineto(80,95);
+		EndPath();
+		FillAndStrokePath(); 
+	}
+	if(HasTag("CurrentLevel","75"))
+		{
+		setpencolor(67,174,119); // Daf green
+	setfillcolor(79,129,189); // Daf blue
+		//top left
+		MoveTo(5,5);
+		StartPath();
+		lineto(20,5);
+		lineto(20,10);
+		lineto(10,10);
+		lineto(10,20);
+		lineto(5,20);
+		lineto(5,5);
+		EndPath();
+		FillAndStrokePath();
+		
+	//top right
+		MoveTo(95,5);
+		StartPath();
+		lineto(80,5);
+		lineto(80,10);
+		lineto(90,10);
+		lineto(90,20);
+		lineto(95,20);
+		lineto(95,5);
+		EndPath();
+		FillAndStrokePath(); 
+
+	//bottom Left
+		MoveTo(5,95);
+		StartPath();
+		lineto(20,95);
+		lineto(20,90);
+		lineto(10,90);
+		lineto(10,80);
+		lineto(5,80);
+		lineto(5,95);
+		EndPath();
+		FillAndStrokePath(); 
+		setpencolor(GetUserBorderColor()); 
+		setfillcolor(GetUserFillColor()); 
+	//bottom right	
+		MoveTo(80,95);
+		StartPath();
+		lineto(95,95);
+		lineto(95,80);
+		lineto(90,80);
+		lineto(90,90);
+		lineto(80,90);
+		lineto(80,95);
+		EndPath();
+		FillAndStrokePath(); 
+	}
+	if(HasTag("CurrentLevel","100"))
+		{
+	
+		setpencolor(67,174,119); // Daf green
+		setfillcolor(79,129,189); // Daf blue
+		
+		//top left
+		MoveTo(5,5);
+		StartPath();
+		lineto(20,5);
+		lineto(20,10);
+		lineto(10,10);
+		lineto(10,20);
+		lineto(5,20);
+		lineto(5,5);
+		EndPath();
+		FillAndStrokePath();
+	
+	//top right
+		MoveTo(95,5);
+		StartPath();
+		lineto(80,5);
+		lineto(80,10);
+		lineto(90,10);
+		lineto(90,20);
+		lineto(95,20);
+		lineto(95,5);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom Left
+		MoveTo(5,95);
+		StartPath();
+		lineto(20,95);
+		lineto(20,90);
+		lineto(10,90);
+		lineto(10,80);
+		lineto(5,80);
+		lineto(5,95);
+		EndPath();
+		FillAndStrokePath(); 
+	//bottom right	
+		MoveTo(80,95);
+		StartPath();
+		lineto(95,95);
+		lineto(95,80);
+		lineto(90,80);
+		lineto(90,90);
+		lineto(80,90);
+		lineto(80,95);
+		EndPath();
+		FillAndStrokePath(); 
+	}
+		
+		
+}
+
+decoration dMeasurementIndicatorDecoration
+{
+	orientation="NE";
+	Image("dafMeasurementIndicator", 0,0,100,100);
+}

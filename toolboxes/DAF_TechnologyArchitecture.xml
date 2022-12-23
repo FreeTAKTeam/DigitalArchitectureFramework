@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="A662FF5E-9" name="DAF_TechnologyArchitecture" version="5.0 alpha 3" alias="DAF Technology Architecture" notes="A toolbox for managing Technology Architecture"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Technology" notes="tools for technology architecture">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDeploymentNode(UML::Node)" type="" description="" unit="" values="" default="Node"/>
+					<Tag name="DAF::dLocation(UML::Class)" type="" description="" unit="" values="" default="Location"/>
+					<Tag name="DAF::dNetwork(UML::Node)" type="" description="" unit="" values="" default="Network"/>
+					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
+					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="System configuration"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Common Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="UML::Assembly" type="int" description="" unit="" values="" default="Assembly"/>
+					<Tag name="UML::Association" type="" description="" unit="" values="" default="Association"/>
+					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
+					<Tag name="UML::Aggregation" type="int" description="" unit="" values="" default="Aggregation"/>
+					<Tag name="UML::Composition" type="int" description="" unit="" values="" default="Composition"/>
+					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
+					<Tag name="UML::Dependency" type="int" description="" unit="" values="" default="Dependency"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Technologies Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::configured by(UML::Aggregation)" type="" description="" unit="" values="" default="configured by "/>
+					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="" description="" unit="" values="" default="Location hosts Node "/>
+					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="" description="" unit="" values="" default=" is Physically Hosted By"/>
+					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="" description="" unit="" values="" default="Network contains Node"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

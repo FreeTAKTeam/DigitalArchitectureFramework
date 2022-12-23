@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100"
+   height="82"
+   viewBox="0 0 100 82"
+   id="svg5330"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="Actor.svg"
+   inkscape:export-filename="G:\Workspace\EnterpriseArchitecture\Ducen Architecture Framework\Icons\Kumar\RoleFinal.png"
+   inkscape:export-xdpi="22.860001"
+   inkscape:export-ydpi="22.860001">
+  <defs
+     id="defs5332" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="83.816237"
+     inkscape:cy="35.658204"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata5335">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-970.36216)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:3.221457;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4301"
+       width="83.368668"
+       height="82.863594"
+       x="9.7071781"
+       y="970.14545"
+       inkscape:export-xdpi="20.790001"
+       inkscape:export-ydpi="20.790001" />
+    <ellipse
+       style="fill:none;stroke:#bbd337;stroke-width:3.03461981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5878"
+       cx="-50.387981"
+       cy="-996.95135"
+       transform="scale(-1,-1)"
+       rx="11.962192"
+       ry="10.718697"
+       inkscape:export-xdpi="22.860001"
+       inkscape:export-ydpi="22.860001" />
+    <path
+       style="fill:none;stroke:#bbd337;stroke-width:2.48699999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5887"
+       sodipodi:type="arc"
+       sodipodi:cx="-51.042484"
+       sodipodi:cy="-1032.808"
+       sodipodi:rx="30.891741"
+       sodipodi:ry="23.099039"
+       sodipodi:start="0"
+       sodipodi:end="3.1249907"
+       d="m -20.150743,-1032.808 a 30.891741,23.099039 0 0 1 -30.635313,23.0983 30.891741,23.099039 0 0 1 -31.143912,-22.7148"
+       transform="scale(-1,-1)"
+       sodipodi:open="true"
+       inkscape:export-xdpi="22.860001"
+       inkscape:export-ydpi="22.860001" />
+    <circle
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#bbd337;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4137"
+       cx="51.029362"
+       cy="1011.69"
+       r="37.863632"
+       inkscape:export-xdpi="22.860001"
+       inkscape:export-ydpi="22.860001" />
+  </g>
+</svg>

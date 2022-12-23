@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2015-04-21 12:21:12">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Enterprise Architect</XMI.exporter>
+			<XMI.exporterVersion>2.5</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model name="EA Model" xmi.id="MX_EAID_FAB4C64D_0D53_450e_8D46_F5B3758F360A">
+			<UML:Namespace.ownedElement>
+				<UML:Collaboration xmi.id="EAID_FAB4C64D_0D53_450e_8D46_F5B3758F360A_Collaboration" name="Collaborations">
+					<UML:Namespace.ownedElement>
+						<UML:ClassifierRole xmi.id="EAID_DC6E7188_F09C_4558_9BB1_02FF9165FC56" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13810"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_245E6DD1_8996_4e11_89E6_3FD4FC7D63D6" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13811"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_FEAC56DC_F436_4832_BD72_5FED1A8F3FC8" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13812"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_9E2D558D_14C7_44ef_A93F_DE1EAED3DBAE" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:18"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13813"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_A0B63403_F82F_4255_A390_4F2617745565" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13809"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_E7E4437B_A4F7_4787_BE2A_E3046FE35685" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13808"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_C6063E1C_82B6_4f4e_8CE0_E993893D7A68" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:17"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13807"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_85775713_3CC6_4922_98BE_28B9F5B2CE84" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13800"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_FEDDB775_CDBB_4812_B5D4_D10831896BB5" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13799"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_B8706712_5BDA_4d22_934B_3EAB9193C5B7" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13806"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_224B05F1_B8F9_48c1_95EC_62C4B77B0DA4" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13804"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_D9B96B3A_F16F_402d_84C9_B2BC14674B6E" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:13:35"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13805"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_8234BBC6_16CD_4329_9F8D_E2583AD62626" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:30"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:40:00"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13888"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole xmi.id="EAID_E7DB428F_C4D4_4568_B0A1_C73734E15B62" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:28"/>
+								<UML:TaggedValue tag="date_modified" value="2014-12-01 09:05:10"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13878"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=3;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="Business&#xA;Architecture" xmi.id="EAID_B2A9CBE5_508C_4986_88CE_C44085F01976" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:11:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13795"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="Data Architecture" xmi.id="EAID_C6F0EB45_10D6_41f0_8905_C0DC2462352C" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:11:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13796"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="Application Architecture" xmi.id="EAID_67AA0FB6_8C96_4dfa_8A71_EF7DEB223BC2" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:12:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13797"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="Technology Architecture" xmi.id="EAID_BBC25692_A93D_461e_8144_235C7CF82A20" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:15"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:12:40"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13798"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="EA" xmi.id="EAID_A1D6A6CB_EA0A_44e9_9EBA_D8F14385D675" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:17:19"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13801"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=16777215;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="SA" xmi.id="EAID_66CD0C54_0610_423e_9939_0DFB239900B9" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:17:19"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13802"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=16777215;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+						<UML:ClassifierRole name="DA" xmi.id="EAID_908760DF_4D48_42b5_9CDE_76FFDA0A093C" visibility="public" base="EAID_11111111_5487_4080_A7F4_41526CB0AA00">
+							<UML:ModelElement.taggedValue>
+								<UML:TaggedValue tag="isAbstract" value="false"/>
+								<UML:TaggedValue tag="isSpecification" value="false"/>
+								<UML:TaggedValue tag="ea_stype" value="Boundary"/>
+								<UML:TaggedValue tag="ea_ntype" value="0"/>
+								<UML:TaggedValue tag="version" value="1.0"/>
+								<UML:TaggedValue tag="isActive" value="false"/>
+								<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+								<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:16"/>
+								<UML:TaggedValue tag="date_modified" value="2015-04-21 11:17:19"/>
+								<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+								<UML:TaggedValue tag="tagged" value="0"/>
+								<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+								<UML:TaggedValue tag="phase" value="1.0"/>
+								<UML:TaggedValue tag="author" value="Giuseppe Platania"/>
+								<UML:TaggedValue tag="complexity" value="1"/>
+								<UML:TaggedValue tag="status" value="Proposed"/>
+								<UML:TaggedValue tag="tpos" value="0"/>
+								<UML:TaggedValue tag="ea_localid" value="13803"/>
+								<UML:TaggedValue tag="ea_eleType" value="element"/>
+								<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=16777215;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+							</UML:ModelElement.taggedValue>
+						</UML:ClassifierRole>
+					</UML:Namespace.ownedElement>
+					<UML:Collaboration.interaction/>
+				</UML:Collaboration>
+				<UML:Comment name="Legend" xmi.id="EAID_5432D6CB_952A_4488_8E93_99AB9C8279ED" visibility="public" namespace="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Text"/>
+						<UML:TaggedValue tag="ea_ntype" value="76"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isActive" value="false"/>
+						<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+						<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:20"/>
+						<UML:TaggedValue tag="date_modified" value="2015-01-13 16:36:41"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="ea_localid" value="13828"/>
+						<UML:TaggedValue tag="ea_eleType" value="element"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+						<UML:TaggedValue tag="$ea_xref_property" value="$XREFPROP=$XID={BB92EFD2-9B66-4b91-A306-1AFE80BF059F}$XID;$NAM=CustomProperties$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@PROP=@NAME=Process view@ENDNAME;@TYPE=LEGEND_OBJECTSTYLE@ENDTYPE;@VALU=#Back_Ground_Color#=21760;#Pen_Color#=0;#Pen_Size#=1;#Legend_Type#=LEGEND_OBJECTSTYLE;@ENDVALU;@PRMT=0@ENDPRMT;@ENDPROP;@PROP=@NAME=Legend@ENDNAME;@TYPE=LEGEND_STYLE_SETTINGS@ENDTYPE;@VALU=@ENDVALU;@PRMT=@ENDPRMT;@ENDPROP;$DES;$CLT={5432D6CB-952A-4488-8E93-99AB9C8279ED}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Comment>
+				<UML:Comment name="Start : Start" xmi.id="EAID_5D7FB615_B48F_4b2a_8F13_E46044A523F8" visibility="public" namespace="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="back to Start"/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Text"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isActive" value="false"/>
+						<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+						<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:30"/>
+						<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="ea_localid" value="13885"/>
+						<UML:TaggedValue tag="ea_eleType" value="element"/>
+						<UML:TaggedValue tag="diagram" value="EAID_3C0A84B7_D35C_44f3_A0C9_F3330E22C237"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Comment>
+				<UML:Comment name="back to Proj list" xmi.id="EAID_10FF5CBD_374D_4a4f_AA93_0C1F1F0120A8" visibility="public" namespace="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="Back 2 Proj list"/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Text"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isActive" value="false"/>
+						<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+						<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:30"/>
+						<UML:TaggedValue tag="date_modified" value="2015-04-21 12:17:00"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="ea_localid" value="13886"/>
+						<UML:TaggedValue tag="ea_eleType" value="element"/>
+						<UML:TaggedValue tag="diagram" value="EAID_FA55484B_8A36_4630_A5A3_086220D1465B"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Comment>
+				<UML:Comment name="Text" xmi.id="EAID_78DB5AE7_C7D6_413c_B065_0E9DD2CC4DAF" visibility="public" namespace="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A">
+					<UML:ModelElement.taggedValue>
+						<UML:TaggedValue tag="documentation" value="Project's name"/>
+						<UML:TaggedValue tag="isSpecification" value="false"/>
+						<UML:TaggedValue tag="ea_stype" value="Text"/>
+						<UML:TaggedValue tag="ea_ntype" value="0"/>
+						<UML:TaggedValue tag="version" value="1.0"/>
+						<UML:TaggedValue tag="isActive" value="false"/>
+						<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+						<UML:TaggedValue tag="date_created" value="2015-04-21 12:11:30"/>
+						<UML:TaggedValue tag="date_modified" value="2015-04-21 12:16:37"/>
+						<UML:TaggedValue tag="gentype" value="&lt;none&gt;"/>
+						<UML:TaggedValue tag="tagged" value="0"/>
+						<UML:TaggedValue tag="package_name" value="TemplateProject"/>
+						<UML:TaggedValue tag="phase" value="1.0"/>
+						<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+						<UML:TaggedValue tag="complexity" value="1"/>
+						<UML:TaggedValue tag="status" value="Proposed"/>
+						<UML:TaggedValue tag="tpos" value="0"/>
+						<UML:TaggedValue tag="ea_localid" value="13887"/>
+						<UML:TaggedValue tag="ea_eleType" value="element"/>
+						<UML:TaggedValue tag="style" value="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+					</UML:ModelElement.taggedValue>
+				</UML:Comment>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<UML:Diagram name="Project template" xmi.id="EAID_0AFBCFD8_499B_48ac_9681_C2D23DF071DA" diagramType="CustomDiagram" owner="EAPK_0AFBCFD8_499B_48ac_9681_C2D23DF071DA" toolName="Enterprise Architect 2.5">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="documentation" value="customize this diagram for your project."/>
+				<UML:TaggedValue tag="version" value="1.0"/>
+				<UML:TaggedValue tag="author" value="Giuseppe.Platania"/>
+				<UML:TaggedValue tag="created_date" value="2015-04-21 00:00:00"/>
+				<UML:TaggedValue tag="modified_date" value="2015-04-21 12:17:00"/>
+				<UML:TaggedValue tag="package" value="EAPK_FAB4C64D_0D53_450e_8D46_F5B3758F360A"/>
+				<UML:TaggedValue tag="type" value="Custom"/>
+				<UML:TaggedValue tag="swimlanes" value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;hl=1;cls=0;"/>
+				<UML:TaggedValue tag="matrixitems" value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;"/>
+				<UML:TaggedValue tag="ea_localid" value="1064"/>
+				<UML:TaggedValue tag="EAStyle" value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=0;HighlightForeign=0;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=2;PPgs.cy=1;DocSize.cx=850;DocSize.cy=1098;ShowDetails=0;Orientation=P;Zoom=75;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=1;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
+				<UML:TaggedValue tag="styleex" value="SaveTag=37DDEB43;ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;ProfileData=;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;"/>
+			</UML:ModelElement.taggedValue>
+			<UML:Diagram.element>
+				<UML:DiagramElement geometry="Left=0;Top=540;Right=70;Bottom=740;imgL=5;imgT=535;imgR=75;imgB=735;" subject="EAID_908760DF_4D48_42b5_9CDE_76FFDA0A093C" seqno="1" style="ImageID=0;LCol=16777215;BCol=4626167;BFol=16777215;font=Arial;fontsz=140;bold=1;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=E3955282;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=0;Top=340;Right=70;Bottom=540;imgL=5;imgT=335;imgR=75;imgB=535;" subject="EAID_66CD0C54_0610_423e_9939_0DFB239900B9" seqno="2" style="ImageID=0;LCol=16777215;BCol=4626167;BFol=16777215;font=Arial;fontsz=140;bold=1;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=52A951E3;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=0;Top=140;Right=70;Bottom=340;imgL=5;imgT=135;imgR=75;imgB=335;" subject="EAID_A1D6A6CB_EA0A_44e9_9EBA_D8F14385D675" seqno="3" style="ImageID=0;font=Arial;fontsz=140;black=0;italic=0;ul=0;charset=0;pitch=34;BCol=4626167;LCol=16777215;BFol=16777215;bold=1;DUID=C2B7E7DF;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=760;Top=100;Right=990;Bottom=140;imgL=765;imgT=95;imgR=995;imgB=135;" subject="EAID_BBC25692_A93D_461e_8144_235C7CF82A20" seqno="4" style="ImageID=0;LCol=16777215;BCol=12419407;BFol=16777215;font=Arial;fontsz=120;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=ACAC3017;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=530;Top=100;Right=760;Bottom=140;imgL=535;imgT=95;imgR=765;imgB=135;" subject="EAID_67AA0FB6_8C96_4dfa_8A71_EF7DEB223BC2" seqno="5" style="ImageID=0;LCol=16777215;BCol=12419407;BFol=16777215;font=Arial;fontsz=120;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=128C02A9;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=300;Top=100;Right=530;Bottom=140;imgL=305;imgT=95;imgR=535;imgB=135;" subject="EAID_C6F0EB45_10D6_41f0_8905_C0DC2462352C" seqno="6" style="ImageID=0;LCol=16777215;BCol=12419407;BFol=16777215;font=Arial;fontsz=120;bold=0;black=0;italic=0;ul=0;charset=0;pitch=0;DUID=3340357B;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=70;Top=100;Right=300;Bottom=140;imgL=75;imgT=95;imgR=305;imgB=135;" subject="EAID_B2A9CBE5_508C_4986_88CE_C44085F01976" seqno="7" style="BCol=12419407;BFol=16777215;LCol=16777215;font=Arial;fontsz=120;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;DUID=6FA7B3FB;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=0;Top=0;Right=866;Bottom=63;imgL=5;imgT=-5;imgR=871;imgB=58;" subject="EAID_78DB5AE7_C7D6_413c_B065_0E9DD2CC4DAF" seqno="8" style="font=Arial Narrow;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;BFol=12419407;fontsz=360;DUID=D99F6CE0;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=128;Top=60;Right=228;Bottom=81;imgL=133;imgT=55;imgR=233;imgB=76;" subject="EAID_10FF5CBD_374D_4a4f_AA93_0C1F1F0120A8" seqno="9" style="DUID=2F9EB184;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=8;Top=60;Right=108;Bottom=81;imgL=13;imgT=55;imgR=113;imgB=76;" subject="EAID_5D7FB615_B48F_4b2a_8F13_E46044A523F8" seqno="10" style="DUID=6A30808A;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=770;Top=10;Right=872;Bottom=67;imgL=775;imgT=5;imgR=877;imgB=62;" subject="EAID_5432D6CB_952A_4488_8E93_99AB9C8279ED" seqno="11" style="DUID=5F6C545B;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=266;Top=344;Right=298;Bottom=371;imgL=271;imgT=339;imgR=303;imgB=366;" subject="EAID_E7DB428F_C4D4_4568_B0A1_C73734E15B62" seqno="12" style="LCol=15259856;DUID=F3B4A9FE;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=70;Top=750;Right=880;Bottom=923;imgL=75;imgT=745;imgR=885;imgB=918;" subject="EAID_8234BBC6_16CD_4329_9F8D_E2583AD62626" seqno="13" style="BCol=16051689;LCol=16777215;NSL=0;DUID=F0A861D7;"/>
+				<UML:DiagramElement geometry="Left=70;Top=140;Right=300;Bottom=340;imgL=75;imgT=135;imgR=305;imgB=335;" subject="EAID_D9B96B3A_F16F_402d_84C9_B2BC14674B6E" seqno="14" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;NSL=0;DUID=AF028B2E;"/>
+				<UML:DiagramElement geometry="Left=300;Top=140;Right=530;Bottom=340;imgL=305;imgT=135;imgR=535;imgB=335;" subject="EAID_224B05F1_B8F9_48c1_95EC_62C4B77B0DA4" seqno="15" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=8504D513;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=530;Top=140;Right=760;Bottom=340;imgL=535;imgT=135;imgR=765;imgB=335;" subject="EAID_B8706712_5BDA_4d22_934B_3EAB9193C5B7" seqno="16" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=6C745ACB;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=760;Top=140;Right=990;Bottom=340;imgL=765;imgT=135;imgR=995;imgB=335;" subject="EAID_FEDDB775_CDBB_4812_B5D4_D10831896BB5" seqno="17" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=A379D956;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=70;Top=340;Right=300;Bottom=540;imgL=75;imgT=335;imgR=305;imgB=535;" subject="EAID_85775713_3CC6_4922_98BE_28B9F5B2CE84" seqno="18" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BFol=12419407;LCol=16777215;BCol=15985897;DUID=9B61DB63;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=300;Top=340;Right=530;Bottom=540;imgL=305;imgT=335;imgR=535;imgB=535;" subject="EAID_C6063E1C_82B6_4f4e_8CE0_E993893D7A68" seqno="19" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;ImageID=0;BFol=12419407;LCol=16777215;BCol=15985897;pitch=0;DUID=67EE7AB7;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=530;Top=340;Right=760;Bottom=540;imgL=535;imgT=335;imgR=765;imgB=535;" subject="EAID_E7E4437B_A4F7_4787_BE2A_E3046FE35685" seqno="20" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;ImageID=0;BFol=12419407;LCol=16777215;BCol=15985897;pitch=0;DUID=99287B47;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=760;Top=340;Right=990;Bottom=540;imgL=765;imgT=335;imgR=995;imgB=535;" subject="EAID_A0B63403_F82F_4255_A390_4F2617745565" seqno="21" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;ImageID=0;BFol=12419407;LCol=16777215;BCol=15985897;pitch=0;DUID=BA053485;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=70;Top=540;Right=300;Bottom=740;imgL=75;imgT=535;imgR=305;imgB=735;" subject="EAID_9E2D558D_14C7_44ef_A93F_DE1EAED3DBAE" seqno="22" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=B873A778;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=300;Top=540;Right=530;Bottom=740;imgL=305;imgT=535;imgR=535;imgB=735;" subject="EAID_FEAC56DC_F436_4832_BD72_5FED1A8F3FC8" seqno="23" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=963C43D2;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=530;Top=540;Right=760;Bottom=740;imgL=535;imgT=535;imgR=765;imgB=735;" subject="EAID_245E6DD1_8996_4e11_89E6_3FD4FC7D63D6" seqno="24" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=9539ABAB;NSL=0;"/>
+				<UML:DiagramElement geometry="Left=760;Top=540;Right=990;Bottom=740;imgL=765;imgT=535;imgR=995;imgB=735;" subject="EAID_DC6E7188_F09C_4558_9BB1_02FF9165FC56" seqno="25" style="font=Arial Narrow;fontsz=160;bold=0;black=0;italic=0;ul=0;charset=0;pitch=34;ImageID=0;BCol=15259856;BFol=12419407;LCol=16777215;DUID=EC5A7A9B;NSL=0;"/>
+			</UML:Diagram.element>
+		</UML:Diagram>
+	</XMI.content>
+	<XMI.difference/>
+	<XMI.extensions xmi.extender="Enterprise Architect 2.5">
+		<EAStub xmi.id="EAID_4B144F0E_6C8A_42b5_9EAF_00F4504B1EED" UMLType="Note"/>
+		<EAStub xmi.id="EAID_E7DB428F_C4D4_4568_B0A1_C73734E15B62" UMLType="Boundary"/>
+		<EANoteLink xmi.id="EAID_32288631_232C_4f62_8B4E_FB764902C521" source="EAID_4B144F0E_6C8A_42b5_9EAF_00F4504B1EED" target="EAID_E7DB428F_C4D4_4568_B0A1_C73734E15B62">
+			<UML:ModelElement.taggedValue>
+				<UML:TaggedValue tag="linecolor" value="-1"/>
+				<UML:TaggedValue tag="linewidth" value="0"/>
+			</UML:ModelElement.taggedValue>
+		</EANoteLink>
+		<UMLPattern name="Project Template" category="DAF" version="1.0" notes="customize this diagram for your project.">
+			<UMLPattern.PromptList>
+				<Element name="DA:Boundary" guid="EAID_908760DF_4D48_42b5_9CDE_76FFDA0A093C" id="13803" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="SA:Boundary" guid="EAID_66CD0C54_0610_423e_9939_0DFB239900B9" id="13802" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="EA:Boundary" guid="EAID_A1D6A6CB_EA0A_44e9_9EBA_D8F14385D675" id="13801" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="Technology Architecture:Boundary" guid="EAID_BBC25692_A93D_461e_8144_235C7CF82A20" id="13798" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="Application Architecture:Boundary" guid="EAID_67AA0FB6_8C96_4dfa_8A71_EF7DEB223BC2" id="13797" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="Data Architecture:Boundary" guid="EAID_C6F0EB45_10D6_41f0_8905_C0DC2462352C" id="13796" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="Business&#xA;Architecture:Boundary" guid="EAID_B2A9CBE5_508C_4986_88CE_C44085F01976" id="13795" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name="Text:Text" guid="EAID_78DB5AE7_C7D6_413c_B065_0E9DD2CC4DAF" id="13887" prompt="yes" link="no" classifier="no" type="no">
+					<Comment>
+						<![CDATA[Project's name]]>
+					</Comment>
+				</Element>
+				<Element name="back to Proj list:Text" guid="EAID_10FF5CBD_374D_4a4f_AA93_0C1F1F0120A8" id="13886" prompt="yes" link="no" classifier="no" type="no">
+					<Comment>
+						<![CDATA[Back 2 Proj list]]>
+					</Comment>
+				</Element>
+				<Element name="Start : Start:Text" guid="EAID_5D7FB615_B48F_4b2a_8F13_E46044A523F8" id="13885" prompt="yes" link="no" classifier="no" type="no">
+					<Comment>
+						<![CDATA[back to Start]]>
+					</Comment>
+				</Element>
+				<Element name="Legend:Text" guid="EAID_5432D6CB_952A_4488_8E93_99AB9C8279ED" id="13828" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_E7DB428F_C4D4_4568_B0A1_C73734E15B62" id="13878" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_8234BBC6_16CD_4329_9F8D_E2583AD62626" id="13888" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_D9B96B3A_F16F_402d_84C9_B2BC14674B6E" id="13805" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_224B05F1_B8F9_48c1_95EC_62C4B77B0DA4" id="13804" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_B8706712_5BDA_4d22_934B_3EAB9193C5B7" id="13806" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_FEDDB775_CDBB_4812_B5D4_D10831896BB5" id="13799" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_85775713_3CC6_4922_98BE_28B9F5B2CE84" id="13800" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_C6063E1C_82B6_4f4e_8CE0_E993893D7A68" id="13807" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_E7E4437B_A4F7_4787_BE2A_E3046FE35685" id="13808" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_A0B63403_F82F_4255_A390_4F2617745565" id="13809" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_9E2D558D_14C7_44ef_A93F_DE1EAED3DBAE" id="13813" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_FEAC56DC_F436_4832_BD72_5FED1A8F3FC8" id="13812" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_245E6DD1_8996_4e11_89E6_3FD4FC7D63D6" id="13811" prompt="yes" link="no" classifier="no" type="no"/>
+				<Element name=":Boundary" guid="EAID_DC6E7188_F09C_4558_9BB1_02FF9165FC56" id="13810" prompt="yes" link="no" classifier="no" type="no"/>
+			</UMLPattern.PromptList>
+			<UMLPattern.PreviewImage xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64" cx="26458" cy="24442">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
+AAAAAAAAJQAAAAwAAAAJAAAAJgAAABwAAAAKAAAAAAAAAAEAAAAAAAAAAAAAACUAAAAMAAAA
+CgAAACcAAAAYAAAACwAAAAAAAAAAVQAAAAAAACUAAAAMAAAACwAAACwAAAAgAAAADAMAAMf/
+//8cAwAA1////wUAAAAFAAAAKAAAAAwAAAALAAAAKAAAAAwAAAAKAAAAJQAAAAwAAAAIAAAA
+JQAAAAwAAAAJAAAAGAAAAAwAAAAAMGAAVAAAAJQAAAAAAAAAAAAAAP//////////AQAAAKuq
+00ET2tPBIgMAANb///8MAAAATAAAAAAAAAAAAAAAAAAAAP//////////ZAAAAFAAcgBvAGMA
+ZQBzAHMAIAB2AGkAZQB3AAcAAAADAAAABgAAAAYAAAAGAAAABAAAAAQAAAADAAAABQAAAAMA
+AAAGAAAABwAAABgAAAAMAAAAADBgACUAAAAMAAAABwAAACUAAAAMAAAABgAAACgAAAAMAAAA
+CAAAACgAAAAMAAAACQAAACUAAAAMAAAABQAAABgAAAAMAAAAADBgAFQAAABwAAAAAAAAAAAA
+AAD//////////wEAAACrqtNBE9rTwR0DAADv////BgAAAEwAAAAAAAAAAAAAAAAAAAD/////
+/////1gAAABMAGUAZwBlAG4AZAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAYAAAADAAAAAAw
+YAAlAAAADAAAAAEAAAAoAAAADAAAAAUAAAAlAAAADAAAAAQAAAAlAAAADAAAAAMAAAAYAAAA
+DAAAAAAAAAAoAAAADAAAAAcAAAAoAAAADAAAAAYAAAAYAAAADAAAAAAAAAAlAAAADAAAAAIA
+AAAoAAAADAAAAAQAAABEAAAACAAAABgAAAAMAAAAAAAAACcAAAAYAAAABAAAAAAAAAD///8A
+AAAAACUAAAAMAAAABAAAABgAAAAMAAAAAAAAABkAAAAMAAAA////AEwAAAAUAwAACAAAALT/
+//8XAAAAw////wgAAAC0////EAAAABAAAADGAIgAIAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/
+AAAAAAAAAAD///8AAAAAAGQAAAAwAAAAlAAAAIACAAAoAAAAQAAAAFAAAAABAAEAAAAAAIAC
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+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
+DAAAAP///wBUAAAAlAAAAAAAAAAAAAAA//////////8BAAAAq6rTQRPa08GPAAAAhv///wwA
+AABMAAAAAAAAAAAAAAAAAAAA//////////9kAAAAQQByAGMAaABpAHQAZQBjAHQAdQByAGUA
+CwAAAAUAAAAIAAAACAAAAAQAAAAEAAAACQAAAAgAAAAEAAAACAAAAAUAAAAJAAAAGAAAAAwA
+AAD///8AGAAAAAwAAAD///8AGAAAAAwAAAD///8AGAAAAAwAAAD///8AVAAAAHwAAAAAAAAA
+AAAAAP//////////AQAAAKuq00ET2tPBmQAAAJj///8IAAAATAAAAAAAAAAAAAAAAAAAAP//
+////////XAAAAEIAdQBzAGkAbgBlAHMAcwALAAAACAAAAAgAAAAEAAAACAAAAAkAAAAIAAAA
+CAAAABgAAAAMAAAA////ABgAAAAMAAAA////AFQAAACUAAAAAAAAAAAAAAD//////////wEA
+AACrqtNBE9rTwY8AAACG////DAAAAEwAAAAAAAAAAAAAAAAAAAD//////////2QAAABBAHIA
+YwBoAGkAdABlAGMAdAB1AHIAZQALAAAABQAAAAgAAAAIAAAABAAAAAQAAAAJAAAACAAAAAQA
+AAAIAAAABQAAAAkAAAAYAAAADAAAAP///wAYAAAADAAAAP///wAYAAAADAAAAAAAAAAlAAAA
+DAAAAAMAAAAoAAAADAAAAAUAAAAlAAAADAAAAAIAAAAoAAAADAAAAAYAAAAlAAAADAAAAAEA
+AAAoAAAADAAAAAQAAABEAAAACAAAAFIAAABMAQAABAAAAPD///8AAAAAAAAAAAAAAACQAQAA
+AAAAAAAABABBAHIAaQBhAGwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAACAA7YLZRfMmoADiJiAA/iXgAMAwKF+iJiAA7DqkxH4l4AD
+HqibfrDqkxEGAAAAqKuhfhQAAAA4g1wR2H6SEejrxHsAAEYsAgAAAKhWES7IVhEuAAAAAAAA
+AAAAAAAAAAAAABwAAAAAAAAAAAAAAAAAAABrx8N7AAAAAAAAAAAAAIADWcjDewAAAAABAENN
+EJiAAwDAoX4QmIADAMChfkiYgAMdpZ1+oGCifgAAAADhR5d+WcjDe6Bgon4AAENNAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAQEBAQEBAQEBAYADJQAAAAwAAAAEAAAAGAAAAAwAAAD///8A
+JgAAABwAAAAFAAAAAAABAAEAAAAAAAAA////ACUAAAAMAAAABQAAACcAAAAYAAAABgAAAAAA
+AABPgb0AAAAAACUAAAAMAAAABgAAACUAAAAMAAAACAAAgCYAAAAcAAAABwAAAAAAAAABAAAA
+AAAAAP///wAlAAAADAAAAAcAAAAnAAAAGAAAAAgAAAAAAAAAT4G9AAAAAAAlAAAADAAAAAgA
+AAAsAAAAIAAAACwBAAB0////EQIAAJv///8FAAAABQAAACgAAAAMAAAACAAAACgAAAAMAAAA
+BwAAACUAAAAMAAAABQAAACUAAAAMAAAABgAAACUAAAAMAAAABQAAACcAAAAYAAAABwAAAAAA
+AABPgb0AAAAAACUAAAAMAAAABwAAACYAAAAcAAAACAAAAAAAAAABAAAAAAAAAP///wAlAAAA
+DAAAAAgAAAAnAAAAGAAAAAkAAAAAAAAAT4G9AAAAAAAlAAAADAAAAAkAAAAsAAAAIAAAACwB
+AAB0////EQIAAJv///8FAAAABQAAACgAAAAMAAAACQAAACgAAAAMAAAACAAAACUAAAAMAAAA
+BQAAACUAAAAMAAAABwAAACUAAAAMAAAABgAAACgAAAAMAAAABwAAABgAAAAMAAAA////ABgA
+AAAMAAAA////AFQAAAC0AAAAAAAAAAAAAAD//////////wEAAACrqtNBE9rTwWIBAACY////
+EQAAAEwAAAAAAAAAAAAAAAAAAAD//////////3AAAABEAGEAdABhACAAQQByAGMAaABpAHQA
+ZQBjAHQAdQByAGUAAAAMAAAACQAAAAQAAAAJAAAABAAAAAsAAAAFAAAACAAAAAgAAAAEAAAA
+BAAAAAkAAAAIAAAABAAAAAgAAAAFAAAACQAAABgAAAAMAAAA////ABgAAAAMAAAA////ABgA
+AAAMAAAAAAAAACUAAAAMAAAAAwAAACgAAAAMAAAABQAAACUAAAAMAAAAAgAAACgAAAAMAAAA
+BgAAACUAAAAMAAAAAQAAACgAAAAMAAAABAAAAEQAAAAIAAAAUgAAAEwBAAAEAAAA8P///wAA
+AAAAAAAAAAAAAJABAAAAAAAAAAAEAEEAcgBpAGEAbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIADyQ1FUcyagAOImIAD+JeAAwDA
+oX6ImIADoGSbEfiXgAMeqJt+oGSbEQYAAACoq6F+FAAAADiDXBHYfpIR6OvEewAARiwCAAAA
+uD4VLtg+FS4AAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAGvHw3sAAAAAAAAAAAAA
+gANZyMN7AAAAAAEAQ00QmIADAMChfhCYgAMAwKF+SJiAAx2lnX6gYKJ+AAAAAOFHl35ZyMN7
+oGCifgAAQ00AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBgAMlAAAADAAAAAQA
+AAAYAAAADAAAAP///wAmAAAAHAAAAAUAAAAAAAEAAQAAAAAAAAD///8AJQAAAAwAAAAFAAAA
+JwAAABgAAAAGAAAAAAAAAE+BvQAAAAAAJQAAAAwAAAAGAAAAJQAAAAwAAAAIAACAJgAAABwA
+AAAHAAAAAAAAAAEAAAAAAAAA////ACUAAAAMAAAABwAAACcAAAAYAAAACAAAAAAAAABPgb0A
+AAAAACUAAAAMAAAACAAAACwAAAAgAAAAEgIAAHT////3AgAAm////wUAAAAFAAAAKAAAAAwA
+AAAIAAAAKAAAAAwAAAAHAAAAJQAAAAwAAAAFAAAAJQAAAAwAAAAGAAAAJQAAAAwAAAAFAAAA
+JwAAABgAAAAHAAAAAAAAAE+BvQAAAAAAJQAAAAwAAAAHAAAAJgAAABwAAAAIAAAAAAAAAAEA
+AAAAAAAA////ACUAAAAMAAAACAAAACcAAAAYAAAACQAAAAAAAABPgb0AAAAAACUAAAAMAAAA
+CQAAACwAAAAgAAAAEgIAAHT////3AgAAm////wUAAAAFAAAAKAAAAAwAAAAJAAAAKAAAAAwA
+AAAIAAAAJQAAAAwAAAAFAAAAJQAAAAwAAAAHAAAAJQAAAAwAAAAGAAAAKAAAAAwAAAAHAAAA
+GAAAAAwAAAD///8AGAAAAAwAAAD///8AVAAAANwAAAAAAAAAAAAAAP//////////AQAAAKuq
+00ET2tPBMgIAAJj///8YAAAATAAAAAAAAAAAAAAAAAAAAP//////////fAAAAEEAcABwAGwA
+aQBjAGEAdABpAG8AbgAgAEEAcgBjAGgAaQB0AGUAYwB0AHUAcgBlAAsAAAAJAAAACQAAAAMA
+AAAEAAAACAAAAAkAAAAEAAAABAAAAAkAAAAIAAAABAAAAAsAAAAFAAAACAAAAAgAAAAEAAAA
+BAAAAAkAAAAIAAAABAAAAAgAAAAFAAAACQAAABgAAAAMAAAA////ABgAAAAMAAAA////ABgA
+AAAMAAAAAAAAACUAAAAMAAAAAwAAACgAAAAMAAAABQAAACUAAAAMAAAAAgAAACgAAAAMAAAA
+BgAAACUAAAAMAAAAAQAAACgAAAAMAAAABAAAAEQAAAAIAAAAUgAAAEwBAAAEAAAA8P///wAA
+AAAAAAAAAAAAAJABAAAAAAAAAAAEAEEAcgBpAGEAbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIADtgtoF8yagAOImIAD+JeAAwDA
+oX6ImIADmLGzEfiXgAMeqJt+mLGzEQYAAACoq6F+FAAAADiDXBHYfpIR6OvEewAARiwCAAAA
+IHXFLUB1xS0AAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAAAAGvHw3sAAAAAAAAAAAAA
+gANZyMN7AAAAAAEAQ00QmIADAMChfhCYgAMAwKF+SJiAAx2lnX6gYKJ+AAAAAOFHl35ZyMN7
+oGCifgAAQ00AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBgAMlAAAADAAAAAQA
+AAAYAAAADAAAAP///wAmAAAAHAAAAAUAAAAAAAEAAQAAAAAAAAD///8AJQAAAAwAAAAFAAAA
+JwAAABgAAAAGAAAAAAAAAE+BvQAAAAAAJQAAAAwAAAAGAAAAJQAAAAwAAAAIAACAJgAAABwA
+AAAHAAAAAAAAAAEAAAAAAAAA////ACUAAAAMAAAABwAAACcAAAAYAAAACAAAAAAAAABPgb0A
+AAAAACUAAAAMAAAACAAAACwAAAAgAAAA+AIAAHT////dAwAAm////wUAAAAFAAAAKAAAAAwA
+AAAIAAAAKAAAAAwAAAAHAAAAJQAAAAwAAAAFAAAAJQAAAAwAAAAGAAAAJQAAAAwAAAAFAAAA
+JwAAABgAAAAHAAAAAAAAAE+BvQAAAAAAJQAAAAwAAAAHAAAAJgAAABwAAAAIAAAAAAAAAAEA
+AAAAAAAA////ACUAAAAMAAAACAAAACcAAAAYAAAACQAAAAAAAABPgb0AAAAAACUAAAAMAAAA
+CQAAACwAAAAgAAAA+AIAAHT////dAwAAm////wUAAAAFAAAAKAAAAAwAAAAJAAAAKAAAAAwA
+AAAIAAAAJQAAAAwAAAAFAAAAJQAAAAwAAAAHAAAAJQAAAAwAAAAGAAAAKAAAAAwAAAAHAAAA
+GAAAAAwAAAD///8AGAAAAAwAAAD///8AVAAAANgAAAAAAAAAAAAAAP//////////AQAAAKuq
+00ET2tPBGAMAAJj///8XAAAATAAAAAAAAAAAAAAAAAAAAP//////////fAAAAFQAZQBjAGgA
+bgBvAGwAbwBnAHkAIABBAHIAYwBoAGkAdABlAGMAdAB1AHIAZQAAAAkAAAAJAAAACAAAAAgA
+AAAIAAAACQAAAAMAAAAJAAAACQAAAAcAAAAEAAAACwAAAAUAAAAIAAAACAAAAAQAAAAEAAAA
+CQAAAAgAAAAEAAAACAAAAAUAAAAJAAAAGAAAAAwAAAD///8AGAAAAAwAAAD///8AGAAAAAwA
+AAAAAAAAJQAAAAwAAAADAAAAKAAAAAwAAAAFAAAAJQAAAAwAAAACAAAAKAAAAAwAAAAGAAAA
+JQAAAAwAAAABAAAAKAAAAAwAAAAEAAAARAAAAAgAAABSAAAATAEAAAQAAADu////AAAAAAAA
+AAAAAAAAvAIAAAAAAAAAAAQiQQByAGkAYQBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAPJDUhRzJqAA4iYgAP4l4ADAMChfoiY
+gAOw6pMR+JeAAx6om36w6pMRBgAAAKiroX4WAAAAOINcEdh+khHo68R7AABGLAIAAACQntwt
+sJ7cLQAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAa8fDewAAAAAAAAAAAACAA1nI
+w3sAAAAAAQBDTRCYgAMAwKF+EJiAAwDAoX5ImIADHaWdfqBgon4AAAAA4UeXflnIw3ugYKJ+
+AABDTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQGAAyUAAAAMAAAABAAAABgA
+AAAMAAAA////ACYAAAAcAAAABQAAAAAAAQABAAAAAAAAAP///wAlAAAADAAAAAUAAAAnAAAA
+GAAAAAYAAAAAAAAA95ZGAAAAAAAlAAAADAAAAAYAAAAlAAAADAAAAAgAAIAmAAAAHAAAAAcA
+AAAAAAAAAQAAAAAAAAD///8AJQAAAAwAAAAHAAAAJwAAABgAAAAIAAAAAAAAAPeWRgAAAAAA
+JQAAAAwAAAAIAAAALAAAACAAAAAAAAAArP7//0UAAABz////BQAAAAUAAAAoAAAADAAAAAgA
+AAAoAAAADAAAAAcAAAAlAAAADAAAAAUAAAAlAAAADAAAAAYAAAAlAAAADAAAAAUAAAAnAAAA
+GAAAAAcAAAAAAAAA95ZGAAAAAAAlAAAADAAAAAcAAAAmAAAAHAAAAAgAAAAAAAAAAQAAAAAA
+AAD///8AJQAAAAwAAAAIAAAAJwAAABgAAAAJAAAAAAAAAPeWRgAAAAAAJQAAAAwAAAAJAAAA
+LAAAACAAAAAAAAAArP7//0UAAABz////BQAAAAUAAAAoAAAADAAAAAkAAAAoAAAADAAAAAgA
+AAAlAAAADAAAAAUAAAAlAAAADAAAAAcAAAAlAAAADAAAAAYAAAAoAAAADAAAAAcAAAAYAAAA
+DAAAAP///wAYAAAADAAAAP///wBUAAAAWAAAAAAAAAAAAAAA//////////8BAAAAq6rTQRPa
+08EWAAAAcP///wIAAABMAAAAAAAAAAAAAAAAAAAA//////////9QAAAARQBBAAwAAAANAAAA
+GAAAAAwAAAD///8AGAAAAAwAAAD///8AGAAAAAwAAAAAAAAAJQAAAAwAAAADAAAAKAAAAAwA
+AAAFAAAAJQAAAAwAAAACAAAAKAAAAAwAAAAGAAAAJQAAAAwAAAABAAAAKAAAAAwAAAAEAAAA
+RAAAAAgAAABSAAAATAEAAAQAAADu////AAAAAAAAAAAAAAAAvAIAAAAAAAAAAAQAQQByAGkA
+YQBsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAgAO2C2sXzJqAA4iYgAP4l4ADAMChfoiYgAOIeBYR+JeAAx6om36IeBYRBgAAAKir
+oX4UAAAAOINcEdh+khHo68R7AABGLAIAAAC4bc0t2G3NLQAAAAAAAAAAAAAAAAAAAAAcAAAA
+AAAAAAAAAAAAAAAAa8fDewAAAAAAAAAAAACAA1nIw3sAAAAAAQBDTRCYgAMAwKF+EJiAAwDA
+oX5ImIADHaWdfqBgon4AAAAA4UeXflnIw3ugYKJ+AABDTQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAEBAQEBAQEBAQGAAyUAAAAMAAAABAAAABgAAAAMAAAA////ACYAAAAcAAAABQAAAAAA
+AQABAAAAAAAAAP///wAlAAAADAAAAAUAAAAnAAAAGAAAAAYAAAAAAAAA95ZGAAAAAAAlAAAA
+DAAAAAYAAAAlAAAADAAAAAgAAIAmAAAAHAAAAAcAAAAAAAAAAQAAAAAAAAD///8AJQAAAAwA
+AAAHAAAAJwAAABgAAAAIAAAAAAAAAPeWRgAAAAAAJQAAAAwAAAAIAAAALAAAACAAAAAAAAAA
+5P3//0UAAACr/v//BQAAAAUAAAAoAAAADAAAAAgAAAAoAAAADAAAAAcAAAAlAAAADAAAAAUA
+AAAlAAAADAAAAAYAAAAlAAAADAAAAAUAAAAnAAAAGAAAAAcAAAAAAAAA95ZGAAAAAAAlAAAA
+DAAAAAcAAAAmAAAAHAAAAAgAAAAAAAAAAQAAAAAAAAD///8AJQAAAAwAAAAIAAAAJwAAABgA
+AAAJAAAAAAAAAPeWRgAAAAAAJQAAAAwAAAAJAAAALAAAACAAAAAAAAAA5P3//0UAAACr/v//
+BQAAAAUAAAAoAAAADAAAAAkAAAAoAAAADAAAAAgAAAAlAAAADAAAAAUAAAAlAAAADAAAAAcA
+AAAlAAAADAAAAAYAAAAoAAAADAAAAAcAAAAYAAAADAAAAP///wAYAAAADAAAAP///wBUAAAA
+WAAAAAAAAAAAAAAA//////////8BAAAAq6rTQRPa08EWAAAAqP7//wIAAABMAAAAAAAAAAAA
+AAAAAAAA//////////9QAAAAUwBBAAwAAAANAAAAGAAAAAwAAAD///8AGAAAAAwAAAD///8A
+GAAAAAwAAAAAAAAAJQAAAAwAAAADAAAAKAAAAAwAAAAFAAAAJQAAAAwAAAACAAAAKAAAAAwA
+AAAGAAAAJQAAAAwAAAABAAAAKAAAAAwAAAAEAAAARAAAAAgAAABSAAAATAEAAAQAAADu////
+AAAAAAAAAAAAAAAAvAIAAAAAAAAAAAQAQQByAGkAYQBsAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAPJDUtRzJqAA4iYgAP4l4AD
+AMChfoiYgAOYsbMR+JeAAx6om36YsbMRBgAAAKiroX4UAAAAOINcEdh+khHo68R7AABGLAIA
+AAAI6wAuKOsALgAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAAAAAAAa8fDewAAAAAAAAAA
+AACAA1nIw3sAAAAAAQBDTRCYgAMAwKF+EJiAAwDAoX5ImIADHaWdfqBgon4AAAAA4UeXflnI
+w3ugYKJ+AABDTQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQEBAQEBAQGAAyUAAAAMAAAA
+BAAAABgAAAAMAAAA////ACYAAAAcAAAABQAAAAAAAQABAAAAAAAAAP///wAlAAAADAAAAAUA
+AAAnAAAAGAAAAAYAAAAAAAAA95ZGAAAAAAAlAAAADAAAAAYAAAAlAAAADAAAAAgAAIAmAAAA
+HAAAAAcAAAAAAAAAAQAAAAAAAAD///8AJQAAAAwAAAAHAAAAJwAAABgAAAAIAAAAAAAAAPeW
+RgAAAAAAJQAAAAwAAAAIAAAALAAAACAAAAAAAAAAHP3//0UAAADj/f//BQAAAAUAAAAoAAAA
+DAAAAAgAAAAoAAAADAAAAAcAAAAlAAAADAAAAAUAAAAlAAAADAAAAAYAAAAlAAAADAAAAAUA
+AAAnAAAAGAAAAAcAAAAAAAAA95ZGAAAAAAAlAAAADAAAAAcAAAAmAAAAHAAAAAgAAAAAAAAA
+AQAAAAAAAAD///8AJQAAAAwAAAAIAAAAJwAAABgAAAAJAAAAAAAAAPeWRgAAAAAAJQAAAAwA
+AAAJAAAALAAAACAAAAAAAAAAHP3//0UAAADj/f//BQAAAAUAAAAoAAAADAAAAAkAAAAoAAAA
+DAAAAAgAAAAlAAAADAAAAAUAAAAlAAAADAAAAAcAAAAlAAAADAAAAAYAAAAoAAAADAAAAAcA
+AAAYAAAADAAAAP///wAYAAAADAAAAP///wBUAAAAWAAAAAAAAAAAAAAA//////////8BAAAA
+q6rTQRPa08EWAAAA4P3//wIAAABMAAAAAAAAAAAAAAAAAAAA//////////9QAAAARABBAA0A
+AAANAAAAGAAAAAwAAAD///8AGAAAAAwAAAD///8AGAAAAAwAAAAAAAAAJQAAAAwAAAADAAAA
+KAAAAAwAAAAFAAAAJQAAAAwAAAACAAAAKAAAAAwAAAAGAAAAJQAAAAwAAAABAAAAKAAAAAwA
+AAAEAAAAJQAAAAwAAAANAACAKAAAAAwAAAABAAAAJQAAAAwAAAAAAACAKAAAAAwAAAACAAAA
+JQAAAAwAAAAHAACAKAAAAAwAAAADAAAADgAAABQAAAAAAAAAEAAAABQAAAA=</UMLPattern.PreviewImage>
+		</UMLPattern>
+	</XMI.extensions>
+</XMI>

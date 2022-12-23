@@ -1,0 +1,16 @@
+﻿Name,Author,Category,Status,Owner,ProcessCriticality,ProcessType,ProcessVolumetrics,Source,Version,ID,StandardCreationDate,LastStandardReviewDate,RetireDate,NextStandardReviewDate,Guid
+Account management,Giuseppe Platania,Support,Proposed,Florian Merz,High,,,,1.0,,,,,,{3FBAF15E-0126-4fdc-BD98-33A235532A27}
+Account Setup,Giuseppe.Platania,Support,Rejected,Florian Merz,Medium,Client Facing,,,1.0,,,,,,{ABADF662-6777-45a8-B912-2A71B902DF22}
+Application Verification,Giuseppe Platania,Support,Started,Florian Merz,Medium,Client Facing,,,1.0,,,,,,{935D2A48-7C0A-46e6-B1E4-328E19F4BA79}
+Backoffice,Giuseppe.Platania,Support,Mandatory,Florian Merz,Low,Support,,,1.0,,,,,,{9DD5862F-E6AB-4ae4-B596-3BAB4AD81492}
+Check Customer Satisfaction,Giuseppe Platania,Support,Proposed,Florian Merz,unknow,,,,1.0,,,,,,{8CC7B218-C958-435e-852C-094348060FD1}
+Client Create Web Trouble Call,Giuseppe Platania,Support,Proposed,Florian Merz,Medium,Client Facing,,,1.0,,,,,,{A12181FC-3B97-4381-AA73-04EF84BF2718}
+Customer acquisition,Giuseppe Platania,Differentiator,Not Started,Florian Merz,unknow,,,,1.0,,,,,,{AE72902E-8427-45c1-B3B9-13F0D000601E}
+Customer acquisition,Giuseppe Platania,Support,Not Started,Florian Merz,Low,,,,1.0,,,,,,{3502E6F5-601F-40ee-BA0A-AB1938FC108C}
+Customer Relationship Management,Giuseppe.Platania,Differentiator,Implemented,Florian Merz,unknow,,,,3.0,,,,,,{11C00595-DFAB-426f-A41E-A1AF571BD3BC}
+Customer Relationship Management,Giuseppe Platania,Differentiator,Implemented,Florian Merz,Medium,,,,3.0,,,,,,{C86E3B97-55F8-43d0-9DF5-2A46E3F64CBE}
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

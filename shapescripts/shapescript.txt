@@ -1,0 +1,205 @@
+decoration linked_document
+{
+	orientation= "SE";
+	h_Align="right";
+	v_Align="bottom";
+	if(hasproperty("haslinkeddocument","true"))
+	{
+		SetFontColor(255,0,0);
+		print("A");
+	}
+}
+*** **** ****
+shape main
+{
+	drawparentshape();
+}
+
+decoration bottom_left
+{
+	orientation= "SW";
+	if(HasTag("bottom_left","red"))
+	{
+		SetFillColor(255,0,0);
+	}
+	if(HasTag("bottom_left","green"))
+	{
+		SetFillColor(0,255,0);
+	}
+	if(HasTag("bottom_left","blue"))
+	{
+		SetFillColor(0,0,255);
+	}
+	Rectangle(0,0,100,100);
+}
+
+**** **** ****
+shape main
+{
+	h_Align="left";
+	v_Align="bottom";
+	drawparentshape();
+	print("#TAG:text_note#");
+}
+
+decoration top_left
+{
+	orientation= "NW";
+	if(HasTag("red_circle","true"))
+	{
+		SetPenColor(255,0,0);
+		SetFillColor(255,0,0);
+		ellipse(0,0,100,100);
+	}
+	if(HasTag("red_square","true"))
+	{
+		SetPenColor(255,0,0);
+		SetFillColor(255,0,0);
+		rectangle(100,0,200,100);
+	}
+	if(HasTag("green_circle","true"))
+	{
+		SetPenColor(0,255,0);
+		SetFillColor(0,255,0);
+		ellipse(200,0,300,100);
+	}
+}
+
+
+decoration triangle_one
+{
+	orientation= "SE";
+	if(HasTag("green_triangle","true"))
+	{
+		SetPenColor(0,255,0);
+		SetFillColor(0,255,0);
+		StartPath();
+		MoveTo(50,0);
+		LineTo(100,100);
+		LineTo(0,100);
+		LineTo(50,0);
+		EndPath();
+		FillAndStrokePath();
+	}
+}
+
+
+
+**** **** ****
+decoration Icon
+{
+      scalable ="false";
+      orientation = "NE";
+      noShadow=true;
+      
+      if (HasProperty("Status","Implemented"))
+    {
+            //Black Tick
+            setpen(0,0,0,3);
+            moveto(0,6);
+            lineto(3,10);
+            lineto(10,0);
+      }
+      else if (HasProperty("Status","Redundant"))
+    {
+            // Red Cross
+            setpen(128,0,0,3);
+            moveto(0,0);
+            lineto(10,10);
+            moveto(10,0);
+            lineto(0,10);
+      }
+      else if (HasProperty("Status","In Progress"))
+    {
+            //Blue Hour glass
+            setpen(0,0,128,1);
+            moveto(0,0);
+            lineto(10,10);
+            moveto(10,0);
+            lineto(0,10);
+            
+            setpen(0,0,128,3);
+            moveto(0,0);
+            lineto(10,0);
+            moveto(0,10);
+            lineto(10,10);
+      }
+      else if (HasProperty("Status","Approved"))
+    {
+      //Green Thumbs up
+            setpen(0,64,0,1);
+            moveto(15,8);
+            //Thumb
+            lineto(11,8);
+            lineto(6,3);
+            lineto(5,0);
+            lineto(4,0);
+            lineto(3,1);
+            lineto(3,3);
+            lineto(4,5);
+            lineto(5,8);
+            lineto(5,8);
+            //1st finger
+            lineto(2,8);
+            lineto(0,9);
+            lineto(0,10);
+            lineto(1,11);
+            lineto(5,11);
+            lineto(6,10);
+            //2nd finger
+            moveto(1,12);
+            lineto(2,13);
+            lineto(6,13);
+            lineto(7,12);
+            //3rd finger
+            moveto(2,14);
+            lineto(3,15);
+            lineto(7,15);
+            lineto(8,14);
+            //4th finger
+            moveto(3,16);
+            lineto(4,17);
+            lineto(8,17);
+            lineto(9,15);
+            //wrist
+            moveto(5,17);
+            lineto(9,18);
+            lineto(11,17);
+            lineto(15,17);
+            lineto(16,13);
+            lineto(16,10);
+            lineto(15,8);
+      }
+}
+
+shape main
+{     
+      
+      if (HasProperty("Status","Implemented"))
+    {
+        setfillcolor(210,210,210);
+    }
+      else if (HasProperty("Status","Approved"))
+    {
+       setfillcolor(192,220,192);
+    }
+      else if (HasProperty("Status","Proposed"))
+    {
+        setfillcolor(247,244,164);
+    }
+      else if (HasProperty("Status","Redundant"))
+    {
+        setfillcolor(255,192,203);
+            setlinestyle("dash");
+    }
+      else if (HasProperty("Status","Validated"))
+    {
+        setfillcolor(192,220,192);
+    }
+      else if (HasProperty("Status","In Progress"))
+    {
+        setfillcolor(166,202,240);
+    }
+      drawnativeshape();
+}
+ 

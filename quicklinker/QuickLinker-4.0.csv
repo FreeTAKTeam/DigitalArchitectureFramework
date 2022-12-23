@@ -1,0 +1,197 @@
+//Source Element Type,Source ST filter,Target Element Type,Target ST Filter,Diagram Filter,New Element Type,New Element ST,New Link Type,New Link ST,New Link Direction,New Link Caption,New Link + Element Caption,Create Link,Create Element,Disallow Self connector,Exclusive to ST Filter + No inherit from metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,DUMMY
+Class,dDataEntity,,,,Activity,dActivity,Association,UsedBy,to,,Used by Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dActivity,,,,Activity,dBusinessProcess,Aggregation,PartOf,to,,Part of Business Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessService,,,,Activity,dBusinessProcess,Aggregation,Orchestrates,to,,Orchestrates Business Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dRole,,,,Activity,dBusinessProcess,Association,CarriesOut,to,,Carries out process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dRole,,,,Activity,dBusinessService,Association,Consumes,to,,Consumes Business Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dRole,,,,Actor,dOrganizationUnit,Aggregation,AreOrganizedWithin,to,,Part of Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dActor,,,,Actor,dRole,Realization,IsPerformedBy,to,,Preforms Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessProcess,,,,Class,dCapability,Aggregation,Ensuresoperationof,to,,Ensures operation of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dInitiative,,,,Class,dCapability,Realization,IncreasesMaturityOf,to,,Increase Maturity of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dRole,,,,Class,dCapability,Aggregation,Executes,to,,Executes Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dLocation,,,,Class,dCapability,Aggregation,Supports,to,,Supports capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,Supports,to,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dInitiative,,,,Class,dDecision,Association,IsMakingUseOf,to,,Making use of Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Class,dGoal,Realization,IsOperationalizedBy,to,,Operationalizes Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dRequirement,,,,Class,dGoal,Association,isDetailedBy,to,,Details Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Node,dDeploymentNode,,,,Class,dLocation,Aggregation,Hostedin,to,,Hosted in Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementCategory,,,,Class,dMeasurementArea,Aggregation,Partof,to,,Part of Measurement Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementGrouping,,,,Class,dMeasurementCategory,Aggregation,Partof,to,,Part of Measurement Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,Partof,to,,Part of Measurement Group,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Class,dMeasurementIndicator,Dependency,MeasuredBy,to,,Measured by indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dApplicationComponent,,,,Class,dDeploymentNode,Aggregation,Hosts,to,,Hosted in Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dDecision,,,,Class,dPrinciple,Association,RefersTo,to,,Refers to Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dAssumption,,,,Class,dRequirement,Association,ImprovesQualityof,to,,Improves Quality of Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dFeature,,,,Class,dRequirement,Realization,IsSatisfiedBy,to,,Satisifed by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dIssue,,,,Class,dRequirement,Association,Stops,to,,Stops Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dController,,,,Class,dView,Association,Governs,to,,Governs View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dApplicationComponent,,,,Component,dApplicationComponent,Aggregation,Partof,to,,Part of Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,Runson,to,,Runs on Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,Realises,to,,Realises Logical Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dInitiative,,,,Package,dGrowthPackage,Aggregation,Creates,to,,Create Growth Package,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dActor,,,,UseCase,dBusinessUseCase,Association,Participatesin,to,,Participates in Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dController,,,,UseCase,dBusinessUseCase,Realization,IsImplementedBy,to,,Implements Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+UseCase,dBusinessUseCase,,,,Activity,dBusinessService,Realization,IsDescribedBy,to,,Describes Business Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dActivity,,,,Class,dDataEntity,Association,UsedBy,from,,Uses Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessProcess,,,,Activity,dActivity,Aggregation,PartOf,from,,Part of Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessProcess,,,,Activity,dBusinessService,Aggregation,Orchestrates,from,,Part of Business Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessProcess,,,,Actor,dRole,Association,CarriesOut,from,,Provides Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessService,,,,Actor,dRole,Association,Consumes,from,,Provides Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dOrganizationUnit,,,,Actor,dRole,Aggregation,AreOrganizedWithin,from,,Uses Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Actor,dRole,,,,Actor,dActor,Realization,IsPerformedBy,from,,Create Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Activity,dBusinessProcess,Aggregation,Ensuresoperationof,from,,Has Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Activity,dInitiative,Realization,IncreasesMaturityOf,from,,Uses Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Actor,dRole,Aggregation,Executes,from,,Uses Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Class,dLocation,Aggregation,Supports,from,,Part of Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,Supports,from,,Part of Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dDecision,,,,Activity,dInitiative,Association,IsMakingUseOf,from,,Make use of Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dGoal,,,,Class,dCapability,Realization,Realizes Goal,from,,Realizes Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dGoal,,,,Class,dRequirement,Association,isDetailedBy,from,,Used by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dLocation,,,,Node,dDeploymentNode,Aggregation,Hostedin,from,,Hosted in Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementArea,,,,Class,dMeasurementCategory,Aggregation,Partof,from,,Has Measurement Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementCategory,,,,Class,dMeasurementGrouping,Aggregation,Partof,from,,Hase Measurement Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,Partof,from,,Has Measurement Indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dMeasurementIndicator,,,,Class,dCapability,Dependency,MeasuredBy,from,,Measures Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Node,dDeploymentNode,,,,Component,dApplicationComponent,Aggregation,Hosts,from,,Hosts Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dPrinciple,,,,Class,dDecision,Association,RefersTo,from,,Used for Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dRequirement,,,,Class,dAssumption,Association,ImprovesQualityof,from,,Has Assumption,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dRequirement,,,,Class,dFeature,Realization,IsSatisfiedBy,from,,Achieve Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dRequirement,,,,Class,dIssue,Association,Stops,from,,Has Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dView,,,,Class,dController,Association,Governs,from,,Controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dApplicationComponent,,,,Component,dApplicationComponent,Aggregation,Partof,from,,Has Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,Runson,from,,Helps Business Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,Realises,from,,Achieves Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dLogicalAppComponent,,,,Component,dLogicalAppComponent,Realization,Realises,from,,Realises Logical Application Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Package,dGrowthPackage,,,,Activity,dInitiative,Aggregation,Creates,from,,Has Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Package,dGrowthPackage,,,,Package,dProgram,Aggregation,Creates,from,,Organized in Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+UseCase,dBusinessUseCase,,,,Actor,dActor,Association,Participatesin,from,,Used by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+UseCase,dBusinessUseCase,,,,Class,dController,Realization,IsImplementedBy,from,,Used by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessService,,,,UseCase,dBusinessUseCase,Realization,IsDescribedBy,from,,Used by Business Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dModelClass,,,,Class,dDataEntity,Realization,IsFunctionallyImplementedBy,to,,Functionally Implemented By,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceTo,to,,Provides Persistence To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dModelClass,,,,Class,dController,Association,Controlls,to,,Controls Model Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dDataEntity,,,,Class,dModelClass,Realization,IsFunctionallyImplementedBy,from,,Functionally Implemented By,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,to,,Provides Persistence For,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dTable,,,,Class,dDataEntity,Realization,Realises,to,,Realizes Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dDataEntity,,,,Class,dTable,Realization,IsFunctionallyImplementedBy,from,,Implemented by Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dController,,,,Class,dModelClass,Association,Controlls,to,,Controls Model Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dApplicationComponent,,,,Component,dPhysicalService,Association,ExposesOrConsumes,to,,Consumes Physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dPhysicalService,,,,Component,dApplicationComponent,Association,ExposesOrConsumes,to,,Exposes Aplication Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Activity,dBusinessService,,,,Component,dPhysicalService,Realization,Realises,From,,Realises Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dPhysicalService,,,,Activity,dBusinessService,Realization,Realises,to,,Realises Business Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Component,dPhysicalService,,,,Class,dController,Association,IsHostedIn,from,,Is Hosted by Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dController,,,,Component,dPhysicalService,Association,IsHostedIn,to,,Is Hosted by dController,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,TRUE,0
+Class,dDataEntity,Activity,dActivity,,,,Association,UsedBy,to,Used by Activity,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dActivity,Activity,dBusinessProcess,,,,Aggregation,PartOf,to,Part of Business Process,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,Activity,dBusinessProcess,,,,Aggregation,Orchestrates,to,Orchestrates Business Process,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Activity,dBusinessProcess,,,,Association,CarriesOut,to,Carries out process,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Activity,dBusinessService,,,,Association,Consumes,to,Consumes Business Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Actor,dOrganizationUnit,,,,Aggregation,AreOrganizedWithin,to,Part of Organization,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dActor,Actor,dRole,,,,Realization,IsPerformedBy,to,Preforms Role,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessProcess,Class,dCapability,,,,Aggregation,Ensuresoperationof,to,Ensures operation of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dInitiative,Class,dCapability,,,,Realization,IncreasesMaturityOf,to,Increase Maturity of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Class,dCapability,,,,Aggregation,Executes,to,Executes Capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dLocation,Class,dCapability,,,,Aggregation,Supports,to,Supports capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,Supports,to,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dInitiative,Class,dDecision,,,,Association,IsMakingUseOf,to,Making use of Decision,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Class,dGoal,,,,Realization,IsOperationalizedBy,to,Operationalizes Goal,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dRequirement,Class,dGoal,,,,Association,isDetailedBy,to,Details Goal,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Node,dDeploymentNode,Class,dLocation,,,,Aggregation,Hostedin,to,Hosted in Location,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,Partof,to,Part of Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementGrouping,Class,dMeasurementCategory,,,,Aggregation,Partof,to,Part of Measurement Category,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,Partof,to,Part of Measurement Group,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Class,dMeasurementIndicator,,,,Dependency,MeasuredBy,to,Measured by indicator,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Class,dDeploymentNode,,,,Aggregation,Hosts,to,Hosted in Node,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dDecision,Class,dPrinciple,,,,Association,RefersTo,to,Refers to Principle,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dAssumption,Class,dRequirement,,,,Association,ImprovesQualityof,to,Improves Quality of Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dFeature,Class,dRequirement,,,,Realization,IsSatisfiedBy,to,Satisifed by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dIssue,Class,dRequirement,,,,Association,Stops,to,Stops Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dController,Class,dView,,,,Association,Governs,to,Governs View,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Component,dApplicationComponent,,,,Aggregation,Partof,to,Part of Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,Runson,to,Runs on Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,Realises,to,Realises Logical Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dInitiative,Package,dGrowthPackage,,,,Aggregation,Creates,to,Create Growth Package,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dActor,UseCase,dBusinessUseCase,,,,Association,Participatesin,to,Participates in Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dController,UseCase,dBusinessUseCase,,,,Realization,IsImplementedBy,to,Implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+UseCase,dBusinessUseCase,Activity,dBusinessService,,,,Realization,IsDescribedBy,to,Describes Business Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dActivity,Class,dDataEntity,,,,Association,UsedBy,from,Uses Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessProcess,Activity,dActivity,,,,Aggregation,PartOf,from,Part of Activity,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates,from,Part of Business Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessProcess,Actor,dRole,,,,Association,CarriesOut,from,Provides Role,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,Actor,dRole,,,,Association,Consumes,from,Provides Role,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dOrganizationUnit,Actor,dRole,,,,Aggregation,AreOrganizedWithin,from,Uses Role,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Actor,dActor,,,,Realization,IsPerformedBy,from,Create Actor,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Activity,dBusinessProcess,,,,Aggregation,Ensuresoperationof,from,Has Process,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Activity,dInitiative,,,,Realization,IncreasesMaturityOf,from,Uses Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Actor,dRole,,,,Aggregation,Executes,from,Uses Role,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Class,dLocation,,,,Aggregation,Supports,from,Part of Location,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Component,dLogicalAppComponent,,,,Aggregation,Supports,from,Part of Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dDecision,Activity,dInitiative,,,,Association,IsMakingUseOf,from,Make use of Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dGoal,Class,dCapability,,,,Realization,IsOperationalizedBy,from,Realizes Goal,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dGoal,Class,dRequirement,,,,Association,isDetailedBy,from,Used by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dLocation,Class,dDeploymentNode,,,,Aggregation,Hostedin,from,Hosted in Node,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,Partof,from,Has Measurement Category,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementCategory,Class,dMeasurementGrouping,,,,Aggregation,Partof,from,Hase Measurement Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,Partof,from,Has Measurement Indicator,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementIndicator,Class,dCapability,,,,Dependency,MeasuredBy,from,Measures Capability,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Node,dDeploymentNode,Component,dApplicationComponent,,,,Aggregation,Hosts,from,Hosts Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dPrinciple,Class,dDecision,,,,Association,RefersTo,from,Used for Decision,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dRequirement,Class,dAssumption,,,,Association,ImprovesQualityof,from,Has Assumption,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dRequirement,Class,dFeature,,,,Realization,IsSatisfiedBy,from,Achieve Feature,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dRequirement,Class,dIssue,,,,Association,Stops,from,Has Issue,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dView,Class,dController,,,,Association,Governs,from,Controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Component,dApplicationComponent,,,,Aggregation,Partof,from,Has Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,Runson,from,Helps Business Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,Realises,from,Achieves Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dLogicalAppComponent,Component,dLogicalAppComponent,,,,Realization,Realises,from,Achieves Logical Application Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Package,dGrowthPackage,Activity,dInitiative,,,,Aggregation,Creates,from,Has Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Package,dGrowthPackage,Package,dProgram,,,,Aggregation,Creates,from,Has Program,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+UseCase,dBusinessUseCase,Actor,dActor,,,,Association,Participatesin,from,Used by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+UseCase,dBusinessUseCase,Class,dController,,,,Realization,IsImplementedBy,from,Used by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,UseCase,dBusinessUseCase,,,,Realization,IsDescribedBy,from,Used by Business Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dModelClass,Class,dDataEntity,,,,Realization,IsFunctionallyImplementedBy,from,Functionally Implemented By,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dModelClass,Class,dTable,,,,Association,ProvidesPersistenceTo,to,Provides Persistence To,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dModelClass,Class,dController,,,,Association,Controlls,from,Controls Model Class,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dDataEntity,Class,dModelClass,,,,Realization,IsFunctionallyImplementedBy,from,Functionally Implemented By,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,to,Provides Persistence For,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dTable,Class,dDataEntity,,,,Realization,Realises,to,Realizes Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dDataEntity,Class,dTable,,,,Realization,IsFunctionallyImplementedBy,from,Implemented by Table,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dController,Class,dModelClass,,,,Association,Controlls,to,Controls Model Class,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Component,dPhysicalService,,,,Association,ExposesOrConsumes,to,Consumes Physical service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dPhysicalService,Component,dApplicationComponent,,,,Association,ExposesOrConsumes,to,Exposes Aplication Component,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,Component,dPhysicalService,,,,Realization,Realises,From,Realises Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dPhysicalService,Activity,dBusinessService,,,,Realization,Realises,to,Realises Business Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Component,dPhysicalService,Class,dController,,,,Association,IsHostedIn,from,Is Hosted by Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dController,Component,dPhysicalService,,,,Association,IsHostedIn,to,Is Hosted by dController,,TRUE,,TRUE,TRUE,DAF,0,,,TRUE,,
+Class,dDataEntity,Class,dDataEntity,,,,Composition,ComposedDataEntity,to,Composes DataEntity,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Activity,dActivity,Activity,dActivity,,,,Composition,ComposedActivity,to,Composes Activity,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessService,Activity,dBusinessService,,,,Composition,ComposedBusinessService,to,Composes BusinessService,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Actor,dRole,Actor,dRole,,,,Composition,ComposedRole,to,Composes Role,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Actor,dActor,Actor,dActor,,,,Composition,ComposedActor,to,Composes Actor,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Activity,dBusinessProcess,Activity,dBusinessProcess,,,,Composition,ComposedBusinessProcess,to,Composes BusinessProcess,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Activity,dInitiative,Activity,dInitiative,,,,Composition,ComposedInitiative,to,Composes Initiative,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dLocation,Class,dLocation,,,,Composition,ComposedLocation,to,Composes Location,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Component,dLogicalAppComponent,Component,dLogicalAppComponent,,,,Composition,ComposedLogicalAppComponent,to,Composes LogicalAppComponent,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dCapability,Class,dCapability,,,,Composition,ComposedCapability,to,Composes Capability,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dRequirement,Class,dRequirement,,,,Composition,ComposedRequirement,to,Composes Requirement,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Node,dDeploymentNode,Class,dDeploymentNode,,,,Composition,ComposedDeploymentNode,to,Composes Node,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementCategory,Class,dMeasurementCategory,,,,Composition,ComposedMeasurementCategory,to,Composes MeasurementCategory,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementGrouping,Class,dMeasurementGrouping,,,,Composition,ComposedMeasurementGrouping,to,Composes MeasurementGrouping,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Composition,ComposedMeasurementIndicator,to,Composes MeasurementIndicator,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Component,dApplicationComponent,Component,dApplicationComponent,,,,Composition,ComposedApplicationComponent,to,Composes ApplicationComponent,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dDecision,Class,dDecision,,,,Composition,ComposedDecision,to,Composes Decision,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dAssumption,Class,dAssumption,,,,Composition,ComposedAssumption,to,Composes Assumption,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dFeature,Class,dFeature,,,,Composition,ComposedFeature,to,Composes Feature,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dIssue,Class,dIssue,,,,Composition,ComposedIssue,to,Composes Issue,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dController,Class,dController,,,,Composition,ComposedController,to,Composes Controller,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+UseCase,dBusinessUseCase,UseCase,dBusinessUseCase,,,,Composition,ComposedBusinessUseCase,to,Composes BusinessUseCase,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Actor,dOrganizationUnit,Actor,dOrganizationUnit,,,,Composition,ComposedOrganizationUnit,to,Composes OrganizationUnit,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dGoal,Class,dGoal,,,,Composition,ComposedGoal,to,Composes Goal,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dMeasurementArea,Class,dMeasurementArea,,,,Composition,ComposedMeasurementArea,to,Composes MeasurementArea,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dPrinciple,Class,dPrinciple,,,,Composition,ComposedPrinciple,to,Composes Principle,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dView,Class,dView,,,,Composition,ComposedView,to,Composes View,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Package,dGrowthPackage,Package,dGrowthPackage,,,,Composition,ComposedGrowthPackage,to,Composes GrowthPackage,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dModelClass,Class,dModelClass,,,,Composition,ComposedModelClass,to,Composes ModelClass,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Class,dTable,Class,dTable,,,,Composition,ComposedTable,to,Composes Table,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Component,dPhysicalService,Component,dPhysicalService,,,,Composition,ComposedPhysicalService,to,Composes PhysicalService,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,
+Component,dSystem,Component,dApplicationComponent,,,,Dependency,hasConfiguration,to,DescribesConfiguration,,TRUE,,FALSE,TRUE,DAF,0,,,TRUE,,

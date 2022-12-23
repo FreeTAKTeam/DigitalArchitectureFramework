@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<xmi:XMI xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_8D2C7A1B_0257_4224_846C_9855C4BF7C83" name="Structure" visibility="public">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" name="Catalogs" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" name="Data" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_EA938872_3D13_45b2_AA0C_5962B926E7CA" name="dController" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_6CEEF42D_C2AE_4883_864E_7F9B1FB03923" name="dDataEntity" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_FBD02CE7_EEBD_44e0_AF3C_705EA289F17E" name="dModelClass" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_2BC9B92D_0C39_47ef_860E_0A3C078A44F3" name="dObject" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_78DE065B_285C_4ae4_951E_21D743833861" name="dTable" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_44EF0BD0_26EB_415d_B185_47A1D501184E" name="Implementation" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_D81E51BD_43E0_4c7d_A047_B0CE18A81F90" name="dGrowthPackage" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_8AE725CB_8A7C_4fd1_B6C3_DE124A9B3D38" name="dInitiative" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_D432B19C_628A_475c_90B1_D6D151C8D26E" name="dProgram" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" name="Requirement" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_24B72499_900E_41aa_A172_1D0F3402910E" name="dFeature" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_FB1F0731_E24D_4aa1_9DEE_F6A1B0833FAB" name="dGoal" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C65AA572_8535_4e4c_8AA2_93499EA7E56B" name="dIssue" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_1F60B7C7_F7DC_496a_8BF9_A46656FD44C1" name="dRequirement" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" name="Strategy" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C6725BEF_9757_4058_AAAA_1EE0EBC19B2E" name="dDecision" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_9D0E685A_5813_4c5f_9527_EDD3A102F7D1" name="dMeasurementArea" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_E28E4110_8CCC_4743_93F8_39BB5BDCA7DE" name="dMeasurementCategory" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C95DDD96_0C03_4a60_99CE_12ACB56E8EFF" name="dMeasurementGrouping" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_0F6DB9A8_9304_4ca8_9949_D00D00ACCC2F" name="dMeasurementIndicator" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_432D98C2_A420_4120_A5BA_311ECE7BD73E" name="dObjective" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_FDC9ABF0_F413_4dc7_91D0_795245CAB608" name="dOpinion" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C21D311E_1392_45cf_8EE2_FEA8D4536B99" name="dOpinionInner" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_D1AA8ACF_1AF9_4679_B35E_980746EFCC5F" name="dPrinciple" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_F8123F4E_6785_46a4_90DE_C98B16B9EF10" name="dStakeholder" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" name="Business" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_99175735_5753_4609_9B04_E6D3A3045452" name="dActor" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_EAC74DC7_5D46_474b_BE1D_ADDC54E175FE" name="dAction" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_E2D6EF70_1834_4818_847E_4A5A09BCB1FB" name="dActivity" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_FD6D0786_13F5_4199_A4BC_FD111A4FABC9" name="dBusinessProcess" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_AF253160_4882_49e4_896B_38B8A523DDAD" name="dBusinessService" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_60236A72_3733_4b31_979F_B1362C255E90" name="dBusinessUseCase" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B8645B3C_9F01_44d8_BD2B_BFC4E6701346" name="dCapability" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_706B3945_F912_4190_BA75_48F294AA9241" name="dEvent" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_5EBD4643_EAA1_48d5_87B0_3E6CEAC8F551" name="dOrganizationUnit" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_62777E61_3CC0_4e16_85C5_FEF56984FE39" name="dProduct" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_9C3DE5F9_F4B8_460a_B83E_FE8734CEAD61" name="dRole" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_6B1E0EBA_C6E5_4c13_B84A_35715A5661E4" name="dUserStory" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_365CB5DF_7B7D_49fd_AF9C_FC20FBCEAFA8" name="dValueStream" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" name="Application" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_932AD1D3_22FE_45c6_9C75_63726F4233F8" name="dActivity" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_C5985571_88D2_46b1_943E_37AFB4EB2D70" name="dActor" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_2362A415_6038_4f16_98C1_D2EFF94AEC42" name="dApplicationComponent" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_CA6E44F0_AB87_45e2_9B5B_76D66DE2F56E" name="dLogicalAppComponent" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_DD72E9DF_A055_4c94_A48B_3F57A88155AF" name="dPhysicalService" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B0A9C503_0CD1_4986_B22A_E1A9957BBA81" name="dView" visibility="public"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" name="Technology" visibility="public">
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_0A6CD179_9309_4491_AD51_F1065E4492AB" name="dDeploymentNode" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_ED58563E_82AA_434d_909D_EAEC88604374" name="dLocation" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B36AAB03_669E_4241_9668_C69C765305FF" name="dResource" visibility="public"/>
+					<packagedElement xmi:type="uml:Package" xmi:id="EAPK_29867A99_CDDC_44e8_96BB_EB6601CC0020" name="dSystem" visibility="public"/>
+				</packagedElement>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" name="Views" visibility="public">
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_BE493835_313D_41ac_9921_C39E9E7B1BFA" name="Data" visibility="public"/>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_4298678C_0693_4d5f_BC8A_3866918A8128" name="Requirements" visibility="public"/>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_B9B7476B_70F5_47f4_8E17_410F661D9DAA" name="Technology" visibility="public"/>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_66D6482D_FBE4_4bad_803A_CBF0BD1021AC" name="Business" visibility="public"/>
+				<packagedElement xmi:type="uml:Package" xmi:id="EAPK_02DCF2E1_CAE4_4d46_B72D_DD99FE540561" name="Application" visibility="public"/>
+			</packagedElement>
+		</packagedElement>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_8D2C7A1B_0257_4224_846C_9855C4BF7C83" xmi:type="uml:Package" name="Structure" scope="public">
+				<model package2="EAID_8D2C7A1B_0257_4224_846C_9855C4BF7C83" package="EAPK_BEFFD7D1_82EE_478f_A0EE_5670EC836630" tpos="0" ea_localid="4259" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:37:16" modified="2019-08-01 09:37:16" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="DAF"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:37:16" modified="2019-08-01 09:37:16"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" xmi:type="uml:Package" name="Catalogs" scope="public">
+				<model package2="EAID_453F6503_AF42_4f91_BB43_3D9277C781AE" package="EAPK_8D2C7A1B_0257_4224_846C_9855C4BF7C83" tpos="0" ea_localid="4243" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-07-22 10:30:11" modified="2019-08-01 09:37:43" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Structure"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-07-22 10:30:11" modified="2019-07-22 10:30:11"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" xmi:type="uml:Package" name="Data" scope="public">
+				<model package2="EAID_AC88ADF0_7E84_45b4_9D1A_8821948807F6" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="0" ea_localid="4254" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:20:17" modified="2019-08-01 09:20:17" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:20:17" modified="2019-08-01 09:20:17"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_EA938872_3D13_45b2_AA0C_5962B926E7CA" xmi:type="uml:Package" name="dController" scope="public">
+				<model package2="EAID_EA938872_3D13_45b2_AA0C_5962B926E7CA" package="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" tpos="12" ea_localid="4208" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:57" modified="2019-08-01 09:21:22" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Data"/>
+				<packageproperties tpos="12"/>
+				<paths/>
+				<times created="2019-07-22 10:24:57" modified="2019-07-22 10:24:57"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_6CEEF42D_C2AE_4883_864E_7F9B1FB03923" xmi:type="uml:Package" name="dDataEntity" scope="public">
+				<model package2="EAID_6CEEF42D_C2AE_4883_864E_7F9B1FB03923" package="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" tpos="13" ea_localid="4209" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:05" modified="2019-08-01 09:21:35" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Data"/>
+				<packageproperties tpos="13"/>
+				<paths/>
+				<times created="2019-07-22 10:25:05" modified="2019-07-22 10:25:05"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_FBD02CE7_EEBD_44e0_AF3C_705EA289F17E" xmi:type="uml:Package" name="dModelClass" scope="public">
+				<model package2="EAID_FBD02CE7_EEBD_44e0_AF3C_705EA289F17E" package="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" tpos="28" ea_localid="4224" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:46" modified="2019-08-01 09:25:53" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Data"/>
+				<packageproperties tpos="28"/>
+				<paths/>
+				<times created="2019-07-22 10:25:46" modified="2019-07-22 10:25:46"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_2BC9B92D_0C39_47ef_860E_0A3C078A44F3" xmi:type="uml:Package" name="dObject" scope="public">
+				<model package2="EAID_2BC9B92D_0C39_47ef_860E_0A3C078A44F3" package="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" tpos="29" ea_localid="4225" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:52" modified="2019-08-01 09:26:13" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Data"/>
+				<packageproperties tpos="29"/>
+				<paths/>
+				<times created="2019-07-22 10:25:52" modified="2019-07-22 10:25:52"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_78DE065B_285C_4ae4_951E_21D743833861" xmi:type="uml:Package" name="dTable" scope="public">
+				<model package2="EAID_78DE065B_285C_4ae4_951E_21D743833861" package="EAPK_AC88ADF0_7E84_45b4_9D1A_8821948807F6" tpos="43" ea_localid="4239" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:33" modified="2019-08-01 09:24:08" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Data"/>
+				<packageproperties tpos="43"/>
+				<paths/>
+				<times created="2019-07-22 10:26:33" modified="2019-07-22 10:26:33"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_44EF0BD0_26EB_415d_B185_47A1D501184E" xmi:type="uml:Package" name="Implementation" scope="public">
+				<model package2="EAID_44EF0BD0_26EB_415d_B185_47A1D501184E" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="0" ea_localid="4257" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:22:20" modified="2019-08-01 09:22:20" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:22:20" modified="2019-08-01 09:22:20"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_D81E51BD_43E0_4c7d_A047_B0CE18A81F90" xmi:type="uml:Package" name="dGrowthPackage" scope="public">
+				<model package2="EAID_D81E51BD_43E0_4c7d_A047_B0CE18A81F90" package="EAPK_44EF0BD0_26EB_415d_B185_47A1D501184E" tpos="19" ea_localid="4215" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:22" modified="2019-08-01 09:25:15" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Implementation"/>
+				<packageproperties tpos="19"/>
+				<paths/>
+				<times created="2019-07-22 10:25:22" modified="2019-07-22 10:25:22"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_8AE725CB_8A7C_4fd1_B6C3_DE124A9B3D38" xmi:type="uml:Package" name="dInitiative" scope="public">
+				<model package2="EAID_8AE725CB_8A7C_4fd1_B6C3_DE124A9B3D38" package="EAPK_44EF0BD0_26EB_415d_B185_47A1D501184E" tpos="20" ea_localid="4216" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:25" modified="2019-08-01 09:23:48" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Implementation"/>
+				<packageproperties tpos="20"/>
+				<paths/>
+				<times created="2019-07-22 10:25:25" modified="2019-07-22 10:25:25"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_D432B19C_628A_475c_90B1_D6D151C8D26E" xmi:type="uml:Package" name="dProgram" scope="public">
+				<model package2="EAID_D432B19C_628A_475c_90B1_D6D151C8D26E" package="EAPK_44EF0BD0_26EB_415d_B185_47A1D501184E" tpos="37" ea_localid="4233" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:13" modified="2019-08-01 09:25:26" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Implementation"/>
+				<packageproperties tpos="37"/>
+				<paths/>
+				<times created="2019-07-22 10:26:13" modified="2019-07-22 10:26:13"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" xmi:type="uml:Package" name="Requirement" scope="public">
+				<model package2="EAID_14F90285_BF3F_4341_A019_B7F8AFA139AB" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="0" ea_localid="4256" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:21:58" modified="2019-08-01 09:21:58" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:21:58" modified="2019-08-01 09:21:58"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_24B72499_900E_41aa_A172_1D0F3402910E" xmi:type="uml:Package" name="dFeature" scope="public">
+				<model package2="EAID_24B72499_900E_41aa_A172_1D0F3402910E" package="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" tpos="17" ea_localid="4213" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:17" modified="2019-08-01 09:22:09" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requirement"/>
+				<packageproperties tpos="17"/>
+				<paths/>
+				<times created="2019-07-22 10:25:17" modified="2019-07-22 10:25:17"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_FB1F0731_E24D_4aa1_9DEE_F6A1B0833FAB" xmi:type="uml:Package" name="dGoal" scope="public">
+				<model package2="EAID_FB1F0731_E24D_4aa1_9DEE_F6A1B0833FAB" package="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" tpos="18" ea_localid="4214" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:20" modified="2019-08-01 09:22:09" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requirement"/>
+				<packageproperties tpos="18"/>
+				<paths/>
+				<times created="2019-07-22 10:25:20" modified="2019-07-22 10:25:20"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C65AA572_8535_4e4c_8AA2_93499EA7E56B" xmi:type="uml:Package" name="dIssue" scope="public">
+				<model package2="EAID_C65AA572_8535_4e4c_8AA2_93499EA7E56B" package="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" tpos="21" ea_localid="4217" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:28" modified="2019-08-01 09:25:19" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requirement"/>
+				<packageproperties tpos="21"/>
+				<paths/>
+				<times created="2019-07-22 10:25:28" modified="2019-07-22 10:25:28"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_1F60B7C7_F7DC_496a_8BF9_A46656FD44C1" xmi:type="uml:Package" name="dRequirement" scope="public">
+				<model package2="EAID_1F60B7C7_F7DC_496a_8BF9_A46656FD44C1" package="EAPK_14F90285_BF3F_4341_A019_B7F8AFA139AB" tpos="38" ea_localid="4234" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:16" modified="2019-08-01 09:24:39" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Requirement"/>
+				<packageproperties tpos="38"/>
+				<paths/>
+				<times created="2019-07-22 10:26:16" modified="2019-07-22 10:26:17"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" xmi:type="uml:Package" name="Strategy" scope="public">
+				<model package2="EAID_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="0" ea_localid="4255" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:20:43" modified="2019-08-01 09:20:43" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:20:43" modified="2019-08-01 09:20:43"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C6725BEF_9757_4058_AAAA_1EE0EBC19B2E" xmi:type="uml:Package" name="dDecision" scope="public">
+				<model package2="EAID_C6725BEF_9757_4058_AAAA_1EE0EBC19B2E" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="14" ea_localid="4210" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:07" modified="2019-08-01 09:25:08" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="14"/>
+				<paths/>
+				<times created="2019-07-22 10:25:06" modified="2019-07-22 10:25:07"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_9D0E685A_5813_4c5f_9527_EDD3A102F7D1" xmi:type="uml:Package" name="dMeasurementArea" scope="public">
+				<model package2="EAID_9D0E685A_5813_4c5f_9527_EDD3A102F7D1" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="24" ea_localid="4220" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:39" modified="2019-08-01 09:22:41" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="24"/>
+				<paths/>
+				<times created="2019-07-22 10:25:39" modified="2019-07-22 10:25:39"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_E28E4110_8CCC_4743_93F8_39BB5BDCA7DE" xmi:type="uml:Package" name="dMeasurementCategory" scope="public">
+				<model package2="EAID_E28E4110_8CCC_4743_93F8_39BB5BDCA7DE" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="25" ea_localid="4221" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:41" modified="2019-08-01 09:22:41" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="25"/>
+				<paths/>
+				<times created="2019-07-22 10:25:41" modified="2019-07-22 10:25:41"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C95DDD96_0C03_4a60_99CE_12ACB56E8EFF" xmi:type="uml:Package" name="dMeasurementGrouping" scope="public">
+				<model package2="EAID_C95DDD96_0C03_4a60_99CE_12ACB56E8EFF" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="26" ea_localid="4222" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:43" modified="2019-08-01 09:22:41" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="26"/>
+				<paths/>
+				<times created="2019-07-22 10:25:43" modified="2019-07-22 10:25:43"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_0F6DB9A8_9304_4ca8_9949_D00D00ACCC2F" xmi:type="uml:Package" name="dMeasurementIndicator" scope="public">
+				<model package2="EAID_0F6DB9A8_9304_4ca8_9949_D00D00ACCC2F" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="27" ea_localid="4223" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:45" modified="2019-08-01 09:22:41" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="27"/>
+				<paths/>
+				<times created="2019-07-22 10:25:45" modified="2019-07-22 10:25:45"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_432D98C2_A420_4120_A5BA_311ECE7BD73E" xmi:type="uml:Package" name="dObjective" scope="public">
+				<model package2="EAID_432D98C2_A420_4120_A5BA_311ECE7BD73E" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="30" ea_localid="4226" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:54" modified="2019-08-01 09:23:03" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="30"/>
+				<paths/>
+				<times created="2019-07-22 10:25:54" modified="2019-07-22 10:25:54"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_FDC9ABF0_F413_4dc7_91D0_795245CAB608" xmi:type="uml:Package" name="dOpinion" scope="public">
+				<model package2="EAID_FDC9ABF0_F413_4dc7_91D0_795245CAB608" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="31" ea_localid="4227" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:55" modified="2019-08-01 09:23:17" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="31"/>
+				<paths/>
+				<times created="2019-07-22 10:25:55" modified="2019-07-22 10:25:55"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C21D311E_1392_45cf_8EE2_FEA8D4536B99" xmi:type="uml:Package" name="dOpinionInner" scope="public">
+				<model package2="EAID_C21D311E_1392_45cf_8EE2_FEA8D4536B99" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="32" ea_localid="4228" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:59" modified="2019-08-01 09:23:17" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="32"/>
+				<paths/>
+				<times created="2019-07-22 10:25:59" modified="2019-07-22 10:25:59"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_D1AA8ACF_1AF9_4679_B35E_980746EFCC5F" xmi:type="uml:Package" name="dPrinciple" scope="public">
+				<model package2="EAID_D1AA8ACF_1AF9_4679_B35E_980746EFCC5F" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="35" ea_localid="4231" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:08" modified="2019-08-01 09:23:22" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="35"/>
+				<paths/>
+				<times created="2019-07-22 10:26:08" modified="2019-07-22 10:26:08"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_F8123F4E_6785_46a4_90DE_C98B16B9EF10" xmi:type="uml:Package" name="dStakeholder" scope="public">
+				<model package2="EAID_F8123F4E_6785_46a4_90DE_C98B16B9EF10" package="EAPK_6D7AB796_1EFC_49d3_AF7E_DBFF92DA1373" tpos="41" ea_localid="4237" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:26" modified="2019-08-01 09:24:35" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Strategy"/>
+				<packageproperties tpos="41"/>
+				<paths/>
+				<times created="2019-07-22 10:26:26" modified="2019-07-22 10:26:26"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" xmi:type="uml:Package" name="Business" scope="public">
+				<model package2="EAID_4141D76C_E3DC_4afc_8300_CCABE54F27DE" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="1" ea_localid="4251" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:19:41" modified="2019-08-01 09:19:41" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0" tpos="1"/>
+				<paths/>
+				<times created="2019-08-01 09:19:41" modified="2019-08-01 09:19:41"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_99175735_5753_4609_9B04_E6D3A3045452" xmi:type="uml:Package" name="dActor" scope="public">
+				<model package2="EAID_99175735_5753_4609_9B04_E6D3A3045452" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="0" ea_localid="4246" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-23 14:18:03" modified="2019-08-01 09:26:44" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="0"/>
+				<paths/>
+				<times created="2019-07-23 14:18:03" modified="2019-07-23 14:18:03"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_EAC74DC7_5D46_474b_BE1D_ADDC54E175FE" xmi:type="uml:Package" name="dAction" scope="public">
+				<model package2="EAID_EAC74DC7_5D46_474b_BE1D_ADDC54E175FE" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="4" ea_localid="4199" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:05:13" modified="2019-08-01 09:26:56" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="4"/>
+				<paths/>
+				<times created="2019-07-22 10:05:13" modified="2019-07-22 10:05:13"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_E2D6EF70_1834_4818_847E_4A5A09BCB1FB" xmi:type="uml:Package" name="dActivity" scope="public">
+				<model package2="EAID_E2D6EF70_1834_4818_847E_4A5A09BCB1FB" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="5" ea_localid="4201" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:23" modified="2019-08-01 09:26:56" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="5"/>
+				<paths/>
+				<times created="2019-07-22 10:24:23" modified="2019-07-22 10:24:23"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_FD6D0786_13F5_4199_A4BC_FD111A4FABC9" xmi:type="uml:Package" name="dBusinessProcess" scope="public">
+				<model package2="EAID_FD6D0786_13F5_4199_A4BC_FD111A4FABC9" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="8" ea_localid="4204" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:35" modified="2019-08-01 09:21:09" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="8"/>
+				<paths/>
+				<times created="2019-07-22 10:24:34" modified="2019-07-22 10:24:35"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_AF253160_4882_49e4_896B_38B8A523DDAD" xmi:type="uml:Package" name="dBusinessService" scope="public">
+				<model package2="EAID_AF253160_4882_49e4_896B_38B8A523DDAD" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="9" ea_localid="4205" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:38" modified="2019-08-01 09:21:11" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="9"/>
+				<paths/>
+				<times created="2019-07-22 10:24:38" modified="2019-07-22 10:24:38"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_60236A72_3733_4b31_979F_B1362C255E90" xmi:type="uml:Package" name="dBusinessUseCase" scope="public">
+				<model package2="EAID_60236A72_3733_4b31_979F_B1362C255E90" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="10" ea_localid="4206" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:42" modified="2019-08-01 09:21:16" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="10"/>
+				<paths/>
+				<times created="2019-07-22 10:24:42" modified="2019-07-22 10:24:42"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B8645B3C_9F01_44d8_BD2B_BFC4E6701346" xmi:type="uml:Package" name="dCapability" scope="public">
+				<model package2="EAID_B8645B3C_9F01_44d8_BD2B_BFC4E6701346" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="11" ea_localid="4207" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:46" modified="2019-08-01 09:21:33" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="11"/>
+				<paths/>
+				<times created="2019-07-22 10:24:46" modified="2019-07-22 10:24:46"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_706B3945_F912_4190_BA75_48F294AA9241" xmi:type="uml:Package" name="dEvent" scope="public">
+				<model package2="EAID_706B3945_F912_4190_BA75_48F294AA9241" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="16" ea_localid="4212" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:15" modified="2019-08-01 09:26:56" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="16"/>
+				<paths/>
+				<times created="2019-07-22 10:25:15" modified="2019-07-22 10:25:15"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_5EBD4643_EAA1_48d5_87B0_3E6CEAC8F551" xmi:type="uml:Package" name="dOrganizationUnit" scope="public">
+				<model package2="EAID_5EBD4643_EAA1_48d5_87B0_3E6CEAC8F551" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="33" ea_localid="4229" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:01" modified="2019-08-01 09:26:07" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="33"/>
+				<paths/>
+				<times created="2019-07-22 10:26:01" modified="2019-07-22 10:26:01"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_62777E61_3CC0_4e16_85C5_FEF56984FE39" xmi:type="uml:Package" name="dProduct" scope="public">
+				<model package2="EAID_62777E61_3CC0_4e16_85C5_FEF56984FE39" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="36" ea_localid="4232" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:09" modified="2019-08-01 09:23:57" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="36"/>
+				<paths/>
+				<times created="2019-07-22 10:26:09" modified="2019-07-22 10:26:09"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_9C3DE5F9_F4B8_460a_B83E_FE8734CEAD61" xmi:type="uml:Package" name="dRole" scope="public">
+				<model package2="EAID_9C3DE5F9_F4B8_460a_B83E_FE8734CEAD61" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="40" ea_localid="4236" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:22" modified="2019-08-01 09:24:31" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="40"/>
+				<paths/>
+				<times created="2019-07-22 10:26:22" modified="2019-07-22 10:26:22"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_6B1E0EBA_C6E5_4c13_B84A_35715A5661E4" xmi:type="uml:Package" name="dUserStory" scope="public">
+				<model package2="EAID_6B1E0EBA_C6E5_4c13_B84A_35715A5661E4" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="44" ea_localid="4240" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:37" modified="2019-08-01 09:24:04" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="44"/>
+				<paths/>
+				<times created="2019-07-22 10:26:37" modified="2019-07-22 10:26:37"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_365CB5DF_7B7D_49fd_AF9C_FC20FBCEAFA8" xmi:type="uml:Package" name="dValueStream" scope="public">
+				<model package2="EAID_365CB5DF_7B7D_49fd_AF9C_FC20FBCEAFA8" package="EAPK_4141D76C_E3DC_4afc_8300_CCABE54F27DE" tpos="45" ea_localid="4241" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:39" modified="2019-08-01 09:24:12" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Business"/>
+				<packageproperties tpos="45"/>
+				<paths/>
+				<times created="2019-07-22 10:26:39" modified="2019-07-22 10:26:39"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" xmi:type="uml:Package" name="Application" scope="public">
+				<model package2="EAID_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="2" ea_localid="4252" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:19:49" modified="2019-08-01 09:19:49" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0" tpos="2"/>
+				<paths/>
+				<times created="2019-08-01 09:19:49" modified="2019-08-01 09:19:49"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_932AD1D3_22FE_45c6_9C75_63726F4233F8" xmi:type="uml:Package" name="dActivity" scope="public">
+				<model package2="EAID_932AD1D3_22FE_45c6_9C75_63726F4233F8" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="0" ea_localid="4245" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-23 14:18:02" modified="2019-08-01 09:26:39" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="0"/>
+				<paths/>
+				<times created="2019-07-23 14:18:02" modified="2019-07-23 14:18:02"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_C5985571_88D2_46b1_943E_37AFB4EB2D70" xmi:type="uml:Package" name="dActor" scope="public">
+				<model package2="EAID_C5985571_88D2_46b1_943E_37AFB4EB2D70" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="6" ea_localid="4202" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:25" modified="2019-08-01 09:21:03" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="6"/>
+				<paths/>
+				<times created="2019-07-22 10:24:25" modified="2019-07-22 10:24:25"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_2362A415_6038_4f16_98C1_D2EFF94AEC42" xmi:type="uml:Package" name="dApplicationComponent" scope="public">
+				<model package2="EAID_2362A415_6038_4f16_98C1_D2EFF94AEC42" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="7" ea_localid="4203" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:24:30" modified="2019-08-01 09:21:07" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="7"/>
+				<paths/>
+				<times created="2019-07-22 10:24:30" modified="2019-07-22 10:24:30"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_CA6E44F0_AB87_45e2_9B5B_76D66DE2F56E" xmi:type="uml:Package" name="dLogicalAppComponent" scope="public">
+				<model package2="EAID_CA6E44F0_AB87_45e2_9B5B_76D66DE2F56E" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="23" ea_localid="4219" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:36" modified="2019-08-01 09:22:44" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="23"/>
+				<paths/>
+				<times created="2019-07-22 10:25:36" modified="2019-07-22 10:25:36"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_DD72E9DF_A055_4c94_A48B_3F57A88155AF" xmi:type="uml:Package" name="dPhysicalService" scope="public">
+				<model package2="EAID_DD72E9DF_A055_4c94_A48B_3F57A88155AF" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="34" ea_localid="4230" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:04" modified="2019-08-01 09:25:47" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="34"/>
+				<paths/>
+				<times created="2019-07-22 10:26:04" modified="2019-07-22 10:26:04"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B0A9C503_0CD1_4986_B22A_E1A9957BBA81" xmi:type="uml:Package" name="dView" scope="public">
+				<model package2="EAID_B0A9C503_0CD1_4986_B22A_E1A9957BBA81" package="EAPK_B83B6CFE_FE49_4ab4_A424_9918D83B4EBB" tpos="46" ea_localid="4242" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:42" modified="2019-08-01 09:24:21" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Application"/>
+				<packageproperties tpos="46"/>
+				<paths/>
+				<times created="2019-07-22 10:26:42" modified="2019-07-22 10:26:42"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" xmi:type="uml:Package" name="Technology" scope="public">
+				<model package2="EAID_B8006739_084A_4119_B6AF_8B142D21B8CD" package="EAPK_453F6503_AF42_4f91_BB43_3D9277C781AE" tpos="3" ea_localid="4253" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:19:58" modified="2019-08-01 09:19:58" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Catalogs"/>
+				<packageproperties version="1.0" tpos="3"/>
+				<paths/>
+				<times created="2019-08-01 09:19:58" modified="2019-08-01 09:19:58"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_0A6CD179_9309_4491_AD51_F1065E4492AB" xmi:type="uml:Package" name="dDeploymentNode" scope="public">
+				<model package2="EAID_0A6CD179_9309_4491_AD51_F1065E4492AB" package="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" tpos="15" ea_localid="4211" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:12" modified="2019-08-01 09:21:38" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Technology"/>
+				<packageproperties tpos="15"/>
+				<paths/>
+				<times created="2019-07-22 10:25:12" modified="2019-07-22 10:25:12"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_ED58563E_82AA_434d_909D_EAEC88604374" xmi:type="uml:Package" name="dLocation" scope="public">
+				<model package2="EAID_ED58563E_82AA_434d_909D_EAEC88604374" package="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" tpos="22" ea_localid="4218" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:25:32" modified="2019-08-01 09:23:53" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Technology"/>
+				<packageproperties tpos="22"/>
+				<paths/>
+				<times created="2019-07-22 10:25:32" modified="2019-07-22 10:25:32"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B36AAB03_669E_4241_9668_C69C765305FF" xmi:type="uml:Package" name="dResource" scope="public">
+				<model package2="EAID_B36AAB03_669E_4241_9668_C69C765305FF" package="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" tpos="39" ea_localid="4235" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:20" modified="2019-08-01 09:24:58" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Technology"/>
+				<packageproperties tpos="39"/>
+				<paths/>
+				<times created="2019-07-22 10:26:20" modified="2019-07-22 10:26:20"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_29867A99_CDDC_44e8_96BB_EB6601CC0020" xmi:type="uml:Package" name="dSystem" scope="public">
+				<model package2="EAID_29867A99_CDDC_44e8_96BB_EB6601CC0020" package="EAPK_B8006739_084A_4119_B6AF_8B142D21B8CD" tpos="42" ea_localid="4238" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" phase="1.0" created="2019-07-22 10:26:31" modified="2019-08-01 09:23:28" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Technology"/>
+				<packageproperties tpos="42"/>
+				<paths/>
+				<times created="2019-07-22 10:26:31" modified="2019-07-22 10:26:31"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" xmi:type="uml:Package" name="Views" scope="public">
+				<model package2="EAID_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" package="EAPK_8D2C7A1B_0257_4224_846C_9855C4BF7C83" tpos="0" ea_localid="4258" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:36:33" modified="2019-08-01 09:37:23" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Structure"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:36:33" modified="2019-08-01 09:36:33"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_BE493835_313D_41ac_9921_C39E9E7B1BFA" xmi:type="uml:Package" name="Data" scope="public">
+				<model package2="EAID_BE493835_313D_41ac_9921_C39E9E7B1BFA" package="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" tpos="0" ea_localid="4262" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:38:23" modified="2019-08-01 09:38:23" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Views"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:38:23" modified="2019-08-01 09:38:23"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_4298678C_0693_4d5f_BC8A_3866918A8128" xmi:type="uml:Package" name="Requirements" scope="public">
+				<model package2="EAID_4298678C_0693_4d5f_BC8A_3866918A8128" package="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" tpos="0" ea_localid="4264" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:38:44" modified="2019-08-01 09:38:44" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Views"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:38:44" modified="2019-08-01 09:38:44"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_B9B7476B_70F5_47f4_8E17_410F661D9DAA" xmi:type="uml:Package" name="Technology" scope="public">
+				<model package2="EAID_B9B7476B_70F5_47f4_8E17_410F661D9DAA" package="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" tpos="0" ea_localid="4263" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:38:35" modified="2019-08-01 09:38:35" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Views"/>
+				<packageproperties version="1.0"/>
+				<paths/>
+				<times created="2019-08-01 09:38:35" modified="2019-08-01 09:38:35"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_66D6482D_FBE4_4bad_803A_CBF0BD1021AC" xmi:type="uml:Package" name="Business" scope="public">
+				<model package2="EAID_66D6482D_FBE4_4bad_803A_CBF0BD1021AC" package="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" tpos="1" ea_localid="4260" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:37:57" modified="2019-08-01 09:37:57" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Views"/>
+				<packageproperties version="1.0" tpos="1"/>
+				<paths/>
+				<times created="2019-08-01 09:37:57" modified="2019-08-01 09:37:57"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAPK_02DCF2E1_CAE4_4d46_B72D_DD99FE540561" xmi:type="uml:Package" name="Application" scope="public">
+				<model package2="EAID_02DCF2E1_CAE4_4d46_B72D_DD99FE540561" package="EAPK_AC0CE650_EB3C_40ac_B6ED_B44D6957C78F" tpos="2" ea_localid="4261" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="1.0" phase="1.0" created="2019-08-01 09:38:07" modified="2019-08-01 09:38:07" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="Views"/>
+				<packageproperties version="1.0" tpos="2"/>
+				<paths/>
+				<times created="2019-08-01 09:38:07" modified="2019-08-01 09:38:07"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+		</elements>
+		<connectors/>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles/>
+		<diagrams/>
+	</xmi:Extension>
+</xmi:XMI>

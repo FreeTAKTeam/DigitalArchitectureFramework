@@ -1,0 +1,34 @@
+<?xml  version='1.0' encoding='UTF-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="C87BADD9-9" name="DAF_DigitalEngineering" version="5.0" notes="DAF_DigitalEngineering"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Application Flow" notes="Describes the sequence of controllers and view that forms the Application Flow" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Logical"/>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Domain" notes="&lt;font color=&quot;#004080&quot;&gt;The Domain Model provides the business vocabulary - terms and facts of the enterprise. &lt;/font&gt;&#xA;&lt;font color=&quot;#004080&quot;&gt; It uses the vocabulary of the domain, thus allowing a representation of the model to be communicated to non-technical stakeholders. It should not refer to any technical implementations such as databases or software components that are being designed.&lt;/font&gt;&#xA;&lt;font color=&quot;#004080&quot;&gt;This is also often called &lt;b&gt;Canonical Model&lt;/b&gt;. It consist in extended UML classes with properties,  their relationships (Associations, Aggregations, Compositions and Generalizations) .&lt;/font&gt;" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="alias" value="Class Diagram"/>
+						<Property name="diagramID" value="DAF_SA_LDD"/>
+						<Property name="toolbox" value="DAF_DigitalEng_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Component" notes="A component diagram depicts how components are wired together to form larger components or software systems. They are used to illustrate the structure of arbitrarily complex systems." bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="Diagram_Component">
+						<Property name="alias" value="Component"/>
+						<Property name="diagramID" value="DAF-AA-CD"/>
+						<Property name="toolbox" value="DAF_DigitalEng_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

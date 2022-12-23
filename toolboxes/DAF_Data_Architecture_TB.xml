@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="884E7DC1-9" name="DAF_Data_Architecture_TB" version="5.0 Alpha2" alias="DAF Data Architecture" notes="A toolbox for managing Data Architecture"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="DataEntities" notes="Contains he elements for the Data Architecture" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDataEntity" type="int" description="" unit="" values="" default="DataEntity"/>
+					<Tag name="DAF::dObject" type="int" description="" unit="" values="" default="Object"/>
+					<Tag name="DAF::dTable" type="int" description="" unit="" values="" default="Table"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="DataEntityRelationship" notes="Data entity relationships" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="UML::Aggregation" type="int" description="" unit="" values="" default="Aggregation"/>
+					<Tag name="UML::Dependency" type="int" description="" unit="" values="" default="Dependency"/>
+					<Tag name="UML::Composition" type="int" description="" unit="" values="" default="Composition"/>
+					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
+					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
+					<Tag name="UML::Association" type="int" description="" unit="" values="" default="Association"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Model" alias="Model" notes="Contains elements for MVC architecture. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
+					<Tag name="DAF::dController" type="" description="" unit="" values="" default="Controller"/>
+					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
+					<Tag name="DAF::dModelClass" type="" description="" unit="" values="" default="ModelClass"/>
+					<Tag name="DAF::dValue" type="" description="" unit="" values="" default="Property"/>
+					<Tag name="DAF::dValueRef" type="" description="" unit="" values="" default="Property Reference"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
