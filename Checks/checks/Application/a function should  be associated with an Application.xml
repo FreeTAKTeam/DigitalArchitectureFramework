@@ -12,7 +12,7 @@ LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 
-where o1.stereotype = 'TMF_Function'
+where o1.stereotype = 'dApplicationFunction'
 </Main>
     <Filters>
       <Change>
@@ -75,7 +75,7 @@ inner join t_object o2 on c.End_object_ID = o2.Object_ID)
 
 WHERE o2.Stereotype = 'TMF_Function'
 AND o1.Stereotype = 'TMF_Application'
-AND c.Stereotype = 'TMF_ApplicationAssociatesFunction'
+AND c.Stereotype = 'dApplicationFunction'
  )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
