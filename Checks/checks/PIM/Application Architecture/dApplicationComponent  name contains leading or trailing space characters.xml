@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>003</CheckId>
-  <CheckDescription>ABE documentation is in HTML format (rather than plain text)</CheckDescription>
+  <CheckDescription>dApplicationComponent name contains leading or trailing space characters</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -12,7 +12,7 @@ LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 
-where o1.stereotype = 'TMF_ABE'
+where o1.stereotype = 'dApplicationComponent'
 </Main>
     <Filters>
       <Change>
@@ -65,14 +65,14 @@ LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
 LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
 LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
 WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid IN (
-SELECT o1.ea_guid from t_object as o1
-WHERE o1.Note LIKE '%HTML%'
-AND o1.stereotype = 'TMF_ABE'
+AND o.ea_guid in (
+Select o1.ea_guid from t_object as o1
+where o1.Name LIKE '  %' OR o1.Name LIKE '%  '
+and o1.Stereotype = 'dApplicationComponent'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>ABE documentation is in HTML format (rather than plain text)</Rationale>
-  <ProposedSolution>Remove long dash</ProposedSolution>
+  <Rationale>dApplicationComponent name contains leading or trailing space characters</Rationale>
+  <ProposedSolution>Delete extra space</ProposedSolution>
 </Check>

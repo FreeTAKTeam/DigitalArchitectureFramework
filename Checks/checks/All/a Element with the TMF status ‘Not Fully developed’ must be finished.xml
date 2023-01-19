@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>00</CheckId>
-  <CheckDescription>an Element with the TMF status ‘Not Fully developed’ must be finished</CheckDescription>
+  <CheckDescription>an Element with the  status is not set must be defined</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM (((((( (t_object as o1
@@ -13,8 +13,7 @@ LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 Inner join t_objectProperties p1 on p1.object_ID =  o1.Object_ID)
 
-Where p1.Property = 'TMFStatus'
-AND p1.Value IS NOT NULL</Main>
+Where p1.Property = ''Status''</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -72,8 +71,8 @@ Select o.ea_guid
 from (t_object as o
 Inner join t_objectProperties p1 on p1.object_ID =  o.Object_ID)
 
-WHERE p1.Property = 'TMFStatus'
-AND p1.Value = 'Not Fully Developed'
+WHERE p1.Property = 'Status'
+AND p1.Value IS NULL
 )
 </Main>
     <Parameters></Parameters>

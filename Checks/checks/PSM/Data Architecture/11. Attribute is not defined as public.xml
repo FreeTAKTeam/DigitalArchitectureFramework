@@ -1,21 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
-  <CheckDescription>06. Association class related to other class(es)</CheckDescription>
+  <CheckId>011</CheckId>
+  <CheckDescription>Attribute is not defined as public</CheckDescription>
   <QueryToFindElements>
-    <Main>SELECT o1.ea_guid AS ItemGuid
-FROM ((((((t_object as o1
-INNER JOIN t_Package p ON p.Package_ID = o1.Package_ID)
+    <Main>SELECT a.ea_guid AS ItemGuid
+FROM ((((((( t_attribute a
+INNER JOIN t_object o on o.Object_ID = a.Object_ID)
+INNER JOIN t_Package p ON p.Package_ID = o.Package_ID)
 LEFT JOIN t_Package Package_p1 ON Package_p1.Package_id = p.parent_id)
 LEFT JOIN t_Package Package_p2 ON Package_p2.Package_id = Package_p1.parent_id)
 LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
-
-where o1.PDATA4 IS NOT NULL
-and o1.PDATA4 NOT LIKE '0'
-AND o1.Stereotype = 'TMF_BusinessEntity'
-</Main>
+WHERE a.IsOrdered = '0'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -48,40 +45,36 @@ AND o1.Stereotype = 'TMF_BusinessEntity'
     </Filters>
   </QueryToFindElements>
   <QueryToCheckFoundElements>
-    <Main>SELECT o.Name AS ItemName
-, 'object' as ItemType
-, o.ea_guid AS ItemGuid
+    <Main>SELECT a.Name AS ItemName
+, 'Attribute' as ItemType
+, a.ea_guid AS ItemGuid
 , o.Object_Type AS ElementType
-, o.StereoType AS ElementStereotype
+, a.StereoType AS ElementStereotype
 , p.name AS PackageName
 , package_p1.name AS PackageParentLevel1
 , package_p2.name AS PackageParentLevel2 
 , package_p3.name AS PackageParentLevel3
 , package_p4.name AS PackageParentLevel4
 , package_p5.name AS PackageParentLevel5
-FROM ((((((t_object o
+FROM (((((((t_attribute a
+INNER JOIN t_object o on o.Object_ID = a.Object_ID)
 INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
 LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)
 LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)
 LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
 LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
 LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
-WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid in (
-Select o1.ea_guid from ((t_object as o1
-Inner join t_connector on o1.object_ID =  t_Connector.End_Object_ID)
-Inner join t_object as o2 on t_Connector.Start_Object_ID = o2.object_ID)
-
-where o1.PDATA4 IS NOT NULL
-and o1.PDATA4 NOT LIKE '0'
-AND o1.Stereotype = 'TMF_BusinessEntity'
-AND o2.PDATA4 IS NOT NULL
-and o2.PDATA4 NOT LIKE '0'
-AND o2.Stereotype = 'TMF_BusinessEntity'
-)</Main>
+WHERE a.EA_GUID in (#ElementGuids#)
+AND a.EA_GUID in  (
+SELECT DISTINCT  o1.EA_GUID FROM
+t_attribute as o1 
+WHERE 
+o1.Scope NOT LIKE 'Public'
+)
+</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale></Rationale>
-  <ProposedSolution></ProposedSolution>
+  <Rationale>Attribute is not defined as public</Rationale>
+  <ProposedSolution>Change the Scope of the Attribute</ProposedSolution>
 </Check>

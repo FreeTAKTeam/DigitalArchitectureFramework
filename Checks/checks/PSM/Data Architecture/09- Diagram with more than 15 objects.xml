@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>036</CheckId>
-  <CheckDescription>SID diagrams with more than 15 elements</CheckDescription>
+  <CheckDescription>Class diagrams with more than 15 elements</CheckDescription>
   <QueryToFindElements>
     <Main>
 SELECT d.ea_guid AS ItemGuid

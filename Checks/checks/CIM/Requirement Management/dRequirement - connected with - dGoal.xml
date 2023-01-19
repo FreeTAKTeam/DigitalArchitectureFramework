@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
-  <CheckDescription>ABE name contains 2 spaces between words</CheckDescription>
+  <CheckId>04</CheckId>
+  <CheckDescription>Goal  related to Requirement </CheckDescription>
   <QueryToFindElements>
-    <Main>SELECT o1.ea_guid AS ItemGuid
+    <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
 INNER JOIN t_Package p ON p.Package_ID = o1.Package_ID)
 LEFT JOIN t_Package Package_p1 ON Package_p1.Package_id = p.parent_id)
@@ -12,8 +12,7 @@ LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 
-where o1.stereotype = 'TMF_ABE'
-</Main>
+WHERE o1.stereotype = 'dRequirement'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -47,7 +46,7 @@ where o1.stereotype = 'TMF_ABE'
   </QueryToFindElements>
   <QueryToCheckFoundElements>
     <Main>SELECT o.Name AS ItemName
-, 'object' as ItemType
+, 'Diagram' as ItemType
 , o.ea_guid AS ItemGuid
 , o.Object_Type AS ElementType
 , o.StereoType AS ElementStereotype
@@ -57,22 +56,28 @@ where o1.stereotype = 'TMF_ABE'
 , package_p3.name AS PackageParentLevel3
 , package_p4.name AS PackageParentLevel4
 , package_p5.name AS PackageParentLevel5
-FROM ((((((t_object o
+FROM (((((( t_object o
 INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
 LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)
 LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)
 LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
 LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
 LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
-WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid in (
-Select o1.ea_guid from t_object as o1
-where o1.Name LIKE '%  %'
-and o1.Stereotype = 'TMF_ABE'
+WHERE o.EA_GUID in (#ElementGuids#)
+AND  o.EA_GUID NOT IN
+(
+SELECT o.EA_GUID
+FROM t_object AS o
+INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
+WHERE o.Stereotype='dRequirement'
+AND  o2.Stereotype='dGoal'
+AND connector.Stereotype= 'is related to'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>ABE name contains 2 spaces between words</Rationale>
-  <ProposedSolution>Delete one Space</ProposedSolution>
+  <Rationale>a 'dRequirement' element should be connected to a 'dGoal' element by a 'is related to' Connector</Rationale>
+  <ProposedSolution>Create missing connection</ProposedSolution>
+  <HelpUrl>https://github.com/FreeTAKTeam/DigitalArchitectureFramework</HelpUrl>
 </Check>

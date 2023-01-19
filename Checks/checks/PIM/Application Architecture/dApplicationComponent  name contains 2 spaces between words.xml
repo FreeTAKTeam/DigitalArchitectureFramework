@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>003</CheckId>
-  <CheckDescription>ABE name contains leading or trailing space characters</CheckDescription>
+  <CheckDescription>dApplicationComponent name contains 2 spaces between words</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -12,7 +12,7 @@ LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 
-where o1.stereotype = 'TMF_ABE'
+where o1.stereotype = 'dApplicationComponent'
 </Main>
     <Filters>
       <Change>
@@ -67,12 +67,12 @@ LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
 WHERE o.ea_guid in (#ElementGuids#)
 AND o.ea_guid in (
 Select o1.ea_guid from t_object as o1
-where o1.Name LIKE '  %' OR o1.Name LIKE '%  '
-and o1.Stereotype = 'TMF_ABE'
+where o1.Name LIKE '%  %'
+and o1.Stereotype = 'dApplicationComponent'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>ABE name contains leading or trailing space characters</Rationale>
-  <ProposedSolution>Delete extra space</ProposedSolution>
+  <Rationale>dApplicationComponent name contains 2 spaces between words</Rationale>
+  <ProposedSolution>Delete one Space</ProposedSolution>
 </Check>

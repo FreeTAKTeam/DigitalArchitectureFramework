@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>003</CheckId>
-  <CheckDescription>IIC has no ID</CheckDescription>
+  <CheckDescription>Association class related to other class(es)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -12,7 +12,9 @@ LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
 LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 
-where o1.stereotype = 'TMF_IIC'
+where o1.PDATA4 IS NOT NULL
+and o1.PDATA4 NOT LIKE '0'
+AND o1.Stereotype = 'TMF_BusinessEntity'
 </Main>
     <Filters>
       <Change>
@@ -65,16 +67,21 @@ LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
 LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
 LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
 WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid NOT in (
-SELECT o.ea_guid from t_object o
-INNER JOIN t_objectproperties p on o.Object_ID = p.Object_ID
-WHERE p.Property = 'ID'
-AND (p.Value IS NOT NULL OR p.Value &lt;&gt; '0' )
-AND o.Stereotype = 'TMF_IIC'
+AND o.ea_guid in (
+Select o1.ea_guid from ((t_object as o1
+Inner join t_connector on o1.object_ID =  t_Connector.End_Object_ID)
+Inner join t_object as o2 on t_Connector.Start_Object_ID = o2.object_ID)
+
+where o1.PDATA4 IS NOT NULL
+and o1.PDATA4 NOT LIKE '0'
+AND o1.Stereotype = 'TMF_BusinessEntity'
+AND o2.PDATA4 IS NOT NULL
+and o2.PDATA4 NOT LIKE '0'
+AND o2.Stereotype = 'TMF_BusinessEntity'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>a component must have an ID</Rationale>
+  <Rationale></Rationale>
   <ProposedSolution></ProposedSolution>
 </Check>
