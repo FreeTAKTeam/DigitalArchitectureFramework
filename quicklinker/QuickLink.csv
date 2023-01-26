@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2022-12-20 4:08:41 PM
+//generated:2023-01-20 10:37:18 AM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -330,6 +330,11 @@ Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,direct
 Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dTest -> dTest_ApplicationComponet -> dApplicationComponent
+Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponet,directed,testd application component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponet,from,is tested by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dTest,,,,Component,dApplicationComponent,Association,dTest_ApplicationComponet,directed,,testd application component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dTest,Association,dTest_ApplicationComponet,from,,is tested by test,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dUserStory ->  -> dBusinessUseCase
 UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,

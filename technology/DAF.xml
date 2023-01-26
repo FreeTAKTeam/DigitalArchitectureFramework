@@ -1,5 +1,5 @@
 <?xml  version='1.0' encoding='UTF-8' ?>
-<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.0 Alpha31" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
+<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.0 Alpha33" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
 AAABAAAAAAAAN9O7ADvUvABC1b4ARdbAAErXwQBN2MIAUtnEAFraxwBd28gA
 Zd3KAGzezQBx4M8AduHQAHvh0gCC49QAiOXXAIzl2ACS59oAlujbAJvp3QCh
 6t8Ao+vgAK3s4wC07uUAuO/nALrw5wC78OgAwfHpAMv07QDQ9e8A0vXwANv3
@@ -64,41 +64,41 @@ JSUlJSUlGgAAAABPABoAAAAIJSUlJSUlJSUlJSUhAAAAAAAlJSUlJSUlJSUV
 AAAAABUlJSUlJSUlJSUlJSUlJSUlGQAAAABEABsAAAAAJSUlJSUlJSUlJSUl
 GgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUlJSUlCQAAAABBAB4A
 AAADJSUlJSUlJSUlJSUlJRUAAAAAACElJSUlJQoAAAAAGiUlJSUlJSUlJSUl
-JSUlJSUlFQAAAAAvACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
-AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAAAvACUBAAAAESUlJSUlJSUlJSUl
+JSUlJSUlFQAAAAA3ACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
+AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAAArACUBAAAAESUlJSUlJSUlJSUl
 JSUlIQEAAAAAAAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAAAvACUI
 AAAAFSUlJSUlJSUlJSUlJSUlJSUVAAAAAAAAAAAAACUlJSUlJSUlJSUlJSUl
-JSUlJSUlAQAAAAAvACUQAAAADCUlJSUlJSUlJSUlJSUlJSUlJR0AAAAAAAAA
-ISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAAAvACUaAAAAASQlJSUlJSUlJSUl
+JSUlJSUlAQAAAAA3ACUQAAAADCUlJSUlJSUlJSUlJSUlJSUlJR0AAAAAAAAA
+ISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAAB2ACUaAAAAASQlJSUlJSUlJSUl
 JSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACQAvACUk
 AAAAABclJSUlJSUlJSUlJSUlJSUlJR0AAAAAAB0lJSUlJSUlJSUlJSUlJSUl
-JSUlJSUFAAAAEwBjACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUl
-JSUlJSUlJSUlJSUlJSUlJSUlJRoAAAAAHwBkACUlGwAAAAAOJSUlJSUlJSUl
-JSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQkAAAAKJQAvACUl
+JSUlJSUFAAAAEwAvACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUl
+JSUlJSUlJSUlJSUlJSUlJSUlJRoAAAAAHwAvACUlGwAAAAAOJSUlJSUlJSUl
+JSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQkAAAAKJQA3ACUl
 JQgAAAAJJSUlJSUlJSUlJSUlJSUAAAAAABolJSUlJSUlJSUlJSUlJSUlJSUl
-JSUlGgAAAAAaJQAvACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
-JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQAvACUlJSUIAAAABSQlJSUlJSUl
-JSUlBgAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJQAvACUl
+JSUlGgAAAAAaJQBmACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
+JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQBuACUlJSUIAAAABSQlJSUlJSUl
+JSUlBgAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJelgACUl
 JSUbAAAAAA0lJSUlJSUlJSUKAAAAABUlJSUlJSUlJSUlJSUlJSUlJSUlJSUl
-JRwAAAAACiUlJQBMACUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
-AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQBqACUlJSUlIwUAAAAAFyUlJSUl
-JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQBxACUl
+JRwAAAAACiUlJQAA/yUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
+AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJf//ACUlJSUlIwUAAAAAFyUlJSUl
+JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQAABCUl
 JSUlJRsAAAAAABclJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSQK
-AAAAAA0lJSUlJQBBACUlJSUlJSUVAAAAAAAVJSUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUlJSUlHwgAAAAAByQlJSUlJQBDACUlJSUlJSUlEQEAAAAADSQl
-JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQBmACUl
+AAAAAA0lJSUlJQAAACUlJSUlJSUVAAAAAAAVJSUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUlJSUlHwgAAAAAByQlJSUlJQBZBiUlJSUlJSUlEQEAAAAADSQl
+JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQAOACUl
 JSUlJSUlJREAAAAAAAUXJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlIQ0AAAAA
-AAYgJSUlJSUlJQBFACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
-JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBDACUlJSUlJSUlJSUlGwUAAAAA
-AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQBEACUl
+AAYgJSUlJSUlJQBvACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
+JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBhACUlJSUlJSUlJSUlGwUAAAAA
+AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQBsACUl
 JSUlJSUlJSUlJSMNAQAAAAAAAAEMFREkJSUlJSUlJR8aEAYAAAAAAAAABRol
-JSUlJSUlJSUlJQBOACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
-AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQBSACUlJSUlJSUlJSUlJSUlJSUX
-BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJQArACUl
+JSUlJSUlJSUlJQAcACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
+AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQBlACUlJSUlJSUlJSUlJSUlJSUX
+BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJQBjACUl
 JSUlJSUlJSUlJSUlJSUlJRsNAQAAAAAAAAAAAAAAAAAAAAAABxUjJSUlJSUl
-JSUlJSUlJSUlJQBxACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
-AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQAwACUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQAyAA==
+JSUlJSUlJSUlJQBvACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
+AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQAgACUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQBnAA==
 </Image></Logo><Icon><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////0/Xwi+XXaN3LZt3KguPUw/Hq
@@ -119,7 +119,7 @@ Esqu2vfy////////////jOXYOdO76/r4////////////////////BMep/v7+
 ////////////////////////////////nendWNrGNdK6MtK5T9jDjubY9/38
 ////////////////
 </Image></Icon><UMLProfiles><UMLProfile profiletype="uml2">
-	<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha31" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
+	<Documentation id="B91435BE-4" name="DAF" version="5.0 alpha33" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="dAction" alias="Action" metatype="Action" notes="A specialized activity. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -261,17 +261,17 @@ VVQFAAc9hAtdUEsFBgAAAAABAAEAPgAAANYDAAAAAA==
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Description" type="String" description="Description for the initiative. " unit="" values="" default=""/>
 					<Tag name="DetailedDescription" type="" description="Detailed Description of the initiative. " unit="" values="" default=""/>
-					<Tag name="finishDate" type="" description="The finish date of the initiative. " unit="" values="" default=""/>
 					<Tag name="Impacted Capability" type="dCapability" description="Describes the contribution this work package makes to capability delivery." unit="" values="" default=""/>
+					<Tag name="RelatedProgram" type="String" description="The Growth Package or Program associated to the Initiative. " unit="" values="" default=""/>
+					<Tag name="startDate" type="" description="The start date for the initiative. " unit="" values="" default=""/>
+					<Tag name="finishDate" type="" description="The finish date of the initiative. " unit="" values="" default=""/>
 					<Tag name="InitiativeDuration" type="String" description="The expected duration of the initiative in Months/ Weeks or Years. " unit="" values="" default=""/>
-					<Tag name="initiativeStatus" type="enumeration" description="a set of colors to Visually describe the health of the initiative." unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
 					<Tag name="kind" type="String" description="To capture the type of initiative. " unit="" values="" default=""/>
 					<Tag name="purpose" type="String" description="Purpose of the initiative. " unit="" values="" default=""/>
 					<Tag name="Rank" type="String" description="The rank of the initiative. " unit="" values="" default=""/>
-					<Tag name="RelatedProgram" type="String" description="The Growth Package or Program associated to the Initiative. " unit="" values="" default=""/>
-					<Tag name="startDate" type="" description="The start date for the initiative. " unit="" values="" default=""/>
+					<Tag name="Description" type="String" description="Description for the initiative. " unit="" values="" default=""/>
+					<Tag name="initiativeStatus" type="enumeration" description="a set of colors to Visually describe the health of the initiative." unit="" values="DeepGreen,Green,Yellow,Orange,Red" default="Green"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dBusinessProcess" alias="Business Process" metatype="BusinessProcess" notes="A business Processes represent a sequence of activities that together achieve a specified outcome, can be decomposed into Business Services. It ensures the correct operation of business capabilities. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -383,9 +383,9 @@ AAAAAHN0ci5kYXRVVAUABzbB9ltQSwUGAAAAAAEAAQA+AAAAPgEAAAAA
 			</Stereotype>
 			<Stereotype name="dApplicationComponent" alias="Application Component" metatype="Application Component" notes="An encapsulation of application functionality aligned to implementation structure which is modular and replaceable. It encapsulates&#x9; its behavior and data, provides services, and makes them  available through interfaces. An application component is a self-contained unit. As such, it is independently deployable, re-usable, and replaceable. An application component performs one or more application functions. It encapsulates its behavior and data, exposes services, and makes them available through interfaces. Cooperating application components are connected via application collaborations.&#xA;&#xA;An application component may be assigned to one or more application functions. An application component has one or more application interfaces, which expose its functionality. Application interfaces of other application components may serve an application component. The name of an application component should preferably be a noun." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2KAwAAAAAAAIoAAAB8AAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAEiAQ
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABDAAAAAAAAAAAAAAAA
-AAAA+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+AAAAAAAAAAAAAAdl/ghdZf4IXWX+CF3FVl1v2kAQ3NfkV1jlhUhUDRBKqpZK
+baW0fWpUKvUxIkCwVTDINololf+emb3zBx/2uVEkdLrzndmZ253bWxOLLyNZ
+yVQ8+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ
 +GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4
@@ -431,19 +431,19 @@ VVQFAAdl/ghdUEsFBgAAAAABAAEAPgAAACIDAAAAAA==
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="ApplicationType" type="enumeration" description="the type of Application, e.g. if it's a COTS, Custom and so on" unit="" values="COTS,Custom,Module,Web Site,Instance,DB,Core" default="Custom"/>
-					<Tag name="BizCriticality" type="Integer" description="how is Business happy with this application, often related to business debt." unit="" values="" default="50"/>
-					<Tag name="BizSatisfaction" type="Integer" description="How much is the business happy with the application, expressed in 1-100" unit="" values="" default="50"/>
-					<Tag name="Category" type="String" description="User-definable categorization taxonomy for each element." unit="" values="" default=""/>
-					<Tag name="Cost" type="Integer" description="the cost of this application in 1000 of $" unit="" values="" default="10"/>
 					<Tag name="ID" type="String" description="Unique identifier for the element, useful for referring to third party systems" unit="" values="" default=""/>
-					<Tag name="InvestmentStrategy" type="enumeration" description="" unit="" values="Retain,Rehost,Replatform,Refactor,Rewrite,Retire" default="Retain"/>
+					<Tag name="Category" type="String" description="User-definable categorization taxonomy for each element." unit="" values="" default=""/>
+					<Tag name="BizSatisfaction" type="Integer" description="How much is the business happy with the application, expressed in 1-100" unit="" values="" default="50"/>
 					<Tag name="ITSatisfaction" type="Integer" description="how is IT happy with this application, often related to technical debt." unit="" values="" default="50"/>
+					<Tag name="BizCriticality" type="Integer" description="how is Business happy with this application, often related to business debt." unit="" values="" default="50"/>
+					<Tag name="Cost" type="Integer" description="the cost of this application in 1000 of $" unit="" values="" default="10"/>
+					<Tag name="InvestmentStrategy" type="enumeration" description="" unit="" values="Retain,Rehost,Replatform,Refactor,Rewrite,Retire" default="Retain"/>
+					<Tag name="ApplicationType" type="enumeration" description="the type of Application, e.g. if it's a COTS, Custom and so on" unit="" values="COTS,Custom,Module,Web Site,Instance,DB,Core" default="Custom"/>
 					<Tag name="LastStandardReviewDate" type="" description="Last review date for the application component. " unit="" values="" default=""/>
 					<Tag name="NextStandardReviewDate" type="" description="Next review date for the application component. " unit="" values="" default=""/>
+					<Tag name="RetireDate" type="" description="The retire date for the Application Component. " unit="" values="" default=""/>
 					<Tag name="Owner" type="String" description="The owner for the application Component. " unit="" values="" default=""/>
 					<Tag name="Port" type="int" description="" unit="" values="" default=""/>
-					<Tag name="RetireDate" type="" description="The retire date for the Application Component. " unit="" values="" default=""/>
 					<Tag name="Source" type="String" description="The original source of the element's information" unit="" values="" default=""/>
 				</TaggedValues>
 				<DiagramProperties>
@@ -534,15 +534,15 @@ BQYAAAAAAQABAD4AAAC9AgAAAAA=
 				<TaggedValues>
 					<Tag name="ID" type="String" description="Unique identifier for the Product. " unit="" values="" default=""/>
 					<Tag name="Owner" type="String" description="Owner of the Product. " unit="" values="" default=""/>
-					<Tag name="Price" type="int" description="" unit="" values="" default=""/>
-					<Tag name="RetireDate" type="" description="" unit="" values="" default=""/>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
+					<Tag name="RetireDate" type="" description="" unit="" values="" default=""/>
+					<Tag name="Price" type="int" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dSystem" alias="System" metatype="System Configuration" notes="A system configuration. Settings are modeled as attributes with default values" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAAAAdl/ghdZf4IXWX+CF3FVl1v2kAQ3NfkV1jlhUhUDRBKqpZK
-baW0fWpUKvUxIkCwVTDINololf+emb3zBx/2uVEkdLr/////////////////
+AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
+XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
 ////////////////////////////////////////////////////////////
 //////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
 //////////8AAAD///////////////////////////8AAAD/////////////
@@ -586,7 +586,7 @@ AHN0ci5kYXRVVAUAB0nrQl1QSwUGAAAAAAEAAQA+AAAAHAIAAAAA
 					<Tag name="plattform" type="String" description="The plattform to which the configuration settings apply." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="16777215" fontcolor="0" bordercolor="5197615" borderwidth="1" hideicon="0">
+			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAA////////////////////////////////////////
@@ -666,15 +666,15 @@ AADQAQAAAAA=
 					<Apply type="UseCase"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Extensions" type="String" description="" unit="" values="" default=""/>
 					<Tag name="GoalInContext" type="String" description="The goal should implicitly express the actor's intent or purpose of the use case, such as &quot;Enrol Student in Seminar.&quot;" unit="" values="" default=""/>
-					<Tag name="isCore" type="Boolean" description="" unit="" values="True,False" default="False"/>
-					<Tag name="Level" type="String" description="Authorizations for operations/actions to be performed against the Chi business objects in scope. Against every object/process 4 CRUD basic operations are possible:&#xA;Create (Write)&#xA;Read (Open)&#xA;Update (Change)&#xA;Delete  (Destroy)" unit="" values="" default=""/>
-					<Tag name="MainSuccessScenario" type="String" description="The main path of logic an actor follows through a use case. Often referred to as the &quot;happy path&quot; or the &quot;main path&quot; because it describes how the use case works when everything works as it normally should." unit="" values="" default=""/>
-					<Tag name="OtherActors" type="String" description="The list of actors associated with the use case. Although this information is contained in the use case itself, it helps to increase the understandability of the use case when the diagram is unavailable." unit="" values="" default=""/>
 					<Tag name="Precondition" type="String" description="A list of the conditions, if any, that must be met before a use case may be invoked. Can be a previous Use case or self the presence of the system in Scope." unit="" values="" default=""/>
-					<Tag name="Scope" type="String" description="Boundaries in which the use case is operated when invoked (E.g. CMS)" unit="" values="" default=""/>
 					<Tag name="Trigger" type="String" description="Event that is responsible for invocation of the use case." unit="" values="" default=""/>
+					<Tag name="Scope" type="String" description="Boundaries in which the use case is operated when invoked (E.g. CMS)" unit="" values="" default=""/>
+					<Tag name="Level" type="String" description="Authorizations for operations/actions to be performed against the Chi business objects in scope. Against every object/process 4 CRUD basic operations are possible:&#xA;Create (Write)&#xA;Read (Open)&#xA;Update (Change)&#xA;Delete  (Destroy)" unit="" values="" default=""/>
+					<Tag name="OtherActors" type="String" description="The list of actors associated with the use case. Although this information is contained in the use case itself, it helps to increase the understandability of the use case when the diagram is unavailable." unit="" values="" default=""/>
+					<Tag name="MainSuccessScenario" type="String" description="The main path of logic an actor follows through a use case. Often referred to as the &quot;happy path&quot; or the &quot;main path&quot; because it describes how the use case works when everything works as it normally should." unit="" values="" default=""/>
+					<Tag name="Extensions" type="String" description="" unit="" values="" default=""/>
+					<Tag name="isCore" type="Boolean" description="" unit="" values="True,False" default="False"/>
 					<Tag name="Primary Actor"/>
 					<Tag name="Stakeholder"/>
 				</TaggedValues>
@@ -718,20 +718,20 @@ AAEAPgAAAC8CAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Author" type="String" description="This requirement's author's name and role in the project" unit="" values="" default="myName, Analyst"/>
 					<Tag name="ID" type="String" description="Unique identifier for the requirement. " unit="" values="" default=""/>
+					<Tag name="Author" type="String" description="This requirement's author's name and role in the project" unit="" values="" default="myName, Analyst"/>
+					<Tag name="Status" type="String" description="the status of the Requirement in the workflow." unit="" values="" default=""/>
 					<Tag name="Priority" type="Integer" description="A priority in %. Requirements are ordered by priority." unit="" values="" default="50"/>
 					<Tag name="Proofreader" type="String" description="Each requirement needs to be confirmed.&#xA;This requirement's proofreader&#x9;'s name and role in the project" unit="" values="" default="aName, Client"/>
-					<Tag name="Status" type="String" description="the status of the Requirement in the workflow." unit="" values="" default=""/>
 					<Tag name="Type" type="enumeration" description="The type of requirement. " unit="" values="Business Rule,Security,Performance,Persistence,Scalability,Transport" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="25600" borderwidth="3" hideicon="0">
+			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -763,46 +763,46 @@ wMDAN9O7wMDA////////////wMDAwMDAwMDA////////wMDAN9O7////////
 ////////////////////////////////////N9O7N9O7N9O7wMDA////////
 ////////////////
 </Icon>
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAFBa3lD4bWRRyAIAAGQLAAAHABEAc3RyLmRhdFVUDQAHoB/7
-XqAf+16gH/tevVbbbtNAEJ3XIPEPq/bFlSpBL2kfUB9ooSoSoIoieES5Opbi
-JMRJUUD5954z440d28FuVdDK3ovncubszCSJjKQjMxmIkxirSCbyUl7IH323
-ZIyzlUxlKQuMlUpeyJ50cTaXPnZz7N6k0vfyA/JjWAlhh3I9SEyguS03aihn
-70iGEijOBP7n8EwUc8UTQHqOXQ+7DiyEsEpLU90voDvFbk8O8bzGc4BhVn2E
-LY1iCNuR/MYqkCNItqFxjvlgg6UlX0p+Akgc6kOdbM5rdWC/D+tLcJZs2Cbu
-WfqNnIcpRmJtpj3BOsba9Lb5y1vwc6btCp69RMZIS3kmK7THVR/aA72vEbxc
-yDGizHysdVXlyaOs8tE0Czweol1o7Psbu/uFaA1JNg9gP9n4z7x/0GwPUy77
-WA/lSlF3wHSkqJhfZNfV3rJ5y1jIM8AK6ioOfvEIiGmhNcToGRlxJPJLPZo/
-b980nqsKjpSxchU0Y7gYKWunp3FkfhxOWSs/kbWR4qIdWn5XIZ1nxaWz8WI6
-mSQz5LO8z2XGc3GyqzP8iywp56Q/b8LspeJn5kxQPYxoiF2ew13cOaC8k+85
-9pzy5xDbjTJ4W8HgW+UvQmenrYFcaz6HkC5nk8sNj8ZuyOx/VU1avURmsN9O
-YDHB+CbsA0vx3ewjcLASqu7kFUY3lfZnd8JqutWor6A7Vhask5/DIrvVic4n
-crbVL0zzWu9y/Ehd3iMzYKa3Wf9b4O/5aZzciHXf3axYn67j5FiHoWNcNjfj
-pF73/3LySSOOcBL/hZdVioo5Vc/OKTDytrki3jaepuzU6T6VnTUqipEQLSvW
-6ra6aqmRl+8L+3G5l1COT9U3pycxrE6Vf1Y+Zet6DDvMY/pzhPOyJ7vbBeTs
-pqvutYrJ09z7bIvHsjy/e1nPflEnBqZ7sd/pAHlOmXZBhjaZnSbDf4xFmbU8
-AFBLAQIXCxQAAAAIAFBa3lD4bWRRyAIAAGQLAAAHAAkAAAAAAAAAAAAAgAAA
-AABzdHIuZGF0VVQFAAegH/teUEsFBgAAAAABAAEAPgAAAP4CAAAAAA==
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAEx1OVZ7TnxcyAIAAGQLAAAHABEAc3RyLmRhdFVUDQAH7j/R
+Y+4/0WPuP9FjvVbbbtNAEJ3XIPEPVvviSpUobdM+oD7QQlUkQBVF8IhydSzF
+SYiTooDy7z1nxhtvbAe7VUErey+ey5mzM5OkMpKOzGQggSRYxTKRl/JC/ui7
+JWOcrWQqS1lgrFTyQvaki7O59LGbY/cmk76XH5Afw0oEO5TrQWICzW25UUM5
+e8cylFBxpvA/h2eimCueENJz7HrYdWAhglVamup+Ad0pdntyiOc1ngMMs+oi
+bGkUQ9iO5TdWIeSOpA2Nc8wHGywt+VLyE0LiUB/q5LOv1YH9PqwvwVm6YZu4
+Z9k3ch5lGIm1mfYE6wRr09vmz7fg5lw7KHh2EjkjLeWZrNAeV31oD/S+RvBy
+IceIMvex1lWVJ4eyykfTLHB4iHahse9v7O4XojUk+TyA/XTjP/f+QbM9yrjs
+Yz2UK0XdAdOxomJ+kd2g9pbNW86CzwArqKs4+MUhIKaF1hCjZ2TEkcov9Wj+
+nH3TeK4qOFLGylXQjOFipKydnsaR+wlwylr5iayNFRft0PK7CmmflSCbjRfT
+ySWZIZ/lvZcZz8XJrs7wL7KknJPuvAmzl4qfmTNB9TCiIXY+h7u4C4DyTr57
+7AXKX4DYbpTB2woG3yp/MTo7bQ3kWvM5gnSZucAbDo3dkNn/qpq0eonMYL+d
+wGKK8U3YB5biutlH4GAlVN3JK4xuJu3O7oTVdKtRX0F3rCxYJz+HRXarE51P
+5GyrX5jmtd7l+JG6vEdmwExvs/63wN3z0zi5Eeu+u1mxPl3HybEOQ8e4bG7G
+Sb3u/+Xkk0Yc4yT5Cy+rDBVzqp6dU2DkbXNFvG08Tdmp030qO2tUFCMhWlas
+1W111VLDl+8L+3G5l1COT9W3QE8SWJ0q/6x8ytb1GHaYx/TnGOdlT3a3C8jZ
+TVfdaxWTp977bIvHsjy/O1nHflEnAaZ7sd/pEHlOmXZBhjaZnSbDf4xFmbU8
+AFBLAQIXCxQAAAAIAEx1OVZ7TnxcyAIAAGQLAAAHAAkAAAAAAAAAAAAAgAAA
+AABzdHIuZGF0VVQFAAfuP9FjUEsFBgAAAAABAAEAPgAAAP4CAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="BusinessValue" type="enumeration" description="assess how this capability provides value to the enterprise." unit="" values="Support,Differentiator,Low,Medium,High" default="Low"/>
-					<Tag name="CapabilityLevel" type="int" description="the level of this category in the hierarchy" unit="" values="" default=""/>
 					<Tag name="Category" type="String" description="User-definable categorization for Capability" unit="" values="" default=""/>
-					<Tag name="Cost" type="" description="the aggregated cost of this Capability. Includes all the aggregated cost's elements " unit="" values="" default="1"/>
-					<Tag name="Criticality" type="" description="What is the criticality of this capability, what would be the cost of failure" unit="" values="" default="50"/>
 					<Tag name="ID" type="String" description="Unique identifier for the Capability" unit="" values="" default=""/>
+					<Tag name="Owner" type="String" description="Owner of the architecture entity." unit="" values="" default=""/>
+					<Tag name="Source" type="String" description="Source from where the information was collected." unit="" values="" default=""/>
 					<Tag name="Increments" type="enumeration" description="Current (AS-IS) maturity level for the entity. &#xA;0- none&#xA;1- Initial&#xA;2- UnderDevelopment&#xA;3 - Defined&#xA;4- Managed&#xA;5 - Measured" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
 					<Tag name="IncrementsToBe" type="enumeration" description="Future (To-Be) maturity level for the entity. " unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="Initial"/>
-					<Tag name="IncrementSupplyChain" type="enumeration" description="The maturity level of your supply chain (Partners)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
 					<Tag name="IncrementVertical" type="enumeration" description="The maturity level of your vertical (the industry)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
-					<Tag name="Owner" type="String" description="Owner of the architecture entity." unit="" values="" default=""/>
+					<Tag name="IncrementSupplyChain" type="enumeration" description="The maturity level of your supply chain (Partners)" unit="" values="None,Initial,UnderDevelopment,Defined,Managed,Measured" default="None"/>
+					<Tag name="Cost" type="" description="the aggregated cost of this Capability. Includes all the aggregated cost's elements " unit="" values="" default="1"/>
+					<Tag name="Criticality" type="" description="What is the criticality of this capability, what would be the cost of failure" unit="" values="" default="50"/>
 					<Tag name="Risk" type="" description="How much Risk connected to this business Capability. 1 low risk, 100 max risk." unit="" values="" default="50"/>
-					<Tag name="Source" type="String" description="Source from where the information was collected." unit="" values="" default=""/>
+					<Tag name="CapabilityLevel" type="int" description="the level of this category in the hierarchy" unit="" values="" default=""/>
 				</TaggedValues>
 				<DiagramProperties>
 					<DiagramProperty name="ActivateFlags" option="ActivateFlags" default="0"/>
@@ -848,8 +848,8 @@ AAABAAEAPgAAAF8CAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
@@ -887,20 +887,20 @@ dFVUBQAH3JY8YlBLBQYAAAAAAQABAD4AAABhAQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="PrivacyClassification" type="String" description="Level of restriction placed on access to the data." unit="" values="" default=""/>
+					<Tag name="RetentionClassification" type="String" description="Level of retention to be placed on the data." unit="" values="" default=""/>
 					<Tag name="Category" type="String" description="User-definable categorization." unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Data Entity. " unit="" values="" default=""/>
 					<Tag name="Owner" type="String" description="Owner of the Data Entity. " unit="" values="" default=""/>
-					<Tag name="PrivacyClassification" type="String" description="Level of restriction placed on access to the data." unit="" values="" default=""/>
-					<Tag name="RetentionClassification" type="String" description="Level of retention to be placed on the data." unit="" values="" default=""/>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="2237106" borderwidth="3" hideicon="0">
+			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -945,8 +945,8 @@ BQAHQ44LXVBLBQYAAAAAAQABAD4AAABeAQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -989,17 +989,17 @@ SwUGAAAAAAEAAQA+AAAAVgEAAAAA
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Goal." unit="" values="" default=""/>
-					<Tag name="Priority" type="Integer" description="A priority in %" unit="" values="" default="50"/>
 					<Tag name="Value_amount" type="String" description="The actual amount of the value this goal intends to alter" unit="" values="" default=""/>
 					<Tag name="Value_Goal" type="String" description="The amount by which the value is to be altered" unit="" values="" default=""/>
+					<Tag name="Priority" type="Integer" description="A priority in %" unit="" values="" default="50"/>
 					<Tag name="Value_Name" type="String" description="The name of the value this goal intends to alter" unit="" values="" default=""/>
+					<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. Also a fact that sets a Requirement to be false." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
@@ -1036,8 +1036,8 @@ AAdQjgtdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -1045,10 +1045,10 @@ AAdQjgtdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 					<Tag name="Responsible" type="String" description="The responsible to close the present issue" unit="" values="" default="none"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
-AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
-XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYtA9i
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
 ///////////////////////////////////////////////X8uvO7+fO7+fO
 7+fO7+fO7+fO7+fO7+fQ7+j////7/f286t+46N246N3n9/P///9u2cXO7+fO
 7+fO7+fO7+fO7+fO7+fO7+eB3Mr////p9/SS38/d8+7A6+G46N3///+F3cv/
@@ -1080,16 +1080,16 @@ c3RyLmRhdFVUBQAH8Og3XlBLBQYAAAAAAQABAD4AAABnAQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Definition" type="String" description="Definition of the Measurement Area. " unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Area. " unit="" values="" default=""/>
+					<Tag name="Definition" type="String" description="Definition of the Measurement Area. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAA////////////////QODAQODAQODAQODAQODAQODAQODAQODA
 QODAQODAQODAQODA////8Pv/gODggODgQODAgODgwNzAwNzAwNzAgODggODg
@@ -1123,17 +1123,17 @@ AABzdHIuZGF0VVQFAAdmBwldUEsFBgAAAAABAAEAPgAAAGkBAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="MeasurementArea" type="Classifier:MeasurementArea" description="The reference Measurement Area to which this category belongs to. " unit="dMeasurementArea" values="" default=""/>
 					<Tag name="Definition" type="String" description="Definition of the measurement category. " unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Category. " unit="" values="" default=""/>
-					<Tag name="MeasurementArea" type="Classifier:MeasurementArea" description="The reference Measurement Area to which this category belongs to. " unit="dMeasurementArea" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAAgODggODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODA
 gODAgODAgODAgODgQODAgODggODggODggODggODggODggODggODggODggODg
@@ -1167,17 +1167,17 @@ AAAAc3RyLmRhdFVUBQAHyo0LXVBLBQYAAAAAAQABAD4AAABqAQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="MeasurementCategory" type="Classifier:MeasurementCategory" description="Related Measurement Category to which the group belongs to. " unit="dMeasurementCategory" values="" default=""/>
 					<Tag name="Definition" type="String" description="Definition of the Measurement Grouping. " unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Grouping. " unit="" values="" default=""/>
-					<Tag name="MeasurementCategory" type="Classifier:MeasurementCategory" description="Related Measurement Category to which the group belongs to. " unit="dMeasurementCategory" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1228,17 +1228,17 @@ AAcKSC5gUEsFBgAAAAABAAEAPgAAAFoEAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="CurrentLevel" type="int" description="the level of the Measurment Indicator the last time that was measured. " unit="" values="" default=""/>
-					<Tag name="Definition" type="String" description="Definition of the Measurement Indicator. " unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Indicator. " unit="" values="" default=""/>
-					<Tag name="LastStandardReviewDate" type="Date" description="last time this KPI was reviewed" unit="" values="" default=""/>
-					<Tag name="SatisfactionLevel" type="int" description="Satisfaction level for the Measurement Indicator, desidered amount to be reached and/or Max value" unit="" values="" default=""/>
+					<Tag name="Definition" type="String" description="Definition of the Measurement Indicator. " unit="" values="" default=""/>
 					<Tag name="UnitOfMeasure" type="String" description="The unit of measure (if available) for the Measurement Indicator. " unit="" values="" default=""/>
+					<Tag name="CurrentLevel" type="int" description="the level of the Measurment Indicator the last time that was measured. " unit="" values="" default=""/>
+					<Tag name="SatisfactionLevel" type="int" description="Satisfaction level for the Measurement Indicator, desidered amount to be reached and/or Max value" unit="" values="" default=""/>
+					<Tag name="LastStandardReviewDate" type="Date" description="last time this KPI was reviewed" unit="" values="" default=""/>
 					<Tag name="Measurement Grouping"/>
 				</TaggedValues>
 			</Stereotype>
@@ -1277,8 +1277,8 @@ AAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
@@ -1318,8 +1318,8 @@ BQAHSz4KXVBLBQYAAAAAAQABAD4AAAC4AQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -1330,7 +1330,7 @@ BQAHSz4KXVBLBQYAAAAAAQABAD4AAAC4AQAAAAA=
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgment formed about a Topic. That is formulated in an explicit fashion" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgment formed about a Topic. That is formulated in an explicit fashion" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////0NDQYGBg////////////
 ////////////////////////////////////////////YGBgAwMD0NDQ////
@@ -1365,12 +1365,12 @@ VVQFAAeArPZbUEsFBgAAAAABAAEAPgAAAI0BAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA/////////////////////5+q/5Sf/5Ke/////////+3v////
 //////////////////////////v8/9XZ/5ei/5mk/////////29//3SD/5ql
@@ -1405,12 +1405,12 @@ AAB2AQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAAStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfB
 StfBStfBStfBStfB1/bx////////////////////////////////////////
@@ -1444,20 +1444,20 @@ dFVUBQAHUgcJXVBLBQYAAAAAAQABAD4AAABhAQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Implications" type="String" description="Statement of what the principle means in practical terms." unit="" values="" default=""/>
-					<Tag name="Owner" type="String" description="Owner for the Principle" unit="" values="" default=""/>
 					<Tag name="PrincipleID" type="String" description="Unique identifier for the Principle expressed as text. " unit="" values="" default=""/>
+					<Tag name="Implications" type="String" description="Statement of what the principle means in practical terms." unit="" values="" default=""/>
 					<Tag name="PrincipleMeasurement" type="Classifier:PrincipleMeasurement" description="Identifies mechanisms that will be used to measure whether the principle has been met or not." unit="dMeasurementIndicator" values="" default=""/>
 					<Tag name="Priority" type="int" description="Priority of this principle relative to other principles." unit="" values="" default=""/>
 					<Tag name="Rationale" type="String" description="Statement of why the principle is required and the outcome to be reached." unit="" values="" default=""/>
-					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 					<Tag name="Statement" type="String" description="Statement of what the principle is." unit="" values="" default=""/>
 					<Tag name="Type" type="enumeration" description="The category of the principle. " unit="" values="Guiding Principle,Business Principle,Data Principle,Application Principle,Integration Principle,Technology Principle" default=""/>
+					<Tag name="Owner" type="String" description="Owner for the Principle" unit="" values="" default=""/>
+					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -1494,8 +1494,8 @@ AAcroDFdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
@@ -1514,7 +1514,7 @@ AAcroDFdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////iObYStjC/v//////////////
@@ -1559,20 +1559,20 @@ AQABAD4AAAA+AwAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Alternatives" type="" description="A list of alternatives and explanations" unit="" values="" default=""/>
-					<Tag name="Assumptions" type="" description="What is believed to be true about the context of the problem, constraints on the solution." unit="" values="" default=""/>
-					<Tag name="Decision" type="String" description="The decision taken, possibly with references to related work products" unit="" values="" default=""/>
-					<Tag name="Implications" type="String" description="What impact the decision will have" unit="" values="" default=""/>
-					<Tag name="Justification" type="Memo" description="Why the decision was made and a list of compliance to Architecture Principles and explanations of deviations from compliance." unit="" values="" default=""/>
-					<Tag name="Motivation" type="" description="Why this decision is important." unit="" values="" default=""/>
-					<Tag name="RelatedDecisions" type="Classifier:RelatedDecisions" description="A list of related decisions" unit="dDecision" values="" default=""/>
 					<Tag name="Subject Area" type="" description="Area of Concern" unit="" values="" default=""/>
 					<Tag name="Topic" type="" description="Topic of Interest" unit="" values="" default=""/>
+					<Tag name="Assumptions" type="" description="What is believed to be true about the context of the problem, constraints on the solution." unit="" values="" default=""/>
+					<Tag name="Motivation" type="" description="Why this decision is important." unit="" values="" default=""/>
+					<Tag name="Alternatives" type="" description="A list of alternatives and explanations" unit="" values="" default=""/>
+					<Tag name="Decision" type="String" description="The decision taken, possibly with references to related work products" unit="" values="" default=""/>
+					<Tag name="Justification" type="Memo" description="Why the decision was made and a list of compliance to Architecture Principles and explanations of deviations from compliance." unit="" values="" default=""/>
+					<Tag name="Implications" type="String" description="What impact the decision will have" unit="" values="" default=""/>
+					<Tag name="RelatedDecisions" type="Classifier:RelatedDecisions" description="A list of related decisions" unit="dDecision" values="" default=""/>
 					<Tag name="Issue to Solve"/>
 					<Tag name="Derived Requirement"/>
 				</TaggedValues>
@@ -1666,8 +1666,8 @@ AQABAD4AAACbAAAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -1712,14 +1712,14 @@ B0doTFdQSwUGAAAAAAEAAQA+AAAAiQEAAAAA
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="app_data_type" type="String" description="The datatype used in the application e.g. DATATYPE_DONTCARE, DATATYPE_ATTRIBUTE, DATATYPE_ELEMENT or DATATYPE_IGNORE" unit="" values="" default="DATATYPE_ATTRIBUTE"/>
-					<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 					<Tag name="db_data_type" type="String" description="The datatype used in the database" unit="" values="" default="VARCHAR(255)"/>
-					<Tag name="display_type" type="String" description="The HTML display type for the attribute e.g. image" unit="" values="" default="text"/>
-					<Tag name="input_type" type="String" description="The HTML input type for the attribute e.g. select#fix:key1[val1]|key2[val2]" unit="" values="" default="text"/>
 					<Tag name="is_editable" type="enumeration" description="Whether the attribute is editable or not" unit="" values="true,false" default="true"/>
-					<Tag name="restrictions_description" type="String" description="A text describing the restrictions" unit="" values="" default=""/>
+					<Tag name="input_type" type="String" description="The HTML input type for the attribute e.g. select#fix:key1[val1]|key2[val2]" unit="" values="" default="text"/>
+					<Tag name="display_type" type="String" description="The HTML display type for the attribute e.g. image" unit="" values="" default="text"/>
 					<Tag name="restrictions_match" type="String" description="A regular expression that the value must match (e.g. '[0-3][0-9]\.[0-1][0-9]\.[0-9][0-9][0-9][0-9]' for date values)" unit="" values="" default=""/>
 					<Tag name="restrictions_not_match" type="String" description="A regular expression that the value must NOT match" unit="" values="" default=""/>
+					<Tag name="restrictions_description" type="String" description="A text describing the restrictions" unit="" values="" default=""/>
+					<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1760,8 +1760,8 @@ AAAAAHN0ci5kYXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -1769,10 +1769,10 @@ AAAAAHN0ci5kYXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA
 					<Tag name="City" type="String" description="The City of the Location. " unit="" values="" default=""/>
 					<Tag name="Country" type="String" description="The City of the Location. " unit="" values="" default=""/>
 					<Tag name="EmailID" type="String" description="The contact e-mail Id for the Location. " unit="" values="" default=""/>
-					<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 					<Tag name="PhoneNumber" type="String" description="The contact phone number for the Location. " unit="" values="" default=""/>
 					<Tag name="Province" type="String" description="The Province of the Location. " unit="" values="" default=""/>
 					<Tag name="Street" type="String" description="The street part of the Location. " unit="" values="" default=""/>
+					<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
@@ -1808,8 +1808,8 @@ AAAAc3RyLmRhdFVUBQAHu/lXY1BLBQYAAAAAAQABAD4AAAA9AQAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -1851,16 +1851,16 @@ AIAAAAAAc3RyLmRhdFVUBQAHGq32W1BLBQYAAAAAAQABAD4AAABAAQAAAAA=
 					<Apply type="UseCase"/>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="TestScenario" type="" description="The situation  that verifies the user story is realized" unit="" values="" default=""/>
 					<Tag name="EstimatedEffort" type="" description="Effort expressed in hours" unit="" values="" default="8"/>
 					<Tag name="StoryDetails" type="structured" description="" unit="" values="" default="">
 						<Property name="Role" type="" description="" unit="" values="" default="As a Actor"/>
 						<Property name="Scope" type="" description="" unit="" values="" default="I want to do something"/>
 						<Property name="Value" type="" description="" unit="" values="" default="So that I achieve Value"/>
 					</Tag>
-					<Tag name="TestScenario" type="" description="The situation  that verifies the user story is realized" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////wEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBA
 wEBA8Mqm////////////wEBA8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm
@@ -1903,16 +1903,16 @@ AHN0ci5kYXRVVAUAB2VCCl1QSwUGAAAAAAEAAQA+AAAASQIAAAAA
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="ArchitectureType" type="enumeration" description="the type of  CPU Architecture (e.g. AMD 64)" unit="" values="AMD64,ARM64,RISC-V" default="AMD64"/>
-					<Tag name="CPU" type="int" description="the number and type of CPU" unit="" values="" default=""/>
-					<Tag name="Disk" type="int" description="the dimension of the disk" unit="" values="" default=""/>
 					<Tag name="IP" type="int" description="The Ip of this machine" unit="" values="" default=""/>
-					<Tag name="Owner" type="int" description="THe owner / responsible for this node" unit="" values="" default=""/>
 					<Tag name="PublicIP" type="int" description="" unit="" values="" default=""/>
+					<Tag name="CPU" type="int" description="the number and type of CPU" unit="" values="" default=""/>
 					<Tag name="RAM" type="int" description="the Memory dimension " unit="" values="" default=""/>
+					<Tag name="Owner" type="int" description="THe owner / responsible for this node" unit="" values="" default=""/>
+					<Tag name="ArchitectureType" type="enumeration" description="the type of  CPU Architecture (e.g. AMD 64)" unit="" values="AMD64,ARM64,RISC-V" default="AMD64"/>
+					<Tag name="Disk" type="int" description="the dimension of the disk" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAATLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEi
 TLEiTLEiTLEiTLEiTLEi////////////////////////////////////////
@@ -1950,7 +1950,7 @@ AAAAAAEAAQA+AAAAUwEAAAAA
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1993,7 +1993,7 @@ UEsFBgAAAAABAAEAPgAAAIQBAAAAAA==
 					<Tag name="stakeHolderRole"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA/////////////////87U/////////////////////////+Hk
 /////////////////////////////+rs/0dc/3KB/+zu//////////r7/5ai
@@ -2039,11 +2039,11 @@ AAEAAQA+AAAAuAIAAAAA
 				<TaggedValues>
 					<Tag name="#FTEs" type="Integer" description="Estimated number of FTEs that operate as this Actor." unit="" values="" default="5"/>
 					<Tag name="ActorGoal" type="String" description="Objectives that this actor has, in general terms." unit="" values="" default=""/>
-					<Tag name="ActorTasks" type="String" description="Tasks that this actor performs, in general terms." unit="" values="" default=""/>
 					<Tag name="ActorType" type="enumeration" description="the type of Actor" unit="" values="Not Set,Worker,External Worker,Internal Worker,Business Partner,Active Business Partner,Passive Business Partner" default="Not Set"/>
+					<Tag name="ActorTasks" type="String" description="Tasks that this actor performs, in general terms." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk3mBAAAAAAAADYAAAAoAAAAFAAAABQAAAABABgAAAAAALAEAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 /////////////////////////////////////622/5Of/5Of/5Of/8jO////
@@ -2095,8 +2095,8 @@ gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -2105,7 +2105,7 @@ gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==
 					<Tag name="Organization Owner"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dRole" alias="Role" metatype="Role" notes="The usual or expected function of an actor, or the part somebody or something plays in a particular action or event. An actor may have a number of roles." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////gODggODggODggODggODggODggODg
@@ -2140,10 +2140,10 @@ BQAHQoPDYFBLBQYAAAAAAQABAD4AAAAEAQAAAAA=
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="#FTEs" type="int" description="Number of Full time Equivalent employees working in the Role. " unit="" values="" default=""/>
+					<Tag name="User" type="String" description="User-definable categorization." unit="" values="" default=""/>
 					<Tag name="ID" type="String" description="Unique identifier for the Role ." unit="" values="" default=""/>
 					<Tag name="Owner" type="String" description="Owner of the Role. " unit="" values="" default=""/>
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
-					<Tag name="User" type="String" description="User-definable categorization." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Represent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -2188,8 +2188,8 @@ AAAAAA==
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
@@ -2242,7 +2242,7 @@ ZGF0VVQFAAdhaExXUEsFBgAAAAABAAEAPgAAAJABAAAAAA==
 					<Tag name="Referenced Value"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAAlNzRHbSdHLSdHLSdHLSdHLSdHLSdScOx7Pn3////////////
 ////////////////////puLZIbafHrWeHrWeHrWeHrWeHrWeQcGt5Pbz////
@@ -2331,12 +2331,12 @@ ALACAAAAAA==
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="Criticality" type="enumeration" description="" unit="" values="Not Analyzed,Negligible Impact,Limited Impact,Moderate Impact,Noticeable Impact,Significant Impact" default=""/>
+					<Tag name="is Decomposed" type="Boolean" description="" unit="" values="True,False" default=""/>
 					<Tag name="entrance criteria" type="Integer" description="" unit="" values="" default=""/>
 					<Tag name="exit criteria" type="Integer" description="" unit="" values="" default=""/>
-					<Tag name="is Decomposed" type="Boolean" description="" unit="" values="True,False" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Controlls" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="Controlls" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2344,7 +2344,7 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isRunBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0">
+			<Stereotype name="isRunBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2352,7 +2352,7 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="participatesIn" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="participatesIn" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2360,14 +2360,14 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Realizes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="Realizes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="direction" value="Source -&gt; Destination"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0">
+			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2416,17 +2416,17 @@ AAAAAQABAD4AAAAGAgAAAAA=
 </Image>
 				<AppliesTo>
 					<Apply type="Class">
-						<Property name="_HideUmlLinks" value="False"/>
 						<Property name="isActive" value=""/>
+						<Property name="_HideUmlLinks" value="False"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="Likehood" type="int" description="" unit="" values="" default="50"/>
-					<Tag name="RiskStrategy" type="enumeration" description="" unit="" values="Terminate,Treat,Tollerate,Transfer" default=""/>
 					<Tag name="Severity" type="int" description="" unit="" values="" default="50"/>
+					<Tag name="RiskStrategy" type="enumeration" description="" unit="" values="Terminate,Treat,Tollerate,Transfer" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Includes Processes" metatype="includes Processes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Processes" metatype="includes Processes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of Value Stream"/>
@@ -2434,7 +2434,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Application Owner" metatype="application Owner" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Application Owner" metatype="application Owner" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="has Owner"/>
@@ -2442,7 +2442,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is consumed by Role"/>
@@ -2450,7 +2450,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Contains Activities" metatype="contains Activities" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Contains Activities" metatype="contains Activities" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of UseCase"/>
@@ -2458,7 +2458,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Exposes Service" metatype="exposes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Exposes Service" metatype="exposes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Exposes Phy Service"/>
@@ -2466,7 +2466,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Flows to" metatype="flows to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Flows to" metatype="flows to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Sequence Flow From"/>
@@ -2474,7 +2474,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Impact Resource" metatype="impact Resource" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Impact Resource" metatype="impact Resource" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is impacted by Risk"/>
@@ -2482,7 +2482,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Abstraction">
 						<Property name="_MeaningBackwards" value="Informs Capability"/>
@@ -2490,7 +2490,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Source Risk"/>
@@ -2498,7 +2498,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports Capability" metatype="supports Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports Capability" metatype="supports Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2506,7 +2506,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates categories" metatype="aggregates categories" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates categories" metatype="aggregates categories" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Measurement Area"/>
@@ -2514,7 +2514,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates Groups" metatype="category aggregates Groups" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates Groups" metatype="category aggregates Groups" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Category"/>
@@ -2522,7 +2522,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates KPI" metatype="aggregates KPI" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates KPI" metatype="aggregates KPI" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of a Grouping"/>
@@ -2530,7 +2530,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="configures Application"/>
@@ -2540,7 +2540,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Ensure the correct  Operation of" metatype="ensure the correct  Operation of" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Ensure the correct  Operation of" metatype="ensure the correct  Operation of" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Ensure the correct  Operation of Capability"/>
@@ -2548,7 +2548,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Executes" metatype="executes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Executes" metatype="executes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="executes Capability"/>
@@ -2556,7 +2556,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="exposes Biz Service" metatype="application exposes Biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="exposes Biz Service" metatype="application exposes Biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="service run by application"/>
@@ -2564,7 +2564,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Governs" metatype="governs view" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Governs" metatype="governs view" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is Governed by Controller"/>
@@ -2572,7 +2572,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is thinked by Stakeholder"/>
@@ -2580,7 +2580,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Milestone" metatype="has Milestone" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Milestone" metatype="has Milestone" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is related to Goal"/>
@@ -2588,7 +2588,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Opinion" metatype="has Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Opinion" metatype="has Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is expressed by Stakeholder"/>
@@ -2596,7 +2596,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Stakeholders" metatype="has Stakeholders" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Stakeholders" metatype="has Stakeholders" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is concerned with Organization"/>
@@ -2604,7 +2604,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Hosts Node" metatype="hosts Node" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Hosts Node" metatype="hosts Node" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is hosted in Location"/>
@@ -2612,7 +2612,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implement Biz Service" metatype="Implement Biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implement Biz Service" metatype="Implement Biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="Implement Biz Service"/>
@@ -2620,7 +2620,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implements" metatype="implements biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implements" metatype="implements biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Implemented by physical service"/>
@@ -2628,7 +2628,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Implements Service" metatype="controller implements Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Implements Service" metatype="controller implements Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Implements Service"/>
@@ -2636,7 +2636,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Includes Process" metatype="includes Process" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Process" metatype="includes Process" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is part of Product"/>
@@ -2644,7 +2644,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="IncreasesMaturityOf" metatype="increases Maturity Of Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="IncreasesMaturityOf" metatype="increases Maturity Of Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is matured by Initiative"/>
@@ -2652,7 +2652,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value=" has Role"/>
@@ -2660,7 +2660,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is delivered by" metatype="is delivered by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is delivered by" metatype="is delivered by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of a Package"/>
@@ -2668,7 +2668,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is organized In" metatype="is organized In" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is organized In" metatype="is organized In" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of a Program"/>
@@ -2676,7 +2676,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to" metatype="is related to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to" metatype="is related to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is specified by Requirement"/>
@@ -2684,7 +2684,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isDescribedBy" metatype="isDescribedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isDescribedBy" metatype="isDescribedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="described by Use Case"/>
@@ -2692,7 +2692,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isFunctionallyImplementedBy" metatype="isFunctionallyImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isFunctionallyImplementedBy" metatype="isFunctionallyImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Functionally Implemented By Table"/>
@@ -2700,7 +2700,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="Is implemented by Controller"/>
@@ -2708,7 +2708,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isMakingUseOf" metatype="isMakingUseOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isMakingUseOf" metatype="isMakingUseOf" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Makes Use Of Decision"/>
@@ -2716,7 +2716,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isMeasuredBy" metatype="isMeasuredBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isMeasuredBy" metatype="isMeasuredBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is measuring Capability"/>
@@ -2724,7 +2724,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isOperationalizedBy" metatype="isOperationalizedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isOperationalizedBy" metatype="isOperationalizedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Operationalized By Capability"/>
@@ -2732,7 +2732,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isPerformedBy" metatype="isPerformedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isPerformedBy" metatype="isPerformedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is executed by Actor"/>
@@ -2740,7 +2740,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isPhysicallyHostedBy" metatype="is Physically Hosted By" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isPhysicallyHostedBy" metatype="is Physically Hosted By" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is Hosted By Node"/>
@@ -2748,7 +2748,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isSatisfiedBy" metatype="isSatisfiedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isSatisfiedBy" metatype="isSatisfiedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is realized by Feature"/>
@@ -2756,7 +2756,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Orchestrates service" metatype="orchestrates service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Orchestrates service" metatype="orchestrates service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of Process"/>
@@ -2764,7 +2764,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="ProvidesPersistenceFor" metatype="providesPersistenceFor" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="ProvidesPersistenceFor" metatype="providesPersistenceFor" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Provides Persistence For Model"/>
@@ -2772,7 +2772,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is realized by Class"/>
@@ -2780,7 +2780,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="refersTo" metatype="refers To Principle" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="refersTo" metatype="refers To Principle" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="is referenced by Decision"/>
@@ -2788,7 +2788,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="StopTheRealizationOf" metatype="stop The Realization Of" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="StopTheRealizationOf" metatype="stop The Realization Of" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is stopped by Issue"/>
@@ -2796,7 +2796,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports" metatype="supports Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports" metatype="supports Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2881,10 +2881,10 @@ AAAAAAEAAQA+AAAANAIAAAAA
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="action" type="String" description="The action, which is triggered by this Dependency. If empty, any action is valid" unit="" values="" default=""/>
-					<Tag name="config" type="String" description="The configuration, in which this association is defined" unit="" values="" default="config.ini"/>
-					<Tag name="context" type="String" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
-					<Tag name="decorator" type="String" description="Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this endpoint as a REST service." unit="" values="" default=""/>
 					<Tag name="method" type="String" description="the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." unit="" values="" default=""/>
+					<Tag name="context" type="String" description="The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" unit="" values="" default=""/>
+					<Tag name="config" type="String" description="The configuration, in which this association is defined" unit="" values="" default="config.ini"/>
+					<Tag name="decorator" type="String" description="Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this endpoint as a REST service." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Resource Risk" metatype="Resource impacted" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
@@ -2905,7 +2905,7 @@ AAAAAAEAAQA+AAAANAIAAAAA
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dNetwork" metatype="Network" notes="A communication network represents a set of structures that connects nodes for transmission, routing, and reception of data." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dNetwork" metatype="Network" notes="A communication network represents a set of structures that connects nodes for transmission, routing, and reception of data." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIALZUW1XO7tGHhgIAAHoLAAAHABEAc3RyLmRhdFVUDQAHh19a
 Y4dfWmOHX1pj7VbLbtswENyrC+QfCueiAA7QpGmaokhv/YJ+QGFbjiPUVgw9
 EqRF/70zu6JI0Ywc+BagEEBR5OyDw+GKtdzLXHaykveyRa+QUk7knfzRdiIb
@@ -2935,7 +2935,7 @@ BgAAAAABAAEAPgAAALwCAAAAAA==
 					<Tag name="NetworkType" type="enumeration" description="" unit="" values="LAN,WAN,Mesh" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is contained in a network"/>
@@ -2958,7 +2958,7 @@ BgAAAAABAAEAPgAAALwCAAAAAA==
 		</TaggedValueTypes>
 		<ViewDefinitions/>
 		<Metamodel/>
-		<QuickLink data="//Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link &amp; Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column&#xA;//generated:2022-12-20 4:08:41 PM&#xA;// dActivity -&gt; contains Action -&gt; dAction&#xA;Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,,,,Class,dAction,Composition,contains Action,from,,is contained in Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dAction,,,,Activity,dActivity,Composition,contains Action,to,,contains Action,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dActor -&gt; participatesIn -&gt; dBusinessUseCase&#xA;Actor,dActor,UseCase,dBusinessUseCase,,,,Association,participatesIn,directed,Partecipates in Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,Actor,dActor,,,,Association,participatesIn,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dActor,,,,UseCase,dBusinessUseCase,Association,participatesIn,directed,,Partecipates in Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Actor,dActor,Association,participatesIn,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dActor -&gt; isPerformedBy -&gt; dRole&#xA;Actor,dActor,Actor,dRole,,,,Association,isPerformedBy,directed,has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,Actor,dActor,,,,Association,isPerformedBy,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dActor,,,,Actor,dRole,Association,isPerformedBy,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Actor,dActor,Association,isPerformedBy,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Realizes -&gt; dLogicalAppComponent&#xA;Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,Realizes,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,Realizes,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,Realizes,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,Realizes,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; configured by -&gt; dSystem&#xA;Component,dApplicationComponent,Component,dSystem,,,,Aggregation,configured by,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dSystem,Aggregation,configured by,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dSystem,,,,Component,dApplicationComponent,Aggregation,configured by,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Exposes Service -&gt; dPhysicalService&#xA;Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,Exposes Service,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,Exposes Service,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,Exposes Service,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,Exposes Service,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Application Owner -&gt; dStakeholder&#xA;Component,dApplicationComponent,Actor,dStakeholder,,,,Association,Application Owner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,Component,dApplicationComponent,,,,Association,Application Owner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Actor,dStakeholder,Association,Application Owner,directed,,owns Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Component,dApplicationComponent,Association,Application Owner,from,,has Owner,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Connected with Application -&gt; dApplicationComponent&#xA;Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,directed,connected From Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; dApplicationAgregatesFunction -&gt; dApplicationFunction&#xA;Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAgregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessProcess -&gt; Orchestrates service -&gt; dBusinessService&#xA;Activity,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates service,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Activity,dBusinessProcess,,,,Aggregation,Orchestrates service,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessService,Aggregation,Orchestrates service,from,,Has Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessProcess,Aggregation,Orchestrates service,to,,part of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessProcess -&gt; Flows to -&gt; dBusinessProcess&#xA;Activity,dBusinessProcess,Activity,dBusinessProcess,,,,Dependency,Flows to,directed,Sequence Flow To,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Activity,dBusinessProcess,,,,Dependency,Flows to,from,Sequence Flow From,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessProcess,Dependency,Flows to,directed,,Sequence Flow To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessProcess,Dependency,Flows to,from,,Sequence Flow From,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessService -&gt; Uses Data -&gt; dDataEntity&#xA;Activity,dBusinessService,Class,dDataEntity,,,,Association,Uses Data,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Activity,dBusinessService,,,,Association,Uses Data,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Class,dDataEntity,Association,Uses Data,directed,,uses Data,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Activity,dBusinessService,Association,Uses Data,from,,is used by service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessService -&gt; dRelatedService -&gt; dBusinessService&#xA;Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,directed,Target Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,from,Source Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,directed,,Target Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,from,,Source Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; isDescribedBy -&gt; dBusinessService&#xA;UseCase,dBusinessUseCase,Activity,dBusinessService,,,,Realization,isDescribedBy,directed,Has service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,UseCase,dBusinessUseCase,,,,Realization,isDescribedBy,from,described by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Activity,dBusinessService,Realization,isDescribedBy,directed,,Has service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,UseCase,dBusinessUseCase,Realization,isDescribedBy,from,,described by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; Contains Activities -&gt; dActivity&#xA;UseCase,dBusinessUseCase,Activity,dActivity,,,,Composition,Contains Activities,from,has Activitiy,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,UseCase,dBusinessUseCase,,,,Composition,Contains Activities,to,part of UseCase,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Activity,dActivity,Composition,Contains Activities,from,,has Activitiy,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,,,,UseCase,dBusinessUseCase,Composition,Contains Activities,to,,part of UseCase,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; is realized by Use Case -&gt; dFeature&#xA;UseCase,dBusinessUseCase,Class,dFeature,,,,Realization,is realized by Use Case,directed,realizes Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,UseCase,dBusinessUseCase,,,,Realization,is realized by Use Case,from,is realized by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Class,dFeature,Realization,is realized by Use Case,directed,,realizes Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,,,,UseCase,dBusinessUseCase,Realization,is realized by Use Case,from,,is realized by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Ensure the correct  Operation of -&gt; dBusinessProcess&#xA;Class,dCapability,Activity,dBusinessProcess,,,,Aggregation,Ensure the correct  Operation of,from,is operated by Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Class,dCapability,,,,Aggregation,Ensure the correct  Operation of,to,Ensure the correct  Operation of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Activity,dBusinessProcess,Aggregation,Ensure the correct  Operation of,from,,is operated by Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Class,dCapability,Aggregation,Ensure the correct  Operation of,to,,Ensure the correct  Operation of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; isMeasuredBy -&gt; dMeasurementIndicator&#xA;Class,dCapability,Class,dMeasurementIndicator,,,,Association,isMeasuredBy,directed,is Measured By Indicator,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,Class,dCapability,,,,Association,isMeasuredBy,from,is measuring Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dMeasurementIndicator,Association,isMeasuredBy,directed,,is Measured By Indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,,,,Class,dCapability,Association,isMeasuredBy,from,,is measuring Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Executes -&gt; dRole&#xA;Class,dCapability,Actor,dRole,,,,Aggregation,Executes,from,is executed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,Class,dCapability,,,,Aggregation,Executes,to,executes Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Actor,dRole,Aggregation,Executes,from,,is executed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Class,dCapability,Aggregation,Executes,to,,executes Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; isOperationalizedBy -&gt; dGoal&#xA;Class,dCapability,Class,dGoal,,,,Realization,isOperationalizedBy,directed,support Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,Class,dCapability,,,,Realization,isOperationalizedBy,from,is Operationalized By Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dGoal,Realization,isOperationalizedBy,directed,,support Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dCapability,Realization,isOperationalizedBy,from,,is Operationalized By Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Supports Capability -&gt; dLogicalAppComponent&#xA;Class,dCapability,Component,dLogicalAppComponent,,,,Aggregation,Supports Capability,from,supported by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,Supports Capability,to,supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,Supports Capability,from,,supported by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,Supports Capability,to,,supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; informs Capability -&gt; dDataEntity&#xA;Class,dCapability,Class,dDataEntity,,,,Realization,informs Capability,directed,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Implements Service -&gt; dPhysicalService&#xA;Class,dController,Interface,dPhysicalService,,,,Association,Implements Service,directed,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,Class,dController,,,,Association,Implements Service,from,Implements Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Interface,dPhysicalService,Association,Implements Service,directed,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Class,dController,Association,Implements Service,from,,Implements Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Governs -&gt; dView&#xA;Class,dController,Class,dView,,,,Association,Governs,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,Class,dController,,,,Association,Governs,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dView,Association,Governs,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,,,,Class,dController,Association,Governs,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Controlls -&gt; dModelClass&#xA;Class,dController,Class,dModelClass,,,,Association,Controlls,directed,Controlls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,Class,dController,,,,Association,Controlls,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dModelClass,Association,Controlls,directed,,Controlls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dController,Association,Controlls,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; isImplementedBy -&gt; dBusinessUseCase&#xA;Class,dController,UseCase,dBusinessUseCase,,,,Realization,isImplementedBy,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,Class,dController,,,,Realization,isImplementedBy,from,Is implemented by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,UseCase,dBusinessUseCase,Realization,isImplementedBy,directed,,implements Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Class,dController,Realization,isImplementedBy,from,,Is implemented by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; dActionKey -&gt; dController&#xA;Class,dController,Class,dController,,,,Dependency,dActionKey,directed,target Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,Class,dController,,,,Dependency,dActionKey,from,Source Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dController,Dependency,dActionKey,directed,,target Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dController,Dependency,dActionKey,from,,Source Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDataEntity -&gt; AssociatedEntity -&gt; dDataEntity&#xA;Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,directed,Is connected to Source Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,from,Is connected to Target Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,directed,,Is connected to Source Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,from,,Is connected to Target Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDecision -&gt; isMakingUseOf -&gt; dInitiative&#xA;Class,dDecision,Activity,dInitiative,,,,Association,isMakingUseOf,directed,is used in Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,Class,dDecision,,,,Association,isMakingUseOf,from,Makes Use Of Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDecision,,,,Activity,dInitiative,Association,isMakingUseOf,directed,,is used in Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Class,dDecision,Association,isMakingUseOf,from,,Makes Use Of Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDecision -&gt; refers To -&gt; dPrinciple&#xA;Class,dDecision,Class,dPrinciple,,,,Dependency,refers To,directed,refers To Principle,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dPrinciple,Class,dDecision,,,,Dependency,refers To,from,is referenced by Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDecision,,,,Class,dPrinciple,Dependency,refers To,directed,,refers To Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dPrinciple,,,,Class,dDecision,Dependency,refers To,from,,is referenced by Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDeploymentNode -&gt; isPhysicallyHostedBy -&gt; dApplicationComponent&#xA;Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,isPhysicallyHostedBy,directed,Hosts Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,isPhysicallyHostedBy,from,is Hosted By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,isPhysicallyHostedBy,directed,,Hosts Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,isPhysicallyHostedBy,from,,is Hosted By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dEvent -&gt;  -&gt; dBusinessProcess&#xA;Event,dEvent,Activity,dBusinessProcess,,,,Association,,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Event,dEvent,,,,Association,,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Event,dEvent,,,,Activity,dBusinessProcess,Association,,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Event,dEvent,Association,,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dFeature -&gt; isSatisfiedBy -&gt; dRequirement&#xA;Class,dFeature,Class,dRequirement,,,,Realization,isSatisfiedBy,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dFeature,,,,Realization,isSatisfiedBy,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,,,,Class,dRequirement,Realization,isSatisfiedBy,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dFeature,Realization,isSatisfiedBy,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dGoal -&gt; has Milestone -&gt; dObjective&#xA;Class,dGoal,Class,dObjective,,,,Aggregation,has Milestone,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObjective,Class,dGoal,,,,Aggregation,has Milestone,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dObjective,Aggregation,has Milestone,from,,Has Objective,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObjective,,,,Class,dGoal,Aggregation,has Milestone,to,,is related to Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dGrowthPackage -&gt; is delivered by -&gt; dInitiative&#xA;Package,dGrowthPackage,Activity,dInitiative,,,,Composition,is delivered by,from, is delivered by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,Package,dGrowthPackage,,,,Composition,is delivered by,to,is part of a Package,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,,,,Activity,dInitiative,Composition,is delivered by,from,, is delivered by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Package,dGrowthPackage,Composition,is delivered by,to,,is part of a Package,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dInitiative -&gt; IncreasesMaturityOf -&gt; dCapability&#xA;Activity,dInitiative,Class,dCapability,,,,Association,IncreasesMaturityOf,directed,Increases Maturity Of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,Activity,dInitiative,,,,Association,IncreasesMaturityOf,from,is matured by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Class,dCapability,Association,IncreasesMaturityOf,directed,,Increases Maturity Of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Activity,dInitiative,Association,IncreasesMaturityOf,from,,is matured by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dIssue -&gt; StopTheRealizationOf -&gt; dRequirement&#xA;Class,dIssue,Class,dRequirement,,,,Association,StopTheRealizationOf,directed,stop Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dIssue,,,,Association,StopTheRealizationOf,from,is stopped by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dIssue,,,,Class,dRequirement,Association,StopTheRealizationOf,directed,,stop Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dIssue,Association,StopTheRealizationOf,from,,is stopped by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dIssue -&gt; realized by Issue -&gt; dRisk&#xA;Class,dIssue,Class,dRisk,,,,Realization,realized by Issue,directed,is realizing Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,Class,dIssue,,,,Realization,realized by Issue,from,is realized by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dIssue,,,,Class,dRisk,Realization,realized by Issue,directed,,is realizing Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dIssue,Realization,realized by Issue,from,,is realized by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dLocation -&gt; Hosts Node -&gt; dDeploymentNode&#xA;Class,dLocation,Node,dDeploymentNode,,,,Aggregation,Hosts Node,from, Hosts Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,Class,dLocation,,,,Aggregation,Hosts Node,to,Is hosted in Location,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dLocation,,,,Node,dDeploymentNode,Aggregation,Hosts Node,from,, Hosts Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Class,dLocation,Aggregation,Hosts Node,to,,Is hosted in Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dLogicalAppComponent -&gt; exposes Biz Service -&gt; dBusinessService&#xA;Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,exposes Biz Service,directed,application runs service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,exposes Biz Service,from,service run by application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,exposes Biz Service,directed,,application runs service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,exposes Biz Service,from,,service run by application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementArea -&gt; aggregates categories -&gt; dMeasurementCategory&#xA;Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,aggregates categories,from,aggregates categories,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,aggregates categories,to,has Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementArea,,,,Class,dMeasurementCategory,Aggregation,aggregates categories,from,,aggregates categories,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,,,,Class,dMeasurementArea,Aggregation,aggregates categories,to,,has Measurement Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementCategory -&gt; aggregates Groups -&gt; dMeasurementGrouping&#xA;Class,dMeasurementCategory,Class,dMeasurementGrouping,,,,Aggregation,aggregates Groups,from,aggregates Groups,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,Class,dMeasurementCategory,,,,Aggregation,aggregates Groups,to,has Category,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,,,,Class,dMeasurementGrouping,Aggregation,aggregates Groups,from,,aggregates Groups,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,,,,Class,dMeasurementCategory,Aggregation,aggregates Groups,to,,has Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementGrouping -&gt; aggregates KPI -&gt; dMeasurementIndicator&#xA;Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,aggregates KPI,from,aggregates KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,aggregates KPI,to,part of a Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,aggregates KPI,from,,aggregates KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,aggregates KPI,to,,part of a Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dModelClass -&gt; RealizesEntity -&gt; dDataEntity&#xA;Class,dModelClass,Class,dDataEntity,,,,Realization,RealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dModelClass,,,,Realization,RealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dDataEntity,Realization,RealizesEntity,directed,,Realizes Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dModelClass,Realization,RealizesEntity,from,,is realized by Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dModelClass -&gt; ProvidesPersistenceFor -&gt; dTable&#xA;Class,dModelClass,Class,dTable,,,,Association,ProvidesPersistenceFor,directed,is Saved in a Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,from,Provides Persistence For Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceFor,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dNetwork -&gt; NetworkContainsNode -&gt; dDeploymentNode&#xA;Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contain sNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a network,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contain sNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofModel -&gt; dModelClass&#xA;Class,dObject,Class,dModelClass,,,,Dependency,InstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,Class,dObject,,,,Dependency,InstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dModelClass,Dependency,InstanceofModel,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dObject,Dependency,InstanceofModel,from,,Istance of Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofController -&gt; dController&#xA;Class,dObject,Class,dController,,,,Dependency,InstanceofController,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,Class,dObject,,,,Dependency,InstanceofController,from,Istance of Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dController,Dependency,InstanceofController,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dObject,Dependency,InstanceofController,from,,Istance of Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofView -&gt; dView&#xA;Class,dObject,Class,dView,,,,Dependency,InstanceofView,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,Class,dObject,,,,Dependency,InstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dView,Dependency,InstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,,,,Class,dObject,Dependency,InstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOpinion -&gt; dDiscord -&gt; dOpinion&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,directed,is in discord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,from,is in discord with Original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dDiscord,directed,,is in discord with other Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dDiscord,from,,is in discord with Original Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOpinion -&gt; dAccord -&gt; dOpinion&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dAccord,directed,is in accord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dAccord,from,is in accord with original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dAccord,directed,,is in accord with other Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dAccord,from,,is in accord with original Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOrganizationUnit -&gt; has Stakeholders -&gt; dStakeholder&#xA;Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,has Stakeholders,directed,has Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,has Stakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,has Stakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,has Stakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dPhysicalService -&gt; Implements -&gt; dBusinessService&#xA;Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,Implements,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,Implements,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,Implements,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,Implements,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dProduct -&gt; Includes Process -&gt; dBusinessProcess&#xA;Component,dProduct,Activity,dBusinessProcess,,,,Aggregation,Includes Process,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Component,dProduct,,,,Aggregation,Includes Process,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dProduct,,,,Activity,dBusinessProcess,Aggregation,Includes Process,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Component,dProduct,Aggregation,Includes Process,to,,Is part of Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dProgram -&gt; is organized In -&gt; dGrowthPackage&#xA;Package,dProgram,Package,dGrowthPackage,,,,Composition,is organized In,from,is organized In Packages,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,Package,dProgram,,,,Composition,is organized In,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dProgram,,,,Package,dGrowthPackage,Composition,is organized In,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,,,,Package,dProgram,Composition,is organized In,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRequirement -&gt; is related to -&gt; dGoal&#xA;Class,dRequirement,Class,dGoal,,,,Association,is related to,directed,specifies Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,Class,dRequirement,,,,Association,is related to,from,is specified by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dGoal,Association,is related to,directed,,specifies Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dRequirement,Association,is related to,from,,is specified by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRequirement -&gt; Contains Requirement -&gt; dRequirement&#xA;Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,from,is contained by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,to,Contains Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,from,,is contained by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,to,,Contains Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dResource -&gt; supports -&gt; dCapability&#xA;Class,dResource,Class,dCapability,,,,Association,supports,directed,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,Class,dResource,,,,Association,supports,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,,,,Class,dCapability,Association,supports,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dResource,Association,supports,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; is related to risk -&gt; dRisk&#xA;Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; Resource Risk -&gt; dResource&#xA;Class,dRisk,Class,dResource,,,,Association,Resource Risk,directed,impact Resouce,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,Class,dRisk,,,,Association,Resource Risk,from,is impacted by Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dResource,Association,Resource Risk,directed,,impact Resouce,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,,,,Class,dRisk,Association,Resource Risk,from,,is impacted by Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; Application Risk -&gt; dApplicationComponent&#xA;Class,dRisk,Component,dApplicationComponent,,,,Dependency,Application Risk,directed,is related to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Class,dRisk,,,,Dependency,Application Risk,from,has Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Component,dApplicationComponent,Dependency,Application Risk,directed,,is related to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Class,dRisk,Dependency,Application Risk,from,,has Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRole -&gt; is Associated To -&gt; dOrganizationUnit&#xA;Actor,dRole,Class,dOrganizationUnit,,,,Association,is Associated To,directed,works in Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,Actor,dRole,,,,Association,is Associated To,from, has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Class,dOrganizationUnit,Association,is Associated To,directed,,works in Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,,,,Actor,dRole,Association,is Associated To,from,, has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRole -&gt; Consumes Service -&gt; dBusinessService&#xA;Actor,dRole,Activity,dBusinessService,,,,Association,Consumes Service,directed,Consumes Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Actor,dRole,,,,Association,Consumes Service,from,is consumed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Activity,dBusinessService,Association,Consumes Service,directed,,Consumes Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Actor,dRole,Association,Consumes Service,from,,is consumed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dStakeholder -&gt; Has Inner Opinion -&gt; dOpinionInner&#xA;Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed,Has Inner Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOpinionInner,Association,Has Inner Opinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinionInner,,,,Actor,dStakeholder,Association,Has Inner Opinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dStakeholder -&gt; Has Opinion -&gt; dOpinion&#xA;Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dTable -&gt; isFunctionallyImplementedBy -&gt; dDataEntity&#xA;Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dUserStory -&gt;  -&gt; dBusinessUseCase&#xA;UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dValueStream -&gt; Includes Processes -&gt; dBusinessProcess&#xA;Activity,dValueStream,Activity,dBusinessProcess,,,,Composition,Includes Processes,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dValueStream,,,,Activity,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;"/>
+		<QuickLink data="//Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link &amp; Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column&#xA;//generated:2023-01-20 10:37:18 AM&#xA;// dActivity -&gt; contains Action -&gt; dAction&#xA;Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,,,,Class,dAction,Composition,contains Action,from,,is contained in Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dAction,,,,Activity,dActivity,Composition,contains Action,to,,contains Action,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dActor -&gt; participatesIn -&gt; dBusinessUseCase&#xA;Actor,dActor,UseCase,dBusinessUseCase,,,,Association,participatesIn,directed,Partecipates in Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,Actor,dActor,,,,Association,participatesIn,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dActor,,,,UseCase,dBusinessUseCase,Association,participatesIn,directed,,Partecipates in Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Actor,dActor,Association,participatesIn,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dActor -&gt; isPerformedBy -&gt; dRole&#xA;Actor,dActor,Actor,dRole,,,,Association,isPerformedBy,directed,has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,Actor,dActor,,,,Association,isPerformedBy,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dActor,,,,Actor,dRole,Association,isPerformedBy,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Actor,dActor,Association,isPerformedBy,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Realizes -&gt; dLogicalAppComponent&#xA;Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,Realizes,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,Realizes,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,Realizes,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,Realizes,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; configured by -&gt; dSystem&#xA;Component,dApplicationComponent,Component,dSystem,,,,Aggregation,configured by,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dSystem,Aggregation,configured by,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dSystem,,,,Component,dApplicationComponent,Aggregation,configured by,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Exposes Service -&gt; dPhysicalService&#xA;Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,Exposes Service,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,Exposes Service,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,Exposes Service,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,Exposes Service,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Application Owner -&gt; dStakeholder&#xA;Component,dApplicationComponent,Actor,dStakeholder,,,,Association,Application Owner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,Component,dApplicationComponent,,,,Association,Application Owner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Actor,dStakeholder,Association,Application Owner,directed,,owns Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Component,dApplicationComponent,Association,Application Owner,from,,has Owner,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; Connected with Application -&gt; dApplicationComponent&#xA;Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,directed,connected From Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dApplicationComponent -&gt; dApplicationAgregatesFunction -&gt; dApplicationFunction&#xA;Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAgregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessProcess -&gt; Orchestrates service -&gt; dBusinessService&#xA;Activity,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates service,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Activity,dBusinessProcess,,,,Aggregation,Orchestrates service,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessService,Aggregation,Orchestrates service,from,,Has Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessProcess,Aggregation,Orchestrates service,to,,part of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessProcess -&gt; Flows to -&gt; dBusinessProcess&#xA;Activity,dBusinessProcess,Activity,dBusinessProcess,,,,Dependency,Flows to,directed,Sequence Flow To,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Activity,dBusinessProcess,,,,Dependency,Flows to,from,Sequence Flow From,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessProcess,Dependency,Flows to,directed,,Sequence Flow To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dBusinessProcess,Dependency,Flows to,from,,Sequence Flow From,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessService -&gt; Uses Data -&gt; dDataEntity&#xA;Activity,dBusinessService,Class,dDataEntity,,,,Association,Uses Data,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Activity,dBusinessService,,,,Association,Uses Data,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Class,dDataEntity,Association,Uses Data,directed,,uses Data,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Activity,dBusinessService,Association,Uses Data,from,,is used by service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessService -&gt; dRelatedService -&gt; dBusinessService&#xA;Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,directed,Target Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,from,Source Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,directed,,Target Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,from,,Source Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; isDescribedBy -&gt; dBusinessService&#xA;UseCase,dBusinessUseCase,Activity,dBusinessService,,,,Realization,isDescribedBy,directed,Has service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,UseCase,dBusinessUseCase,,,,Realization,isDescribedBy,from,described by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Activity,dBusinessService,Realization,isDescribedBy,directed,,Has service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,UseCase,dBusinessUseCase,Realization,isDescribedBy,from,,described by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; Contains Activities -&gt; dActivity&#xA;UseCase,dBusinessUseCase,Activity,dActivity,,,,Composition,Contains Activities,from,has Activitiy,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,UseCase,dBusinessUseCase,,,,Composition,Contains Activities,to,part of UseCase,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Activity,dActivity,Composition,Contains Activities,from,,has Activitiy,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dActivity,,,,UseCase,dBusinessUseCase,Composition,Contains Activities,to,,part of UseCase,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dBusinessUseCase -&gt; is realized by Use Case -&gt; dFeature&#xA;UseCase,dBusinessUseCase,Class,dFeature,,,,Realization,is realized by Use Case,directed,realizes Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,UseCase,dBusinessUseCase,,,,Realization,is realized by Use Case,from,is realized by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Class,dFeature,Realization,is realized by Use Case,directed,,realizes Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,,,,UseCase,dBusinessUseCase,Realization,is realized by Use Case,from,,is realized by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Ensure the correct  Operation of -&gt; dBusinessProcess&#xA;Class,dCapability,Activity,dBusinessProcess,,,,Aggregation,Ensure the correct  Operation of,from,is operated by Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Class,dCapability,,,,Aggregation,Ensure the correct  Operation of,to,Ensure the correct  Operation of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Activity,dBusinessProcess,Aggregation,Ensure the correct  Operation of,from,,is operated by Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Class,dCapability,Aggregation,Ensure the correct  Operation of,to,,Ensure the correct  Operation of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; isMeasuredBy -&gt; dMeasurementIndicator&#xA;Class,dCapability,Class,dMeasurementIndicator,,,,Association,isMeasuredBy,directed,is Measured By Indicator,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,Class,dCapability,,,,Association,isMeasuredBy,from,is measuring Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dMeasurementIndicator,Association,isMeasuredBy,directed,,is Measured By Indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,,,,Class,dCapability,Association,isMeasuredBy,from,,is measuring Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Executes -&gt; dRole&#xA;Class,dCapability,Actor,dRole,,,,Aggregation,Executes,from,is executed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,Class,dCapability,,,,Aggregation,Executes,to,executes Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Actor,dRole,Aggregation,Executes,from,,is executed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Class,dCapability,Aggregation,Executes,to,,executes Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; isOperationalizedBy -&gt; dGoal&#xA;Class,dCapability,Class,dGoal,,,,Realization,isOperationalizedBy,directed,support Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,Class,dCapability,,,,Realization,isOperationalizedBy,from,is Operationalized By Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dGoal,Realization,isOperationalizedBy,directed,,support Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dCapability,Realization,isOperationalizedBy,from,,is Operationalized By Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; Supports Capability -&gt; dLogicalAppComponent&#xA;Class,dCapability,Component,dLogicalAppComponent,,,,Aggregation,Supports Capability,from,supported by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,Supports Capability,to,supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,Supports Capability,from,,supported by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,Supports Capability,to,,supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dCapability -&gt; informs Capability -&gt; dDataEntity&#xA;Class,dCapability,Class,dDataEntity,,,,Realization,informs Capability,directed,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Implements Service -&gt; dPhysicalService&#xA;Class,dController,Interface,dPhysicalService,,,,Association,Implements Service,directed,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,Class,dController,,,,Association,Implements Service,from,Implements Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Interface,dPhysicalService,Association,Implements Service,directed,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Class,dController,Association,Implements Service,from,,Implements Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Governs -&gt; dView&#xA;Class,dController,Class,dView,,,,Association,Governs,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,Class,dController,,,,Association,Governs,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dView,Association,Governs,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,,,,Class,dController,Association,Governs,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; Controlls -&gt; dModelClass&#xA;Class,dController,Class,dModelClass,,,,Association,Controlls,directed,Controlls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,Class,dController,,,,Association,Controlls,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dModelClass,Association,Controlls,directed,,Controlls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dController,Association,Controlls,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; isImplementedBy -&gt; dBusinessUseCase&#xA;Class,dController,UseCase,dBusinessUseCase,,,,Realization,isImplementedBy,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,Class,dController,,,,Realization,isImplementedBy,from,Is implemented by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,UseCase,dBusinessUseCase,Realization,isImplementedBy,directed,,implements Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,Class,dController,Realization,isImplementedBy,from,,Is implemented by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dController -&gt; dActionKey -&gt; dController&#xA;Class,dController,Class,dController,,,,Dependency,dActionKey,directed,target Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,Class,dController,,,,Dependency,dActionKey,from,Source Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dController,Dependency,dActionKey,directed,,target Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dController,Dependency,dActionKey,from,,Source Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDataEntity -&gt; AssociatedEntity -&gt; dDataEntity&#xA;Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,directed,Is connected to Source Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,from,Is connected to Target Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,directed,,Is connected to Source Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,from,,Is connected to Target Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDecision -&gt; isMakingUseOf -&gt; dInitiative&#xA;Class,dDecision,Activity,dInitiative,,,,Association,isMakingUseOf,directed,is used in Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,Class,dDecision,,,,Association,isMakingUseOf,from,Makes Use Of Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDecision,,,,Activity,dInitiative,Association,isMakingUseOf,directed,,is used in Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Class,dDecision,Association,isMakingUseOf,from,,Makes Use Of Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDecision -&gt; refers To -&gt; dPrinciple&#xA;Class,dDecision,Class,dPrinciple,,,,Dependency,refers To,directed,refers To Principle,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dPrinciple,Class,dDecision,,,,Dependency,refers To,from,is referenced by Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDecision,,,,Class,dPrinciple,Dependency,refers To,directed,,refers To Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dPrinciple,,,,Class,dDecision,Dependency,refers To,from,,is referenced by Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dDeploymentNode -&gt; isPhysicallyHostedBy -&gt; dApplicationComponent&#xA;Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,isPhysicallyHostedBy,directed,Hosts Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,isPhysicallyHostedBy,from,is Hosted By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,isPhysicallyHostedBy,directed,,Hosts Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,isPhysicallyHostedBy,from,,is Hosted By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dEvent -&gt;  -&gt; dBusinessProcess&#xA;Event,dEvent,Activity,dBusinessProcess,,,,Association,,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Event,dEvent,,,,Association,,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Event,dEvent,,,,Activity,dBusinessProcess,Association,,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Event,dEvent,Association,,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dFeature -&gt; isSatisfiedBy -&gt; dRequirement&#xA;Class,dFeature,Class,dRequirement,,,,Realization,isSatisfiedBy,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dFeature,,,,Realization,isSatisfiedBy,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dFeature,,,,Class,dRequirement,Realization,isSatisfiedBy,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dFeature,Realization,isSatisfiedBy,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dGoal -&gt; has Milestone -&gt; dObjective&#xA;Class,dGoal,Class,dObjective,,,,Aggregation,has Milestone,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObjective,Class,dGoal,,,,Aggregation,has Milestone,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dObjective,Aggregation,has Milestone,from,,Has Objective,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObjective,,,,Class,dGoal,Aggregation,has Milestone,to,,is related to Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dGrowthPackage -&gt; is delivered by -&gt; dInitiative&#xA;Package,dGrowthPackage,Activity,dInitiative,,,,Composition,is delivered by,from, is delivered by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,Package,dGrowthPackage,,,,Composition,is delivered by,to,is part of a Package,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,,,,Activity,dInitiative,Composition,is delivered by,from,, is delivered by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Package,dGrowthPackage,Composition,is delivered by,to,,is part of a Package,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dInitiative -&gt; IncreasesMaturityOf -&gt; dCapability&#xA;Activity,dInitiative,Class,dCapability,,,,Association,IncreasesMaturityOf,directed,Increases Maturity Of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,Activity,dInitiative,,,,Association,IncreasesMaturityOf,from,is matured by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dInitiative,,,,Class,dCapability,Association,IncreasesMaturityOf,directed,,Increases Maturity Of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Activity,dInitiative,Association,IncreasesMaturityOf,from,,is matured by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dIssue -&gt; StopTheRealizationOf -&gt; dRequirement&#xA;Class,dIssue,Class,dRequirement,,,,Association,StopTheRealizationOf,directed,stop Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dIssue,,,,Association,StopTheRealizationOf,from,is stopped by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dIssue,,,,Class,dRequirement,Association,StopTheRealizationOf,directed,,stop Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dIssue,Association,StopTheRealizationOf,from,,is stopped by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dIssue -&gt; realized by Issue -&gt; dRisk&#xA;Class,dIssue,Class,dRisk,,,,Realization,realized by Issue,directed,is realizing Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,Class,dIssue,,,,Realization,realized by Issue,from,is realized by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dIssue,,,,Class,dRisk,Realization,realized by Issue,directed,,is realizing Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dIssue,Realization,realized by Issue,from,,is realized by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dLocation -&gt; Hosts Node -&gt; dDeploymentNode&#xA;Class,dLocation,Node,dDeploymentNode,,,,Aggregation,Hosts Node,from, Hosts Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,Class,dLocation,,,,Aggregation,Hosts Node,to,Is hosted in Location,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dLocation,,,,Node,dDeploymentNode,Aggregation,Hosts Node,from,, Hosts Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Class,dLocation,Aggregation,Hosts Node,to,,Is hosted in Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dLogicalAppComponent -&gt; exposes Biz Service -&gt; dBusinessService&#xA;Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,exposes Biz Service,directed,application runs service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,exposes Biz Service,from,service run by application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,exposes Biz Service,directed,,application runs service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,exposes Biz Service,from,,service run by application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementArea -&gt; aggregates categories -&gt; dMeasurementCategory&#xA;Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,aggregates categories,from,aggregates categories,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,aggregates categories,to,has Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementArea,,,,Class,dMeasurementCategory,Aggregation,aggregates categories,from,,aggregates categories,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,,,,Class,dMeasurementArea,Aggregation,aggregates categories,to,,has Measurement Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementCategory -&gt; aggregates Groups -&gt; dMeasurementGrouping&#xA;Class,dMeasurementCategory,Class,dMeasurementGrouping,,,,Aggregation,aggregates Groups,from,aggregates Groups,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,Class,dMeasurementCategory,,,,Aggregation,aggregates Groups,to,has Category,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementCategory,,,,Class,dMeasurementGrouping,Aggregation,aggregates Groups,from,,aggregates Groups,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,,,,Class,dMeasurementCategory,Aggregation,aggregates Groups,to,,has Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dMeasurementGrouping -&gt; aggregates KPI -&gt; dMeasurementIndicator&#xA;Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,aggregates KPI,from,aggregates KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,aggregates KPI,to,part of a Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,aggregates KPI,from,,aggregates KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,aggregates KPI,to,,part of a Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dModelClass -&gt; RealizesEntity -&gt; dDataEntity&#xA;Class,dModelClass,Class,dDataEntity,,,,Realization,RealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dModelClass,,,,Realization,RealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dDataEntity,Realization,RealizesEntity,directed,,Realizes Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dModelClass,Realization,RealizesEntity,from,,is realized by Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dModelClass -&gt; ProvidesPersistenceFor -&gt; dTable&#xA;Class,dModelClass,Class,dTable,,,,Association,ProvidesPersistenceFor,directed,is Saved in a Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,from,Provides Persistence For Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceFor,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dNetwork -&gt; NetworkContainsNode -&gt; dDeploymentNode&#xA;Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contain sNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a network,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contain sNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofModel -&gt; dModelClass&#xA;Class,dObject,Class,dModelClass,,,,Dependency,InstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,Class,dObject,,,,Dependency,InstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dModelClass,Dependency,InstanceofModel,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dModelClass,,,,Class,dObject,Dependency,InstanceofModel,from,,Istance of Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofController -&gt; dController&#xA;Class,dObject,Class,dController,,,,Dependency,InstanceofController,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,Class,dObject,,,,Dependency,InstanceofController,from,Istance of Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dController,Dependency,InstanceofController,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dController,,,,Class,dObject,Dependency,InstanceofController,from,,Istance of Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dObject -&gt; InstanceofView -&gt; dView&#xA;Class,dObject,Class,dView,,,,Dependency,InstanceofView,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,Class,dObject,,,,Dependency,InstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dObject,,,,Class,dView,Dependency,InstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dView,,,,Class,dObject,Dependency,InstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOpinion -&gt; dDiscord -&gt; dOpinion&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,directed,is in discord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,from,is in discord with Original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dDiscord,directed,,is in discord with other Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dDiscord,from,,is in discord with Original Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOpinion -&gt; dAccord -&gt; dOpinion&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dAccord,directed,is in accord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Class,dOpinion,,,,Association,dAccord,from,is in accord with original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dAccord,directed,,is in accord with other Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Class,dOpinion,Association,dAccord,from,,is in accord with original Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dOrganizationUnit -&gt; has Stakeholders -&gt; dStakeholder&#xA;Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,has Stakeholders,directed,has Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,has Stakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,has Stakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,has Stakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dPhysicalService -&gt; Implements -&gt; dBusinessService&#xA;Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,Implements,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,Implements,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,Implements,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,Implements,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dProduct -&gt; Includes Process -&gt; dBusinessProcess&#xA;Component,dProduct,Activity,dBusinessProcess,,,,Aggregation,Includes Process,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Component,dProduct,,,,Aggregation,Includes Process,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dProduct,,,,Activity,dBusinessProcess,Aggregation,Includes Process,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Component,dProduct,Aggregation,Includes Process,to,,Is part of Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dProgram -&gt; is organized In -&gt; dGrowthPackage&#xA;Package,dProgram,Package,dGrowthPackage,,,,Composition,is organized In,from,is organized In Packages,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,Package,dProgram,,,,Composition,is organized In,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dProgram,,,,Package,dGrowthPackage,Composition,is organized In,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Package,dGrowthPackage,,,,Package,dProgram,Composition,is organized In,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRequirement -&gt; is related to -&gt; dGoal&#xA;Class,dRequirement,Class,dGoal,,,,Association,is related to,directed,specifies Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,Class,dRequirement,,,,Association,is related to,from,is specified by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dGoal,Association,is related to,directed,,specifies Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dGoal,,,,Class,dRequirement,Association,is related to,from,,is specified by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRequirement -&gt; Contains Requirement -&gt; dRequirement&#xA;Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,from,is contained by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,to,Contains Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,from,,is contained by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,to,,Contains Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dResource -&gt; supports -&gt; dCapability&#xA;Class,dResource,Class,dCapability,,,,Association,supports,directed,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,Class,dResource,,,,Association,supports,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,,,,Class,dCapability,Association,supports,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dCapability,,,,Class,dResource,Association,supports,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; is related to risk -&gt; dRisk&#xA;Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; Resource Risk -&gt; dResource&#xA;Class,dRisk,Class,dResource,,,,Association,Resource Risk,directed,impact Resouce,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,Class,dRisk,,,,Association,Resource Risk,from,is impacted by Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Class,dResource,Association,Resource Risk,directed,,impact Resouce,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dResource,,,,Class,dRisk,Association,Resource Risk,from,,is impacted by Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRisk -&gt; Application Risk -&gt; dApplicationComponent&#xA;Class,dRisk,Component,dApplicationComponent,,,,Dependency,Application Risk,directed,is related to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Class,dRisk,,,,Dependency,Application Risk,from,has Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dRisk,,,,Component,dApplicationComponent,Dependency,Application Risk,directed,,is related to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Class,dRisk,Dependency,Application Risk,from,,has Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRole -&gt; is Associated To -&gt; dOrganizationUnit&#xA;Actor,dRole,Class,dOrganizationUnit,,,,Association,is Associated To,directed,works in Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,Actor,dRole,,,,Association,is Associated To,from, has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Class,dOrganizationUnit,Association,is Associated To,directed,,works in Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOrganizationUnit,,,,Actor,dRole,Association,is Associated To,from,, has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dRole -&gt; Consumes Service -&gt; dBusinessService&#xA;Actor,dRole,Activity,dBusinessService,,,,Association,Consumes Service,directed,Consumes Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,Actor,dRole,,,,Association,Consumes Service,from,is consumed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dRole,,,,Activity,dBusinessService,Association,Consumes Service,directed,,Consumes Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessService,,,,Actor,dRole,Association,Consumes Service,from,,is consumed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dStakeholder -&gt; Has Inner Opinion -&gt; dOpinionInner&#xA;Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed,Has Inner Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOpinionInner,Association,Has Inner Opinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinionInner,,,,Actor,dStakeholder,Association,Has Inner Opinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dStakeholder -&gt; Has Opinion -&gt; dOpinion&#xA;Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dTable -&gt; isFunctionallyImplementedBy -&gt; dDataEntity&#xA;Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dTest -&gt; dTest_ApplicationComponet -&gt; dApplicationComponent&#xA;Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponet,directed,testd application component,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponet,from,is tested by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Class,dTest,,,,Component,dApplicationComponent,Association,dTest_ApplicationComponet,directed,,testd application component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Component,dApplicationComponent,,,,Class,dTest,Association,dTest_ApplicationComponet,from,,is tested by test,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dUserStory -&gt;  -&gt; dBusinessUseCase&#xA;UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;// dValueStream -&gt; Includes Processes -&gt; dBusinessProcess&#xA;Activity,dValueStream,Activity,dBusinessProcess,,,,Composition,Includes Processes,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dValueStream,,,,Activity,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;Activity,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,&#xA;"/>
 	</Content>
 </UMLProfile></UMLProfiles><TaggedValueTypes><RefData version="1.0" exporter="EA.25"><DataSet name="Property Types" table="t_propertytypes" filter="Property='#Property#'"><DataRow><Column name="Property" value="Alternatives"/><Column name="Description" value="A list of alternatives and explanations"/><Column name="Notes" value="Type=Memo;"/></DataRow><DataRow><Column name="Property" value="Application Component to Capability"/><Column name="Description" value="Matrix Overlays"/><Column name="Notes" value="Type=Enum;Values=;MatrixOverlay=true;"/></DataRow><DataRow><Column name="Property" value="BizCriticality"/><Column name="Description" value="How critical is this application for the business"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="BizSatisfaction"/><Column name="Description" value="How happy is the business with this app"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="CapabilityLevel"/><Column name="Description" value="level in the hierarchy"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=0;&#xA;UpperBound=10;&#xA;Default=1;"/></DataRow><DataRow><Column name="Property" value="Components to Logical Application"/><Column name="Description" value="Matrix Overlays"/><Column name="Notes" value="Type=Custom;ValidChars=;MatrixOverlay=true;"/></DataRow><DataRow><Column name="Property" value="Cost"/><Column name="Description" value="Cost in 100K"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=10;&#xA;UpperBound=1000;&#xA;Default=100;"/></DataRow><DataRow><Column name="Property" value="DetailedDescription"/><Column name="Description" value="detailed description of the initiative"/><Column name="Notes" value="Type=Memo;"/></DataRow><DataRow><Column name="Property" value="EstimatedEffort"/><Column name="Description" value="time in hours expected to deliver this story"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=8;"/></DataRow><DataRow><Column name="Property" value="finishDate"/><Column name="Description" value="Finish Date"/><Column name="Notes" value="Type=Date;"/></DataRow><DataRow><Column name="Property" value="Impacted Capability"/><Column name="Description" value="the main capability impacted by an initiative"/><Column name="Notes" value="Type=RefGUIDList;&#xA;Stereotypes=dCapability;"/></DataRow><DataRow><Column name="Property" value="InitiativeDuration"/><Column name="Description" value="The lenght of the initiative in weeks"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=52;&#xA;Default=6;"/></DataRow><DataRow><Column name="Property" value="ITSatisfaction"/><Column name="Description" value="How happy is IT with Technical debt"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="Justification"/><Column name="Description" value="Why the decision was made and a list of compliance"/><Column name="Notes" value="Type=Memo;"/></DataRow><DataRow><Column name="Property" value="LastStandardReviewDate"/><Column name="Description" value="Standard Review Date"/><Column name="Notes" value="Type=DateTime;"/></DataRow><DataRow><Column name="Property" value="Likehood"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="Logical Application to Capability"/><Column name="Description" value="Matrix Overlays"/><Column name="Notes" value="Type=Custom;ValidChars=;MatrixOverlay=true;"/></DataRow><DataRow><Column name="Property" value="NextStandardReviewDate"/><Column name="Description" value="Next Standard review date"/><Column name="Notes" value="Type=Date;"/></DataRow><DataRow><Column name="Property" value="Owner"/><Column name="Description" value="Role owning an elelement"/><Column name="Notes" value="Type=RefGUID;Stereotypes=dRole;"/></DataRow><DataRow><Column name="Property" value="PrincipleMeasurement"/><Column name="Description" value="how we measure principle being applied"/><Column name="Notes" value="Type=RefGUID;Stereotypes=dMeasurementIndicator;"/></DataRow><DataRow><Column name="Property" value="Priority"/><Column name="Description" value="the priority for this element"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="Rank"/><Column name="Description" value="the rank for this initiative"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="RelatedDecisions"/><Column name="Description" value="list of Decisions related to the present one"/><Column name="Notes" value="Type=RefGUIDList;&#xA;Stereotypes=dDecision;"/></DataRow><DataRow><Column name="Property" value="RelatedProgram"/><Column name="Description" value="the program this initiative is part of"/><Column name="Notes" value="Type=RefGUID;&#xA;Stereotypes=dProgram;"/></DataRow><DataRow><Column name="Property" value="RetireDate"/><Column name="Description" value="the time when this element will be retired"/><Column name="Notes" value="Type=Date;"/></DataRow><DataRow><Column name="Property" value="Risk"/><Column name="Description" value="estimation of the risk"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="Severity"/><Column name="Description" value="impact of a risk"/><Column name="Notes" value="Type=Spin;&#xA;LowerBound=1;&#xA;UpperBound=100;&#xA;Default=50;"/></DataRow><DataRow><Column name="Property" value="Source"/><Column name="Description" value="the source or responsible of this element"/><Column name="Notes" value="Type=RefGUID;Stereotypes=dStakeholder;"/></DataRow><DataRow><Column name="Property" value="Stakeholder"/><Column name="Description" value="the main stakeholder for this Use case"/><Column name="Notes" value="Type=RefGUID;Stereotypes=dStakeHolder;"/></DataRow><DataRow><Column name="Property" value="StandardCreationDate"/><Column name="Description" value="Standard Creation Date"/><Column name="Notes" value="Type=Date;"/></DataRow><DataRow><Column name="Property" value="startDate"/><Column name="Description" value="Start Date"/><Column name="Notes" value="Type=Date;"/></DataRow><DataRow><Column name="Property" value="URL Tagged Value"/><Column name="Description" value="a generic URL tagged value"/><Column name="Notes" value="Type=URL;&#xA;Default=http://[YOURID].service-now.com/;"/></DataRow></DataSet></RefData></TaggedValueTypes><Images><RefData version="1.0" exporter="EA.25"><DataSet name="Model Images" table="t_image" filter="Name='#Name#'" stoplist=";ImageID;"><DataRow><Column name="ImageID" value="693912373"/><Column name="Name" value="dafEvent"/><Column name="Type" value="Metafile"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">AQAAAGwAAAAAAAAAAAAAAJIAAABzAAAAAAAAAAAAAAAyDwAABQwAACBFTUYA
 AAEAqB8AADkBAAADAAAAAAAAAAAAAAAAAAAAkwAAAHQAAAAmAAAAHgAAAAAA
