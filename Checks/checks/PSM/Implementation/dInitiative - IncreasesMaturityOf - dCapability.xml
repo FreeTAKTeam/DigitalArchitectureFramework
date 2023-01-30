@@ -68,8 +68,8 @@ AND  o.EA_GUID NOT IN
 (
 SELECT o.EA_GUID
 FROM t_object AS o
-INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
+INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
+INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dInitiative'
 AND  o2.Stereotype = 'dCapability'
 AND connector.Stereotype= 'IncreasesMaturityOf'

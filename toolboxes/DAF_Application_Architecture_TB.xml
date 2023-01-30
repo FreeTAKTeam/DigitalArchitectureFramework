@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='UTF-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="5.0 Alpha 4" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
+	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="5.0 Alpha 50" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Components" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -10,8 +10,9 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dApplicationFunction(UML::Class)" type="" description="" unit="" values="" default="Function"/>
+					<Tag name="DAF::dTest(UML::Class)" type="" description="" unit="" values="" default="Test"/>
 					<Tag name="DAF::dProduct" type="" description="" unit="" values="" default="Product"/>
+					<Tag name="DAF::dApplicationFunction(UML::Class)" type="" description="" unit="" values="" default="Function"/>
 					<Tag name="UML::Package" type="" description="" unit="" values="" default="Package"/>
 					<Tag name="DAF::dLogicalAppComponent" type="" description="" unit="" values="" default="Logical Application Component"/>
 					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
@@ -46,8 +47,9 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Relationships::isRunBy(UML::Association)" type="" description="" unit="" values="" default="Is Run By"/>
+					<Tag name="Relationships::dTest_ApplicationComponent(UML::Association)" type="" description="" unit="" values="" default="validates Component"/>
 					<Tag name="DAF::isDescribedBy" type="" description="" unit="" values="" default="Is Described By"/>
+					<Tag name="Relationships::isRunBy(UML::Association)" type="" description="" unit="" values="" default="Is Run By"/>
 					<Tag name="DAF::isSatisfiedBy" type="" description="" unit="" values="" default="Is Satisfied By"/>
 					<Tag name="DAF::isOperationalizedBy" type="" description="" unit="" values="" default="Is Operationalized By"/>
 					<Tag name="DAF::isDetailedBy" type="" description="" unit="" values="" default="Is Detailed By"/>
@@ -63,6 +65,7 @@
 					<Tag name="DAF::dManyToMany" type="" description="" unit="" values="" default="Many to Many Relationship"/>
 					<Tag name="DAF::isHostedBy" type="" description="" unit="" values="" default="Is Hosted By"/>
 					<Tag name="DAF::isMakingUseOf" type="" description="" unit="" values="" default="Is Making Use Of"/>
+					<Tag name="DAF::Ensure the correct  Operation of(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::isFunctionallyImplementedBy" type="" description="" unit="" values="" default="Is Functionally Implemented By"/>
 					<Tag name="DAF::isMeasuredBy" type="" description="" unit="" values="" default="Is Measured By"/>
 				</TaggedValues>

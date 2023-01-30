@@ -13,7 +13,7 @@ LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
 LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
 Inner join t_objectProperties p1 on p1.object_ID =  o1.Object_ID)
 
-Where p1.Property = ''Status''</Main>
+Where p1.Property = 'Status'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
