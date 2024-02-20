@@ -437,3 +437,18 @@ AND tam_app.Stereotype = 'dLogicalAppComponent'
 GROUP BY tam_app.Name
 ORDER BY SUM(cost_prop.Value) DESC
 Limit 15;
+
+
+--- Select Document template
+SELECT    DocName, t_document.ElementID, t_document.DocID, t_document.DocDate
+from  t_document
+where t_document.DocType = 'SSDOCSTYLE'
+
+
+-- select instance interface
+
+Select * 
+from t_object
+where t_object.name='Product Catalog Management API' 
+AND t_object.Object_Type = 'RequiredInterface'
+AND t_object.ea_guid = '{38C11A9B-0452-4470-B861-508320224A5E}'

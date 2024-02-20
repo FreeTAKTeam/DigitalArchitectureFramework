@@ -1,80 +1,81 @@
-// shpae ddecision
+//decision
 shape main
 {
-	layouttype="border";
-	noshadow=true;
-	
-	defsize(100,70);
-	startpath();
-	moveto(10,0);
-	lineto(90,0);
-	lineto(100,20);
-	lineto(100,80);
-	lineto(90,100);
-	lineto(10,100);
-	lineto(0,80);
-	lineto(0,20);
-	lineto(10,0);
-	endpath();
-	fillandstrokepath();
-	addsubshape("padding","n");
-	addsubshape("name","center");
-	
-	shape padding
-	{
-		preferredheight=20;
+	layouttype="topdown";
+	v_align="top";
+	h_align="center";
+	noShadow="true";
+		
+	if(hasproperty("rectanglenotation","0"))
+	{		
+				
+		defsize(100,100);
+		Rectangle(0,0,100,100);
+		AddSubShape("pip",100,20);
+		AddSubShape("Tags",100,110);
+		
+		shape pip
+		{		         	
+			v_align="top";
+			h_align="center";
+			editablefield = "name";
+			//setfillcolor(255,0,0);
+			rectangle(0, 0, 100, 100);	
+			//println("Tag Notation");
+		
+			println("#name#");
+		}	
+	shape Tags
+		{		
+		h_align="Left";
+		v_align="top";
+			
+		SetPenColor(GetUserBorderColor());
+		//setfillcolor(0,255,0);	
+		Rectangle(0,0,100,100);
+		println("Subject Area: #TAG:Subject Area#");
+		println("Topic: #TAG:Topic#");
+		println("Assumptions: #TAG:Assumptions#");
+		println("Alternatives: #TAG:Alternatives#");
+		println("Implications: #TAG:Implications#");
+		println("Decision: #TAG:Decision#");
+		println("Motivation: #TAG:Motivation#");
+		println("Related Decisions: #TAG:Alternatives#");				
+		}
 	}
-	
-	shape name
+	else
 	{
-		h_align="center";
-		print("#name#");
+		defsize(100,100);
+		Rectangle(0,0,100,100);
+		addsubshape("padding");
+		addsubshape("name");
+		
+		shape padding
+		{
+			preferredheight=20;
+			h_align="center";
+			v_align="top";
+			//println("padding");
+		}
+
+		shape name
+		{
+			h_align="center";
+			v_align="center";
+			setfillcolor(230,255,0);
+			SetPenColor(255,0,0);
+					
+			if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}  
+			println("#name#");
+		}
 	}
 }
 
-decoration composite
+decoration dDecisionDecoration
 {
-	orientation="SE";
-	if(hasproperty("iscomposite","true"))
-	{
-		ellipse(0,40,40,60);
-		ellipse(60,40,100,60);
-		moveto(30,50);
-		lineto(70,50);
-	}
-}
-
-decoration decisions
-{
-	orientation="ne";
-	SetOrigin("ne",-25,5);
-	SetPenColor(79,129,189);
-	SetPenWidth(5);
-		MoveTo(50,0);
-	LineTo(50,25);
-	LineTo(46,20);
-	
-	MoveTo(50,25);
-	LineTo(54,20);
-	SetPenWidth(1);
-	SetPenColor(79,129,189);
-	Moveto(50,25);
-	lineto(25,50);
-	lineto(50,75);
-	lineto(75,50);
-	LineTo(50,25);
-	SetPenColor(79,129,189);
-	SetPenWidth(5);
-	moveto(75,50);
-	LineTo(82,50);
-	lineto(82,75);
-	lineto(86,70);
-	moveto(82,75);
-	lineto(78,70);
-	MoveTo(50,75);
-	lineto(50,100);
-	lineto(54,95);
-	Moveto(50,100);
-	lineto(46,95);
-	
+	orientation="NE";
+	Image("dafDecision", 0,0,100,100);
 }
