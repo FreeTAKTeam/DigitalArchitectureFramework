@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:23:14 PM
+-- Generated 2024-02-28 10:50:11 AM
 --  dProgram (GroupName) connected with  dGrowthPackage (series)
 SELECT dProgram.Name as dProgram,  dGrowthPackage.Name as  dGrowthPackage
-FROM t_object AS dProgram
-INNER JOIN t_connector as connector ON dProgram.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dGrowthPackage ON connector.End_Object_ID =  dGrowthPackage.Object_ID
-WHERE dProgram.Stereotype='dGrowthPackage'
-AND  dGrowthPackage.Stereotype='dProgram'
+FROM t_object AS dGrowthPackage
+INNER JOIN t_connector as connector ON dGrowthPackage.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dProgram ON connector.End_Object_ID =  dProgram.Object_ID
+WHERE dProgram.Stereotype='dProgram'
+AND  dGrowthPackage.Stereotype='dGrowthPackage'
 AND connector.Stereotype='is organized In'

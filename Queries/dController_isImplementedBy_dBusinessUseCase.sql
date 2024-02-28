@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:19:48 PM
+-- Generated 2024-02-28 10:45:47 AM
 --  dController (GroupName) connected with  dBusinessUseCase (series)
 SELECT dController.Name as dController,  dBusinessUseCase.Name as  dBusinessUseCase
-FROM t_object AS dController
-INNER JOIN t_connector as connector ON dController.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessUseCase ON connector.End_Object_ID =  dBusinessUseCase.Object_ID
-WHERE dController.Stereotype='dBusinessUseCase'
-AND  dBusinessUseCase.Stereotype='dController'
+FROM t_object AS dBusinessUseCase
+INNER JOIN t_connector as connector ON dBusinessUseCase.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dController ON connector.End_Object_ID =  dController.Object_ID
+WHERE dController.Stereotype='dController'
+AND  dBusinessUseCase.Stereotype='dBusinessUseCase'
 AND connector.Stereotype='isImplementedBy'

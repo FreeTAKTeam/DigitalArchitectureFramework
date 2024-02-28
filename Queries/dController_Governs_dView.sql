@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:19:41 PM
+-- Generated 2024-02-28 10:45:37 AM
 --  dController (GroupName) connected with  dView (series)
 SELECT dController.Name as dController,  dView.Name as  dView
-FROM t_object AS dController
-INNER JOIN t_connector as connector ON dController.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dView ON connector.End_Object_ID =  dView.Object_ID
-WHERE dController.Stereotype='dView'
-AND  dView.Stereotype='dController'
+FROM t_object AS dView
+INNER JOIN t_connector as connector ON dView.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dController ON connector.End_Object_ID =  dController.Object_ID
+WHERE dController.Stereotype='dController'
+AND  dView.Stereotype='dView'
 AND connector.Stereotype='Governs'

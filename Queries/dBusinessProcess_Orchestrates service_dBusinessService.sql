@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:18:25 PM
+-- Generated 2024-02-28 10:44:06 AM
 --  dBusinessProcess (GroupName) connected with  dBusinessService (series)
 SELECT dBusinessProcess.Name as dBusinessProcess,  dBusinessService.Name as  dBusinessService
-FROM t_object AS dBusinessProcess
-INNER JOIN t_connector as connector ON dBusinessProcess.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessService ON connector.End_Object_ID =  dBusinessService.Object_ID
-WHERE dBusinessProcess.Stereotype='dBusinessService'
-AND  dBusinessService.Stereotype='dBusinessProcess'
+FROM t_object AS dBusinessService
+INNER JOIN t_connector as connector ON dBusinessService.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dBusinessProcess ON connector.End_Object_ID =  dBusinessProcess.Object_ID
+WHERE dBusinessProcess.Stereotype='dBusinessProcess'
+AND  dBusinessService.Stereotype='dBusinessService'
 AND connector.Stereotype='Orchestrates service'

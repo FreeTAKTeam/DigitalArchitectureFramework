@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-02-21 3:11:52 PM
+//generated:2024-02-28 10:42:41 AM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -340,3 +340,63 @@ Activity,dValueStream,Activity,dBusinessProcess,,,,Composition,Includes Processe
 Activity,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dValueStream,,,,Activity,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Attribute ->  -> dJSON_Type
+Attribute,dJSON_Attribute,Class,dJSON_Type,,,,Generalization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,Attribute,dJSON_Attribute,,,,Generalization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Attribute,dJSON_Attribute,,,,Class,dJSON_Type,Generalization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,,,,Attribute,dJSON_Attribute,Generalization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Datatype ->  -> dJSON_Type
+Class,dJSON_Datatype,Class,dJSON_Type,,,,Generalization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,Class,dJSON_Datatype,,,,Generalization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Datatype,,,,Class,dJSON_Type,Generalization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,,,,Class,dJSON_Datatype,Generalization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Element -> dJSONElement_associates_JSONElement -> dJSON_Element
+Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,directed,target JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,from,Source JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,directed,,target JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,from,,Source JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dPolymorphicCollection -> dJSON_Schema
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,directed,@baseType,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,from,@Type,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,directed,,@baseType,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,from,,@Type,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dJSON_SchemaSubSetGeneralizes_JSON_Schema -> dJSON_SchemaSubSet
+Class,dJSON_Schema,Class,dJSON_SchemaSubSet,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,Class,dJSON_Schema,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_SchemaSubSet,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,,,,Class,dJSON_Schema,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dSchema_Associates_Schema -> dJSON_Schema
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,directed,Target Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,from,Source Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,directed,,Target Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,from,,Source Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dSchemaGeneralizesSchema -> dJSON_Schema
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,directed,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,from,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,directed,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,from,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dSchemaAssociatesElement -> dJSON_Element
+Class,dJSON_Schema,Class,dJSON_Element,,,,Aggregation,dSchemaAssociatesElement,from,Associates Element,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,Class,dJSON_Schema,,,,Aggregation,dSchemaAssociatesElement,to,Associates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Element,Aggregation,dSchemaAssociatesElement,from,,Associates Element,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,,,,Class,dJSON_Schema,Aggregation,dSchemaAssociatesElement,to,,Associates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Schema -> dJSONSchemaRealizesModel -> dModelClass
+Class,dJSON_Schema,Class,dModelClass,,,,Realization,dJSONSchemaRealizesModel,directed,realizes Model Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,Class,dJSON_Schema,,,,Realization,dJSONSchemaRealizesModel,from,is realized by Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dModelClass,Realization,dJSONSchemaRealizesModel,directed,,realizes Model Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dJSON_Schema,Realization,dJSONSchemaRealizesModel,from,,is realized by Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dAPI -> TMF_ProvidedAPI -> TMF_ISC
+Interface,dAPI,Component,TMF_ISC,,,,Assembly,TMF_ProvidedAPI,directed,Is used in Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,TMF_ISC,Interface,dAPI,,,,Assembly,TMF_ProvidedAPI,from,Provided API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Component,TMF_ISC,Assembly,TMF_ProvidedAPI,directed,,Is used in Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,TMF_ISC,,,,Interface,dAPI,Assembly,TMF_ProvidedAPI,from,,Provided API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dAPI -> dAPIAggregatesSchema -> dJSON_Schema
+Interface,dAPI,Class,dJSON_Schema,,,,Aggregation,dAPIAggregatesSchema,from,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Interface,dAPI,,,,Aggregation,dAPIAggregatesSchema,to,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Class,dJSON_Schema,Aggregation,dAPIAggregatesSchema,from,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Interface,dAPI,Aggregation,dAPIAggregatesSchema,to,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dAPI ->  -> dPhysicalService
+Interface,dAPI,Interface,dPhysicalService,,,,Realization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Interface,dAPI,,,,Realization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Interface,dPhysicalService,Realization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Interface,dAPI,Realization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,

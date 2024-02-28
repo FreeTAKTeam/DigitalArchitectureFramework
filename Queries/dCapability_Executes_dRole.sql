@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:19:13 PM
+-- Generated 2024-02-28 10:45:06 AM
 --  dCapability (GroupName) connected with  dRole (series)
 SELECT dCapability.Name as dCapability,  dRole.Name as  dRole
-FROM t_object AS dCapability
-INNER JOIN t_connector as connector ON dCapability.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dRole ON connector.End_Object_ID =  dRole.Object_ID
-WHERE dCapability.Stereotype='dRole'
-AND  dRole.Stereotype='dCapability'
+FROM t_object AS dRole
+INNER JOIN t_connector as connector ON dRole.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dCapability ON connector.End_Object_ID =  dCapability.Object_ID
+WHERE dCapability.Stereotype='dCapability'
+AND  dRole.Stereotype='dRole'
 AND connector.Stereotype='Executes'

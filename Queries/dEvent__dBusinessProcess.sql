@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:20:19 PM
+-- Generated 2024-02-28 10:46:32 AM
 --  dEvent (GroupName) connected with  dBusinessProcess (series)
 SELECT dEvent.Name as dEvent,  dBusinessProcess.Name as  dBusinessProcess
-FROM t_object AS dEvent
-INNER JOIN t_connector as connector ON dEvent.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessProcess ON connector.End_Object_ID =  dBusinessProcess.Object_ID
-WHERE dEvent.Stereotype='dBusinessProcess'
-AND  dBusinessProcess.Stereotype='dEvent'
+FROM t_object AS dBusinessProcess
+INNER JOIN t_connector as connector ON dBusinessProcess.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dEvent ON connector.End_Object_ID =  dEvent.Object_ID
+WHERE dEvent.Stereotype='dEvent'
+AND  dBusinessProcess.Stereotype='dBusinessProcess'
 AND connector.Stereotype=''

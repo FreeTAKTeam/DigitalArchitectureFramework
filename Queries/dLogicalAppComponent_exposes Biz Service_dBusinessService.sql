@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:21:23 PM
+-- Generated 2024-02-28 10:47:38 AM
 --  dLogicalAppComponent (GroupName) connected with  dBusinessService (series)
 SELECT dLogicalAppComponent.Name as dLogicalAppComponent,  dBusinessService.Name as  dBusinessService
-FROM t_object AS dLogicalAppComponent
-INNER JOIN t_connector as connector ON dLogicalAppComponent.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessService ON connector.End_Object_ID =  dBusinessService.Object_ID
-WHERE dLogicalAppComponent.Stereotype='dBusinessService'
-AND  dBusinessService.Stereotype='dLogicalAppComponent'
+FROM t_object AS dBusinessService
+INNER JOIN t_connector as connector ON dBusinessService.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dLogicalAppComponent ON connector.End_Object_ID =  dLogicalAppComponent.Object_ID
+WHERE dLogicalAppComponent.Stereotype='dLogicalAppComponent'
+AND  dBusinessService.Stereotype='dBusinessService'
 AND connector.Stereotype='exposes Biz Service'

@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:22:18 PM
+-- Generated 2024-02-28 10:48:55 AM
 --  dObject (GroupName) connected with  dView (series)
 SELECT dObject.Name as dObject,  dView.Name as  dView
-FROM t_object AS dObject
-INNER JOIN t_connector as connector ON dObject.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dView ON connector.End_Object_ID =  dView.Object_ID
-WHERE dObject.Stereotype='dView'
-AND  dView.Stereotype='dObject'
+FROM t_object AS dView
+INNER JOIN t_connector as connector ON dView.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dObject ON connector.End_Object_ID =  dObject.Object_ID
+WHERE dObject.Stereotype='dObject'
+AND  dView.Stereotype='dView'
 AND connector.Stereotype='InstanceofView'

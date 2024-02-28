@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:20:04 PM
+-- Generated 2024-02-28 10:46:05 AM
 --  dDecision (GroupName) connected with  dInitiative (series)
 SELECT dDecision.Name as dDecision,  dInitiative.Name as  dInitiative
-FROM t_object AS dDecision
-INNER JOIN t_connector as connector ON dDecision.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dInitiative ON connector.End_Object_ID =  dInitiative.Object_ID
-WHERE dDecision.Stereotype='dInitiative'
-AND  dInitiative.Stereotype='dDecision'
+FROM t_object AS dInitiative
+INNER JOIN t_connector as connector ON dInitiative.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dDecision ON connector.End_Object_ID =  dDecision.Object_ID
+WHERE dDecision.Stereotype='dDecision'
+AND  dInitiative.Stereotype='dInitiative'
 AND connector.Stereotype='isMakingUseOf'

@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:23:51 PM
+-- Generated 2024-02-28 10:50:53 AM
 --  dRisk (GroupName) connected with  dResource (series)
 SELECT dRisk.Name as dRisk,  dResource.Name as  dResource
-FROM t_object AS dRisk
-INNER JOIN t_connector as connector ON dRisk.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dResource ON connector.End_Object_ID =  dResource.Object_ID
-WHERE dRisk.Stereotype='dResource'
-AND  dResource.Stereotype='dRisk'
+FROM t_object AS dResource
+INNER JOIN t_connector as connector ON dResource.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dRisk ON connector.End_Object_ID =  dRisk.Object_ID
+WHERE dRisk.Stereotype='dRisk'
+AND  dResource.Stereotype='dResource'
 AND connector.Stereotype='Resource Risk'

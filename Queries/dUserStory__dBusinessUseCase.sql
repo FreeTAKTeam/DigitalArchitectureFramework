@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:24:32 PM
+-- Generated 2024-02-28 10:52:12 AM
 --  dUserStory (GroupName) connected with  dBusinessUseCase (series)
 SELECT dUserStory.Name as dUserStory,  dBusinessUseCase.Name as  dBusinessUseCase
-FROM t_object AS dUserStory
-INNER JOIN t_connector as connector ON dUserStory.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessUseCase ON connector.End_Object_ID =  dBusinessUseCase.Object_ID
-WHERE dUserStory.Stereotype='dBusinessUseCase'
-AND  dBusinessUseCase.Stereotype='dUserStory'
+FROM t_object AS dBusinessUseCase
+INNER JOIN t_connector as connector ON dBusinessUseCase.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dUserStory ON connector.End_Object_ID =  dUserStory.Object_ID
+WHERE dUserStory.Stereotype='dUserStory'
+AND  dBusinessUseCase.Stereotype='dBusinessUseCase'
 AND connector.Stereotype=''

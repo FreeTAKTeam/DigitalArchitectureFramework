@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:21:31 PM
+-- Generated 2024-02-28 10:47:48 AM
 --  dMeasurementCategory (GroupName) connected with  dMeasurementGrouping (series)
 SELECT dMeasurementCategory.Name as dMeasurementCategory,  dMeasurementGrouping.Name as  dMeasurementGrouping
-FROM t_object AS dMeasurementCategory
-INNER JOIN t_connector as connector ON dMeasurementCategory.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dMeasurementGrouping ON connector.End_Object_ID =  dMeasurementGrouping.Object_ID
-WHERE dMeasurementCategory.Stereotype='dMeasurementGrouping'
-AND  dMeasurementGrouping.Stereotype='dMeasurementCategory'
+FROM t_object AS dMeasurementGrouping
+INNER JOIN t_connector as connector ON dMeasurementGrouping.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dMeasurementCategory ON connector.End_Object_ID =  dMeasurementCategory.Object_ID
+WHERE dMeasurementCategory.Stereotype='dMeasurementCategory'
+AND  dMeasurementGrouping.Stereotype='dMeasurementGrouping'
 AND connector.Stereotype='aggregates Groups'

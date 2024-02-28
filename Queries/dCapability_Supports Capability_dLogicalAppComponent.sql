@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:19:24 PM
+-- Generated 2024-02-28 10:45:18 AM
 --  dCapability (GroupName) connected with  dLogicalAppComponent (series)
 SELECT dCapability.Name as dCapability,  dLogicalAppComponent.Name as  dLogicalAppComponent
-FROM t_object AS dCapability
-INNER JOIN t_connector as connector ON dCapability.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dLogicalAppComponent ON connector.End_Object_ID =  dLogicalAppComponent.Object_ID
-WHERE dCapability.Stereotype='dLogicalAppComponent'
-AND  dLogicalAppComponent.Stereotype='dCapability'
+FROM t_object AS dLogicalAppComponent
+INNER JOIN t_connector as connector ON dLogicalAppComponent.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dCapability ON connector.End_Object_ID =  dCapability.Object_ID
+WHERE dCapability.Stereotype='dCapability'
+AND  dLogicalAppComponent.Stereotype='dLogicalAppComponent'
 AND connector.Stereotype='Supports Capability'

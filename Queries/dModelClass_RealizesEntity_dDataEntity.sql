@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:21:47 PM
+-- Generated 2024-02-28 10:48:11 AM
 --  dModelClass (GroupName) connected with  dDataEntity (series)
 SELECT dModelClass.Name as dModelClass,  dDataEntity.Name as  dDataEntity
-FROM t_object AS dModelClass
-INNER JOIN t_connector as connector ON dModelClass.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dDataEntity ON connector.End_Object_ID =  dDataEntity.Object_ID
-WHERE dModelClass.Stereotype='dDataEntity'
-AND  dDataEntity.Stereotype='dModelClass'
+FROM t_object AS dDataEntity
+INNER JOIN t_connector as connector ON dDataEntity.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dModelClass ON connector.End_Object_ID =  dModelClass.Object_ID
+WHERE dModelClass.Stereotype='dModelClass'
+AND  dDataEntity.Stereotype='dDataEntity'
 AND connector.Stereotype='RealizesEntity'

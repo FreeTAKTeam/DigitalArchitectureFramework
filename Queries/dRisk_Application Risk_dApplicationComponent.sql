@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:23:52 PM
+-- Generated 2024-02-28 10:50:54 AM
 --  dRisk (GroupName) connected with  dApplicationComponent (series)
 SELECT dRisk.Name as dRisk,  dApplicationComponent.Name as  dApplicationComponent
-FROM t_object AS dRisk
-INNER JOIN t_connector as connector ON dRisk.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dApplicationComponent ON connector.End_Object_ID =  dApplicationComponent.Object_ID
-WHERE dRisk.Stereotype='dApplicationComponent'
-AND  dApplicationComponent.Stereotype='dRisk'
+FROM t_object AS dApplicationComponent
+INNER JOIN t_connector as connector ON dApplicationComponent.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dRisk ON connector.End_Object_ID =  dRisk.Object_ID
+WHERE dRisk.Stereotype='dRisk'
+AND  dApplicationComponent.Stereotype='dApplicationComponent'
 AND connector.Stereotype='Application Risk'

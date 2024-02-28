@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:22:54 PM
+-- Generated 2024-02-28 10:49:42 AM
 --  dPhysicalService (GroupName) connected with  dBusinessService (series)
 SELECT dPhysicalService.Name as dPhysicalService,  dBusinessService.Name as  dBusinessService
-FROM t_object AS dPhysicalService
-INNER JOIN t_connector as connector ON dPhysicalService.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dBusinessService ON connector.End_Object_ID =  dBusinessService.Object_ID
-WHERE dPhysicalService.Stereotype='dBusinessService'
-AND  dBusinessService.Stereotype='dPhysicalService'
+FROM t_object AS dBusinessService
+INNER JOIN t_connector as connector ON dBusinessService.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dPhysicalService ON connector.End_Object_ID =  dPhysicalService.Object_ID
+WHERE dPhysicalService.Stereotype='dPhysicalService'
+AND  dBusinessService.Stereotype='dBusinessService'
 AND connector.Stereotype='Implements'

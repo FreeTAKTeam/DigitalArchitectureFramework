@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:19:09 PM
+-- Generated 2024-02-28 10:45:01 AM
 --  dCapability (GroupName) connected with  dMeasurementIndicator (series)
 SELECT dCapability.Name as dCapability,  dMeasurementIndicator.Name as  dMeasurementIndicator
-FROM t_object AS dCapability
-INNER JOIN t_connector as connector ON dCapability.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dMeasurementIndicator ON connector.End_Object_ID =  dMeasurementIndicator.Object_ID
-WHERE dCapability.Stereotype='dMeasurementIndicator'
-AND  dMeasurementIndicator.Stereotype='dCapability'
+FROM t_object AS dMeasurementIndicator
+INNER JOIN t_connector as connector ON dMeasurementIndicator.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dCapability ON connector.End_Object_ID =  dCapability.Object_ID
+WHERE dCapability.Stereotype='dCapability'
+AND  dMeasurementIndicator.Stereotype='dMeasurementIndicator'
 AND connector.Stereotype='isMeasuredBy'

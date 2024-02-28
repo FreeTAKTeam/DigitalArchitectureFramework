@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:18:15 PM
+-- Generated 2024-02-28 10:43:53 AM
 --  dApplicationComponent (GroupName) connected with  dApplicationFunction (series)
 SELECT dApplicationComponent.Name as dApplicationComponent,  dApplicationFunction.Name as  dApplicationFunction
-FROM t_object AS dApplicationComponent
-INNER JOIN t_connector as connector ON dApplicationComponent.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dApplicationFunction ON connector.End_Object_ID =  dApplicationFunction.Object_ID
-WHERE dApplicationComponent.Stereotype='dApplicationFunction'
-AND  dApplicationFunction.Stereotype='dApplicationComponent'
+FROM t_object AS dApplicationFunction
+INNER JOIN t_connector as connector ON dApplicationFunction.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dApplicationComponent ON connector.End_Object_ID =  dApplicationComponent.Object_ID
+WHERE dApplicationComponent.Stereotype='dApplicationComponent'
+AND  dApplicationFunction.Stereotype='dApplicationFunction'
 AND connector.Stereotype='dApplicationAgregatesFunction'

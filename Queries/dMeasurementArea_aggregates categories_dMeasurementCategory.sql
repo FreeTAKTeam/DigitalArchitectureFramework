@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:21:27 PM
+-- Generated 2024-02-28 10:47:43 AM
 --  dMeasurementArea (GroupName) connected with  dMeasurementCategory (series)
 SELECT dMeasurementArea.Name as dMeasurementArea,  dMeasurementCategory.Name as  dMeasurementCategory
-FROM t_object AS dMeasurementArea
-INNER JOIN t_connector as connector ON dMeasurementArea.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dMeasurementCategory ON connector.End_Object_ID =  dMeasurementCategory.Object_ID
-WHERE dMeasurementArea.Stereotype='dMeasurementCategory'
-AND  dMeasurementCategory.Stereotype='dMeasurementArea'
+FROM t_object AS dMeasurementCategory
+INNER JOIN t_connector as connector ON dMeasurementCategory.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dMeasurementArea ON connector.End_Object_ID =  dMeasurementArea.Object_ID
+WHERE dMeasurementArea.Stereotype='dMeasurementArea'
+AND  dMeasurementCategory.Stereotype='dMeasurementCategory'
 AND connector.Stereotype='aggregates categories'
