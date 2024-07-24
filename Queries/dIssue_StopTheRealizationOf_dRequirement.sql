@@ -1,9 +1,9 @@
--- Generated 2022-12-20 12:21:00 PM
+-- Generated 2024-07-24 3:43:50 PM
 --  dIssue (GroupName) connected with  dRequirement (series)
 SELECT dIssue.Name as dIssue,  dRequirement.Name as  dRequirement
-FROM t_object AS dIssue
-INNER JOIN t_connector as connector ON dIssue.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS dRequirement ON connector.End_Object_ID =  dRequirement.Object_ID
-WHERE dIssue.Stereotype='dRequirement'
-AND  dRequirement.Stereotype='dIssue'
+FROM t_object AS dRequirement
+INNER JOIN t_connector as connector ON dRequirement.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS dIssue ON connector.End_Object_ID =  dIssue.Object_ID
+WHERE dIssue.Stereotype='dIssue'
+AND  dRequirement.Stereotype='dRequirement'
 AND connector.Stereotype='StopTheRealizationOf'

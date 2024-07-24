@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:47:48 AM
+-- Generated 2024-07-24 3:45:22 PM
 --  dMeasurementCategory (GroupName) connected with  dMeasurementGrouping (series)
 SELECT dMeasurementCategory.Name as dMeasurementCategory,  dMeasurementGrouping.Name as  dMeasurementGrouping
 FROM t_object AS dMeasurementGrouping

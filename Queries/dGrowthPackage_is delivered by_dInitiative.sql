@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:47:06 AM
+-- Generated 2024-07-24 3:43:34 PM
 --  dGrowthPackage (GroupName) connected with  dInitiative (series)
 SELECT dGrowthPackage.Name as dGrowthPackage,  dInitiative.Name as  dInitiative
 FROM t_object AS dInitiative

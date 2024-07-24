@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:46:32 AM
+-- Generated 2024-07-24 3:43:08 PM
 --  dEvent (GroupName) connected with  dBusinessProcess (series)
 SELECT dEvent.Name as dEvent,  dBusinessProcess.Name as  dBusinessProcess
 FROM t_object AS dBusinessProcess

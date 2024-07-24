@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:44:46 AM
+-- Generated 2024-07-24 3:41:45 PM
 --  dBusinessUseCase (GroupName) connected with  dFeature (series)
 SELECT dBusinessUseCase.Name as dBusinessUseCase,  dFeature.Name as  dFeature
 FROM t_object AS dFeature

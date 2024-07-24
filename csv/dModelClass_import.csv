@@ -1,1 +1,1 @@
-Name, Notes, Version, Status
+Name, Notes, Version, Status,TagValue_DAF::child_order,TagValue_DAF::display_value,TagValue_DAF::initparams,TagValue_DAF::is_searchable,TagValue_DAF::is_soap,TagValue_DAF::orderby,TagValue_DAF::parent_order,TagValue_DAF::pk_name

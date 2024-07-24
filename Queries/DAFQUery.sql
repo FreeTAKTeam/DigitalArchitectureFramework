@@ -123,7 +123,6 @@ AND dMeasurementGrouping.Stereotype = ('dMeasurementGrouping')
 GROUP BY dMeasurementGrouping.Name
 ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
-
 --- select the average value and the expected value of the KPI aggregated under a measurement area
 SELECT AVG(CAST(CurrentLevel.Value as INT)) AS yValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS xValue, dMeasurementGrouping.Name AS Series
 FROM t_object AS KPI
@@ -165,8 +164,27 @@ AND CurrentLevel.Property = ('CurrentLevel')
 AND BusinessCapability.Stereotype = ('dCapability')
 
 
+--- select all Measuremnt indicators under a Process
+SELECT   AVG(CAST ( CurrentLevel.Value as Int))   AS ChartValue, 
+ AVG(CAST ( SatisfactionLevel.Value as Int))   AS SatisfactionLevel, 
+dMeasurementGrouping.Name AS Series
+FROM t_object AS KPI
+           INNER JOIN  t_objectproperties AS CurrentLevel ON 
+           (CurrentLevel.Object_ID = KPI.Object_ID AND    CurrentLevel.Property           = ('CurrentLevel'))
+             INNER JOIN  t_objectproperties AS SatisfactionLevel ON 
+           (SatisfactionLevel.Object_ID = KPI.Object_ID AND    SatisfactionLevel.Property           = ('SatisfactionLevel'))
+           INNER JOIN t_connector AS conn ON conn.End_Object_ID = KPI.Object_ID
+           INNER JOIN t_object AS dMeasurementGrouping ON conn.Start_Object_ID = dMeasurementGrouping.Object_ID
+WHERE
+           KPI.Stereotype                      = ('TMF_Metric')
+         
+           AND dMeasurementGrouping.Stereotype = ('TMF_Process')
+ 
+GROUP BY dMeasurementGrouping.Name
 
--- SELECT all the features that are set to be true and realize the maturity level of a Business capability
+
+
+-- SELECT all the features that are set to be true and realize the maturity level of a Business Capability
 SELECT feature.Name AS FeatName, Capability.Name AS CapName 
 FROM t_object AS feature
 

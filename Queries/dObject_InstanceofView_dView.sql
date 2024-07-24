@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:48:55 AM
+-- Generated 2024-07-24 3:46:13 PM
 --  dObject (GroupName) connected with  dView (series)
 SELECT dObject.Name as dObject,  dView.Name as  dView
 FROM t_object AS dView

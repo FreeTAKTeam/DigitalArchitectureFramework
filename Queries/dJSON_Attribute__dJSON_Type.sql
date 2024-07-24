@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:52:36 AM
+-- Generated 2024-07-24 3:44:04 PM
 --  dJSON_Attribute (GroupName) connected with  dJSON_Type (series)
 SELECT dJSON_Attribute.Name as dJSON_Attribute,  dJSON_Type.Name as  dJSON_Type
 FROM t_object AS dJSON_Type

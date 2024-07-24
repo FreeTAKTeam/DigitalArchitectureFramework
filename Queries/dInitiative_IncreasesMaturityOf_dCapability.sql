@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:47:16 AM
+-- Generated 2024-07-24 3:43:42 PM
 --  dInitiative (GroupName) connected with  dCapability (series)
 SELECT dInitiative.Name as dInitiative,  dCapability.Name as  dCapability
 FROM t_object AS dCapability

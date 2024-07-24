@@ -1,1 +1,1 @@
-Name, Notes, Version, Status
+Name, Notes, Version, Status,TagValue_DAF::Category,TagValue_DAF::ID,TagValue_DAF::BizSatisfaction,TagValue_DAF::ITSatisfaction,TagValue_DAF::BizCriticality,TagValue_DAF::Cost,TagValue_DAF::InvestmentStrategy,TagValue_DAF::ApplicationType,TagValue_DAF::LastStandardReviewDate,TagValue_DAF::NextStandardReviewDate,TagValue_DAF::RetireDate,TagValue_DAF::Owner,TagValue_DAF::Port

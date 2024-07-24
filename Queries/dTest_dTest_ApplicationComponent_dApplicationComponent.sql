@@ -1,4 +1,4 @@
--- Generated 2024-02-28 10:52:05 AM
+-- Generated 2024-07-24 3:48:55 PM
 --  dTest (GroupName) connected with  dApplicationComponent (series)
 SELECT dTest.Name as dTest,  dApplicationComponent.Name as  dApplicationComponent
 FROM t_object AS dApplicationComponent
