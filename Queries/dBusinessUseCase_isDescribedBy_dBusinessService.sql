@@ -1,4 +1,4 @@
--- Generated 2024-07-24 3:41:38 PM
+-- Generated 2024-07-30 3:18:26 PM
 --  dBusinessUseCase (GroupName) connected with  dBusinessService (series)
 SELECT dBusinessUseCase.Name as dBusinessUseCase,  dBusinessService.Name as  dBusinessService
 FROM t_object AS dBusinessService

@@ -1,4 +1,4 @@
--- Generated 2024-07-24 3:47:49 PM
+-- Generated 2024-07-30 3:28:17 PM
 --  dRisk (GroupName) connected with  dRisk (series)
 SELECT dRisk.Name as dRisk,  dRisk.Name as  dRisk
 FROM t_object AS dRisk

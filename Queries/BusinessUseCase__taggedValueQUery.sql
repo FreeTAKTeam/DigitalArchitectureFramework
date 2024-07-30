@@ -1,0 +1,22 @@
+SELECT BusinessUseCase.Object_ID, BusinessUseCase.ea_guid AS CLASSGUID , BusinessUseCase.Object_Type AS CLASSTYPE, BusinessUseCase.Name as BusinessUseCase, GoalInContext.value, ID.value, GoalInContext.value, Precondition.value, Precondition.value, Trigger.value, Scope.value, Trigger.value, Level.value, Scope.value, Level.value, OtherActors.value, OtherActors.value, MainSuccessScenario.value, Extensions.value, MainSuccessScenario.value, Extensions.value, isCore.value, isCore.value
+FROM t_object as BusinessUseCase
+INNER JOIN t_objectproperties AS GoalInContext  ON (GoalInContext.Object_ID =BusinessUseCase.Object_ID AND GoalInContext.Property = ('GoalInContext'))
+INNER JOIN t_objectproperties AS ID  ON (ID.Object_ID =BusinessUseCase.Object_ID AND ID.Property = ('ID'))
+INNER JOIN t_objectproperties AS GoalInContext  ON (GoalInContext.Object_ID =BusinessUseCase.Object_ID AND GoalInContext.Property = ('GoalInContext'))
+INNER JOIN t_objectproperties AS Precondition  ON (Precondition.Object_ID =BusinessUseCase.Object_ID AND Precondition.Property = ('Precondition'))
+INNER JOIN t_objectproperties AS Precondition  ON (Precondition.Object_ID =BusinessUseCase.Object_ID AND Precondition.Property = ('Precondition'))
+INNER JOIN t_objectproperties AS Trigger  ON (Trigger.Object_ID =BusinessUseCase.Object_ID AND Trigger.Property = ('Trigger'))
+INNER JOIN t_objectproperties AS Scope  ON (Scope.Object_ID =BusinessUseCase.Object_ID AND Scope.Property = ('Scope'))
+INNER JOIN t_objectproperties AS Trigger  ON (Trigger.Object_ID =BusinessUseCase.Object_ID AND Trigger.Property = ('Trigger'))
+INNER JOIN t_objectproperties AS Level  ON (Level.Object_ID =BusinessUseCase.Object_ID AND Level.Property = ('Level'))
+INNER JOIN t_objectproperties AS Scope  ON (Scope.Object_ID =BusinessUseCase.Object_ID AND Scope.Property = ('Scope'))
+INNER JOIN t_objectproperties AS Level  ON (Level.Object_ID =BusinessUseCase.Object_ID AND Level.Property = ('Level'))
+INNER JOIN t_objectproperties AS OtherActors  ON (OtherActors.Object_ID =BusinessUseCase.Object_ID AND OtherActors.Property = ('OtherActors'))
+INNER JOIN t_objectproperties AS OtherActors  ON (OtherActors.Object_ID =BusinessUseCase.Object_ID AND OtherActors.Property = ('OtherActors'))
+INNER JOIN t_objectproperties AS MainSuccessScenario  ON (MainSuccessScenario.Object_ID =BusinessUseCase.Object_ID AND MainSuccessScenario.Property = ('MainSuccessScenario'))
+INNER JOIN t_objectproperties AS Extensions  ON (Extensions.Object_ID =BusinessUseCase.Object_ID AND Extensions.Property = ('Extensions'))
+INNER JOIN t_objectproperties AS MainSuccessScenario  ON (MainSuccessScenario.Object_ID =BusinessUseCase.Object_ID AND MainSuccessScenario.Property = ('MainSuccessScenario'))
+INNER JOIN t_objectproperties AS Extensions  ON (Extensions.Object_ID =BusinessUseCase.Object_ID AND Extensions.Property = ('Extensions'))
+INNER JOIN t_objectproperties AS isCore  ON (isCore.Object_ID =BusinessUseCase.Object_ID AND isCore.Property = ('isCore'))
+INNER JOIN t_objectproperties AS isCore  ON (isCore.Object_ID =BusinessUseCase.Object_ID AND isCore.Property = ('isCore'))
+ WHERE BusinessUseCase.stereotype= 'dBusinessUseCase'

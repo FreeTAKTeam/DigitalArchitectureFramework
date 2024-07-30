@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-07-24 3:39:52 PM
+//generated:2024-07-30 3:14:59 PM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -125,11 +125,11 @@ Class,dCapability,Class,dDataEntity,,,,Realization,informs Capability,directed,i
 Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dController -> Implements Service -> dApplicationFunction
-Class,dController,Class,dApplicationFunction,,,,Association,Implements Service,directed,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,Class,dController,,,,Association,Implements Service,from,Implements Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dApplicationFunction,Association,Implements Service,directed,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,,,,Class,dController,Association,Implements Service,from,,Implements Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dController -> dControllerImplementsFunction -> dApplicationFunction
+Class,dController,Class,dApplicationFunction,,,,Realization,dControllerImplementsFunction,directed,Implements function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,Class,dController,,,,Realization,dControllerImplementsFunction,from,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dApplicationFunction,Realization,dControllerImplementsFunction,directed,,Implements function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,,,,Class,dController,Realization,dControllerImplementsFunction,from,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> Governs -> dView
 Class,dController,Class,dView,,,,Association,Governs,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dView,Class,dController,,,,Association,Governs,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,

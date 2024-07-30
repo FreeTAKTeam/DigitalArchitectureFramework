@@ -1,6 +1,6 @@
-<?xml  version='1.0' encoding='UTF-8' ?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="2CA65063-7" name="DAF_DigitalEng_TB" version="5.0" notes="A specialize toolbox for MDA"/>
+	<Documentation id="2CA65063-7" name="DAF_DigitalEng_TB" version="5.1.5" notes="A specialize toolbox for MDA"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Model" alias="Model" notes="Contains elements for MVC architecture. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -10,12 +10,12 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dController" type="" description="" unit="" values="" default="Controller"/>
+					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
+					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
 					<Tag name="DAF::dModelClass" type="" description="" unit="" values="" default="ModelClass"/>
 					<Tag name="DAF::dValue" type="" description="" unit="" values="" default="Property"/>
 					<Tag name="DAF::dValueRef" type="" description="" unit="" values="" default="Property Reference"/>
-					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="DEComponents" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -25,17 +25,17 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
 					<Tag name="DAF::dApplicationFunction(UML::Class)" type="" description="" unit="" values="" default="Function"/>
-					<Tag name="DAF::dDeploymentNode" type="" description="" unit="" values="" default="Deployment Node"/>
-					<Tag name="DAF::dLogicalAppComponent" type="" description="" unit="" values="" default="Logical Application Component"/>
-					<Tag name="DAF::dNetwork(Class)" type="string" description="" unit="" values="" default="Network"/>
-					<Tag name="DAF::dPhysicalService" type="" description="" unit="" values="" default="Physical Service"/>
-					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="System"/>
-					<Tag name="UML::Interface" type="" description="" unit="" values="" default="Interface"/>
-					<Tag name="UML::Object" type="" description="" unit="" values="" default="Object"/>
 					<Tag name="UML::Package" type="" description="" unit="" values="" default="Package"/>
+					<Tag name="DAF::dLogicalAppComponent" type="" description="" unit="" values="" default="Logical Application Component"/>
+					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
+					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="System"/>
+					<Tag name="DAF::dDeploymentNode" type="" description="" unit="" values="" default="Deployment Node"/>
+					<Tag name="UML::Interface" type="" description="" unit="" values="" default="Interface"/>
+					<Tag name="DAF::dPhysicalService" type="" description="" unit="" values="" default="Physical Service"/>
+					<Tag name="UML::Object" type="" description="" unit="" values="" default="Object"/>
 					<Tag name="UML::Port" type="" description="" unit="" values="" default="Port"/>
+					<Tag name="DAF::dNetwork(Class)" type="string" description="" unit="" values="" default="Network"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="DE Relationships" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -45,16 +45,18 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::configured by(UML::Aggregation)" type="string" description="" unit="" values="" default="configured by System"/>
-					<Tag name="DAF::Connected with Application(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
-					<Tag name="DAF::Consumes Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Function"/>
-					<Tag name="DAF::Exposes Service(UML::Association)" type="string" description="" unit="" values="" default="Exposes Service"/>
-					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Implements Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
+					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
+					<Tag name="DAF::dControllerImplementsFunction(UML::Realization)" type="" description="" unit="" values="" default="Controller function"/>
 					<Tag name="UML::Assembly" type="" description="" unit="" values="" default="Assembly"/>
+					<Tag name="DAF::configured by(UML::Aggregation)" type="string" description="" unit="" values="" default="configured by System"/>
+					<Tag name="DAF::Exposes Service(UML::Association)" type="string" description="" unit="" values="" default="Exposes Service"/>
+					<Tag name="DAF::Connected with Application(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
+					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Function"/>
+					<Tag name="DAF::Implements Service(UML::Association)" type="string" description="" unit="" values="" default="implement service"/>
+					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
+					<Tag name="DAF::Consumes Service(UML::Association)" type="string" description="" unit="" values="" default="Consume Service"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

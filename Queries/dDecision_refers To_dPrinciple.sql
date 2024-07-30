@@ -1,4 +1,4 @@
--- Generated 2024-07-24 3:42:52 PM
+-- Generated 2024-07-30 3:20:43 PM
 --  dDecision (GroupName) connected with  dPrinciple (series)
 SELECT dDecision.Name as dDecision,  dPrinciple.Name as  dPrinciple
 FROM t_object AS dPrinciple
