@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-07-30 3:14:59 PM
+//generated:2024-09-06 11:27:11 AM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -415,3 +415,8 @@ Activity,dValueStream,Class,dBusinessProcess,,,,Composition,Includes Processes,f
 Class,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dValueStream,,,,Class,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dValueStream ->  -> dCapability
+Activity,dValueStream,Class,dCapability,,,,Association,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Activity,dValueStream,,,,Association,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dValueStream,,,,Class,dCapability,Association,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Activity,dValueStream,Association,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,

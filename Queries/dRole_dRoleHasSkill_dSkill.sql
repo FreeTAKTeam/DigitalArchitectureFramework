@@ -1,4 +1,4 @@
--- Generated 2024-07-30 3:28:48 PM
+-- Generated 2024-09-06 11:37:23 AM
 --  dRole (GroupName) connected with  dSkill (series)
 SELECT dRole.Name as dRole,  dSkill.Name as  dSkill
 FROM t_object AS dSkill

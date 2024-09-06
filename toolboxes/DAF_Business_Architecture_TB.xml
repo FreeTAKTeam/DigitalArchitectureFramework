@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="5.1.3" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
+	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="5.1.6" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Analysis" alias="Analysis" notes="Contains the list of elements used in Analysis Phase. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -19,19 +19,6 @@
 					<Tag name="DAF::dRole" type="" description="" unit="" values="" default="Role"/>
 					<Tag name="DAF::dBusinessUseCase" type="" description="" unit="" values="" default="Business Use Case"/>
 					<Tag name="DAF::dActor" type="" description="" unit="" values="" default="Actor"/>
-				</TaggedValues>
-			</Stereotype>
-			<Stereotype name="Design" alias="Design" notes="Contains the elements for Design. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="ToolboxPage">
-						<Property name="isCollapsed" value="true"/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="DAF::dLogicalAppComponent" type="" description="a type of application, like ERP" unit="" values="" default="Logical Application Component"/>
-					<Tag name="DAF::dApplicationComponent" type="" description="the concrete application component like SAP " unit="" values="" default="Application Component"/>
-					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="Configuration"/>
-					<Tag name="DAF::dPhysicalService" type="" description="" unit="" values="" default="Physical Service"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Measurement" alias="Measurement" notes="Contains the elements for Measurement. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -77,29 +64,6 @@
 					<Tag name="DAF::dStakeHolder" type="" description="" unit="" values="" default="Stakeholder"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="BPMN" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="ToolboxPage">
-						<Property name="isCollapsed" value="true"/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="BPMN2.0::BusinessProcess" type="" description="" unit="" values="" default="Activity"/>
-					<Tag name="BPMN2.0::Activity" type="" description="" unit="" values="" default="Activity"/>
-					<Tag name="BPMN2.0::DataObject" type="" description="" unit="" values="" default="DataObject"/>
-					<Tag name="BPMN2.0::GlobalTask" type="" description="" unit="" values="" default="Activity"/>
-					<Tag name="BPMN2.0::DataStore" type="" description="" unit="" values="" default="DataStore"/>
-					<Tag name="BPMN2.0::Group" type="" description="" unit="" values="" default="Group"/>
-					<Tag name="BPMN2.0::Pool" type="" description="" unit="" values="" default="Pool"/>
-					<Tag name="BPMN2.0::Lane" type="" description="" unit="" values="" default="Lane"/>
-					<Tag name="BPMN2.0::Message" type="" description="" unit="" values="" default="Message"/>
-					<Tag name="BPMN2.0::StartEvent" type="" description="" unit="" values="" default="StartEvent"/>
-					<Tag name="BPMN2.0::IntermediateEvent" type="" description="" unit="" values="" default="IntermediateEvent"/>
-					<Tag name="BPMN2.0::EndEvent" type="" description="" unit="" values="" default="EndEvent"/>
-					<Tag name="BPMN2.0::Gateway" type="" description="" unit="" values="" default="Gateway"/>
-					<Tag name="BPMN2.0::TextAnnotation" type="" description="" unit="" values="" default="TextAnnotation"/>
-				</TaggedValues>
-			</Stereotype>
 			<Stereotype name="DAF Relationships" alias="Relationship" notes="Relationship in the diagrams. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
@@ -137,6 +101,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
 					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
 					<Tag name="DAF::dResource" type="int" description="" unit="" values="" default="Resource"/>

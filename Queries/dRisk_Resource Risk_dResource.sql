@@ -1,4 +1,4 @@
--- Generated 2024-07-30 3:28:25 PM
+-- Generated 2024-09-06 11:37:02 AM
 --  dRisk (GroupName) connected with  dResource (series)
 SELECT dRisk.Name as dRisk,  dResource.Name as  dResource
 FROM t_object AS dResource

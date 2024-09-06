@@ -1,4 +1,4 @@
--- Generated 2024-07-30 3:28:17 PM
+-- Generated 2024-09-06 11:36:56 AM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dRisk'                                               

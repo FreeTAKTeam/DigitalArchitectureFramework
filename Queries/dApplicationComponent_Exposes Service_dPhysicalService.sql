@@ -1,4 +1,4 @@
--- Generated 2024-07-30 3:17:07 PM
+-- Generated 2024-09-06 11:28:33 AM
 --  dApplicationComponent (GroupName) connected with  dPhysicalService (series)
 SELECT dApplicationComponent.Name as dApplicationComponent,  dPhysicalService.Name as  dPhysicalService
 FROM t_object AS dPhysicalService
