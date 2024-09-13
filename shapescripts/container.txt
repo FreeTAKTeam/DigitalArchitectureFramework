@@ -1,0 +1,57 @@
+shape main
+{
+	layouttype="border";
+	defsize(90,70);
+	
+	rectangle(0,0,100,100);
+	addsubshape("padding","n");
+	if(hasproperty("rectanglenotation","0"))
+	{
+		Ellipse(0,0,100,100);
+		rectangle(20,25,80,75);		
+		addsubshape("port","w");
+	}
+	addsubshape("name","center");
+	
+	shape port
+	{
+		preferredwidth=20;
+		scalable=false;
+		rectangle(-10,0,10,10);
+		rectangle(-10,30,10,40);
+	
+	}
+		
+	shape padding
+	{
+		preferredheight=15;
+	}
+	
+	shape name
+	{
+		h_align="center";
+		v_align="center";
+		if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}  
+		print("#name#");
+	}
+}
+
+decoration component
+{
+	orientation="ne";
+	
+	if(hasproperty("rectanglenotation","1"))
+	{
+			Ellipse(0,0,100,100);
+		rectangle(20,25,80,75);
+		rectangle(-10,10,10,30);
+		rectangle(-10,60,10,80);
+	}
+	else
+	{
+	
+	}
+}

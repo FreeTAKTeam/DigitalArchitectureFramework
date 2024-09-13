@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-09-06 11:27:11 AM
+//generated:2024-09-10 10:52:35 AM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -60,6 +60,11 @@ Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dAppli
 Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationComponentHasdContainer -> dContainer
+Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasdContainer,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasdContainer,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasdContainer,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasdContainer,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessProcess -> Orchestrates service -> dBusinessService
 Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates service,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,Orchestrates service,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -125,6 +130,16 @@ Class,dCapability,Class,dDataEntity,,,,Realization,informs Capability,directed,i
 Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCluster -> ClusterContainsDeploymentNode -> dDeploymentNode
+Class,dCluster,Node,dDeploymentNode,,,,Aggregation,ClusterContainsDeploymentNode,from,Contains DeploymentNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Class,dCluster,,,,Aggregation,ClusterContainsDeploymentNode,to,is Contained in Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Node,dDeploymentNode,Aggregation,ClusterContainsDeploymentNode,from,,Contains DeploymentNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Class,dCluster,Aggregation,ClusterContainsDeploymentNode,to,,is Contained in Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dContainer -> dContainerAggregatesVolume -> dVolume
+Class,dContainer,Class,dVolume,,,,Aggregation,dContainerAggregatesVolume,from,Aggregates Volume,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dVolume,Class,dContainer,,,,Aggregation,dContainerAggregatesVolume,to,is Aggregated in Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,,,,Class,dVolume,Aggregation,dContainerAggregatesVolume,from,,Aggregates Volume,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dVolume,,,,Class,dContainer,Aggregation,dContainerAggregatesVolume,to,,is Aggregated in Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dControllerImplementsFunction -> dApplicationFunction
 Class,dController,Class,dApplicationFunction,,,,Realization,dControllerImplementsFunction,directed,Implements function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,Class,dController,,,,Realization,dControllerImplementsFunction,from,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -165,6 +180,11 @@ Class,dDecision,Class,dPrinciple,,,,Dependency,refers To,directed,refers To Prin
 Class,dPrinciple,Class,dDecision,,,,Dependency,refers To,from,is referenced by Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDecision,,,,Class,dPrinciple,Dependency,refers To,directed,,refers To Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dPrinciple,,,,Class,dDecision,Dependency,refers To,from,,is referenced by Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDeploymentModel -> dDeploymentModelAggregatesCluster -> dCluster
+Class,dDeploymentModel,Class,dCluster,,,,Aggregation,dDeploymentModelAggregatesCluster,from,Aggregates Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,Class,dDeploymentModel,,,,Aggregation,dDeploymentModelAggregatesCluster,to,is Aggregated in Deployment Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDeploymentModel,,,,Class,dCluster,Aggregation,dDeploymentModelAggregatesCluster,from,,Aggregates Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Class,dDeploymentModel,Aggregation,dDeploymentModelAggregatesCluster,to,,is Aggregated in Deployment Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dDeploymentNode -> isPhysicallyHostedBy -> dApplicationComponent
 Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,isPhysicallyHostedBy,directed,Hosts Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,isPhysicallyHostedBy,from,is Hosted By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -291,10 +311,20 @@ Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,from,Provid
 Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceFor,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dNetwork -> NetworkContainsNode -> dDeploymentNode
-Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contain sNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contain sNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contains Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contains Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dNetwork -> dNetworkHasSecurityGroup -> dSecurityGroup
+Node,dNetwork,Class,dSecurityGroup,,,,Association,dNetworkHasSecurityGroup,directed,Has Security Group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSecurityGroup,Node,dNetwork,,,,Association,dNetworkHasSecurityGroup,from,is associated to Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,,,,Class,dSecurityGroup,Association,dNetworkHasSecurityGroup,directed,,Has Security Group,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dSecurityGroup,,,,Node,dNetwork,Association,dNetworkHasSecurityGroup,from,,is associated to Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dNetwork -> dNetworkAggregatesSubNetwork -> dSubNetwork
+Node,dNetwork,Class,dSubNetwork,,,,Aggregation,dNetworkAggregatesSubNetwork,from,Aggregates Sub-Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSubNetwork,Node,dNetwork,,,,Aggregation,dNetworkAggregatesSubNetwork,to,is Aggregated in Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,,,,Class,dSubNetwork,Aggregation,dNetworkAggregatesSubNetwork,from,,Aggregates Sub-Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dSubNetwork,,,,Node,dNetwork,Aggregation,dNetworkAggregatesSubNetwork,to,,is Aggregated in Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dObject -> InstanceofModel -> dModelClass
 Class,dObject,Class,dModelClass,,,,Dependency,InstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dObject,,,,Dependency,InstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -310,6 +340,11 @@ Class,dObject,Class,dView,,,,Dependency,InstanceofView,directed,Has an Instance,
 Class,dView,Class,dObject,,,,Dependency,InstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dObject,,,,Class,dView,Dependency,InstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dView,,,,Class,dObject,Dependency,InstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dOnPremise -> dOnPremiseGeneralizesCluster -> dCluster
+Class,dOnPremise,Class,dCluster,,,,Generatlization,dOnPremiseGeneralizesCluster,directed,Generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,Class,dOnPremise,,,,Generatlization,dOnPremiseGeneralizesCluster,from,is genralized by Premise,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOnPremise,,,,Class,dCluster,Generatlization,dOnPremiseGeneralizesCluster,directed,,Generalizes Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Class,dOnPremise,Generatlization,dOnPremiseGeneralizesCluster,from,,is genralized by Premise,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dOpinion -> dDiscord -> dOpinion
 Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,directed,is in discord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,from,is in discord with Original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -340,6 +375,16 @@ Package,dProgram,Package,dGrowthPackage,,,,Composition,is organized In,from,is o
 Package,dGrowthPackage,Package,dProgram,,,,Composition,is organized In,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Package,dProgram,,,,Package,dGrowthPackage,Composition,is organized In,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Package,dGrowthPackage,,,,Package,dProgram,Composition,is organized In,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dPublicCluster -> dPublicClustergeneralizesCluster -> dCluster
+Class,dPublicCluster,Class,dCluster,,,,Generatlization,dPublicClustergeneralizesCluster,directed,generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,Class,dPublicCluster,,,,Generatlization,dPublicClustergeneralizesCluster,from,PublicClustergeneralizesCluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dPublicCluster,,,,Class,dCluster,Generatlization,dPublicClustergeneralizesCluster,directed,,generalizes Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Class,dPublicCluster,Generatlization,dPublicClustergeneralizesCluster,from,,PublicClustergeneralizesCluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRegion -> dRegionAggregatesCluster -> dCluster
+Class,dRegion,Class,dCluster,,,,Aggregation,dRegionAggregatesCluster,from,Aggregates Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,Class,dRegion,,,,Aggregation,dRegionAggregatesCluster,to,is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRegion,,,,Class,dCluster,Aggregation,dRegionAggregatesCluster,from,,Aggregates Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Class,dRegion,Aggregation,dRegionAggregatesCluster,to,,is Aggregated in Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRequirement -> is related to -> dGoal
 Class,dRequirement,Class,dGoal,,,,Association,is related to,directed,specifies Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,Class,dRequirement,,,,Association,is related to,from,is specified by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -385,6 +430,11 @@ Actor,dRole,Class,dSkill,,,,Aggregation,dRoleHasSkill,from,has SKill,,TRUE,,TRUE
 Class,dSkill,Actor,dRole,,,,Aggregation,dRoleHasSkill,to,known by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Class,dSkill,Aggregation,dRoleHasSkill,from,,has SKill,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dSkill,,,,Actor,dRole,Aggregation,dRoleHasSkill,to,,known by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dSecurityGroup -> SecurityGroupHasPhysicalService -> dPhysicalService
+Class,dSecurityGroup,Interface,dPhysicalService,,,,Association,SecurityGroupHasPhysicalService,directed,has Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Class,dSecurityGroup,,,,Association,SecurityGroupHasPhysicalService,from,Asociated to Sec. group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSecurityGroup,,,,Interface,dPhysicalService,Association,SecurityGroupHasPhysicalService,directed,,has Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Class,dSecurityGroup,Association,SecurityGroupHasPhysicalService,from,,Asociated to Sec. group,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dStakeholder -> Has Inner Opinion -> dOpinionInner
 Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed,Has Inner Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -395,6 +445,11 @@ Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinio
 Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dSubNetwork -> dSubNetworkAggregatesIPRange -> dIPRange
+Class,dSubNetwork,Class,dIPRange,,,,Aggregation,dSubNetworkAggregatesIPRange,from,Aggregates IP Range,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dIPRange,Class,dSubNetwork,,,,Aggregation,dSubNetworkAggregatesIPRange,to,is Aggregated in sub Net.,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSubNetwork,,,,Class,dIPRange,Aggregation,dSubNetworkAggregatesIPRange,from,,Aggregates IP Range,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dIPRange,,,,Class,dSubNetwork,Aggregation,dSubNetworkAggregatesIPRange,to,,is Aggregated in sub Net.,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dTable -> isFunctionallyImplementedBy -> dDataEntity
 Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -420,3 +475,8 @@ Activity,dValueStream,Class,dCapability,,,,Association,,directed,,,TRUE,,TRUE,TR
 Class,dCapability,Activity,dValueStream,,,,Association,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dValueStream,,,,Class,dCapability,Association,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Activity,dValueStream,Association,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dZone -> dZoneAggregatesRegion -> dRegion
+Class,dZone,Class,dRegion,,,,Aggregation,dZoneAggregatesRegion,from,Aggregates Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRegion,Class,dZone,,,,Aggregation,dZoneAggregatesRegion,to, is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dZone,,,,Class,dRegion,Aggregation,dZoneAggregatesRegion,from,,Aggregates Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRegion,,,,Class,dZone,Aggregation,dZoneAggregatesRegion,to,, is Aggregated in Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,

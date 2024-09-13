@@ -1,4 +1,4 @@
--- Generated 2024-09-06 11:35:42 AM
+-- Generated 2024-09-10 11:07:20 AM
 --  dOrganizationUnit (GroupName) connected with  dStakeholder (series)
 SELECT dOrganizationUnit.Name as dOrganizationUnit,  dStakeholder.Name as  dStakeholder
 FROM t_object AS dStakeholder

@@ -1,4 +1,4 @@
--- Generated 2024-09-06 11:30:50 AM
+-- Generated 2024-09-10 10:58:49 AM
 --  dDecision (GroupName) connected with  dInitiative (series)
 SELECT dDecision.Name as dDecision,  dInitiative.Name as  dInitiative
 FROM t_object AS dInitiative

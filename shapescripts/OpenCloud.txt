@@ -1,0 +1,69 @@
+// open cloud
+shape main
+{
+	noshadow=true;
+	 layoutType="border";
+   
+	    defsize(100, 150);
+
+	SetFillColor(255,255,255);
+	SetPenColor(255,255,255);
+		StartCloudPath();
+    rectangle(0,0,100,100);
+	EndPath();
+	fillandstrokepath();
+	    fillandstrokepath();
+	
+	
+	//lock
+    // Define the size of the lock
+	SetFillColor(128,128,128);
+	SetPenColor(128,128,128);
+	
+    // Draw the lock shackle (downward arc)
+    startpath();
+    // Flipped arc to represent the shackle, oriented downward
+	 // x1, y1, x2, y2, startAngle, endAngle
+	//(left,top,right,bottom,xStart,yStart,xEnd,yEnd)
+    SetPenWidth(15);
+// close cloud
+//	arc(10, 0, 90, 100, 100, 50, 20, 50); 
+	arc(10, 0, 90, 100, 100, 0, 20, 50); 
+    endpath();
+    strokepath(); // Stroke the arc to keep it open
+	SetPenWidth(1);
+    // Draw the lock body (rectangle)
+	
+    startpath();
+    rectangle(0, 40, 100, 100); // Adjust the proportions for the lock body
+    endpath();
+    fillandstrokepath();
+
+    // Draw the keyhole
+    // Keyhole circle (top part)
+	SetFillColor(0,0,0);
+	SetPenColor(0,0,0);
+    startpath();
+    ellipse(40, 65, 60, 85); // Small circle for the keyhole, adjusted positioning
+    endpath();
+    fillandstrokepath();
+
+    // Keyhole rectangle (bottom part)
+    startpath();
+    rectangle(46, 75, 54, 93); // Rectangular part of the keyhole, adjusted to fit proportions
+    endpath();
+    fillandstrokepath();
+
+}
+
+shape name
+		{
+			setorigin("sw",30,5);
+         
+			if(hasproperty("stereotypehidden","false"))
+			{
+             Println("<<#stereotype#>>");
+			}         
+			Println("#NAME#");
+         }
+     

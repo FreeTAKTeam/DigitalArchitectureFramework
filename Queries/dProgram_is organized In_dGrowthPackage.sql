@@ -1,4 +1,4 @@
--- Generated 2024-09-06 11:36:18 AM
+-- Generated 2024-09-10 11:08:49 AM
 --  dProgram (GroupName) connected with  dGrowthPackage (series)
 SELECT dProgram.Name as dProgram,  dGrowthPackage.Name as  dGrowthPackage
 FROM t_object AS dGrowthPackage

@@ -1,4 +1,4 @@
--- Generated 2024-09-06 11:31:40 AM
+-- Generated 2024-09-10 11:00:24 AM
 --  dGoal (GroupName) connected with  dGoal (series)
 SELECT dGoal.Name as dGoal,  dGoal.Name as  dGoal
 FROM t_object AS dGoal
