@@ -1,4 +1,4 @@
--- Generated 2024-09-10 11:09:26 AM
+-- Generated 2024-09-16 2:11:32 PM
 --  dRegion (GroupName) connected with  dCluster (series)
 SELECT dRegion.Name as dRegion,  dCluster.Name as  dCluster
 FROM t_object AS dCluster

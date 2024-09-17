@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<RefData version="1.0" exporter="EA.25">
+	<DataSet name="UML2" table="t_datatypes where ProductName='UML2'" filter="Type='#Type#' and ProductName='#ProductName#' and DataType='#DataType#'" stoplist=";DatatypeID;">
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="String"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="GenericType" value="String"/>
+			<Column name="DatatypeID" value="1483"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="Int32"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="DatatypeID" value="1484"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="Boolean"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="GenericType" value="Boolean"/>
+			<Column name="DatatypeID" value="1485"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="Int64"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="DatatypeID" value="1486"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="DateTime"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="DatatypeID" value="1487"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="Float"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="DatatypeID" value="1488"/>
+		</DataRow>
+		<DataRow>
+			<Column name="Type" value="Code"/>
+			<Column name="ProductName" value="UML2"/>
+			<Column name="DataType" value="Uuid"/>
+			<Column name="Size" value="0"/>
+			<Column name="MaxLen" value="0"/>
+			<Column name="MaxPrec" value="0"/>
+			<Column name="MaxScale" value="0"/>
+			<Column name="DefaultLen" value="0"/>
+			<Column name="DefaultPrec" value="0"/>
+			<Column name="DefaultScale" value="0"/>
+			<Column name="User" value="1"/>
+			<Column name="DatatypeID" value="1489"/>
+		</DataRow>
+	</DataSet>
+</RefData>

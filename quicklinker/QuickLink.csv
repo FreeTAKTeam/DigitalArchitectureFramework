@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-09-10 10:52:35 AM
+//generated:2024-09-16 1:49:45 PM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -40,11 +40,11 @@ Component,dApplicationComponent,Component,dSystem,,,,Aggregation,configured by,f
 Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dSystem,Aggregation,configured by,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dSystem,,,,Component,dApplicationComponent,Aggregation,configured by,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> Exposes Service -> dPhysicalService
-Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,Exposes Service,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,Exposes Service,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,Exposes Service,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,Exposes Service,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationExposesService -> dPhysicalService
+Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,dApplicationExposesService,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,dApplicationExposesService,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,dApplicationExposesService,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,dApplicationExposesService,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> Application Owner -> dStakeholder
 Component,dApplicationComponent,Actor,dStakeholder,,,,Association,Application Owner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,Component,dApplicationComponent,,,,Association,Application Owner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -61,10 +61,10 @@ Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dAppli
 Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationComponentHasdContainer -> dContainer
-Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasdContainer,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasdContainer,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasdContainer,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasdContainer,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasdContainer,directed,Has Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasdContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasdContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasdContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessProcess -> Orchestrates service -> dBusinessService
 Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates service,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,Orchestrates service,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -360,11 +360,11 @@ Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,has Stakeholders,direc
 Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,has Stakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,has Stakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,has Stakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dPhysicalService -> Implements -> dBusinessService
-Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,Implements,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,Implements,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,Implements,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,Implements,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dPhysicalService -> dPhysicalServiceImplementsBusinessService -> dBusinessService
+Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,dPhysicalServiceImplementsBusinessService,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,dPhysicalServiceImplementsBusinessService,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,dPhysicalServiceImplementsBusinessService,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,dPhysicalServiceImplementsBusinessService,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dProduct -> Includes Process -> dBusinessProcess
 Component,dProduct,Class,dBusinessProcess,,,,Aggregation,Includes Process,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,Component,dProduct,,,,Aggregation,Includes Process,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,

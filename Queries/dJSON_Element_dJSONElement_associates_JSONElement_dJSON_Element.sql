@@ -1,4 +1,4 @@
--- Generated 2024-09-10 11:02:07 AM
+-- Generated 2024-09-16 2:03:12 PM
 --  dJSON_Element (GroupName) connected with  dJSON_Element (series)
 SELECT dJSON_Element.Name as dJSON_Element,  dJSON_Element.Name as  dJSON_Element
 FROM t_object AS dJSON_Element

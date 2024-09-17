@@ -1,4 +1,4 @@
--- Generated 2024-09-10 11:10:52 AM
+-- Generated 2024-09-16 2:13:21 PM
 --  dRole (GroupName) connected with  dBusinessService (series)
 SELECT dRole.Name as dRole,  dBusinessService.Name as  dBusinessService
 FROM t_object AS dBusinessService

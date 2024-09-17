@@ -1,0 +1,91 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="EDCDC716-A" name="DAF_Deployment" version="5.5.6.1" notes="toolbox for deployment model"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Technology Elements" notes="tools for technology architecture" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDeploymentNode(UML::Node)" type="" description="" unit="" values="" default="Node"/>
+					<Tag name="DAF::dLocation(UML::Class)" type="" description="" unit="" values="" default="Location"/>
+					<Tag name="DAF::dNetwork(UML::Node)" type="" description="" unit="" values="" default="Network"/>
+					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
+					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="System configuration"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Common Relationships" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
+					<Tag name="UML::Assembly" type="int" description="" unit="" values="" default="Assembly"/>
+					<Tag name="UML::Association" type="" description="" unit="" values="" default="Association"/>
+					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
+					<Tag name="UML::Aggregation" type="int" description="" unit="" values="" default="Aggregation"/>
+					<Tag name="UML::Composition" type="int" description="" unit="" values="" default="Composition"/>
+					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
+					<Tag name="UML::Dependency" type="int" description="" unit="" values="" default="Dependency"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Deployment Elements" alias="Diagram" notes="tools for defining Deployment&#xA;" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDeploymentModel(UML::Class)" type="" description="" unit="" values="" default="Deployment"/>
+					<Tag name="DAF::dDeploymentNode(UML::Node)" type="" description="" unit="" values="" default="Node"/>
+					<Tag name="DAF::dCluster(UML::Class)" type="" description="" unit="" values="" default="Cluster"/>
+					<Tag name="DAF::dOnPremise(UML::Class)" type="" description="" unit="" values="" default="Cluster On prem "/>
+					<Tag name="DAF::dPublicCluster(UML::Class)" type="" description="" unit="" values="" default="Cluster public"/>
+					<Tag name="DAF::dNetwork(UML::Node)" type="" description="" unit="" values="" default="Network"/>
+					<Tag name="DAF::dSubNetwork(UML::Class)" type="" description="" unit="" values="" default="Sub Network"/>
+					<Tag name="DAF::dSecurityGroup(UML::Class)" type="" description="" unit="" values="" default="Sec Group"/>
+					<Tag name="DAF::dSystem(UML::Component)" type="" description="" unit="" values="" default="Configuration"/>
+					<Tag name="DAF::dIPRange(Class)" type="string" description="" unit="" values="" default="IP Range"/>
+					<Tag name="DAF::dZone(UML::Class)" type="" description="" unit="" values="" default="Zone"/>
+					<Tag name="DAF::dRegion(Class)" type="string" description="" unit="" values="" default="Region"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Container Elements" alias="Diagram" notes="concepts and relationships for Containers" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dContainer(UML::Class)" type="" description="" unit="" values="" default="Container"/>
+					<Tag name="DAF::dVolume(UML::Class)" type="" description="" unit="" values="" default="Cont volume"/>
+					<Tag name="DAF::dApplicationComponent(Class)" type="string" description="" unit="" values="" default="Application Component"/>
+					<Tag name="DAF::dApplicationComponentHasdContainer(UML::Association)" type="string" description="" unit="" values="" default="Application Has Container"/>
+					<Tag name="DAF::dContainerAggregatesVolume(UML::Aggregation)" type="string" description="" unit="" values="" default="Container Aggregates Volume"/>
+					<Tag name="DAF::dPhysicalService(Class)" type="string" description="" unit="" values="" default="Physical Service"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Deployment Relationships" notes="tools for defining Deployment Relationships" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage"/>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::ClusterContainsDeploymentNode(UML::Aggregation)" type="" description="" unit="" values="" default="Cluster Has Node"/>
+					<Tag name="DAF::configured by(UML::Aggregation)" type="" description="" unit="" values="" default="configured by "/>
+					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="" description="" unit="" values="" default="Location hosts Node "/>
+					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="" description="" unit="" values="" default=" is Physically Hosted By"/>
+					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="" description="" unit="" values="" default="Network contains Node"/>
+					<Tag name="DAF::dDeploymentModelAggregatesCluster(UML::Aggregation)" type="string" description="" unit="" values="" default="Deployment Model Aggregates Cluster"/>
+					<Tag name="DAF::dNetworkHasSecurityGroup(UML::Association)" type="string" description="" unit="" values="" default="Network Has Security Group"/>
+					<Tag name="DAF::dNetworkAggregatesSubNetwork(UML::Aggregation)" type="string" description="" unit="" values="" default="Network Aggregates SubNetwork"/>
+					<Tag name="DAF::dOnPremiseGeneralizesCluster(UML::Generalization)" type="string" description="" unit="" values="" default="On Premise Generalizes Cluster"/>
+					<Tag name="DAF::dPublicClustergeneralizesCluster(UML::Generalization)" type="string" description="" unit="" values="" default="Public Cluster generalizes Cluster"/>
+					<Tag name="DAF::dRegionAggregatesCluster(UML::Aggregation)" type="string" description="" unit="" values="" default="Region Aggregates Cluster"/>
+					<Tag name="DAF::SecurityGroupHasPhysicalService(UML::Association)" type="string" description="" unit="" values="" default="Security Group Has Service"/>
+					<Tag name="DAF::dSubNetworkAggregatesIPRange(UML::Aggregation)" type="string" description="" unit="" values="" default="SubNetwork Aggregates IP Range"/>
+					<Tag name="DAF::dZoneAggregatesRegion(UML::Aggregation)" type="string" description="" unit="" values="" default="Zone Aggregates Region"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

@@ -1,0 +1,166 @@
+shape main
+{
+	layouttype="border";
+	noshadow=true;
+	defsize(90,70);
+
+	if(hasproperty("rectanglenotation","0"))
+	{
+		addsubshape("top","N");
+		addsubshape("side","E");
+		addsubshape("front","CENTER");
+		addsubshape("lock", "S");
+		
+		
+		shape top
+		{
+			preferredheight=10;
+			startpath();
+			moveto(0,100);
+			setfixedregion(0,0,10,0);
+			lineto(10,0);
+			lineto(100,0);
+			setfixedregion(90,0,100,0);
+			lineto(90,100);
+			lineto(0,100);
+			endpath();
+			
+			fillandstrokepath();
+		}
+		
+		shape side
+		{
+			preferredwidth=10;
+			startpath();
+			moveto(0,100);
+			lineto(0,0);
+			setfixedregion(0,-10,0,0);
+			lineto(100,-10);
+			setfixedregion(0,90,0,100);
+			lineto(100,90);
+			lineto(0,100);
+			endpath();
+			
+			fillandstrokepath();
+		}
+		
+		shape front
+		{
+			h_align="center";
+			rectangle(0,0,100,100);
+			printwrapped("#name#");
+		}
+		// Insert open lock symbol inside the cluster
+		shape lock
+		{
+			preferredheight=50;
+			preferredwidth=20;
+	
+
+			// Draw the lock's body (rectangle)
+			startpath();
+			rectangle(40, 60, 60, 80); // Lock body
+			endpath();
+			fillandstrokepath();
+
+			// Draw the open arc of the lock (curved upwards using arc)
+			startpath();
+			// Center the arc above the lock body, with a 180-degree upward curve
+				arc(40, 40, 60, 60, 40, 40, 60, 40); // Draw an arc from 180 degrees to 360 degrees, upward curve
+			endpath();
+			strokepath(); // Stroke only the arc to keep it open
+		}
+	}
+	else
+	{
+		rectangle(0,0,100,100);
+		
+		fillandstrokepath();
+		addsubshape("rect_padding","n");
+		addsubshape("name","center");
+		
+		shape rect_padding
+		{
+			preferredheight=20;
+		}
+		
+		shape name
+		{
+			v_align="center";
+			h_align="center";
+			print("#name#");
+		}		
+	}
+}
+
+decoration node
+{
+	orientation="ne";
+	
+	if(hasproperty("rectanglenotation","0"))
+	{
+	}
+	else //rectanglenotation = 1
+	{
+		moveto(0,10);
+		lineto(10,0);
+		lineto(100,0);
+		lineto(100,90);
+		lineto(90,100);
+		lineto(0,100);
+		lineto(0,10);
+		moveto(0,10);
+		lineto(90,10);
+		lineto(90,100);
+		moveto(90,10);
+		lineto(100,0);
+		// Insert open lock symbol inside the cluster
+		
+		  // Draw the lock shackle (downward arc)
+    startpath();
+    // Flipped arc to represent the shackle, oriented downward
+	 // x1, y1, x2, y2, startAngle, endAngle
+	//(left,top,right,bottom,xStart,yStart,xEnd,yEnd)
+    SetPenWidth(15);
+	arc(10, 0, 90, 100, 100, 50, 20, 50); 
+	 //arc(30, 	0, 70, 50, 30, 50, 70, 50); // Adjusted to curve downward
+   // arc(30, 30, 70, 80, 20, 50, 80, 50); //
+    endpath();
+    strokepath(); // Stroke the arc to keep it open
+	SetPenWidth(1);
+    // Draw the lock body (rectangle)
+	
+    startpath();
+    rectangle(0, 40, 100, 100); // Adjust the proportions for the lock body
+    endpath();
+    fillandstrokepath();
+
+    // Draw the keyhole
+    // Keyhole circle (top part)
+	SetFillColor(0,0,0);
+	SetPenColor(0,0,0);
+    startpath();
+    ellipse(40, 65, 60, 85); // Small circle for the keyhole, adjusted positioning
+    endpath();
+    fillandstrokepath();
+
+    // Keyhole rectangle (bottom part)
+    startpath();
+    rectangle(46, 75, 54, 93); // Rectangular part of the keyhole, adjusted to fit proportions
+    endpath();
+    fillandstrokepath();
+		
+	}
+}
+
+decoration composite
+{
+	orientation="SE";
+	if(hasproperty("iscomposite","true"))
+	{
+		ellipse(0,40,40,60);
+		ellipse(60,40,100,60);
+		moveto(30,50);
+		lineto(70,50);
+	}
+}

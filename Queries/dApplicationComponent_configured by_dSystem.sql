@@ -1,4 +1,4 @@
--- Generated 2024-09-10 10:54:27 AM
+-- Generated 2024-09-16 1:52:22 PM
 --  dApplicationComponent (GroupName) connected with  dSystem (series)
 SELECT dApplicationComponent.Name as dApplicationComponent,  dSystem.Name as  dSystem
 FROM t_object AS dSystem

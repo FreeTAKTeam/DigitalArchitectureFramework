@@ -1,4 +1,4 @@
--- Generated 2024-09-10 10:54:52 AM
+-- Generated 2024-09-16 1:52:58 PM
 --  dApplicationComponent (GroupName) connected with  dContainer (series)
 SELECT dApplicationComponent.Name as dApplicationComponent,  dContainer.Name as  dContainer
 FROM t_object AS dContainer

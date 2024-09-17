@@ -1,0 +1,31 @@
+// labels examples
+shape LeftTopLabel {
+ 2   Rectangle(0,0,100,100);
+ 3   Ellipse(0,-6,12,6);
+ 4   print("LeftTopLabel");
+ 5 }
+ 6 shape MiddleTopLabel {
+ 7   Rectangle(0,0,100,100);
+ 8   Ellipse(0,-6,12,6);
+ 9   print("MiddleTopLabel");
+10 }
+11 shape RightTopLabel {
+12   Rectangle(0,0,100,100);
+13   Ellipse(0,-6,12,6);
+14   print("RightTopLabel");
+15 }
+16 shape LeftBottomLabel {
+17   Rectangle(0,0,100,100);
+18   Ellipse(0,-6,12,6);
+19   print("LeftBottomLabel");
+20 }
+21 shape MiddleBottomLabel {
+22   Rectangle(0,0,100,100);
+23   Ellipse(0,-6,12,6);
+24   print("MiddleBottomLabel");
+25 }
+26 shape RightBottomLabel {
+27   Rectangle(0,0,100,100);
+28   Ellipse(0,-6,12,6);
+29   print("RightBottomLabel");
+30 }

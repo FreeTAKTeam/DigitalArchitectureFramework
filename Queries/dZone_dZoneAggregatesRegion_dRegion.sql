@@ -1,4 +1,4 @@
--- Generated 2024-09-10 11:15:29 AM
+-- Generated 2024-09-16 2:17:32 PM
 --  dZone (GroupName) connected with  dRegion (series)
 SELECT dZone.Name as dZone,  dRegion.Name as  dRegion
 FROM t_object AS dRegion

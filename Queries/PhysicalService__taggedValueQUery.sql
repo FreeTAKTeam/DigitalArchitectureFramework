@@ -1,7 +1,6 @@
-SELECT PhysicalService.Object_ID, PhysicalService.ea_guid AS CLASSGUID , PhysicalService.Object_Type AS CLASSTYPE, PhysicalService.Name as PhysicalService, Category.value, Icon.value, Id.value, LastStandardReviewDate.value, NextStandardReviewDate.value, Owner.value, RetireDate.value, Source.value, port.value, protocol.value, executionmode.value
+SELECT PhysicalService.Object_ID, PhysicalService.ea_guid AS CLASSGUID , PhysicalService.Object_Type AS CLASSTYPE, PhysicalService.Name as PhysicalService, Category.value, Id.value, LastStandardReviewDate.value, NextStandardReviewDate.value, Owner.value, RetireDate.value, Source.value, port.value, protocol.value, executionmode.value
 FROM t_object as PhysicalService
 INNER JOIN t_objectproperties AS Category  ON (Category.Object_ID =PhysicalService.Object_ID AND Category.Property = ('Category'))
-INNER JOIN t_objectproperties AS Icon  ON (Icon.Object_ID =PhysicalService.Object_ID AND Icon.Property = ('Icon'))
 INNER JOIN t_objectproperties AS Id  ON (Id.Object_ID =PhysicalService.Object_ID AND Id.Property = ('Id'))
 INNER JOIN t_objectproperties AS LastStandardReviewDate  ON (LastStandardReviewDate.Object_ID =PhysicalService.Object_ID AND LastStandardReviewDate.Property = ('LastStandardReviewDate'))
 INNER JOIN t_objectproperties AS NextStandardReviewDate  ON (NextStandardReviewDate.Object_ID =PhysicalService.Object_ID AND NextStandardReviewDate.Property = ('NextStandardReviewDate'))
