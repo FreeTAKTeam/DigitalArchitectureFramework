@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="E8C3098A-9" name="DAF Solution Architecture" version="5.0 alpha" notes="Seven mandatory views for DAF Solution Architecture"/>
+	<Documentation id="E8C3098A-9" name="DAF Solution Architecture" version="5.5.10" notes="Seven mandatory views for DAF Solution Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Application Use-Case" notes="An Application Use-Case diagram displays the relationships between consumers and providers of application services. Application services are consumed by actors or other application ser vices and the Application Use-Case diagram provides added richness in describing application functionality by illustrating how and when that functionality is used.&#xA;The purpose of the Application Use-Case diagram is to help to describe and validate the interaction between actors and their roles with applications. As the architecture progresses, the use-case can evolve from functional information to include technical realization detail.&#xA;Application use-cases can also be re-used in more detailed systems design work.&#xA;">
@@ -17,24 +17,24 @@
 					<Apply type="Diagram_Logical">
 						<Property name="alias" value="Class Diagram"/>
 						<Property name="diagramID" value="DAF_SA_LDD"/>
-						<Property name="toolbox" value="DAF_Common_TB"/>
+						<Property name="toolbox" value="DAF_DigitalEng_TB"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Deployment Diagram" notes="A deployment diagram in the Unified Modeling Language models the physical deployment of artifacts on nodes. It is composed by Nodes, application components and execution environments. ">
+			<Stereotype name="Deployment Diagram" notes="A deployment diagram in the Unified Modeling Language models the physical deployment of artifacts on nodes. It is composed by Nodes, application components and execution environments. In DAF it contains all the concept to describe a complete deployment of a application">
 				<AppliesTo>
 					<Apply type="Diagram_Deployment">
 						<Property name="alias" value="Deployment"/>
 						<Property name="diagramID" value="DAF_TA_DD"/>
-						<Property name="toolbox" value="DAF_Application_Architecture_TB"/>
+						<Property name="toolbox" value="DAF_Deployment"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
 			<Stereotype name="Solution Concept" notes="A solution concept diagram provides a high-level orientation of the solution that is envisaged in order to meet the objectives of the architecture engagement. In contrast to the more formal and detailed architecture diagrams developed in the following phases, the solution concept represents a pencil sketch of the element involved in the expected solution at the outset of the engagement. This diagram may embody key objectives, requirements and constraints for the engagement, and also highlight work areas to be investigated in more detail with formal architecture modeling. The purpose of this diagram is to quickly on-board and align stakeholders for a particular change initiative, so that all participants understand what the architecture engagement is seeking to achieve and how it is expected that a particular solution approach will meet the needs of the enterprise.&#xA;">
 				<AppliesTo>
 					<Apply type="Diagram_Logical">
-						<Property name="pdata" value="HideRel=0;HideEStereo=1;"/>
 						<Property name="alias" value="Solution Concept"/>
+						<Property name="pdata" value="HideRel=0;HideEStereo=1;"/>
 						<Property name="toolbox" value="DAF_Common_TB"/>
 						<Property name="diagramID" value="DAF_BA_SCD"/>
 					</Apply>
@@ -54,7 +54,7 @@
 					<Apply type="Diagram_Component">
 						<Property name="alias" value="Component"/>
 						<Property name="diagramID" value="DAF-AA-CD"/>
-						<Property name="toolbox" value="DAF_Application_Architecture_TB"/>
+						<Property name="toolbox" value="DAF_DigitalEng_TB"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
@@ -75,6 +75,13 @@
 						<Property name="pdata" value="HideAtts=1;HideOps=1;HideRel=0;"/>
 						<Property name="styleex" value="AdvancedElementProps=0;"/>
 						<Property name="toolbox" value="DAF_Data_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="API" alias="Diagram" notes="a diagram to model Rest APIs and JSON objects">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="toolbox" value="DAF_API"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
