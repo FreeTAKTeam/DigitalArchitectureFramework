@@ -1,5 +1,5 @@
 <?xml  version='1.0' encoding='utf-8' ?>
-<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.5.11" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
+<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.5.12" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
 AAABAAAAAAAAN9O7ADvUvABC1b4ARdbAAErXwQBN2MIAUtnEAFraxwBd28gA
 Zd3KAGzezQBx4M8AduHQAHvh0gCC49QAiOXXAIzl2ACS59oAlujbAJvp3QCh
 6t8Ao+vgAK3s4wC07uUAuO/nALrw5wC78OgAwfHpAMv07QDQ9e8A0vXwANv3
@@ -25,20 +25,20 @@ ASEEAAEOCyUBFQQAAR4PJQEXAwAAAAEaAwABCAslARAEAAEcCiUBBgMAAQUQ
 JQEaAwAAAAEaAwABCAslASEFAAklARUEAAEVECUBGQMAAAABGwQADCUBGiUl
 JSUlJSUlJSUlJSUlJSUlJSUfEwkAAAAAAAAAAAAAAAAAAAIOGiUlJSUlJSUl
 JSUlJSUlJSUlJQAAACUlJSUlJSUlJSUlJSUlJSUlGQoAAAAAAAAAAAAAAAAA
-AAAAAAAAAAURIyUlJSUlJSUlJSUlJSUlJQEAgCUlJSUlJSUlJSUlJSUlJRkH
+AAAAAAAAAAURIyUlJSUlJSUlJSUlJSUlJQAAACUlJSUlJSUlJSUlJSUlJRkH
 AAAAAAAAAAABAAAAAAABAAAAAAAAAAAAABAkJSUlJSUlJSUlJSUlJQAAACUl
 JSUlJSUlJSUlJSUfCgAAAAAAAAEAAQoOFQkaGhcVAQwGAQAAAAAAAAABFiUl
 JSUlJSUlJSUlJQAAACUlJSUlJSUlJSUlJRUAAAAAAAAABREcJSUlJSUlJSUl
 JSUlGxYKAQAAAAAAAAohJSUlJSUlJSUlJQAAACUlJSUlJSUlJSUkCwAAAAAA
 AAkaJSUlJSUlJSUlJSUlJSUlJSUlIRAAAAAAAAABGSUlJSUlJSUlJQAAACUl
 JSUlJSUlJSEHAAAAAAAHGiUlJSUlJSUlJSUlJSUlJSUlJSUlJSUjAgEAAAAA
-ABUlJSUlJSUlJQAAACUlJSUlJSUlHwYAAAAAAAUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJQQAgCUlJSUlJSUjBgAAAAAFHCUl
+ABUlJSUlJSUlJf//ACUlJSUlJSUlHwYAAAAAAAUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJQA9ACUlJSUlJSUjBgAAAAAFHCUl
 JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlEAAAAAAAFSUlJSUlJQAAACUl
 JSUlJSUJAAAAAAkjJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRUB
 AAAAABklJSUlJQAAACUlJSUlJRAAAAAACiUlJSUlJSUlJSUZAAAAAAAAABkl
 JSUlJSUlJSUlJSUlJSUJAAAAAAEhJSUlJQAAACUlJSUlFwAAAAAJJCUlJSUl
-JSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUlJSUlFQAAAAAKJSUlJQAAACUl
+JSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUlJSUlFQAAAAAKJSUlJf///yUl
 JSUlBQAAAAAgJSUlJSUlJRwAAAAAAAAAAAAAAAAAAAAhJSUlJSUlJSUlJSUl
 JRAAAAAAFiUlJQAAACUlJSUQAAAAABclJSUlJSUlHAAAAAAACiUlJSUlEAAA
 AAAAISUlJSUlJSUlJSUlJSUIAAAAASQlJQAAACUlJSEAAAAADSUlJSUlJSUl
@@ -46,59 +46,59 @@ AAAAAAAhJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUcAAAAABAlJQAAACUl
 JQ4AAAAAISUlJSUlJSUQAAAAABwlJSUlJSUlJSUlAAAAAA4lJSUlJSUlJSUl
 JSUlAAAAAAAjJQAAACUlIwAAAAARJSUlJSUlJSUAAAAAECUlJSUlJSUlJSUl
 FQAAAAAlJSUlJSUlJSUlJSUlIwAAAAARJQAAACUlFQAAAAEjJSUlJSUlJRoA
-AAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJQAAACUl
+AAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJYEtBSUl
 BwAAAAMlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJQYAAAAOJSUlJSUlJSUl
-JSUlJSEAAAAAGrFgJiUfAAAAAB4lJSUlJSUlJQoAAAAKJSUlJSUlJSUlJSUl
-JRAAAAAGJSUlJSUlJSUlJSUlJSUKAAAADtAnPCUVAAAABiUlJSUlJSUlJQYA
-AAAQJSUlJSUlJSUlJSUlJQ4AAAAFJSUlJSUlJSUlJSUlJSUWAAAABQIAACUM
+JSUlJSEAAAAAGgAAACUfAAAAAB4lJSUlJSUlJQoAAAAKJSUlJSUlJSUlJSUl
+JRAAAAAGJSUlJSUlJSUlJSUlJSUKAAAADgAAACUVAAAABiUlJSUlJSUlJQYA
+AAAQJSUlJSUlJSUlJSUlJQ4AAAAFJSUlJSUlJSUlJSUlJSUWAAAABQAAACUM
 AAAAECUlJSUlJSUlJQAAAAAOJSUlJSUlJSUlJSUlJRUAAAAAJSUlJSUlJSUl
 JSUlJSUbAAAAAAAAACUFAAAAGiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUl
 JRUAAAAAJSUlJSUlJSUlJSUlJSUlBgAAAAAAACQAAAAAISUlJSUlJSUlJQYA
 AAAKJSUlJSUlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJSUlDAAAAAAAAB8A
 AAAAJSUlJSUlJSUlJQoAAAAFJSUlJSUlJSUlJSUlJQYAAAAKJSUlJSUlJSUl
-JSUlJSUlBQAAAAAAABwAAAAFJSUlJSUlJSUlJRUAAAAAHiUlJSUlJSUlJSUl
-IQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAA6IOhoAAAAGJSUlJSUlJSUlJSEA
-AAAADiUlJSUlJSUlJSUlFQAAAAAeJSUlJSUlJSUlJSUlJSUlFwAAAFX7OhoA
+JSUlJSUlBQAAAP//ABwAAAAFJSUlJSUlJSUlJRUAAAAAHiUlJSUlJSUlJSUl
+IQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAABDABoAAAAGJSUlJSUlJSUlJSEA
+AAAADiUlJSUlJSUlJSUlFQAAAAAeJSUlJSUlJSUlJSUlJSUlFwAAAAAAABoA
 AAAIJSUlJSUlJSUlJSUQAAAAABwlJSUlJSUlJSUlBgAAAAUlJSUlJSUlJSUl
 JSUlJSUlGgAAAAAAABoAAAAIJSUlJSUlJSUlJSUhAAAAAAAlJSUlJSUlJSUV
-AAAAABUlJSUlJSUlJSUlJSUlJSUlGQAAAI+uKBsAAAAAJSUlJSUlJSUlJSUl
-GgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUlJSUlCQAAAAAwAB4A
+AAAAABUlJSUlJSUlJSUlJSUlJSUlGQAAAAAAABsAAAAAJSUlJSUlJSUlJSUl
+GgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUlJSUlCQAAAP///x4A
 AAADJSUlJSUlJSUlJSUlJRUAAAAAACElJSUlJQoAAAAAGiUlJSUlJSUlJSUl
 JSUlJSUlFQAAAAAAACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
 AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAAAAACUBAAAAESUlJSUlJSUlJSUl
-JSUlIQEAAAAAAAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAIo1FiUI
+JSUlIQEAAAAAAAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAAAAACUI
 AAAAFSUlJSUlJSUlJSUlJSUlJSUVAAAAAAAAAAAAACUlJSUlJSUlJSUlJSUl
 JSUlJSUlAQAAAAAAACUQAAAADCUlJSUlJSUlJSUlJSUlJSUlJR0AAAAAAAAA
 ISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAAAAACUaAAAAASQlJSUlJSUlJSUl
-JSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACQAAACUk
+JSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACYEtBSUk
 AAAAABclJSUlJSUlJSUlJSUlJSUlJR0AAAAAAB0lJSUlJSUlJSUlJSUlJSUl
-JSUlJSUFAAAAEwMAACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUl
+JSUlJSUFAAAAEwAAACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUl
 JSUlJSUlJSUlJSUlJSUlJSUlJRoAAAAAHwAAACUlGwAAAAAOJSUlJSUlJSUl
 JSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQkAAAAKJQAAACUl
 JQgAAAAJJSUlJSUlJSUlJSUlJSUAAAAAABolJSUlJSUlJSUlJSUlJSUlJSUl
 JSUlGgAAAAAaJQAAACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
 JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQAAACUlJSUIAAAABSQlJSUlJSUl
-JSUlBgAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJf///yUl
+JSUlBgAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJQAAACUl
 JSUbAAAAAA0lJSUlJSUlJSUKAAAAABUlJSUlJSUlJSUlJSUlJSUlJSUlJSUl
-JRwAAAAACiUlJQAAACUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
-AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQAAACUlJSUlIwUAAAAAFyUlJSUl
-JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJdrHOyUl
+JRwAAAAACiUlJf//ACUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
+AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQBjACUlJSUlIwUAAAAAFyUlJSUl
+JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQAAACUl
 JSUlJRsAAAAAABclJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSQK
 AAAAAA0lJSUlJQAAACUlJSUlJSUVAAAAAAAVJSUlJSUlJSUlJSUlJSUlJSUl
 JSUlJSUlJSUlJSUlHwgAAAAAByQlJSUlJQAAACUlJSUlJSUlEQEAAAAADSQl
-JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQAAACUl
+JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQBWACUl
 JSUlJSUlJREAAAAAAAUXJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlIQ0AAAAA
-AAYgJSUlJSUlJQcAACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
-JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJfj//yUlJSUlJSUlJSUlGwUAAAAA
-AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJbWdDiUl
+AAYgJSUlJSUlJQBwACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
+JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBlACUlJSUlJSUlJSUlGwUAAAAA
+AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQAAACUl
 JSUlJSUlJSUlJSMNAQAAAAAAAAEMFREkJSUlJSUlJR8aEAYAAAAAAAAABRol
-JSUlJSUlJSUlJQBvACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
-AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQA6ACUlJSUlJSUlJSUlJSUlJSUX
-BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJVSJACUl
+JSUlJSUlJSUlJQByACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
+AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQByACUlJSUlJSUlJSUlJSUlJSUX
+BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJeASACUl
 JSUlJSUlJSUlJSUlJSUlJRsNAQAAAAAAAAAAAAAAAAAAAAAABxUjJSUlJSUl
-JSUlJSUlJSUlJQBzACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
-AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQAAACUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQAAAA==
+JSUlJSUlJSUlJa+wOyUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
+AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQA6ACUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQBjAA==
 </Image></Logo><Icon><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////0/Xwi+XXaN3LZt3KguPUw/Hq
@@ -119,7 +119,7 @@ Esqu2vfy////////////jOXYOdO76/r4////////////////////BMep/v7+
 ////////////////////////////////nendWNrGNdK6MtK5T9jDjubY9/38
 ////////////////
 </Image></Icon><UMLProfiles><UMLProfile profiletype="uml2">
-	<Documentation id="B91435BE-4" name="DAF" version="5.5.10" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
+	<Documentation id="B91435BE-4" name="DAF" version="5.5.12" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="dAction" alias="Action" metatype="Action" notes="A specialized activity. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -326,9 +326,9 @@ AAAAAHN0ci5kYXRVVAUABzbB9ltQSwUGAAAAAAEAAQA+AAAAPgEAAAAA
 			</Stereotype>
 			<Stereotype name="dApplicationComponent" alias="Application Component" metatype="Application Component" notes="An encapsulation of application functionality aligned to implementation structure which is modular and replaceable. It encapsulates&#x9; its behavior and data, provides services, and makes them  available through interfaces. An application component is a self-contained unit. As such, it is independently deployable, re-usable, and replaceable. An application component performs one or more application functions. It encapsulates its behavior and data, exposes services, and makes them available through interfaces. Cooperating application components are connected via application collaborations.&#xA;&#xA;An application component may be assigned to one or more application functions. An application component has one or more application interfaces, which expose its functionality. Application interfaces of other application components may serve an application component. The name of an application component should preferably be a noun." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2KAwAAAAAAAIoAAAB8AAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAAAAdl/ghdZf4IXWX+CF3FVl1v2kAQ3NfkV1jlhUhUDRBKqpZK
-baW0fWpUKvUxIkCwVTDINololf+emb3zBx/2uVEkdLrzndmZ253bWxOLLyNZ
-yVQ8+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+AAAAAAAAAAAATPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7
+TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM
+9ZA7+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ
 +GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4
@@ -448,8 +448,8 @@ BQYAAAAAAQABAD4AAAC9AgAAAAA=
 			</Stereotype>
 			<Stereotype name="dSystem" alias="System" metatype="System Configuration" notes="A system configuration. Settings are modeled as attributes with default values" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
-XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
 ////////////////////////////////////////////////////////////
 //////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
 //////////8AAAD///////////////////////////8AAAD/////////////
@@ -908,8 +908,8 @@ AAdQjgtdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 			</Stereotype>
 			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
-AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
-XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
+AAAAAAAAAAAApM+QO6TPkDukz5A7pM+QO6TPkDukz5A7pM+QO6TPkDukz5A7
+pM+QO6TPkDukz5A7pM+QO6TPkDukz5A74J1uOwAAAAD/////////////////
 ///////////////////////////////////////////////X8uvO7+fO7+fO
 7+fO7+fO7+fO7+fO7+fQ7+j////7/f286t+46N246N3n9/P///9u2cXO7+fO
 7+fO7+fO7+fO7+fO7+fO7+eB3Mr////p9/SS38/d8+7A6+G46N3///+F3cv/
@@ -3803,6 +3803,24 @@ AgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
+			<Stereotype name="dSchema_Associates_Schema" metatype="Schema Association" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Association">
+						<Property name="_MeaningBackwards" value="Source Schema"/>
+						<Property name="_MeaningForwards" value="Target Schema"/>
+						<Property name="_relatedTo" value="Schema Association"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="dPolymorphicCollection" metatype="Polymorphic Collection" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Generalization">
+						<Property name="_MeaningBackwards" value="@Type"/>
+						<Property name="_MeaningForwards" value="@baseType"/>
+						<Property name="_relatedTo" value="Polymorphic Collection"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
 		</Stereotypes>
 		<TaggedValueTypes>
 			<TaggedValueType property="Part of Program" description="" notes="Type=RefGUID;Stereotypes=dProgram;"/>
@@ -6049,7 +6067,7 @@ sbt+9fT09PT09PwGPO8/zoe2CnKBVOwAAAAASUVORK5CYII=
 		<Metamodel/>
 	</Content>
 </UMLProfile></DiagramProfile><UIToolboxes><UMLProfile profiletype="uml2">
-	<Documentation id="48791CFC-E" name="DAF_API" version="5.5.10" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
+	<Documentation id="48791CFC-E" name="DAF_API" version="5.5.12" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="API Elements" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -6078,87 +6096,14 @@ sbt+9fT09PT09PwGPO8/zoe2CnKBVOwAAAAASUVORK5CYII=
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::(UML::)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::contains Action(UML::Composition)" type="string" description="" unit="" values="" default="contains Action"/>
-					<Tag name="DAF::participatesIn(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isPerformedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Realizes(UML::Realization)" type="string" description="" unit="" values="" default="Realizes Component"/>
-					<Tag name="DAF::configured by(UML::Aggregation)" type="string" description="" unit="" values="" default="configured by System"/>
-					<Tag name="DAF::Exposes Service(UML::Association)" type="string" description="" unit="" values="" default="Exposes Service"/>
-					<Tag name="DAF::Application Owner(UML::Association)" type="string" description="" unit="" values="" default="Application Owner"/>
-					<Tag name="DAF::Connected with Application(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
-					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Function"/>
-					<Tag name="DAF::Orchestrates service(UML::Aggregation)" type="string" description="" unit="" values="" default="Orchestrates Service"/>
-					<Tag name="DAF::Flows to(UML::Dependency)" type="string" description="" unit="" values="" default="Flows to"/>
-					<Tag name="DAF::Uses Data(UML::Association)" type="string" description="" unit="" values="" default="Uses Data"/>
-					<Tag name="DAF::dRelatedService(UML::Association)" type="string" description="" unit="" values="" default="Child Process"/>
-					<Tag name="DAF::isDescribedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Contains Activities(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is realized by Use Case(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Ensure the correct  Operation of(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isMeasuredBy(UML::Association)" type="string" description="" unit="" values="" default="is Measured By KPI"/>
-					<Tag name="DAF::Executes(UML::Aggregation)" type="string" description="" unit="" values="" default="Executes"/>
-					<Tag name="DAF::isOperationalizedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Supports Capability(UML::Aggregation)" type="string" description="" unit="" values="" default="Supports Capability"/>
-					<Tag name="DAF::informs Capability(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Implements Service(UML::Association)" type="string" description="" unit="" values="" default="dControllerImplementsFunction"/>
-					<Tag name="DAF::Governs(UML::Association)" type="string" description="" unit="" values="" default="Governs View"/>
-					<Tag name="DAF::Controlls(UML::Association)" type="string" description="" unit="" values="" default="Controlls Model"/>
-					<Tag name="DAF::isImplementedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dActionKey(UML::Dependency)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::AssociatedEntity(UML::Association)" type="string" description="" unit="" values="" default="Associated Entity"/>
-					<Tag name="DAF::isMakingUseOf(UML::Association)" type="string" description="" unit="" values="" default="is Making Use Of"/>
-					<Tag name="DAF::refers To(UML::Dependency)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isSatisfiedBy(UML::Realization)" type="string" description="" unit="" values="" default="is Satisfied By"/>
-					<Tag name="DAF::has Milestone(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dGoalAggregatesGoal(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal Aggregates Goal"/>
-					<Tag name="DAF::is delivered by(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::IncreasesMaturityOf(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::exposes Biz Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates categories(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates Groups(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates KPI(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::RealizesEntity(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::ProvidesPersistenceFor(UML::Association)" type="string" description="" unit="" values="" default="Provides Persistence"/>
-					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
-					<Tag name="DAF::InstanceofModel(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Model"/>
-					<Tag name="DAF::InstanceofController(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Controller"/>
-					<Tag name="DAF::InstanceofView(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of View"/>
-					<Tag name="DAF::dDiscord(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dAccord(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::has Stakeholders(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Implements(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Includes Process(UML::Aggregation)" type="string" description="" unit="" values="" default="Includes Process"/>
-					<Tag name="DAF::is organized In(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is related to(UML::Association)" type="string" description="" unit="" values="" default="is related to"/>
-					<Tag name="DAF::Contains Requirement(UML::Composition)" type="string" description="" unit="" values="" default="Contains Requirement"/>
-					<Tag name="DAF::supports(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is related to risk(UML::Dependency)" type="string" description="" unit="" values="" default="is related to Risk"/>
-					<Tag name="DAF::Resource Risk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted"/>
-					<Tag name="DAF::Application Risk(UML::Dependency)" type="string" description="" unit="" values="" default="Application Risk"/>
-					<Tag name="DAF::is Associated To(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Consumes Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Has Inner Opinion(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Has Opinion(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isFunctionallyImplementedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dTest_ApplicationComponent(UML::Association)" type="string" description="" unit="" values="" default="Test validates Component"/>
-					<Tag name="DAF::Includes Processes(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::(UML::Generalization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default="Schema Associates Schema"/>
 					<Tag name="DAF::dPolymorphicCollection(UML::Generalization)" type="string" description="" unit="" values="" default="Polymorphic Collection"/>
-					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Generalization)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Generalization)" type="string" description="" unit="" values="" default="Generalizes Schema"/>
 					<Tag name="DAF::dSchema_Associates_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Association"/>
 					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="string" description="" unit="" values="" default="Schema Generalization"/>
-					<Tag name="DAF::schemaVersion(UML::)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::dSchemaAssociatesElement(UML::Aggregation)" type="string" description="" unit="" values="" default="Schema Associates Element"/>
 					<Tag name="DAF::dJSONSchemaRealizesModel(UML::Realization)" type="string" description="" unit="" values="" default="Schema Realizes Model"/>
-					<Tag name="DAF::format(UML::)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::TMF_ProvidedAPI(UML::Assembly)" type="string" description="" unit="" values="" default="Provided API"/>
 					<Tag name="DAF::dAPIAggregatesSchema(UML::Aggregation)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
-					<Tag name="DAF::(UML::Realization)" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

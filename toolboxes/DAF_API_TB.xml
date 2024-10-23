@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="48791CFC-E" name="DAF_API" version="5.5.10" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
+	<Documentation id="48791CFC-E" name="DAF_API" version="5.5.12" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="API Elements" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -29,87 +29,14 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::(UML::)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::contains Action(UML::Composition)" type="string" description="" unit="" values="" default="contains Action"/>
-					<Tag name="DAF::participatesIn(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isPerformedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Realizes(UML::Realization)" type="string" description="" unit="" values="" default="Realizes Component"/>
-					<Tag name="DAF::configured by(UML::Aggregation)" type="string" description="" unit="" values="" default="configured by System"/>
-					<Tag name="DAF::Exposes Service(UML::Association)" type="string" description="" unit="" values="" default="Exposes Service"/>
-					<Tag name="DAF::Application Owner(UML::Association)" type="string" description="" unit="" values="" default="Application Owner"/>
-					<Tag name="DAF::Connected with Application(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
-					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Function"/>
-					<Tag name="DAF::Orchestrates service(UML::Aggregation)" type="string" description="" unit="" values="" default="Orchestrates Service"/>
-					<Tag name="DAF::Flows to(UML::Dependency)" type="string" description="" unit="" values="" default="Flows to"/>
-					<Tag name="DAF::Uses Data(UML::Association)" type="string" description="" unit="" values="" default="Uses Data"/>
-					<Tag name="DAF::dRelatedService(UML::Association)" type="string" description="" unit="" values="" default="Child Process"/>
-					<Tag name="DAF::isDescribedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Contains Activities(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is realized by Use Case(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Ensure the correct  Operation of(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isMeasuredBy(UML::Association)" type="string" description="" unit="" values="" default="is Measured By KPI"/>
-					<Tag name="DAF::Executes(UML::Aggregation)" type="string" description="" unit="" values="" default="Executes"/>
-					<Tag name="DAF::isOperationalizedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Supports Capability(UML::Aggregation)" type="string" description="" unit="" values="" default="Supports Capability"/>
-					<Tag name="DAF::informs Capability(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Implements Service(UML::Association)" type="string" description="" unit="" values="" default="dControllerImplementsFunction"/>
-					<Tag name="DAF::Governs(UML::Association)" type="string" description="" unit="" values="" default="Governs View"/>
-					<Tag name="DAF::Controlls(UML::Association)" type="string" description="" unit="" values="" default="Controlls Model"/>
-					<Tag name="DAF::isImplementedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dActionKey(UML::Dependency)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::AssociatedEntity(UML::Association)" type="string" description="" unit="" values="" default="Associated Entity"/>
-					<Tag name="DAF::isMakingUseOf(UML::Association)" type="string" description="" unit="" values="" default="is Making Use Of"/>
-					<Tag name="DAF::refers To(UML::Dependency)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isSatisfiedBy(UML::Realization)" type="string" description="" unit="" values="" default="is Satisfied By"/>
-					<Tag name="DAF::has Milestone(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dGoalAggregatesGoal(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal Aggregates Goal"/>
-					<Tag name="DAF::is delivered by(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::IncreasesMaturityOf(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::exposes Biz Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates categories(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates Groups(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::aggregates KPI(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::RealizesEntity(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::ProvidesPersistenceFor(UML::Association)" type="string" description="" unit="" values="" default="Provides Persistence"/>
-					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
-					<Tag name="DAF::InstanceofModel(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Model"/>
-					<Tag name="DAF::InstanceofController(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Controller"/>
-					<Tag name="DAF::InstanceofView(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of View"/>
-					<Tag name="DAF::dDiscord(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dAccord(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::has Stakeholders(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Implements(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Includes Process(UML::Aggregation)" type="string" description="" unit="" values="" default="Includes Process"/>
-					<Tag name="DAF::is organized In(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is related to(UML::Association)" type="string" description="" unit="" values="" default="is related to"/>
-					<Tag name="DAF::Contains Requirement(UML::Composition)" type="string" description="" unit="" values="" default="Contains Requirement"/>
-					<Tag name="DAF::supports(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::is related to risk(UML::Dependency)" type="string" description="" unit="" values="" default="is related to Risk"/>
-					<Tag name="DAF::Resource Risk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted"/>
-					<Tag name="DAF::Application Risk(UML::Dependency)" type="string" description="" unit="" values="" default="Application Risk"/>
-					<Tag name="DAF::is Associated To(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Consumes Service(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Has Inner Opinion(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::Has Opinion(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isFunctionallyImplementedBy(UML::Realization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dTest_ApplicationComponent(UML::Association)" type="string" description="" unit="" values="" default="Test validates Component"/>
-					<Tag name="DAF::Includes Processes(UML::Composition)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::(UML::Generalization)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default="Schema Associates Schema"/>
 					<Tag name="DAF::dPolymorphicCollection(UML::Generalization)" type="string" description="" unit="" values="" default="Polymorphic Collection"/>
-					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Generalization)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Generalization)" type="string" description="" unit="" values="" default="Generalizes Schema"/>
 					<Tag name="DAF::dSchema_Associates_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Association"/>
 					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="string" description="" unit="" values="" default="Schema Generalization"/>
-					<Tag name="DAF::schemaVersion(UML::)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::dSchemaAssociatesElement(UML::Aggregation)" type="string" description="" unit="" values="" default="Schema Associates Element"/>
 					<Tag name="DAF::dJSONSchemaRealizesModel(UML::Realization)" type="string" description="" unit="" values="" default="Schema Realizes Model"/>
-					<Tag name="DAF::format(UML::)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::TMF_ProvidedAPI(UML::Assembly)" type="string" description="" unit="" values="" default="Provided API"/>
 					<Tag name="DAF::dAPIAggregatesSchema(UML::Aggregation)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
-					<Tag name="DAF::(UML::Realization)" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>
