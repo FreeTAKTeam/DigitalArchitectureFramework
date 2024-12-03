@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:05:12 PM
+-- Generated 2024-12-03 2:26:02 PM
 --  dLogicalAppComponent (GroupName) connected with  dBusinessService (series)
 SELECT dLogicalAppComponent.Name as dLogicalAppComponent,  dBusinessService.Name as  dBusinessService
 FROM t_object AS dBusinessService

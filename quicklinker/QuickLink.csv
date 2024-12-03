@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-09-16 1:49:45 PM
+//generated:2024-12-03 1:59:01 PM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -30,11 +30,11 @@ Interface,dAPI,Interface,dPhysicalService,,,,Realization,,directed,,,TRUE,,TRUE,
 Interface,dPhysicalService,Interface,dAPI,,,,Realization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dAPI,,,,Interface,dPhysicalService,Realization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,,,,Interface,dAPI,Realization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> Realizes -> dLogicalAppComponent
-Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,Realizes,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,Realizes,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,Realizes,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,Realizes,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationComponentRealizesogicalComponent -> dLogicalAppComponent
+Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,dApplicationComponentRealizesogicalComponent,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,dApplicationComponentRealizesogicalComponent,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> configured by -> dSystem
 Component,dApplicationComponent,Component,dSystem,,,,Aggregation,configured by,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -126,10 +126,10 @@ Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,Supports Capabil
 Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,Supports Capability,from,,supported by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,Supports Capability,to,,supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dCapability -> informs Capability -> dDataEntity
-Class,dCapability,Class,dDataEntity,,,,Realization,informs Capability,directed,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dCapability,,,,Realization,informs Capability,from,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dDataEntity,Realization,informs Capability,directed,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dCapability,Realization,informs Capability,from,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Class,dDataEntity,,,,Aggregation,informs Capability,from,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dCapability,,,,Aggregation,informs Capability,to,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dDataEntity,Aggregation,informs Capability,from,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dCapability,Aggregation,informs Capability,to,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dCluster -> ClusterContainsDeploymentNode -> dDeploymentNode
 Class,dCluster,Node,dDeploymentNode,,,,Aggregation,ClusterContainsDeploymentNode,from,Contains DeploymentNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Node,dDeploymentNode,Class,dCluster,,,,Aggregation,ClusterContainsDeploymentNode,to,is Contained in Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -440,43 +440,3 @@ Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed
 Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOpinionInner,Association,Has Inner Opinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinionInner,,,,Actor,dStakeholder,Association,Has Inner Opinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dStakeholder -> Has Opinion -> dOpinion
-Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dSubNetwork -> dSubNetworkAggregatesIPRange -> dIPRange
-Class,dSubNetwork,Class,dIPRange,,,,Aggregation,dSubNetworkAggregatesIPRange,from,Aggregates IP Range,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dIPRange,Class,dSubNetwork,,,,Aggregation,dSubNetworkAggregatesIPRange,to,is Aggregated in sub Net.,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dSubNetwork,,,,Class,dIPRange,Aggregation,dSubNetworkAggregatesIPRange,from,,Aggregates IP Range,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dIPRange,,,,Class,dSubNetwork,Aggregation,dSubNetworkAggregatesIPRange,to,,is Aggregated in sub Net.,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dTable -> isFunctionallyImplementedBy -> dDataEntity
-Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dTest -> dTest_ApplicationComponent -> dApplicationComponent
-Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponent,directed,Test validates Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponent,from,is validated by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dTest,,,,Component,dApplicationComponent,Association,dTest_ApplicationComponent,directed,,Test validates Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dTest,Association,dTest_ApplicationComponent,from,,is validated by test,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dUserStory ->  -> dBusinessUseCase
-UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dValueStream -> Includes Processes -> dBusinessProcess
-Activity,dValueStream,Class,dBusinessProcess,,,,Composition,Includes Processes,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dValueStream,,,,Class,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dValueStream ->  -> dCapability
-Activity,dValueStream,Class,dCapability,,,,Association,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,Activity,dValueStream,,,,Association,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dValueStream,,,,Class,dCapability,Association,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Activity,dValueStream,Association,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dZone -> dZoneAggregatesRegion -> dRegion
-Class,dZone,Class,dRegion,,,,Aggregation,dZoneAggregatesRegion,from,Aggregates Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRegion,Class,dZone,,,,Aggregation,dZoneAggregatesRegion,to, is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dZone,,,,Class,dRegion,Aggregation,dZoneAggregatesRegion,from,,Aggregates Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRegion,,,,Class,dZone,Aggregation,dZoneAggregatesRegion,to,, is Aggregated in Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,

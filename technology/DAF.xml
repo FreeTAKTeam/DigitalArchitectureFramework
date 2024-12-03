@@ -1,5 +1,5 @@
 <?xml  version='1.0' encoding='utf-8' ?>
-<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.5.12" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
+<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="5.5.15" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2SEQAAAAAAADYEAAAoAAAAOQAAADkAAAABAAgAAAAAAFwNAAAoFgAAKBYA
 AAABAAAAAAAAN9O7ADvUvABC1b4ARdbAAErXwQBN2MIAUtnEAFraxwBd28gA
 Zd3KAGzezQBx4M8AduHQAHvh0gCC49QAiOXXAIzl2ACS59oAlujbAJvp3QCh
 6t8Ao+vgAK3s4wC07uUAuO/nALrw5wC78OgAwfHpAMv07QDQ9e8A0vXwANv3
@@ -32,73 +32,73 @@ JSUlJSUlJSUlJQAAACUlJSUlJSUlJSUlJRUAAAAAAAAABREcJSUlJSUlJSUl
 JSUlGxYKAQAAAAAAAAohJSUlJSUlJSUlJQAAACUlJSUlJSUlJSUkCwAAAAAA
 AAkaJSUlJSUlJSUlJSUlJSUlJSUlIRAAAAAAAAABGSUlJSUlJSUlJQAAACUl
 JSUlJSUlJSEHAAAAAAAHGiUlJSUlJSUlJSUlJSUlJSUlJSUlJSUjAgEAAAAA
-ABUlJSUlJSUlJf//ACUlJSUlJSUlHwYAAAAAAAUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJQA9ACUlJSUlJSUjBgAAAAAFHCUl
-JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlEAAAAAAAFSUlJSUlJQAAACUl
+ABUlJSUlJSUlJQAAACUlJSUlJSUlHwYAAAAAAAUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUlJRwIAAAAAAARJSUlJSUlJTD/ACUlJSUlJSUjBgAAAAAFHCUl
+JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlEAAAAAAAFSUlJSUlJf///yUl
 JSUlJSUJAAAAAAkjJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJRUB
 AAAAABklJSUlJQAAACUlJSUlJRAAAAAACiUlJSUlJSUlJSUZAAAAAAAAABkl
 JSUlJSUlJSUlJSUlJSUJAAAAAAEhJSUlJQAAACUlJSUlFwAAAAAJJCUlJSUl
-JSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUlJSUlFQAAAAAKJSUlJf///yUl
+JSUlCgAAAAAAAAAAAAAACiUlJSUlJSUlJSUlJSUlFQAAAAAKJSUlJQAAACUl
 JSUlBQAAAAAgJSUlJSUlJRwAAAAAAAAAAAAAAAAAAAAhJSUlJSUlJSUlJSUl
-JRAAAAAAFiUlJQAAACUlJSUQAAAAABclJSUlJSUlHAAAAAAACiUlJSUlEAAA
+JRAAAAAAFiUlJQAAgCUlJSUQAAAAABclJSUlJSUlHAAAAAAACiUlJSUlEAAA
 AAAAISUlJSUlJSUlJSUlJSUIAAAAASQlJQAAACUlJSEAAAAADSUlJSUlJSUl
 AAAAAAAhJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUcAAAAABAlJQAAACUl
 JQ4AAAAAISUlJSUlJSUQAAAAABwlJSUlJSUlJSUlAAAAAA4lJSUlJSUlJSUl
 JSUlAAAAAAAjJQAAACUlIwAAAAARJSUlJSUlJSUAAAAAECUlJSUlJSUlJSUl
 FQAAAAAlJSUlJSUlJSUlJSUlIwAAAAARJQAAACUlFQAAAAEjJSUlJSUlJRoA
-AAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJYEtBSUl
+AAAAHCUlJSUlJSUlJSUlIQAAAAAaJSUlJSUlJSUlJSUlJRAAAAAFJQAAACUl
 BwAAAAMlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJQYAAAAOJSUlJSUlJSUl
 JSUlJSEAAAAAGgAAACUfAAAAAB4lJSUlJSUlJQoAAAAKJSUlJSUlJSUlJSUl
 JRAAAAAGJSUlJSUlJSUlJSUlJSUKAAAADgAAACUVAAAABiUlJSUlJSUlJQYA
 AAAQJSUlJSUlJSUlJSUlJQ4AAAAFJSUlJSUlJSUlJSUlJSUWAAAABQAAACUM
 AAAAECUlJSUlJSUlJQAAAAAOJSUlJSUlJSUlJSUlJRUAAAAAJSUlJSUlJSUl
-JSUlJSUbAAAAAAAAACUFAAAAGiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUl
+JSUlJSUbAAAAAP///yUFAAAAGiUlJSUlJSUlJQYAAAAQJSUlJSUlJSUlJSUl
 JRUAAAAAJSUlJSUlJSUlJSUlJSUlBgAAAAAAACQAAAAAISUlJSUlJSUlJQYA
 AAAKJSUlJSUlJSUlJSUlJRAAAAAGJSUlJSUlJSUlJSUlJSUlDAAAAAAAAB8A
 AAAAJSUlJSUlJSUlJQoAAAAFJSUlJSUlJSUlJSUlJQYAAAAKJSUlJSUlJSUl
-JSUlJSUlBQAAAP//ABwAAAAFJSUlJSUlJSUlJRUAAAAAHiUlJSUlJSUlJSUl
-IQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAABDABoAAAAGJSUlJSUlJSUlJSEA
+JSUlJSUlBQAAAAAAABwAAAAFJSUlJSUlJSUlJRUAAAAAHiUlJSUlJSUlJSUl
+IQAAAAAOJSUlJSUlJSUlJSUlJSUlFQAAAAAAABoAAAAGJSUlJSUlJSUlJSEA
 AAAADiUlJSUlJSUlJSUlFQAAAAAeJSUlJSUlJSUlJSUlJSUlFwAAAAAAABoA
 AAAIJSUlJSUlJSUlJSUQAAAAABwlJSUlJSUlJSUlBgAAAAUlJSUlJSUlJSUl
 JSUlJSUlGgAAAAAAABoAAAAIJSUlJSUlJSUlJSUhAAAAAAAlJSUlJSUlJSUV
-AAAAABUlJSUlJSUlJSUlJSUlJSUlGQAAAAAAABsAAAAAJSUlJSUlJSUlJSUl
-GgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUlJSUlCQAAAP///x4A
+AAAAABUlJSUlJSUlJSUlJSUlJSUlGQAAAP///xsAAAAAJSUlJSUlJSUlJSUl
+GgAAAAAFJSUlJSUlJSUAAAAAACUlJSUlJSUlJSUlJSUlJSUlCQAAAAAAAB4A
 AAADJSUlJSUlJSUlJSUlJRUAAAAAACElJSUlJQoAAAAAGiUlJSUlJSUlJSUl
 JSUlJSUlFQAAAAAAACEAAAAAJCUlJSUlJSUlJSUlJSUVAAAAAAAOJSUlDwAA
 AAAPJSUlJSUlJSUlJSUlJSUlJSUlDgEAAAAAACUBAAAAESUlJSUlJSUlJSUl
-JSUlIQEAAAAAAAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAAAAACUI
+JSUlIQEAAAAAAAoVAAAAAAYlJSUlJSUlJSUlJSUlJSUlJSUlCgAAAP///yUI
 AAAAFSUlJSUlJSUlJSUlJSUlJSUVAAAAAAAAAAAAACUlJSUlJSUlJSUlJSUl
 JSUlJSUlAQAAAAAAACUQAAAADCUlJSUlJSUlJSUlJSUlJSUlJR0AAAAAAAAA
 ISUlJSUlJSUlJSUlJSUlJSUlJSUcAAAAAAAAACUaAAAAASQlJSUlJSUlJSUl
-JSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACYEtBSUk
+JSUlJSUlJSUaAAAAAAAdJSUlJSUlJSUlJSUlJSUlJSUlJSURAAAACQAAACUk
 AAAAABclJSUlJSUlJSUlJSUlJSUlJR0AAAAAAB0lJSUlJSUlJSUlJSUlJSUl
 JSUlJSUFAAAAEwAAACUlDQAAAAklJSUlJSUlJSUlJSUlJSUlIQAAAAAAHSUl
 JSUlJSUlJSUlJSUlJSUlJSUlJRoAAAAAHwAAACUlGwAAAAAOJSUlJSUlJSUl
-JSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQkAAAAKJQAAACUl
+JSUlJSUhAAAAAAAaJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQkAAAAKJf///yUl
 JQgAAAAJJSUlJSUlJSUlJSUlJSUAAAAAABolJSUlJSUlJSUlJSUlJSUlJSUl
 JSUlGgAAAAAaJQAAACUlJRYAAAAAFyUlJSUlJSUlJSUlJQYAAAAAGiUlJSUl
 JSUlJSUlJSUlJSUlJSUlJSUlBwAAAAclJQAAACUlJSUIAAAABSQlJSUlJSUl
 JSUlBgAAAAAVJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUFAAAAABolJQAAACUl
 JSUbAAAAAA0lJSUlJSUlJSUKAAAAABUlJSUlJSUlJSUlJSUlJSUlJSUlJSUl
-JRwAAAAACiUlJf//ACUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
-AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQBjACUlJSUlIwUAAAAAFyUlJSUl
-JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQAAACUl
+JRwAAAAACiUlJQAAACUlJSUlDQAAAAAVJSUlJSUlJRUAAAAAAAAAAAAAAAAA
+AAAABiUlJSUlJSUlJSUlIwUAAAAAHyUlJQAAACUlJSUlIwUAAAAAFyUlJSUl
+JRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSUlCQAAAAAVJSUlJQAAeiUl
 JSUlJRsAAAAAABclJSUlJRUAAAAAAAAAAAAAAAAAAAAABiUlJSUlJSUlJSQK
 AAAAAA0lJSUlJQAAACUlJSUlJSUVAAAAAAAVJSUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUlJSUlHwgAAAAAByQlJSUlJQAAACUlJSUlJSUlEQEAAAAADSQl
-JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQBWACUl
+JSUlJSUlJSUlJSUlHwgAAAAAByQlJSUlJQBZBiUlJSUlJSUlEQEAAAAADSQl
+JSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUXAAAAAAAGISUlJSUlJQAOACUl
 JSUlJSUlJREAAAAAAAUXJSUlJSUlJSUlJSUlJSUlJSUlJSUlJSUlIQ0AAAAA
-AAYgJSUlJSUlJQBwACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
-JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBlACUlJSUlJSUlJSUlGwUAAAAA
-AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQAAACUl
+AAYgJSUlJSUlJQBvACUlJSUlJSUlJSUVAAAAAAAACQ4lJSUlJSUlJSUlJSUl
+JSUlJSUlJSMRAAAAAAAACSMlJSUlJSUlJQBhACUlJSUlJSUlJSUlGwUAAAAA
+AAAJFyMlJSUlJSUlJSUlJSUlJSUeEAEAAAAAAAAQJSUlJSUlJSUlJQBsACUl
 JSUlJSUlJSUlJSMNAQAAAAAAAAEMFREkJSUlJSUlJR8aEAYAAAAAAAAABRol
-JSUlJSUlJSUlJQByACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
-AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQByACUlJSUlJSUlJSUlJSUlJSUX
-BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJeASACUl
+JSUlJSUlJSUlJQAcACUlJSUlJSUlJSUlJSUlGwgAAAAAAAAAAAAAAwAICAcF
+AQAAAAAAAAAAAQARJCUlJSUlJSUlJSUlJQBlACUlJSUlJSUlJSUlJSUlJSUX
+BwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADiElJSUlJSUlJSUlJSUlJQBjACUl
 JSUlJSUlJSUlJSUlJSUlJRsNAQAAAAAAAAAAAAAAAAAAAAAABxUjJSUlJSUl
-JSUlJSUlJSUlJa+wOyUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
-AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQA6ACUlJSUlJSUlJSUlJSUlJSUl
-JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQBjAA==
+JSUlJSUlJSUlJQBvACUlJSUlJSUlJSUlJSUlJSUlJSUlJBoQCAEBAAAAAAAA
+AAAFDRUfJSUlJSUlJSUlJSUlJSUlJSUlJQAgACUlJSUlJSUlJSUlJSUlJSUl
+JSUlJSUlJSUhHhsaGhscICQlJSUlJSUlJSUlJSUlJSUlJSUlJSUlJQBnAA==
 </Image></Logo><Icon><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////0/Xwi+XXaN3LZt3KguPUw/Hq
@@ -119,7 +119,7 @@ Esqu2vfy////////////jOXYOdO76/r4////////////////////BMep/v7+
 ////////////////////////////////nendWNrGNdK6MtK5T9jDjubY9/38
 ////////////////
 </Image></Icon><UMLProfiles><UMLProfile profiletype="uml2">
-	<Documentation id="B91435BE-4" name="DAF" version="5.5.12" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
+	<Documentation id="B91435BE-4" name="DAF" version="5.5.15" notes="Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="dAction" alias="Action" metatype="Action" notes="A specialized activity. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
@@ -326,9 +326,9 @@ AAAAAHN0ci5kYXRVVAUABzbB9ltQSwUGAAAAAAEAAQA+AAAAPgEAAAAA
 			</Stereotype>
 			<Stereotype name="dApplicationComponent" alias="Application Component" metatype="Application Component" notes="An encapsulation of application functionality aligned to implementation structure which is modular and replaceable. It encapsulates&#x9; its behavior and data, provides services, and makes them  available through interfaces. An application component is a self-contained unit. As such, it is independently deployable, re-usable, and replaceable. An application component performs one or more application functions. It encapsulates its behavior and data, exposes services, and makes them available through interfaces. Cooperating application components are connected via application collaborations.&#xA;&#xA;An application component may be assigned to one or more application functions. An application component has one or more application interfaces, which expose its functionality. Application interfaces of other application components may serve an application component. The name of an application component should preferably be a noun." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2KAwAAAAAAAIoAAAB8AAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAATPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7
-TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM9ZA7TPWQO0z1kDtM
-9ZA7+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
+AAAAAAAAAAAAAAdl/ghdZf4IXWX+CF3FVl1v2kAQ3NfkV1jlhUhUDRBKqpZK
+baW0fWpUKvUxIkCwVTDINololf+emb3zBx/2uVEkdLrzndmZ253bWxOLLyNZ
+yVQ8+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ+GCQ
 +GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4
 +Pj4+GCQ+Pj4+Pj4+Pj4+Pj4+Pj4+GCQ+GCQ+GCQ+GCQ+GCQ+Pj4+Pj4+Pj4
@@ -448,8 +448,8 @@ BQYAAAAAAQABAD4AAAC9AgAAAAA=
 			</Stereotype>
 			<Stereotype name="dSystem" alias="System" metatype="System Configuration" notes="A system configuration. Settings are modeled as attributes with default values" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
+AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
+XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
 ////////////////////////////////////////////////////////////
 //////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/////////////////
 //////////8AAAD///////////////////////////8AAAD/////////////
@@ -493,7 +493,7 @@ AHN0ci5kYXRVVAUAB0nrQl1QSwUGAAAAAAEAAQA+AAAAHAIAAAAA
 					<Tag name="plattform" type="String" description="The plattform to which the configuration settings apply." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="16777215" fontcolor="0" bordercolor="5197615" borderwidth="1" hideicon="0">
+			<Stereotype name="dGrowthPackage" alias="Growth Package" metatype="Growth Package" notes="A set of actions identified to achieve one or more objectives for the business. A work package can be a part of an Initiative, a complete project, or a part of a Program. A Growth pack is a collection of Initiatives architected for consistency and aimed to be executed in the same period." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAA////////////////////////////////////////
@@ -587,7 +587,7 @@ AADQAQAAAAA=
 					<Tag name="Stakeholder"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dRequirement" alias="Requirement" metatype="Requirement" notes="A Business guide line about the Enterprise or the project." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dRequirement" alias="Requirement" metatype="Requirement" notes="A Business guide line about the Enterprise or the project." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////joz1RUH/NzP/My//Lir/KSX/JSD/JiL/Ix//GBT/EQz/
@@ -639,7 +639,7 @@ AAEAPgAAAC8CAAAAAA==
 					<Tag name="Type" type="enumeration" description="The type of requirement. " unit="" values="Business Rule,Security,Performance,Persistence,Scalability,Transport" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="25600" borderwidth="3" hideicon="0">
+			<Stereotype name="dAccord" alias="Accord" metatype="Accord" notes="Opinion that is in sync with another opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -650,7 +650,7 @@ AAEAPgAAAC8CAAAAAA==
 					<Tag name="_Bezier" type="int" description="" unit="" values="" default="1"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dCapability" alias="Capability" metatype="Capability" notes="A business outcome that is current available in an Organization Unit (or) A business-focused outcome that is delivered by the completion of one or more work packages." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dCapability" alias="Capability" metatype="Capability" notes="A business outcome that is current available in an Organization Unit (or) A business-focused outcome that is delivered by the completion of one or more work packages." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAA////////////////////////gICAN9O7N9O7gICA////////
 ////////////////////////////wMDAwMDA////N9O7wMDAwMDAN9O7////
@@ -716,7 +716,7 @@ AABzdHIuZGF0VVQFAAfuP9FjUEsFBgAAAAABAAEAPgAAAP4CAAAAAA==
 					<DiagramProperty name="ActivateFlags" option="ActivateFlags" default="0"/>
 				</DiagramProperties>
 			</Stereotype>
-			<Stereotype name="dController" alias="Controller" metatype="Controller" notes="The Controller defines application behavior and the Business Logic involving more than one ModelClass. It dispatches requests and selects views for presentation. It interprets user inputs and maps them into actions.&#xA;Controller, with Views and Associations define the application flow. A controller represents the Business logic where a certain flow is physically implemented.&#xA;In a Service Oriented Architecture (SOA) a Controller can be exposed by a Physical Service." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dController" alias="Controller" metatype="Controller" notes="The Controller defines application behavior and the Business Logic involving more than one ModelClass. It dispatches requests and selects views for presentation. It interprets user inputs and maps them into actions.&#xA;Controller, with Views and Associations define the application flow. A controller represents the Business logic where a certain flow is physically implemented.&#xA;In a Service Oriented Architecture (SOA) a Controller can be exposed by a Physical Service." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA3ri8+zpQ/D9U/EBU/EBU/EBU/EBU/EBU/EBV/EBU/EBU/EBU
 /EBU/D9U+j1SybK0/Uxg/3mI/6Ks/56p/56p/6Cq/663/7O7/7C5/7O7/622
@@ -761,7 +761,7 @@ AAABAAEAPgAAAF8CAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="2237106" borderwidth="3" hideicon="0">
+			<Stereotype name="dDiscord" alias="Discord" metatype="Discord" notes="A disagreement  on some Opinion" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="3" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -772,7 +772,7 @@ AAABAAEAPgAAAF8CAAAAAA==
 					<Tag name="_Bezier" type="int" description="" unit="" values="" default="1"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dFeature" alias="Feature" metatype="Feature" notes="A Feature is a fact that set his related Requirement to be true" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dFeature" alias="Feature" metatype="Feature" notes="A Feature is a fact that set his related Requirement to be true" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA+Pj4+/v7+/v7+///+/X1+4aT+0JW+iE5+yI6+0RZ+4qW+/j5
 +///+/v7+/v7+Pj4+/v7/////////36M/wAW/2R1/77F/+fp/+bo/7vD/19x
@@ -816,7 +816,7 @@ BQAHQ44LXVBLBQYAAAAAAQABAD4AAABeAQAAAAA=
 					<Tag name="Status" type="enumeration" description="This feature's status" unit="" values="true,false" default="false"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dGoal" alias="Goal" metatype="Goal" notes="A &lt;b&gt;measurable &lt;/b&gt;scope that the enterprise wants to achieve. Can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dGoal" alias="Goal" metatype="Goal" notes="A &lt;b&gt;measurable &lt;/b&gt;scope that the enterprise wants to achieve. Can be hierarchically decomposed." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////0/Xwi+XXaN3LZt3KguPUw/Hq
@@ -863,7 +863,7 @@ SwUGAAAAAAEAAQA+AAAAVgEAAAAA
 					<Tag name="dAssumption" type="enumeration" description="The assumptions made to achieve the goal. " unit="" values="Enterprise,Business,System,Application,Technology,Data" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. Also a fact that sets a Requirement to be false." bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dIssue" alias="Issue" metatype="Issue" notes="A concrete problem that is affecting a business. Also a fact that sets a Requirement to be false." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////hoT3My/3DAf3DQj3NjL3i4j3////
 ////////////////////////////hoP/AAD/Ix7/kpD/w8L/wsH/j43/HBj/
@@ -906,10 +906,10 @@ AAdQjgtdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 					<Tag name="Responsible" type="String" description="The responsible to close the present issue" unit="" values="" default="none"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementArea" alias="Measurement Area" metatype="Measurement Area" notes="The organisation or Business units performance objective is captured as measurement area. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk16AwAAAAAAAHoAAABsAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
-AAAAAAAAAAAApM+QO6TPkDukz5A7pM+QO6TPkDukz5A7pM+QO6TPkDukz5A7
-pM+QO6TPkDukz5A7pM+QO6TPkDukz5A74J1uOwAAAAD/////////////////
+AAAAAAAAAAAAZgAuACoAIABmAHIAbwBtACAAdABfAHgAcgBlAGYALAAgAHQA
+XwBvAGIAagBlAGMAdAAgAHcAaABlAHIAZQAgACAAdAD/////////////////
 ///////////////////////////////////////////////X8uvO7+fO7+fO
 7+fO7+fO7+fO7+fO7+fQ7+j////7/f286t+46N246N3n9/P///9u2cXO7+fO
 7+fO7+fO7+fO7+fO7+fO7+eB3Mr////p9/SS38/d8+7A6+G46N3///+F3cv/
@@ -950,7 +950,7 @@ c3RyLmRhdFVUBQAH8Og3XlBLBQYAAAAAAQABAD4AAABnAQAAAAA=
 					<Tag name="Definition" type="String" description="Definition of the Measurement Area. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementCategory" alias="Measurement Category" metatype="Measurement Category" notes="The category to be measured under a measurement area." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAA////////////////QODAQODAQODAQODAQODAQODAQODAQODA
 QODAQODAQODAQODA////8Pv/gODggODgQODAgODgwNzAwNzAwNzAgODggODg
@@ -994,7 +994,7 @@ AABzdHIuZGF0VVQFAAdmBwldUEsFBgAAAAABAAEAPgAAAGkBAAAAAA==
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Category. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementGrouping" alias="Measurement Grouping" metatype="MeasurementGrouping" notes="Categorization of measurement indicators into various groups under a measurement category. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAAgODggODAgODAgODAgODAgODAgODAgODAgODAgODAgODAgODA
 gODAgODAgODAgODgQODAgODggODggODggODggODggODggODggODggODggODg
@@ -1038,7 +1038,7 @@ AAAAc3RyLmRhdFVUBQAHyo0LXVBLBQYAAAAAAQABAD4AAABqAQAAAAA=
 					<Tag name="ID" type="String" description="Unique identifier for the Measurement Grouping. " unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dMeasurementIndicator" alias="Measurement Indicator" metatype="MeasurementIndicator" notes="The specific measure captured for a Organization or Business Unit which can be measured and quantifiable. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1103,7 +1103,7 @@ AAcKSC5gUEsFBgAAAAABAAEAPgAAAFoEAAAAAA==
 					<Tag name="Measurement Grouping"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dObject" alias="Object" metatype="Object" notes="A dObject is a candidate for a dModelClass represented in an activity diagram. In alternative can be an instance of a Model Class" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dObject" alias="Object" metatype="Object" notes="A dObject is a candidate for a dModelClass represented in an activity diagram. In alternative can be an instance of a Model Class" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADDDgAAww4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1143,7 +1143,7 @@ AAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dObjective" alias="Objective" metatype="Objective" notes="A time-bounded &lt;b&gt;milestone &lt;/b&gt;for an organization used to demonstrate progress towards a goal. The Objective is a non material achievement, other than a Goal, the objective has no specific value to be measured" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dObjective" alias="Objective" metatype="Objective" notes="A time-bounded &lt;b&gt;milestone &lt;/b&gt;for an organization used to demonstrate progress towards a goal. The Objective is a non material achievement, other than a Goal, the objective has no specific value to be measured" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////3/f01vbx////////////
 ////////////////////////////////////////////U9nEPdS8////////
@@ -1191,7 +1191,7 @@ BQAHSz4KXVBLBQYAAAAAAQABAD4AAAC4AQAAAAA=
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgment formed about a Topic. That is formulated in an explicit fashion" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinion" alias="Opinion" metatype="Opinion" notes="A view or judgment formed about a Topic. That is formulated in an explicit fashion" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////0NDQYGBg////////////
 ////////////////////////////////////////////YGBgAwMD0NDQ////
@@ -1231,7 +1231,7 @@ VVQFAAeArPZbUEsFBgAAAAABAAEAPgAAAI0BAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dOpinionInner" alias="Opinion Inner" metatype="OpinionInner" notes="A Stakeholder’s opinion that is relevant for the topic but is not formulated explicitly." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA/////////////////////5+q/5Sf/5Ke/////////+3v////
 //////////////////////////v8/9XZ/5ei/5mk/////////29//3SD/5ql
@@ -1271,7 +1271,7 @@ AAB2AQAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dPrinciple" alias="Principle" metatype="Principle" notes="A qualitative statement of intent that should be met by the architecture. Has at least a supporting rationale and a measure of importance." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAAStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfBStfB
 StfBStfBStfBStfB1/bx////////////////////////////////////////
@@ -1321,7 +1321,7 @@ dFVUBQAHUgcJXVBLBQYAAAAAAQABAD4AAABhAQAAAAA=
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dView" alias="View" metatype="View" notes="A View used in DAF. Controller, Views and Associations define the application flow" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA3K2y/DtQ/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV/EBV
 /EBV/EBV+j5TybK1/T1S/4GP/6Cq/5yn/5yn/5yn/6Gr/7O7/6iy/5yn/5yn
@@ -1375,7 +1375,7 @@ AAcroDFdUEsFBgAAAAABAAEAPgAAAF0BAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dDecision" alias="Decision" metatype="Decision" notes="A decision-making step with accompanying decision logic used to determine execution approach for a process or to ensure that a process complies with governance criteria.&#xA;&#xA;&lt;i&gt;documents important decisions about any aspect of the initiative including the structure of the system, the provision and allocation of function, the contextual fitness of the system and adherence to standards.&lt;/i&gt;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////iObYStjC/v//////////////
@@ -1446,7 +1446,7 @@ AQABAD4AAAA+AwAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dTable" alias="Table" metatype="Table" notes="a physical Table in a Database" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dTable" alias="Table" metatype="Table" notes="a physical Table in a Database" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1484,7 +1484,7 @@ AQABAD4AAACbAAAAAAA=
 					<Tag name="Database" type="int" description="The DB schema hosting the table" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dValue" alias="Value" notes="A Node value type used in DAF. These values are persistent" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dValue" alias="Value" notes="A Node value type used in DAF. These values are persistent" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1532,7 +1532,7 @@ B0doTFdQSwUGAAAAAAEAAQA+AAAAiQEAAAAA
 					<Tag name="column_name" type="String" description="The name of the database column. If not given the name will be taken" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dLocation" alias="Location" metatype="Location" notes="A place where business activity takes place and can be hierarchically decomposed." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAlFgAAJRYA
 AAAAAAAAAAAA////////////////////////////wuvkRsGu////////////
 ////////////////////////////////////////////bM6/HbSd2vPv////
@@ -1585,7 +1585,7 @@ AAAAAHN0ci5kYXRVVAUAB6efQWJQSwUGAAAAAAEAAQA+AAAAHwIAAAAA
 					<Tag name="ID" type="String" description="Unique identifier for the Location" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dResource" alias="Resource" metatype="Resource" notes="a type of Asset supporting a Business capability" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADFDgAAxQ4A
 AAAAAAAAAAAAqqqq////////////////////////////////////////////
 ////e3t7fX19f39/qqqq////////////////////////////////////////
@@ -1670,7 +1670,7 @@ AIAAAAAAc3RyLmRhdFVUBQAHGq32W1BLBQYAAAAAAQABAD4AAABAAQAAAAA=
 					</Tag>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dDeploymentNode" alias="Node" metatype="deployment Node" notes="a deployment node represents a physical or a virtual machine." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////wEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBAwEBA
 wEBA8Mqm////////////wEBA8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm8Mqm
@@ -1722,7 +1722,7 @@ AHN0ci5kYXRVVAUAB2VCCl1QSwUGAAAAAAEAAQA+AAAASQIAAAAA
 					<Tag name="Disk" type="int" description="the dimension of the disk" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dProgram" alias="Program" metatype="Program" notes="a set of Initiatives that can be organized in Growth Packages" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAATLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEiTLEi
 TLEiTLEiTLEiTLEiTLEi////////////////////////////////////////
@@ -1760,7 +1760,7 @@ AAAAAAEAAQA+AAAAUwEAAAAA
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dStakeHolder" alias="Stakeholder" metatype="StakeHolder" notes="Any person or force that have an interest in the considered domain. This is typically indicated by name, can be connected with a Role in the organization. A stakeholder has open and Inner opinions that are relevant for the subject matter." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -1803,7 +1803,7 @@ UEsFBgAAAAABAAEAPgAAAIQBAAAAAA==
 					<Tag name="stakeHolderRole"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dActor" alias="Actor" metatype="Actor" notes="The actor entity used for representing a User, System, a Worker or Partner. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA/////////////////87U/////////////////////////+Hk
 /////////////////////////////+rs/0dc/3KB/+zu//////////r7/5ai
@@ -1853,7 +1853,7 @@ AAEAAQA+AAAAuAIAAAAA
 					<Tag name="ActorTasks" type="String" description="Tasks that this actor performs, in general terms." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dOrganizationUnit" alias="Organization Unit" metatype="OrganizationUnit" notes="A self-contained unit of resources with line management responsibility, goals, objectives, and measures. Organizations may include external parties and business partner organizations." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk3mBAAAAAAAADYAAAAoAAAAFAAAABQAAAABABgAAAAAALAEAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 /////////////////////////////////////622/5Of/5Of/5Of/8jO////
@@ -1915,7 +1915,7 @@ gAAAAABzdHIuZGF0VVQFAAd0PtxgUEsFBgAAAAABAAEAPgAAAAEDAAAAAA==
 					<Tag name="Organization Owner"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Represent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0">
+			<Stereotype name="dModelClass" alias="Model Class" metatype="Model Class" notes="Represent a class of the domain model, that can be converted into a Persistent domain class, must inherit from Node. It is the application's dynamic data structure" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA//n6/xkz/x43/x43/x43/x43/x43/x43/x43/x43/x43/x43
 /x43/x43/xgy//n6/ipC/7C5/83T/8rP/9vf/87U/8rP/8rP/8rP/8rP/93h
@@ -1973,7 +1973,7 @@ AAAAAA==
 					<Tag name="table_name" type="String" description="The name of the database table. If not given the name will be taken." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dValueRef" alias="Value Ref." notes="A Node value type used in DAF that reference another Node Value, similar to a foreign Key. These values are persistent&#xA;" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" generalizes="dValue" baseStereotypes="dValue">
+			<Stereotype name="dValueRef" alias="Value Ref." notes="A Node value type used in DAF that reference another Node Value, similar to a foreign Key. These values are persistent&#xA;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" generalizes="dValue" baseStereotypes="dValue">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -2011,7 +2011,7 @@ ZGF0VVQFAAdhaExXUEsFBgAAAAABAAEAPgAAAJABAAAAAA==
 					<Tag name="Referenced Value"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dEvent" alias="Event" metatype="Event" notes="An organizational state change that triggers a business process; may originate from inside or outside the organization and may be resolved inside or outside the organization." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADEDgAAxA4A
 AAAAAAAAAAAAlNzRHbSdHLSdHLSdHLSdHLSdHLSdScOx7Pn3////////////
 ////////////////////puLZIbafHrWeHrWeHrWeHrWeHrWeQcGt5Pbz////
@@ -2049,7 +2049,7 @@ AJQAAAAAAA==
 					<Tag name="Source" type="String" description="Location from where the information was collected." unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dValueStream" alias="Value Stream" metatype="Value Stream" notes="A representation of  an end-to end&#x9;collection  of value-adding  Business Processes that create an overall result for a customer, stakeholder or end user&#x9;&#xA;" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0">
+			<Stereotype name="dValueStream" alias="Value Stream" metatype="Value Stream" notes="A representation of  an end-to end&#x9;collection  of value-adding  Business Processes that create an overall result for a customer, stakeholder or end user&#x9;&#xA;" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -2105,7 +2105,7 @@ ALACAAAAAA==
 					<Tag name="exit criteria" type="Integer" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Controlls" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="Controlls" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2113,7 +2113,7 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isRunBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0">
+			<Stereotype name="isRunBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2121,7 +2121,7 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="participatesIn" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="participatesIn" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2129,14 +2129,14 @@ ALACAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Realizes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="-1" hideicon="0">
+			<Stereotype name="Realizes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="direction" value="Source -&gt; Destination"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0">
+			<Stereotype name="dAssociation" alias="Association" notes="A type of relation between two architecture entity. " bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="compositionKind" value="none"/>
@@ -2147,7 +2147,7 @@ ALACAAAAAA==
 					<Tag name="fk_name" type="String" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dRisk" alias="Risk" metatype="RIsk" notes="the potential for an Issue" bgcolor="16777215" fontcolor="0" bordercolor="6776798" borderwidth="1" hideicon="0">
+			<Stereotype name="dRisk" alias="Risk" metatype="RIsk" notes="the potential for an Issue" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAASFwAAEhcA
 AAAAAAAAAAAAtbP/joz/hoT/gX7/e3j/dXP/cG3/bWr/aGX/X1z/Wlb/VFH/
 T0v/SUb/SUX/e3j/NjL/NTH/aWb/aWb/b2z/dXP/hYP/g4D/iYb/mJb/lJL/
@@ -2195,7 +2195,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					<Tag name="RiskStrategy" type="enumeration" description="" unit="" values="Terminate,Treat,Tollerate,Transfer" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Includes Processes" metatype="includes Processes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Processes" metatype="includes Processes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of Value Stream"/>
@@ -2203,7 +2203,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Application Owner" metatype="application Owner" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Application Owner" metatype="application Owner" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="has Owner"/>
@@ -2211,7 +2211,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Consumes Service" metatype="onsumes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is consumed by Role"/>
@@ -2219,7 +2219,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Contains Activities" metatype="contains Activities" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Contains Activities" metatype="contains Activities" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of UseCase"/>
@@ -2227,7 +2227,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dApplicationExposesService" metatype="exposes Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dApplicationExposesService" metatype="exposes Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Exposes Phy Service"/>
@@ -2235,7 +2235,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Flows to" metatype="flows to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Flows to" metatype="flows to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Sequence Flow From"/>
@@ -2243,7 +2243,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Impact Resource" metatype="impact Resource" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Impact Resource" metatype="impact Resource" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is impacted by Risk"/>
@@ -2251,7 +2251,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="informs Capability" metatype="nforms Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Abstraction">
 						<Property name="_MeaningBackwards" value="Informs Capability"/>
@@ -2259,7 +2259,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to risk" metatype="s related to risk" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="Source Risk"/>
@@ -2267,7 +2267,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports Capability" metatype="supports Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports Capability" metatype="supports Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2275,7 +2275,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates categories" metatype="aggregates categories" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates categories" metatype="aggregates categories" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Measurement Area"/>
@@ -2283,7 +2283,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates Groups" metatype="category aggregates Groups" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates Groups" metatype="category aggregates Groups" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="has Category"/>
@@ -2291,7 +2291,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="aggregates KPI" metatype="aggregates KPI" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="aggregates KPI" metatype="aggregates KPI" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of a Grouping"/>
@@ -2299,7 +2299,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="configured by" metatype="onfigured by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="configures Application"/>
@@ -2309,7 +2309,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Ensure the correct  Operation of" metatype="ensure the correct  Operation of" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Ensure the correct  Operation of" metatype="ensure the correct  Operation of" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Ensure the correct  Operation of Capability"/>
@@ -2317,7 +2317,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Executes" metatype="executes" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Executes" metatype="executes" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="executes Capability"/>
@@ -2325,7 +2325,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="exposes Biz Service" metatype="application exposes Biz Service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="exposes Biz Service" metatype="application exposes Biz Service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="service run by application"/>
@@ -2333,7 +2333,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Governs" metatype="governs view" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Governs" metatype="governs view" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is Governed by Controller"/>
@@ -2341,7 +2341,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Inner Opinion" metatype="as Inner Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is thinked by Stakeholder"/>
@@ -2349,7 +2349,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Milestone" metatype="has Milestone" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Milestone" metatype="has Milestone" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is related to Goal"/>
@@ -2357,7 +2357,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Has Opinion" metatype="has Opinion" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Has Opinion" metatype="has Opinion" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is expressed by Stakeholder"/>
@@ -2365,7 +2365,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="has Stakeholders" metatype="has Stakeholders" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="has Stakeholders" metatype="has Stakeholders" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is concerned with Organization"/>
@@ -2373,7 +2373,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Hosts Node" metatype="hosts Node" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Hosts Node" metatype="hosts Node" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is hosted in Location"/>
@@ -2381,7 +2381,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dPhysicalServiceImplementsBusinessService" metatype="Physical Serv. Implements Biz Serv." notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dPhysicalServiceImplementsBusinessService" metatype="Physical Serv. Implements Biz Serv." notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Implemented by physical service"/>
@@ -2389,7 +2389,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Includes Process" metatype="includes Process" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Includes Process" metatype="includes Process" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="Is part of Product"/>
@@ -2397,7 +2397,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="IncreasesMaturityOf" metatype="increases Maturity Of Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="IncreasesMaturityOf" metatype="increases Maturity Of Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is matured by Initiative"/>
@@ -2405,7 +2405,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is associated to organization" metatype="is associated to organization" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value=" has Role"/>
@@ -2413,7 +2413,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is delivered by" metatype="is delivered by" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is delivered by" metatype="is delivered by" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="is part of a Package"/>
@@ -2421,7 +2421,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is organized In" metatype="is organized In" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is organized In" metatype="is organized In" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Composition">
 						<Property name="_MeaningBackwards" value="part of a Program"/>
@@ -2429,7 +2429,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="is related to" metatype="is related to" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="is related to" metatype="is related to" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is specified by Requirement"/>
@@ -2437,7 +2437,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isDescribedBy" metatype="isDescribedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isDescribedBy" metatype="isDescribedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="described by Use Case"/>
@@ -2445,7 +2445,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isFunctionallyImplementedBy" metatype="isFunctionallyImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isFunctionallyImplementedBy" metatype="isFunctionallyImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Functionally Implemented By Table"/>
@@ -2453,7 +2453,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isImplementedBy" metatype="sImplementedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="Is implemented by Controller"/>
@@ -2461,7 +2461,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isMakingUseOf" metatype="isMakingUseOf" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isMakingUseOf" metatype="isMakingUseOf" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Makes Use Of Decision"/>
@@ -2469,7 +2469,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isMeasuredBy" metatype="isMeasuredBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isMeasuredBy" metatype="isMeasuredBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is measuring Capability"/>
@@ -2477,7 +2477,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isOperationalizedBy" metatype="isOperationalizedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isOperationalizedBy" metatype="isOperationalizedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is Operationalized By Capability"/>
@@ -2485,7 +2485,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isPerformedBy" metatype="isPerformedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isPerformedBy" metatype="isPerformedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is executed by Actor"/>
@@ -2493,7 +2493,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isPhysicallyHostedBy" metatype="is Physically Hosted By" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isPhysicallyHostedBy" metatype="is Physically Hosted By" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is Hosted By Node"/>
@@ -2501,7 +2501,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="isSatisfiedBy" metatype="isSatisfiedBy" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="isSatisfiedBy" metatype="isSatisfiedBy" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is realized by Feature"/>
@@ -2509,7 +2509,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Orchestrates service" metatype="orchestrates service" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Orchestrates service" metatype="orchestrates service" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="part of Process"/>
@@ -2517,7 +2517,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="ProvidesPersistenceFor" metatype="providesPersistenceFor" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="ProvidesPersistenceFor" metatype="providesPersistenceFor" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="Provides Persistence For Model"/>
@@ -2525,7 +2525,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="RealizesEntity" metatype="ealizesEntity" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Realisation">
 						<Property name="_MeaningBackwards" value="is realized by Class"/>
@@ -2533,7 +2533,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="refersTo" metatype="refers To Principle" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="refersTo" metatype="refers To Principle" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Dependency">
 						<Property name="_MeaningBackwards" value="is referenced by Decision"/>
@@ -2541,7 +2541,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="StopTheRealizationOf" metatype="stop The Realization Of" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="StopTheRealizationOf" metatype="stop The Realization Of" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is stopped by Issue"/>
@@ -2549,7 +2549,7 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="Supports" metatype="supports Capability" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="Supports" metatype="supports Capability" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="supports Capability"/>
@@ -2565,44 +2565,6 @@ AAAAAQABAD4AAAAGAgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dApplicationFunction" alias="Function" metatype="Function" notes="a logical Function that the application is supporting.&#xA;An application function represents automated behavior that can be performed by an application component." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
-				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAB0EgAAdBIA
-AAAAAAAAAAAAzs6+xMS8ubnBvb3AwMDAv7+/wMDAwMDAwMDAwMDAv7+/wMDA
-vb3Bu7vGwMC4yMel4eHB///A8vK60dG7tbW9v7/Ev7/Av7+/v7+/v7/Avb3C
-tra/z8627eyk//+k5uWe39/B//+////A///A//+929u4u7u6vb3Fvb3Gu7u7
-29qz//6t//+t//+q//+m4uGf39/B//+////A///A///A///A///A5ua45eW2
-//+5//+2//6y//6u//6q//+m4uGf39/B//+////A///A///A///A///A///A
-//++//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A///A///A
-///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A///A
-///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A
-///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A
-///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A
-///A///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+/
-///A///A///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf4eHB
-///A///A///A///A///A///A///A//2+//66//62//6y//6u//6q//+m5OOe
-0NC9//++///A///A///A///A///A///A//2+//66//62//6y//+u//+p//+i
-09Kgv7/DuLi90tK69/e6///A///A///A///A//2+//66//+2//+x/Pqo2Nir
-urq8wMDIv7+/v7/Avb3AuLjBycm+6Oi3///A///A//++//+56eivzMu4trbA
-vb3Cv7/Av7+/wMDAwMDAv7+/v7+/vr7Au7vDu7u929u729q5u7u6vLzFvb3A
-wMDAv7+/wMDAwMDA
-</Icon>
-				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOpmj1Xipf9J/gEAACIIAAAHABEAc3RyLmRhdFVUDQAHKRmb
-YykZm2MpGZtjvVXbTsJAEJ1XTPwHAi814cEbamJ89Av8AIMUSiMF0osGjf/u
-OTNdt62U4gOm6eztzOzZmdnZTBYykY3MpC8JerGs5FRO5FNlT5aY28paCsnx
-bRX5IAN5wVwqIUYpRvcleoXZTC2G6L0DmWO9AMohTMYyl0BxGSymwNJuqjsE
-sJdiNMVoAosROMzUMsc5dNcYDWSE/xz/GT6z6jj3lNcctmP5QC+QWyBHkGNg
-HZMe1mmRu27U8gLI6nqCnd6gn6MN1MIlZBWxVH85xFgx+xAXWO2241DWtuNs
-v7u9mEPs7GJEj4ctfplDe6mZQQy9yAi+QmcX/qtsZ9DIILtiRbZjjVadUVe0
-yKFQRi577GTeA77laf/jzCZ5G6hT4NbY7WC2M8+pyzVGIypzmrntLbXrrtBP
-0DetqbLPxe6j1zfpNfuNPZvR4G1kPGiHvRCaM2AjtDnuM322+5TVPRy3pvWF
-PGOF2RcBwzpS5+39TR5kyCgOZPhjcVg7nTEwyZ+5NBVWJl8p+jgN84IZYTNE
-Ok7ExiUHr0NmvB+ekcnj1q2um/LXenRd5n87grWjy4phumqI7XWMWnRYjDmT
-IBp8f2JhPhHbHeUneaxEuSu+MeZ/72QxdS/drshaTHnSjUbWzmk+M3nT8EoT
-z3WHdVWsqVPPjyvF8I1o97a9i3VM09/fUEsBAhcLFAAAAAgA6maPVeKl/0n+
-AQAAIggAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABykZm2NQSwUG
-AAAAAAEAAQA+AAAANAIAAAAA
-</Image>
-			</Stereotype>
 			<Stereotype name="dApplicationAgregatesFunction" metatype="aggregates Function" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
@@ -2612,7 +2574,7 @@ AAAAAAEAAQA+AAAANAIAAAAA
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dActionKey" alias="Action Key" metatype="Action Key" notes="Associates two ChiController instances (to define a control flow) or a ChiView with a ChiController (to define a view attachment), must be one directional" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dActionKey" alias="Action Key" metatype="Action Key" notes="Associates two ChiController instances (to define a control flow) or a ChiView with a ChiController (to define a view attachment), must be one directional" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAB5qAVl+wNBjDAEAAPQCAAAHABEAc3RyLmRhdFVUDQAHr4qr
 Zq+Kq2aviqtmlVLbasJAFJzXFPoPJX1RsGDBJ4sP0oI/0B9ITLzQJJbNeoHi
 vzs7m1tVFAl7crJnZs7s2ZRYIcIvUrwgZ7ZGgWc84U8x4NcGpTAJsz0msDDY
@@ -2657,7 +2619,7 @@ AA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dNetwork" metatype="Network" notes="A communication network represents a set of structures that connects nodes for transmission, routing, and reception of data." bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dNetwork" metatype="Network" notes="A communication network represents a set of structures that connects nodes for transmission, routing, and reception of data." bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAn5+gISEiMTExr6+wzc3NxsbGxsbGxsbGzMzMtra2Nzc4Hx8g
 i4uMycnJwMDAwMDAGxscAAAAAAAANTU2sbGxpaWlpaWlpaWls7OzREREAAAA
@@ -2707,7 +2669,7 @@ BgAAAAABAAEAPgAAALwCAAAAAA==
 					<Tag name="NetworkType" type="enumeration" description="" unit="" values="LAN,WAN,Mesh" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="NetworkContainsNode" metatype="Contains Node" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is contained in a network"/>
@@ -2951,7 +2913,7 @@ UEsFBgAAAAABAAEAPgAAAOwCAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dSkill" metatype="Skill" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dSkill" metatype="Skill" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Class"/>
 				</AppliesTo>
@@ -2978,7 +2940,7 @@ UEsFBgAAAAABAAEAPgAAAOwCAAAAAA==
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dRole" metatype="Role" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dRole" metatype="Role" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAjLgAAIy4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////gODggODggODggODggODggODggODg
@@ -3023,7 +2985,7 @@ BQAHQoPDYFBLBQYAAAAAAQABAD4AAAAEAQAAAAA=
 					<Tag name="Cost" type="int" description="the individual Cost of this Role for an average worker" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dBusinessProcess" metatype="Business Process" notes="A sequence of activities  that produce a specific service or product for a particular business goal. " bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dBusinessProcess" metatype="Business Process" notes="A sequence of activities  that produce a specific service or product for a particular business goal. " bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -3078,7 +3040,7 @@ oQEAAAAA
 					<Tag name="isAdopted" type="enumeration" description="" unit="" values="true,false" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dDataEntity" metatype="Data Entity" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dDataEntity" metatype="Data Entity" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAAAAAAAAAAA
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
@@ -3166,7 +3128,7 @@ RldQSwUGAAAAAAEAAQA+AAAAswEAAAAA
 					<Tag name="meetsTomorrowNeeds" type="enumeration" description="" unit="" values="true,false" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dVolume" metatype="Volume" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dVolume" metatype="Volume" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAA9/z69/z69/z69/z69fr49Pn38/j28fb18PX07/Tz7/Py7vLx
 7PHv6/Du6e3s1erj//////////////////7+/v39/fz8+vr6+fn5+Pj49/f3
@@ -3209,7 +3171,7 @@ AAABAAEAPgAAAKsBAAAAAA==
 					<Tag name="subPath" type="String" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dContainer" metatype="Container" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dContainer" metatype="Container" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAwMDAwMDAwMDAwMDAycHDs7+7h7yrcL+la8OmbcGleLymnr6z
 xcHDxMDBv8DAwMDAw8DBxMDBxMDBycHEjL2taMKlqN/N3fLr8Pn26vfzxure
@@ -3249,7 +3211,7 @@ AAfIE+hmUEsFBgAAAAABAAEAPgAAABECAAAAAA==
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dDeploymentModel" metatype="Deployment Model" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dDeploymentModel" metatype="Deployment Model" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAmJiXmJWRmJWRmJWRmJWRmJWRmJWRmJWRmJWRmJWRmJWRlpSQ
 np2dpqWkvLu7w8PDcYCTS47gTo3ZTo3ZT43ZT43ZT43ZT43ZT43ZT43ZTo3b
@@ -3290,7 +3252,7 @@ c3RyLmRhdFVUBQAH8mvhZlBLBQYAAAAAAQABAD4AAABIAgAAAAA=
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dCluster" metatype="Cluster" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dCluster" metatype="Cluster" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAlL+xdb6mfb2ofL2ofL2ofL2ofL2ofL2ofL2ofL2ofL2ofL2o
 er2neb2nt8G+xsDCd72mjr6vrcC6qcC4qcC4qcC4qcC4qcC4qcC4qL+4qL+4
@@ -3334,7 +3296,7 @@ AAAAAHN0ci5kYXRVVAUAB1Zs4WZQSwUGAAAAAAEAAQA+AAAA0wIAAAAA
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dRegion" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dRegion" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAA9PT09PT09PT09PT08vLy8fLy/Pb3zeXdz+Xe+/X38PHx8fHx
 8fHx8PDw8PDw8PDw9PT09PT09PT09PT08vLy+fT26u/tWbubVrqZ5e3q+fT2
@@ -3375,7 +3337,7 @@ AAAAAQABAD4AAAAzAgAAAAA=
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dZone" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dZone" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAA9PT09PT09PT09PT08vLy8fLy/vb5uN3RrNnK/fX48fHx8fHx
 8fHx8PDw8PDw8PDw9PT09PT09PT09PT08vLy+/X33uvnU7mYSraTyuPb/vX4
@@ -3416,7 +3378,7 @@ AABzdHIuZGF0VVQFAAceb+FmUEsFBgAAAAABAAEAPgAAAEoCAAAAAA==
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dPublicCluster" metatype="Public Cluster" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dPublicCluster" metatype="Public Cluster" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAA/////////////v7+/f39/f39/f39/Pz8/Pz8/Pz8/Pz8/Pz8
 /Pz8////////////////8fHxk5OThISEhYWFhYWFhYWFhISEhISEhISEhISE
@@ -3457,7 +3419,7 @@ dHIuZGF0VVQFAAcAJ+hmUEsFBgAAAAABAAEAPgAAAGYBAAAAAA==
 					<Tag name="configFile" type="String" description="config_google.conf" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dOnPremise" metatype="On Premise Node" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dOnPremise" metatype="On Premise Node" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk3mBAAAAAAAADYAAAAoAAAAFAAAABQAAAABABgAAAAAALAEAADAMgAAwDIA
 AAAAAAAAAAAA////pKSkS0tLwsLC29vb4uLi3d3d2NjY0dHR1dXV29vb4ODg
 4eHh1tbW1tbW1tbW1tbWpKSkTExM9/f36enpYGBg////////6+vrsLCwsLCw
@@ -3502,7 +3464,7 @@ ZGF0VVQFAAfoJuhmUEsFBgAAAAABAAEAPgAAAGMBAAAAAA==
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dSecurityGroup" metatype="Security Group" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dSecurityGroup" metatype="Security Group" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAib+tcbykdLyldb2ldL2ldLyldLyldLyldLyldLyldLyldLyl
 dLyldLylcLyjosC2YsGh1vDo3PPr3PPr3PPr3PPr3PPr3PPr3PPr3PPr3PPr
@@ -3603,7 +3565,7 @@ AIAAAAAAc3RyLmRhdFVUBQAHKcH2W1BLBQYAAAAAAQABAD4AAAB7AgAAAAA=
 					<Tag name="execution_mode" type="enumeration" description="" unit="" values="synchronous,asynchronous" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="dSubNetwork" metatype="Sub Network" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dSubNetwork" metatype="Sub Network" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAssG8dr6mg7+rvMG/xMDBwsDBwsDBwsDBxMDBv8DAiL+tdL6m
 qMC4xcDCwMDAwMDAYb2fULqXS7qWf7+qwcHBusC+usC+usC+wsHBiL+tSrqW
@@ -3647,7 +3609,7 @@ BQAH0P7nZlBLBQYAAAAAAQABAD4AAADGAgAAAAA=
 					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dIPRange" metatype="IP Range" notes="" bgcolor="16777215" fontcolor="0" bordercolor="5880731" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dIPRange" metatype="IP Range" notes="" bgcolor="-1" fontcolor="0" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAADCDgAAwg4A
 AAAAAAAAAAAAhr6shr6shr6shr6sh7+shb6rebmkd7ijd7ijf7yoh7+shr6s
 hr6shr6shr6shr6sUL2ZUL2ZUL2ZUL2ZT7yZT7qXpt3LueXXueXXdcmuSbmU
@@ -3695,7 +3657,7 @@ AgAAAAA=
 					<Tag name="ipRangeType" type="enumeration" description="" unit="" values="subNetwork,Pod,Service" default=""/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="ClusterContainsDeploymentNode" metatype="Cluster Contains Node" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="ClusterContainsDeploymentNode" metatype="Cluster Contains Node" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is Contained in Cluster"/>
@@ -3704,7 +3666,7 @@ AgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dContainerAggregatesVolume" metatype="Container Aggregates Volume" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dContainerAggregatesVolume" metatype="Container Aggregates Volume" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is Aggregated in Container"/>
@@ -3722,7 +3684,7 @@ AgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dNetworkAggregatesSubNetwork" metatype="Network Aggregates SubNetwork" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dNetworkAggregatesSubNetwork" metatype="Network Aggregates SubNetwork" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Aggregation">
 						<Property name="_MeaningBackwards" value="is Aggregated in Network"/>
@@ -3731,7 +3693,7 @@ AgAAAAA=
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="dNetworkHasSecurityGroup" metatype="Network Has Security Group" notes="" bgcolor="14941672" fontcolor="5197647" bordercolor="12632256" borderwidth="1" hideicon="0" strictness="profile">
+			<Stereotype name="dNetworkHasSecurityGroup" metatype="Network Has Security Group" notes="" bgcolor="-1" fontcolor="5197647" bordercolor="-1" borderwidth="1" hideicon="0" strictness="profile">
 				<AppliesTo>
 					<Apply type="Association">
 						<Property name="_MeaningBackwards" value="is associated to Network"/>
@@ -3819,6 +3781,56 @@ AgAAAAA=
 						<Property name="_MeaningForwards" value="@baseType"/>
 						<Property name="_relatedTo" value="Polymorphic Collection"/>
 					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Ensure the correct Operation of" metatype="Ensure the correct Operation of" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0" strictness="profile">
+				<AppliesTo>
+					<Apply type="Aggregation">
+						<Property name="_MeaningBackwards" value="Ensure the correct  Operation of Capability"/>
+						<Property name="_MeaningForwards" value="is operated by Process"/>
+						<Property name="_relatedTo" value=""/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="dApplicationFunction" metatype="Application Function" notes="" bgcolor="16777215" fontcolor="0" bordercolor="12419407" borderwidth="1" hideicon="0" strictness="profile">
+				<Icon type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk02AwAAAAAAADYAAAAoAAAAEAAAABAAAAABABgAAAAAAAADAAB0EgAAdBIA
+AAAAAAAAAAAAzs6+xMS8ubnBvb3AwMDAv7+/wMDAwMDAwMDAwMDAv7+/wMDA
+vb3Bu7vGwMC4yMel4eHB///A8vK60dG7tbW9v7/Ev7/Av7+/v7+/v7/Avb3C
+tra/z8627eyk//+k5uWe39/B//+////A///A//+929u4u7u6vb3Fvb3Gu7u7
+29qz//6t//+t//+q//+m4uGf39/B//+////A///A///A///A///A5ua45eW2
+//+5//+2//6y//6u//6q//+m4uGf39/B//+////A///A///A///A///A///A
+//++//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A///A///A
+///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A///A
+///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A///A
+///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A///A
+///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+////A
+///A///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf39/B//+/
+///A///A///A///A///A///A//2+//66//62//6y//6u//6q//+m4uGf4eHB
+///A///A///A///A///A///A///A//2+//66//62//6y//6u//6q//+m5OOe
+0NC9//++///A///A///A///A///A///A//2+//66//62//6y//+u//+p//+i
+09Kgv7/DuLi90tK69/e6///A///A///A///A//2+//66//+2//+x/Pqo2Nir
+urq8wMDIv7+/v7/Avb3AuLjBycm+6Oi3///A///A//++//+56eivzMu4trbA
+vb3Cv7/Av7+/wMDAwMDAv7+/v7+/vr7Au7vDu7u929u729q5u7u6vLzFvb3A
+wMDAv7+/wMDAwMDA
+</Icon>
+				<Image type="EAShapeScript 1.0" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">UEsDBBQAAAAIAOpmj1Xipf9J/gEAACIIAAAHABEAc3RyLmRhdFVUDQAHKRmb
+YykZm2MpGZtjvVXbTsJAEJ1XTPwHAi814cEbamJ89Av8AIMUSiMF0osGjf/u
+OTNdt62U4gOm6eztzOzZmdnZTBYykY3MpC8JerGs5FRO5FNlT5aY28paCsnx
+bRX5IAN5wVwqIUYpRvcleoXZTC2G6L0DmWO9AMohTMYyl0BxGSymwNJuqjsE
+sJdiNMVoAosROMzUMsc5dNcYDWSE/xz/GT6z6jj3lNcctmP5QC+QWyBHkGNg
+HZMe1mmRu27U8gLI6nqCnd6gn6MN1MIlZBWxVH85xFgx+xAXWO2241DWtuNs
+v7u9mEPs7GJEj4ctfplDe6mZQQy9yAi+QmcX/qtsZ9DIILtiRbZjjVadUVe0
+yKFQRi577GTeA77laf/jzCZ5G6hT4NbY7WC2M8+pyzVGIypzmrntLbXrrtBP
+0DetqbLPxe6j1zfpNfuNPZvR4G1kPGiHvRCaM2AjtDnuM322+5TVPRy3pvWF
+PGOF2RcBwzpS5+39TR5kyCgOZPhjcVg7nTEwyZ+5NBVWJl8p+jgN84IZYTNE
+Ok7ExiUHr0NmvB+ekcnj1q2um/LXenRd5n87grWjy4phumqI7XWMWnRYjDmT
+IBp8f2JhPhHbHeUneaxEuSu+MeZ/72QxdS/drshaTHnSjUbWzmk+M3nT8EoT
+z3WHdVWsqVPPjyvF8I1o97a9i3VM09/fUEsBAhcLFAAAAAgA6maPVeKl/0n+
+AQAAIggAAAcACQAAAAAAAAAAAACAAAAAAHN0ci5kYXRVVAUABykZm2NQSwUG
+AAAAAAEAAQA+AAAANAIAAAAA
+</Image>
+				<AppliesTo>
+					<Apply type="Class"/>
 				</AppliesTo>
 			</Stereotype>
 		</Stereotypes>
@@ -5789,6 +5801,559 @@ wsHJv0XOWKJqBdpOere41C/t0IseyQk1XvOr0x2HX0dyeeJj1SVVx2QdfRyo
 QufIdXyNuvvAsSKtrSz1Mw3R1hYJXcuhZKHhYNwKQeNvbByq0t19zRKp4UMK
 WejIRPGZzPghhRoB6DQOhAn+nyboAFYc/ZWlhhUmOkA54nY0jpU2wb9tgg5g
 sbt+9fT09PT09PwGPO8/zoe2CnKBVOwAAAAASUVORK5CYII=
+</Column></DataRow><DataRow><Column name="ImageID" value="1489272189"/><Column name="Name" value="DAF_Logo-55"/><Column name="Type" value="Bitmap"/><Column name="Image" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">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
+OMmWenRsAAAAAElFTkSuQmCC
 </Column></DataRow></DataSet></RefData></Images><DiagramProfile><UMLProfile profiletype="uml2">
 	<Documentation id="A10AB80D-1" name="DAF Business Architecture" version="3.2.1" notes="DAF Business Architecture"/>
 	<Content>

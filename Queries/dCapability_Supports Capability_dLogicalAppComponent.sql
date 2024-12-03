@@ -1,4 +1,4 @@
--- Generated 2024-09-16 1:56:04 PM
+-- Generated 2024-12-03 2:09:31 PM
 --  dCapability (GroupName) connected with  dLogicalAppComponent (series)
 SELECT dCapability.Name as dCapability,  dLogicalAppComponent.Name as  dLogicalAppComponent
 FROM t_object AS dLogicalAppComponent

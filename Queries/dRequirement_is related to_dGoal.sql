@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:11:54 PM
+-- Generated 2024-12-03 2:38:15 PM
 --  dRequirement (GroupName) connected with  dGoal (series)
 SELECT dRequirement.Name as dRequirement,  dGoal.Name as  dGoal
 FROM t_object AS dGoal

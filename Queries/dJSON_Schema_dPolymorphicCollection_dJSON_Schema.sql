@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:03:29 PM
+-- Generated 2024-12-03 2:22:49 PM
 --  dJSON_Schema (GroupName) connected with  dJSON_Schema (series)
 SELECT dJSON_Schema.Name as dJSON_Schema,  dJSON_Schema.Name as  dJSON_Schema
 FROM t_object AS dJSON_Schema

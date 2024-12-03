@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:13:55 PM
+-- Generated 2024-12-03 2:42:21 PM
 --  dSecurityGroup (GroupName) connected with  dPhysicalService (series)
 SELECT dSecurityGroup.Name as dSecurityGroup,  dPhysicalService.Name as  dPhysicalService
 FROM t_object AS dPhysicalService

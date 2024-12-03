@@ -1,4 +1,4 @@
--- Generated 2024-09-16 1:55:01 PM
+-- Generated 2024-12-03 2:07:46 PM
 --  dCapability (GroupName) connected with  dBusinessProcess (series)
 SELECT dCapability.Name as dCapability,  dBusinessProcess.Name as  dBusinessProcess
 FROM t_object AS dBusinessProcess

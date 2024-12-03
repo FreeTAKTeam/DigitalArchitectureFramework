@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>24</CheckId>
+  <CheckId>024</CheckId>
   <CheckDescription>Controller Governs View</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
-INNER JOIN t_Package p ON p.Package_ID = o1.Package_ID)
-LEFT JOIN t_Package Package_p1 ON Package_p1.Package_id = p.parent_id)
-LEFT JOIN t_Package Package_p2 ON Package_p2.Package_id = Package_p1.parent_id)
-LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
-LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
-LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
+INNER JOIN t_package p ON p.Package_ID = o1.Package_ID)
+LEFT JOIN t_package Package_p1 ON Package_p1.Package_ID = p.Parent_ID)
+LEFT JOIN t_package Package_p2 ON Package_p2.Package_ID = Package_p1.Parent_ID)
+LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID)
+LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
+LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
 
 WHERE o1.stereotype = 'dController' </Main>
     <Filters>
@@ -50,19 +50,19 @@ WHERE o1.stereotype = 'dController' </Main>
 , o.ea_guid AS ItemGuid
 , o.Object_Type AS ElementType
 , o.StereoType AS ElementStereotype
-, p.name AS PackageName
-, package_p1.name AS PackageParentLevel1
-, package_p2.name AS PackageParentLevel2 
-, package_p3.name AS PackageParentLevel3
-, package_p4.name AS PackageParentLevel4
-, package_p5.name AS PackageParentLevel5
+, p.Name AS PackageName
+, package_p1.Name AS PackageParentLevel1
+, package_p2.Name AS PackageParentLevel2 
+, package_p3.Name AS PackageParentLevel3
+, package_p4.Name AS PackageParentLevel4
+, package_p5.Name AS PackageParentLevel5
 FROM (((((( t_object o
 INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
-LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)
-LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)
-LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
-LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
-LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
+LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
+LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
+LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
+LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
+LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 WHERE o.EA_GUID in (#ElementGuids#)
 AND  o.EA_GUID NOT IN
 (

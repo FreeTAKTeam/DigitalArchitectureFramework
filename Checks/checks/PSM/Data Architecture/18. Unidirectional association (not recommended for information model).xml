@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>018</CheckId>
-  <CheckDescription>Unidirectional association (not recommended for information model)</CheckDescription>
+  <CheckId>019</CheckId>
+  <CheckDescription>association should specify navigability</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
-FROM ((((((( t_Connector c
+FROM ((((((( t_connector c
 inner join t_object o on o.Object_ID = c.Start_Object_ID)
-INNER JOIN t_Package p ON p.Package_ID = o.Package_ID)
-LEFT JOIN t_Package Package_p1 ON Package_p1.Package_id = p.parent_id)
-LEFT JOIN t_Package Package_p2 ON Package_p2.Package_id = Package_p1.parent_id)
-LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)
-LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)
-LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)
+INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
+LEFT JOIN t_package Package_p1 ON Package_p1.Package_ID = p.Parent_ID)
+LEFT JOIN t_package Package_p2 ON Package_p2.Package_ID = Package_p1.Parent_ID)
+LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID)
+LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
+LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
 
 WHERE c.connector_Type = 'Association'</Main>
     <Filters>
@@ -51,32 +51,32 @@ WHERE c.connector_Type = 'Association'</Main>
 , c.ea_guid AS ItemGuid
 ,c.connector_Type AS ElementType
 , c.StereoType AS ElementStereotype
-, p.name AS PackageName
-, package_p1.name AS PackageParentLevel1
-, package_p2.name AS PackageParentLevel2 
-, package_p3.name AS PackageParentLevel3
-, package_p4.name AS PackageParentLevel4
-, package_p5.name AS PackageParentLevel5
-FROM (((((((t_Connector c
+, p.Name AS PackageName
+, package_p1.Name AS PackageParentLevel1
+, package_p2.Name AS PackageParentLevel2 
+, package_p3.Name AS PackageParentLevel3
+, package_p4.Name AS PackageParentLevel4
+, package_p5.Name AS PackageParentLevel5
+FROM (((((((t_connector c
 inner join t_object o on o.Object_ID = c.Start_Object_ID)
-INNER JOIN t_Package p ON p.Package_ID = o.Package_ID)
-LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)
-LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)
-LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)
-LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)
-LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)
+INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
+LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
+LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
+LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
+LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
+LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 
 WHERE c.ea_guid in (#ElementGuids#)
 AND c.ea_guid IN (
 SELECT c.ea_guid
 FROM t_connector as c
 WHERE c.connector_Type = 'Association'
-AND c.Direction LIKE 'Source -&gt; Destination' OR c.Direction LIKE 'Destination -&gt; Source'
+AND c.Direction  LIKE 'Unspecified'
 )
 </Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>Unidirectional association (not recommended for information model)</Rationale>
+  <Rationale>unspecified association not recommended for information model</Rationale>
   <ProposedSolution>Add a name</ProposedSolution>
 </Check>
