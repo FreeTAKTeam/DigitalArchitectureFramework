@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>001</CheckId>
-  <CheckDescription>an Element with the  status is not set must be defined</CheckDescription>
+  <CheckDescription>An Element with the  status not set </CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM (((((( (t_object as o1
@@ -78,6 +78,6 @@ AND p1.Value IS NULL
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale></Rationale>
+  <Rationale>a model element must have the status set</Rationale>
   <ProposedSolution>Finish developing on Element</ProposedSolution>
 </Check>

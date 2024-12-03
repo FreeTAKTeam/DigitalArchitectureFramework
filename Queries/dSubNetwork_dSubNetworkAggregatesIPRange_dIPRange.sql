@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:14:53 PM
+-- Generated 2024-12-03 2:44:50 PM
 --  dSubNetwork (GroupName) connected with  dIPRange (series)
 SELECT dSubNetwork.Name as dSubNetwork,  dIPRange.Name as  dIPRange
 FROM t_object AS dIPRange

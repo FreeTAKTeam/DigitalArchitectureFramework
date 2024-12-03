@@ -1,4 +1,4 @@
--- Generated 2024-09-16 2:15:19 PM
+-- Generated 2024-12-03 2:45:56 PM
 --  dTable (GroupName) connected with  dDataEntity (series)
 SELECT dTable.Name as dTable,  dDataEntity.Name as  dDataEntity
 FROM t_object AS dDataEntity

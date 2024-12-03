@@ -440,3 +440,43 @@ Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed
 Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOpinionInner,Association,Has Inner Opinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinionInner,,,,Actor,dStakeholder,Association,Has Inner Opinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dStakeholder -> Has Opinion -> dOpinion
+Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dSubNetwork -> dSubNetworkAggregatesIPRange -> dIPRange
+Class,dSubNetwork,Class,dIPRange,,,,Aggregation,dSubNetworkAggregatesIPRange,from,Aggregates IP Range,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dIPRange,Class,dSubNetwork,,,,Aggregation,dSubNetworkAggregatesIPRange,to,is Aggregated in sub Net.,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSubNetwork,,,,Class,dIPRange,Aggregation,dSubNetworkAggregatesIPRange,from,,Aggregates IP Range,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dIPRange,,,,Class,dSubNetwork,Aggregation,dSubNetworkAggregatesIPRange,to,,is Aggregated in sub Net.,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dTable -> isFunctionallyImplementedBy -> dDataEntity
+Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dTest -> dTest_ApplicationComponent -> dApplicationComponent
+Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponent,directed,Test validates Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponent,from,is validated by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dTest,,,,Component,dApplicationComponent,Association,dTest_ApplicationComponent,directed,,Test validates Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dTest,Association,dTest_ApplicationComponent,from,,is validated by test,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dUserStory ->  -> dBusinessUseCase
+UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dValueStream -> Includes Processes -> dBusinessProcess
+Activity,dValueStream,Class,dBusinessProcess,,,,Composition,Includes Processes,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dValueStream,,,,Class,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dValueStream -> dValueStreamEnablesCapability -> dCapability
+Activity,dValueStream,Class,dCapability,,,,Association,dValueStreamEnablesCapability,directed,Enables Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Activity,dValueStream,,,,Association,dValueStreamEnablesCapability,from,is Enabled by Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dValueStream,,,,Class,dCapability,Association,dValueStreamEnablesCapability,directed,,Enables Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Activity,dValueStream,Association,dValueStreamEnablesCapability,from,,is Enabled by Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dZone -> dZoneAggregatesRegion -> dRegion
+Class,dZone,Class,dRegion,,,,Aggregation,dZoneAggregatesRegion,from,Aggregates Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRegion,Class,dZone,,,,Aggregation,dZoneAggregatesRegion,to, is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dZone,,,,Class,dRegion,Aggregation,dZoneAggregatesRegion,from,,Aggregates Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRegion,,,,Class,dZone,Aggregation,dZoneAggregatesRegion,to,, is Aggregated in Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
