@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:30:06 PM
+-- Generated 2024-12-05 10:47:45 AM
 --  dNetwork (GroupName) connected with  dSecurityGroup (series)
 SELECT dNetwork.Name as dNetwork,  dSecurityGroup.Name as  dSecurityGroup
 FROM t_object AS dSecurityGroup

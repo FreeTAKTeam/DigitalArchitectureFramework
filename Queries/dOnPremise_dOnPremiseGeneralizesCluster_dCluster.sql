@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:32:35 PM
+-- Generated 2024-12-05 10:49:47 AM
 --  dOnPremise (GroupName) connected with  dCluster (series)
 SELECT dOnPremise.Name as dOnPremise,  dCluster.Name as  dCluster
 FROM t_object AS dCluster

@@ -1,4 +1,4 @@
-SELECT Node.Object_ID, Node.ea_guid AS CLASSGUID , Node.Object_Type AS CLASSTYPE, Node.Name as Node, IP.value, PublicIP.value, CPU.value, RAM.value, Owner.value, ArchitectureType.value, Disk.value, hostname.value, OS.value
+SELECT Node.Object_ID, Node.ea_guid AS CLASSGUID , Node.Object_Type AS CLASSTYPE, Node.Name as Node, IP.value AS IP, PublicIP.value AS PublicIP, CPU.value AS CPU, RAM.value AS RAM, Owner.value AS Owner, ArchitectureType.value AS ArchitectureType, Disk.value AS Disk, hostname.value AS hostname, OS.value AS OS
 FROM t_object as Node
 INNER JOIN t_objectproperties AS IP  ON (IP.Object_ID =Node.Object_ID AND IP.Property = ('IP'))
 INNER JOIN t_objectproperties AS PublicIP  ON (PublicIP.Object_ID =Node.Object_ID AND PublicIP.Property = ('PublicIP'))

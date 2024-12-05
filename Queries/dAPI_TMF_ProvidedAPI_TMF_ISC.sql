@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:01:10 PM
+-- Generated 2024-12-05 10:22:56 AM
 --  dAPI (GroupName) connected with  TMF_ISC (series)
 SELECT dAPI.Name as dAPI,  TMF_ISC.Name as  TMF_ISC
 FROM t_object AS TMF_ISC

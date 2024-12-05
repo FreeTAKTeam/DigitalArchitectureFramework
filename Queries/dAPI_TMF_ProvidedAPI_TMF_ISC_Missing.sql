@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:01:10 PM
+-- Generated 2024-12-05 10:22:56 AM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dAPI'                                               

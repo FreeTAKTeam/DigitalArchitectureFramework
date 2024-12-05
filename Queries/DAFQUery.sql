@@ -69,17 +69,20 @@ Limit 15;
 
 --- select the average value of the KPI aggregated under a measurement area
 SELECT
-           AVG(CurrentLevel.Value)   AS ChartValue
+           AVG((CAST(CurrentLevel.Value) as INT)   AS ChartValue
          , dMeasurementGrouping.Name AS Series
 FROM t_object AS KPI
            INNER JOIN  t_objectproperties AS CurrentLevel
                       ON CurrentLevel.Object_ID = KPI.Object_ID
-           INNER JOIN t_connector AS connON conn.Start_Object_ID = KPI.Object_ID
+           INNER JOIN t_connector AS conn ON conn.Start_Object_ID = KPI.Object_ID
            INNER JOIN t_object AS dMeasurementGrouping ON conn.End_Object_ID = dMeasurementGrouping.Object_ID
 WHERE
            KPI.Stereotype                      = ('dMeasurementIndicator')
            AND CurrentLevel.Property           = ('CurrentLevel')
            AND dMeasurementGrouping.Stereotype = ('dMeasurementGrouping')
+GROUP BY dMeasurementGrouping.Name
+ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC		   
+		   
 
 --- select the average value and the expected value of the KPI aggregated under a measurement area
 SELECT AVG(CAST(CurrentLevel.Value as INT)) AS yValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS xValue, dMeasurementGrouping.Name AS Series
@@ -95,7 +98,33 @@ AND dMeasurementGrouping.Stereotype = ('dMeasurementGrouping')
 GROUP BY dMeasurementGrouping.Name
 ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
---- variation for DOC gen template selector
+
+--- MYSQL version: select the average value and the expected value of the KPI aggregated under a measurement area
+SELECT 
+    AVG(CAST(CurrentLevel.Value AS SIGNED)) AS yValue, 
+    AVG(CAST(SatisfactionLevel.Value AS SIGNED)) AS xValue, 
+    dMeasurementGrouping.Name AS Series
+FROM 
+    t_object AS KPI
+INNER JOIN 
+    t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_objectproperties AS SatisfactionLevel ON SatisfactionLevel.Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_connector AS conn ON conn.Start_Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_object AS dMeasurementGrouping ON conn.End_Object_ID = dMeasurementGrouping.Object_ID
+WHERE 
+    KPI.Stereotype = 'dMeasurementIndicator'
+    AND SatisfactionLevel.Property = 'SatisfactionLevel'
+    AND CurrentLevel.Property = 'CurrentLevel'
+    AND dMeasurementGrouping.Stereotype = 'dMeasurementGrouping'
+GROUP BY 
+    dMeasurementGrouping.Name
+ORDER BY 
+    SUM(CAST(CurrentLevel.Value AS SIGNED)) DESC;
+
+--- variation for DOC gen template selector: select the average value and the expected value of the KPI aggregated under a measurement area
 SELECT AVG(CAST(CurrentLevel.Value as INT)) AS CurrentValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS TargetValue, dMeasurementGrouping.Name AS Name, dMeasurementGrouping.Note AS Notes 
 FROM t_object AS KPI
 INNER JOIN t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
@@ -110,7 +139,7 @@ GROUP BY dMeasurementGrouping.Name
 ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
 
---- SQL version
+--- SQL version:  select the average value and the expected value of the KPI aggregated under a measurement area
 
 SELECT AVG(CAST(CurrentLevel.Value as INT)) AS ChartValue, dMeasurementGrouping.Name AS Series
 FROM t_object AS KPI
@@ -137,6 +166,39 @@ AND dMeasurementGrouping.Stereotype = ('dMeasurementGrouping')
 GROUP BY dMeasurementGrouping.Name
 ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
+--- MYSQL it takes a series of KPI and normalize the achievement in %
+---  it aggregates it all on a dMeasurementGrouping and query a category
+ 
+SELECT 
+    dMeasurementGrouping.Name AS Series,
+    AVG((CurrentLevel.Value / NULLIF(SatisfactionLevel.Value, 0)) * 100) AS ChartValue 
+FROM 
+    t_object AS KPI
+INNER JOIN 
+    t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_objectproperties AS SatisfactionLevel ON SatisfactionLevel.Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_connector AS conn ON conn.Start_Object_ID = KPI.Object_ID
+INNER JOIN 
+    t_object AS dMeasurementGrouping ON conn.End_Object_ID = dMeasurementGrouping.Object_ID
+INNER JOIN 
+    t_objectproperties AS MeasurementCategory ON (
+        MeasurementCategory.Object_ID = dMeasurementGrouping.Object_ID 
+        AND MeasurementCategory.Property = 'MeasurementCategory'
+    )
+WHERE 
+    KPI.Stereotype = 'dMeasurementIndicator'
+    AND SatisfactionLevel.Property = 'SatisfactionLevel'
+    AND CurrentLevel.Property = 'CurrentLevel'
+    AND dMeasurementGrouping.Stereotype = 'dMeasurementGrouping'
+    AND MeasurementCategory.Value = 'Business'
+GROUP BY 
+    dMeasurementGrouping.Name
+ORDER BY 
+    ChartValue DESC;
+
+
 -- select all Measuremnt indicators under a Business capability
 SELECT KPI.Name AS Name, AVG(CAST(CurrentLevel.Value as INT)) AS CurrentValue, AVG(CAST(SatisfactionLevel.Value as INT)) AS TargetValue
 FROM t_object AS KPI
@@ -162,6 +224,21 @@ WHERE KPI.Stereotype = ('dMeasurementIndicator')
 AND SatisfactionLevel.Property = ('SatisfactionLevel')
 AND CurrentLevel.Property = ('CurrentLevel')
 AND BusinessCapability.Stereotype = ('dCapability')
+
+--- mysql select all Measuremnt indicators under a Business capability
+SELECT BusinessCapability.Name AS Capability, AVG(CurrentLevel.Value) AS CurrentValue, AVG( SatisfactionLevel.Value) AS TargetValue
+FROM t_object AS KPI
+INNER JOIN t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID
+INNER JOIN t_objectproperties AS SatisfactionLevel ON SatisfactionLevel.Object_ID = KPI.Object_ID
+INNER JOIN t_connector AS conn ON conn.End_Object_ID= KPI.Object_ID
+INNER JOIN t_object AS BusinessCapability ON conn.Start_Object_ID  = BusinessCapability.Object_ID
+WHERE KPI.Stereotype = ('dMeasurementIndicator')  
+AND SatisfactionLevel.Property = ('SatisfactionLevel')
+AND CurrentLevel.Property = ('CurrentLevel')
+AND BusinessCapability.Stereotype = ('dCapability')
+GROUP BY Capability
+ORDER BY CurrentValue DESC
+
 
 
 --- select all Measuremnt indicators under a Process
@@ -235,6 +312,29 @@ Order by CapId.Value ASC
 SELECT   Capability.Name AS CapName, 
 FORMAT(AVG(CAST(replace(replace(replace(replace(replace(replace(AsIs.value , 'None', '0'), 'Initial', '1'), 'UnderDevelopment', '2'),'Defined', '3'),'Managed', '4'), 'Measured', '5')AS INT)),2)  AS AsIsNum, 
 FORMAT(AVG(CAST(replace(replace(replace(replace(replace(replace(ToBe.value , 'None', '0'), 'Initial', '1'), 'UnderDevelopment', '2'),'Defined', '3'),'Managed', '4'), 'Measured', '5')AS INT)),2)  AS ToBeNum 
+FROM t_object AS Capability
+
+INNER JOIN t_connector AS conn ON conn.End_Object_ID = Capability.Object_ID
+INNER JOIN t_object AS ChildCapability ON conn.start_Object_ID = ChildCapability.Object_ID
+
+INNER JOIN t_objectproperties AS AsIs ON AsIs.Object_ID = ChildCapability.Object_ID
+INNER JOIN t_objectproperties AS ToBe ON ToBe.Object_ID = ChildCapability.Object_ID
+INNER JOIN t_objectproperties AS category ON category.Object_ID = ChildCapability.Object_ID
+ 
+WHERE Capability.Stereotype = 'dCapability'  
+AND ChildCapability.Stereotype = 'dCapability'  
+AND AsIs.Property=('Increments')
+AND ToBe.property=('IncrementsToBe')
+And category.property=('Category')
+AND category.value=('AiaB')
+AND conn.Connector_Type=('Aggregation')
+group by CapName
+Order by CapName ASC
+
+-- mysql version
+SELECT   Capability.Name AS CapName, 
+FORMAT(AVG(CAST(replace(replace(replace(replace(replace(replace(AsIs.value , 'None', '0'), 'Initial', '1'), 'UnderDevelopment', '2'),'Defined', '3'),'Managed', '4'), 'Measured', '5')AS UNSIGNED)),2)  AS "Maturity- As-Is", 
+FORMAT(AVG(CAST(replace(replace(replace(replace(replace(replace(ToBe.value , 'None', '0'), 'Initial', '1'), 'UnderDevelopment', '2'),'Defined', '3'),'Managed', '4'), 'Measured', '5')AS UNSIGNED)),2)  AS "Maturity To-Be"
 FROM t_object AS Capability
 
 INNER JOIN t_connector AS conn ON conn.End_Object_ID = Capability.Object_ID

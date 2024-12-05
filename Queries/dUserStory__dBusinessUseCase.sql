@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:47:26 PM
+-- Generated 2024-12-05 10:58:53 AM
 --  dUserStory (GroupName) connected with  dBusinessUseCase (series)
 SELECT dUserStory.Name as dUserStory,  dBusinessUseCase.Name as  dBusinessUseCase
 FROM t_object AS dBusinessUseCase

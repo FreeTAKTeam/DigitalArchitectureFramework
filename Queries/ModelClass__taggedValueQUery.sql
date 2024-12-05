@@ -1,4 +1,4 @@
-SELECT ModelClass.Object_ID, ModelClass.ea_guid AS CLASSGUID , ModelClass.Object_Type AS CLASSTYPE, ModelClass.Name as ModelClass, childorder.value, displayvalue.value, initparams.value, issearchable.value, issoap.value, orderby.value, parentorder.value, pkname.value, tablename.value
+SELECT ModelClass.Object_ID, ModelClass.ea_guid AS CLASSGUID , ModelClass.Object_Type AS CLASSTYPE, ModelClass.Name as ModelClass, childorder.value AS childorder, displayvalue.value AS displayvalue, initparams.value AS initparams, issearchable.value AS issearchable, issoap.value AS issoap, orderby.value AS orderby, parentorder.value AS parentorder, pkname.value AS pkname, tablename.value AS tablename
 FROM t_object as ModelClass
 INNER JOIN t_objectproperties AS childorder  ON (childorder.Object_ID =ModelClass.Object_ID AND childorder.Property = ('child_order'))
 INNER JOIN t_objectproperties AS displayvalue  ON (displayvalue.Object_ID =ModelClass.Object_ID AND displayvalue.Property = ('display_value'))

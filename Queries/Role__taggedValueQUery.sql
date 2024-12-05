@@ -1,4 +1,4 @@
-SELECT Role.Object_ID, Role.ea_guid AS CLASSGUID , Role.Object_Type AS CLASSTYPE, Role.Name as Role, FTEs.value, User.value, ID.value, Owner.value, Source.value, areSkillsDefined.value, areSkillsAvailable.value, DegreeOfUtilisation.value, Cost.value
+SELECT Role.Object_ID, Role.ea_guid AS CLASSGUID , Role.Object_Type AS CLASSTYPE, Role.Name as Role, FTEs.value AS FTEs, User.value AS User, ID.value AS ID, Owner.value AS Owner, Source.value AS Source, areSkillsDefined.value AS areSkillsDefined, areSkillsAvailable.value AS areSkillsAvailable, DegreeOfUtilisation.value AS DegreeOfUtilisation, Cost.value AS Cost
 FROM t_object as Role
 INNER JOIN t_objectproperties AS FTEs  ON (FTEs.Object_ID =Role.Object_ID AND FTEs.Property = ('#FTEs'))
 INNER JOIN t_objectproperties AS User  ON (User.Object_ID =Role.Object_ID AND User.Property = ('User'))

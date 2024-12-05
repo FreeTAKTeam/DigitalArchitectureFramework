@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>004</CheckId>
-  <CheckDescription> BusinessProcess Ensure the correct Operation of Capability</CheckDescription>
+  <CheckDescription> Business Process Ensures the correct Operation of Capability</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1

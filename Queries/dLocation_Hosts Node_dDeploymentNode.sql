@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:25:29 PM
+-- Generated 2024-12-05 10:44:11 AM
 --  dLocation (GroupName) connected with  dDeploymentNode (series)
 SELECT dLocation.Name as dLocation,  dDeploymentNode.Name as  dDeploymentNode
 FROM t_object AS dDeploymentNode

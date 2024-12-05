@@ -1,4 +1,4 @@
-SELECT Location.Object_ID, Location.ea_guid AS CLASSGUID , Location.Object_Type AS CLASSTYPE, Location.Name as Location, AreaCode.value, City.value, Country.value, EmailID.value, PhoneNumber.value, Province.value, Street.value, ID.value
+SELECT Location.Object_ID, Location.ea_guid AS CLASSGUID , Location.Object_Type AS CLASSTYPE, Location.Name as Location, AreaCode.value AS AreaCode, City.value AS City, Country.value AS Country, EmailID.value AS EmailID, PhoneNumber.value AS PhoneNumber, Province.value AS Province, Street.value AS Street, ID.value AS ID
 FROM t_object as Location
 INNER JOIN t_objectproperties AS AreaCode  ON (AreaCode.Object_ID =Location.Object_ID AND AreaCode.Property = ('AreaCode'))
 INNER JOIN t_objectproperties AS City  ON (City.Object_ID =Location.Object_ID AND City.Property = ('City'))

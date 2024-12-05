@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:40:17 PM
+-- Generated 2024-12-05 10:55:25 AM
 --  dRisk (GroupName) connected with  dApplicationComponent (series)
 SELECT dRisk.Name as dRisk,  dApplicationComponent.Name as  dApplicationComponent
 FROM t_object AS dApplicationComponent

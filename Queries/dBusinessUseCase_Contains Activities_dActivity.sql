@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:06:48 PM
+-- Generated 2024-12-05 10:28:47 AM
 --  dBusinessUseCase (GroupName) connected with  dActivity (series)
 SELECT dBusinessUseCase.Name as dBusinessUseCase,  dActivity.Name as  dActivity
 FROM t_object AS dActivity

@@ -1,4 +1,4 @@
-SELECT Feature.Object_ID, Feature.ea_guid AS CLASSGUID , Feature.Object_Type AS CLASSTYPE, Feature.Name as Feature, Author.value, Proofreader.value, Status.value
+SELECT Feature.Object_ID, Feature.ea_guid AS CLASSGUID , Feature.Object_Type AS CLASSTYPE, Feature.Name as Feature, Author.value AS Author, Proofreader.value AS Proofreader, Status.value AS Status
 FROM t_object as Feature
 INNER JOIN t_objectproperties AS Author  ON (Author.Object_ID =Feature.Object_ID AND Author.Property = ('Author'))
 INNER JOIN t_objectproperties AS Proofreader  ON (Proofreader.Object_ID =Feature.Object_ID AND Proofreader.Property = ('Proofreader'))

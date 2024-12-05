@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:15:11 PM
+-- Generated 2024-12-05 10:35:55 AM
 --  dDeploymentNode (GroupName) connected with  dApplicationComponent (series)
 SELECT dDeploymentNode.Name as dDeploymentNode,  dApplicationComponent.Name as  dApplicationComponent
 FROM t_object AS dApplicationComponent

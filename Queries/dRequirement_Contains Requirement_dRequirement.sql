@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:38:28 PM
+-- Generated 2024-12-05 10:54:02 AM
 --  dRequirement (GroupName) connected with  dRequirement (series)
 SELECT dRequirement.Name as dRequirement,  dRequirement.Name as  dRequirement
 FROM t_object AS dRequirement

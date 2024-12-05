@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:48:51 PM
+-- Generated 2024-12-05 10:59:39 AM
 --  dValueStream (GroupName) connected with  dBusinessProcess (series)
 SELECT dValueStream.Name as dValueStream,  dBusinessProcess.Name as  dBusinessProcess
 FROM t_object AS dBusinessProcess

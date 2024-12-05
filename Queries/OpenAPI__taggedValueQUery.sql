@@ -1,4 +1,4 @@
-SELECT OpenAPI.Object_ID, OpenAPI.ea_guid AS CLASSGUID , OpenAPI.Object_Type AS CLASSTYPE, OpenAPI.Name as OpenAPI, swagger.value, host.value, basePath.value, schemes.value, consumes.value, produces.value, definitions.value, parameters.value, responses.value, securityDefinitions.value, ID.value, tags.value, FullName.value
+SELECT OpenAPI.Object_ID, OpenAPI.ea_guid AS CLASSGUID , OpenAPI.Object_Type AS CLASSTYPE, OpenAPI.Name as OpenAPI, swagger.value AS swagger, host.value AS host, basePath.value AS basePath, schemes.value AS schemes, consumes.value AS consumes, produces.value AS produces, definitions.value AS definitions, parameters.value AS parameters, responses.value AS responses, securityDefinitions.value AS securityDefinitions, ID.value AS ID, tags.value AS tags, FullName.value AS FullName
 FROM t_object as OpenAPI
 INNER JOIN t_objectproperties AS swagger  ON (swagger.Object_ID =OpenAPI.Object_ID AND swagger.Property = ('swagger'))
 INNER JOIN t_objectproperties AS host  ON (host.Object_ID =OpenAPI.Object_ID AND host.Property = ('host'))

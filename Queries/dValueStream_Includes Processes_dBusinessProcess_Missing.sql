@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:48:51 PM
+-- Generated 2024-12-05 10:59:39 AM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dValueStream'                                               

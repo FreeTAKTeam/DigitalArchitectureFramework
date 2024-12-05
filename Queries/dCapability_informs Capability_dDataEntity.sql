@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:10:16 PM
+-- Generated 2024-12-05 10:31:27 AM
 --  dCapability (GroupName) connected with  dDataEntity (series)
 SELECT dCapability.Name as dCapability,  dDataEntity.Name as  dDataEntity
 FROM t_object AS dDataEntity

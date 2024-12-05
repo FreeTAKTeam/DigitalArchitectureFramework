@@ -1,4 +1,4 @@
-SELECT BusinessService.Object_ID, BusinessService.ea_guid AS CLASSGUID , BusinessService.Object_Type AS CLASSTYPE, BusinessService.Name as BusinessService, Category.value, ID.value, LastStandardReviewDate.value, NextStandardReviewDate.value, Owner.value, RetireDate.value, Source.value
+SELECT BusinessService.Object_ID, BusinessService.ea_guid AS CLASSGUID , BusinessService.Object_Type AS CLASSTYPE, BusinessService.Name as BusinessService, Category.value AS Category, ID.value AS ID, LastStandardReviewDate.value AS LastStandardReviewDate, NextStandardReviewDate.value AS NextStandardReviewDate, Owner.value AS Owner, RetireDate.value AS RetireDate, Source.value AS Source
 FROM t_object as BusinessService
 INNER JOIN t_objectproperties AS Category  ON (Category.Object_ID =BusinessService.Object_ID AND Category.Property = ('Category'))
 INNER JOIN t_objectproperties AS ID  ON (ID.Object_ID =BusinessService.Object_ID AND ID.Property = ('ID'))

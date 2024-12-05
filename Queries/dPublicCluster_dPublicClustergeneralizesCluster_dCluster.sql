@@ -1,4 +1,4 @@
--- Generated 2024-12-03 2:37:03 PM
+-- Generated 2024-12-05 10:52:57 AM
 --  dPublicCluster (GroupName) connected with  dCluster (series)
 SELECT dPublicCluster.Name as dPublicCluster,  dCluster.Name as  dCluster
 FROM t_object AS dCluster
