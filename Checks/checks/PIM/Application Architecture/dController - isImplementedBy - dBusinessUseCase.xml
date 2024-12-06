@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>023</CheckId>
-  <CheckDescription>Controller Implements BusinessUseCase</CheckDescription>
+  <CheckDescription>Controller should Implementa  BusinessUseCase</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
