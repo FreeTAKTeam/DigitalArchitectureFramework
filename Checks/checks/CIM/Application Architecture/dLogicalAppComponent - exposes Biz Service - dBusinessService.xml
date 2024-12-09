@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>001</CheckId>
-  <CheckDescription>LogicalAppComponent exposes BusinessService</CheckDescription>
+  <CheckDescription>A “LogicalAppComponent” should exposes a “BusinessService”</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
