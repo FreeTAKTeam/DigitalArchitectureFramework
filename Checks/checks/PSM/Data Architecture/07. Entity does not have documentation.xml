@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>007</CheckId>
-  <CheckDescription>Entity does not have Documentation</CheckDescription>
+  <CheckId>016</CheckId>
+  <CheckDescription>Model Class does not have Documentation</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -12,7 +12,7 @@ LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID)
 LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
 LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
 
-where o1.stereotype = 'TMF_BusinessEntity'
+where o1.stereotype = 'dModelClass'
 </Main>
     <Filters>
       <Change>
@@ -68,7 +68,7 @@ WHERE o.ea_guid in (#ElementGuids#)
 AND o.ea_guid in (
 Select o1.ea_guid from t_object as o1
 where o1.Note IS NULL
-and o1.Stereotype = 'TMF_BusinessEntity'
+and o1.Stereotype = 'dModelClass'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

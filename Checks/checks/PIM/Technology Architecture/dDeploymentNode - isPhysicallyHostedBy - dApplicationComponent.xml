@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>14</CheckId>
-  <CheckDescription>ApplicationComponent isPhysicallyHostedBy DeploymentNode </CheckDescription>
+  <CheckId>001</CheckId>
+  <CheckDescription>ApplicationComponent isPhysically Hosted By Deployment Node </CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1

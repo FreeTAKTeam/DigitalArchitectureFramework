@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>017</CheckId>
+  <CheckId>025</CheckId>
   <CheckDescription>Duplicate associations (association with exactly the same name)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid

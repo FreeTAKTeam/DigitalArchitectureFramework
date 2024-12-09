@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>019</CheckId>
+  <CheckId>027</CheckId>
   <CheckDescription>association should specify navigability</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
@@ -77,6 +77,6 @@ AND c.Direction  LIKE 'Unspecified'
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>unspecified association not recommended for information model</Rationale>
-  <ProposedSolution>Add a name</ProposedSolution>
+  <Rationale>unspecified navigability not recommended for information model</Rationale>
+  <ProposedSolution>Add a navigability</ProposedSolution>
 </Check>

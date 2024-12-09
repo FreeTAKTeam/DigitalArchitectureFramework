@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>001</CheckId>
-  <CheckDescription>Class diagrams with more than 15 elements</CheckDescription>
+  <CheckId>000</CheckId>
+  <CheckDescription>Class diagrams with more than 25 elements</CheckDescription>
   <QueryToFindElements>
     <Main>
 SELECT d.ea_guid AS ItemGuid
@@ -10,8 +10,8 @@ INNER JOIN t_package p on p.Package_ID = d.Package_ID)
 LEFT JOIN t_package package_p1 on package_p1.package_ID = p.Parent_ID)
 LEFT JOIN t_package package_p2 on package_p2.package_ID = package_p1.Parent_ID)
 LEFT JOIN t_package package_p3 on package_p3.package_ID = package_p2.Parent_ID)
-LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
-LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
+LEFT JOIN t_package package_p4 ON package_p4.Package_ID = package_p3.Parent_ID)
+LEFT JOIN t_package package_p5 ON package_p5.Package_ID = package_p4.Parent_ID)
 WHERE d.Diagram_Type = 'Logical'
 		</Main>
     <Filters>
@@ -72,20 +72,22 @@ LEFT JOIN t_package package_p3 on package_p3.package_ID = package_p2.Parent_ID)
 LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
 LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 WHERE d.ea_guid in (#ElementGuids#)
-AND d.ea_guid in (
-SELECT d.ea_guid 
-FROM dbo.t_diagram d
-INNER JOIN t_diagramobjects do ON d.Diagram_ID=do.Diagram_ID
-INNER JOIN t_object o ON do.Object_ID = o.Object_ID
-WHERE d.Diagram_Type= 'Logical'
-AND o.Object_Type='Class'
-GROUP BY d.ea_guid
-HAVING COUNT(o.ea_guid) &gt; '15'
+AND d.ea_guid in 
+(
+	SELECT d.ea_guid 
+
+	FROM t_diagram d
+	INNER JOIN t_diagramobjects do ON d.Diagram_ID=do.Diagram_ID
+	INNER JOIN t_object o ON do.Object_ID = o.Object_ID
+	WHERE d.Diagram_Type= 'Logical'
+	AND o.Object_Type='Class'
+	GROUP BY d.ea_guid
+	HAVING COUNT(o.ea_guid) &gt; '25'
 )
-		</Main>
+	</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>A Class diagram should have max. 15 elements</Rationale>
+  <Rationale>A Class diagram should have max. 25 elements</Rationale>
   <ProposedSolution>Split up the diagram into multiple simple diagrams</ProposedSolution>
 </Check>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
+  <CheckId>011</CheckId>
   <CheckDescription>Datatype/Enumeration documentation is in HTML format (rather than plain text)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid

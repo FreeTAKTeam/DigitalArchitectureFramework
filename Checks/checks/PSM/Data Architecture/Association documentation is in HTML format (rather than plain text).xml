@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
+  <CheckId>008</CheckId>
   <CheckDescription>Association documentation is in HTML format (rather than plain text)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
-  <CheckDescription>Attribute documentation is in HTML format (rather than plain text)</CheckDescription>
+  <CheckId>006</CheckId>
+  <CheckDescription>Attribute documentation is in HTML format</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT a.ea_guid AS ItemGuid
 FROM ((((((( t_attribute a
@@ -73,7 +73,7 @@ where a1.Notes LIKE '%HTML%'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
-  <WarningType>Error</WarningType>
-  <Rationale></Rationale>
-  <ProposedSolution>Add documentation</ProposedSolution>
+  <WarningType>Warning</WarningType>
+  <Rationale>HTML format can generate issues</Rationale>
+  <ProposedSolution>Add documentation in  plain text</ProposedSolution>
 </Check>

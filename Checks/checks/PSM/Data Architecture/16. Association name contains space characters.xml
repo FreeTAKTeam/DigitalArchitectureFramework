@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>016</CheckId>
+  <CheckId>024</CheckId>
   <CheckDescription>Association name contains space characters</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
@@ -76,7 +76,7 @@ AND c.Name LIKE '% %' OR c.Name LIKE ' %' OR c.Name LIKE '% '
 </Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
-  <WarningType>Warning</WarningType>
-  <Rationale>Association name contains space characters</Rationale>
+  <WarningType>Error</WarningType>
+  <Rationale>Association name cannot contains spaces</Rationale>
   <ProposedSolution>Change name to camel notation</ProposedSolution>
 </Check>

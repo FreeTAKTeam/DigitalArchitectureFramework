@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>009</CheckId>
+  <CheckId>018</CheckId>
   <CheckDescription>Entities (classes or association classes) which do not appear in any diagram in the model</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid

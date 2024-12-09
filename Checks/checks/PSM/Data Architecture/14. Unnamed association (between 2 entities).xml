@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>014</CheckId>
-  <CheckDescription>Unnamed association (between 2 entities)</CheckDescription>
+  <CheckId>022</CheckId>
+  <CheckDescription>Unnamed association (between 2 model Classes)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
 FROM ((((((((( t_connector c

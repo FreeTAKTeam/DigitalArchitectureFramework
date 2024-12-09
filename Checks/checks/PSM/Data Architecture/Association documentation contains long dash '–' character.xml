@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
+  <CheckId>007</CheckId>
   <CheckDescription>Association documentation contains long dash '–' character</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
@@ -77,7 +77,7 @@ AND c.connector_Type = 'Association'
 </Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
-  <WarningType>Error</WarningType>
+  <WarningType>Warning</WarningType>
   <Rationale>Association documentation contains long dash '–' character</Rationale>
   <ProposedSolution>Add a name</ProposedSolution>
 </Check>

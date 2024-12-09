@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>004</CheckId>
-  <CheckDescription>Two classes with the same name in the model (usually in different ABEs)</CheckDescription>
+  <CheckId>014</CheckId>
+  <CheckDescription>Two classes with the same name in the model</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -11,8 +11,7 @@ LEFT JOIN t_package Package_p2 ON Package_p2.Package_ID = Package_p1.Parent_ID)
 LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID)
 LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
 LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
-
-WHERE o1.Stereotype = 'TMF_BusinessEntity'</Main>
+WHERE o1.Stereotype = 'dModelClass'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -68,13 +67,13 @@ AND o.ea_guid IN (
 SELECT o.ea_guid
 FROM t_object AS o
 INNER JOIN t_object AS o2 ON o.Stereotype =  o2.Stereotype
-WHERE o.Stereotype= 'TMF_BusinessEntity'
+WHERE o.Stereotype= 'dModelClass'
 AND o.Name = o2.Name
 AND o.ea_guid &lt;&gt; o2.ea_guid
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Error</WarningType>
-  <Rationale>Two classes with the same name in the model (usually in different ABEs)</Rationale>
-  <ProposedSolution>Change names</ProposedSolution>
+  <Rationale>classes with the same name can be confusing</Rationale>
+  <ProposedSolution>ensure that they have different packages and avoid duplication</ProposedSolution>
 </Check>

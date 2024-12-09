@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>008</CheckId>
-  <CheckDescription>Entity is directly derived from more than one base class</CheckDescription>
+  <CheckId>017</CheckId>
+  <CheckDescription>Model Class is directly derived from more than one base class</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>004</CheckId>
+  <CheckId>013</CheckId>
   <CheckDescription>Classes containing Attributes without datatype</CheckDescription>
   <QueryToFindElements>
     <Main>

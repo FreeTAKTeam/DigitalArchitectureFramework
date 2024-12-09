@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>003</CheckId>
-  <CheckDescription>dApplicationComponentdoes not have documentation</CheckDescription>
+  <CheckDescription>Application Component does not have documentation</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -73,6 +73,6 @@ AND o1.stereotype = 'dApplicationComponent'
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Error</WarningType>
-  <Rationale>dApplicationComponentdoes not have documentation</Rationale>
+  <Rationale>ApplicationComponent does not have documentation</Rationale>
   <ProposedSolution>Add documentation to dApplicationComponent</ProposedSolution>
 </Check>

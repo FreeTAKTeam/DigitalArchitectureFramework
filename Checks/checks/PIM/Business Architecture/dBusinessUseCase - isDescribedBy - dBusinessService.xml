@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>20</CheckId>
+  <CheckId>002</CheckId>
   <CheckDescription>BusinessService isDescribedBy BusinessUseCase  </CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid

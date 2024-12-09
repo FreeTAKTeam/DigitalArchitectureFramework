@@ -78,5 +78,5 @@
   </QueryToCheckFoundElements>
   <WarningType>Error</WarningType>
   <Rationale>zll the ata type must be described in a class</Rationale>
-  <ProposedSolution>Remove deprecated Datatype or add relationships</ProposedSolution>
+  <ProposedSolution>Remove deprecated Datatype or add reference</ProposedSolution>
 </Check>

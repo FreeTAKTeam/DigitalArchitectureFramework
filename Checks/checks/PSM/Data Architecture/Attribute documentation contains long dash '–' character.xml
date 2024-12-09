@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>003</CheckId>
+  <CheckId>009</CheckId>
   <CheckDescription>Attribute documentation contains long dash '–' character</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT a.ea_guid AS ItemGuid

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>010</CheckId>
+  <CheckId>020</CheckId>
   <CheckDescription>Attribute has no name (or empty name)</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT a.ea_guid AS ItemGuid

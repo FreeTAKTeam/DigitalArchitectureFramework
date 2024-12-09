@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>012</CheckId>
+  <CheckId>021</CheckId>
   <CheckDescription>Attribute of an entity does not have a type</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT a.ea_guid AS ItemGuid

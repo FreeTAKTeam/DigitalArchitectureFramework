@@ -13,7 +13,7 @@ LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID
 LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID
 LEFT JOIN t_package package_p4 ON package_p4.Package_ID = package_p3.Parent_ID
 LEFT JOIN t_package package_p5 ON package_p5.Package_ID = package_p4.Parent_ID
-WHERE d.Diagram_Type = 'Custom';
+WHERE d.Diagram_Type = 'Custom'
 </Main>
     <Filters>
       <Change></Change>
@@ -25,9 +25,8 @@ WHERE d.Diagram_Type = 'Custom';
     </Filters>
   </QueryToFindElements>
   <QueryToCheckFoundElements>
-    <Main>
-SELECT d.Name AS ItemName
-, 'diagram' as ItemType
+    <Main>SELECT COUNT (o.Object_ID) AS 'ElementCount', d.Name AS ItemName
+, 'Diagram' as ItemType
 , d.ea_guid AS ItemGuid
 , d.Diagram_Type AS ElementType
 , d.StereoType AS ElementStereotype
@@ -37,19 +36,19 @@ SELECT d.Name AS ItemName
 , package_p3.Name AS PackageParentLevel3
 , package_p4.Name AS PackageParentLevel4
 , package_p5.Name AS PackageParentLevel5
-FROM ((((((t_diagram d
-INNER JOIN t_package p on p.Package_ID = d.Package_ID)
-LEFT JOIN t_package package_p1 on package_p1.package_ID = p.Parent_ID)
-LEFT JOIN t_package package_p2 on package_p2.package_ID = package_p1.Parent_ID)
-LEFT JOIN t_package package_p3 on package_p3.package_ID = package_p2.Parent_ID)
+FROM (((((( (t_diagramobjects o
+INNER JOIN t_diagram as d on d.Diagram_ID = o.Diagram_ID)
+INNER JOIN t_package p ON p.Package_ID = d.Package_ID)
+LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
+LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
+LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
 LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
 LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
-WHERE d.ea_guid in (#ElementGuids#)
-AND not exists (
-SELECT do.Diagram_ID 
-FROM t_diagramobjects do
-WHERE do.Diagram_ID = d.Diagram_ID
-)
+
+GROUP BY d.EA_GUID, d.Name, d.ea_guid, d.Diagram_Type, d.Stereotype, p.Name, package_p1.Name, package_p2.Name, package_p3.Name, package_p4.Name, package_p5.Name
+
+Having  COUNT(o.Object_ID) &lt; 1
+AND d.EA_GUID IN (#ElementGuids#)
 		</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

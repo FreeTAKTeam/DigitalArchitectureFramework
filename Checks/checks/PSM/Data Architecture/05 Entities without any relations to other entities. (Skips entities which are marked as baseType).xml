@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>005</CheckId>
-  <CheckDescription>dModelClass without any relations to other entities</CheckDescription>
+  <CheckId>015</CheckId>
+  <CheckDescription>Mode Class without any relations to other entities</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -46,54 +46,66 @@ where o1.stereotype = 'dModelClass'
     </Filters>
   </QueryToFindElements>
   <QueryToCheckFoundElements>
-    <Main>SELECT o.Name AS ItemName
-, 'object' as ItemType
-, o.ea_guid AS ItemGuid
-, o.Object_Type AS ElementType
-, o.StereoType AS ElementStereotype
-, p.Name AS PackageName
-, package_p1.Name AS PackageParentLevel1
-, package_p2.Name AS PackageParentLevel2 
-, package_p3.Name AS PackageParentLevel3
-, package_p4.Name AS PackageParentLevel4
-, package_p5.Name AS PackageParentLevel5
-FROM ((((((t_object o
-INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
-LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
-LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
-LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
-LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
-LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
-WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid in (
-Select o1.Ea_GUID 
-FROM t_object as o1
-Where o1.ea_guid NOT IN 
-(
-Select o1.ea_guid from t_object 
-
-INNER JOIN t_connector as c2 on c2.start_Object_ID = o1.Object_ID
-INNER JOIN t_object as o3 on o3.Object_ID = c2.End_Object_ID
-Where o1.Stereotype = 'TMF_BusinessEntity'
-AND o3.Stereotype = 'TMF_BusinessEntity')
-
-AND o1.ea_guid NOT IN
-
-(
-Select o1.ea_guid from t_object 
-INNER JOIN t_connector as c on c.End_Object_ID = o1.Object_ID
-INNER JOIN t_object as o2 on o2.Object_ID = c.start_object_ID
-
-WHERE o1.Stereotype = 'dModelClass'
-AND o2.Stereotype = 'dModelClass'
-)
-
-AND o1.Stereotype = 'dModelClass'
-AND (PDATA5 NOT LIKE 'baseType' OR PDATA5 IS NULL)
-)</Main>
+    <Main>SELECT 
+    o.Name AS ItemName,
+    'object' AS ItemType,
+    o.ea_guid AS ItemGuid,
+    o.Object_Type AS ElementType,
+    o.Stereotype AS ElementStereotype,
+    p.Name AS PackageName,
+    package_p1.Name AS PackageParentLevel1,
+    package_p2.Name AS PackageParentLevel2,
+    package_p3.Name AS PackageParentLevel3,
+    package_p4.Name AS PackageParentLevel4,
+    package_p5.Name AS PackageParentLevel5
+FROM 
+    ((((((t_object o
+    INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
+    LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
+    LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
+    LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
+    LEFT JOIN t_package package_p4 ON package_p4.package_ID = package_p3.Parent_ID)
+    LEFT JOIN t_package package_p5 ON package_p5.package_ID = package_p4.Parent_ID)
+WHERE 
+    o.ea_guid IN (#ElementGuids#)
+    AND o.ea_guid IN (
+        SELECT 
+            o1.ea_guid
+        FROM 
+            t_object o1
+        WHERE 
+            o1.ea_guid NOT IN (
+                SELECT 
+                    o1.ea_guid
+                FROM 
+                    t_object o1
+                INNER JOIN 
+                    t_connector c2 ON c2.start_Object_ID = o1.Object_ID
+                INNER JOIN 
+                    t_object o3 ON o3.Object_ID = c2.End_Object_ID
+                WHERE 
+                    o1.Stereotype = 'dModelClass'
+                    AND o3.Stereotype = 'dModelClass'
+            )
+            AND o1.ea_guid NOT IN (
+                SELECT 
+                    o1.ea_guid
+                FROM 
+                    t_object o1
+                INNER JOIN 
+                    t_connector c ON c.End_Object_ID = o1.Object_ID
+                INNER JOIN 
+                    t_object o2 ON o2.Object_ID = c.start_Object_ID
+                WHERE 
+                    o1.Stereotype = 'dModelClass'
+                    AND o2.Stereotype = 'dModelClass'
+            )
+            AND o1.Stereotype = 'dModelClass'
+            AND (o1.PDATA5 NOT LIKE 'baseType' OR o1.PDATA5 IS NULL)
+    )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>05 Entities without any relations to other entities. This validation skips entities which are marked as &lt;&lt;baseType&gt;&gt;</Rationale>
+  <Rationale>Entities without any relations to other entities. This validation skips entities which are marked as &lt;&lt;baseType&gt;&gt;</Rationale>
   <ProposedSolution></ProposedSolution>
 </Check>

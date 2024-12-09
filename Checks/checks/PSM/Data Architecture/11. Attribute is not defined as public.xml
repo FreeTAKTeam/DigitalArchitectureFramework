@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>011</CheckId>
+  <CheckId>019</CheckId>
   <CheckDescription>Attribute is not defined as public</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT a.ea_guid AS ItemGuid
@@ -75,6 +75,6 @@ o1.Scope NOT LIKE 'Public'
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>Attribute is not defined as public</Rationale>
+  <Rationale>ensure that the attribute need to be != public</Rationale>
   <ProposedSolution>Change the Scope of the Attribute</ProposedSolution>
 </Check>
