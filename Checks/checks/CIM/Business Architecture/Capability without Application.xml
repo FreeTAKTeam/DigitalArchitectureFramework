@@ -69,7 +69,7 @@ INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
 LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
 LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
 LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
-LEFT JOIN t_package package_p4 ON package_p4.Package_ID = package_p3.Parent_ID)
+LEFT JOIN t_package package_p4 ON package_ p4.Package_ID = package_p3.Parent_ID)
 LEFT JOIN t_package package_p5 ON package_p5.Package_ID = package_p4.Parent_ID)
 WHERE o.ea_guid in (#ElementGuids#)
 AND o.Object_ID NOT IN

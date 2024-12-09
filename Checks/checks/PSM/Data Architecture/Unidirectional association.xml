@@ -1,12 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-<<<<<<< HEAD
   <CheckId>027</CheckId>
   <CheckDescription>association should specify navigability</CheckDescription>
-=======
-  <CheckId>019</CheckId>
-  <CheckDescription>An association should be specified in the information model</CheckDescription>
->>>>>>> 4a9a7da67f5acbaa16c473e088502342112bf656
   <QueryToFindElements>
     <Main>SELECT c.ea_guid AS ItemGuid
 FROM ((((((( t_connector c
@@ -82,11 +77,6 @@ AND c.Direction  LIKE 'Unspecified'
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-<<<<<<< HEAD
   <Rationale>unspecified navigability not recommended for information model</Rationale>
   <ProposedSolution>Add a navigability</ProposedSolution>
-=======
-  <Rationale>unspecified association not recommended for information model</Rationale>
-  <ProposedSolution>Add a name  to the </ProposedSolution>
->>>>>>> 4a9a7da67f5acbaa16c473e088502342112bf656
-</Check>
+  </Check>
