@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:29:47 AM
+-- Generated 2024-12-10 12:58:28 PM
 --  dCapability (GroupName) connected with  dMeasurementIndicator (series)
 SELECT dCapability.Name as dCapability,  dMeasurementIndicator.Name as  dMeasurementIndicator
 FROM t_object AS dMeasurementIndicator

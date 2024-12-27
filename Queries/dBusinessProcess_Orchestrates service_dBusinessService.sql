@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:26:04 AM
+-- Generated 2024-12-10 12:56:22 PM
 --  dBusinessProcess (GroupName) connected with  dBusinessService (series)
 SELECT dBusinessProcess.Name as dBusinessProcess,  dBusinessService.Name as  dBusinessService
 FROM t_object AS dBusinessService

@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:32:00 AM
+-- Generated 2024-12-10 12:59:37 PM
 --  dCluster (GroupName) connected with  dDeploymentNode (series)
 SELECT dCluster.Name as dCluster,  dDeploymentNode.Name as  dDeploymentNode
 FROM t_object AS dDeploymentNode

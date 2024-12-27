@@ -1,25 +1,26 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="48791CFC-E" name="DAF_API" version="5.5.12" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
+	<Documentation id="48791CFC-E" name="DAF_API" version="5.6" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="API Elements" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="API Elements" notes="toolbox for managing APIs" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dAPI(Interface)" type="string" description="" unit="" values="" default="Open API"/>
-					<Tag name="DAF::dAPIOperation(Operation)" type="string" description="" unit="" values="" default="API Operation"/>
-					<Tag name="DAF::dAPIParameter(Attribute)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dAPIResponse(Class)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSON_Attribute(Attribute)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSON_Datatype(Class)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSON_Element(Class)" type="string" description="" unit="" values="" default="JSON Element"/>
-					<Tag name="DAF::dJSON_Schema(Class)" type="string" description="" unit="" values="" default="JSON Schema"/>
-					<Tag name="DAF::dJSON_Type(Class)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dJSON_SchemaSubSet(Class)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dAPI(UML::Interface)" type="string" description="" unit="" values="" default="Open API"/>
+					<Tag name="DAF::dJSON_Schema(UML::Class)" type="string" description="" unit="" values="" default="API Schema"/>
+					<Tag name="DAF::dAPIOperation(UML::Operation)" type="string" description="" unit="" values="" default="API Operation"/>
+					<Tag name="DAF::dAPIParameter(UML::Attribute)" type="string" description="" unit="" values="" default="API param"/>
+					<Tag name="DAF::dAPIResponse(UML::Class)" type="string" description="" unit="" values="" default="API response"/>
+					<Tag name="DAF::dJSON_Attribute(UML::Attribute)" type="string" description="" unit="" values="" default="API attribute"/>
+					<Tag name="DAF::dJSON_Datatype(UML::Class)" type="string" description="" unit="" values="" default="Sata Type"/>
+					<Tag name="DAF::dJSON_Element(UML::Class)" type="string" description="" unit="" values="" default="Schema Element"/>
+					<Tag name="DAF::dJSON_Type(UML::Class)" type="string" description="" unit="" values="" default="json type"/>
+					<Tag name="DAF::dJSON_SchemaSubSet(Class)" type="string" description="" unit="" values="" default="Schema Subset"/>
+					<Tag name="UML::Class" type="" description="" unit="" values="" default="Class"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="API Relationships" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

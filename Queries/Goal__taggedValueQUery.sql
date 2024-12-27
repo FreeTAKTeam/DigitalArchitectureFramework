@@ -1,4 +1,4 @@
-SELECT Goal.Object_ID, Goal.ea_guid AS CLASSGUID , Goal.Object_Type AS CLASSTYPE, Goal.Name as Goal, ID.value AS ID, Valueamount.value AS Valueamount, ValueGoal.value AS ValueGoal, Priority.value AS Priority, ValueName.value AS ValueName, dAssumption.value AS dAssumption
+SELECT Goal.Object_ID, Goal.ea_guid AS CLASSGUID , Goal.Object_Type AS CLASSTYPE, Goal.Name as Goal, ID.value AS 'ID', Valueamount.value AS 'Valueamount', ValueGoal.value AS 'ValueGoal', Priority.value AS 'Priority', ValueName.value AS 'ValueName', dAssumption.value AS 'dAssumption'
 FROM t_object as Goal
 INNER JOIN t_objectproperties AS ID  ON (ID.Object_ID =Goal.Object_ID AND ID.Property = ('ID'))
 INNER JOIN t_objectproperties AS Valueamount  ON (Valueamount.Object_ID =Goal.Object_ID AND Valueamount.Property = ('Value_amount'))

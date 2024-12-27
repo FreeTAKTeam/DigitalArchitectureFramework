@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-12-05 10:21:21 AM
+//generated:2024-12-10 12:52:25 PM
 // dActivity -> contains Action -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -15,11 +15,6 @@ Actor,dActor,Actor,dRole,,,,Association,isPerformedBy,directed,has Role,,TRUE,,T
 Actor,dRole,Actor,dActor,,,,Association,isPerformedBy,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dActor,,,,Actor,dRole,Association,isPerformedBy,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Actor,dActor,Association,isPerformedBy,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dAPI -> TMF_ProvidedAPI -> TMF_ISC
-Interface,dAPI,Component,TMF_ISC,,,,Assembly,TMF_ProvidedAPI,directed,Is used in Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,TMF_ISC,Interface,dAPI,,,,Assembly,TMF_ProvidedAPI,from,Provided API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dAPI,,,,Component,TMF_ISC,Assembly,TMF_ProvidedAPI,directed,,Is used in Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,TMF_ISC,,,,Interface,dAPI,Assembly,TMF_ProvidedAPI,from,,Provided API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dAPI -> dAPIAggregatesSchema -> dJSON_Schema
 Interface,dAPI,Class,dJSON_Schema,,,,Aggregation,dAPIAggregatesSchema,from,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,Interface,dAPI,,,,Aggregation,dAPIAggregatesSchema,to,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -190,21 +185,21 @@ Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,isPhysically
 Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,isPhysicallyHostedBy,from,is Hosted By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,isPhysicallyHostedBy,directed,,Hosts Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,isPhysicallyHostedBy,from,,is Hosted By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dEvent ->  -> dBusinessProcess
-Event,dEvent,Class,dBusinessProcess,,,,Association,,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Event,dEvent,,,,Association,,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Event,dEvent,,,,Class,dBusinessProcess,Association,,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Event,dEvent,Association,,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dEvent -> dEventTriggersProcess -> dBusinessProcess
+Event,dEvent,Class,dBusinessProcess,,,,Association,dEventTriggersProcess,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Event,dEvent,,,,Association,dEventTriggersProcess,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,,,,Class,dBusinessProcess,Association,dEventTriggersProcess,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Event,dEvent,Association,dEventTriggersProcess,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dFeature -> isSatisfiedBy -> dRequirement
 Class,dFeature,Class,dRequirement,,,,Realization,isSatisfiedBy,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,Class,dFeature,,,,Realization,isSatisfiedBy,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dFeature,,,,Class,dRequirement,Realization,isSatisfiedBy,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,,,,Class,dFeature,Realization,isSatisfiedBy,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dGoal -> has Milestone -> dObjective
-Class,dGoal,Class,dObjective,,,,Aggregation,has Milestone,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dObjective,Class,dGoal,,,,Aggregation,has Milestone,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dGoal,,,,Class,dObjective,Aggregation,has Milestone,from,,Has Objective,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dObjective,,,,Class,dGoal,Aggregation,has Milestone,to,,is related to Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dGoal -> dGoalhasObjective -> dObjective
+Class,dGoal,Class,dObjective,,,,Aggregation,dGoalhasObjective,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dObjective,Class,dGoal,,,,Aggregation,dGoalhasObjective,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,,,,Class,dObjective,Aggregation,dGoalhasObjective,from,,Has Objective,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dObjective,,,,Class,dGoal,Aggregation,dGoalhasObjective,to,,is related to Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dGoal -> dGoalAggregatesGoal -> dGoal
 Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,from,parent Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,to,Child Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,

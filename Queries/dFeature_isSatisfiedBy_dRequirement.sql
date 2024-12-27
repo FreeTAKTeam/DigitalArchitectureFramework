@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:37:38 AM
+-- Generated 2024-12-10 1:02:46 PM
 --  dFeature (GroupName) connected with  dRequirement (series)
 SELECT dFeature.Name as dFeature,  dRequirement.Name as  dRequirement
 FROM t_object AS dRequirement

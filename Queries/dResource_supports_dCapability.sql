@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:54:40 AM
+-- Generated 2024-12-10 1:14:58 PM
 --  dResource (GroupName) connected with  dCapability (series)
 SELECT dResource.Name as dResource,  dCapability.Name as  dCapability
 FROM t_object AS dCapability

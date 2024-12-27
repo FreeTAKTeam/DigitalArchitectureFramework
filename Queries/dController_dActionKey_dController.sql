@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:33:42 AM
+-- Generated 2024-12-10 1:00:51 PM
 --  dController (GroupName) connected with  dController (series)
 SELECT dController.Name as dController,  dController.Name as  dController
 FROM t_object AS dController

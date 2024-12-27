@@ -1,3 +1,9 @@
+-- check tagged values for a certain Stereotype
+SELECT DISTINCT Property
+FROM t_objectproperties
+WHERE Object_ID IN (SELECT Object_ID FROM t_object WHERE stereotype = 'dAPI');
+
+
 -- Select all roles and application linked with a dependency
 select target.Name as series, source.Name as  groupname
 
@@ -239,8 +245,6 @@ AND BusinessCapability.Stereotype = ('dCapability')
 GROUP BY Capability
 ORDER BY CurrentValue DESC
 
-
-
 --- select all Measuremnt indicators under a Process
 SELECT   AVG(CAST ( CurrentLevel.Value as Int))   AS ChartValue, 
  AVG(CAST ( SatisfactionLevel.Value as Int))   AS SatisfactionLevel, 
@@ -258,8 +262,6 @@ WHERE
            AND dMeasurementGrouping.Stereotype = ('TMF_Process')
  
 GROUP BY dMeasurementGrouping.Name
-
-
 
 -- SELECT all the features that are set to be true and realize the maturity level of a Business Capability
 SELECT feature.Name AS FeatName, Capability.Name AS CapName 
@@ -307,6 +309,29 @@ And category.property=('Category')
 AND category.value=('AiaB')
 AND CapID.Property=('ID')
 Order by CapId.Value ASC
+
+--- return a count of the AsIs.value property grouped by its categories (e.g., None, Initial, UnderDevelopment, etc.), the query needs to aggregate by the AsIs.value property and count its occurrences.
+SELECT  
+    AsIs.value AS Series, 
+    COUNT(*) AS ChartValue
+FROM     t_object AS Capability
+INNER JOIN     t_objectproperties AS AsIs 
+    ON AsIs.Object_ID = Capability.Object_ID
+INNER JOIN     t_objectproperties AS ToBe 
+    ON ToBe.Object_ID = Capability.Object_ID
+INNER JOIN     t_objectproperties AS category 
+    ON category.Object_ID = Capability.Object_ID
+INNER JOIN     t_objectproperties AS CapID 
+    ON CapID.Object_ID = Capability.Object_ID
+WHERE 
+    Capability.Stereotype = 'dCapability'  
+    AND AsIs.Property = 'Increments'
+    AND ToBe.Property = 'IncrementsToBe'
+    AND category.Property = 'Category'
+    AND category.Value = 'AiaB'
+    AND CapID.Property = 'ID'
+GROUP BY     AsIs.value
+ORDER BY   ChartValue DESC;
 
 --- calculate average maturity as-is and to-be for children capabilities connected with aggregations
 SELECT   Capability.Name AS CapName, 
@@ -449,6 +474,8 @@ AND FTES.Property=('#FTEs')
 AND FTES.Value IS NOT NULL
 Group by CapName
 Order BY  CapName
+
+--- MySQL select all Roles associated with Capabilities
 
 
 -- Select all processes and Biz Criticality  that are connected with a Capability

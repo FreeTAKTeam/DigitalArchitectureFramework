@@ -1,4 +1,4 @@
-SELECT OpenAPI.Object_ID, OpenAPI.ea_guid AS CLASSGUID , OpenAPI.Object_Type AS CLASSTYPE, OpenAPI.Name as OpenAPI, swagger.value AS swagger, host.value AS host, basePath.value AS basePath, schemes.value AS schemes, consumes.value AS consumes, produces.value AS produces, definitions.value AS definitions, parameters.value AS parameters, responses.value AS responses, securityDefinitions.value AS securityDefinitions, ID.value AS ID, tags.value AS tags, FullName.value AS FullName
+SELECT OpenAPI.Object_ID, OpenAPI.ea_guid AS CLASSGUID , OpenAPI.Object_Type AS CLASSTYPE, OpenAPI.Name as OpenAPI, swagger.value AS 'swagger', host.value AS 'host', basePath.value AS 'basePath', schemes.value AS 'schemes', consumes.value AS 'consumes', produces.value AS 'produces', definitions.value AS 'definitions', parameters.value AS 'parameters', responses.value AS 'responses', securityDefinitions.value AS 'securityDefinitions', ID.value AS 'ID', tags.value AS 'tags', FullName.value AS 'FullName', license.value AS 'license', contact.value AS 'contact'
 FROM t_object as OpenAPI
 INNER JOIN t_objectproperties AS swagger  ON (swagger.Object_ID =OpenAPI.Object_ID AND swagger.Property = ('swagger'))
 INNER JOIN t_objectproperties AS host  ON (host.Object_ID =OpenAPI.Object_ID AND host.Property = ('host'))
@@ -13,4 +13,6 @@ INNER JOIN t_objectproperties AS securityDefinitions  ON (securityDefinitions.Ob
 INNER JOIN t_objectproperties AS ID  ON (ID.Object_ID =OpenAPI.Object_ID AND ID.Property = ('ID'))
 INNER JOIN t_objectproperties AS tags  ON (tags.Object_ID =OpenAPI.Object_ID AND tags.Property = ('tags'))
 INNER JOIN t_objectproperties AS FullName  ON (FullName.Object_ID =OpenAPI.Object_ID AND FullName.Property = ('Full Name'))
+INNER JOIN t_objectproperties AS license  ON (license.Object_ID =OpenAPI.Object_ID AND license.Property = ('license'))
+INNER JOIN t_objectproperties AS contact  ON (contact.Object_ID =OpenAPI.Object_ID AND contact.Property = ('contact'))
  WHERE OpenAPI.stereotype= 'dAPI'

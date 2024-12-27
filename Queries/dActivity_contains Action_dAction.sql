@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:21:58 AM
+-- Generated 2024-12-10 12:53:07 PM
 --  dActivity (GroupName) connected with  dAction (series)
 SELECT dActivity.Name as dActivity,  dAction.Name as  dAction
 FROM t_object AS dAction

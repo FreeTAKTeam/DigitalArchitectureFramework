@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:33:35 AM
+-- Generated 2024-12-10 1:00:44 PM
 --  dController (GroupName) connected with  dBusinessUseCase (series)
 SELECT dController.Name as dController,  dBusinessUseCase.Name as  dBusinessUseCase
 FROM t_object AS dBusinessUseCase

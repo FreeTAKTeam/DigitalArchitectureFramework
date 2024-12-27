@@ -1,4 +1,4 @@
-SELECT Stakeholder.Object_ID, Stakeholder.ea_guid AS CLASSGUID , Stakeholder.Object_Type AS CLASSTYPE, Stakeholder.Name as Stakeholder, Legitimacy.value AS Legitimacy, Power.value AS Power, role.value AS role, Urgency.value AS Urgency, Attitude.value AS Attitude, RACI.value AS RACI, Knowledge.value AS Knowledge
+SELECT Stakeholder.Object_ID, Stakeholder.ea_guid AS CLASSGUID , Stakeholder.Object_Type AS CLASSTYPE, Stakeholder.Name as Stakeholder, Legitimacy.value AS 'Legitimacy', Power.value AS 'Power', role.value AS 'role', Urgency.value AS 'Urgency', Attitude.value AS 'Attitude', RACI.value AS 'RACI', Knowledge.value AS 'Knowledge'
 FROM t_object as Stakeholder
 INNER JOIN t_objectproperties AS Legitimacy  ON (Legitimacy.Object_ID =Stakeholder.Object_ID AND Legitimacy.Property = ('Legitimacy'))
 INNER JOIN t_objectproperties AS Power  ON (Power.Object_ID =Stakeholder.Object_ID AND Power.Property = ('Power'))

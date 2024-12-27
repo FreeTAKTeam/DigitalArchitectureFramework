@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:55:45 AM
+-- Generated 2024-12-10 1:15:54 PM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dRole'                                               

@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:29:07 AM
+-- Generated 2024-12-10 12:57:53 PM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dBusinessUseCase'                                               

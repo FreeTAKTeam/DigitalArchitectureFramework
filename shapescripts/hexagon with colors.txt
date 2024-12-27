@@ -1,0 +1,101 @@
+  shape main
+{
+	layouttype="border";
+	noshadow=true;
+    defsize(100, 100); // Define the size of the shape
+	
+	SetPenColor(GetUserBorderColor());
+    // Define triangle colors
+    setfillcolor(255, 102, 102); // Red color for the top triangle
+    startpath();
+    moveto(50, 0); // Top-center point
+    lineto(100, 25); // Top-right corner
+    lineto(50, 50); // Center of the hexagon
+    lineto(50, 0); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    setfillcolor(204, 153, 255); // Purple color for the top-right triangle
+    startpath();
+    moveto(100, 25); // Top-right corner
+    lineto(100, 75); // Bottom-right corner
+    lineto(50, 50); // Center of the hexagon
+    lineto(100, 25); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    setfillcolor(102, 178, 255); // Blue color for the bottom-right triangle
+    startpath();
+    moveto(100, 75); // Bottom-right corner
+    lineto(50, 100); // Bottom-center point
+     lineto(50, 50); // Center of the hexagon
+    lineto(100, 75); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    setfillcolor(153, 255, 153); // Green color for the bottom triangle
+    startpath();
+    moveto(50, 100); // Bottom-center point
+    lineto(0, 75); // Bottom-left corner
+    lineto(50, 50); // Center of the hexagon
+    lineto(50, 100); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    setfillcolor(255, 255, 153); // Yellow color for the bottom-left triangle
+    startpath();
+    moveto(0, 75); // Bottom-left corner
+    lineto(0, 25); // Top-left corner
+      lineto(50, 50); // Center of the hexagon
+    lineto(0, 75); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    setfillcolor(255, 178, 102); // Orange color for the top-left triangle
+    startpath();
+    moveto(0, 25); // Top-left corner
+    lineto(50, 0); // Top-center point
+    lineto(50, 50); // Center of the hexagon
+    lineto(0, 25); // Close the triangle
+    endpath();
+    fillandstrokepath();
+
+    // Draw the hexagon outline
+     moveto(50, 0);         // Top vertex
+    lineto(100, 25);       // Top-right vertex
+    lineto(100, 75);       // Bottom-right vertex
+    lineto(50, 100);       // Bottom vertex
+    lineto(0, 75);         // Bottom-left vertex
+    lineto(0, 25);         // Top-left vertex
+    lineto(50, 0);         // Close the path
+    endpath();
+	
+	  // Inner Hexagon
+		   // Draw the hexagon outline
+    
+
+    startpath();
+		SetPenColor(GetUserBorderColor());
+		setfillcolor(255, 255, 255);
+    moveto(50, 20); // Top-center point
+    lineto(75, 38); // Top-right corner
+    lineto(75, 62); // Bottom-right corner
+	lineto(50, 80); // Bottom-center point
+    
+	lineto(25, 62); // Bottom-left corner
+	
+    lineto(25, 38); // Top-left corner
+    lineto(50, 20); // Back to Top-center point
+    endpath();
+    FillAndStrokePath();
+  
+	AddSubShape("nameCompartment","center");
+	
+	shape nameCompartment
+	{	
+	h_align = "center";
+	v_align = "center";
+	println("#name#");
+	}
+}
+

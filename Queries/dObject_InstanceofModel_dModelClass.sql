@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:48:38 AM
+-- Generated 2024-12-10 1:10:12 PM
 --  dObject (GroupName) connected with  dModelClass (series)
 SELECT dObject.Name as dObject,  dModelClass.Name as  dModelClass
 FROM t_object AS dModelClass

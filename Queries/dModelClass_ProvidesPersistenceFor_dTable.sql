@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:46:49 AM
+-- Generated 2024-12-10 1:09:03 PM
 --  dModelClass (GroupName) connected with  dTable (series)
 SELECT dModelClass.Name as dModelClass,  dTable.Name as  dTable
 FROM t_object AS dTable

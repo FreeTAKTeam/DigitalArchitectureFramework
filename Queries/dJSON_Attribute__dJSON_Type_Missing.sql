@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:40:54 AM
+-- Generated 2024-12-10 1:04:58 PM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dJSON_Attribute'                                               

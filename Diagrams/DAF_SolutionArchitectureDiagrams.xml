@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="E8C3098A-9" name="DAF Solution Architecture" version="5.5.10" notes="Seven mandatory views for DAF Solution Architecture"/>
+	<Documentation id="E8C3098A-9" name="DAF Solution Architecture" version="5.6" notes="Seven mandatory views for DAF Solution Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Application Use-Case" notes="An Application Use-Case diagram displays the relationships between consumers and providers of application services. Application services are consumed by actors or other application ser vices and the Application Use-Case diagram provides added richness in describing application functionality by illustrating how and when that functionality is used.&#xA;The purpose of the Application Use-Case diagram is to help to describe and validate the interaction between actors and their roles with applications. As the architecture progresses, the use-case can evolve from functional information to include technical realization detail.&#xA;Application use-cases can also be re-used in more detailed systems design work.&#xA;">
@@ -78,7 +78,7 @@
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
-			<Stereotype name="API" alias="Diagram" notes="a diagram to model Rest APIs and JSON objects">
+			<Stereotype name="API" alias="Diagram" notes="a diagram to model API endpoints and JSON schema classes. it represents how different components of a system communicate and the data structures exchanged between them. &#xA;&lt;ul&gt;&#xA;&#x9;&lt;li&gt;API Endpoints: Each class represents an endpoint (e.g., /users, /orders/{id}) and includes details like HTTP methods (GET, POST, PUT, DELETE) and a brief description of its purpose.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;JSON Schema Classes: Represent data models exchanged in API requests and responses.">
 				<AppliesTo>
 					<Apply type="Diagram_Logical">
 						<Property name="toolbox" value="DAF_API"/>

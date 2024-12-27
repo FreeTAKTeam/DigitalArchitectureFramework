@@ -1,4 +1,4 @@
-SELECT Decision.Object_ID, Decision.ea_guid AS CLASSGUID , Decision.Object_Type AS CLASSTYPE, Decision.Name as Decision, SubjectArea.value AS SubjectArea, Topic.value AS Topic, Assumptions.value AS Assumptions, Motivation.value AS Motivation, Alternatives.value AS Alternatives, Decision.value AS Decision, Justification.value AS Justification, Implications.value AS Implications, RelatedDecisions.value AS RelatedDecisions
+SELECT Decision.Object_ID, Decision.ea_guid AS CLASSGUID , Decision.Object_Type AS CLASSTYPE, Decision.Name as Decision, SubjectArea.value AS 'SubjectArea', Topic.value AS 'Topic', Assumptions.value AS 'Assumptions', Motivation.value AS 'Motivation', Alternatives.value AS 'Alternatives', Decision.value AS 'Decision', Justification.value AS 'Justification', Implications.value AS 'Implications', RelatedDecisions.value AS 'RelatedDecisions'
 FROM t_object as Decision
 INNER JOIN t_objectproperties AS SubjectArea  ON (SubjectArea.Object_ID =Decision.Object_ID AND SubjectArea.Property = ('Subject Area'))
 INNER JOIN t_objectproperties AS Topic  ON (Topic.Object_ID =Decision.Object_ID AND Topic.Property = ('Topic'))

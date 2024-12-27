@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:45:32 AM
+-- Generated 2024-12-10 1:08:21 PM
 --  dMeasurementGrouping (GroupName) connected with  dMeasurementIndicator (series)
 SELECT dMeasurementGrouping.Name as dMeasurementGrouping,  dMeasurementIndicator.Name as  dMeasurementIndicator
 FROM t_object AS dMeasurementIndicator

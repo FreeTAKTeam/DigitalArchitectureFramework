@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:33:04 AM
+-- Generated 2024-12-10 1:00:11 PM
 --  dController (GroupName) connected with  dApplicationFunction (series)
 SELECT dController.Name as dController,  dApplicationFunction.Name as  dApplicationFunction
 FROM t_object AS dApplicationFunction

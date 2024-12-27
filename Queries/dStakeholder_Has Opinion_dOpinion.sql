@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:56:50 AM
+-- Generated 2024-12-10 1:17:21 PM
 --  dStakeholder (GroupName) connected with  dOpinion (series)
 SELECT dStakeholder.Name as dStakeholder,  dOpinion.Name as  dOpinion
 FROM t_object AS dOpinion

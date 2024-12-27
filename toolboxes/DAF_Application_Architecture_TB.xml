@@ -1,6 +1,6 @@
-<?xml  version='1.0' encoding='UTF-8' ?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="5.0 Alpha 52" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
+	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="5.5.25" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Components" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

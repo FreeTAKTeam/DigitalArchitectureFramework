@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:44:55 AM
+-- Generated 2024-12-10 1:08:01 PM
 --  dMeasurementArea (GroupName) connected with  dMeasurementCategory (series)
 SELECT dMeasurementArea.Name as dMeasurementArea,  dMeasurementCategory.Name as  dMeasurementCategory
 FROM t_object AS dMeasurementCategory

@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:55:45 AM
+-- Generated 2024-12-10 1:15:54 PM
 --  dRole (GroupName) connected with  dOrganizationUnit (series)
 SELECT dRole.Name as dRole,  dOrganizationUnit.Name as  dOrganizationUnit
 FROM t_object AS dOrganizationUnit

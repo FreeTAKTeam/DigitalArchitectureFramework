@@ -1,4 +1,4 @@
--- Generated 2024-12-05 10:33:22 AM
+-- Generated 2024-12-10 1:00:33 PM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dController'                                               
