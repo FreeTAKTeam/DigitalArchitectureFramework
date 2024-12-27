@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>082</CheckId>
-  <CheckDescription>Capability without Application</CheckDescription>
+  <CheckId>012</CheckId>
+  <CheckDescription>API does not have host</CheckDescription>
   <QueryToFindElements>
-    <Main>SELECT o.ea_guid AS ItemGuid
-FROM t_object o
-INNER JOIN t_package p ON p.Package_ID = o.Package_ID
-LEFT JOIN t_package package_p1 ON package_p1.Package_ID = p.Parent_ID
-LEFT JOIN t_package package_p2 ON package_p2.Package_ID = package_p1.Parent_ID
-LEFT JOIN t_package package_p3 ON package_p3.Package_ID = package_p2.Parent_ID
-LEFT JOIN t_package package_p4 ON package_p4.Package_ID = package_p3.Parent_ID
-LEFT JOIN t_package package_p5 ON package_p5.Package_ID = package_p4.Parent_ID
-WHERE o.StereoType= 'dCapability'</Main>
+    <Main>SELECT o1.ea_guid AS ItemGuid
+FROM ((((((t_object as o1
+INNER JOIN t_package p ON p.Package_ID = o1.Package_ID)
+LEFT JOIN t_package Package_p1 ON Package_p1.Package_ID = p.Parent_ID)
+LEFT JOIN t_package Package_p2 ON Package_p2.Package_ID = Package_p1.Parent_ID)
+LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID)
+LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID)
+LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID)
+
+where o1.stereotype = 'dAPI'
+</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -40,15 +42,7 @@ WHERE o.StereoType= 'dCapability'</Main>
       <Package>
 				AND p.Package_ID in (#Branch#)
 			</Package>
-      <FunctionalDesign>
-				AND o.ea_guid in (
-					SELECT o1.ea_guid
-					FROM t_object o1
-					INNER JOIN t_diagramobjects do1 ON do1.Object_ID = o1.Object_ID
-					INNER JOIN t_diagram d1 ON d1.Diagram_ID = do1.Diagram_ID
-					WHERE d1.ea_guid = '#SearchTerm#'
-				)
-			</FunctionalDesign>
+      <FunctionalDesign></FunctionalDesign>
     </Filters>
   </QueryToFindElements>
   <QueryToCheckFoundElements>
@@ -63,28 +57,23 @@ WHERE o.StereoType= 'dCapability'</Main>
 , package_p3.Name AS PackageParentLevel3
 , package_p4.Name AS PackageParentLevel4
 , package_p5.Name AS PackageParentLevel5
-FROM (((((((t_object o
-LEFT JOIN t_object pool ON o.ParentID = pool.Object_ID)
+FROM ((((((t_object o
 INNER JOIN t_package p ON p.Package_ID = o.Package_ID)
 LEFT JOIN t_package package_p1 ON package_p1.package_ID = p.Parent_ID)
 LEFT JOIN t_package package_p2 ON package_p2.package_ID = package_p1.Parent_ID)
 LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
-LEFT JOIN t_package package_p4 ON package_p4.package_ID = package_p3.Parent_ID)
-LEFT JOIN t_package package_p5 ON package_p5.package_ID = package_p4.Parent_ID)
+LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
+LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 WHERE o.ea_guid in (#ElementGuids#)
-AND o.Object_ID NOT IN
-(	
-SELECT o.Object_ID 
-FROM t_object AS o
-INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
-INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
-WHERE o.Stereotype = 'dCapability'
-AND  o2.Stereotype = 'dLogicalAppComponent'
-AND connector.Stereotype= 'Supports Capability'
+AND o.ea_guid in (
+Select o1.ea_guid from t_object as o1
+INNER JOIN t_objectproperties AS host ON (host.Object_ID = o1.Object_ID AND host.Property = ('host'))
+where host.value is NULL
+and o1.Stereotype = 'dAPI'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Error</WarningType>
-  <Rationale>A logical application should support the business capability</Rationale>
-  <ProposedSolution>Add the necessary relationships.</ProposedSolution>
+  <Rationale>host is required</Rationale>
+  <ProposedSolution>Add host </ProposedSolution>
 </Check>
