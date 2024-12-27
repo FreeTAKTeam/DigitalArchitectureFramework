@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>002</CheckId>
-  <CheckDescription>Elements with the EA status Proposed</CheckDescription>
+  <CheckDescription>Elements with the EA status Proposed not managed</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1

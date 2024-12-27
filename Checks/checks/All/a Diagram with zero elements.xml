@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>003</CheckId>
-  <CheckDescription> main DAF diagram without objects</CheckDescription>
+  <CheckDescription>The main DAF diagram without objects test</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT d.ea_guid AS ItemGuid
 FROM t_diagram d
@@ -53,6 +53,6 @@ AND d.EA_GUID IN (#ElementGuids#)
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Error</WarningType>
-  <Rationale>An empty diagram is confusing</Rationale>
-  <ProposedSolution>delete the diagram</ProposedSolution>
+  <Rationale>No diagram should be empty.</Rationale>
+  <ProposedSolution>Update or delete the diagram</ProposedSolution>
 </Check>
