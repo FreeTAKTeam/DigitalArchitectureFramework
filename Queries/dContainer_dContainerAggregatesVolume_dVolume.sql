@@ -1,4 +1,4 @@
--- Generated 2024-12-10 12:59:54 PM
+-- Generated 2024-12-31 1:00:41 PM
 --  dContainer (GroupName) connected with  dVolume (series)
 SELECT dContainer.Name as dContainer,  dVolume.Name as  dVolume
 FROM t_object AS dVolume

@@ -1,4 +1,4 @@
--- Generated 2024-12-10 1:04:20 PM
+-- Generated 2024-12-30 3:50:33 PM
 --  dIssue (GroupName) connected with  dRequirement (series)
 SELECT dIssue.Name as dIssue,  dRequirement.Name as  dRequirement
 FROM t_object AS dRequirement

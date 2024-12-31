@@ -1,4 +1,4 @@
--- Generated 2024-12-10 12:54:09 PM
+-- Generated 2024-12-31 12:59:29 PM
 --  dAPI (GroupName) connected with  dPhysicalService (series)
 SELECT dAPI.Name as dAPI,  dPhysicalService.Name as  dPhysicalService
 FROM t_object AS dPhysicalService

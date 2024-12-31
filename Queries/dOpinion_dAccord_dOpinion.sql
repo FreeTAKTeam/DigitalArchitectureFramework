@@ -1,4 +1,4 @@
--- Generated 2024-12-10 1:11:38 PM
+-- Generated 2024-12-31 1:05:11 PM
 --  dOpinion (GroupName) connected with  dOpinion (series)
 SELECT dOpinion.Name as dOpinion,  dOpinion.Name as  dOpinion
 FROM t_object AS dOpinion

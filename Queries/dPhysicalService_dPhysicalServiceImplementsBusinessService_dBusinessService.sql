@@ -1,4 +1,4 @@
--- Generated 2024-12-10 1:12:33 PM
+-- Generated 2024-12-31 1:05:33 PM
 --  dPhysicalService (GroupName) connected with  dBusinessService (series)
 SELECT dPhysicalService.Name as dPhysicalService,  dBusinessService.Name as  dBusinessService
 FROM t_object AS dBusinessService

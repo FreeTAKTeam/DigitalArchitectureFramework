@@ -1,4 +1,4 @@
--- Generated 2024-12-10 1:20:04 PM
+-- Generated 2024-12-31 1:08:59 PM
 --  dValueStream (GroupName) connected with  dCapability (series)
 SELECT dValueStream.Name as dValueStream,  dCapability.Name as  dCapability
 FROM t_object AS dCapability

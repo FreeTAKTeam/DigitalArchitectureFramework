@@ -1,4 +1,4 @@
--- Generated 2024-12-10 1:11:38 PM
+-- Generated 2024-12-31 1:05:11 PM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dOpinion'                                               

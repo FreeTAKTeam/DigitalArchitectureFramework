@@ -1,4 +1,4 @@
--- Generated 2024-12-10 12:55:22 PM
+-- Generated 2024-12-30 3:48:12 PM
 --  dApplicationComponent (GroupName) connected with  dStakeholder (series)
 SELECT dApplicationComponent.Name as dApplicationComponent,  dStakeholder.Name as  dStakeholder
 FROM t_object AS dStakeholder

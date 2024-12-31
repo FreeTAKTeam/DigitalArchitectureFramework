@@ -1,4 +1,4 @@
--- Generated 2024-12-10 12:55:31 PM
+-- Generated 2024-12-30 10:10:23 AM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dApplicationComponent'                                               

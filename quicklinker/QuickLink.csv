@@ -1,25 +1,25 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-12-10 12:52:25 PM
-// dActivity -> contains Action -> dAction
-Activity,dActivity,Class,dAction,,,,Composition,contains Action,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dAction,Activity,dActivity,,,,Composition,contains Action,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dActivity,,,,Class,dAction,Composition,contains Action,from,,is contained in Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dAction,,,,Activity,dActivity,Composition,contains Action,to,,contains Action,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dActor -> participatesIn -> dBusinessUseCase
-Actor,dActor,UseCase,dBusinessUseCase,,,,Association,participatesIn,directed,Partecipates in Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,Actor,dActor,,,,Association,participatesIn,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dActor,,,,UseCase,dBusinessUseCase,Association,participatesIn,directed,,Partecipates in Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,Actor,dActor,Association,participatesIn,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dActor -> isPerformedBy -> dRole
-Actor,dActor,Actor,dRole,,,,Association,isPerformedBy,directed,has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dRole,Actor,dActor,,,,Association,isPerformedBy,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dActor,,,,Actor,dRole,Association,isPerformedBy,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Actor,dRole,,,,Actor,dActor,Association,isPerformedBy,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+//generated:2024-12-31 12:58:59 PM
+// dActivity -> dActivityContainsAction -> dAction
+Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dActivity,,,,Class,dAction,Composition,dActivityContainsAction,from,,is contained in Activity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dAction,,,,Activity,dActivity,Composition,dActivityContainsAction,to,,contains Action,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dActor -> dActorParticipatesInBizUseCase -> dBusinessUseCase
+Actor,dActor,UseCase,dBusinessUseCase,,,,Association,dActorParticipatesInBizUseCase,directed,Partecipates in Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,Actor,dActor,,,,Association,dActorParticipatesInBizUseCase,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dActor,,,,UseCase,dBusinessUseCase,Association,dActorParticipatesInBizUseCase,directed,,Partecipates in Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,Actor,dActor,Association,dActorParticipatesInBizUseCase,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dActor -> dRoleIsPerformedByActor -> dRole
+Actor,dActor,Actor,dRole,,,,Association,dRoleIsPerformedByActor,directed,has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,Actor,dActor,,,,Association,dRoleIsPerformedByActor,from,is executed by Actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dActor,,,,Actor,dRole,Association,dRoleIsPerformedByActor,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Actor,dActor,Association,dRoleIsPerformedByActor,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dAPI -> dAPIAggregatesSchema -> dJSON_Schema
-Interface,dAPI,Class,dJSON_Schema,,,,Aggregation,dAPIAggregatesSchema,from,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Interface,dAPI,,,,Aggregation,dAPIAggregatesSchema,to,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dAPI,,,,Class,dJSON_Schema,Aggregation,dAPIAggregatesSchema,from,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Interface,dAPI,Aggregation,dAPIAggregatesSchema,to,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,Class,dJSON_Schema,,,,Association,dAPIAggregatesSchema,directed,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Interface,dAPI,,,,Association,dAPIAggregatesSchema,from,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Class,dJSON_Schema,Association,dAPIAggregatesSchema,directed,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Interface,dAPI,Association,dAPIAggregatesSchema,from,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dAPI ->  -> dPhysicalService
 Interface,dAPI,Interface,dPhysicalService,,,,Realization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,Interface,dAPI,,,,Realization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -30,26 +30,26 @@ Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,dA
 Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,dApplicationComponentRealizesogicalComponent,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,dApplicationComponentRealizesogicalComponent,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> configured by -> dSystem
-Component,dApplicationComponent,Component,dSystem,,,,Aggregation,configured by,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dSystem,Component,dApplicationComponent,,,,Aggregation,configured by,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Component,dSystem,Aggregation,configured by,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dSystem,,,,Component,dApplicationComponent,Aggregation,configured by,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationconfiguredbySystemConfiguration -> dSystem
+Component,dApplicationComponent,Component,dSystem,,,,Aggregation,dApplicationconfiguredbySystemConfiguration,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dSystem,Component,dApplicationComponent,,,,Aggregation,dApplicationconfiguredbySystemConfiguration,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Component,dSystem,Aggregation,dApplicationconfiguredbySystemConfiguration,from,,has configuration,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dSystem,,,,Component,dApplicationComponent,Aggregation,dApplicationconfiguredbySystemConfiguration,to,,configures Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationExposesService -> dPhysicalService
 Component,dApplicationComponent,Interface,dPhysicalService,,,,Association,dApplicationExposesService,directed,is exposed by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,Component,dApplicationComponent,,,,Association,dApplicationExposesService,from,Exposes Phy Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Interface,dPhysicalService,Association,dApplicationExposesService,directed,,is exposed by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,,,,Component,dApplicationComponent,Association,dApplicationExposesService,from,,Exposes Phy Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> Application Owner -> dStakeholder
-Component,dApplicationComponent,Actor,dStakeholder,,,,Association,Application Owner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,Component,dApplicationComponent,,,,Association,Application Owner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Actor,dStakeholder,Association,Application Owner,directed,,owns Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,,,,Component,dApplicationComponent,Association,Application Owner,from,,has Owner,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> Connected with Application -> dApplicationComponent
-Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,directed,connected From Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,Connected with Application,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,Connected with Application,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationHasOwner -> dStakeholder
+Component,dApplicationComponent,Actor,dStakeholder,,,,Association,dApplicationHasOwner,directed,owns Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,Component,dApplicationComponent,,,,Association,dApplicationHasOwner,from,has Owner,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Actor,dStakeholder,Association,dApplicationHasOwner,directed,,owns Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,,,,Component,dApplicationComponent,Association,dApplicationHasOwner,from,,has Owner,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationConnectedWithApplication -> dApplicationComponent
+Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApplicationConnectedWithApplication,directed,connected From Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApplicationConnectedWithApplication,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationAgregatesFunction -> dApplicationFunction
 Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAgregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -60,76 +60,76 @@ Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComp
 Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasdContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasdContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasdContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessProcess -> Orchestrates service -> dBusinessService
-Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,Orchestrates service,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,Orchestrates service,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Activity,dBusinessService,Aggregation,Orchestrates service,from,,Has Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Class,dBusinessProcess,Aggregation,Orchestrates service,to,,part of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessProcess -> Flows to -> dBusinessProcess
-Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,Flows to,directed,Sequence Flow To,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,Flows to,from,Sequence Flow From,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,Flows to,directed,,Sequence Flow To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,Flows to,from,,Sequence Flow From,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessService -> Uses Data -> dDataEntity
-Activity,dBusinessService,Class,dDataEntity,,,,Association,Uses Data,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Activity,dBusinessService,,,,Association,Uses Data,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Class,dDataEntity,Association,Uses Data,directed,,uses Data,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Activity,dBusinessService,Association,Uses Data,from,,is used by service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessProcess -> dProcessOrchestratesService -> dBusinessService
+Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,dProcessOrchestratesService,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,dProcessOrchestratesService,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Activity,dBusinessService,Aggregation,dProcessOrchestratesService,from,,Has Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Class,dBusinessProcess,Aggregation,dProcessOrchestratesService,to,,part of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessProcess -> dProcessFlowsToProcess -> dBusinessProcess
+Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessFlowsToProcess,directed,Sequence Flow To,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessFlowsToProcess,from,Sequence Flow From,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessFlowsToProcess,directed,,Sequence Flow To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessFlowsToProcess,from,,Sequence Flow From,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessService -> dBizServUsesDataEntity -> dDataEntity
+Activity,dBusinessService,Class,dDataEntity,,,,Association,dBizServUsesDataEntity,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Activity,dBusinessService,,,,Association,dBizServUsesDataEntity,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Class,dDataEntity,Association,dBizServUsesDataEntity,directed,,uses Data,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Activity,dBusinessService,Association,dBizServUsesDataEntity,from,,is used by service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessService -> dRelatedService -> dBusinessService
 Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,directed,Target Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Activity,dBusinessService,,,,Association,dRelatedService,from,Source Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,directed,,Target Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,,,,Activity,dBusinessService,Association,dRelatedService,from,,Source Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessUseCase -> isDescribedBy -> dBusinessService
-UseCase,dBusinessUseCase,Activity,dBusinessService,,,,Realization,isDescribedBy,directed,Has service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,UseCase,dBusinessUseCase,,,,Realization,isDescribedBy,from,described by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,Activity,dBusinessService,Realization,isDescribedBy,directed,,Has service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,UseCase,dBusinessUseCase,Realization,isDescribedBy,from,,described by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessUseCase -> Contains Activities -> dActivity
-UseCase,dBusinessUseCase,Activity,dActivity,,,,Composition,Contains Activities,from,has Activitiy,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dActivity,UseCase,dBusinessUseCase,,,,Composition,Contains Activities,to,part of UseCase,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,Activity,dActivity,Composition,Contains Activities,from,,has Activitiy,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dActivity,,,,UseCase,dBusinessUseCase,Composition,Contains Activities,to,,part of UseCase,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessUseCase -> is realized by Use Case -> dFeature
-UseCase,dBusinessUseCase,Class,dFeature,,,,Realization,is realized by Use Case,directed,realizes Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dFeature,UseCase,dBusinessUseCase,,,,Realization,is realized by Use Case,from,is realized by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,Class,dFeature,Realization,is realized by Use Case,directed,,realizes Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dFeature,,,,UseCase,dBusinessUseCase,Realization,is realized by Use Case,from,,is realized by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCapability -> Ensure the correct Operation of -> dBusinessProcess
-Class,dCapability,Class,dBusinessProcess,,,,Aggregation,Ensure the correct Operation of,from,is operated by Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Class,dCapability,,,,Aggregation,Ensure the correct Operation of,to,Ensure the correct  Operation of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dBusinessProcess,Aggregation,Ensure the correct Operation of,from,,is operated by Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Class,dCapability,Aggregation,Ensure the correct Operation of,to,,Ensure the correct  Operation of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCapability -> isMeasuredBy -> dMeasurementIndicator
-Class,dCapability,Class,dMeasurementIndicator,,,,Association,isMeasuredBy,directed,is Measured By Indicator,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,Class,dCapability,,,,Association,isMeasuredBy,from,is measuring Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dMeasurementIndicator,Association,isMeasuredBy,directed,,is Measured By Indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,,,,Class,dCapability,Association,isMeasuredBy,from,,is measuring Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessUseCase -> dBizServIsDescribedByUseCase -> dBusinessService
+UseCase,dBusinessUseCase,Activity,dBusinessService,,,,Realization,dBizServIsDescribedByUseCase,directed,Has service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,UseCase,dBusinessUseCase,,,,Realization,dBizServIsDescribedByUseCase,from,described by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,Activity,dBusinessService,Realization,dBizServIsDescribedByUseCase,directed,,Has service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,UseCase,dBusinessUseCase,Realization,dBizServIsDescribedByUseCase,from,,described by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessUseCase -> dUseCaseContainsActivities -> dActivity
+UseCase,dBusinessUseCase,Activity,dActivity,,,,Composition,dUseCaseContainsActivities,from,has Activitiy,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dActivity,UseCase,dBusinessUseCase,,,,Composition,dUseCaseContainsActivities,to,part of UseCase,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,Activity,dActivity,Composition,dUseCaseContainsActivities,from,,has Activitiy,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dActivity,,,,UseCase,dBusinessUseCase,Composition,dUseCaseContainsActivities,to,,part of UseCase,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessUseCase -> dFeatureIsRealizedByUseCase -> dFeature
+UseCase,dBusinessUseCase,Class,dFeature,,,,Realization,dFeatureIsRealizedByUseCase,directed,realizes Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dFeature,UseCase,dBusinessUseCase,,,,Realization,dFeatureIsRealizedByUseCase,from,is realized by Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,Class,dFeature,Realization,dFeatureIsRealizedByUseCase,directed,,realizes Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dFeature,,,,UseCase,dBusinessUseCase,Realization,dFeatureIsRealizedByUseCase,from,,is realized by Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dProcessEnsureCorrectOperationOfCapability -> dBusinessProcess
+Class,dCapability,Class,dBusinessProcess,,,,Aggregation,dProcessEnsureCorrectOperationOfCapability,from,is operated by Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Class,dCapability,,,,Aggregation,dProcessEnsureCorrectOperationOfCapability,to,Ensure the correct  Operation of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dBusinessProcess,Aggregation,dProcessEnsureCorrectOperationOfCapability,from,,is operated by Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Class,dCapability,Aggregation,dProcessEnsureCorrectOperationOfCapability,to,,Ensure the correct  Operation of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dCapabilityisMeasuredByKPI -> dMeasurementIndicator
+Class,dCapability,Class,dMeasurementIndicator,,,,Association,dCapabilityisMeasuredByKPI,directed,is Measured By Indicator,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dCapability,,,,Association,dCapabilityisMeasuredByKPI,from,is measuring Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dMeasurementIndicator,Association,dCapabilityisMeasuredByKPI,directed,,is Measured By Indicator,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dCapability,Association,dCapabilityisMeasuredByKPI,from,,is measuring Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dCapability -> dRoleExecutesCapability -> dRole
 Class,dCapability,Actor,dRole,,,,Aggregation,dRoleExecutesCapability,from,is executed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,Class,dCapability,,,,Aggregation,dRoleExecutesCapability,to,executes Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Actor,dRole,Aggregation,dRoleExecutesCapability,from,,is executed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Class,dCapability,Aggregation,dRoleExecutesCapability,to,,executes Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCapability -> isOperationalizedBy -> dGoal
-Class,dCapability,Class,dGoal,,,,Realization,isOperationalizedBy,directed,support Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dGoal,Class,dCapability,,,,Realization,isOperationalizedBy,from,is Operationalized By Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dGoal,Realization,isOperationalizedBy,directed,,support Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dGoal,,,,Class,dCapability,Realization,isOperationalizedBy,from,,is Operationalized By Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCapability -> Supports Capability -> dLogicalAppComponent
-Class,dCapability,Component,dLogicalAppComponent,,,,Aggregation,Supports Capability,from,supported by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,Supports Capability,to,supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,Supports Capability,from,,supported by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,Supports Capability,to,,supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCapability -> informs Capability -> dDataEntity
-Class,dCapability,Class,dDataEntity,,,,Aggregation,informs Capability,from,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dCapability,,,,Aggregation,informs Capability,to,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dDataEntity,Aggregation,informs Capability,from,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dCapability,Aggregation,informs Capability,to,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dCluster -> ClusterContainsDeploymentNode -> dDeploymentNode
-Class,dCluster,Node,dDeploymentNode,,,,Aggregation,ClusterContainsDeploymentNode,from,Contains DeploymentNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,Class,dCluster,,,,Aggregation,ClusterContainsDeploymentNode,to,is Contained in Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCluster,,,,Node,dDeploymentNode,Aggregation,ClusterContainsDeploymentNode,from,,Contains DeploymentNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Class,dCluster,Aggregation,ClusterContainsDeploymentNode,to,,is Contained in Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dGoalisOperationalizedByCapability -> dGoal
+Class,dCapability,Class,dGoal,,,,Realization,dGoalisOperationalizedByCapability,directed,support Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,Class,dCapability,,,,Realization,dGoalisOperationalizedByCapability,from,is Operationalized By Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dGoal,Realization,dGoalisOperationalizedByCapability,directed,,support Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,,,,Class,dCapability,Realization,dGoalisOperationalizedByCapability,from,,is Operationalized By Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dLogicalApplicationComponentSupportsCapability -> dLogicalAppComponent
+Class,dCapability,Component,dLogicalAppComponent,,,,Aggregation,dLogicalApplicationComponentSupportsCapability,from,supported by Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,Class,dCapability,,,,Aggregation,dLogicalApplicationComponentSupportsCapability,to,supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Component,dLogicalAppComponent,Aggregation,dLogicalApplicationComponentSupportsCapability,from,,supported by Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Class,dCapability,Aggregation,dLogicalApplicationComponentSupportsCapability,to,,supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dDataEntityInformsCapability -> dDataEntity
+Class,dCapability,Class,dDataEntity,,,,Aggregation,dDataEntityInformsCapability,from,is informed by Data Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dCapability,,,,Aggregation,dDataEntityInformsCapability,to,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dDataEntity,Aggregation,dDataEntityInformsCapability,from,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dCapability,Aggregation,dDataEntityInformsCapability,to,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCluster -> dClusterContainsDeploymentNode -> dDeploymentNode
+Class,dCluster,Node,dDeploymentNode,,,,Aggregation,dClusterContainsDeploymentNode,from,Contains DeploymentNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Class,dCluster,,,,Aggregation,dClusterContainsDeploymentNode,to,is Contained in Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCluster,,,,Node,dDeploymentNode,Aggregation,dClusterContainsDeploymentNode,from,,Contains DeploymentNode,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Class,dCluster,Aggregation,dClusterContainsDeploymentNode,to,,is Contained in Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dContainer -> dContainerAggregatesVolume -> dVolume
 Class,dContainer,Class,dVolume,,,,Aggregation,dContainerAggregatesVolume,from,Aggregates Volume,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dVolume,Class,dContainer,,,,Aggregation,dContainerAggregatesVolume,to,is Aggregated in Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -140,61 +140,61 @@ Class,dController,Class,dApplicationFunction,,,,Realization,dControllerImplement
 Class,dApplicationFunction,Class,dController,,,,Realization,dControllerImplementsFunction,from,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dController,,,,Class,dApplicationFunction,Realization,dControllerImplementsFunction,directed,,Implements function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,,,,Class,dController,Realization,dControllerImplementsFunction,from,,has Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dController -> Governs -> dView
-Class,dController,Class,dView,,,,Association,Governs,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dView,Class,dController,,,,Association,Governs,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dView,Association,Governs,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dView,,,,Class,dController,Association,Governs,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dController -> Controlls -> dModelClass
-Class,dController,Class,dModelClass,,,,Association,Controlls,directed,Controlls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,Class,dController,,,,Association,Controlls,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dModelClass,Association,Controlls,directed,,Controlls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dController,Association,Controlls,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dController -> isImplementedBy -> dBusinessUseCase
-Class,dController,UseCase,dBusinessUseCase,,,,Realization,isImplementedBy,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,Class,dController,,,,Realization,isImplementedBy,from,Is implemented by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,UseCase,dBusinessUseCase,Realization,isImplementedBy,directed,,implements Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,Class,dController,Realization,isImplementedBy,from,,Is implemented by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dController -> dControllerGovernsView -> dView
+Class,dController,Class,dView,,,,Association,dControllerGovernsView,directed,Governs view,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dView,Class,dController,,,,Association,dControllerGovernsView,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dView,Association,dControllerGovernsView,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dView,,,,Class,dController,Association,dControllerGovernsView,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dController -> dControllerControllsModel -> dModelClass
+Class,dController,Class,dModelClass,,,,Association,dControllerControllsModel,directed,Controlls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,Class,dController,,,,Association,dControllerControllsModel,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dModelClass,Association,dControllerControllsModel,directed,,Controlls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dController,Association,dControllerControllsModel,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dController -> dUseCaseisImplementedByController -> dBusinessUseCase
+Class,dController,UseCase,dBusinessUseCase,,,,Realization,dUseCaseisImplementedByController,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,Class,dController,,,,Realization,dUseCaseisImplementedByController,from,Is implemented by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,UseCase,dBusinessUseCase,Realization,dUseCaseisImplementedByController,directed,,implements Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,Class,dController,Realization,dUseCaseisImplementedByController,from,,Is implemented by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dActionKey -> dController
 Class,dController,Class,dController,,,,Dependency,dActionKey,directed,target Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dController,Class,dController,,,,Dependency,dActionKey,from,Source Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dController,,,,Class,dController,Dependency,dActionKey,directed,,target Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dController,,,,Class,dController,Dependency,dActionKey,from,,Source Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dDataEntity -> AssociatedEntity -> dDataEntity
-Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,directed,Is connected to Source Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dDataEntity,,,,Association,AssociatedEntity,from,Is connected to Target Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,directed,,Is connected to Source Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dDataEntity,Association,AssociatedEntity,from,,Is connected to Target Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dDecision -> isMakingUseOf -> dInitiative
-Class,dDecision,Activity,dInitiative,,,,Association,isMakingUseOf,directed,is used in Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dInitiative,Class,dDecision,,,,Association,isMakingUseOf,from,Makes Use Of Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDecision,,,,Activity,dInitiative,Association,isMakingUseOf,directed,,is used in Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dInitiative,,,,Class,dDecision,Association,isMakingUseOf,from,,Makes Use Of Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dDecision -> refers To -> dPrinciple
-Class,dDecision,Class,dPrinciple,,,,Dependency,refers To,directed,refers To Principle,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dPrinciple,Class,dDecision,,,,Dependency,refers To,from,is referenced by Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDecision,,,,Class,dPrinciple,Dependency,refers To,directed,,refers To Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dPrinciple,,,,Class,dDecision,Dependency,refers To,from,,is referenced by Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDataEntity -> dEntityAssociatesEntity -> dDataEntity
+Class,dDataEntity,Class,dDataEntity,,,,Association,dEntityAssociatesEntity,directed,Is connected to Source Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dDataEntity,,,,Association,dEntityAssociatesEntity,from,Is connected to Target Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dDataEntity,Association,dEntityAssociatesEntity,directed,,Is connected to Source Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dDataEntity,Association,dEntityAssociatesEntity,from,,Is connected to Target Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDecision -> dInitiativeisMakingUseOfDecision -> dInitiative
+Class,dDecision,Activity,dInitiative,,,,Association,dInitiativeisMakingUseOfDecision,directed,is used in Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,Class,dDecision,,,,Association,dInitiativeisMakingUseOfDecision,from,Makes Use Of Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDecision,,,,Activity,dInitiative,Association,dInitiativeisMakingUseOfDecision,directed,,is used in Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Class,dDecision,Association,dInitiativeisMakingUseOfDecision,from,,Makes Use Of Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDecision -> dDecisionRefersToPrinciple -> dPrinciple
+Class,dDecision,Class,dPrinciple,,,,Dependency,dDecisionRefersToPrinciple,directed,refers To Principle,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dPrinciple,Class,dDecision,,,,Dependency,dDecisionRefersToPrinciple,from,is referenced by Decision,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDecision,,,,Class,dPrinciple,Dependency,dDecisionRefersToPrinciple,directed,,refers To Principle,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dPrinciple,,,,Class,dDecision,Dependency,dDecisionRefersToPrinciple,from,,is referenced by Decision,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dDeploymentModel -> dDeploymentModelAggregatesCluster -> dCluster
 Class,dDeploymentModel,Class,dCluster,,,,Aggregation,dDeploymentModelAggregatesCluster,from,Aggregates Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,Class,dDeploymentModel,,,,Aggregation,dDeploymentModelAggregatesCluster,to,is Aggregated in Deployment Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDeploymentModel,,,,Class,dCluster,Aggregation,dDeploymentModelAggregatesCluster,from,,Aggregates Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,,,,Class,dDeploymentModel,Aggregation,dDeploymentModelAggregatesCluster,to,,is Aggregated in Deployment Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dDeploymentNode -> isPhysicallyHostedBy -> dApplicationComponent
-Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,isPhysicallyHostedBy,directed,Hosts Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,isPhysicallyHostedBy,from,is Hosted By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,isPhysicallyHostedBy,directed,,Hosts Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,isPhysicallyHostedBy,from,,is Hosted By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDeploymentNode -> dApplicationIRunsInNode -> dApplicationComponent
+Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,dApplicationIRunsInNode,directed,Runs Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,dApplicationIRunsInNode,from,is run By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,dApplicationIRunsInNode,directed,,Runs Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,dApplicationIRunsInNode,from,,is run By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dEvent -> dEventTriggersProcess -> dBusinessProcess
 Event,dEvent,Class,dBusinessProcess,,,,Association,dEventTriggersProcess,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,Event,dEvent,,,,Association,dEventTriggersProcess,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Event,dEvent,,,,Class,dBusinessProcess,Association,dEventTriggersProcess,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Event,dEvent,Association,dEventTriggersProcess,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dFeature -> isSatisfiedBy -> dRequirement
-Class,dFeature,Class,dRequirement,,,,Realization,isSatisfiedBy,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,Class,dFeature,,,,Realization,isSatisfiedBy,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dFeature,,,,Class,dRequirement,Realization,isSatisfiedBy,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,,,,Class,dFeature,Realization,isSatisfiedBy,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dFeature -> dRequirementIsSatisfiedByFeature -> dRequirement
+Class,dFeature,Class,dRequirement,,,,Realization,dRequirementIsSatisfiedByFeature,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,Class,dFeature,,,,Realization,dRequirementIsSatisfiedByFeature,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dFeature,,,,Class,dRequirement,Realization,dRequirementIsSatisfiedByFeature,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,,,,Class,dFeature,Realization,dRequirementIsSatisfiedByFeature,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dGoal -> dGoalhasObjective -> dObjective
 Class,dGoal,Class,dObjective,,,,Aggregation,dGoalhasObjective,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dObjective,Class,dGoal,,,,Aggregation,dGoalhasObjective,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -205,111 +205,111 @@ Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,from,parent Goal,,TRU
 Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,to,Child Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,,,,Class,dGoal,Aggregation,dGoalAggregatesGoal,from,,parent Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,,,,Class,dGoal,Aggregation,dGoalAggregatesGoal,to,,Child Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dGrowthPackage -> is delivered by -> dInitiative
-Package,dGrowthPackage,Activity,dInitiative,,,,Composition,is delivered by,from, is delivered by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dInitiative,Package,dGrowthPackage,,,,Composition,is delivered by,to,is part of a Package,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Package,dGrowthPackage,,,,Activity,dInitiative,Composition,is delivered by,from,, is delivered by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dInitiative,,,,Package,dGrowthPackage,Composition,is delivered by,to,,is part of a Package,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dInitiative -> IncreasesMaturityOf -> dCapability
-Activity,dInitiative,Class,dCapability,,,,Association,IncreasesMaturityOf,directed,Increases Maturity Of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,Activity,dInitiative,,,,Association,IncreasesMaturityOf,from,is matured by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dInitiative,,,,Class,dCapability,Association,IncreasesMaturityOf,directed,,Increases Maturity Of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Activity,dInitiative,Association,IncreasesMaturityOf,from,,is matured by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dIssue -> StopTheRealizationOf -> dRequirement
-Class,dIssue,Class,dRequirement,,,,Association,StopTheRealizationOf,directed,stop Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,Class,dIssue,,,,Association,StopTheRealizationOf,from,is stopped by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dIssue,,,,Class,dRequirement,Association,StopTheRealizationOf,directed,,stop Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,,,,Class,dIssue,Association,StopTheRealizationOf,from,,is stopped by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dIssue -> realized by Issue -> dRisk
-Class,dIssue,Class,dRisk,,,,Realization,realized by Issue,directed,is realizing Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,Class,dIssue,,,,Realization,realized by Issue,from,is realized by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dIssue,,,,Class,dRisk,Realization,realized by Issue,directed,,is realizing Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dIssue,Realization,realized by Issue,from,,is realized by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dJSON_Attribute ->  -> dJSON_Type
-Attribute,dJSON_Attribute,Class,dJSON_Type,,,,Generalization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,Attribute,dJSON_Attribute,,,,Generalization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Attribute,dJSON_Attribute,,,,Class,dJSON_Type,Generalization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,,,,Attribute,dJSON_Attribute,Generalization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dJSON_Datatype ->  -> dJSON_Type
-Class,dJSON_Datatype,Class,dJSON_Type,,,,Generalization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,Class,dJSON_Datatype,,,,Generalization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Datatype,,,,Class,dJSON_Type,Generalization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,,,,Class,dJSON_Datatype,Generalization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dGrowthPackage -> dPackageIsDeliveredByInitiative -> dInitiative
+Package,dGrowthPackage,Activity,dInitiative,,,,Composition,dPackageIsDeliveredByInitiative,from, is delivered by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,Package,dGrowthPackage,,,,Composition,dPackageIsDeliveredByInitiative,to,is part of a Package,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Package,dGrowthPackage,,,,Activity,dInitiative,Composition,dPackageIsDeliveredByInitiative,from,, is delivered by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Package,dGrowthPackage,Composition,dPackageIsDeliveredByInitiative,to,,is part of a Package,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeIncreasesMaturityOf -> dCapability
+Activity,dInitiative,Class,dCapability,,,,Association,dInitiativeIncreasesMaturityOf,directed,Increases Maturity Of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Activity,dInitiative,,,,Association,dInitiativeIncreasesMaturityOf,from,is matured by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Class,dCapability,Association,dInitiativeIncreasesMaturityOf,directed,,Increases Maturity Of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Activity,dInitiative,Association,dInitiativeIncreasesMaturityOf,from,,is matured by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dIssue -> dIssueStopsRealizationOfRequirement -> dRequirement
+Class,dIssue,Class,dRequirement,,,,Association,dIssueStopsRealizationOfRequirement,directed,stop Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,Class,dIssue,,,,Association,dIssueStopsRealizationOfRequirement,from,is stopped by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dIssue,,,,Class,dRequirement,Association,dIssueStopsRealizationOfRequirement,directed,,stop Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,,,,Class,dIssue,Association,dIssueStopsRealizationOfRequirement,from,,is stopped by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dIssue -> dRiskRealizedByIssue -> dRisk
+Class,dIssue,Class,dRisk,,,,Realization,dRiskRealizedByIssue,directed,is realizing Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,Class,dIssue,,,,Realization,dRiskRealizedByIssue,from,is realized by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dIssue,,,,Class,dRisk,Realization,dRiskRealizedByIssue,directed,,is realizing Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dIssue,Realization,dRiskRealizedByIssue,from,,is realized by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Attribute -> dJsonAttributeAssociattedToType -> dJSON_Type
+Attribute,dJSON_Attribute,Class,dJSON_Type,,,,Association,dJsonAttributeAssociattedToType,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,Attribute,dJSON_Attribute,,,,Association,dJsonAttributeAssociattedToType,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Attribute,dJSON_Attribute,,,,Class,dJSON_Type,Association,dJsonAttributeAssociattedToType,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,,,,Attribute,dJSON_Attribute,Association,dJsonAttributeAssociattedToType,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dJSON_Datatype -> dDataTypeGeneralizeType -> dJSON_Type
+Class,dJSON_Datatype,Class,dJSON_Type,,,,Generatlization,dDataTypeGeneralizeType,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,Class,dJSON_Datatype,,,,Generatlization,dDataTypeGeneralizeType,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Datatype,,,,Class,dJSON_Type,Generatlization,dDataTypeGeneralizeType,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Type,,,,Class,dJSON_Datatype,Generatlization,dDataTypeGeneralizeType,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Element -> dJSONElement_associates_JSONElement -> dJSON_Element
 Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,directed,target JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,from,Source JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,directed,,target JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,from,,Source JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dPolymorphicCollection -> dJSON_Schema
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,directed,@baseType,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,from,@Type,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,directed,,@baseType,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,from,,@Type,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dPolymorphicCollection,directed,@baseType,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dPolymorphicCollection,from,@Type,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dPolymorphicCollection,directed,,@baseType,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dPolymorphicCollection,from,,@Type,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dJSON_SchemaSubSetGeneralizes_JSON_Schema -> dJSON_SchemaSubSet
-Class,dJSON_Schema,Class,dJSON_SchemaSubSet,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_SchemaSubSet,Class,dJSON_Schema,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_SchemaSubSet,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_SchemaSubSet,,,,Class,dJSON_Schema,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_SchemaSubSet,,,,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,Class,dJSON_Schema,,,,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_SchemaSubSet,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,,,,Class,dJSON_Schema,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchema_Associates_Schema -> dJSON_Schema
 Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,directed,Target Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,from,Source Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,directed,,Target Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,from,,Source Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchemaGeneralizesSchema -> dJSON_Schema
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,directed,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,from,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,directed,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,from,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchemaGeneralizesSchema,directed,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchemaGeneralizesSchema,from,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchemaGeneralizesSchema,directed,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchemaGeneralizesSchema,from,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchemaAssociatesElement -> dJSON_Element
-Class,dJSON_Schema,Class,dJSON_Element,,,,Aggregation,dSchemaAssociatesElement,from,Associates Element,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Element,Class,dJSON_Schema,,,,Aggregation,dSchemaAssociatesElement,to,Associates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Element,Aggregation,dSchemaAssociatesElement,from,,Associates Element,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Element,,,,Class,dJSON_Schema,Aggregation,dSchemaAssociatesElement,to,,Associates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Element,,,,Association,dSchemaAssociatesElement,directed,Associates Element,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,Class,dJSON_Schema,,,,Association,dSchemaAssociatesElement,from,Associates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Element,Association,dSchemaAssociatesElement,directed,,Associates Element,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,,,,Class,dJSON_Schema,Association,dSchemaAssociatesElement,from,,Associates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dJSONSchemaRealizesModel -> dModelClass
 Class,dJSON_Schema,Class,dModelClass,,,,Realization,dJSONSchemaRealizesModel,directed,realizes Model Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dJSON_Schema,,,,Realization,dJSONSchemaRealizesModel,from,is realized by Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Class,dModelClass,Realization,dJSONSchemaRealizesModel,directed,,realizes Model Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,,,,Class,dJSON_Schema,Realization,dJSONSchemaRealizesModel,from,,is realized by Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dLocation -> Hosts Node -> dDeploymentNode
-Class,dLocation,Node,dDeploymentNode,,,,Aggregation,Hosts Node,from, Hosts Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,Class,dLocation,,,,Aggregation,Hosts Node,to,Is hosted in Location,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dLocation,,,,Node,dDeploymentNode,Aggregation,Hosts Node,from,, Hosts Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Class,dLocation,Aggregation,Hosts Node,to,,Is hosted in Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dLogicalAppComponent -> exposes Biz Service -> dBusinessService
-Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,exposes Biz Service,directed,application runs service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,exposes Biz Service,from,service run by application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,exposes Biz Service,directed,,application runs service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,exposes Biz Service,from,,service run by application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dMeasurementArea -> aggregates categories -> dMeasurementCategory
-Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,aggregates categories,from,aggregates categories,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,aggregates categories,to,has Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementArea,,,,Class,dMeasurementCategory,Aggregation,aggregates categories,from,,aggregates categories,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementCategory,,,,Class,dMeasurementArea,Aggregation,aggregates categories,to,,has Measurement Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dMeasurementCategory -> aggregates Groups -> dMeasurementGrouping
-Class,dMeasurementCategory,Class,dMeasurementGrouping,,,,Aggregation,aggregates Groups,from,aggregates Groups,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementGrouping,Class,dMeasurementCategory,,,,Aggregation,aggregates Groups,to,has Category,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementCategory,,,,Class,dMeasurementGrouping,Aggregation,aggregates Groups,from,,aggregates Groups,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementGrouping,,,,Class,dMeasurementCategory,Aggregation,aggregates Groups,to,,has Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dMeasurementGrouping -> aggregates KPI -> dMeasurementIndicator
-Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,aggregates KPI,from,aggregates KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,aggregates KPI,to,part of a Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,aggregates KPI,from,,aggregates KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,aggregates KPI,to,,part of a Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dModelClass -> RealizesEntity -> dDataEntity
-Class,dModelClass,Class,dDataEntity,,,,Realization,RealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dModelClass,,,,Realization,RealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dDataEntity,Realization,RealizesEntity,directed,,Realizes Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dModelClass,Realization,RealizesEntity,from,,is realized by Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dModelClass -> ProvidesPersistenceFor -> dTable
-Class,dModelClass,Class,dTable,,,,Association,ProvidesPersistenceFor,directed,is Saved in a Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dTable,Class,dModelClass,,,,Association,ProvidesPersistenceFor,from,Provides Persistence For Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dTable,Association,ProvidesPersistenceFor,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dTable,,,,Class,dModelClass,Association,ProvidesPersistenceFor,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dNetwork -> NetworkContainsNode -> dDeploymentNode
-Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,NetworkContainsNode,from,Contains Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,NetworkContainsNode,to,is contained in a Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,NetworkContainsNode,from,,Contains Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,NetworkContainsNode,to,,is contained in a Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dLocation -> dLocationHostsNode -> dDeploymentNode
+Class,dLocation,Node,dDeploymentNode,,,,Aggregation,dLocationHostsNode,from, Hosts Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Class,dLocation,,,,Aggregation,dLocationHostsNode,to,Is hosted in Location,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dLocation,,,,Node,dDeploymentNode,Aggregation,dLocationHostsNode,from,, Hosts Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Class,dLocation,Aggregation,dLocationHostsNode,to,,Is hosted in Location,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dLogicalAppComponent -> dLogAppCompExposesBizService -> dBusinessService
+Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,dLogAppCompExposesBizService,directed,application runs service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,dLogAppCompExposesBizService,from,service run by application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,dLogAppCompExposesBizService,directed,,application runs service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,dLogAppCompExposesBizService,from,,service run by application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dMeasurementArea -> dAreaAggregatesCategories -> dMeasurementCategory
+Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,dAreaAggregatesCategories,from,aggregates categories,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,dAreaAggregatesCategories,to,has Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementArea,,,,Class,dMeasurementCategory,Aggregation,dAreaAggregatesCategories,from,,aggregates categories,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementCategory,,,,Class,dMeasurementArea,Aggregation,dAreaAggregatesCategories,to,,has Measurement Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dMeasurementCategory -> dCategoryaggregatesGroups -> dMeasurementGrouping
+Class,dMeasurementCategory,Class,dMeasurementGrouping,,,,Aggregation,dCategoryaggregatesGroups,from,aggregates Groups,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementGrouping,Class,dMeasurementCategory,,,,Aggregation,dCategoryaggregatesGroups,to,has Category,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementCategory,,,,Class,dMeasurementGrouping,Aggregation,dCategoryaggregatesGroups,from,,aggregates Groups,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementGrouping,,,,Class,dMeasurementCategory,Aggregation,dCategoryaggregatesGroups,to,,has Category,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dMeasurementGrouping -> dGroupAggregatesKPI -> dMeasurementIndicator
+Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,dGroupAggregatesKPI,from,aggregates KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,dGroupAggregatesKPI,to,part of a Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,dGroupAggregatesKPI,from,,aggregates KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,dGroupAggregatesKPI,to,,part of a Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dModelClass -> dModelClassRealizesEntity -> dDataEntity
+Class,dModelClass,Class,dDataEntity,,,,Realization,dModelClassRealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dModelClass,,,,Realization,dModelClassRealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dDataEntity,Realization,dModelClassRealizesEntity,directed,,Realizes Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dModelClass,Realization,dModelClassRealizesEntity,from,,is realized by Class,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dModelClass -> dTableProvidesPersistenceForModelClass -> dTable
+Class,dModelClass,Class,dTable,,,,Association,dTableProvidesPersistenceForModelClass,directed,is Saved in a Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dTable,Class,dModelClass,,,,Association,dTableProvidesPersistenceForModelClass,from,Provides Persistence For Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dTable,Association,dTableProvidesPersistenceForModelClass,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dTable,,,,Class,dModelClass,Association,dTableProvidesPersistenceForModelClass,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dNetwork -> dNetworkContainsNode -> dDeploymentNode
+Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,dNetworkContainsNode,from,Contains Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,Node,dNetwork,,,,Aggregation,dNetworkContainsNode,to,is contained in a Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dNetwork,,,,Node,dDeploymentNode,Aggregation,dNetworkContainsNode,from,,Contains Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Node,dNetwork,Aggregation,dNetworkContainsNode,to,,is contained in a Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dNetwork -> dNetworkHasSecurityGroup -> dSecurityGroup
 Node,dNetwork,Class,dSecurityGroup,,,,Association,dNetworkHasSecurityGroup,directed,Has Security Group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dSecurityGroup,Node,dNetwork,,,,Association,dNetworkHasSecurityGroup,from,is associated to Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -320,21 +320,21 @@ Node,dNetwork,Class,dSubNetwork,,,,Aggregation,dNetworkAggregatesSubNetwork,from
 Class,dSubNetwork,Node,dNetwork,,,,Aggregation,dNetworkAggregatesSubNetwork,to,is Aggregated in Network,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Node,dNetwork,,,,Class,dSubNetwork,Aggregation,dNetworkAggregatesSubNetwork,from,,Aggregates Sub-Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dSubNetwork,,,,Node,dNetwork,Aggregation,dNetworkAggregatesSubNetwork,to,,is Aggregated in Network,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dObject -> InstanceofModel -> dModelClass
-Class,dObject,Class,dModelClass,,,,Dependency,InstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,Class,dObject,,,,Dependency,InstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dObject,,,,Class,dModelClass,Dependency,InstanceofModel,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dObject,Dependency,InstanceofModel,from,,Istance of Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dObject -> InstanceofController -> dController
-Class,dObject,Class,dController,,,,Dependency,InstanceofController,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,Class,dObject,,,,Dependency,InstanceofController,from,Istance of Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dObject,,,,Class,dController,Dependency,InstanceofController,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dObject,Dependency,InstanceofController,from,,Istance of Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dObject -> InstanceofView -> dView
-Class,dObject,Class,dView,,,,Dependency,InstanceofView,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dView,Class,dObject,,,,Dependency,InstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dObject,,,,Class,dView,Dependency,InstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dView,,,,Class,dObject,Dependency,InstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dObject -> dObjectInstanceofModel -> dModelClass
+Class,dObject,Class,dModelClass,,,,Dependency,dObjectInstanceofModel,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,Class,dObject,,,,Dependency,dObjectInstanceofModel,from,Istance of Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dObject,,,,Class,dModelClass,Dependency,dObjectInstanceofModel,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dObject,Dependency,dObjectInstanceofModel,from,,Istance of Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dObject -> dObjectInstanceofController -> dController
+Class,dObject,Class,dController,,,,Dependency,dObjectInstanceofController,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,Class,dObject,,,,Dependency,dObjectInstanceofController,from,Istance of Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dObject,,,,Class,dController,Dependency,dObjectInstanceofController,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dObject,Dependency,dObjectInstanceofController,from,,Istance of Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dObject -> dObjectInstanceofView -> dView
+Class,dObject,Class,dView,,,,Dependency,dObjectInstanceofView,directed,Has an Instance,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dView,Class,dObject,,,,Dependency,dObjectInstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dObject,,,,Class,dView,Dependency,dObjectInstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dView,,,,Class,dObject,Dependency,dObjectInstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dOnPremise -> dOnPremiseGeneralizesCluster -> dCluster
 Class,dOnPremise,Class,dCluster,,,,Generatlization,dOnPremiseGeneralizesCluster,directed,Generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,Class,dOnPremise,,,,Generatlization,dOnPremiseGeneralizesCluster,from,is genralized by Premise,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -350,26 +350,26 @@ Class,dOpinion,Class,dOpinion,,,,Association,dAccord,directed,is in accord with 
 Class,dOpinion,Class,dOpinion,,,,Association,dAccord,from,is in accord with original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinion,,,,Class,dOpinion,Association,dAccord,directed,,is in accord with other Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinion,,,,Class,dOpinion,Association,dAccord,from,,is in accord with original Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dOrganizationUnit -> has Stakeholders -> dStakeholder
-Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,has Stakeholders,directed,has Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,has Stakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,has Stakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,has Stakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dOrganizationUnit -> dOrgUnitHasStakeholders -> dStakeholder
+Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,dOrgUnitHasStakeholders,directed,has Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,dOrgUnitHasStakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,dOrgUnitHasStakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,dOrgUnitHasStakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dPhysicalService -> dPhysicalServiceImplementsBusinessService -> dBusinessService
 Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,dPhysicalServiceImplementsBusinessService,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,dPhysicalServiceImplementsBusinessService,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,,,,Activity,dBusinessService,Realization,dPhysicalServiceImplementsBusinessService,directed,,Implement Biz Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,,,,Interface,dPhysicalService,Realization,dPhysicalServiceImplementsBusinessService,from,,is Implemented by physical service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dProduct -> Includes Process -> dBusinessProcess
-Component,dProduct,Class,dBusinessProcess,,,,Aggregation,Includes Process,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Component,dProduct,,,,Aggregation,Includes Process,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dProduct,,,,Class,dBusinessProcess,Aggregation,Includes Process,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Component,dProduct,Aggregation,Includes Process,to,,Is part of Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dProgram -> is organized In -> dGrowthPackage
-Package,dProgram,Package,dGrowthPackage,,,,Composition,is organized In,from,is organized In Packages,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Package,dGrowthPackage,Package,dProgram,,,,Composition,is organized In,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Package,dProgram,,,,Package,dGrowthPackage,Composition,is organized In,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Package,dGrowthPackage,,,,Package,dProgram,Composition,is organized In,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dProduct -> dProductIncludesProcess -> dBusinessProcess
+Component,dProduct,Class,dBusinessProcess,,,,Aggregation,dProductIncludesProcess,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Component,dProduct,,,,Aggregation,dProductIncludesProcess,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dProduct,,,,Class,dBusinessProcess,Aggregation,dProductIncludesProcess,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Component,dProduct,Aggregation,dProductIncludesProcess,to,,Is part of Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dProgram -> dProgramIsOrganizedInPackages -> dGrowthPackage
+Package,dProgram,Package,dGrowthPackage,,,,Composition,dProgramIsOrganizedInPackages,from,is organized In Packages,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Package,dGrowthPackage,Package,dProgram,,,,Composition,dProgramIsOrganizedInPackages,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Package,dProgram,,,,Package,dGrowthPackage,Composition,dProgramIsOrganizedInPackages,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Package,dGrowthPackage,,,,Package,dProgram,Composition,dProgramIsOrganizedInPackages,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dPublicCluster -> dPublicClustergeneralizesCluster -> dCluster
 Class,dPublicCluster,Class,dCluster,,,,Generatlization,dPublicClustergeneralizesCluster,directed,generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,Class,dPublicCluster,,,,Generatlization,dPublicClustergeneralizesCluster,from,PublicClustergeneralizesCluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -380,91 +380,91 @@ Class,dRegion,Class,dCluster,,,,Aggregation,dRegionAggregatesCluster,from,Aggreg
 Class,dCluster,Class,dRegion,,,,Aggregation,dRegionAggregatesCluster,to,is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRegion,,,,Class,dCluster,Aggregation,dRegionAggregatesCluster,from,,Aggregates Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,,,,Class,dRegion,Aggregation,dRegionAggregatesCluster,to,,is Aggregated in Region,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRequirement -> is related to -> dGoal
-Class,dRequirement,Class,dGoal,,,,Association,is related to,directed,specifies Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dGoal,Class,dRequirement,,,,Association,is related to,from,is specified by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,,,,Class,dGoal,Association,is related to,directed,,specifies Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dGoal,,,,Class,dRequirement,Association,is related to,from,,is specified by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRequirement -> Contains Requirement -> dRequirement
-Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,from,is contained by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,Class,dRequirement,,,,Composition,Contains Requirement,to,Contains Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,from,,is contained by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRequirement,,,,Class,dRequirement,Composition,Contains Requirement,to,,Contains Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRequirement -> dRequirementIsRelatedToGoal -> dGoal
+Class,dRequirement,Class,dGoal,,,,Association,dRequirementIsRelatedToGoal,directed,specifies Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,Class,dRequirement,,,,Association,dRequirementIsRelatedToGoal,from,is specified by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,,,,Class,dGoal,Association,dRequirementIsRelatedToGoal,directed,,specifies Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,,,,Class,dRequirement,Association,dRequirementIsRelatedToGoal,from,,is specified by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRequirement -> dRequirementContainsRequirement -> dRequirement
+Class,dRequirement,Class,dRequirement,,,,Composition,dRequirementContainsRequirement,from,is contained by Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,Class,dRequirement,,,,Composition,dRequirementContainsRequirement,to,Contains Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,,,,Class,dRequirement,Composition,dRequirementContainsRequirement,from,,is contained by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRequirement,,,,Class,dRequirement,Composition,dRequirementContainsRequirement,to,,Contains Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dResource -> supports -> dCapability
 Class,dResource,Class,dCapability,,,,Association,supports,directed,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,Class,dResource,,,,Association,supports,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dResource,,,,Class,dCapability,Association,supports,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Class,dResource,Association,supports,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRisk -> is related to risk -> dRisk
-Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,Class,dRisk,,,,Dependency,is related to risk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dRisk,Dependency,is related to risk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRisk -> Resource Risk -> dResource
-Class,dRisk,Class,dResource,,,,Association,Resource Risk,directed,impact Resouce,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dResource,Class,dRisk,,,,Association,Resource Risk,from,is impacted by Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dResource,Association,Resource Risk,directed,,impact Resouce,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dResource,,,,Class,dRisk,Association,Resource Risk,from,,is impacted by Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRisk -> Application Risk -> dApplicationComponent
-Class,dRisk,Component,dApplicationComponent,,,,Dependency,Application Risk,directed,is related to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,Class,dRisk,,,,Dependency,Application Risk,from,has Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Component,dApplicationComponent,Dependency,Application Risk,directed,,is related to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dRisk,Dependency,Application Risk,from,,has Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRole -> is Associated To -> dOrganizationUnit
-Actor,dRole,Class,dOrganizationUnit,,,,Association,is Associated To,directed,works in Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOrganizationUnit,Actor,dRole,,,,Association,is Associated To,from, has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dRole,,,,Class,dOrganizationUnit,Association,is Associated To,directed,,works in Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dOrganizationUnit,,,,Actor,dRole,Association,is Associated To,from,, has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRole -> Consumes Service -> dBusinessService
-Actor,dRole,Activity,dBusinessService,,,,Association,Consumes Service,directed,Consumes Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,Actor,dRole,,,,Association,Consumes Service,from,is consumed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dRole,,,,Activity,dBusinessService,Association,Consumes Service,directed,,Consumes Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Activity,dBusinessService,,,,Actor,dRole,Association,Consumes Service,from,,is consumed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRisk -> dRiskIRelatedToRisk -> dRisk
+Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dRisk,Dependency,dRiskIRelatedToRisk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dRisk,Dependency,dRiskIRelatedToRisk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRisk -> dResourceimpactedByRisk -> dResource
+Class,dRisk,Class,dResource,,,,Association,dResourceimpactedByRisk,directed,impact Resouce,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dResource,Class,dRisk,,,,Association,dResourceimpactedByRisk,from,is impacted by Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dResource,Association,dResourceimpactedByRisk,directed,,impact Resouce,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dResource,,,,Class,dRisk,Association,dResourceimpactedByRisk,from,,is impacted by Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRisk -> dApplicationRisk -> dApplicationComponent
+Class,dRisk,Component,dApplicationComponent,,,,Dependency,dApplicationRisk,directed,is related to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Class,dRisk,,,,Dependency,dApplicationRisk,from,has Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Component,dApplicationComponent,Dependency,dApplicationRisk,directed,,is related to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dRisk,Dependency,dApplicationRisk,from,,has Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRole -> dRoleisAssociatedToOrganization -> dOrganizationUnit
+Actor,dRole,Class,dOrganizationUnit,,,,Association,dRoleisAssociatedToOrganization,directed,works in Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOrganizationUnit,Actor,dRole,,,,Association,dRoleisAssociatedToOrganization,from, has Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Class,dOrganizationUnit,Association,dRoleisAssociatedToOrganization,directed,,works in Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dOrganizationUnit,,,,Actor,dRole,Association,dRoleisAssociatedToOrganization,from,, has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRole -> dRoleConsumesService -> dBusinessService
+Actor,dRole,Activity,dBusinessService,,,,Association,dRoleConsumesService,directed,Consumes Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Actor,dRole,,,,Association,dRoleConsumesService,from,is consumed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Activity,dBusinessService,Association,dRoleConsumesService,directed,,Consumes Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Actor,dRole,Association,dRoleConsumesService,from,,is consumed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRole -> dRoleHasSkill -> dSkill
 Actor,dRole,Class,dSkill,,,,Aggregation,dRoleHasSkill,from,has SKill,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dSkill,Actor,dRole,,,,Aggregation,dRoleHasSkill,to,known by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Class,dSkill,Aggregation,dRoleHasSkill,from,,has SKill,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dSkill,,,,Actor,dRole,Aggregation,dRoleHasSkill,to,,known by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dSecurityGroup -> SecurityGroupHasPhysicalService -> dPhysicalService
-Class,dSecurityGroup,Interface,dPhysicalService,,,,Association,SecurityGroupHasPhysicalService,directed,has Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,Class,dSecurityGroup,,,,Association,SecurityGroupHasPhysicalService,from,Asociated to Sec. group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dSecurityGroup,,,,Interface,dPhysicalService,Association,SecurityGroupHasPhysicalService,directed,,has Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,,,,Class,dSecurityGroup,Association,SecurityGroupHasPhysicalService,from,,Asociated to Sec. group,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dStakeholder -> Has Inner Opinion -> dOpinionInner
-Actor,dStakeholder,Class,dOpinionInner,,,,Association,Has Inner Opinion,directed,Has Inner Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinionInner,Actor,dStakeholder,,,,Association,Has Inner Opinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,,,,Class,dOpinionInner,Association,Has Inner Opinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinionInner,,,,Actor,dStakeholder,Association,Has Inner Opinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dStakeholder -> Has Opinion -> dOpinion
-Actor,dStakeholder,Class,dOpinion,,,,Association,Has Opinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinion,Actor,dStakeholder,,,,Association,Has Opinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Actor,dStakeholder,,,,Class,dOpinion,Association,Has Opinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dOpinion,,,,Actor,dStakeholder,Association,Has Opinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dSecurityGroup -> dSecurityGroupHasPhysicalService -> dPhysicalService
+Class,dSecurityGroup,Interface,dPhysicalService,,,,Association,dSecurityGroupHasPhysicalService,directed,has Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Class,dSecurityGroup,,,,Association,dSecurityGroupHasPhysicalService,from,Asociated to Sec. group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dSecurityGroup,,,,Interface,dPhysicalService,Association,dSecurityGroupHasPhysicalService,directed,,has Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Class,dSecurityGroup,Association,dSecurityGroupHasPhysicalService,from,,Asociated to Sec. group,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dStakeholder -> dStakeholderHasInnerOpinion -> dOpinionInner
+Actor,dStakeholder,Class,dOpinionInner,,,,Association,dStakeholderHasInnerOpinion,directed,Has Inner Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinionInner,Actor,dStakeholder,,,,Association,dStakeholderHasInnerOpinion,from,is thinked by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,,,,Class,dOpinionInner,Association,dStakeholderHasInnerOpinion,directed,,Has Inner Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinionInner,,,,Actor,dStakeholder,Association,dStakeholderHasInnerOpinion,from,,is thinked by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dStakeholder -> dStakeholderHasOpinion -> dOpinion
+Actor,dStakeholder,Class,dOpinion,,,,Association,dStakeholderHasOpinion,directed,Has Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinion,Actor,dStakeholder,,,,Association,dStakeholderHasOpinion,from,is expressed by Stakeholder,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dStakeholder,,,,Class,dOpinion,Association,dStakeholderHasOpinion,directed,,Has Opinion,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dOpinion,,,,Actor,dStakeholder,Association,dStakeholderHasOpinion,from,,is expressed by Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dSubNetwork -> dSubNetworkAggregatesIPRange -> dIPRange
 Class,dSubNetwork,Class,dIPRange,,,,Aggregation,dSubNetworkAggregatesIPRange,from,Aggregates IP Range,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dIPRange,Class,dSubNetwork,,,,Aggregation,dSubNetworkAggregatesIPRange,to,is Aggregated in sub Net.,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dSubNetwork,,,,Class,dIPRange,Aggregation,dSubNetworkAggregatesIPRange,from,,Aggregates IP Range,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dIPRange,,,,Class,dSubNetwork,Aggregation,dSubNetworkAggregatesIPRange,to,,is Aggregated in sub Net.,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dTable -> isFunctionallyImplementedBy -> dDataEntity
-Class,dTable,Class,dDataEntity,,,,Realization,isFunctionallyImplementedBy,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dTable,,,,Realization,isFunctionallyImplementedBy,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dTable,,,,Class,dDataEntity,Realization,isFunctionallyImplementedBy,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dTable,Realization,isFunctionallyImplementedBy,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dTable -> dEntityisFunctionallyImplementedByTable -> dDataEntity
+Class,dTable,Class,dDataEntity,,,,Realization,dEntityisFunctionallyImplementedByTable,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,Class,dTable,,,,Realization,dEntityisFunctionallyImplementedByTable,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dTable,,,,Class,dDataEntity,Realization,dEntityisFunctionallyImplementedByTable,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dDataEntity,,,,Class,dTable,Realization,dEntityisFunctionallyImplementedByTable,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dTest -> dTest_ApplicationComponent -> dApplicationComponent
 Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponent,directed,Test validates Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponent,from,is validated by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dTest,,,,Component,dApplicationComponent,Association,dTest_ApplicationComponent,directed,,Test validates Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dTest,Association,dTest_ApplicationComponent,from,,is validated by test,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dUserStory ->  -> dBusinessUseCase
-UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dValueStream -> Includes Processes -> dBusinessProcess
-Activity,dValueStream,Class,dBusinessProcess,,,,Composition,Includes Processes,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,Activity,dValueStream,,,,Composition,Includes Processes,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Activity,dValueStream,,,,Class,dBusinessProcess,Composition,Includes Processes,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessProcess,,,,Activity,dValueStream,Composition,Includes Processes,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dUserStory -> dUseCaseHasStory -> dBusinessUseCase
+UseCase,dUserStory,UseCase,dBusinessUseCase,,,,Association,dUseCaseHasStory,directed,Is associated to Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,UseCase,dUserStory,,,,Association,dUseCaseHasStory,from,Can be told as User Story,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+UseCase,dUserStory,,,,UseCase,dBusinessUseCase,Association,dUseCaseHasStory,directed,,Is associated to Use Case,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+UseCase,dBusinessUseCase,,,,UseCase,dUserStory,Association,dUseCaseHasStory,from,,Can be told as User Story,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dValueStream -> dValueStreamIncludesProcesses -> dBusinessProcess
+Activity,dValueStream,Class,dBusinessProcess,,,,Composition,dValueStreamIncludesProcesses,from,Includes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Activity,dValueStream,,,,Composition,dValueStreamIncludesProcesses,to,is part of Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dValueStream,,,,Class,dBusinessProcess,Composition,dValueStreamIncludesProcesses,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Activity,dValueStream,Composition,dValueStreamIncludesProcesses,to,,is part of Value Stream,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dValueStream -> dValueStreamEnablesCapability -> dCapability
 Activity,dValueStream,Class,dCapability,,,,Association,dValueStreamEnablesCapability,directed,Enables Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,Activity,dValueStream,,,,Association,dValueStreamEnablesCapability,from,is Enabled by Value Stream,,TRUE,,TRUE,TRUE,DAF,0,,,,,
