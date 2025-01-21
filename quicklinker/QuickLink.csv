@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2024-12-31 12:58:59 PM
+//generated:2025-01-21 4:07:02 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -16,10 +16,10 @@ Actor,dRole,Actor,dActor,,,,Association,dRoleIsPerformedByActor,from,is executed
 Actor,dActor,,,,Actor,dRole,Association,dRoleIsPerformedByActor,directed,,has Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Actor,dActor,Association,dRoleIsPerformedByActor,from,,is executed by Actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dAPI -> dAPIAggregatesSchema -> dJSON_Schema
-Interface,dAPI,Class,dJSON_Schema,,,,Association,dAPIAggregatesSchema,directed,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Interface,dAPI,,,,Association,dAPIAggregatesSchema,from,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dAPI,,,,Class,dJSON_Schema,Association,dAPIAggregatesSchema,directed,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Interface,dAPI,Association,dAPIAggregatesSchema,from,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,Class,dJSON_Schema,,,,Aggregation,dAPIAggregatesSchema,from,Aggregates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Interface,dAPI,,,,Aggregation,dAPIAggregatesSchema,to,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Class,dJSON_Schema,Aggregation,dAPIAggregatesSchema,from,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Interface,dAPI,Aggregation,dAPIAggregatesSchema,to,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dAPI ->  -> dPhysicalService
 Interface,dAPI,Interface,dPhysicalService,,,,Realization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,Interface,dAPI,,,,Realization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -55,11 +55,11 @@ Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dAppli
 Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> dApplicationComponentHasdContainer -> dContainer
-Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasdContainer,directed,Has Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasdContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasdContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasdContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationComponentHasContainer -> dContainer
+Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasContainer,directed,Has Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessProcess -> dProcessOrchestratesService -> dBusinessService
 Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,dProcessOrchestratesService,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,dProcessOrchestratesService,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -146,9 +146,9 @@ Class,dView,Class,dController,,,,Association,dControllerGovernsView,from,is Gove
 Class,dController,,,,Class,dView,Association,dControllerGovernsView,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dView,,,,Class,dController,Association,dControllerGovernsView,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dControllerControllsModel -> dModelClass
-Class,dController,Class,dModelClass,,,,Association,dControllerControllsModel,directed,Controlls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,Class,dModelClass,,,,Association,dControllerControllsModel,directed,Controls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dController,,,,Association,dControllerControllsModel,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dModelClass,Association,dControllerControllsModel,directed,,Controlls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dModelClass,Association,dControllerControllsModel,directed,,Controls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,,,,Class,dController,Association,dControllerControllsModel,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dUseCaseisImplementedByController -> dBusinessUseCase
 Class,dController,UseCase,dBusinessUseCase,,,,Realization,dUseCaseisImplementedByController,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -225,46 +225,36 @@ Class,dIssue,Class,dRisk,,,,Realization,dRiskRealizedByIssue,directed,is realizi
 Class,dRisk,Class,dIssue,,,,Realization,dRiskRealizedByIssue,from,is realized by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dIssue,,,,Class,dRisk,Realization,dRiskRealizedByIssue,directed,,is realizing Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dRisk,,,,Class,dIssue,Realization,dRiskRealizedByIssue,from,,is realized by Issue,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dJSON_Attribute -> dJsonAttributeAssociattedToType -> dJSON_Type
-Attribute,dJSON_Attribute,Class,dJSON_Type,,,,Association,dJsonAttributeAssociattedToType,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,Attribute,dJSON_Attribute,,,,Association,dJsonAttributeAssociattedToType,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Attribute,dJSON_Attribute,,,,Class,dJSON_Type,Association,dJsonAttributeAssociattedToType,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,,,,Attribute,dJSON_Attribute,Association,dJsonAttributeAssociattedToType,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dJSON_Datatype -> dDataTypeGeneralizeType -> dJSON_Type
-Class,dJSON_Datatype,Class,dJSON_Type,,,,Generatlization,dDataTypeGeneralizeType,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,Class,dJSON_Datatype,,,,Generatlization,dDataTypeGeneralizeType,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Datatype,,,,Class,dJSON_Type,Generatlization,dDataTypeGeneralizeType,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Type,,,,Class,dJSON_Datatype,Generatlization,dDataTypeGeneralizeType,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Element -> dJSONElement_associates_JSONElement -> dJSON_Element
 Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,directed,target JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,Class,dJSON_Element,,,,Association,dJSONElement_associates_JSONElement,from,Source JsonElement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,directed,,target JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Element,,,,Class,dJSON_Element,Association,dJSONElement_associates_JSONElement,from,,Source JsonElement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dPolymorphicCollection -> dJSON_Schema
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dPolymorphicCollection,directed,@baseType,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dPolymorphicCollection,from,@Type,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dPolymorphicCollection,directed,,@baseType,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dPolymorphicCollection,from,,@Type,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,directed,@baseType,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dPolymorphicCollection,from,@Type,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,directed,,@baseType,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dPolymorphicCollection,from,,@Type,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dJSON_SchemaSubSetGeneralizes_JSON_Schema -> dJSON_SchemaSubSet
-Class,dJSON_Schema,Class,dJSON_SchemaSubSet,,,,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_SchemaSubSet,Class,dJSON_Schema,,,,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_SchemaSubSet,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_SchemaSubSet,,,,Class,dJSON_Schema,Association,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_SchemaSubSet,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,Class,dJSON_Schema,,,,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_SchemaSubSet,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,directed,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_SchemaSubSet,,,,Class,dJSON_Schema,Generalization,dJSON_SchemaSubSetGeneralizes_JSON_Schema,from,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchema_Associates_Schema -> dJSON_Schema
 Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,directed,Target Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchema_Associates_Schema,from,Source Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,directed,,Target Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchema_Associates_Schema,from,,Source Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchemaGeneralizesSchema -> dJSON_Schema
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchemaGeneralizesSchema,directed,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,Class,dJSON_Schema,,,,Association,dSchemaGeneralizesSchema,from,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchemaGeneralizesSchema,directed,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Schema,Association,dSchemaGeneralizesSchema,from,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,directed,Child Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Schema,,,,Generalization,dSchemaGeneralizesSchema,from,Parent Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,directed,,Child Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Schema,Generalization,dSchemaGeneralizesSchema,from,,Parent Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dSchemaAssociatesElement -> dJSON_Element
-Class,dJSON_Schema,Class,dJSON_Element,,,,Association,dSchemaAssociatesElement,directed,Associates Element,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Element,Class,dJSON_Schema,,,,Association,dSchemaAssociatesElement,from,Associates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Schema,,,,Class,dJSON_Element,Association,dSchemaAssociatesElement,directed,,Associates Element,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dJSON_Element,,,,Class,dJSON_Schema,Association,dSchemaAssociatesElement,from,,Associates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,Class,dJSON_Element,,,,Aggregation,dSchemaAssociatesElement,from,Associates Element,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,Class,dJSON_Schema,,,,Aggregation,dSchemaAssociatesElement,to,Associates Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Schema,,,,Class,dJSON_Element,Aggregation,dSchemaAssociatesElement,from,,Associates Element,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dJSON_Element,,,,Class,dJSON_Schema,Aggregation,dSchemaAssociatesElement,to,,Associates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dJSON_Schema -> dJSONSchemaRealizesModel -> dModelClass
 Class,dJSON_Schema,Class,dModelClass,,,,Realization,dJSONSchemaRealizesModel,directed,realizes Model Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dJSON_Schema,,,,Realization,dJSONSchemaRealizesModel,from,is realized by Schema,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -335,11 +325,6 @@ Class,dObject,Class,dView,,,,Dependency,dObjectInstanceofView,directed,Has an In
 Class,dView,Class,dObject,,,,Dependency,dObjectInstanceofView,from,Istance of View,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dObject,,,,Class,dView,Dependency,dObjectInstanceofView,directed,,Has an Instance,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dView,,,,Class,dObject,Dependency,dObjectInstanceofView,from,,Istance of View,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dOnPremise -> dOnPremiseGeneralizesCluster -> dCluster
-Class,dOnPremise,Class,dCluster,,,,Generatlization,dOnPremiseGeneralizesCluster,directed,Generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCluster,Class,dOnPremise,,,,Generatlization,dOnPremiseGeneralizesCluster,from,is genralized by Premise,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dOnPremise,,,,Class,dCluster,Generatlization,dOnPremiseGeneralizesCluster,directed,,Generalizes Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCluster,,,,Class,dOnPremise,Generatlization,dOnPremiseGeneralizesCluster,from,,is genralized by Premise,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dOpinion -> dDiscord -> dOpinion
 Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,directed,is in discord with other Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOpinion,Class,dOpinion,,,,Association,dDiscord,from,is in discord with Original Opinion,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -370,11 +355,6 @@ Package,dProgram,Package,dGrowthPackage,,,,Composition,dProgramIsOrganizedInPack
 Package,dGrowthPackage,Package,dProgram,,,,Composition,dProgramIsOrganizedInPackages,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Package,dProgram,,,,Package,dGrowthPackage,Composition,dProgramIsOrganizedInPackages,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Package,dGrowthPackage,,,,Package,dProgram,Composition,dProgramIsOrganizedInPackages,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dPublicCluster -> dPublicClustergeneralizesCluster -> dCluster
-Class,dPublicCluster,Class,dCluster,,,,Generatlization,dPublicClustergeneralizesCluster,directed,generalizes Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCluster,Class,dPublicCluster,,,,Generatlization,dPublicClustergeneralizesCluster,from,PublicClustergeneralizesCluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dPublicCluster,,,,Class,dCluster,Generatlization,dPublicClustergeneralizesCluster,directed,,generalizes Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCluster,,,,Class,dPublicCluster,Generatlization,dPublicClustergeneralizesCluster,from,,PublicClustergeneralizesCluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRegion -> dRegionAggregatesCluster -> dCluster
 Class,dRegion,Class,dCluster,,,,Aggregation,dRegionAggregatesCluster,from,Aggregates Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,Class,dRegion,,,,Aggregation,dRegionAggregatesCluster,to,is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -390,11 +370,11 @@ Class,dRequirement,Class,dRequirement,,,,Composition,dRequirementContainsRequire
 Class,dRequirement,Class,dRequirement,,,,Composition,dRequirementContainsRequirement,to,Contains Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,,,,Class,dRequirement,Composition,dRequirementContainsRequirement,from,,is contained by Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,,,,Class,dRequirement,Composition,dRequirementContainsRequirement,to,,Contains Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dResource -> supports -> dCapability
-Class,dResource,Class,dCapability,,,,Association,supports,directed,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,Class,dResource,,,,Association,supports,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dResource,,,,Class,dCapability,Association,supports,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dResource,Association,supports,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dResource -> dResourceSupportsCapability -> dCapability
+Class,dResource,Class,dCapability,,,,Association,dResourceSupportsCapability,directed,Supports Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Class,dResource,,,,Association,dResourceSupportsCapability,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dResource,,,,Class,dCapability,Association,dResourceSupportsCapability,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dResource,Association,dResourceSupportsCapability,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRisk -> dRiskIRelatedToRisk -> dRisk
 Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,

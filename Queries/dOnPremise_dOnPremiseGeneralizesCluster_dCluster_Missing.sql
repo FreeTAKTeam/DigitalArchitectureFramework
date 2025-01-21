@@ -1,4 +1,4 @@
--- Generated 2024-12-31 1:05:02 PM
+-- Generated 2025-01-08 9:22:43 AM
 SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            
  FROM t_object AS o                                                                            
  WHERE o.StereoType = 'dOnPremise'                                               

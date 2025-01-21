@@ -1,4 +1,4 @@
--- Generated 2024-12-31 1:00:05 PM
+-- Generated 2025-01-15 3:33:46 PM
 --  dBusinessService (GroupName) connected with  dDataEntity (series)
 SELECT dBusinessService.Name as dBusinessService,  dDataEntity.Name as  dDataEntity
 FROM t_object AS dDataEntity

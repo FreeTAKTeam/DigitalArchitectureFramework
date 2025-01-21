@@ -1,0 +1,47 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="A3CC3850-3" name="DAF_delivery" version="6.0" notes="DAF_delivery"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Delivery Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dInitiativeIncreasesMaturityOf(UML::Association)" type="" description="" unit="" values="" default="Increases Maturity"/>
+					<Tag name="DAF::dInitiativeisMakingUseOfDecision(UML::Association)" type="string" description="" unit="" values="" default="Initiative is Making Use Of Decision"/>
+					<Tag name="DAF::dDecisionRefersToPrinciple(UML::Dependency)" type="string" description="" unit="" values="" default="Decision refers To Principle"/>
+					<Tag name="DAF::dPackageIsDeliveredByInitiative(UML::Composition)" type="string" description="" unit="" values="" default="Package is delivered by Initiative"/>
+					<Tag name="DAF::dLocationHostsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Location Hosts Node"/>
+					<Tag name="DAF::dProductIncludesProcess(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Includes Process"/>
+					<Tag name="DAF::dProgramIsOrganizedInPackages(UML::Composition)" type="string" description="" unit="" values="" default="Program is organized In Packages"/>
+					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
+					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Delivery" notes="Contains Elements for Enterprise Architecture Strategic Planning">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
+					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
+					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
+					<Tag name="DAF::dResource" type="int" description="" unit="" values="" default="Resource"/>
+					<Tag name="DAF::dProduct" type="" description="" unit="" values="" default="Product"/>
+					<Tag name="DAF::dProgram" type="" description="" unit="" values="" default="Program"/>
+					<Tag name="DAF::dGrowthPackage" type="" description="" unit="" values="" default="Growth Package"/>
+					<Tag name="DAF::dInitiative" type="" description="" unit="" values="" default="Initiative"/>
+					<Tag name="DAF::dPrinciple" type="" description="" unit="" values="" default="Principle"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

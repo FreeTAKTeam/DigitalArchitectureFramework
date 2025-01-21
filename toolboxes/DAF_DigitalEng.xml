@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="2CA65063-7" name="DAF_DigitalEng_TB" version="5.1.5" notes="A specialize toolbox for MDA"/>
+	<Documentation id="2CA65063-7" name="DAF_DigitalEng_TB" version="6.0 " notes="A specialize toolbox for MDA"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Model" alias="Model" notes="Contains elements for MVC architecture. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -47,16 +47,24 @@
 				<TaggedValues>
 					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dControllerImplementsFunction(UML::Realization)" type="" description="" unit="" values="" default="Controller function"/>
+					<Tag name="DAF::dNetworkContainsNode(UML::Aggregation)" type="" description="" unit="" values="" default="Contains Node"/>
 					<Tag name="UML::Assembly" type="" description="" unit="" values="" default="Assembly"/>
 					<Tag name="DAF::configured by(UML::Aggregation)" type="string" description="" unit="" values="" default="configured by System"/>
 					<Tag name="DAF::Exposes Service(UML::Association)" type="string" description="" unit="" values="" default="Exposes Service"/>
 					<Tag name="DAF::Connected with Application(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
 					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Function"/>
 					<Tag name="DAF::Implements Service(UML::Association)" type="string" description="" unit="" values="" default="implement service"/>
+					<Tag name="DAF::dControllerGovernsView(UML::Association)" type="string" description="" unit="" values="" default="Governs View"/>
+					<Tag name="DAF::dControllerControllsModel(UML::Association)" type="string" description="" unit="" values="" default="Controlls Model"/>
 					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dUseCaseisImplementedByController(UML::Realization)" type="string" description="" unit="" values="" default="Use Case is Implemented B yController"/>
 					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
 					<Tag name="DAF::Consumes Service(UML::Association)" type="string" description="" unit="" values="" default="Consume Service"/>
+					<Tag name="DAF::dTableProvidesPersistenceForModelClass(UML::Association)" type="string" description="" unit="" values="" default="Table Provides Persistence to Model"/>
+					<Tag name="DAF::dObjectInstanceofModel(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Model"/>
+					<Tag name="DAF::dObjectInstanceofController(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of Controller"/>
+					<Tag name="DAF::dObjectInstanceofView(UML::Dependency)" type="string" description="" unit="" values="" default="Instance of View"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

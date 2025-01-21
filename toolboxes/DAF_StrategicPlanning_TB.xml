@@ -1,0 +1,50 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="6F5508A1-3" name="DAF_StrategicPlanning" version="6.0 ALFA 7" notes="DAF_StrategicPlanning"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Strat. Planning Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dInitiativeIncreasesMaturityOf(UML::Association)" type="" description="" unit="" values="" default="Increases Maturity"/>
+					<Tag name="DAF::dProcessEnsureCorrectOperationOfCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="Ensure the correct Operation of"/>
+					<Tag name="DAF::dCapabilityisMeasuredByKPI(UML::Association)" type="string" description="" unit="" values="" default="is Measured By KPI"/>
+					<Tag name="DAF::dRoleExecutesCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="role Executes Capability"/>
+					<Tag name="DAF::dLogicalApplicationComponentSupportsCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="App Supports Capability"/>
+					<Tag name="DAF::dLocationHostsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Location Hosts Node"/>
+					<Tag name="DAF::dProductIncludesProcess(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Includes Process"/>
+					<Tag name="DAF::dResourceSupportsCapability(UML::Association)" type="string" description="" unit="" values="" default="Resource supports Capability"/>
+					<Tag name="DAF::dResourceimpactedByRisk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted by Risk"/>
+					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
+					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stategic Planning" notes="Contains Elements for Enterprise Architecture Strategic Planning">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
+					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
+					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
+					<Tag name="DAF::dResource" type="" description="" unit="" values="" default="Resource"/>
+					<Tag name="DAF::dProduct" type="" description="" unit="" values="" default="Product"/>
+					<Tag name="DAF::dProgram" type="" description="" unit="" values="" default="Program"/>
+					<Tag name="DAF::dGrowthPackage" type="" description="" unit="" values="" default="Growth Package"/>
+					<Tag name="DAF::dInitiative" type="" description="" unit="" values="" default="Initiative"/>
+					<Tag name="DAF::dPrinciple" type="" description="" unit="" values="" default="Principle"/>
+					<Tag name="DAF::dValueStream(UML::Class)" type="" description="" unit="" values="" default="Value Stream"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

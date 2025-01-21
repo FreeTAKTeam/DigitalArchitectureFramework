@@ -1,4 +1,4 @@
--- Generated 2024-12-31 1:00:28 PM
+-- Generated 2025-01-15 3:34:09 PM
 --  dCapability (GroupName) connected with  dRole (series)
 SELECT dCapability.Name as dCapability,  dRole.Name as  dRole
 FROM t_object AS dRole

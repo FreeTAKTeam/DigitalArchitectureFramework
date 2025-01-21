@@ -597,3 +597,18 @@ from t_object
 where t_object.name='Product Catalog Management API' 
 AND t_object.Object_Type = 'RequiredInterface'
 AND t_object.ea_guid = '{38C11A9B-0452-4470-B861-508320224A5E}'
+
+-- Select API operation tag that is EMPTY
+SELECT 
+	 o.ea_guid as CLASSGUID ,
+	myAPI.name 'Owner',
+    o.Name AS OperationName,
+    t.Property AS TagName
+FROM 
+    t_operation o
+INNER JOIN  t_operationtag t ON o.OperationID = t.ElementID
+INNER JOIN t_object myAPI on myAPI.object_ID =   o.object_ID
+WHERE 
+    o.stereotype = 'dAPIOperation'
+	AND t.Property = 'relativePath' 
+    AND (t.VALUE IS NULL OR t.VALUE = '');

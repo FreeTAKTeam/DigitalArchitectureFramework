@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="4.2" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
+	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="6.0" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" cx="190" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -34,11 +34,6 @@
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="BPMN" notes="" cx="325" cy="231" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
-				<AppliesTo>
-					<Apply type="ToolboxPage">
-						<Property name="isCollapsed" value="true"/>
-					</Apply>
-				</AppliesTo>
 				<TaggedValues>
 					<Tag name="BPMN2.0::BusinessProcess" type="" description="" unit="" values="" default="Activity"/>
 					<Tag name="BPMN2.0::Activity" type="" description="" unit="" values="" default="Activity"/>
@@ -56,18 +51,24 @@
 					<Tag name="BPMN2.0::TextAnnotation" type="" description="" unit="" values="" default="TextAnnotation"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Requirements Relationships" notes="" cx="387" cy="101" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Requirements Relationships" notes="" cx="385" cy="231" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Relationships::is related to risk(UML::Dependency)" type="" description="" unit="" values="" default="Related Risk"/>
-					<Tag name="Relationships::is related to(UML::Association)" type="" description="" unit="" values="" default="Goal-Req."/>
-					<Tag name="Relationships::isSatisfiedBy(UML::Realization)" type="" description="" unit="" values="" default="Requirement Feature"/>
-					<Tag name="Relationships::realized by Issue(UML::Realization)" type="" description="" unit="" values="" default="Issue- Risk"/>
-					<Tag name="Relationships::StopTheRealizationOf(UML::Association)" type="" description="" unit="" values="" default="Requirement Issue "/>
+					<Tag name="DAF::dFeatureIsRealizedByUseCase(UML::Realization)" type="string" description="" unit="" values="" default="Feature is realized by Use Case"/>
+					<Tag name="DAF::dGoalisOperationalizedByCapability(UML::Realization)" type="string" description="" unit="" values="" default="goal is Operationalized By Capability"/>
+					<Tag name="DAF::dRequirementIsSatisfiedByFeature(UML::Realization)" type="string" description="" unit="" values="" default="is Satisfied By"/>
+					<Tag name="DAF::dGoalhasObjective(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal has Milestone"/>
+					<Tag name="DAF::dGoalAggregatesGoal(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal Aggregates Goal"/>
+					<Tag name="DAF::dIssueStopsRealizationOfRequirement(UML::Association)" type="string" description="" unit="" values="" default="Issue Stops Realization Of Req"/>
+					<Tag name="DAF::dRiskRealizedByIssue(UML::Realization)" type="string" description="" unit="" values="" default="realized by Issue"/>
+					<Tag name="DAF::dRequirementIsRelatedToGoal(UML::Association)" type="string" description="" unit="" values="" default="req related to Goal"/>
+					<Tag name="DAF::dRequirementContainsRequirement(UML::Composition)" type="string" description="" unit="" values="" default="Requirement Contains Req"/>
+					<Tag name="DAF::dRiskIRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
+					<Tag name="DAF::dUseCaseHasStory(UML::Association)" type="string" description="" unit="" values="" default="Use Case Has Story"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

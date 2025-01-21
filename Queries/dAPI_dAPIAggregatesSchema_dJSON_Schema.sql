@@ -1,4 +1,4 @@
--- Generated 2024-12-31 12:59:25 PM
+-- Generated 2025-01-15 3:33:16 PM
 --  dAPI (GroupName) connected with  dJSON_Schema (series)
 SELECT dAPI.Name as dAPI,  dJSON_Schema.Name as  dJSON_Schema
 FROM t_object AS dJSON_Schema

@@ -1,0 +1,19 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="C1AEEB54-0" name="DAF_ProgramManagement" version="6.0" notes="DAF_ProgramManagement"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Program Diagram" alias="Diagram" notes="a road Map diagram">
+				<AppliesTo>
+					<Apply type="Diagram_Logical">
+						<Property name="toolbox" value="DAF_delivery"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Roadmap Diagram" notes=""/>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>

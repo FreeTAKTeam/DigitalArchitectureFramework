@@ -1,4 +1,4 @@
--- Generated 2024-12-31 12:59:17 PM
+-- Generated 2025-01-15 3:33:12 PM
 --  dActor (GroupName) connected with  dBusinessUseCase (series)
 SELECT dActor.Name as dActor,  dBusinessUseCase.Name as  dBusinessUseCase
 FROM t_object AS dBusinessUseCase

@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="48791CFC-E" name="DAF_API" version="5.6" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
+	<Documentation id="48791CFC-E" name="DAF_API" version="6.0" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="API Elements" notes="toolbox for managing APIs" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -13,14 +13,20 @@
 					<Tag name="DAF::dAPI(UML::Interface)" type="string" description="" unit="" values="" default="Open API"/>
 					<Tag name="DAF::dJSON_Schema(UML::Class)" type="string" description="" unit="" values="" default="API Schema"/>
 					<Tag name="DAF::dAPIOperation(UML::Operation)" type="string" description="" unit="" values="" default="API Operation"/>
+					<Tag name="DAF::dAPI(Class)" type="string" description="" unit="" values="" default="Open API"/>
 					<Tag name="DAF::dAPIParameter(UML::Attribute)" type="string" description="" unit="" values="" default="API param"/>
+					<Tag name="DAF::dAPIOperation(Class)" type="string" description="" unit="" values="" default="API Operation"/>
 					<Tag name="DAF::dAPIResponse(UML::Class)" type="string" description="" unit="" values="" default="API response"/>
+					<Tag name="DAF::dAPIParameter(Class)" type="string" description="" unit="" values="" default="API Parameter"/>
 					<Tag name="DAF::dJSON_Attribute(UML::Attribute)" type="string" description="" unit="" values="" default="API attribute"/>
+					<Tag name="DAF::dAPIResponse(Class)" type="string" description="" unit="" values="" default="API Response"/>
 					<Tag name="DAF::dJSON_Datatype(UML::Class)" type="string" description="" unit="" values="" default="Sata Type"/>
 					<Tag name="DAF::dJSON_Element(UML::Class)" type="string" description="" unit="" values="" default="Schema Element"/>
 					<Tag name="DAF::dJSON_Type(UML::Class)" type="string" description="" unit="" values="" default="json type"/>
 					<Tag name="DAF::dJSON_SchemaSubSet(Class)" type="string" description="" unit="" values="" default="Schema Subset"/>
 					<Tag name="UML::Class" type="" description="" unit="" values="" default="Class"/>
+					<Tag name="DAF::dJSON_Schema(Class)" type="string" description="" unit="" values="" default="JSON Schema"/>
+					<Tag name="DAF::dJSON_Type(Class)" type="string" description="" unit="" values="" default="JSON Type"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="API Relationships" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -30,13 +36,20 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default="Schema Associates Schema"/>
+					<Tag name="DAF::dAPIAggregatesSchema(UML::Association)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
+					<Tag name="DAF::dJsonAttributeAssociattedToType(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dDataTypeGeneralizeType(UML::Generatlization)" type="string" description="" unit="" values="" default="Data Type Generalizes Type"/>
+					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dPolymorphicCollection(UML::Association)" type="string" description="" unit="" values="" default="Polymorphic Collection"/>
+					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Generalizes Schema"/>
+					<Tag name="DAF::dSchema_Associates_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Association"/>
+					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Association)" type="string" description="" unit="" values="" default="Schema Generalization"/>
+					<Tag name="DAF::dSchemaAssociatesElement(UML::Association)" type="string" description="" unit="" values="" default="Schema Associates Element"/>
+					<Tag name="DAF::dJSONSchemaRealizesModel(UML::Realization)" type="string" description="" unit="" values="" default="Schema Realizes Model"/>
 					<Tag name="DAF::dPolymorphicCollection(UML::Generalization)" type="string" description="" unit="" values="" default="Polymorphic Collection"/>
 					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Generalization)" type="string" description="" unit="" values="" default="Generalizes Schema"/>
-					<Tag name="DAF::dSchema_Associates_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Association"/>
 					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="string" description="" unit="" values="" default="Schema Generalization"/>
 					<Tag name="DAF::dSchemaAssociatesElement(UML::Aggregation)" type="string" description="" unit="" values="" default="Schema Associates Element"/>
-					<Tag name="DAF::dJSONSchemaRealizesModel(UML::Realization)" type="string" description="" unit="" values="" default="Schema Realizes Model"/>
 					<Tag name="DAF::dAPIAggregatesSchema(UML::Aggregation)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
 				</TaggedValues>
 			</Stereotype>

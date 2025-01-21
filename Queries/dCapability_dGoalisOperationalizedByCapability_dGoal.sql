@@ -1,4 +1,4 @@
--- Generated 2024-12-31 1:00:30 PM
+-- Generated 2025-01-15 3:34:11 PM
 --  dCapability (GroupName) connected with  dGoal (series)
 SELECT dCapability.Name as dCapability,  dGoal.Name as  dGoal
 FROM t_object AS dGoal

@@ -1,4 +1,4 @@
--- Generated 2024-12-31 12:59:20 PM
+-- Generated 2025-01-15 3:33:14 PM
 --  dActor (GroupName) connected with  dRole (series)
 SELECT dActor.Name as dActor,  dRole.Name as  dRole
 FROM t_object AS dRole

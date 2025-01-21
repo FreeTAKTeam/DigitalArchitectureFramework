@@ -1,36 +1,8 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="3B5DC1F2-3" name="DAF_Business_Analysis_" version="4.2" notes="DAF_Business_Analysis_"/>
+	<Documentation id="3B5DC1F2-3" name="DAF_Business_Analysis_" version="6.0" notes="DAF_Business_Analysis_"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="DAF Relationships" alias="Relationship" notes="Relationship in the diagrams. ">
-				<AppliesTo>
-					<Apply type="ToolboxPage">
-						<Property name="isCollapsed" value="true"/>
-					</Apply>
-				</AppliesTo>
-				<TaggedValues>
-					<Tag name="Relationships::isRunBy(UML::Association)" type="" description="" unit="" values="" default="Is Run By"/>
-					<Tag name="DAF::isDescribedBy" type="" description="" unit="" values="" default="Is Described By"/>
-					<Tag name="DAF::isSatisfiedBy" type="" description="" unit="" values="" default="Is Satisfied By"/>
-					<Tag name="DAF::isOperationalizedBy" type="" description="" unit="" values="" default="Is Operationalized By"/>
-					<Tag name="DAF::isDetailedBy" type="" description="" unit="" values="" default="Is Detailed By"/>
-					<Tag name="DAF::isOrganizedIn" type="" description="" unit="" values="" default="Is Organized In"/>
-					<Tag name="DAF::isPhysicallyHostedBy" type="" description="" unit="" values="" default="Is Physically Hosted By"/>
-					<Tag name="DAF::hosts" type="" description="" unit="" values="" default="Hosts"/>
-					<Tag name="DAF::IncreasesMaturityOf" type="" description="" unit="" values="" default="Increases Maturity Of"/>
-					<Tag name="DAF::isImplementedBy" type="" description="" unit="" values="" default="Is Implemented By"/>
-					<Tag name="DAF::isPerformedBy" type="" description="" unit="" values="" default="Is Performed By"/>
-					<Tag name="DAF::contains" type="" description="" unit="" values="" default="Contains"/>
-					<Tag name="DAF::areOrganizedWithin" type="" description="" unit="" values="" default="Are Organized Within"/>
-					<Tag name="DAF::isScaffoldedIn" type="" description="" unit="" values="" default="Is Scaffolded In"/>
-					<Tag name="DAF::dManyToMany" type="" description="" unit="" values="" default="Many to Many Relationship"/>
-					<Tag name="DAF::isHostedBy" type="" description="" unit="" values="" default="Is Hosted By"/>
-					<Tag name="DAF::isMakingUseOf" type="" description="" unit="" values="" default="Is Making Use Of"/>
-					<Tag name="DAF::isFunctionallyImplementedBy" type="" description="" unit="" values="" default="Is Functionally Implemented By"/>
-					<Tag name="DAF::isMeasuredBy" type="" description="" unit="" values="" default="Is Measured By"/>
-				</TaggedValues>
-			</Stereotype>
 			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
@@ -68,11 +40,14 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dAction(Class)" type="string" description="" unit="" values="" default="Action"/>
+					<Tag name="DAF::dActivity(Class)" type="string" description="" unit="" values="" default="Activity"/>
 					<Tag name="DAF::dEvent" type="int" description="" unit="" values="" default="Event"/>
 					<Tag name="DAF::dOrganizationUnit" type="" description="" unit="" values="" default="Organization Unit"/>
 					<Tag name="DAF::dRole" type="" description="" unit="" values="" default="Role"/>
 					<Tag name="DAF::dBusinessUseCase" type="" description="" unit="" values="" default="Business Use Case"/>
 					<Tag name="DAF::dActor" type="" description="" unit="" values="" default="Actor"/>
+					<Tag name="DAF::dObject(Class)" type="string" description="" unit="" values="" default="Object"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

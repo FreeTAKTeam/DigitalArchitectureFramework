@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="5.1.6" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
+	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="6.0" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Analysis" alias="Analysis" notes="Contains the list of elements used in Analysis Phase. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -72,26 +72,6 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="DAF::dTest_ApplicationComponent(UML::Association)" type="" description="" unit="" values="" default="validates Component"/>
-					<Tag name="DAF::isDescribedBy" type="" description="" unit="" values="" default="Is Described By"/>
-					<Tag name="Relationships::isRunBy(UML::Association)" type="" description="" unit="" values="" default="Is Run By"/>
-					<Tag name="DAF::isSatisfiedBy" type="" description="" unit="" values="" default="Is Satisfied By"/>
-					<Tag name="DAF::isOperationalizedBy" type="" description="" unit="" values="" default="Is Operationalized By"/>
-					<Tag name="DAF::isDetailedBy" type="" description="" unit="" values="" default="Is Detailed By"/>
-					<Tag name="DAF::isOrganizedIn" type="" description="" unit="" values="" default="Is Organized In"/>
-					<Tag name="DAF::isPhysicallyHostedBy" type="" description="" unit="" values="" default="Is Physically Hosted By"/>
-					<Tag name="DAF::hosts" type="" description="" unit="" values="" default="Hosts"/>
-					<Tag name="DAF::IncreasesMaturityOf" type="" description="" unit="" values="" default="Increases Maturity Of"/>
-					<Tag name="DAF::isImplementedBy" type="" description="" unit="" values="" default="Is Implemented By"/>
-					<Tag name="DAF::isPerformedBy" type="" description="" unit="" values="" default="Is Performed By"/>
-					<Tag name="DAF::contains" type="" description="" unit="" values="" default="Contains"/>
-					<Tag name="DAF::areOrganizedWithin" type="" description="" unit="" values="" default="Are Organized Within"/>
-					<Tag name="DAF::isScaffoldedIn" type="" description="" unit="" values="" default="Is Scaffolded In"/>
-					<Tag name="DAF::dManyToMany" type="" description="" unit="" values="" default="Many to Many Relationship"/>
-					<Tag name="DAF::isHostedBy" type="" description="" unit="" values="" default="Is Hosted By"/>
-					<Tag name="DAF::isMakingUseOf" type="" description="" unit="" values="" default="Is Making Use Of"/>
-					<Tag name="DAF::Ensure the correct  Operation of(UML::Aggregation)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::isFunctionallyImplementedBy" type="" description="" unit="" values="" default="Is Functionally Implemented By"/>
-					<Tag name="DAF::isMeasuredBy" type="" description="" unit="" values="" default="Is Measured By"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Stategic Planning" notes="Contains Elements for Enterprise Architecture Strategic Planning" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -119,6 +99,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
 					<Tag name="UML::Assembly" type="int" description="" unit="" values="" default="Assembly"/>
 					<Tag name="UML::Association" type="" description="" unit="" values="" default="Association"/>
 					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
@@ -126,6 +107,18 @@
 					<Tag name="UML::Composition" type="int" description="" unit="" values="" default="Composition"/>
 					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
 					<Tag name="UML::Dependency" type="int" description="" unit="" values="" default="Dependency"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Measurement Relationships" alias="Measurement" notes="Contains the elements for Measurement. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dAreaAggregatesCategories(UML::Aggregation)" type="string" description="" unit="" values="" default="Area aggregates Categories"/>
+					<Tag name="DAF::dCategoryaggregatesGroups(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Groups"/>
+					<Tag name="DAF::dGroupAggregatesKPI(UML::Aggregation)" type="string" description="" unit="" values="" default="Group aggregates KPI"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="79E27B62-6" name="DAF Common" version="4.1 ALFA5" alias="DAF  Common" notes="A toolbox for managing all DAF entities"/>
+	<Documentation id="79E27B62-6" name="DAF Common" version="6.0" alias="DAF  Common" notes="A toolbox for managing all DAF entities"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Analysis" alias="Analysis" notes="Contains the list of elements used in Analysis Phase. ">
@@ -10,6 +10,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF:dSkill" type="" description="" unit="" values="" default="Skill"/>
 					<Tag name="DAF::dValueStream" type="" description="" unit="" values="" default="Value Stream"/>
 					<Tag name="DAF::dBusinessProcess" type="" description="" unit="" values="" default="Business Process"/>
 					<Tag name="DAF::dBusinessService" type="" description="" unit="" values="" default="Business Service"/>
@@ -66,6 +67,7 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="DAF::dController" type="" description="" unit="" values="" default="Controller"/>
+					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
 					<Tag name="DAF::dModelClass" type="" description="" unit="" values="" default="ModelClass"/>
 					<Tag name="DAF::dValue" type="" description="" unit="" values="" default="Property"/>
@@ -109,25 +111,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Relationships::isRunBy(UML::Association)" type="" description="" unit="" values="" default="Is Run By"/>
-					<Tag name="DAF::isDescribedBy" type="" description="" unit="" values="" default="Is Described By"/>
-					<Tag name="DAF::isSatisfiedBy" type="" description="" unit="" values="" default="Is Satisfied By"/>
-					<Tag name="DAF::isOperationalizedBy" type="" description="" unit="" values="" default="Is Operationalized By"/>
-					<Tag name="DAF::isDetailedBy" type="" description="" unit="" values="" default="Is Detailed By"/>
-					<Tag name="DAF::isOrganizedIn" type="" description="" unit="" values="" default="Is Organized In"/>
-					<Tag name="DAF::isPhysicallyHostedBy" type="" description="" unit="" values="" default="Is Physically Hosted By"/>
-					<Tag name="DAF::hosts" type="" description="" unit="" values="" default="Hosts"/>
-					<Tag name="DAF::IncreasesMaturityOf" type="" description="" unit="" values="" default="Increases Maturity Of"/>
-					<Tag name="DAF::isImplementedBy" type="" description="" unit="" values="" default="Is Implemented By"/>
-					<Tag name="DAF::isPerformedBy" type="" description="" unit="" values="" default="Is Performed By"/>
-					<Tag name="DAF::contains" type="" description="" unit="" values="" default="Contains"/>
-					<Tag name="DAF::areOrganizedWithin" type="" description="" unit="" values="" default="Are Organized Within"/>
-					<Tag name="DAF::isScaffoldedIn" type="" description="" unit="" values="" default="Is Scaffolded In"/>
-					<Tag name="DAF::dManyToMany" type="" description="" unit="" values="" default="Many to Many Relationship"/>
-					<Tag name="DAF::isHostedBy" type="" description="" unit="" values="" default="Is Hosted By"/>
-					<Tag name="DAF::isMakingUseOf" type="" description="" unit="" values="" default="Is Making Use Of"/>
-					<Tag name="DAF::isFunctionallyImplementedBy" type="" description="" unit="" values="" default="Is Functionally Implemented By"/>
-					<Tag name="DAF::isMeasuredBy" type="" description="" unit="" values="" default="Is Measured By"/>
+					<Tag name="DAF::dTest_ApplicationComponent(UML::Association)" type="" description="" unit="" values="" default="validates Component"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Common Relationships" notes="">
@@ -137,6 +121,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
 					<Tag name="UML::Assembly" type="int" description="" unit="" values="" default="Assembly"/>
 					<Tag name="UML::Association" type="" description="" unit="" values="" default="Association"/>
 					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
@@ -153,6 +138,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
 					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
 					<Tag name="DAF::dResource" type="int" description="" unit="" values="" default="Resource"/>
@@ -170,11 +156,14 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="UML::ActivityFinal" type="" description="" unit="" values="" default="End"/>
+					<Tag name="UML::ActivityInitial" type="" description="" unit="" values="" default="Start"/>
+					<Tag name="UML::Decision" type="" description="" unit="" values="" default="Decision"/>
 					<Tag name="DAF::dAction" type="" description="" unit="" values="" default="Action"/>
 					<Tag name="DAF::dActivity" type="" description="" unit="" values="" default="Activity"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Technology" notes="tools for technology architecture">
+			<Stereotype name="Technology Elements" notes="tools for technology architecture">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
@@ -183,6 +172,7 @@
 				<TaggedValues>
 					<Tag name="DAF::dDeploymentNode(UML::Node)" type="" description="" unit="" values="" default="Node"/>
 					<Tag name="DAF::dLocation(UML::Class)" type="" description="" unit="" values="" default="Location"/>
+					<Tag name="DAF::dNetwork(UML::Node)" type="" description="" unit="" values="" default="Network"/>
 					<Tag name="DAF::dApplicationComponent" type="" description="" unit="" values="" default="Application Component"/>
 					<Tag name="DAF::dSystem" type="" description="" unit="" values="" default="System configuration"/>
 				</TaggedValues>
@@ -209,11 +199,64 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="Relationships::is related to risk(UML::Dependency)" type="" description="" unit="" values="" default="Related Risk"/>
-					<Tag name="Relationships::is related to(UML::Association)" type="" description="" unit="" values="" default="Goal-Req."/>
-					<Tag name="Relationships::isSatisfiedBy(UML::Realization)" type="" description="" unit="" values="" default="Requirement Feature"/>
-					<Tag name="Relationships::realized by Issue(UML::Realization)" type="" description="" unit="" values="" default="Issue- Risk"/>
-					<Tag name="Relationships::StopTheRealizationOf(UML::Association)" type="" description="" unit="" values="" default="Requirement Issue "/>
+					<Tag name="DAF::dFeatureIsRealizedByUseCase(UML::Realization)" type="string" description="" unit="" values="" default="Feature is realized by Use Case"/>
+					<Tag name="DAF::dGoalisOperationalizedByCapability(UML::Realization)" type="string" description="" unit="" values="" default="goal is Operationalized By Capability"/>
+					<Tag name="DAF::dRequirementIsSatisfiedByFeature(UML::Realization)" type="string" description="" unit="" values="" default="is Satisfied By"/>
+					<Tag name="DAF::dGoalhasObjective(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal has Milestone"/>
+					<Tag name="DAF::dGoalAggregatesGoal(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal Aggregates Goal"/>
+					<Tag name="DAF::dIssueStopsRealizationOfRequirement(UML::Association)" type="string" description="" unit="" values="" default="Issue Stops Realization Of Req"/>
+					<Tag name="DAF::dRiskRealizedByIssue(UML::Realization)" type="string" description="" unit="" values="" default="realized by Issue"/>
+					<Tag name="DAF::dRequirementIsRelatedToGoal(UML::Association)" type="string" description="" unit="" values="" default="req related to Goal"/>
+					<Tag name="DAF::dRequirementContainsRequirement(UML::Composition)" type="string" description="" unit="" values="" default="Requirement Contains Req"/>
+					<Tag name="DAF::dRiskIRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
+					<Tag name="DAF::dUseCaseHasStory(UML::Association)" type="string" description="" unit="" values="" default="Use Case Has Story"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stakeholders Relationships" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. ">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActorParticipatesInBizUseCase(UML::Association)" type="string" description="" unit="" values="" default="Actor Participates In Use Case"/>
+					<Tag name="DAF::dRoleIsPerformedByActor(UML::Association)" type="string" description="" unit="" values="" default="Role isPerformed By Actor"/>
+					<Tag name="DAF::dDiscord(UML::Association)" type="string" description="" unit="" values="" default="Discording opinion"/>
+					<Tag name="DAF::dAccord(UML::Association)" type="string" description="" unit="" values="" default="According Opinion"/>
+					<Tag name="DAF::dOrgUnitHasStakeholders(UML::Association)" type="string" description="" unit="" values="" default="Org Unit has Stakeholders"/>
+					<Tag name="DAF::dPhysicalServiceImplementsBusinessService(UML::Realization)" type="string" description="" unit="" values="" default="Physical Serv. Implements Biz Serv."/>
+					<Tag name="DAF::dRoleisAssociatedToOrganization(UML::Association)" type="string" description="" unit="" values="" default="Role is Associated To Organization"/>
+					<Tag name="DAF::dRoleConsumesService(UML::Association)" type="string" description="" unit="" values="" default="Role Consumes Service"/>
+					<Tag name="DAF::dRoleHasSkill(UML::Aggregation)" type="string" description="" unit="" values="" default="Role has skill"/>
+					<Tag name="DAF::dStakeholderHasInnerOpinion(UML::Association)" type="string" description="" unit="" values="" default="Stakeholde Has Inner Opinion"/>
+					<Tag name="DAF::dStakeholderHasOpinion(UML::Association)" type="string" description="" unit="" values="" default="Stakeholder Has Opinion"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stakeholders elements" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. ">
+				<TaggedValues>
+					<Tag name="DAF::dActor(Class)" type="string" description="" unit="" values="" default="Actor"/>
+					<Tag name="DAF::dOrganizationUnit(Class)" type="string" description="" unit="" values="" default="Org Unit"/>
+					<Tag name="DAF::dRole(Class)" type="string" description="" unit="" values="" default="Role"/>
+					<Tag name="DAF::dSkill(Class)" type="string" description="" unit="" values="" default="Skill"/>
+					<Tag name="DAF::dStakeholder(Class)" type="string" description="" unit="" values="" default="Stakeholder"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Process Relationships" alias="Diagram" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActivityContainsAction(UML::Composition)" type="string" description="" unit="" values="" default="Activity contains Action"/>
+					<Tag name="DAF::dProcessOrchestratesService(UML::Aggregation)" type="string" description="" unit="" values="" default="Process Orchestrates Service"/>
+					<Tag name="DAF::dProcessFlowsToProcess(UML::Dependency)" type="string" description="" unit="" values="" default="Process Flows to Process"/>
+					<Tag name="DAF::dBizServUsesDataEntity(UML::Association)" type="string" description="" unit="" values="" default="Service Uses Data"/>
+					<Tag name="DAF::dRelatedService(UML::Association)" type="string" description="" unit="" values="" default="Child Process"/>
+					<Tag name="DAF::dBizServIsDescribedByUseCase(UML::Realization)" type="string" description="" unit="" values="" default="Biz Serv Is Described By Use Case"/>
+					<Tag name="DAF::dUseCaseContainsActivities(UML::Composition)" type="string" description="" unit="" values="" default="Use Case Contains Activities"/>
+					<Tag name="DAF::dEventTriggersProcess(UML::Association)" type="string" description="" unit="" values="" default="Event Triggers Process"/>
+					<Tag name="DAF::dLogAppCompExposesBizService(UML::Association)" type="string" description="" unit="" values="" default="exposes Biz Service"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>
