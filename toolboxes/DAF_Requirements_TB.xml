@@ -1,15 +1,16 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="6.0" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
+	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="6.0.1" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" cx="190" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" cx="225" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dObjective(UML::Class)" type="" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dGoal" type="" description="" unit="" values="" default="Goal"/>
 					<Tag name="DAF::dRequirement" type="" description="" unit="" values="" default="Requirement"/>
 					<Tag name="DAF::dFeature" type="" description="" unit="" values="" default="Feature"/>
