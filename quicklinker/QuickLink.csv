@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2025-01-21 4:07:02 PM
+//generated:2025-08-05 4:52:45 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -20,11 +20,11 @@ Interface,dAPI,Class,dJSON_Schema,,,,Aggregation,dAPIAggregatesSchema,from,Aggre
 Class,dJSON_Schema,Interface,dAPI,,,,Aggregation,dAPIAggregatesSchema,to,is aggregates in API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dAPI,,,,Class,dJSON_Schema,Aggregation,dAPIAggregatesSchema,from,,Aggregates Schema,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dJSON_Schema,,,,Interface,dAPI,Aggregation,dAPIAggregatesSchema,to,,is aggregates in API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dAPI ->  -> dPhysicalService
-Interface,dAPI,Interface,dPhysicalService,,,,Realization,,directed,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,Interface,dAPI,,,,Realization,,from,,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Interface,dAPI,,,,Interface,dPhysicalService,Realization,,directed,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Interface,dPhysicalService,,,,Interface,dAPI,Realization,,from,,,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dAPI -> dServiceRealizedByAPI -> dPhysicalService
+Interface,dAPI,Interface,dPhysicalService,,,,Realization,dServiceRealizedByAPI,directed,realized Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,Interface,dAPI,,,,Realization,dServiceRealizedByAPI,from,is realized By API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Interface,dAPI,,,,Interface,dPhysicalService,Realization,dServiceRealizedByAPI,directed,,realized Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Interface,dPhysicalService,,,,Interface,dAPI,Realization,dServiceRealizedByAPI,from,,is realized By API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationComponentRealizesogicalComponent -> dLogicalAppComponent
 Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
