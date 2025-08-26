@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="6.0" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
+	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="6.1.4" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Analysis" alias="Analysis" notes="Contains the list of elements used in Analysis Phase. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -41,6 +41,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dObjective(UML::Class)" type="" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dGoal" type="" description="" unit="" values="" default="Goal"/>
 					<Tag name="DAF::dRequirement" type="" description="" unit="" values="" default="Requirement"/>
 					<Tag name="DAF::dFeature" type="" description="" unit="" values="" default="Feature"/>
@@ -81,15 +82,17 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dBusinessArea(UML::Class)" type="" description="" unit="" values="" default="Biz Area"/>
 					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
 					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
-					<Tag name="DAF::dResource" type="int" description="" unit="" values="" default="Resource"/>
+					<Tag name="DAF::dResource" type="" description="" unit="" values="" default="Resource"/>
 					<Tag name="DAF::dProduct" type="" description="" unit="" values="" default="Product"/>
 					<Tag name="DAF::dProgram" type="" description="" unit="" values="" default="Program"/>
 					<Tag name="DAF::dGrowthPackage" type="" description="" unit="" values="" default="Growth Package"/>
 					<Tag name="DAF::dInitiative" type="" description="" unit="" values="" default="Initiative"/>
 					<Tag name="DAF::dPrinciple" type="" description="" unit="" values="" default="Principle"/>
+					<Tag name="DAF::dValueStream(UML::Class)" type="" description="" unit="" values="" default="Value Stream"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Common Relationships" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2025-08-05 4:52:45 PM
+//generated:2025-08-25 9:34:38 AM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -60,6 +60,11 @@ Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComp
 Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessArea -> dBusinessAreadHasCapability -> dCapability
+Class,dBusinessArea,Class,dCapability,,,,Aggregation,dBusinessAreadHasCapability,from,has Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Class,dBusinessArea,,,,Aggregation,dBusinessAreadHasCapability,to,is organized in Biz Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessArea,,,,Class,dCapability,Aggregation,dBusinessAreadHasCapability,from,,has Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dBusinessArea,Aggregation,dBusinessAreadHasCapability,to,,is organized in Biz Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessProcess -> dProcessOrchestratesService -> dBusinessService
 Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,dProcessOrchestratesService,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,dProcessOrchestratesService,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -425,11 +430,6 @@ Class,dSubNetwork,Class,dIPRange,,,,Aggregation,dSubNetworkAggregatesIPRange,fro
 Class,dIPRange,Class,dSubNetwork,,,,Aggregation,dSubNetworkAggregatesIPRange,to,is Aggregated in sub Net.,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dSubNetwork,,,,Class,dIPRange,Aggregation,dSubNetworkAggregatesIPRange,from,,Aggregates IP Range,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dIPRange,,,,Class,dSubNetwork,Aggregation,dSubNetworkAggregatesIPRange,to,,is Aggregated in sub Net.,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dTable -> dEntityisFunctionallyImplementedByTable -> dDataEntity
-Class,dTable,Class,dDataEntity,,,,Realization,dEntityisFunctionallyImplementedByTable,directed,Implements Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,Class,dTable,,,,Realization,dEntityisFunctionallyImplementedByTable,from,is Functionally Implemented By Table,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dTable,,,,Class,dDataEntity,Realization,dEntityisFunctionallyImplementedByTable,directed,,Implements Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dDataEntity,,,,Class,dTable,Realization,dEntityisFunctionallyImplementedByTable,from,,is Functionally Implemented By Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dTest -> dTest_ApplicationComponent -> dApplicationComponent
 Class,dTest,Component,dApplicationComponent,,,,Association,dTest_ApplicationComponent,directed,Test validates Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,Class,dTest,,,,Association,dTest_ApplicationComponent,from,is validated by test,,TRUE,,TRUE,TRUE,DAF,0,,,,,
