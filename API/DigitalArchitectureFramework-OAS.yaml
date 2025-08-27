@@ -93,7 +93,7 @@ paths:
       summary: Deletes an existing dAPI record based on the provided ID.
       operationId: DeletedAPI
       parameters:
-        - $ref: '#/components/parameters/ID'
+        - $ref: '#/components/parameters/id'
       responses:
         '200':
           $ref: '#/components/responses/200dAPI_delete'
@@ -813,7 +813,7 @@ paths:
       summary: Deletes an existing dActor record based on the provided ID.
       operationId: DeletedActor
       parameters:
-        - $ref: '#/components/parameters/ID'
+        - $ref: '#/components/parameters/id'
       responses:
         '200':
           $ref: '#/components/responses/200dActor_delete'
@@ -4751,14 +4751,6 @@ components:
     Error:
       description: Error
   parameters:
-    ID:
-      name: id
-      required: true
-      description: >-
-        TODO
-      schema:
-        type: string
-      in: query
     id:
       name: id
       required: true
