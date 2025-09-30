@@ -72,7 +72,7 @@ INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
 INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dFeature'
 AND  o2.Stereotype = 'dRequirement'
-AND connector.Stereotype= 'isSatisfiedBy'
+AND connector.Stereotype= 'dRequirementIsSatisfiedByFeature'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

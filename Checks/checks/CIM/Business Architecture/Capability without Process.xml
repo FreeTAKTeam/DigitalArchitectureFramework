@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>081</CheckId>
-  <CheckDescription>Capability without Process</CheckDescription>
+  <CheckId>09</CheckId>
+  <CheckDescription>Biz Area without Capability</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o.ea_guid AS ItemGuid
 FROM t_object o
@@ -11,7 +11,7 @@ LEFT JOIN t_package Package_p2 ON Package_p2.Package_ID = Package_p1.Parent_ID
 LEFT JOIN t_package Package_p3 ON Package_p3.Package_ID = Package_p2.Parent_ID
 LEFT JOIN t_package Package_p4 ON Package_p4.Package_ID = Package_p3.Parent_ID
 LEFT JOIN t_package Package_p5 ON Package_p5.Package_ID = Package_p4.Parent_ID
-WHERE o.StereoType= 'dCapability'</Main>
+WHERE o.StereoType= 'dBusinessArea'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -78,13 +78,13 @@ SELECT o.Object_ID
 FROM t_object AS o
 INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
 INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
-WHERE o.Stereotype = 'dCapability'
-AND  o2.Stereotype = 'dBusinessProcess'
-AND connector.Stereotype= 'Ensure the correct Operation of'
+WHERE o.Stereotype = 'dBusinessArea'
+AND  o2.Stereotype = 'dCapability'
+AND connector.Stereotype= 'dBusinessAreadHasCapability'
 )		</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
-  <WarningType>Error</WarningType>
-  <Rationale>A process ensure the operation of a business capability</Rationale>
+  <WarningType>Warning</WarningType>
+  <Rationale>Am area aggregatyes  business capabilities</Rationale>
   <ProposedSolution>Add the necessary relationships.</ProposedSolution>
 </Check>

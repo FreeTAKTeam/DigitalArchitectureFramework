@@ -72,7 +72,7 @@ INNER JOIN t_connector as connector ON o2.Object_ID = connector.End_Object_ID
 INNER JOIN t_object AS o ON connector.Start_Object_ID =  o.Object_ID
 WHERE o.Stereotype='dCapability'
 AND  o2.Stereotype='dGoal'
-AND connector.Stereotype= 'isOperationalizedBy'
+AND connector.Stereotype= 'dGoalisOperationalizedByCapability'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>082</CheckId>
-  <CheckDescription>Capability without Application</CheckDescription>
+  <CheckId>10</CheckId>
+  <CheckDescription>Resource without Capability </CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o.ea_guid AS ItemGuid
 FROM t_object o
@@ -11,7 +11,7 @@ LEFT JOIN t_package package_p2 ON package_p2.Package_ID = package_p1.Parent_ID
 LEFT JOIN t_package package_p3 ON package_p3.Package_ID = package_p2.Parent_ID
 LEFT JOIN t_package package_p4 ON package_p4.Package_ID = package_p3.Parent_ID
 LEFT JOIN t_package package_p5 ON package_p5.Package_ID = package_p4.Parent_ID
-WHERE o.StereoType= 'dCapability'</Main>
+WHERE o.StereoType= 'dResource'</Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -78,13 +78,13 @@ SELECT o.Object_ID
 FROM t_object AS o
 INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
 INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
-WHERE o.Stereotype = 'dCapability'
-AND  o2.Stereotype = 'dLogicalAppComponent'
-AND connector.Stereotype= 'Supports Capability'
+WHERE o.Stereotype ='dResource'
+AND  o2.Stereotype =  'dCapability'
+AND connector.Stereotype= 'dResourceSupportsCapability'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
-  <WarningType>Error</WarningType>
+  <WarningType>Warning</WarningType>
   <Rationale>A logical application should support the business capability</Rationale>
   <ProposedSolution>Add the necessary relationships.</ProposedSolution>
 </Check>
