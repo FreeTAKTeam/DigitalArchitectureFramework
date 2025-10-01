@@ -19,8 +19,7 @@ LEFT JOIN
 LEFT JOIN 
     t_package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id
 WHERE 
-    o.Object_Type = 'UseCase'
-    AND      o.Stereotype = 'dBusinessUseCase' </Main>
+   o.Stereotype = 'dBusinessUseCase' </Main>
     <Filters>
       <Change>
 				AND o.ea_guid in (
@@ -88,9 +87,7 @@ SELECT         o.ea_guid
         INNER JOIN             t_diagram d ON d.Diagram_ID = do.Diagram_ID
         INNER JOIN             t_diagramobjects do2 ON do2.Diagram_ID = d.Diagram_ID
         INNER JOIN             t_object o2 ON o2.Object_ID = do2.Object_ID
-        WHERE          o.Object_Type = 'UseCase'
-            AND d.Diagram_Type = 'Use Case'
-            AND               o.Stereotype = 'dBusinessUseCase' 
+        WHERE                 o.Stereotype = 'dBusinessUseCase' 
             AND o2.Object_Type = 'Boundary'
             AND do2.RectRight &gt;= do.RectRight
             AND do2.RectLeft &lt;= do.RectLeft

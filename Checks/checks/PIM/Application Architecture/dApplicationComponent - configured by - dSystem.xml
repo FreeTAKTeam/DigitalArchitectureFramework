@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>015</CheckId>
-  <CheckDescription>System configured by ApplicationComponent  </CheckDescription>
+  <CheckDescription>System configuring an Application Component  </CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -72,12 +72,12 @@ INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
 INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dSystem'
 AND  o2.Stereotype = 'dApplicationComponent'
-AND connector.Stereotype=  'configured by' 
+AND connector.Stereotype=  'dApplicationconfiguredbySystemConfiguration' 
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>a 'dApplicationComponent' element should be connected to a 'dSystem' element by a 'configured by' Connector</Rationale>
+  <Rationale>a 'dApplicationComponent' element should be configured by a 'dSystem' element by a 'configured by' Connector</Rationale>
   <ProposedSolution>Create missing connection</ProposedSolution>
   <HelpUrl>https://github.com/FreeTAKTeam/DigitalArchitectureFramework</HelpUrl>
 </Check>

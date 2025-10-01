@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
-  <CheckId>07</CheckId>
+  <CheckId>001</CheckId>
   <CheckDescription>Initiative IncreasesMaturityOf Capability</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
@@ -68,11 +68,11 @@ AND  o.EA_GUID NOT IN
 (
 SELECT o.EA_GUID
 FROM t_object AS o
-INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
-INNER JOIN t_object AS o2 ON connector.End_Object_ID
+INNER JOIN t_connector AS connector ON o.Object_ID = connector.Start_Object_ID
+INNER JOIN t_object AS o2 ON connector.End_Object_ID = o2.Object_ID
 WHERE o.Stereotype = 'dInitiative'
 AND  o2.Stereotype = 'dCapability'
-AND connector.Stereotype= 'IncreasesMaturityOf'
+AND connector.Stereotype= 'dInitiativeIncreasesMaturityOf'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

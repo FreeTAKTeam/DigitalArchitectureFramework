@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>001</CheckId>
-  <CheckDescription>Feature is realized by Business Use Case </CheckDescription>
+  <CheckDescription> Business Use Case is is realizing Feature</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT DISTINCT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -72,7 +72,7 @@ INNER JOIN t_connector as connector ON o.Object_ID = connector.Start_Object_ID
 INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dBusinessUseCase'
 AND  o2.Stereotype = 'dFeature'
-AND connector.Stereotype= 'is realized by Use Case'
+AND connector.Stereotype= 'dFeatureIsRealizedByUseCase'
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
