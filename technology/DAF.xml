@@ -1,5 +1,5 @@
 <?xml  version='1.0' encoding='utf-8' ?>
-<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="6.2.1" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2CJgAAAAAAADYAAAAoAAAAOQAAADkAAAABABgAAAAAAEwmAADDDgAAww4A
+<MDG.Technology version="1.0"><Documentation id="DAF" name="DigitalArchitectureFramework" version="6.3" notes="the Digital Architecture Framework (DAF) is an UML profile covering Enterprise Architecture, Business Analysis and Solution Architecture. It derives from TOGAF, BizBOZ, RUP and OpenUP connecting those standards in a tailored, consistent language." infoURI="github.com/FreeTAKTeam/DigitalArchitectureFramework" supportURI="borthercorvo@gmail.com"/><Logo><Image type="bitmap" xmlns:dt="urn:schemas-microsoft-com:datatypes" dt:dt="bin.base64">Qk2CJgAAAAAAADYAAAAoAAAAOQAAADkAAAABABgAAAAAAEwmAADDDgAAww4A
 AAAAAAAAAAAA////////////////////////////////////////////////
 ////////////////////////////////////8/Pz4eHhzc3Nubm5q6uroKCg
 mJiYlJSUmJiYoKCgq6urubm5zc3N4eHh8/Pz////////////////////////
@@ -6745,7 +6745,7 @@ AQAAOgEAAHUBAABIAQAAdAEAAFYBAABZAQAAVAEAACIAAAAMAAAA/////xQA
 AAAMAAAADQAAAEYAAAAcAAAAEAAAAEVNRisCQAAADAAAAAAAAAAOAAAAFAAA
 AAAAAAAQAAAAFAAAAA==
 </Column></DataRow></DataSet></RefData></Images><DiagramProfile><UMLProfile profiletype="uml2">
-	<Documentation id="A10AB80D-1" name="DAF Business Architecture" version="6.0 ALFA 3" notes="DAF Business Architecture"/>
+	<Documentation id="A10AB80D-1" name="DAF Business Architecture" version="6.1" notes="diagrams for business architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Application Use-Case" notes="An Application Use-Case diagram displays the relationships between consumers and providers of application services. Application services are consumed by actors or other application ser vices and the Application Use-Case diagram provides added richness in describing application functionality by illustrating how and when that functionality is used.&#xA;The purpose of the Application Use-Case diagram is to help to describe and validate the interaction between actors and their roles with applications. As the architecture progresses, the use-case can evolve from functional information to include technical realization detail.&#xA;Application use-cases can also be re-used in more detailed systems design work.&#xA;">
@@ -6795,6 +6795,31 @@ AAAAAAAQAAAAFAAAAA==
 				<AppliesTo>
 					<Apply type="Diagram_Logical">
 						<Property name="toolbox" value="DAF_StrategicPlanning"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Portfolio Canvas" alias="Diagram" notes="The Portfolio Canvas is a type of Business Model Canvas that has been adapted to charter and describe the structure and purpose of a SAFe portfolio. The portfolio canvas describes how a portfolio of solutions creates, delivers, and captures value for an organization. It also helps define and align the portfolio’s Value Streams and Solutions to the goals of the enterprise.">
+				<AppliesTo>
+					<Apply type="Diagram_Custom">
+						<Property name="toolbox" value="DAF_Business_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Motivation Model" alias="Diagram" notes=" Motivation Model is a strategic framework that outlines the rationale behind a business initiative and guides its transformation. It helps organizations understand why change is needed, how to achieve it, what outcomes are expected, and how to measure success. ">
+				<AppliesTo>
+					<Apply type="Diagram_Custom">
+						<Property name="toolbox" value="DAF_Business_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Stakeholder Analysis" alias="Diagram" notes="A diagram for managing stkeholders">
+				<AppliesTo>
+					<Apply type="Diagram_Analysis">
+						<Property name="pdata" value="HideStereo=1;"/>
+						<Property name="styleex" value="HideConnStereotype=1;"/>
+						<Property name="alias" value="Requirement Issue Diagram"/>
+						<Property name="diagramID" value="DAF-BA-REQ"/>
+						<Property name="toolbox" value="DAF_StakeHolder_Management"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
@@ -7677,6 +7702,50 @@ AAAAAAAQAAAAFAAAAA==
 					<Tag name="DAF::dRequirementContainsRequirement(UML::Composition)" type="string" description="" unit="" values="" default="Requirement Contains Req"/>
 					<Tag name="DAF::dRiskIRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
 					<Tag name="DAF::dUseCaseHasStory(UML::Association)" type="string" description="" unit="" values="" default="Use Case Has Story"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile><UMLProfile profiletype="uml2">
+	<Documentation id="A062476C-7" name="DAF_StakeHolder_Management" version="1.0" alias="DAF Stakeholders " notes="a DAF toolbook for Stakeholder Management"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Stakeholders elements" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActor(Class)" type="string" description="" unit="" values="" default="Actor"/>
+					<Tag name="DAF::dOpinion(UML::Class)" type="" description="" unit="" values="" default="Opinion"/>
+					<Tag name="DAF::dOpinionInner(UML::Class)" type="" description="" unit="" values="" default="Inner Opinion"/>
+					<Tag name="DAF::dOrganizationUnit(Class)" type="string" description="" unit="" values="" default="Org Unit"/>
+					<Tag name="DAF::dRole(Class)" type="string" description="" unit="" values="" default="Role"/>
+					<Tag name="DAF::dSkill(Class)" type="string" description="" unit="" values="" default="Skill"/>
+					<Tag name="DAF::dStakeholder(Class)" type="string" description="" unit="" values="" default="Stakeholder"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stakeholder Relationships" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActorParticipatesInBizUseCase(UML::Association)" type="" description="" unit="" values="" default="Actor Participates In Use Case"/>
+					<Tag name="DAF::dRoleIsPerformedByActor(UML::Association)" type="" description="" unit="" values="" default="Role isPerformed By Actor"/>
+					<Tag name="DAF::dRoleExecutesCapability(UML::Aggregation)" type="" description="" unit="" values="" default="role Executes Capability"/>
+					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="" description="" unit="" values="" default="Schema Generalization"/>
+					<Tag name="DAF::dDiscord(UML::Association)" type="" description="" unit="" values="" default="Discording opinion"/>
+					<Tag name="DAF::dAccord(UML::Association)" type="" description="" unit="" values="" default="According Opinion"/>
+					<Tag name="DAF::dRoleConsumesService(UML::Association)" type="" description="" unit="" values="" default="Role Consumes Service"/>
+					<Tag name="DAF::dRoleHasSkill(UML::Aggregation)" type="" description="" unit="" values="" default="Role has skill"/>
+					<Tag name="DAF::dStakeholderHasInnerOpinion(UML::Association)" type="" description="" unit="" values="" default="Stakeholder Has Inner Opinion"/>
+					<Tag name="DAF::dStakeholderHasOpinion(UML::Association)" type="" description="" unit="" values="" default="Stakeholder Has Opinion"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

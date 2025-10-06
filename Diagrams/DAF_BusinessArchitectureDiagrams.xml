@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A10AB80D-1" name="DAF Business Architecture" version="6.0 ALFA 3" notes="DAF Business Architecture"/>
+	<Documentation id="A10AB80D-1" name="DAF Business Architecture" version="6.1" notes="diagrams for business architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Application Use-Case" notes="An Application Use-Case diagram displays the relationships between consumers and providers of application services. Application services are consumed by actors or other application ser vices and the Application Use-Case diagram provides added richness in describing application functionality by illustrating how and when that functionality is used.&#xA;The purpose of the Application Use-Case diagram is to help to describe and validate the interaction between actors and their roles with applications. As the architecture progresses, the use-case can evolve from functional information to include technical realization detail.&#xA;Application use-cases can also be re-used in more detailed systems design work.&#xA;">
@@ -50,6 +50,31 @@
 				<AppliesTo>
 					<Apply type="Diagram_Logical">
 						<Property name="toolbox" value="DAF_StrategicPlanning"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Portfolio Canvas" alias="Diagram" notes="The Portfolio Canvas is a type of Business Model Canvas that has been adapted to charter and describe the structure and purpose of a SAFe portfolio. The portfolio canvas describes how a portfolio of solutions creates, delivers, and captures value for an organization. It also helps define and align the portfolio’s Value Streams and Solutions to the goals of the enterprise.">
+				<AppliesTo>
+					<Apply type="Diagram_Custom">
+						<Property name="toolbox" value="DAF_Business_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Motivation Model" alias="Diagram" notes=" Motivation Model is a strategic framework that outlines the rationale behind a business initiative and guides its transformation. It helps organizations understand why change is needed, how to achieve it, what outcomes are expected, and how to measure success. ">
+				<AppliesTo>
+					<Apply type="Diagram_Custom">
+						<Property name="toolbox" value="DAF_Business_Architecture_TB"/>
+					</Apply>
+				</AppliesTo>
+			</Stereotype>
+			<Stereotype name="Stakeholder Analysis" alias="Diagram" notes="A diagram for managing stkeholders">
+				<AppliesTo>
+					<Apply type="Diagram_Analysis">
+						<Property name="pdata" value="HideStereo=1;"/>
+						<Property name="styleex" value="HideConnStereotype=1;"/>
+						<Property name="alias" value="Requirement Issue Diagram"/>
+						<Property name="diagramID" value="DAF-BA-REQ"/>
+						<Property name="toolbox" value="DAF_StakeHolder_Management"/>
 					</Apply>
 				</AppliesTo>
 			</Stereotype>
