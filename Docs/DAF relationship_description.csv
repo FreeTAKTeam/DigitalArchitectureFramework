@@ -1,0 +1,52 @@
+Technical name,Human Name,notes,Destination Role,Source Role
+dContainerAggregatesVolume,Container Aggregates Volume, ,Aggregates Volume,is Aggregated in Container
+dNetworkHasSecurityGroup,Network Has Security Group, ,Has Security Group,is associated to Network
+dIssueStopsRealizationOfRequirement,Issue Stops Realization Of Req, ,stop Requirement,is stopped by Issue
+dRequirementIsRelatedToGoal,req related to Goal, ,specifies Goal,is specified by Requirement
+dRequirementIsSatisfiedByFeature,is Satisfied By, ,realizes Requirement,is realized by Feature
+dProgramIsOrganizedInPackages,Program is organized In Packages, ,is organized In Packages,part of a Program
+dPackageIsDeliveredByInitiative,Package is delivered by Initiative, , is delivered by Initiative,is part of a Package
+dInitiativeisMakingUseOfDecision,Initiative is Making Use Of Decision, ,is used in Initiative,Makes Use Of Decision
+dDecisionRefersToPrinciple,Decision refers To Principle, ,refers To Principle,is referenced by Decision
+dApplicationComponentRealizesogicalComponent,Realizes Component, ,Realizes Logical component,is Realized by Component
+dUseCaseHasStory,Use Case Has Story, ,Is associated to Use Case,Can be told as User Story
+dBizServIsDescribedByUseCase,Biz Serv Is Described By Use Case, ,Has service,described by Use Case
+dProcessOrchestratesService,Process Orchestrates Service, ,Has Service,part of Process
+dProcessEnsureCorrectOperationOfCapability,Ensure the correct Operation of, ,is operated by Process,Ensure the correct  Operation of Capability
+dCapabilityisMeasuredByKPI,is Measured By KPI, ,is Measured By Indicator,is measuring Capability
+dGroupAggregatesKPI,Group aggregates KPI, ,aggregates KPI,part of a Grouping
+dCategoryaggregatesGroups,aggregates Groups, ,aggregates Groups,has Category
+dAreaAggregatesCategories,Area aggregates Categories, ,aggregates categories,has Measurement Area
+dRoleExecutesCapability,role Executes Capability, ,is executed by Role,executes Capability
+dRoleisAssociatedToOrganization,Role is Associated To Organization, ,works in Organization, has Role
+dProductIncludesProcess,Product Includes Process, ,Includes Process,Is part of Product
+dOrgUnitHasStakeholders,Org Unit has Stakeholders, ,has Stakeholder,is concerned with Organization
+dStakeholderHasInnerOpinion,Stakeholde Has Inner Opinion, ,Has Inner Opinion,is thinked by Stakeholder
+dDiscord,Discording opinion, ,is in discord with other Opinion,is in discord with Original Opinion
+dApplicationIRunsInNode,Application is run By Node, ,Runs Application,is run By Node
+dBizServUsesDataEntity,Service Uses Data, ,uses Data,is used by service
+dModelClassRealizesEntity,Model Class Realizes Entity, ,Realizes Entity,is realized by Class
+dEntityisFunctionallyImplementedByTable,Entity is Functionally Implemented By Table, ,Implements Entity,is Functionally Implemented By Table
+dPhysicalServiceImplementsBusinessService,Physical Serv. Implements Biz Serv., ,Implement Biz Service,is Implemented by physical service
+dControllerImplementsFunction,controller Implements function, ,Implements function,has Controller
+dControllerGovernsView,Governs View, ,Governs view,is Governed by Controller
+dControllerControllsModel,Controlls Model, ,Controlls Model,is controlled by Controller
+dActorParticipatesInBizUseCase,Actor Participates In Use Case, ,Partecipates in Use Case,is executed by Actor
+dRoleIsPerformedByActor,Role isPerformed By Actor, ,has Role,is executed by Actor
+dUseCaseContainsActivities,Use Case Contains Activities, ,has Activitiy,part of UseCase
+dApplicationconfiguredbySystemConfiguration,Application configured by System Configuration, ,has configuration,configures Application
+dBusinessAreadHasCapability,has Capability, ,has Capability,is organized in Biz Area
+dRoleConsumesService,Role Consumes Service, ,Consumes Service,is consumed by Role
+dLogAppCompExposesBizService,exposes Biz Service, ,application runs service,service run by application
+dLocationHostsNode,Location Hosts Node, , Hosts Node,Is hosted in Location
+dEventTriggersProcess,Event Triggers Process, ,triggers Process,is triggered by Event
+dTableProvidesPersistenceForModelClass,Table Provides Persistence to Model, ,is Saved in a Table,Provides Persistence For Model
+dAccord,According Opinion, ,is in accord with other Opinion,is in accord with original Opinion
+dInitiativeIncreasesMaturityOf,Initiative Increases Maturity Of Capability, ,Increases Maturity Of Capability,is matured by Initiative
+dGoalisOperationalizedByCapability,goal is Operationalized By Capability, ,support Goal,is Operationalized By Capability
+dUseCaseisImplementedByController,Use Case is Implemented B yController, ,implements Use Case,Is implemented by Controller
+dLogicalApplicationComponentSupportsCapability,App Supports Capability, ,supported by Application,supports Capability
+dStakeholderHasOpinion,Stakeholder Has Opinion, ,Has Opinion,is expressed by Stakeholder
+dValueStreamIncludesProcesses,Value Stream Includes Processes, ,Includes Process,is part of Value Stream
+dGoalhasObjective,Goal has Milestone, ,Has Objective,is related to Goal
+dEntityAssociatesEntity,Entity Associates Entity, ,Is connected to Source Entity,Is connected to Target Entity

@@ -1,0 +1,1846 @@
+{
+    "$defs": {
+        "ActorTypes": {
+            "properties": {
+                "Active Business Partner": {
+                    "type": "string"
+                },
+                "Business Partner": {
+                    "type": "string"
+                },
+                "External Worker": {
+                    "type": "string"
+                },
+                "Internal Worker": {
+                    "type": "string"
+                },
+                "Not Set": {
+                    "type": "string"
+                },
+                "Passive Business Partner": {
+                    "type": "string"
+                },
+                "Worker": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "CapabilityBusinessValue": {
+            "properties": {
+                "Differentiator": {
+                    "type": "integer"
+                },
+                "High": {
+                    "type": "integer"
+                },
+                "Low": {
+                    "type": "integer"
+                },
+                "Medium": {
+                    "type": "integer"
+                },
+                "Support": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "Contact": {
+            "properties": {
+                "eMail": {
+                    "type": "string"
+                },
+                "Name": {
+                    "type": "string"
+                },
+                "URL": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DActivity": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DActor": {
+            "properties": {
+                "#FTEs": {
+                    "default": "5",
+                    "type": "string"
+                },
+                "ActorGoal": {
+                    "type": "string"
+                },
+                "ActorTasks": {
+                    "type": "string"
+                },
+                "ActorType": {
+                    "$ref": "#/$defs/ActorTypes",
+                    "default": "Not Set"
+                },
+                "has Role": {
+                    "$ref": "#/$defs/DRole"
+                },
+                "Partecipates in Use Case": {
+                    "$ref": "#/$defs/DBusinessUseCase"
+                }
+            },
+            "type": "object"
+        },
+        "DAPI": {
+            "properties": {
+                "Aggregates Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "basePath": {
+                    "type": "string"
+                },
+                "consumes": {
+                    "$ref": "#/$defs/MimeTypes",
+                    "default": "application/json"
+                },
+                "contact": {
+                    "$ref": "#/$defs/Contact"
+                },
+                "definitions": {
+                    "type": "string"
+                },
+                "Full Name": {
+                    "type": "integer"
+                },
+                "host": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "license": {
+                    "type": "integer"
+                },
+                "parameters": {
+                    "type": "string"
+                },
+                "produces": {
+                    "$ref": "#/$defs/MimeTypes",
+                    "default": "application/json"
+                },
+                "realized Physical Service": {
+                    "$ref": "#/$defs/DPhysicalService"
+                },
+                "responses": {
+                    "type": "string"
+                },
+                "schemes": {
+                    "type": "string"
+                },
+                "securityDefinitions": {
+                    "type": "string"
+                },
+                "swagger": {
+                    "type": "string"
+                },
+                "tags": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DApplicationComponent": {
+            "properties": {
+                "aggregates Function": {
+                    "$ref": "#/$defs/DApplicationFunction"
+                },
+                "ApplicationType": {
+                    "$ref": "#/$defs/DApplicationType",
+                    "default": "Custom"
+                },
+                "BizCriticality": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "BizSatisfaction": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "Category": {
+                    "type": "string"
+                },
+                "connected From Application": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                },
+                "Connected to Application": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                },
+                "Cost": {
+                    "default": "10",
+                    "type": "string"
+                },
+                "has configuration": {
+                    "$ref": "#/$defs/DSystem"
+                },
+                "Has Container": {
+                    "$ref": "#/$defs/DContainer"
+                },
+                "has Risk": {
+                    "$ref": "#/$defs/DRisk"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "InvestmentStrategy": {
+                    "$ref": "#/$defs/DApplicationStrategy",
+                    "default": "Retain"
+                },
+                "is exposed by Application": {
+                    "$ref": "#/$defs/DPhysicalService"
+                },
+                "is run By Node": {
+                    "$ref": "#/$defs/DDeploymentNode"
+                },
+                "is validated by test": {
+                    "$ref": "#/$defs/DTest"
+                },
+                "ITSatisfaction": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "LastStandardReviewDate": {
+                    "type": "string"
+                },
+                "NextStandardReviewDate": {
+                    "type": "string"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "owns Application": {
+                    "$ref": "#/$defs/DStakeholder"
+                },
+                "Port": {
+                    "type": "integer"
+                },
+                "Realizes Logical component": {
+                    "$ref": "#/$defs/DLogicalAppComponent"
+                },
+                "RetireDate": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DApplicationFunction": {
+            "properties": {
+                "has Controller": {
+                    "$ref": "#/$defs/DController"
+                },
+                "part of Application": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                }
+            },
+            "type": "object"
+        },
+        "DApplicationStrategy": {
+            "properties": {
+                "Refactor": {
+                    "type": "string"
+                },
+                "Rehost": {
+                    "type": "string"
+                },
+                "Replatform": {
+                    "type": "string"
+                },
+                "Retain": {
+                    "type": "string"
+                },
+                "Retire": {
+                    "type": "string"
+                },
+                "Rewrite": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DApplicationType": {
+            "properties": {
+                "Core": {
+                    "type": "string"
+                },
+                "COTS": {
+                    "type": "string"
+                },
+                "Custom": {
+                    "type": "string"
+                },
+                "DB": {
+                    "type": "string"
+                },
+                "Instance": {
+                    "type": "string"
+                },
+                "Module": {
+                    "type": "string"
+                },
+                "Web Site": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DAssumptionType": {
+            "properties": {
+                "Application": {
+                    "type": "integer"
+                },
+                "Business": {
+                    "type": "integer"
+                },
+                "Data": {
+                    "type": "integer"
+                },
+                "Enterprise": {
+                    "type": "integer"
+                },
+                "System": {
+                    "type": "integer"
+                },
+                "Technology": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "Dboolean": {
+            "properties": {
+                "false": {
+                    "type": "string"
+                },
+                "true": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DBusinessArea": {
+            "properties": {
+                "has Capability": {
+                    "$ref": "#/$defs/DCapability"
+                }
+            },
+            "type": "object"
+        },
+        "DBusinessProcess": {
+            "properties": {
+                "Category": {
+                    "type": "string"
+                },
+                "Ensure the correct  Operation of Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "Has Service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "Is part of Product": {
+                    "$ref": "#/$defs/DProduct"
+                },
+                "is part of Value Stream": {
+                    "$ref": "#/$defs/DValueStream"
+                },
+                "is triggered by Event": {
+                    "$ref": "#/$defs/DEvent"
+                },
+                "isAdopted": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "isDocumented": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "isEffective": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "isOptimized": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "LastStandardReviewDate": {
+                    "type": "string"
+                },
+                "NextStandardReviewDate": {
+                    "type": "string"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "ProcessCriticality": {
+                    "$ref": "#/$defs/ProcessCriticality",
+                    "default": "unknow"
+                },
+                "ProcessType": {
+                    "$ref": "#/$defs/DProcessType"
+                },
+                "ProcessVolumetrics": {
+                    "type": "string"
+                },
+                "RetireDate": {
+                    "type": "string"
+                },
+                "Sequence Flow From": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "Sequence Flow To": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "Source": {
+                    "type": "string"
+                },
+                "StandardCreationDate": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DBusinessService": {
+            "properties": {
+                "Category": {
+                    "type": "string"
+                },
+                "described by Use Case": {
+                    "$ref": "#/$defs/DBusinessUseCase"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is consumed by Role": {
+                    "$ref": "#/$defs/DRole"
+                },
+                "is Implemented by physical service": {
+                    "$ref": "#/$defs/DPhysicalService"
+                },
+                "LastStandardReviewDate": {
+                    "type": "string"
+                },
+                "NextStandardReviewDate": {
+                    "type": "string"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "part of Process": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "RetireDate": {
+                    "type": "string"
+                },
+                "service run by application": {
+                    "$ref": "#/$defs/DLogicalAppComponent"
+                },
+                "Source": {
+                    "type": "string"
+                },
+                "Source Service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "Target Service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "uses Data": {
+                    "$ref": "#/$defs/DDataEntity"
+                }
+            },
+            "type": "object"
+        },
+        "DBusinessUseCase": {
+            "properties": {
+                "Can be told as User Story": {
+                    "$ref": "#/$defs/DUserStory"
+                },
+                "Extensions": {
+                    "type": "string"
+                },
+                "GoalInContext": {
+                    "type": "string"
+                },
+                "has Activitiy": {
+                    "$ref": "#/$defs/DActivity"
+                },
+                "Has service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is executed by Actor": {
+                    "$ref": "#/$defs/DActor"
+                },
+                "Is implemented by Controller": {
+                    "$ref": "#/$defs/DController"
+                },
+                "isCore": {
+                    "default": "False",
+                    "type": "string"
+                },
+                "Level": {
+                    "type": "string"
+                },
+                "MainSuccessScenario": {
+                    "type": "string"
+                },
+                "OtherActors": {
+                    "type": "string"
+                },
+                "Precondition": {
+                    "type": "string"
+                },
+                "realizes Feature": {
+                    "$ref": "#/$defs/DFeature"
+                },
+                "Scope": {
+                    "type": "string"
+                },
+                "Trigger": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DCapability": {
+            "properties": {
+                "BusinessValue": {
+                    "$ref": "#/$defs/CapabilityBusinessValue",
+                    "default": "Low"
+                },
+                "Category": {
+                    "type": "string"
+                },
+                "Cost": {
+                    "default": "1",
+                    "type": "string"
+                },
+                "Criticality": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "Increments": {
+                    "$ref": "#/$defs/DIncrement",
+                    "default": "None"
+                },
+                "IncrementsToBe": {
+                    "$ref": "#/$defs/DIncrement",
+                    "default": "Initial"
+                },
+                "IncrementSupplyChain": {
+                    "$ref": "#/$defs/DIncrement",
+                    "default": "None"
+                },
+                "IncrementVertical": {
+                    "$ref": "#/$defs/DIncrement",
+                    "default": "None"
+                },
+                "is Enabled by Value Stream": {
+                    "$ref": "#/$defs/DValueStream"
+                },
+                "is executed by Role": {
+                    "$ref": "#/$defs/DRole"
+                },
+                "is informed by Data Entity": {
+                    "$ref": "#/$defs/DDataEntity"
+                },
+                "is matured by Initiative": {
+                    "$ref": "#/$defs/DInitiative"
+                },
+                "is Measured By Indicator": {
+                    "$ref": "#/$defs/DMeasurementIndicator"
+                },
+                "is operated by Process": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "is organized in Biz Area": {
+                    "$ref": "#/$defs/DBusinessArea"
+                },
+                "is supported By Resource": {
+                    "$ref": "#/$defs/DResource"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "Risk": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                },
+                "support Goal": {
+                    "$ref": "#/$defs/DGoal"
+                },
+                "supported by Application": {
+                    "$ref": "#/$defs/DLogicalAppComponent"
+                }
+            },
+            "type": "object"
+        },
+        "DContainer": {
+            "properties": {
+                "Aggregates Volume": {
+                    "$ref": "#/$defs/DVolume"
+                },
+                "contains Application": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                }
+            },
+            "type": "object"
+        },
+        "DController": {
+            "properties": {
+                "Controls Model": {
+                    "$ref": "#/$defs/DModelClass"
+                },
+                "Governs view": {
+                    "$ref": "#/$defs/DView"
+                },
+                "Implements function": {
+                    "$ref": "#/$defs/DApplicationFunction"
+                },
+                "implements Use Case": {
+                    "$ref": "#/$defs/DBusinessUseCase"
+                },
+                "Istance of Controller": {
+                    "$ref": "#/$defs/DObject"
+                },
+                "Source Controller": {
+                    "$ref": "#/$defs/DController"
+                },
+                "target Controller": {
+                    "$ref": "#/$defs/DController"
+                }
+            },
+            "type": "object"
+        },
+        "DDataEntity": {
+            "properties": {
+                "Category": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "Informs Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "Is connected to Source Entity": {
+                    "$ref": "#/$defs/DDataEntity"
+                },
+                "Is connected to Target Entity": {
+                    "$ref": "#/$defs/DDataEntity"
+                },
+                "is Functionally Implemented By Table": {
+                    "$ref": "#/$defs/DTable"
+                },
+                "is realized by Class": {
+                    "$ref": "#/$defs/DModelClass"
+                },
+                "is used by service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "isAccessible": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "isAccurate": {
+                    "type": "boolean"
+                },
+                "isTimely": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "PrivacyClassification": {
+                    "type": "string"
+                },
+                "RetentionClassification": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DDecision": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DDeploymentNode": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DEvent": {
+            "properties": {
+                "Category": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                },
+                "triggers Process": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                }
+            },
+            "type": "object"
+        },
+        "DFeature": {
+            "properties": {
+                "Author": {
+                    "default": "myName, Analyst",
+                    "type": "string"
+                },
+                "is realized by Use Case": {
+                    "$ref": "#/$defs/DBusinessUseCase"
+                },
+                "Proofreader": {
+                    "default": "aName, Client",
+                    "type": "string"
+                },
+                "realizes Requirement": {
+                    "$ref": "#/$defs/DRequirement"
+                },
+                "Status": {
+                    "$ref": "#/$defs/Dboolean",
+                    "default": "false"
+                }
+            },
+            "type": "object"
+        },
+        "DGoal": {
+            "properties": {
+                "Child Goal": {
+                    "$ref": "#/$defs/DGoal"
+                },
+                "dAssumption": {
+                    "$ref": "#/$defs/DAssumptionType"
+                },
+                "Has Objective": {
+                    "$ref": "#/$defs/DObjective"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is Operationalized By Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "is specified by Requirement": {
+                    "$ref": "#/$defs/DRequirement"
+                },
+                "parent Goal": {
+                    "$ref": "#/$defs/DGoal"
+                },
+                "Priority": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "Value_amount": {
+                    "type": "string"
+                },
+                "Value_Goal": {
+                    "type": "string"
+                },
+                "Value_Name": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DGrowthPackage": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DIncrement": {
+            "properties": {
+                "Defined": {
+                    "type": "integer"
+                },
+                "Initial": {
+                    "type": "integer"
+                },
+                "Managed": {
+                    "type": "integer"
+                },
+                "Measured": {
+                    "type": "integer"
+                },
+                "None": {
+                    "type": "integer"
+                },
+                "UnderDevelopment": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "DInitiative": {
+            "properties": {
+                "ability to Implement": {
+                    "type": "string"
+                },
+                "Benefit": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                "DetailedDescription": {
+                    "type": "string"
+                },
+                "finishDate": {
+                    "type": "string"
+                },
+                "Impacted Capability": {
+                    "type": "string"
+                },
+                "Increases Maturity Of Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "InitiativeDuration": {
+                    "type": "string"
+                },
+                "is part of a Package": {
+                    "$ref": "#/$defs/DGrowthPackage"
+                },
+                "kind": {
+                    "type": "string"
+                },
+                "Makes Use Of Decision": {
+                    "$ref": "#/$defs/DDecision"
+                },
+                "purpose": {
+                    "type": "string"
+                },
+                "Rank": {
+                    "type": "string"
+                },
+                "RelatedProgram": {
+                    "type": "string"
+                },
+                "startdate": {
+                    "type": "integer"
+                },
+                "startDate": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DIssue": {
+            "properties": {
+                "Author": {
+                    "type": "string"
+                },
+                "is realizing Risk": {
+                    "$ref": "#/$defs/DRisk"
+                },
+                "Responsible": {
+                    "default": "none",
+                    "type": "string"
+                },
+                "stop Requirement": {
+                    "$ref": "#/$defs/DRequirement"
+                }
+            },
+            "type": "object"
+        },
+        "DJSON_Element": {
+            "properties": {
+                "Associates Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "Source JsonElement": {
+                    "$ref": "#/$defs/DJSON_Element"
+                },
+                "target JsonElement": {
+                    "$ref": "#/$defs/DJSON_Element"
+                }
+            },
+            "type": "object"
+        },
+        "DJSON_Schema": {
+            "properties": {
+                "@baseType": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "@Type": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "Associates Element": {
+                    "$ref": "#/$defs/DJSON_Element"
+                },
+                "Child Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "is aggregates in API": {
+                    "$ref": "#/$defs/DAPI"
+                },
+                "Parent Schema": {
+                    "$ref": "#/$defs/DJSON_SchemaSubSet"
+                },
+                "realizes Model Class": {
+                    "$ref": "#/$defs/DModelClass"
+                },
+                "schema": {
+                    "$ref": "#/$defs/SchemaVersion",
+                    "default": "http://json-schema.org/draft-04/schema#"
+                },
+                "schemaFileName": {
+                    "type": "string"
+                },
+                "Source Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "Target Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                }
+            },
+            "type": "object"
+        },
+        "DJSON_SchemaSubSet": {
+            "properties": {
+                "Child Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "default": {
+                    "type": "integer"
+                },
+                "enum": {
+                    "type": "string"
+                },
+                "exclusivemaximum": {
+                    "type": "integer"
+                },
+                "exclusiveminimum": {
+                    "type": "integer"
+                },
+                "format": {
+                    "nullable": true,
+                    "type": "string"
+                },
+                "maximum": {
+                    "type": "integer"
+                },
+                "maxItems": {
+                    "type": "integer"
+                },
+                "maxlength": {
+                    "type": "string"
+                },
+                "maxProperties": {
+                    "type": "integer"
+                },
+                "minimum": {
+                    "type": "integer"
+                },
+                "minItems": {
+                    "type": "integer"
+                },
+                "minlength": {
+                    "type": "string"
+                },
+                "minProperties": {
+                    "type": "integer"
+                },
+                "multipleof": {
+                    "type": "integer"
+                },
+                "pattern": {
+                    "type": "string"
+                },
+                "required": {
+                    "type": "integer"
+                },
+                "uniqueItems": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "DLogicalAppComponent": {
+            "properties": {
+                "application runs service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "is Realized by Component": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                },
+                "isUsable": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "meetsBizNeeds": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "meetsTomorrowNeeds": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "supports Capability": {
+                    "$ref": "#/$defs/DCapability"
+                }
+            },
+            "type": "object"
+        },
+        "DMeasurementArea": {
+            "properties": {
+                "aggregates categories": {
+                    "$ref": "#/$defs/DMeasurementCategory"
+                },
+                "Definition": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DMeasurementCategory": {
+            "properties": {
+                "aggregates Groups": {
+                    "$ref": "#/$defs/DMeasurementGrouping"
+                },
+                "Definition": {
+                    "type": "string"
+                },
+                "has Measurement Area": {
+                    "$ref": "#/$defs/DMeasurementArea"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DMeasurementGrouping": {
+            "properties": {
+                "aggregates KPI": {
+                    "$ref": "#/$defs/DMeasurementIndicator"
+                },
+                "Definition": {
+                    "type": "string"
+                },
+                "has Category": {
+                    "$ref": "#/$defs/DMeasurementCategory"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DMeasurementIndicator": {
+            "properties": {
+                "CurrentLevel": {
+                    "type": "integer"
+                },
+                "Definition": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is measuring Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "LastStandardReviewDate": {
+                    "type": "string"
+                },
+                "part of a Grouping": {
+                    "$ref": "#/$defs/DMeasurementGrouping"
+                },
+                "SatisfactionLevel": {
+                    "type": "integer"
+                },
+                "UnitOfMeasure": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DModelClass": {
+            "properties": {
+                "_metatype": {
+                    "default": "Model Class",
+                    "type": "string"
+                },
+                "child_order": {
+                    "type": "string"
+                },
+                "display_value": {
+                    "type": "string"
+                },
+                "initparams": {
+                    "default": "database",
+                    "type": "string"
+                },
+                "is controlled by Controller": {
+                    "$ref": "#/$defs/DController"
+                },
+                "is realized by Schema": {
+                    "$ref": "#/$defs/DJSON_Schema"
+                },
+                "is Saved in a Table": {
+                    "$ref": "#/$defs/DTable"
+                },
+                "is_searchable": {
+                    "$ref": "#/$defs/Dboolean",
+                    "default": "true"
+                },
+                "is_soap": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "Istance of Model": {
+                    "$ref": "#/$defs/DObject"
+                },
+                "orderby": {
+                    "default": "none",
+                    "type": "string"
+                },
+                "parent_order": {
+                    "type": "string"
+                },
+                "pk_name": {
+                    "default": "id",
+                    "type": "string"
+                },
+                "Realizes Entity": {
+                    "$ref": "#/$defs/DDataEntity"
+                },
+                "table_name": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DObject": {
+            "properties": {
+                "Has an Instance": {
+                    "$ref": "#/$defs/DModelClass"
+                }
+            },
+            "type": "object"
+        },
+        "DObjective": {
+            "properties": {
+                "Category": {
+                    "type": "string"
+                },
+                "finishDate": {
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is related to Goal": {
+                    "$ref": "#/$defs/DGoal"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DOrganizationUnit": {
+            "properties": {
+                " has Role": {
+                    "$ref": "#/$defs/DRole"
+                },
+                "has Stakeholder": {
+                    "$ref": "#/$defs/DStakeholder"
+                },
+                "HeadCount": {
+                    "default": "100",
+                    "type": "integer"
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DPhysicalService": {
+            "properties": {
+                "Asociated to Sec. group": {
+                    "$ref": "#/$defs/DSecurityGroup"
+                },
+                "Category": {
+                    "type": "string"
+                },
+                "execution_mode": {
+                    "$ref": "#/$defs/ExecutionMode"
+                },
+                "Exposes Phy Service": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                },
+                "Id": {
+                    "type": "string"
+                },
+                "Implement Biz Service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "is realized By API": {
+                    "$ref": "#/$defs/DAPI"
+                },
+                "LastStandardReviewDate": {
+                    "type": "string"
+                },
+                "NextStandardReviewDate": {
+                    "type": "string"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "port": {
+                    "type": "integer"
+                },
+                "protocol": {
+                    "$ref": "#/$defs/ProtocolTypes"
+                },
+                "RetireDate": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DProcessType": {
+            "properties": {
+                "Automatic": {
+                    "type": "integer"
+                },
+                "Client facing": {
+                    "type": "string"
+                },
+                "Manual": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "DProduct": {
+            "properties": {
+                "ID": {
+                    "type": "string"
+                },
+                "Includes Process": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "Price": {
+                    "type": "integer"
+                },
+                "RetireDate": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DRequirement": {
+            "properties": {
+                "Author": {
+                    "default": "myName, Analyst",
+                    "type": "string"
+                },
+                "Contains Requirement": {
+                    "$ref": "#/$defs/DRequirement"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is contained by Requirement": {
+                    "$ref": "#/$defs/DRequirement"
+                },
+                "is realized by Feature": {
+                    "$ref": "#/$defs/DFeature"
+                },
+                "is stopped by Issue": {
+                    "$ref": "#/$defs/DIssue"
+                },
+                "Priority": {
+                    "default": "50",
+                    "type": "string"
+                },
+                "Proofreader": {
+                    "default": "aName, Client",
+                    "type": "string"
+                },
+                "specifies Goal": {
+                    "$ref": "#/$defs/DGoal"
+                },
+                "Status": {
+                    "type": "string"
+                },
+                "Type": {
+                    "$ref": "#/$defs/DRequirementType"
+                }
+            },
+            "type": "object"
+        },
+        "DRequirementType": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DResource": {
+            "properties": {
+                "# of items": {
+                    "type": "integer"
+                },
+                "is impacted by Risk": {
+                    "$ref": "#/$defs/DRisk"
+                },
+                "Supports Capability": {
+                    "$ref": "#/$defs/DCapability"
+                }
+            },
+            "type": "object"
+        },
+        "DRisk": {
+            "properties": {
+                "impact Resouce": {
+                    "$ref": "#/$defs/DResource"
+                },
+                "is realized by Issue": {
+                    "$ref": "#/$defs/DIssue"
+                },
+                "is related to Application": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                },
+                "Likehood": {
+                    "default": "50",
+                    "type": "integer"
+                },
+                "RiskStrategy": {
+                    "$ref": "#/$defs/DRiskStrategy"
+                },
+                "Severity": {
+                    "default": "50",
+                    "type": "integer"
+                },
+                "Source Risk": {
+                    "$ref": "#/$defs/DRisk"
+                },
+                "target Risk": {
+                    "$ref": "#/$defs/DRisk"
+                }
+            },
+            "type": "object"
+        },
+        "DRiskStrategy": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DRole": {
+            "properties": {
+                "#FTEs": {
+                    "type": "integer"
+                },
+                "areSkillsAvailable": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "areSkillsDefined": {
+                    "$ref": "#/$defs/Dboolean"
+                },
+                "Consumes Service": {
+                    "$ref": "#/$defs/DBusinessService"
+                },
+                "Cost": {
+                    "type": "integer"
+                },
+                "DegreeOfUtilisation": {
+                    "type": "integer"
+                },
+                "executes Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "has SKill": {
+                    "$ref": "#/$defs/DSkill"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "is executed by Actor": {
+                    "$ref": "#/$defs/DActor"
+                },
+                "Owner": {
+                    "type": "string"
+                },
+                "Source": {
+                    "type": "string"
+                },
+                "User": {
+                    "type": "string"
+                },
+                "works in Organization": {
+                    "$ref": "#/$defs/DOrganizationUnit"
+                }
+            },
+            "type": "object"
+        },
+        "DSecurityGroup": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DSkill": {
+            "properties": {
+                "known by Role": {
+                    "$ref": "#/$defs/DRole"
+                },
+                "SkillCategory": {
+                    "type": "integer"
+                },
+                "SkillLevel": {
+                    "type": "integer"
+                }
+            },
+            "type": "object"
+        },
+        "DStakeholder": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DSystem": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "DTable": {
+            "properties": {
+                "Database": {
+                    "type": "integer"
+                },
+                "Implements Entity": {
+                    "$ref": "#/$defs/DDataEntity"
+                },
+                "Provides Persistence For Model": {
+                    "$ref": "#/$defs/DModelClass"
+                }
+            },
+            "type": "object"
+        },
+        "DTest": {
+            "properties": {
+                "Test validates Component": {
+                    "$ref": "#/$defs/DApplicationComponent"
+                }
+            },
+            "type": "object"
+        },
+        "DUserStory": {
+            "properties": {
+                "EstimatedEffort": {
+                    "default": "8",
+                    "type": "string"
+                },
+                "Is associated to Use Case": {
+                    "$ref": "#/$defs/DBusinessUseCase"
+                },
+                "StoryDetails": {
+                    "$ref": "#/$defs/Story"
+                },
+                "TestScenario": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DValueStream": {
+            "properties": {
+                "Criticality": {
+                    "$ref": "#/$defs/ValueStreamCriticality"
+                },
+                "Enables Capability": {
+                    "$ref": "#/$defs/DCapability"
+                },
+                "entrance criteria": {
+                    "type": "string"
+                },
+                "exit criteria": {
+                    "type": "string"
+                },
+                "Includes Process": {
+                    "$ref": "#/$defs/DBusinessProcess"
+                },
+                "is Decomposed": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "DView": {
+            "properties": {
+                "is Governed by Controller": {
+                    "$ref": "#/$defs/DController"
+                },
+                "Istance of View": {
+                    "$ref": "#/$defs/DObject"
+                }
+            },
+            "type": "object"
+        },
+        "DVolume": {
+            "properties": {
+                "is Aggregated in Container": {
+                    "$ref": "#/$defs/DContainer"
+                },
+                "MounthPath": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "subPath": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ExecutionMode": {
+            "properties": {
+                "asynchronous": {
+                    "type": "string"
+                },
+                "synchronous": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "MimeTypes": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "ProcessCriticality": {
+            "properties": {
+                "High": {
+                    "type": "string"
+                },
+                "Low": {
+                    "type": "string"
+                },
+                "Medium": {
+                    "type": "string"
+                },
+                "unknow": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ProtocolTypes": {
+            "properties": {
+            },
+            "type": "object"
+        },
+        "SchemaVersion": {
+            "properties": {
+                "http://json-schema.org/draft-04/schema#": {
+                    "type": "string"
+                },
+                "http://json-schema.org/draft-05/schema#": {
+                    "type": "string"
+                },
+                "http://json-schema.org/draft-06/schema#": {
+                    "type": "string"
+                },
+                "http://json-schema.org/draft-07/schema#": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Story": {
+            "properties": {
+                "Role": {
+                    "default": "As a Actor",
+                    "type": "string"
+                },
+                "Scope": {
+                    "default": "I want to do something",
+                    "type": "string"
+                },
+                "Value": {
+                    "default": "So that I achieve Value",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "ValueStreamCriticality": {
+            "properties": {
+                "Limited Impact": {
+                    "type": "string"
+                },
+                "Moderate Impact": {
+                    "type": "string"
+                },
+                "Negligible Impact": {
+                    "type": "string"
+                },
+                "Not Analyzed": {
+                    "type": "string"
+                },
+                "Noticeable Impact": {
+                    "type": "string"
+                },
+                "Significant Impact": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    },
+    "$id": "http://example.com/DigitalArchitectureFramework.schema.json",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "properties": {
+        "ActorTypes": {
+            "$ref": "#/$defs/ActorTypes"
+        },
+        "CapabilityBusinessValue": {
+            "$ref": "#/$defs/CapabilityBusinessValue"
+        },
+        "Contact": {
+            "$ref": "#/$defs/Contact"
+        },
+        "DActivity": {
+            "$ref": "#/$defs/DActivity"
+        },
+        "DActor": {
+            "$ref": "#/$defs/DActor"
+        },
+        "DAPI": {
+            "$ref": "#/$defs/DAPI"
+        },
+        "DApplicationComponent": {
+            "$ref": "#/$defs/DApplicationComponent"
+        },
+        "DApplicationFunction": {
+            "$ref": "#/$defs/DApplicationFunction"
+        },
+        "DApplicationStrategy": {
+            "$ref": "#/$defs/DApplicationStrategy"
+        },
+        "DApplicationType": {
+            "$ref": "#/$defs/DApplicationType"
+        },
+        "DAssumptionType": {
+            "$ref": "#/$defs/DAssumptionType"
+        },
+        "Dboolean": {
+            "$ref": "#/$defs/Dboolean"
+        },
+        "DBusinessArea": {
+            "$ref": "#/$defs/DBusinessArea"
+        },
+        "DBusinessProcess": {
+            "$ref": "#/$defs/DBusinessProcess"
+        },
+        "DBusinessService": {
+            "$ref": "#/$defs/DBusinessService"
+        },
+        "DBusinessUseCase": {
+            "$ref": "#/$defs/DBusinessUseCase"
+        },
+        "DCapability": {
+            "$ref": "#/$defs/DCapability"
+        },
+        "DContainer": {
+            "$ref": "#/$defs/DContainer"
+        },
+        "DController": {
+            "$ref": "#/$defs/DController"
+        },
+        "DDataEntity": {
+            "$ref": "#/$defs/DDataEntity"
+        },
+        "DDecision": {
+            "$ref": "#/$defs/DDecision"
+        },
+        "DDeploymentNode": {
+            "$ref": "#/$defs/DDeploymentNode"
+        },
+        "DEvent": {
+            "$ref": "#/$defs/DEvent"
+        },
+        "DFeature": {
+            "$ref": "#/$defs/DFeature"
+        },
+        "DGoal": {
+            "$ref": "#/$defs/DGoal"
+        },
+        "DGrowthPackage": {
+            "$ref": "#/$defs/DGrowthPackage"
+        },
+        "DIncrement": {
+            "$ref": "#/$defs/DIncrement"
+        },
+        "DInitiative": {
+            "$ref": "#/$defs/DInitiative"
+        },
+        "DIssue": {
+            "$ref": "#/$defs/DIssue"
+        },
+        "DJSON_Element": {
+            "$ref": "#/$defs/DJSON_Element"
+        },
+        "DJSON_Schema": {
+            "$ref": "#/$defs/DJSON_Schema"
+        },
+        "DJSON_SchemaSubSet": {
+            "$ref": "#/$defs/DJSON_SchemaSubSet"
+        },
+        "DLogicalAppComponent": {
+            "$ref": "#/$defs/DLogicalAppComponent"
+        },
+        "DMeasurementArea": {
+            "$ref": "#/$defs/DMeasurementArea"
+        },
+        "DMeasurementCategory": {
+            "$ref": "#/$defs/DMeasurementCategory"
+        },
+        "DMeasurementGrouping": {
+            "$ref": "#/$defs/DMeasurementGrouping"
+        },
+        "DMeasurementIndicator": {
+            "$ref": "#/$defs/DMeasurementIndicator"
+        },
+        "DModelClass": {
+            "$ref": "#/$defs/DModelClass"
+        },
+        "DObject": {
+            "$ref": "#/$defs/DObject"
+        },
+        "DObjective": {
+            "$ref": "#/$defs/DObjective"
+        },
+        "DOrganizationUnit": {
+            "$ref": "#/$defs/DOrganizationUnit"
+        },
+        "DPhysicalService": {
+            "$ref": "#/$defs/DPhysicalService"
+        },
+        "DProcessType": {
+            "$ref": "#/$defs/DProcessType"
+        },
+        "DProduct": {
+            "$ref": "#/$defs/DProduct"
+        },
+        "DRequirement": {
+            "$ref": "#/$defs/DRequirement"
+        },
+        "DRequirementType": {
+            "$ref": "#/$defs/DRequirementType"
+        },
+        "DResource": {
+            "$ref": "#/$defs/DResource"
+        },
+        "DRisk": {
+            "$ref": "#/$defs/DRisk"
+        },
+        "DRiskStrategy": {
+            "$ref": "#/$defs/DRiskStrategy"
+        },
+        "DRole": {
+            "$ref": "#/$defs/DRole"
+        },
+        "DSecurityGroup": {
+            "$ref": "#/$defs/DSecurityGroup"
+        },
+        "DSkill": {
+            "$ref": "#/$defs/DSkill"
+        },
+        "DStakeholder": {
+            "$ref": "#/$defs/DStakeholder"
+        },
+        "DSystem": {
+            "$ref": "#/$defs/DSystem"
+        },
+        "DTable": {
+            "$ref": "#/$defs/DTable"
+        },
+        "DTest": {
+            "$ref": "#/$defs/DTest"
+        },
+        "DUserStory": {
+            "$ref": "#/$defs/DUserStory"
+        },
+        "DValueStream": {
+            "$ref": "#/$defs/DValueStream"
+        },
+        "DView": {
+            "$ref": "#/$defs/DView"
+        },
+        "DVolume": {
+            "$ref": "#/$defs/DVolume"
+        },
+        "ExecutionMode": {
+            "$ref": "#/$defs/ExecutionMode"
+        },
+        "MimeTypes": {
+            "$ref": "#/$defs/MimeTypes"
+        },
+        "ProcessCriticality": {
+            "$ref": "#/$defs/ProcessCriticality"
+        },
+        "ProtocolTypes": {
+            "$ref": "#/$defs/ProtocolTypes"
+        },
+        "SchemaVersion": {
+            "$ref": "#/$defs/SchemaVersion"
+        },
+        "Story": {
+            "$ref": "#/$defs/Story"
+        },
+        "ValueStreamCriticality": {
+            "$ref": "#/$defs/ValueStreamCriticality"
+        }
+    },
+    "title": "DigitalArchitectureFramework",
+    "type": "object"
+}

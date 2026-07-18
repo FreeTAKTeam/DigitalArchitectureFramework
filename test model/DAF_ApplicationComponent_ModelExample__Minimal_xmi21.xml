@@ -1,0 +1,222 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:DAF="http://www.sparxsystems.com/profiles/DAF/6.0BETA7">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1628"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_F2477FB6_BF87_419c_A46D_8754BBF825AD" name="DAF reference Applications Minimal" visibility="public">
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6" name="Coonnected Application Component" visibility="public" isIndirectlyInstantiated="true"/>
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" name="Owner Application Component1" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_45B36021_B4FF_4187_BAC8_2ED5E5451CCD" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC000000_B4FF_4187_BAC8_2ED5E5451CCD" role="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS000000_B4FF_4187_BAC8_2ED5E5451CCD" role="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+				</ownedConnector>
+				<nestedClassifier xmi:type="uml:Component" xmi:id="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7" name="own Application Component" visibility="public" isIndirectlyInstantiated="true"/>
+			</packagedElement>
+		</packagedElement>
+		<DAF:dApplicationComponent base_Component="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_45B36021_B4FF_4187_BAC8_2ED5E5451CCD"/>
+		<DAF:dApplicationComponent base_Component="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+	</uml:Model>
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_F2477FB6_BF87_419c_A46D_8754BBF825AD" xmi:type="uml:Package" name="DAF reference Applications Minimal" scope="public">
+				<model package2="EAID_F2477FB6_BF87_419c_A46D_8754BBF825AD" package="EAPK_6ACD5FE2_2545_4142_9342_2DA052BEF56B" tpos="0" ea_localid="862" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="Giuseppe Platania" version="25.06.14" phase="Artemis" created="2025-08-20 16:01:31" modified="2025-08-20 16:01:31" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="DAF XMI"/>
+				<packageproperties version="25.06.14"/>
+				<paths/>
+				<times created="2025-08-20 16:01:31" modified="2025-08-20 16:01:31"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+			<element xmi:idref="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6" xmi:type="uml:Component" name="Coonnected Application Component" scope="public">
+				<model package="EAPK_F2477FB6_BF87_419c_A46D_8754BBF825AD" tpos="0" ea_localid="39528" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="Giuseppe Platania" version="25.06.14" phase="Artemis" created="2025-08-20 16:02:04" modified="2025-08-20 16:05:13" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_3C18D696_CDB4_1bcd_A905_9467E7ACF802" name="ApplicationType" value="Custom#NOTES#Values: COTS,Custom,Module,Web Site,Instance,DB,Core&#xA;Default: Custom&#xA;Description: the type of Application, e.g. if it's a COTS, Custom and so on&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_45A2EF46_5AA4_de5a_98CE_D0B9A11BA48D" name="BizCriticality" value="50#NOTES#Default: 50&#xA;Description: how is Business happy with this application, often related to business debt.&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_7A0E092D_E04B_b6e0_A984_5D8D9BF35A58" name="BizSatisfaction" value="50#NOTES#Default: 50&#xA;Description: How much is the business happy with the application, expressed in 1-100&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_9E3ACE5E_9B5C_5b9b_95CA_C13FF14C91FE" name="Category" value="#NOTES#Description: User-definable categorization taxonomy for each element.&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_003830F9_2EF7_ae2e_9679_158BCB34F754" name="Cost" value="10#NOTES#Default: 10&#xA;Description: the cost of this application in 1000 of $&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_00000DED_744B_4274_98FA_2C83176C530E" name="ID" value="#NOTES#Description: Unique identifier for the element, useful for referring to third party systems&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_6F69C6A0_CCFE_bacc_89B1_582CD8E0E02C" name="InvestmentStrategy" value="Retain#NOTES#Values: Retain,Rehost,Replatform,Refactor,Rewrite,Retire&#xA;Default: Retain&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_1C7BCC45_0383_0103_B510_A47942E22F8F" name="ITSatisfaction" value="50#NOTES#Default: 50&#xA;Description: how is IT happy with this application, often related to technical debt.&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_825D7FF5_3D13_aa3d_9E4F_392B5B743225" name="LastStandardReviewDate" value="#NOTES#Description: Last review date for the application component. &#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_A8ADE720_A43E_faa4_998C_8C5242396E68" name="NextStandardReviewDate" value="#NOTES#Description: Next review date for the application component. &#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_081BC26B_8029_5180_AC93_1DCB4B2B56BC" name="Owner" value="#NOTES#Description: The owner for the application Component. &#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_003F51C5_4FC3_b54f_9667_53B15FE31610" name="Port" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_738CDBA9_5407_0354_8604_E6BE8064BE54" name="RetireDate" value="#NOTES#Description: The retire date for the Application Component. &#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+					<tag xmi:id="EAID_145BFAB1_702F_4970_B478_F1159599C411" name="Source" value="#NOTES#Description: The original source of the element's information&#xA;" modelElement="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={981C329F-73E9-4eff-8C92-71FF12DC5EBE}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={05067CEF-52C3-440e-B3D9-B4F7E9052AC6}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+				<links>
+					<Assembly xmi:id="EAID_45B36021_B4FF_4187_BAC8_2ED5E5451CCD" start="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" end="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" xmi:type="uml:Component" name="Owner Application Component1" scope="public">
+				<model package="EAPK_F2477FB6_BF87_419c_A46D_8754BBF825AD" tpos="0" ea_localid="39527" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="Giuseppe Platania" version="25.06.14" phase="Artemis" created="2025-08-20 16:01:48" modified="2025-08-20 16:04:37" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_3C18D696_CDB4_1bcd_97DB_F9B58B7445FF" name="ApplicationType" value="Custom#NOTES#Values: COTS,Custom,Module,Web Site,Instance,DB,Core&#xA;Default: Custom&#xA;Description: the type of Application, e.g. if it's a COTS, Custom and so on&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_45A2EF46_5AA4_de5a_9CE2_74EC42FC324F" name="BizCriticality" value="50#NOTES#Default: 50&#xA;Description: how is Business happy with this application, often related to business debt.&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_7A0E092D_E04B_b6e0_ABE9_B71836E01A77" name="BizSatisfaction" value="50#NOTES#Default: 50&#xA;Description: How much is the business happy with the application, expressed in 1-100&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_9E3ACE5E_9B5C_5b9b_9186_A451FAAFB112" name="Category" value="#NOTES#Description: User-definable categorization taxonomy for each element.&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_003830F9_2EF7_ae2e_8B7D_AEF48C42799C" name="Cost" value="10#NOTES#Default: 10&#xA;Description: the cost of this application in 1000 of $&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_00000DED_744B_4274_8661_7B8C5A4F12BC" name="ID" value="#NOTES#Description: Unique identifier for the element, useful for referring to third party systems&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_6F69C6A0_CCFE_bacc_9349_0855454B2430" name="InvestmentStrategy" value="Retain#NOTES#Values: Retain,Rehost,Replatform,Refactor,Rewrite,Retire&#xA;Default: Retain&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_1C7BCC45_0383_0103_9865_47287166CED9" name="ITSatisfaction" value="50#NOTES#Default: 50&#xA;Description: how is IT happy with this application, often related to technical debt.&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_825D7FF5_3D13_aa3d_AFC1_5B4B889D9670" name="LastStandardReviewDate" value="#NOTES#Description: Last review date for the application component. &#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_A8ADE720_A43E_faa4_9DE9_5D0CA318C49E" name="NextStandardReviewDate" value="#NOTES#Description: Next review date for the application component. &#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_081BC26B_8029_5180_8657_2E819BA03EF0" name="Owner" value="#NOTES#Description: The owner for the application Component. &#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_003F51C5_4FC3_b54f_AE92_B7DE95A78621" name="Port" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_738CDBA9_5407_0354_9968_8EB4DE304BB1" name="RetireDate" value="#NOTES#Description: The retire date for the Application Component. &#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+					<tag xmi:id="EAID_145BFAB1_702F_4970_AA13_F7D92BE2B60C" name="Source" value="#NOTES#Description: The original source of the element's information&#xA;" modelElement="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={1821704E-E680-47eb-ACA3-01584FCFF37B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={306711D8-BDCA-4cb6-A7FE-F92629E049B5}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+				<links>
+					<Assembly xmi:id="EAID_45B36021_B4FF_4187_BAC8_2ED5E5451CCD" start="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" end="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6"/>
+				</links>
+			</element>
+			<element xmi:idref="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7" xmi:type="uml:Component" name="own Application Component" scope="public">
+				<model package="EAPK_F2477FB6_BF87_419c_A46D_8754BBF825AD" owner="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5" tpos="0" ea_localid="39529" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="Giuseppe Platania" version="25.06.14" phase="Artemis" created="2025-08-20 16:03:23" modified="2025-08-20 16:05:02" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_3C18D696_CDB4_1bcd_B325_AEBBDFE89205" name="ApplicationType" value="Custom#NOTES#Values: COTS,Custom,Module,Web Site,Instance,DB,Core&#xA;Default: Custom&#xA;Description: the type of Application, e.g. if it's a COTS, Custom and so on&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_45A2EF46_5AA4_de5a_B484_52F33D498B17" name="BizCriticality" value="50#NOTES#Default: 50&#xA;Description: how is Business happy with this application, often related to business debt.&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_7A0E092D_E04B_b6e0_A87D_263A9A0BFA92" name="BizSatisfaction" value="50#NOTES#Default: 50&#xA;Description: How much is the business happy with the application, expressed in 1-100&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_9E3ACE5E_9B5C_5b9b_A668_6CCD86258950" name="Category" value="#NOTES#Description: User-definable categorization taxonomy for each element.&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_003830F9_2EF7_ae2e_B2AD_810CD4F35B0B" name="Cost" value="10#NOTES#Default: 10&#xA;Description: the cost of this application in 1000 of $&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_00000DED_744B_4274_9A10_34CEDF14D2C4" name="ID" value="#NOTES#Description: Unique identifier for the element, useful for referring to third party systems&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_6F69C6A0_CCFE_bacc_8DA6_8A2F1C5A1F91" name="InvestmentStrategy" value="Retain#NOTES#Values: Retain,Rehost,Replatform,Refactor,Rewrite,Retire&#xA;Default: Retain&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_1C7BCC45_0383_0103_BC3F_BD0581F32319" name="ITSatisfaction" value="50#NOTES#Default: 50&#xA;Description: how is IT happy with this application, often related to technical debt.&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_825D7FF5_3D13_aa3d_B63D_A59F2C720699" name="LastStandardReviewDate" value="#NOTES#Description: Last review date for the application component. &#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_A8ADE720_A43E_faa4_9933_53B8B154CFE7" name="NextStandardReviewDate" value="#NOTES#Description: Next review date for the application component. &#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_081BC26B_8029_5180_8738_CD0E9B094684" name="Owner" value="#NOTES#Description: The owner for the application Component. &#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_003F51C5_4FC3_b54f_9E8A_1E1DB466910B" name="Port" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_738CDBA9_5407_0354_9FFF_3694FABFB1C0" name="RetireDate" value="#NOTES#Description: The retire date for the Application Component. &#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+					<tag xmi:id="EAID_145BFAB1_702F_4970_8339_7999A2DE3DB5" name="Source" value="#NOTES#Description: The original source of the element's information&#xA;" modelElement="EAID_F4ACD2AB_3FF9_4351_B2BC_13333055C8F7"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={5C7801F2-F721-444e-AD3C-491906AFDF6B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={F4ACD2AB-3FF9-4351-B2BC-13333055C8F7}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+			</element>
+		</elements>
+		<connectors>
+			<connector xmi:idref="EAID_45B36021_B4FF_4187_BAC8_2ED5E5451CCD">
+				<source xmi:idref="EAID_306711D8_BDCA_4cb6_A7FE_F92629E049B5">
+					<model ea_localid="39527" type="Component" name="Owner Application Component1"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_05067CEF_52C3_440e_B3D9_B4F7E9052AC6">
+					<model ea_localid="39528" type="Component" name="Coonnected Application Component"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="41515"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="2" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<extendedProperties conditional="«dApplicationConnectedWithApplication»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={C0A6999C-2BE6-465a-9B74-A063B5A4F788}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={45B36021-B4FF-4187-BAC8-2ED5E5451CCD}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+		</connectors>
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+		<profiles>
+			<uml:Profile xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmi:id="B91435BE-4" nsPrefix="DAF" name="DAF" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="B91435BE-4">
+					<body>Initial version created on 13-Jan-2016.  Added all shapes.  Added Icons.  Modified Delta to Lowercase (S type symbol) from Upper case (triangle)  3.0.0.M: Added diagram and remaining toolbox profiles.  3.0.0.N: Added all the quick linker for component creation.  3.0.0.O - Added quick linker for existing components and modified icons.  3.0.0.P - updated with views and tool boxes.  3.0.0.Q - updated with Default size and colors 3.0.0.R - Added table, model and physical service and quick linker for the components.  3.0.0.S - Added modified icons and represented them on top right corner. Changed component default representation to custom representation.  3.0.0.T-Updated Quick Linker with self composition to the elements. Linked Value and ValueRef to Class and added it to the MDG Profile.  3.0.0.U - Added scripts for generation of controller class for the use case from package and diagram.  3.0.0.V - removed some types (in rejected package), added missing types and tagged values (User Story, dDeploymentNode, dProgram) 3.0.0.W - Changed the background and foreground color for Business Partner Active to check the output.  3.1 - new revamped 2018 version updated to Sparx 14 3.1.3 added Event 3.2 Updated for EA 14.1 3.3 update to comply with TOGAF 9.2 3.3.8 fixed quicklinker, diagrams 3.3.9 added Application Investment disposition 3.3.12 added KPI tagged value 3.3.15 Added Dots for evaluation 3.4 added masked types for tagged values 3.4.2 consolidated actors, shape script  3.4.5 consolidated colors 3.4.10 shape script functions 3.5 adding additional shape script functions 4.0 Alpha 2 changed based class for dOrganization (actor don't support icon shape???) 4.0 Alpha 3 added diagram patterns 4.0 Beta quicklink generated with M3 and fixed Version:6.0 BETA 7</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="dApplicationComponent" name="dApplicationComponent">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-base_Component" name="base_Component" association="Component_dApplicationComponent">
+						<type href="http://schema.omg.org/spec/UML/2.1/Component"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Port" name="Port">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-RetireDate" name="RetireDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ID" name="ID">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Source" name="Source">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-NextStandardReviewDate" name="NextStandardReviewDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Category" name="Category">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-LastStandardReviewDate" name="LastStandardReviewDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-InvestmentStrategy" name="InvestmentStrategy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ApplicationType" name="ApplicationType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-BizSatisfaction" name="BizSatisfaction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-BizCriticality" name="BizCriticality">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ITSatisfaction" name="ITSatisfaction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Owner" name="Owner">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Cost" name="Cost">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Component_dApplicationComponent" name="A_Component_dApplicationComponent" memberEnd="extension_dApplicationComponent dApplicationComponent-base_Component">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_dApplicationComponent" name="extension_dApplicationComponent" type="dApplicationComponent" isComposite="true" lower="0" upper="1" memberEnd="extension_dApplicationComponent dApplicationComponent-base_Component"/>
+				</packagedElement>
+				
+				<packagedElement xmi:type="uml:Extension" xmi:id="Assembly_dApplicationConnectedWithApplication" name="A_Assembly_dApplicationConnectedWithApplication" memberEnd="extension_dApplicationConnectedWithApplication dApplicationConnectedWithApplication-base_Assembly">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_dApplicationConnectedWithApplication" name="extension_dApplicationConnectedWithApplication" type="dApplicationConnectedWithApplication" isComposite="true" lower="0" upper="1" memberEnd="extension_dApplicationConnectedWithApplication dApplicationConnectedWithApplication-base_Assembly"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+
+	</xmi:Extension>
+</xmi:XMI>

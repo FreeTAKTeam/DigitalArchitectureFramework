@@ -1,0 +1,11 @@
+/EA searches/EASearchTMF.xml
+/mts/*.mts
+EA_DAF_courseware
+
+# Generated distribution bundles
+/Docs/Distribution/
+
+# Office/LibreOffice transient files
+.~lock.*#
+~$*
+~WRL*.tmp

@@ -1,0 +1,69 @@
+Source                    Relation                   Target                
+dActivity                  contains Action            dAction              
+dActor                     isPerformedBy              dRole                
+dActor                     participatesIn             dBusinessUseCase     Relationship between dActor  and  dBusinessUseCase           
+dApplicationComponent      Application Owner          dStakeholder         Relationship between dApplicationComponent  and  dStakeholder
+dApplicationComponent      configured by              dSystem              Relationship between dApplicationComponent  and  dSystem     
+dApplicationComponent      Connected with Application dApplicationComponentRelationship between dApplicationComponent  and  dApplication
+dApplicationComponent      dApplicationAgregatesFunct dApplicationFunction Relationship between dApplicationComponent  and  dApplication
+dApplicationComponent      Exposes Service            dPhysicalService     Relationship between dApplicationComponent  and  dPhysicalSer
+dApplicationComponent      Realizes                   dLogicalAppComponent Relationship between dApplicationComponent  and  dLogicalAppC
+dBusinessProcess           Flows to                   dBusinessProcess     Relationship between dBusinessProcess  and  dBusinessProcess 
+dBusinessProcess           Orchestrates service       dBusinessService     Relationship between dBusinessProcess  and  dBusinessService 
+dBusinessService           dRelatedService            dBusinessService     Relationship between dBusinessService  and  dBusinessService 
+dBusinessService           Uses Data                  dDataEntity          Relationship between dBusinessService  and  dDataEntity      
+dBusinessUseCase           Contains Activities        dActivity            Relationship between dBusinessUseCase  and  dActivity        
+dBusinessUseCase           is realized by Use Case    dFeature             Relationship between dBusinessUseCase  and  dFeature         
+dBusinessUseCase           isDescribedBy              dBusinessService     Relationship between dBusinessUseCase  and  dBusinessService 
+dCapability                Ensure the correct  Operat dBusinessProcess     Relationship between dCapability  and  dBusinessProcess      
+dCapability                Executes                   dRole                Relationship between dCapability  and  dRole                 
+dCapability                informs Capability         dDataEntity          Relationship between dCapability  and  dDataEntity           
+dCapability                isMeasuredBy               dMeasurementIndicatorRelationship between dCapability  and  dMeasurementIndicator 
+dCapability                isOperationalizedBy        dGoal                Relationship between dCapability  and  dGoal                 
+dCapability                Supports Capability        dLogicalAppComponent Relationship between dCapability  and  dLogicalAppComponent  
+dController                Controlls                  dModelClass          Relationship between dController  and  dModelClass           
+dController                dActionKey                 dController          Relationship between dController  and  dController           
+dController                Governs                    dView                Relationship between dController  and  dView                 
+dController                Implements Service         dPhysicalService     Relationship between dController  and  dPhysicalService      
+dController                isImplementedBy            dBusinessUseCase     Relationship between dController  and  dBusinessUseCase      
+dDataEntity                AssociatedEntity           dDataEntity          Relationship between dDataEntity  and  dDataEntity           
+dDecision                  isMakingUseOf              dInitiative          Relationship between dDecision  and  dInitiative             
+dDecision                  refers To                  dPrinciple           Relationship between dDecision  and  dPrinciple              
+dDeploymentNode            isPhysicallyHostedBy       dApplicationComponentRelationship between dDeploymentNode  and  dApplicationCompon
+dEvent                                                dBusinessProcess     Relationship between dEvent  and  dBusinessProcess           
+dFeature                   isSatisfiedBy              dRequirement         Relationship between dFeature  and  dRequirement             
+dGoal                      has Milestone              dObjective           Relationship between dGoal  and  dObjective                  
+dGrowthPackage             is delivered by            dInitiative          Relationship between dGrowthPackage  and  dInitiative        
+dInitiative                IncreasesMaturityOf        dCapability          Relationship between dInitiative  and  dCapability           
+dIssue                     realized by Issue          dRisk                Relationship between dIssue  and  dRisk                      
+dIssue                     StopTheRealizationOf       dRequirement         Relationship between dIssue  and  dRequirement               
+dLocation                  Hosts Node                 dDeploymentNode      Relationship between dLocation  and  dDeploymentNode         
+dLogicalAppComponent       exposes Biz Service        dBusinessService     Relationship between dLogicalAppComponent  and  dBusinessServ
+dMeasurementArea           aggregates categories      dMeasurementCategory Relationship between dMeasurementArea  and  dMeasurementCateg
+dMeasurementCategory       aggregates Groups          dMeasurementGrouping Relationship between dMeasurementCategory  and  dMeasurementG
+dMeasurementGrouping       aggregates KPI             dMeasurementIndicatorRelationship between dMeasurementGrouping  and  dMeasurementI
+dModelClass                ProvidesPersistenceFor     dTable               Relationship between dModelClass  and  dTable                
+dModelClass                RealizesEntity             dDataEntity          Relationship between dModelClass  and  dDataEntity           
+dNetwork                   NetworkContainsNode        dDeploymentNode      Relationship between dNetwork  and  dDeploymentNode          
+dObject                    InstanceofController       dController          Relationship between dObject  and  dController               
+dObject                    InstanceofModel            dModelClass          Relationship between dObject  and  dModelClass               
+dObject                    InstanceofView             dView                Relationship between dObject  and  dView                     
+dOpinion                   dAccord                    dOpinion             Relationship between dOpinion  and  dOpinion                 
+dOpinion                   dDiscord                   dOpinion             Relationship between dOpinion  and  dOpinion                 
+dOrganizationUnit          has Stakeholders           dStakeholder         Relationship between dOrganizationUnit  and  dStakeholder    
+dPhysicalService           Implements                 dBusinessService     Relationship between dPhysicalService  and  dBusinessService 
+dProduct                   Includes Process           dBusinessProcess     Relationship between dProduct  and  dBusinessProcess         
+dProgram                   is organized In            dGrowthPackage       Relationship between dProgram  and  dGrowthPackage           
+dRequirement               Contains Requirement       dRequirement         Relationship between dRequirement  and  dRequirement         
+dRequirement               is related to              dGoal                Relationship between dRequirement  and  dGoal                
+dResource                  supports                   dCapability          Relationship between dResource  and  dCapability             
+dRisk                      Application Risk           dApplicationComponentRelationship between dRisk  and  dApplicationComponent       
+dRisk                      is related to risk         dRisk                Relationship between dRisk  and  dRisk                       
+dRisk                      Resource Risk              dResource            Relationship between dRisk  and  dResource                   
+dRole                      Consumes Service           dBusinessService     Relationship between dRole  and  dBusinessService            
+dRole                      is Associated To           dOrganizationUnit    Relationship between dRole  and  dOrganizationUnit           
+dStakeholder               Has Inner Opinion          dOpinionInner        Relationship between dStakeholder  and  dOpinionInner        
+dStakeholder               Has Opinion                dOpinion             Relationship between dStakeholder  and  dOpinion             
+dTable                     isFunctionallyImplementedB dDataEntity          Relationship between dTable  and  dDataEntity                
+dUserStory                                            dBusinessUseCase     Relationship between dUserStory  and  dBusinessUseCase       
+dValueStream               Includes Processes         dBusinessProcess     Relationship between dValueStream  and  dBusinessProcess     

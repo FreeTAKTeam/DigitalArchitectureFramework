@@ -1,0 +1,38 @@
+Architecture Domain,Stereotype,Human Readable Name,Documentation,UML Metaclass
+Strategy,dOrganizationUnit,Org Unit,"Defines organizational units responsible for roles, resources, and objectives.",Class
+Strategy,dMeasurementArea,Measurement Area,Represents areas of organizational or business performance measurement.,Class
+Strategy,dOpinionInner,Inner Opinion,Captures implicit stakeholder opinions related to a domain.,Class
+Business,dBusinessService,Business Service,"Represents a discrete, reusable business capability or service.",Activity
+Strategy,dMeasurementCategory,Measurement Category,Categorizes measurements within a measurement area.,Class
+Strategy,dPrinciple,Principle,Defines qualitative statements guiding architecture intent.,Class
+Strategy,dOpinion,Opinion,Captures explicit stakeholder judgments on a topic.,Class
+Strategy,dCapability,Capability,Represents an organizational capability to achieve business outcomes.,Class
+Strategy,dProduct,Product,Encapsulates outputs produced by business processes.,Component
+Strategy,dLocation,Location,Defines locations where organizational activities occur.,Class
+Requirement,dRisk,Risk,Identifies and assesses risks impacting business or processes.,Class
+Requirement,dValueStream,Value Stream,Represents a sequence of value-adding activities creating business outcomes.,Activity
+Requirement,dIssue,Issue,Represents specific problems negatively impacting a business objective.,Class
+Technology,dStakeholder,Stakeholder,Represents any party or force influencing the domain of interest.,Actor
+Technology,dAPIOperation,API Operation,Defines operations exposed by an API for interaction with external systems.,Operation
+Business,dJSON_Type,JSON Type,Represents data type definitions for structured information.,Class
+Technology,dBusinessUseCase,Business Use Case,Encapsulates business processes producing value for an enterprise.,UseCase
+Technology,dJSON_Attribute,JSON Attribute,Defines attributes in JSON data structures.,Attribute
+Technology,dJSON_Element,JSON Element,Represents elements or nodes in JSON schemas.,Class
+Requirement,dJSON_SchemaSubSet,JSON Schema Sub Set,Represents subsets of JSON schema structures.,Class
+Technology,dFeature,Feature,Specifies a system feature that satisfies a requirement.,Class
+Implementation,dAPIParameter,API Parameter,Defines parameters in API operations.,Attribute
+Implementation,dProgram,Program,Represents a set of related initiatives or actions under a common purpose.,Package
+Application,dGrowthPackage,Growth Package,Defines collections of growth-oriented initiatives architected for consistency.,Package
+Application,dLogicalAppComponent,Logical App Component,Encapsulates logical software components independent of implementation.,Component
+Technology,dDecision,Decision,Represents decisions and their impact on architecture or processes.,Class
+Requirement,dJSON_Datatype,JSON Data Type,Defines data types for JSON data structures.,Class
+Implementation,dUserStory,User Story,Captures user-centric requirements expressed as stories.,UseCase
+Implementation,dInitiative,Initiative,Represents activities or projects with specific business goals.,Activity
+Application,dTest,Test,Defines tests to verify or validate functionality or compliance.,Class
+Application,dController,Controller,Encapsulates application behavior and flow logic.,Class
+Application,dView,View,Defines views for presenting information or interactions.,Class
+Application,dTable,Table,Represents physical tables in a database schema.,Activity
+Data,dActivity,Activity,Represents business or system activities.,Activity
+Business,dApplicationFunction,Application Function,Encapsulates functions supported by applications.,Class
+Application,dAction,Action,Defines system actions or events.,Class
+Technology,dAPIResponse,API Response,Represents responses returned by API operations.,Actor

@@ -56,6 +56,19 @@ GROUP BY Capability.Name
 ORDER BY SUM(cost_prop.Value) DESC
 Limit 15;
 
+--  SELECT Application Cost by Capability -- SQL version
+SELECT TOP 15
+  SUM(TRY_CONVERT(decimal(18,2), cost_prop.Value)) AS Cost, cap.Name AS capability
+FROM t_object AS app
+JOIN t_objectproperties AS cost_prop   ON cost_prop.Object_ID = app.Object_ID  AND cost_prop.Property = 'Cost'
+JOIN t_connector AS conn   ON conn.Start_Object_ID= app.Object_ID
+JOIN t_object AS cap   ON conn.End_Object_ID  = cap.Object_ID
+WHERE app.Stereotype = 'dLogicalAppComponent'
+  AND cap.Stereotype = 'dCapability'
+and cap.Status = 'approved' -- optional
+GROUP BY cap.Name
+ORDER BY Cost DESC;
+
 
 --  SELECT LogicalApplication Cost by Capability
 SELECT SUM(cost_prop.Value) AS ChartValue, Capability.Name AS Series
@@ -146,7 +159,6 @@ ORDER BY SUM(CAST(CurrentLevel.Value as INT)) DESC
 
 
 --- SQL version:  select the average value and the expected value of the KPI aggregated under a measurement area
-
 SELECT AVG(CAST(CurrentLevel.Value as INT)) AS ChartValue, dMeasurementGrouping.Name AS Series
 FROM t_object AS KPI
 INNER JOIN t_objectproperties AS CurrentLevel ON CurrentLevel.Object_ID = KPI.Object_ID

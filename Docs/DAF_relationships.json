@@ -1,0 +1,342 @@
+[
+  {
+    "Source": "dActivity",
+    "Relation": "contains Action",
+    "Target": "dAction"
+  },
+  {
+    "Source": "dActor",
+    "Relation": "isPerformedBy",
+    "Target": "dRole"
+  },
+  {
+    "Source": "dActor",
+    "Relation": "participatesIn",
+    "Target": "dBusinessUseCase"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "Application Owner",
+    "Target": "dStakeholder"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "configured by",
+    "Target": "dSystem"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "Connected with Application",
+    "Target": "dApplicationComponent"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "dApplicationAgregatesFunct",
+    "Target": "dApplicationFunction"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "Exposes Service",
+    "Target": "dPhysicalService"
+  },
+  {
+    "Source": "dApplicationComponent",
+    "Relation": "Realizes",
+    "Target": "dLogicalAppComponent"
+  },
+  {
+    "Source": "dBusinessProcess",
+    "Relation": "Flows to",
+    "Target": "dBusinessProcess"
+  },
+  {
+    "Source": "dBusinessProcess",
+    "Relation": "Orchestrates service",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dBusinessService",
+    "Relation": "dRelatedService",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dBusinessService",
+    "Relation": "Uses Data",
+    "Target": "dDataEntity"
+  },
+  {
+    "Source": "dBusinessUseCase",
+    "Relation": "Contains Activities",
+    "Target": "dActivity"
+  },
+  {
+    "Source": "dBusinessUseCase",
+    "Relation": "is realized by Use Case",
+    "Target": "dFeature"
+  },
+  {
+    "Source": "dBusinessUseCase",
+    "Relation": "isDescribedBy",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "Ensure the correct  Operat",
+    "Target": "dBusinessProcess"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "Executes",
+    "Target": "dRole"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "informs Capability",
+    "Target": "dDataEntity"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "isMeasuredBy",
+    "Target": "dMeasurementIndicator"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "isOperationalizedBy",
+    "Target": "dGoal"
+  },
+  {
+    "Source": "dCapability",
+    "Relation": "Supports Capability",
+    "Target": "dLogicalAppComponent"
+  },
+  {
+    "Source": "dController",
+    "Relation": "Controlls",
+    "Target": "dModelClass"
+  },
+  {
+    "Source": "dController",
+    "Relation": "dActionKey",
+    "Target": "dController"
+  },
+  {
+    "Source": "dController",
+    "Relation": "Governs",
+    "Target": "dView"
+  },
+  {
+    "Source": "dController",
+    "Relation": "Implements Service",
+    "Target": "dPhysicalService"
+  },
+  {
+    "Source": "dController",
+    "Relation": "isImplementedBy",
+    "Target": "dBusinessUseCase"
+  },
+  {
+    "Source": "dDataEntity",
+    "Relation": "AssociatedEntity",
+    "Target": "dDataEntity"
+  },
+  {
+    "Source": "dDecision",
+    "Relation": "isMakingUseOf",
+    "Target": "dInitiative"
+  },
+  {
+    "Source": "dDecision",
+    "Relation": "refers To",
+    "Target": "dPrinciple"
+  },
+  {
+    "Source": "dDeploymentNode",
+    "Relation": "isPhysicallyHostedBy",
+    "Target": "dApplicationComponent"
+  },
+  {
+    "Source": "dEvent",
+    "Relation": "",
+    "Target": "dBusinessProcess"
+  },
+  {
+    "Source": "dFeature",
+    "Relation": "isSatisfiedBy",
+    "Target": "dRequirement"
+  },
+  {
+    "Source": "dGoal",
+    "Relation": "has Milestone",
+    "Target": "dObjective"
+  },
+  {
+    "Source": "dGrowthPackage",
+    "Relation": "is delivered by",
+    "Target": "dInitiative"
+  },
+  {
+    "Source": "dInitiative",
+    "Relation": "IncreasesMaturityOf",
+    "Target": "dCapability"
+  },
+  {
+    "Source": "dIssue",
+    "Relation": "realized by Issue",
+    "Target": "dRisk"
+  },
+  {
+    "Source": "dIssue",
+    "Relation": "StopTheRealizationOf",
+    "Target": "dRequirement"
+  },
+  {
+    "Source": "dLocation",
+    "Relation": "Hosts Node",
+    "Target": "dDeploymentNode"
+  },
+  {
+    "Source": "dLogicalAppComponent",
+    "Relation": "exposes Biz Service",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dMeasurementArea",
+    "Relation": "aggregates categories",
+    "Target": "dMeasurementCategory"
+  },
+  {
+    "Source": "dMeasurementCategory",
+    "Relation": "aggregates Groups",
+    "Target": "dMeasurementGrouping"
+  },
+  {
+    "Source": "dMeasurementGrouping",
+    "Relation": "aggregates KPI",
+    "Target": "dMeasurementIndicator"
+  },
+  {
+    "Source": "dModelClass",
+    "Relation": "ProvidesPersistenceFor",
+    "Target": "dTable"
+  },
+  {
+    "Source": "dModelClass",
+    "Relation": "RealizesEntity",
+    "Target": "dDataEntity"
+  },
+  {
+    "Source": "dNetwork",
+    "Relation": "NetworkContainsNode",
+    "Target": "dDeploymentNode"
+  },
+  {
+    "Source": "dObject",
+    "Relation": "InstanceofController",
+    "Target": "dController"
+  },
+  {
+    "Source": "dObject",
+    "Relation": "InstanceofModel",
+    "Target": "dModelClass"
+  },
+  {
+    "Source": "dObject",
+    "Relation": "InstanceofView",
+    "Target": "dView"
+  },
+  {
+    "Source": "dOpinion",
+    "Relation": "dAccord",
+    "Target": "dOpinion"
+  },
+  {
+    "Source": "dOpinion",
+    "Relation": "dDiscord",
+    "Target": "dOpinion"
+  },
+  {
+    "Source": "dOrganizationUnit",
+    "Relation": "has Stakeholders",
+    "Target": "dStakeholder"
+  },
+  {
+    "Source": "dPhysicalService",
+    "Relation": "Implements",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dProduct",
+    "Relation": "Includes Process",
+    "Target": "dBusinessProcess"
+  },
+  {
+    "Source": "dProgram",
+    "Relation": "is organized In",
+    "Target": "dGrowthPackage"
+  },
+  {
+    "Source": "dRequirement",
+    "Relation": "Contains Requirement",
+    "Target": "dRequirement"
+  },
+  {
+    "Source": "dRequirement",
+    "Relation": "is related to",
+    "Target": "dGoal"
+  },
+  {
+    "Source": "dResource",
+    "Relation": "supports",
+    "Target": "dCapability"
+  },
+  {
+    "Source": "dRisk",
+    "Relation": "Application Risk",
+    "Target": "dApplicationComponent"
+  },
+  {
+    "Source": "dRisk",
+    "Relation": "is related to risk",
+    "Target": "dRisk"
+  },
+  {
+    "Source": "dRisk",
+    "Relation": "Resource Risk",
+    "Target": "dResource"
+  },
+  {
+    "Source": "dRole",
+    "Relation": "Consumes Service",
+    "Target": "dBusinessService"
+  },
+  {
+    "Source": "dRole",
+    "Relation": "is Associated To",
+    "Target": "dOrganizationUnit"
+  },
+  {
+    "Source": "dStakeholder",
+    "Relation": "Has Inner Opinion",
+    "Target": "dOpinionInner"
+  },
+  {
+    "Source": "dStakeholder",
+    "Relation": "Has Opinion",
+    "Target": "dOpinion"
+  },
+  {
+    "Source": "dTable",
+    "Relation": "isFunctionallyImplementedB",
+    "Target": "dDataEntity"
+  },
+  {
+    "Source": "dUserStory",
+    "Relation": "",
+    "Target": "dBusinessUseCase"
+  },
+  {
+    "Source": "dValueStream",
+    "Relation": "Includes Processes",
+    "Target": "dBusinessProcess"
+  }
+]

@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xmi:XMI xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1" xmlns:DAF="http://www.sparxsystems.com/profiles/DAF/6.0BETA7">
+	<xmi:Documentation exporter="Enterprise Architect" exporterVersion="6.5" exporterID="1628"/>
+	<uml:Model xmi:type="uml:Model" name="EA_Model" visibility="public">
+		<packagedElement xmi:type="uml:Package" xmi:id="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" name="DAF reference Applications Minimal" visibility="public">
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" name="CBAM" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10" role="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A"/>
+				</ownedConnector>
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21" role="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B"/>
+				</ownedConnector>
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32" role="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C"/>
+				</ownedConnector>
+			</packagedElement>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B" name="ICMP" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_11111111_2222_4333_8444_555555555555" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_11111111_2222_4333_8444_555555555555" role="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_11111111_2222_4333_8444_555555555555" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</ownedConnector>
+			</packagedElement>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E" name="1VIEW" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_22222222_3333_4444_8555_666666666666" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_22222222_3333_4444_8555_666666666666" role="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_22222222_3333_4444_8555_666666666666" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</ownedConnector>
+			</packagedElement>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A" name="ERS" visibility="public" isIndirectlyInstantiated="true"/>
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B" name="RTDST" visibility="public" isIndirectlyInstantiated="true"/>
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C" name="iHub" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_FF909192_8384_4B55_9697_A8A9B0C1D2E3" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_FF909192_8384_4B55_9697_A8A9B0C1D2E3" role="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_FF909192_8384_4B55_9697_A8A9B0C1D2E3" role="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D"/>
+				</ownedConnector>
+			</packagedElement>
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D" name="ABLDW" visibility="public" isIndirectlyInstantiated="true"/>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E" name="LUCAS" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_33333333_4444_4555_8666_777777777777" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_33333333_4444_4555_8666_777777777777" role="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_33333333_4444_4555_8666_777777777777" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</ownedConnector>
+			</packagedElement>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425" name="LJCWB" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_44444444_5555_4666_8777_888888888888" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_44444444_5555_4666_8777_888888888888" role="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_44444444_5555_4666_8777_888888888888" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</ownedConnector>
+			</packagedElement>
+
+			<packagedElement xmi:type="uml:Component" xmi:id="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536" name="CEO BORROWING BASE New" visibility="public" isIndirectlyInstantiated="true">
+				<ownedConnector xmi:type="uml:Connector" xmi:id="EAID_55555555_6666_4777_8888_999999999999" visibility="public" kind="assembly">
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_SC_55555555_6666_4777_8888_999999999999" role="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536"/>
+					<end xmi:type="uml:ConnectorEnd" xmi:id="EAID_DS_55555555_6666_4777_8888_999999999999" role="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</ownedConnector>
+			</packagedElement>
+		</packagedElement>
+
+		<DAF:dApplicationComponent base_Component="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+		<DAF:dApplicationComponent base_Component="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536" InvestmentStrategy="Retain" ApplicationType="Custom" BizSatisfaction="50" BizCriticality="50" ITSatisfaction="50" Cost="10"/>
+
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_11111111_2222_4333_8444_555555555555"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_22222222_3333_4444_8555_666666666666"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_33333333_4444_4555_8666_777777777777"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_44444444_5555_4666_8777_888888888888"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_55555555_6666_4777_8888_999999999999"/>
+		<DAF:dApplicationConnectedWithApplication base_Connector="EAID_FF909192_8384_4B55_9697_A8A9B0C1D2E3"/>
+	</uml:Model>
+
+	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
+		<elements>
+			<element xmi:idref="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" xmi:type="uml:Package" name="DAF reference Applications Minimal" scope="public">
+				<model package2="EAID_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="1" ea_eleType="package"/>
+				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:00" modified="2025-08-20 16:10:00" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags/>
+				<xrefs/>
+				<extendedProperties tagged="0" package_name="DAF XMI"/>
+				<packageproperties version="25.06.14"/>
+				<paths/>
+				<times created="2025-08-20 16:10:00" modified="2025-08-20 16:10:00"/>
+				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
+			</element>
+
+			<!-- Component shadow elements with default DAF tags -->
+			<element xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" xmi:type="uml:Component" name="CBAM" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="101" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
+				<tags>
+					<tag xmi:id="EAID_TAG_CBAM_AT" name="ApplicationType" value="Custom" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_BC" name="BizCriticality" value="50" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_BS" name="BizSatisfaction" value="50" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_CT" name="Cost" value="10" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_IS" name="InvestmentStrategy" value="Retain" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_IT" name="ITSatisfaction" value="50" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_CAT" name="Category" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_LSRD" name="LastStandardReviewDate" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_NSRD" name="NextStandardReviewDate" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_ID" name="ID" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_SRC" name="Source" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_PORT" name="Port" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_RET" name="RetireDate" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+					<tag xmi:id="EAID_TAG_CBAM_OWN" name="Owner" modelElement="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={3E7E3A40-2F1A-4B9E-A1C2-10F5D1E2A3B4}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={3E7E3A40-2F1A-4B9E-A1C2-10F5D1E2A3B4}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+				<links>
+					<Assembly xmi:id="EAID_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10" start="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" end="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A"/>
+					<Assembly xmi:id="EAID_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21" start="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" end="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B"/>
+					<Assembly xmi:id="EAID_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32" start="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4" end="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B" xmi:type="uml:Component" name="ICMP" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="102" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags>
+					<tag xmi:id="EAID_TAG_ICMP_AT" name="ApplicationType" value="Custom" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_BC" name="BizCriticality" value="50" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_BS" name="BizSatisfaction" value="50" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_CT" name="Cost" value="10" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_IS" name="InvestmentStrategy" value="Retain" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_IT" name="ITSatisfaction" value="50" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_CAT" name="Category" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_LSRD" name="LastStandardReviewDate" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_NSRD" name="NextStandardReviewDate" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_ID" name="ID" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_SRC" name="Source" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_PORT" name="Port" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_RET" name="RetireDate" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+					<tag xmi:id="EAID_TAG_ICMP_OWN" name="Owner" modelElement="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={7A1C9E5D-5B2F-4F4A-BAE4-7E2C3D4F5A6B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={7A1C9E5D-5B2F-4F4A-BAE4-7E2C3D4F5A6B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+				<links>
+					<Assembly xmi:id="EAID_11111111_2222_4333_8444_555555555555" start="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B" end="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E" xmi:type="uml:Component" name="1VIEW" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="103" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags>
+					<tag xmi:id="EAID_TAG_1V_AT" name="ApplicationType" value="Custom" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_BC" name="BizCriticality" value="50" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_BS" name="BizSatisfaction" value="50" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_CT" name="Cost" value="10" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_IS" name="InvestmentStrategy" value="Retain" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_IT" name="ITSatisfaction" value="50" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_CAT" name="Category" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_LSRD" name="LastStandardReviewDate" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_NSRD" name="NextStandardReviewDate" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_ID" name="ID" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_SRC" name="Source" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_PORT" name="Port" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_RET" name="RetireDate" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+					<tag xmi:id="EAID_TAG_1V_OWN" name="Owner" modelElement="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E"/>
+				</tags>
+				<xrefs value="$XREFPROP=$XID={C2D3E4F5-A6B7-48C9-9D0E-1F2A3B4C5D6E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={C2D3E4F5-A6B7-48C9-9D0E-1F2A3B4C5D6E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<extendedProperties tagged="0" package_name="DAF reference Applications Minimal"/>
+				<links>
+					<Assembly xmi:id="EAID_22222222_3333_4444_8555_666666666666" start="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E" end="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A" xmi:type="uml:Component" name="ERS" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="104" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={5F6A7B8C-9D0E-41F2-A3B4-C5D6E7F8090A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={5F6A7B8C-9D0E-41F2-A3B4-C5D6E7F8090A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+			</element>
+
+			<element xmi:idref="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B" xmi:type="uml:Component" name="RTDST" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="105" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={6A7B8C9D-0E1F-42A3-B4C5-D6E7F8090A1B}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={6A7B8C9D-0E1F-42A3-B4C5-D6E7F8090A1B}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+			</element>
+
+			<element xmi:idref="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C" xmi:type="uml:Component" name="iHub" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="106" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:01" modified="2025-08-20 16:10:01" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={7B8C9D0E-1F2A-43B4-C5D6-E7F8090A1B2C}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={7B8C9D0E-1F2A-43B4-C5D6-E7F8090A1B2C}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<links>
+					<Assembly xmi:id="EAID_FF909192_8384_4B55_9697_A8A9B0C1D2E3" start="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C" end="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D" xmi:type="uml:Component" name="ABLDW" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="107" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:02" modified="2025-08-20 16:10:02" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={8C9D0E1F-2A3B-44C5-D6E7-F8090A1B2C3D}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={8C9D0E1F-2A3B-44C5-D6E7-F8090A1B2C3D}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+			</element>
+
+			<element xmi:idref="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E" xmi:type="uml:Component" name="LUCAS" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="108" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:02" modified="2025-08-20 16:10:02" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={9D0E1F2A-3B4C-45D6-E7F8-090A1B2C3D4E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={9D0E1F2A-3B4C-45D6-E7F8-090A1B2C3D4E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<links>
+					<Assembly xmi:id="EAID_33333333_4444_4555_8666_777777777777" start="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E" end="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425" xmi:type="uml:Component" name="LJCWB" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="109" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:02" modified="2025-08-20 16:10:02" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={AD1B2C3D-4E5F-46A7-B8C9-D0E1F2031425}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={AD1B2C3D-4E5F-46A7-B8C9-D0E1F2031425}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<links>
+					<Assembly xmi:id="EAID_44444444_5555_4666_8777_888888888888" start="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425" end="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</links>
+			</element>
+
+			<element xmi:idref="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536" xmi:type="uml:Component" name="CEO BORROWING BASE New" scope="public">
+				<model package="EAPK_9C1F0C7B_2B8F_4D9E_A2C7_7E1F9B2C3D4E" tpos="0" ea_localid="110" ea_eleType="element"/>
+				<properties isSpecification="false" sType="Component" nType="0" scope="public" stereotype="dApplicationComponent" isRoot="false" isLeaf="false" isAbstract="false"/>
+				<project author="EA" version="25.06.14" phase="Artemis" created="2025-08-20 16:10:02" modified="2025-08-20 16:10:02" complexity="1" status="Proposed"/>
+				<code gentype="Java"/>
+				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=1;FontColor=-1;"/>
+				<tags/>
+				<xrefs value="$XREFPROP=$XID={B1C2D3E4-F5A6-47B8-C9D0-E1F203142536}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationComponent;FQName=DAF::dApplicationComponent;@ENDSTEREO;$DES;$CLT={B1C2D3E4-F5A6-47B8-C9D0-E1F203142536}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<links>
+					<Assembly xmi:id="EAID_55555555_6666_4777_8888_999999999999" start="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536" end="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4"/>
+				</links>
+			</element>
+		</elements>
+
+		<connectors>
+			<connector xmi:idref="EAID_AA6F2F1B_5E9C_4D27_A5A6_8E2B5C7D9F10">
+				<source xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</source>
+				<target xmi:idref="EAID_5F6A7B8C_9D0E_41F2_A3B4_C5D6E7F8090A">
+					<model ea_localid="104" type="Component" name="ERS"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+					<documentation/>
+					<xrefs/>
+					<tags/>
+				</target>
+				<model ea_localid="201"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<documentation/>
+				<appearance linemode="2" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<extendedProperties conditional="«dApplicationConnectedWithApplication»" virtualInheritance="0"/>
+				<style/>
+				<xrefs value="$XREFPROP=$XID={AA6F2F1B-5E9C-4D27-A5A6-8E2B5C7D9F10}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={AA6F2F1B-5E9C-4D27-A5A6-8E2B5C7D9F10}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
+				<tags/>
+			</connector>
+
+			<connector xmi:idref="EAID_BB7F3F2C_6FAD_4E38_B6B7_9F3C6D8E0A21">
+				<source xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+					<role visibility="Public" targetScope="instance"/>
+					<type aggregation="none" containment="Unspecified"/>
+					<constraints/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+				</source>
+				<target xmi:idref="EAID_6A7B8C9D_0E1F_42A3_B4C5_D6E7F8090A1B">
+					<model ea_localid="105" type="Component" name="RTDST"/>
+					<role visibility="Public" targetScope="instance"/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+				</target>
+				<model ea_localid="202"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<appearance linemode="2" linecolor="-1" linewidth="0"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={BB7F3F2C-6FAD-4E38-B6B7-9F3C6D8E0A21}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={BB7F3F2C-6FAD-4E38-B6B7-9F3C6D8E0A21}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_CC80403D_70BE_4F49_C7C8_A04D7E9F1B32">
+				<source xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+					<role visibility="Public" targetScope="instance"/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Non-Navigable;"/>
+				</source>
+				<target xmi:idref="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C">
+					<model ea_localid="106" type="Component" name="iHub"/>
+					<role visibility="Public" targetScope="instance"/>
+					<modifiers isOrdered="false" changeable="none" isNavigable="true"/>
+					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
+				</target>
+				<model ea_localid="203"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<appearance linemode="2" linecolor="-1" linewidth="0"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={CC80403D-70BE-4F49-C7C8-A04D7E9F1B32}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={CC80403D-70BE-4F49-C7C8-A04D7E9F1B32}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_11111111_2222_4333_8444_555555555555">
+				<source xmi:idref="EAID_7A1C9E5D_5B2F_4F4A_BAE4_7E2C3D4F5A6B">
+					<model ea_localid="102" type="Component" name="ICMP"/>
+					<role visibility="Public" targetScope="instance"/>
+				</source>
+				<target xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+					<role visibility="Public" targetScope="instance"/>
+				</target>
+				<model ea_localid="204"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={11111111-2222-4333-8444-555555555555}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={11111111-2222-4333-8444-555555555555}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_22222222_3333_4444_8555_666666666666">
+				<source xmi:idref="EAID_C2D3E4F5_A6B7_48C9_9D0E_1F2A3B4C5D6E">
+					<model ea_localid="103" type="Component" name="1VIEW"/>
+				</source>
+				<target xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+				</target>
+				<model ea_localid="205"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={22222222-3333-4444-8555-666666666666}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={22222222-3333-4444-8555-666666666666}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_33333333_4444_4555_8666_777777777777">
+				<source xmi:idref="EAID_9D0E1F2A_3B4C_45D6_E7F8_090A1B2C3D4E">
+					<model ea_localid="108" type="Component" name="LUCAS"/>
+				</source>
+				<target xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+				</target>
+				<model ea_localid="206"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={33333333-4444-4555-8666-777777777777}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={33333333-4444-4555-8666-777777777777}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_44444444_5555_4666_8777_888888888888">
+				<source xmi:idref="EAID_AD1B2C3D_4E5F_46A7_B8C9_D0E1F2031425">
+					<model ea_localid="109" type="Component" name="LJCWB"/>
+				</source>
+				<target xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+				</target>
+				<model ea_localid="207"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={44444444-5555-4666-8777-888888888888}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={44444444-5555-4666-8777-888888888888}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_55555555_6666_4777_8888_999999999999">
+				<source xmi:idref="EAID_B1C2D3E4_F5A6_47B8_C9D0_E1F203142536">
+					<model ea_localid="110" type="Component" name="CEO BORROWING BASE New"/>
+				</source>
+				<target xmi:idref="EAID_3E7E3A40_2F1A_4B9E_A1C2_10F5D1E2A3B4">
+					<model ea_localid="101" type="Component" name="CBAM"/>
+				</target>
+				<model ea_localid="208"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={55555555-6666-4777-8888-999999999999}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={55555555-6666-4777-8888-999999999999}$CLT;$ENDXREF;"/>
+			</connector>
+
+			<connector xmi:idref="EAID_FF909192_8384_4B55_9697_A8A9B0C1D2E3">
+				<source xmi:idref="EAID_7B8C9D0E_1F2A_43B4_C5D6_E7F8090A1B2C">
+					<model ea_localid="106" type="Component" name="iHub"/>
+				</source>
+				<target xmi:idref="EAID_8C9D0E1F_2A3B_44C5_D6E7_F8090A1B2C3D">
+					<model ea_localid="107" type="Component" name="ABLDW"/>
+				</target>
+				<model ea_localid="209"/>
+				<properties ea_type="Assembly" stereotype="dApplicationConnectedWithApplication" direction="Source -&gt; Destination"/>
+				<labels mb="«dApplicationConnectedWithApplication»"/>
+				<xrefs value="$XREFPROP=$XID={FF909192-8384-4B55-9697-A8A9B0C1D2E3}$XID;$NAM=Stereotypes$NAM;$TYP=connector property$TYP;$DES=@STEREO;Name=dApplicationConnectedWithApplication;FQName=DAF::dApplicationConnectedWithApplication;@ENDSTEREO;$DES;$CLT={FF909192-8384-4B55-9697-A8A9B0C1D2E3}$CLT;$ENDXREF;"/>
+			</connector>
+		</connectors>
+
+		<primitivetypes>
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPrimitiveTypesPackage" name="EA_PrimitiveTypes_Package" visibility="public"/>
+		</primitivetypes>
+
+		<profiles>
+			<uml:Profile xmlns:uml="http://schema.omg.org/spec/UML/2.1/" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi:version="2.1" xmi:id="B91435BE-4" nsPrefix="DAF" name="DAF" metamodelReference="mmref01">
+				<ownedComment xmi:type="uml:Comment" xmi:id="comment01" annotatedElement="B91435BE-4">
+					<body>Initial version created on 13-Jan-2016. ... Version:6.0 BETA 7</body>
+				</ownedComment>
+				<packageImport xmi:id="mmref01">
+					<importedPackage href="http://schema.omg.org/spec/UML/2.1/"/>
+				</packageImport>
+				<packagedElement xmi:type="uml:Stereotype" xmi:id="dApplicationComponent" name="dApplicationComponent">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-base_Component" name="base_Component" association="Component_dApplicationComponent">
+						<type href="http://schema.omg.org/spec/UML/2.1/Component"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Port" name="Port">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-RetireDate" name="RetireDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ID" name="ID">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Source" name="Source">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-NextStandardReviewDate" name="NextStandardReviewDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Category" name="Category">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-LastStandardReviewDate" name="LastStandardReviewDate">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-InvestmentStrategy" name="InvestmentStrategy">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ApplicationType" name="ApplicationType">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-BizSatisfaction" name="BizSatisfaction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-BizCriticality" name="BizCriticality">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-ITSatisfaction" name="ITSatisfaction">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Owner" name="Owner">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="dApplicationComponent-Cost" name="Cost">
+						<type href="http://schema.omg.org/spec/UML/2.1/String"/>
+					</ownedAttribute>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Component_dApplicationComponent" name="A_Component_dApplicationComponent" memberEnd="extension_dApplicationComponent dApplicationComponent-base_Component">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_dApplicationComponent" name="extension_dApplicationComponent" type="dApplicationComponent" isComposite="true" lower="0" upper="1" memberEnd="extension_dApplicationComponent dApplicationComponent-base_Component"/>
+				</packagedElement>
+				<packagedElement xmi:type="uml:Extension" xmi:id="Assembly_dApplicationConnectedWithApplication" name="A_Assembly_dApplicationConnectedWithApplication" memberEnd="extension_dApplicationConnectedWithApplication dApplicationConnectedWithApplication-base_Assembly">
+					<ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="extension_dApplicationConnectedWithApplication" name="extension_dApplicationConnectedWithApplication" type="dApplicationConnectedWithApplication" isComposite="true" lower="0" upper="1" memberEnd="extension_dApplicationConnectedWithApplication dApplicationConnectedWithApplication-base_Assembly"/>
+				</packagedElement>
+			</uml:Profile>
+		</profiles>
+	</xmi:Extension>
+</xmi:XMI>

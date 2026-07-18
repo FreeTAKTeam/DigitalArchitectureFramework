@@ -1,0 +1,46 @@
+<?xml  version='1.0' encoding='utf-8' ?>
+<UMLProfile profiletype="uml2">
+	<Documentation id="A062476C-7" name="DAF_StakeHolder_Management" version="1.0" alias="DAF Stakeholders " notes="a DAF toolbook for Stakeholder Management"/>
+	<Content>
+		<Stereotypes>
+			<Stereotype name="Stakeholders elements" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActor(Class)" type="string" description="" unit="" values="" default="Actor"/>
+					<Tag name="DAF::dOpinion(UML::Class)" type="" description="" unit="" values="" default="Opinion"/>
+					<Tag name="DAF::dOpinionInner(UML::Class)" type="" description="" unit="" values="" default="Inner Opinion"/>
+					<Tag name="DAF::dOrganizationUnit(Class)" type="string" description="" unit="" values="" default="Org Unit"/>
+					<Tag name="DAF::dRole(Class)" type="string" description="" unit="" values="" default="Role"/>
+					<Tag name="DAF::dSkill(Class)" type="string" description="" unit="" values="" default="Skill"/>
+					<Tag name="DAF::dStakeholder(Class)" type="string" description="" unit="" values="" default="Stakeholder"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Stakeholder Relationships" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dActorParticipatesInBizUseCase(UML::Association)" type="" description="" unit="" values="" default="Actor Participates In Use Case"/>
+					<Tag name="DAF::dRoleIsPerformedByActor(UML::Association)" type="" description="" unit="" values="" default="Role isPerformed By Actor"/>
+					<Tag name="DAF::dRoleExecutesCapability(UML::Aggregation)" type="" description="" unit="" values="" default="role Executes Capability"/>
+					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="" description="" unit="" values="" default="Schema Generalization"/>
+					<Tag name="DAF::dDiscord(UML::Association)" type="" description="" unit="" values="" default="Discording opinion"/>
+					<Tag name="DAF::dAccord(UML::Association)" type="" description="" unit="" values="" default="According Opinion"/>
+					<Tag name="DAF::dRoleConsumesService(UML::Association)" type="" description="" unit="" values="" default="Role Consumes Service"/>
+					<Tag name="DAF::dRoleHasSkill(UML::Aggregation)" type="" description="" unit="" values="" default="Role has skill"/>
+					<Tag name="DAF::dStakeholderHasInnerOpinion(UML::Association)" type="" description="" unit="" values="" default="Stakeholder Has Inner Opinion"/>
+					<Tag name="DAF::dStakeholderHasOpinion(UML::Association)" type="" description="" unit="" values="" default="Stakeholder Has Opinion"/>
+				</TaggedValues>
+			</Stereotype>
+		</Stereotypes>
+		<TaggedValueTypes/>
+		<ViewDefinitions/>
+		<Metamodel/>
+	</Content>
+</UMLProfile>
