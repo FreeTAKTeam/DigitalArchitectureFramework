@@ -1,10 +1,10 @@
 openapi: 3.0.1
 info:
   title: DigitalArchitectureFramework
-  version: '0.4 Alpha '
+  version: '0.5'
   description: >-
     The Digital Architecture Framework (DAF) is a metamodel and set of modeling tools for Digital Engineering. Its goal is to bridge the classic gaps between strategy, design, and execution by enabling collaboration between enterprise architects, solution architects, business analysts, and engineers. DAF provides standardised concepts and relationships (based on UML, ArchiMate, TOGAF, RUP, and SPEM) to create high-quality models (digital twins) that can be transformed into executable artifacts .
-    This DAF OpenAPI makes those models accessible as services. It exposes the core DAF concepts�such as Business Processes, Value Streams, Goals, Initiatives, Capabilities, Applications, and Technology elements�as REST resources.
+    This DAF OpenAPI makes those models accessible as services. It exposes the core DAF concepts—such as Business Processes, Value Streams, Goals, Initiatives, Capabilities, Applications, and Technology elements—as REST resources.
   contact:
     name: Giu Platania
     url: https://github.com/FreeTAKTeam/DigitalArchitectureFramework
@@ -3379,17 +3379,17 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            FTEs:
+            fteCount:
               type: string
               description: >-
                 number of employees working in this function
-            ActorGoal:
+            actorGoal:
               type: string
               description: >-
-            ActorType:
+            actorType:
               type: string
               description: >-
-            ActorTasks:
+            actorTasks:
               type: string
               description: >-
             dBusinessUseCase:
@@ -3411,85 +3411,121 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            GoalInContext:
+            goalInContext:
               type: string
               description: >-
-            Precondition:
+            precondition:
               type: string
               description: >-
-            Trigger:
+            trigger:
               type: string
               description: >-
-            Scope:
+            scope:
               type: string
               description: >-
-            Level:
+            level:
               type: string
               description: >-
-            OtherActors:
+            otherActors:
               type: string
               description: >-
-            MainSuccessScenario:
+            mainSuccessScenario:
               type: string
               description: >-
-            Extensions:
+            extensions:
               type: string
               description: >-
             isCore:
               type: string
               description: >-
     DAFBase:
+      description: >-
+        Common metadata for every DAF resource. The stable identifier policy is UUID: id is a server-assigned UUID and is immutable. Properties marked readOnly are server-managed; all other properties are writable unless a derived schema states otherwise.
+      x-identifier-policy: UUID
+      x-write-policy:
+        readOnly:
+          - id
+          - created
+          - createdBy
+          - modified
+          - modifiedBy
+        writable: All properties not marked readOnly
       allOf:
         - type: object
           properties:
-            alias:
-              type: string
-              description: >-
-            author:
-              type: string
-              description: >-
-            created:
-              type: string
-              description: >-
-            creator:
-              type: string
-              description: >-
-            last_editor:
-              type: string
-              description: >-
-            modified:
-              type: string
-              description: >-
-            Status:
-              type: string
-              description: >-
-            Version:
-              type: string
-              description: >-
-            Name:
-              type: string
-              description: >-
             id:
               type: string
+              format: uuid
+              readOnly: true
               description: >-
+                Stable, server-assigned UUID for this DAF resource. It is immutable and is used in resource URLs.
+            alias:
+              type: string
+              readOnly: false
+              description: >-
+                Optional alternate name for the resource. Writable by clients.
+            author:
+              type: string
+              readOnly: false
+              description: >-
+                Person or organizational identity responsible for the model content. Author is a domain attribution and may differ from createdBy or modifiedBy. Writable by clients.
+            created:
+              type: string
+              format: date-time
+              readOnly: true
+              description: >-
+                Timestamp at which the resource was first persisted, expressed as an RFC 3339 date-time. Server-managed and readOnly.
+            createdBy:
+              type: string
+              readOnly: true
+              description: >-
+                Authenticated principal that first persisted the resource. This audit identity is distinct from the domain author. Server-managed and readOnly.
+            modified:
+              type: string
+              format: date-time
+              readOnly: true
+              description: >-
+                Timestamp of the most recent persisted change, expressed as an RFC 3339 date-time. Server-managed and readOnly.
+            modifiedBy:
+              type: string
+              readOnly: true
+              description: >-
+                Authenticated principal that most recently persisted a change. This audit identity is distinct from the domain author and createdBy. Server-managed and readOnly.
+            status:
+              type: string
+              readOnly: false
+              description: >-
+                Lifecycle or workflow state of the resource. Writable by clients subject to domain workflow rules.
+            version:
+              type: string
+              readOnly: false
+              description: >-
+                Domain or model version assigned to the resource. Writable by clients when the model version changes.
+            name:
+              type: string
+              readOnly: false
+              description: >-
+                Human-readable name of the resource. Writable by clients.
             notes:
               type: string
+              readOnly: false
               description: >-
+                Free-form explanatory notes about the resource. Writable by clients.
     dRole:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            FTEs:
+            fteCount:
               type: integer
               description: >-
-            User:
+            user:
               type: string
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
             areSkillsDefined:
@@ -3498,10 +3534,10 @@ components:
             areSkillsAvailable:
               type: string
               description: >-
-            DegreeOfUtilisation:
+            degreeOfUtilisation:
               type: integer
               description: >-
-            Cost:
+            cost:
               type: integer
               description: >-
             dOrganizationUnit:
@@ -3553,13 +3589,10 @@ components:
             securityDefinitions:
               type: string
               description: >-
-            ID:
-              type: string
-              description: >-
             tags:
               type: string
               description: >-
-            FullName:
+            fullName:
               type: integer
               description: >-
             license:
@@ -3568,7 +3601,7 @@ components:
             contact:
               type: string
               description: >-
-            dJSON_Schema:
+            dJsonSchema:
               description: >-
               nullable: true
               type: array
@@ -3593,7 +3626,7 @@ components:
               items:
                 type: string
                 x-reference: '#/components/schemas/dJSON_Schema'
-            dJSON_Element:
+            dJsonElement:
               description: >-
               nullable: true
               type: array
@@ -3601,50 +3634,56 @@ components:
                 type: string
                 x-reference: '#/components/schemas/dJSON_Element'
     dJSON_Element:
+      description: >-
+        A JSON Schema element represented as a first-class DAF resource so it can be identified, attributed, versioned, and related consistently with the rest of the metamodel.
       allOf:
+        - $ref: '#/components/schemas/DAFBase'
         - type: object
     dApplicationComponent:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
-            BizSatisfaction:
+            bizSatisfaction:
               type: string
               description: >-
-            ITSatisfaction:
+            itSatisfaction:
               type: string
               description: >-
-            BizCriticality:
+            bizCriticality:
               type: string
               description: >-
-            Cost:
+            cost:
               type: string
               description: >-
-            InvestmentStrategy:
+            investmentStrategy:
               type: string
               description: >-
-            ApplicationType:
+            applicationType:
               type: string
               description: >-
-            LastStandardReviewDate:
+            lastStandardReviewDate:
+              type: string
+              format: date
+              description: >-
+            nextStandardReviewDate:
+              type: string
+              format: date
+              description: >-
+            retireDate:
+              type: string
+              format: date
+              description: >-
+            owner:
               type: string
               description: >-
-            NextStandardReviewDate:
-              type: string
-              description: >-
-            RetireDate:
-              type: string
-              description: >-
-            Owner:
-              type: string
-              description: >-
-            Port:
+            port:
               type: integer
               description: >-
-            Source:
+            source:
               type: string
               description: >-
             dApplicationFunction:
@@ -3689,25 +3728,25 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Legitimacy:
+            legitimacy:
               type: string
               description: >-
-            Power:
+            power:
               type: string
               description: >-
             role:
               type: string
               description: >-
-            Urgency:
+            urgency:
               type: string
               description: >-
-            Attitude:
+            attitude:
               type: string
               description: >-
-            RACI:
+            raci:
               type: integer
               description: >-
-            Knowledge:
+            knowledge:
               type: string
               description: >-
             dOpinionInner:
@@ -3733,7 +3772,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            InnerOpinion:
+            innerOpinion:
               description: >-
               nullable: true
               type: array
@@ -3759,23 +3798,25 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
-            LastStandardReviewDate:
+            lastStandardReviewDate:
               type: string
               format: date
               description: >-
-            NextStandardReviewDate:
+            nextStandardReviewDate:
+              type: string
+              format: date
+              description: >-
+            owner:
               type: string
               description: >-
-            Owner:
+            retireDate:
               type: string
+              format: date
               description: >-
-            RetireDate:
-              type: string
-              description: >-
-            Source:
+            source:
               type: string
               description: >-
             port:
@@ -3784,7 +3825,7 @@ components:
             protocol:
               type: string
               description: >-
-            execution_mode:
+            executionMode:
               type: string
               description: >-
             dBusinessService:
@@ -3794,7 +3835,7 @@ components:
               items:
                 type: string
                 x-reference: '#/components/schemas/dPhysicalService'
-            dAPI:
+            dApi:
               description: >-
               nullable: true
               type: array
@@ -3829,37 +3870,37 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
-            LastStandardReviewDate:
-              type: string
-              format: date
-              description: >-
-            NextStandardReviewDate:
+            lastStandardReviewDate:
               type: string
               format: date
               description: >-
-            Owner:
-              type: string
-              description: >-
-            ProcessCriticality:
-              type: string
-              description: >-
-            ProcessType:
-              type: string
-              description: >-
-            ProcessVolumetrics:
-              type: string
-              description: >-
-            RetireDate:
+            nextStandardReviewDate:
               type: string
               format: date
               description: >-
-            Source:
+            owner:
               type: string
               description: >-
-            StandardCreationDate:
+            processCriticality:
+              type: string
+              description: >-
+            processType:
+              type: string
+              description: >-
+            processVolumetrics:
+              type: string
+              description: >-
+            retireDate:
+              type: string
+              format: date
+              description: >-
+            source:
+              type: string
+              description: >-
+            standardCreationDate:
               type: string
               format: date
               description: >-
@@ -3894,25 +3935,25 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
-            LastStandardReviewDate:
-              type: string
-              format: date
-              description: >-
-            NextStandardReviewDate:
+            lastStandardReviewDate:
               type: string
               format: date
               description: >-
-            Owner:
-              type: string
-              description: >-
-            RetireDate:
+            nextStandardReviewDate:
               type: string
               format: date
               description: >-
-            Source:
+            owner:
+              type: string
+              description: >-
+            retireDate:
+              type: string
+              format: date
+              description: >-
+            source:
               type: string
               description: >-
     dCapability:
@@ -3920,37 +3961,37 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            BusinessValue:
+            businessValue:
               type: string
               description: >-
-            Category:
+            category:
               type: string
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
-            Increments:
+            increments:
               type: string
               description: >-
-            IncrementsToBe:
+            incrementsToBe:
               type: string
               description: >-
-            IncrementVertical:
+            incrementVertical:
               type: string
               description: >-
-            IncrementSupplyChain:
+            incrementSupplyChain:
               type: string
               description: >-
-            Cost:
+            cost:
               type: string
               description: >-
-            Criticality:
+            criticality:
               type: string
               description: >-
-            Risk:
+            risk:
               type: string
               description: >-
             dLogicalAppComponent:
@@ -4000,19 +4041,19 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            PrivacyClassification:
+            privacyClassification:
               type: string
               description: >-
-            RetentionClassification:
+            retentionClassification:
               type: string
               description: >-
-            Category:
+            category:
               type: string
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
             isAccessible:
@@ -4036,19 +4077,19 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Definition:
+            definition:
               type: string
               description: >-
-            UnitOfMeasure:
+            unitOfMeasure:
               type: string
               description: >-
-            CurrentLevel:
+            currentLevel:
               type: integer
               description: >-
-            SatisfactionLevel:
+            satisfactionLevel:
               type: integer
               description: >-
-            LastStandardReviewDate:
+            lastStandardReviewDate:
               type: string
               format: date
               description: >-
@@ -4057,16 +4098,16 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Value_amount:
+            valueAmount:
               type: string
               description: >-
-            Value_Goal:
+            valueGoal:
               type: string
               description: >-
-            Priority:
+            priority:
               type: string
               description: >-
-            Value_Name:
+            valueName:
               type: string
               description: >-
             dAssumption:
@@ -4087,8 +4128,10 @@ components:
                 type: string
                 x-reference: '#/components/schemas/dGoal'
     dCluster:
+      description: >-
+        Represents a set of deployment nodes working in the same region. A cluster is a DAF resource and therefore inherits the common DAF metadata and identifier policy.
       allOf:
-        - $ref: '#/components/schemas/dCluster'
+        - $ref: '#/components/schemas/DAFBase'
         - type: object
     dContainer:
       allOf:
@@ -4151,34 +4194,34 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            _metatype:
+            metatype:
               type: string
               description: >-
-            child_order:
+            childOrder:
               type: string
               description: >-
-            display_value:
+            displayValue:
               type: string
               description: >-
             initparams:
               type: string
               description: >-
-            is_searchable:
+            isSearchable:
               type: string
               description: >-
-            is_soap:
+            isSoap:
               type: string
               description: >-
             orderby:
               type: string
               description: >-
-            parent_order:
+            parentOrder:
               type: string
               description: >-
-            pk_name:
+            pkName:
               type: string
               description: >-
-            table_name:
+            tableName:
               type: string
               description: >-
             dTable:
@@ -4200,31 +4243,31 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            SubjectArea:
+            subjectArea:
               type: string
               description: >-
-            Topic:
+            topic:
               type: string
               description: >-
-            Assumptions:
+            assumptions:
               type: string
               description: >-
-            Motivation:
+            motivation:
               type: string
               description: >-
-            Alternatives:
+            alternatives:
               type: string
               description: >-
-            Decision:
+            decision:
               type: string
               description: >-
-            Justification:
+            justification:
               type: string
               description: >-
-            Implications:
+            implications:
               type: string
               description: >-
-            RelatedDecisions:
+            relatedDecisions:
               type: string
               description: >-
             dInitiative:
@@ -4246,25 +4289,24 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            DetailedDescription:
+            detailedDescription:
               type: string
               description: >-
-            startdate:
-              type: integer
-              description: >-
-            ImpactedCapability:
+            impactedCapability:
               type: string
               description: >-
-            RelatedProgram:
+            relatedProgram:
               type: string
               description: >-
             startDate:
               type: string
+              format: date
               description: >-
             finishDate:
               type: string
+              format: date
               description: >-
-            InitiativeDuration:
+            initiativeDuration:
               type: string
               description: >-
             kind:
@@ -4273,16 +4315,16 @@ components:
             purpose:
               type: string
               description: >-
-            Rank:
+            rank:
               type: string
               description: >-
-            Description:
+            description:
               type: string
               description: >-
             abilitytoImplement:
               type: string
               description: >-
-            Benefit:
+            benefit:
               type: string
               description: >-
             dCapability:
@@ -4297,31 +4339,28 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            PrincipleID:
+            implications:
               type: string
               description: >-
-            Implications:
+            principleMeasurement:
               type: string
               description: >-
-            PrincipleMeasurement:
-              type: string
-              description: >-
-            Priority:
+            priority:
               type: integer
               description: >-
-            Rationale:
+            rationale:
               type: string
               description: >-
-            Statement:
+            statement:
               type: string
               description: >-
-            Type:
+            type:
               type: string
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
     dDeploymentModel:
@@ -4341,31 +4380,31 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            IP:
+            ip:
               type: integer
               description: >-
-            PublicIP:
+            publicIp:
               type: integer
               description: >-
-            CPU:
+            cpu:
               type: integer
               description: >-
-            RAM:
+            ram:
               type: integer
               description: >-
-            Owner:
+            owner:
               type: integer
               description: >-
-            ArchitectureType:
+            architectureType:
               type: string
               description: >-
-            Disk:
+            disk:
               type: integer
               description: >-
             hostname:
               type: string
               description: >-
-            OS:
+            os:
               type: string
               description: >-
     dEvent:
@@ -4373,13 +4412,13 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
     dFeature:
@@ -4387,13 +4426,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Author:
-              type: string
-              description: >-
-            Proofreader:
-              type: string
-              description: >-
-            Status:
+            proofreader:
               type: string
               description: >-
     dGrowthPackage:
@@ -4405,10 +4438,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Author:
-              type: string
-              description: >-
-            Responsible:
+            responsible:
               type: string
               description: >-
             dRequirement:
@@ -4430,19 +4460,13 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Author:
+            priority:
               type: string
               description: >-
-            Status:
+            proofreader:
               type: string
               description: >-
-            Priority:
-              type: string
-              description: >-
-            Proofreader:
-              type: string
-              description: >-
-            Type:
+            type:
               type: string
               description: >-
     dRisk:
@@ -4450,13 +4474,13 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Likehood:
+            likehood:
               type: integer
               description: >-
-            Severity:
+            severity:
               type: integer
               description: >-
-            RiskStrategy:
+            riskStrategy:
               type: string
               description: >-
     dLocation:
@@ -4464,25 +4488,25 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            AreaCode:
+            areaCode:
               type: string
               description: >-
-            City:
+            city:
               type: string
               description: >-
-            Country:
+            country:
               type: string
               description: >-
-            EmailID:
+            emailId:
               type: string
               description: >-
-            PhoneNumber:
+            phoneNumber:
               type: string
               description: >-
-            Province:
+            province:
               type: string
               description: >-
-            Street:
+            street:
               type: string
               description: >-
             dDeploymentNode:
@@ -4497,7 +4521,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Definition:
+            definition:
               type: string
               description: >-
             dMeasurementCategory:
@@ -4512,10 +4536,10 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            MeasurementArea:
+            measurementArea:
               type: string
               description: >-
-            Definition:
+            definition:
               type: string
               description: >-
             dMeasurementGrouping:
@@ -4530,10 +4554,10 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            MeasurementCategory:
+            measurementCategory:
               type: string
               description: >-
-            Definition:
+            definition:
               type: string
               description: >-
     dNetwork:
@@ -4541,10 +4565,10 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            NetworkType:
+            networkType:
               type: string
               description: >-
-            NetworkQuality:
+            networkQuality:
               type: integer
               description: >-
             dDeploymentNode:
@@ -4596,16 +4620,17 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Category:
+            category:
               type: string
               description: >-
             finishDate:
               type: string
+              format: date
               description: >-
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
     dOrganizationUnit:
@@ -4613,7 +4638,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            HeadCount:
+            headCount:
               type: integer
               description: >-
             dStakeholder:
@@ -4628,16 +4653,17 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Owner:
+            owner:
               type: string
               description: >-
-            Source:
+            source:
               type: string
               description: >-
-            RetireDate:
+            retireDate:
               type: string
+              format: date
               description: >-
-            Price:
+            price:
               type: integer
               description: >-
             dBusinessProcess:
@@ -4675,10 +4701,10 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            SkillLevel:
+            skillLevel:
               type: integer
               description: >-
-            SkillCategory:
+            skillCategory:
               type: string
               description: >-
     dSubNetwork:
@@ -4690,7 +4716,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Database:
+            database:
               type: integer
               description: >-
     dTest:
@@ -4710,7 +4736,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            Criticality:
+            criticality:
               type: string
               description: >-
             isDecomposed:
@@ -4730,7 +4756,7 @@ components:
             name:
               type: string
               description: >-
-            MounthPath:
+            mounthPath:
               type: string
               description: >-
             subPath:
@@ -4755,9 +4781,10 @@ components:
       name: id
       required: true
       description: >-
-        TODO
+        Stable UUID of the DAF resource addressed by this operation.
       schema:
         type: string
+        format: uuid
       in: path
   responses:
     200dBusinessProcess_post:
@@ -6268,7 +6295,7 @@ components:
       required: true
     dZone:
       description: >-
-        Defines macro divisions containing regions mapped to ArchiMate�s Infrastructure Service.
+        Defines macro divisions containing regions mapped to ArchiMate's Infrastructure Service.
       content:
         application/json:
           schema:
@@ -6479,7 +6506,7 @@ components:
     dOpinionInner:
       description: >-
         Captures implicit stakeholder opinions related to a topic.
-        A Stakeholder�s opinion that is relevant for the topic but is not formulated explicitly.
+        A Stakeholder's opinion that is relevant for the topic but is not formulated explicitly.
         
       content:
         application/json:
@@ -6488,7 +6515,7 @@ components:
       required: true
     dDeploymentNode:
       description: >-
-        Represents a physical machine or virtual server that hosts services, applications, or containers, akin to ArchiMate�s Node concept in the Technology Layer.
+        Represents a physical machine or virtual server that hosts services, applications, or containers, akin to ArchiMate's Node concept in the Technology Layer.
       content:
         application/json:
           schema:
@@ -6568,7 +6595,7 @@ components:
       required: true
     dCluster:
       description: >-
-        Represents a set of nodes working in the same Region, akin to ArchiMate�s Node concept within a server infrastructure.
+        Represents a set of nodes working in the same Region, akin to ArchiMate's Node concept within a server infrastructure.
       content:
         application/json:
           schema:
@@ -6576,7 +6603,7 @@ components:
       required: true
     dVolume:
       description: >-
-        Refers to the storage assigned to containers, ensuring persistence, aligning with the Data Object in ArchiMate�s Application Layer.
+        Refers to the storage assigned to containers, ensuring persistence, aligning with the Data Object in ArchiMate's Application Layer.
       content:
         application/json:
           schema:
