@@ -3436,7 +3436,7 @@ components:
               type: string
               description: >-
             isCore:
-              type: string
+              type: boolean
               description: >-
     DAFBase:
       description: >-
@@ -3452,6 +3452,9 @@ components:
         writable: All properties not marked readOnly
       allOf:
         - type: object
+          required:
+            - id
+            - name
           properties:
             id:
               type: string
@@ -3461,12 +3464,10 @@ components:
                 Stable, server-assigned UUID for this DAF resource. It is immutable and is used in resource URLs.
             alias:
               type: string
-              readOnly: false
               description: >-
                 Optional alternate name for the resource. Writable by clients.
             author:
               type: string
-              readOnly: false
               description: >-
                 Person or organizational identity responsible for the model content. Author is a domain attribution and may differ from createdBy or modifiedBy. Writable by clients.
             created:
@@ -3493,24 +3494,50 @@ components:
                 Authenticated principal that most recently persisted a change. This audit identity is distinct from the domain author and createdBy. Server-managed and readOnly.
             status:
               type: string
-              readOnly: false
               description: >-
                 Lifecycle or workflow state of the resource. Writable by clients subject to domain workflow rules.
             version:
               type: string
-              readOnly: false
               description: >-
                 Domain or model version assigned to the resource. Writable by clients when the model version changes.
             name:
               type: string
-              readOnly: false
               description: >-
                 Human-readable name of the resource. Writable by clients.
             notes:
               type: string
-              readOnly: false
               description: >-
                 Free-form explanatory notes about the resource. Writable by clients.
+            phase:
+              type: string
+              nullable: true
+              description: Lifecycle or project phase associated with the model element.
+            modelElementType:
+              type: string
+              nullable: true
+              description: Base modeling type such as Class, Component, Actor or Requirement.
+            stereotype:
+              type: string
+              nullable: true
+              description: Qualified stereotype applied to the model element.
+            visibility:
+              type: string
+              nullable: true
+              enum:
+                - public
+                - private
+                - protected
+                - package
+            packageId:
+              type: string
+              format: uuid
+              nullable: true
+              description: Identifier of the package containing the model element.
+            parentId:
+              type: string
+              format: uuid
+              nullable: true
+              description: Identifier of the parent model element.
     dRole:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -3529,10 +3556,10 @@ components:
               type: string
               description: >-
             areSkillsDefined:
-              type: string
+              type: boolean
               description: >-
             areSkillsAvailable:
-              type: string
+              type: boolean
               description: >-
             degreeOfUtilisation:
               type: integer
@@ -3569,37 +3596,59 @@ components:
               type: string
               description: >-
             schemes:
-              type: string
+              type: array
+              items:
+                type: string
               description: >-
             consumes:
-              type: string
+              type: array
+              items:
+                type: string
               description: >-
             produces:
-              type: string
+              type: array
+              items:
+                type: string
               description: >-
             definitions:
-              type: string
+              type: object
+              additionalProperties: true
               description: >-
             parameters:
-              type: string
+              type: object
+              additionalProperties: true
               description: >-
             responses:
-              type: string
+              type: object
+              additionalProperties: true
               description: >-
             securityDefinitions:
-              type: string
+              type: object
+              additionalProperties: true
               description: >-
             tags:
-              type: string
+              type: array
+              items:
+                type: string
               description: >-
             fullName:
-              type: integer
+              type: string
               description: >-
             license:
-              type: integer
+              type: string
               description: >-
             contact:
-              type: string
+              type: object
+              properties:
+                name:
+                  type: string
+                url:
+                  type: string
+                  format: uri
+                email:
+                  type: string
+                  format: email
+              additionalProperties: true
               description: >-
             dJsonSchema:
               description: >-
@@ -3638,7 +3687,6 @@ components:
         A JSON Schema element represented as a first-class DAF resource so it can be identified, attributed, versioned, and related consistently with the rest of the metamodel.
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dApplicationComponent:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -3722,7 +3770,6 @@ components:
     dApplicationFunction:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dStakeholder:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -3744,7 +3791,12 @@ components:
               type: string
               description: >-
             raci:
-              type: integer
+              type: string
+              enum:
+                - R
+                - A
+                - C
+                - I
               description: >-
             knowledge:
               type: string
@@ -3766,7 +3818,6 @@ components:
     dOpinionInner:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dOpinion:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -3785,13 +3836,13 @@ components:
         - type: object
           properties:
             isUsable:
-              type: string
+              type: boolean
               description: >-
             meetsBizNeeds:
-              type: string
+              type: boolean
               description: >-
             meetsTomorrowNeeds:
-              type: string
+              type: boolean
               description: >-
     dPhysicalService:
       allOf:
@@ -3905,16 +3956,16 @@ components:
               format: date
               description: >-
             isDocumented:
-              type: string
+              type: boolean
               description: >-
             isEffective:
-              type: string
+              type: boolean
               description: >-
             isOptimized:
-              type: string
+              type: boolean
               description: >-
             isAdopted:
-              type: string
+              type: boolean
               description: >-
             dBusinessService:
               description: >-
@@ -4057,13 +4108,13 @@ components:
               type: string
               description: >-
             isAccessible:
-              type: string
+              type: boolean
               description: >-
             isTimely:
-              type: string
+              type: boolean
               description: >-
             isAccurate:
-              type: string
+              type: boolean
               description: >-
             dDataEntity:
               description: >-
@@ -4132,7 +4183,6 @@ components:
         Represents a set of deployment nodes working in the same region. A cluster is a DAF resource and therefore inherits the common DAF metadata and identifier policy.
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dContainer:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -4188,7 +4238,6 @@ components:
     dView:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dModelClass:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -4207,10 +4256,10 @@ components:
               type: string
               description: >-
             isSearchable:
-              type: string
+              type: boolean
               description: >-
             isSoap:
-              type: string
+              type: boolean
               description: >-
             orderby:
               type: string
@@ -4381,11 +4430,13 @@ components:
         - type: object
           properties:
             ip:
-              type: integer
+              type: string
               description: >-
+                IPv4 or IPv6 address of the deployment node.
             publicIp:
-              type: integer
+              type: string
               description: >-
+                Public IPv4 or IPv6 address of the deployment node.
             cpu:
               type: integer
               description: >-
@@ -4393,7 +4444,7 @@ components:
               type: integer
               description: >-
             owner:
-              type: integer
+              type: string
               description: >-
             architectureType:
               type: string
@@ -4432,7 +4483,6 @@ components:
     dGrowthPackage:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dIssue:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -4474,7 +4524,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            likehood:
+            likelihood:
               type: integer
               description: >-
             severity:
@@ -4588,7 +4638,6 @@ components:
     dSecurityGroup:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dObject:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -4676,11 +4725,9 @@ components:
     dProgram:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dRegion:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dResource:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
@@ -4710,14 +4757,13 @@ components:
     dSubNetwork:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
-        - type: object
     dTable:
       allOf:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
             database:
-              type: integer
+              type: string
               description: >-
     dTest:
       allOf:
@@ -4740,7 +4786,7 @@ components:
               type: string
               description: >-
             isDecomposed:
-              type: string
+              type: boolean
               description: >-
             entrancecriteria:
               type: string
@@ -4753,10 +4799,7 @@ components:
         - $ref: '#/components/schemas/DAFBase'
         - type: object
           properties:
-            name:
-              type: string
-              description: >-
-            mounthPath:
+            mountPath:
               type: string
               description: >-
             subPath:
