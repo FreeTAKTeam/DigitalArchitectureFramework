@@ -1,18 +1,20 @@
 option explicit
- ' 
-' Script Name: UML profile configuratrion
+ '  DO NOT USE
+' Script Name: UML profile configuration
 ' Author:  Giu Platania
 ' Purpose: Scripts to transform metamodel into UML Profile, create classes for toolboxes (elements and relationships
 ' generates the quicklink file and a list of packages named after the stereotypes to be used as "TOGAF catalogs".
-' Date: 2022 / 03 / 23
-' Version: 4.20220323
+' generates toolboxes
+' generate SQL queries ('' create a SQL script that check for required but missing relationships)
+' generate CSV import
+' generate tagged value query
+' generate a list of packages GUID and associated stereotypes
+' strip
+' last review Date: 2025 / 01 / 21
+' Version: 6.20250121
  '
- ' TODO
- ' create a better management of alias/names for elements and relationships
- ' add the alias of the stereotype to the alias of the metatype
- 
  ' USAGE:
- ' this is the companion script to the M2 MdG technology
+ ' this is the companion script to the M3 MdG technology
 '    Create a package called Metamodel or use the template
 '    customize the the GUID of the Metamodel package, UML profile , Tolboxes classes and connectors in the script "Configuration"
 '    create a M3 diagram or use the template
@@ -31,15 +33,18 @@ option explicit
  '   Execute the script Generate UML profile
  
 !INC Local Scripts.EAConstants-VBScript
-!INC M3.Model Management Utilities
-!INC M3 Local.configuration
+!INC DAF MDG.Model Management Utilities
+!INC DAF MDG.DAF M3 Conf
+!INC Wrappers.Include
 
 const STREAM_FOR_READING = 1
 const STREAM_FOR_WRITING = 2
 const STREAM_FOR_APPENDING = 3
 
 dim profilePackage 			as EA.Package
+dim relationshipPackage		as EA.Package
 dim quickLinkFileStream	   'as Scripting.TextStream
+dim CSVImportString 		' as place where to store packages GUIDs and stereotypes
 dim toolboxClass 	as EA.Element
 dim toolboxConnector as EA.Element
 
@@ -49,8 +54,12 @@ sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 		Repository.EnableUIUpdates = false
 		quickLinkFileName = fileName
 		createQuickLinkFile	
+		' initialize  the import file variable
+		CSVImportString = "stereotype, GUID"
+		
 	set profilePackage = Repository.GetPackageByGuid( profilePackageGUID)
 	set metamodelPackage = Repository.GetPackageByGuid( metamodelPackageGUID)
+	set relationshipPackage = Repository.GetPackageByGuid( relationshipPackageGUID)
 	set toolboxClass = Repository.GetElementByGuid(ProfileToolboxClassGUID) 
 	set toolboxConnector = Repository.GetElementByGuid(ProfileToolboxConnectorGUID)
 	clearProfileMetamodelTags profilePackage
@@ -59,9 +68,13 @@ sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 	transformPackage metamodelPackage
 	quickLinkFileStream.Close
 	updateQuickLinkDocument
+	' write import string to file
+	writeCSVImportFile(CSVImportString)
+		
+		
 	Repository.RefreshModelView profilePackage.PackageID
 	Repository.EnableUIUpdates = true
-
+	Session.Output "Done at " & Now() 
 end sub
 
 sub clearProfileMetamodelTags( profilePackage)
@@ -76,22 +89,225 @@ sub clearProfileMetamodelTags( profilePackage)
 	next	
 end sub
 
-sub createQuickLinkFile
+'''''''''''''''''''''''
+'''''''''''''''''''''' SQL script
+''''''''''''''''''''''' TODO move to new file
+'''''''''''''''''''''''
 
-	dim fileSysObj 'as Scripting.FileSystemObject
-	set fileSysObj = CreateObject( "Scripting.FileSystemObject")
-	set quickLinkFileStream = fileSysObj.CreateTextFile( quickLinkFileName, STREAM_FOR_WRITING)
-	quickLinkFileStream.WriteLine "//Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column"
-	quickLinkFileStream.WriteLine "//generated:" & now()
+'' SQL Query Element for validation
+sub SQLQueryElement( SourceStereotype, TargetStereotype, connectortype)
+	dim sqlGetString 'as string
+	dim scriptFile
+	sqlGetString = "SELECT o1.ea_guid AS ItemGuid                                                      " & vbNewLine & _
+" FROM ((((((t_object as o1                                                         " & vbNewLine & _
+" INNER JOIN t_Package p ON p.Package_ID = o1.Package_ID)                           " & vbNewLine & _
+" LEFT JOIN t_Package Package_p1 ON Package_p1.Package_id = p.parent_id)            " & vbNewLine & _
+" LEFT JOIN t_Package Package_p2 ON Package_p2.Package_id = Package_p1.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_Package Package_p3 ON Package_p3.Package_id = Package_p2.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_Package Package_p4 ON Package_p4.Package_id = Package_p3.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_Package Package_p5 ON Package_p5.Package_id = Package_p4.parent_id)   " & vbNewLine & _
+"                                                                                   " & vbNewLine & _
+" where o1.stereotype = '"& SourceStereotype &"' 									"
+
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlGetString
+			'save the script
+			scriptFile.FullPath = SQLPath & SourceStereotype& "_"  & "BasicQuery.sql"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving  Basic Query script: " & scriptFile.FullPath
 end sub
 
-sub updateQuickLinkDocument
-	dim quickLinkDoc	as EA.Element
-	Session.Output "Updating QuickLink document..."	
-	set quickLinkDoc = getProfileElement( "QuickLink")
-	quickLinkDoc.LoadLinkedDocument quickLinkFileName	
-	quickLinkDoc.Update
+'' SQL Simple relationship
+sub SQLSimpleRelationship( SourceStereotype, TargetStereotype, connectortype)
+	dim sqlGetString 'as string
+	dim scriptFile
+	sqlGetString = 		"-- Generated "  & now() & vbNewLine &_
+						"--  " & SourceStereotype & " (GroupName) connected with  " & TargetStereotype & " (series)" & vbNewLine &_
+						"SELECT " & SourceStereotype & ".Name as " & SourceStereotype & ",  " & TargetStereotype & ".Name as  " & TargetStereotype  & vbNewLine &_
+						"FROM t_object AS " & TargetStereotype & vbNewLine & _
+						"INNER JOIN t_connector as connector ON " & TargetStereotype &".Object_ID = connector.Start_Object_ID" & vbNewLine &_
+						"INNER JOIN t_object AS " & SourceStereotype & " ON connector.End_Object_ID =  " & SourceStereotype & ".Object_ID" & vbNewLine &_
+						"WHERE " & SourceStereotype & ".Stereotype='" & SourceStereotype  &"'" & vbNewLine &_ 
+						"AND  " & TargetStereotype & ".Stereotype='" & TargetStereotype  & "'" & vbNewLine &_ 
+						"AND connector.Stereotype='" & ConnectorType &"'"
+	
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlGetString
+			'save the script
+			scriptFile.FullPath = SQLPath & SourceStereotype& "_" & connectortype  & "_" & TargetStereotype & ".sql"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving script: " & scriptFile.FullPath
 end sub
+
+
+'' create a SQL script that check for required but missing relationships
+'' TODO: connectortype is really the stereotype
+sub SQLmissingRelationship( SourceStereotype, TargetStereotype, connectortype)
+	dim sqlGetString 'as string
+	dim scriptFile
+	sqlGetString = 		"-- Generated "  & now() & vbNewLine &_
+						"SELECT o.name AS ItemName,  o.ea_guid AS CLASSGUID  , o.Object_Type  AS [CLASSTYPE]            " & vbNewLine & _
+						" FROM t_object AS o                                                                            " & vbNewLine & _
+						" WHERE o.StereoType = '" & SourceStereotype & "'                                               " & vbNewLine & _
+						" AND o.ea_guid not  in                                                                         " & vbNewLine & _
+						" (                                                                                             " & vbNewLine & _
+						" 	Select  o1.ea_guid                                                                          " & vbNewLine & _
+						" 	from t_object as o1                                                                         " & vbNewLine & _
+						" 	Inner join t_connector c on                                                                 " & vbNewLine & _
+						" 							(o1.Object_ID = c.Start_Object_ID AND                               " & vbNewLine & _
+						" 								c.Stereotype = '" & ConnectorType &"'   		                " & vbNewLine & _
+						" 								)                                                               " & vbNewLine & _
+						" 	inner join t_object o2 on (c.End_object_ID = o2.Object_ID 	AND o2.Stereotype = '" & TargetStereotype  &"')   " & vbNewLine & _
+						" 	WHERE o1.Stereotype = '" & SourceStereotype & "'	                                        " & vbNewLine & _
+						" )                                                                                             "
+						
+	
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlGetString
+			'save the script
+			scriptFile.FullPath = SQLPath & SourceStereotype& "_" & connectortype  & "_" & TargetStereotype & "_Missing.sql"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving missing Relationship script: " & scriptFile.FullPath
+end sub
+
+'' create a SQL script that check for presence of this element is a diagram
+
+sub SQLmissingDiagram( SourceStereotype, TargetStereotype, connectortype)
+	dim sqlGetString 'as string
+	dim scriptFile
+	
+	sqlGetString =  "SELECT o.Name AS ItemName                                                          " & vbNewLine & _
+					" , 'object' as ItemType                                                            " & vbNewLine & _
+					" , o.ea_guid AS ItemGuid                                                           " & vbNewLine & _
+					" , o.Object_Type AS ElementType                                                    " & vbNewLine & _
+					" , o.StereoType AS ElementStereotype                                               " & vbNewLine & _
+					" , p.name AS PackageName                                                           " & vbNewLine & _
+					" , package_p1.name AS PackageParentLevel1                                          " & vbNewLine & _
+					" , package_p2.name AS PackageParentLevel2                                          " & vbNewLine & _
+					" , package_p3.name AS PackageParentLevel3                                          " & vbNewLine & _
+					" , package_p4.name AS PackageParentLevel4                                          " & vbNewLine & _
+					" , package_p5.name AS PackageParentLevel5                                          " & vbNewLine & _
+					" FROM ((((((t_object o                                                             " & vbNewLine & _
+					" INNER JOIN t_package p ON p.Package_ID = o.Package_ID)                            " & vbNewLine & _
+					" LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)            " & vbNewLine & _
+					" LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)   " & vbNewLine & _
+					" LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)   " & vbNewLine & _
+					" LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)   " & vbNewLine & _
+					" LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)   " & vbNewLine & _
+					" WHERE o.ea_guid in (#ElementGuids#)                                               " & vbNewLine & _
+					" AND o.ea_guid NOT IN (                                                            " & vbNewLine & _
+					" Select o1.ea_GUID                                                                 " & vbNewLine & _
+					" from t_object as o1                                                               " & vbNewLine & _
+					" Inner Join t_diagramobjects d on d.Object_ID = o1.Object_ID                       " & vbNewLine & _
+					" where o1.stereotype = '"& SourceStereotype &"'                                     " & vbNewLine & _
+					" )"    
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlGetString
+			'save the script
+			scriptFile.FullPath = SQLPath & SourceStereotype& "_"  & "_MissingDiagram.sql"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving missing Diagram script: " & scriptFile.FullPath
+end sub
+
+'' create a SQL script that checks for documentation (ea notes)
+sub SQLmissingNotes( SourceStereotype, TargetStereotype, connectortype)
+	dim sqlGetString 'as string
+	dim scriptFile
+	
+	sqlGetString =  "SELECT o.Name AS ItemName                                      " & vbNewLine & _
+" , 'object' as ItemType                                                            " & vbNewLine & _
+" , o.ea_guid AS ItemGuid                                                           " & vbNewLine & _
+" , o.Object_Type AS ElementType                                                    " & vbNewLine & _
+" , o.StereoType AS ElementStereotype                                               " & vbNewLine & _
+" , p.name AS PackageName                                                           " & vbNewLine & _
+" , package_p1.name AS PackageParentLevel1                                          " & vbNewLine & _
+" , package_p2.name AS PackageParentLevel2                                          " & vbNewLine & _
+" , package_p3.name AS PackageParentLevel3                                          " & vbNewLine & _
+" , package_p4.name AS PackageParentLevel4                                          " & vbNewLine & _
+" , package_p5.name AS PackageParentLevel5                                          " & vbNewLine & _
+" FROM ((((((t_object o                                                             " & vbNewLine & _
+" INNER JOIN t_package p ON p.Package_ID = o.Package_ID)                            " & vbNewLine & _
+" LEFT JOIN t_package package_p1 ON package_p1.package_id = p.parent_id)            " & vbNewLine & _
+" LEFT JOIN t_package package_p2 ON package_p2.package_id = package_p1.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_package package_p3 ON package_p3.package_id = package_p2.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_package package_p4 on package_p4.package_id = package_p3.parent_id)   " & vbNewLine & _
+" LEFT JOIN t_package package_p5 on package_p5.package_id = package_p4.parent_id)   " & vbNewLine & _
+" WHERE o.ea_guid in (#ElementGuids#)                                               " & vbNewLine & _
+" AND o.ea_guid in (                                                                " & vbNewLine & _
+" Select o1.ea_guid from t_object as o1                                             " & vbNewLine & _
+" where o1.Note IS NULL                                                             " & vbNewLine & _
+" and o1.stereotype = '"& SourceStereotype &"' )                                      "
+  
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlGetString
+			'save the script
+			scriptFile.FullPath = SQLPath & SourceStereotype& "_"  & "_MissingNotes.sql"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving missing notes script: " & scriptFile.FullPath
+end sub
+
+''' generate a query with all tagged values
+sub SQLQueryAllTaggedValues(metamodelClass)
+		dim scriptFile
+		dim attribute 		as EA.Attribute	
+		dim taggedValueQuery 'as string
+		dim sqlInitialString 'as string
+		dim SQLFrom
+		dim sqlFinalString
+		dim taggedValueselect ' as string
+		dim strippedattribute 
+			dim strippedAlias
+			
+		strippedAlias = StripToAlphanumeric(metamodelClass.Alias )
+		sqlInitialString = "SELECT "  & strippedAlias &".Object_ID, "  & strippedAlias &".ea_guid AS CLASSGUID , "& strippedAlias &".Object_Type AS CLASSTYPE, "& strippedAlias &".Name as "  & strippedAlias  
+		SQLFrom = vbNewLine &"FROM t_object as "  & strippedAlias
+		
+		sqlFinalString = vbNewLine & " WHERE "  & strippedAlias &".stereotype= '"  & metamodelClass.Name &"'"
+		
+		for each attribute in metamodelClass.Attributes
+			' Check if the attribute name does not start with "_" and is not named "icon"
+			if Not (Left(attribute.Name, 1) = "_" Or attribute.Name = "icon") then
+				
+				strippedattribute = StripToAlphanumeric(attribute.Name )
+				'Session.Output " tag value: "  & attribute.Name
+				taggedValueQuery = taggedValueQuery  & vbNewLine & _  	
+				"INNER JOIN t_objectproperties AS " & strippedattribute & "  ON (" & strippedattribute & ".Object_ID =" & strippedAlias & ".Object_ID AND " & strippedattribute & ".Property = ('" & attribute.Name & "'))"
+				taggedValueselect = taggedValueselect & ", " & strippedattribute & ".value AS '" & strippedattribute & "'"
+			end if
+		next
+						
+			set scriptFile = New TextFile
+			scriptfile.Contents = sqlInitialString  &taggedValueselect & SQLFrom & taggedValueQuery & sqlFinalString
+			'save the script
+			scriptFile.FullPath = SQLPath & strippedAlias& "_"  & "_taggedValueQUery.sql"
+			scriptFile.Save
+			'debug info
+			''Session.Output "saving tagged values query: " & scriptFile.FullPath
+			
+			
+end sub
+
+Function StripToAlphanumeric(inputString)
+    Dim regEx, matches, match
+    Set regEx = New RegExp
+    regEx.Pattern = "[^a-zA-Z0-9]"
+    regEx.Global = True
+    StripToAlphanumeric = regEx.Replace(inputString, "")
+End Function
+
+
+'''''''''' end of SQL
+'''''''''''''''''''''''
+
+
+'''''''''''''''''''''''
+''''''''''''''''''''''  Transform package
+'''''''''''''''''''''''
 
 sub transformPackage( metamodelPackage)
 
@@ -118,15 +334,14 @@ sub transformEnumeration( metamodelEnum)
 	dim profileEnum as EA.Element
 	dim enumName   'as String
 	enumName = metamodelEnum.Name
-	Session.Output "Generating enumeration for '" & enumName & "' ..."
-	set profileEnum = getProfileElement( enumName)
+	'Session.Output "Generating enumeration for '" & enumName & "' ..."
+	set profileEnum = getProfileElement( enumName, profilePackage)
 	if profileEnum is nothing then
 		set profileEnum = copyEnumeration( metamodelEnum, profilePackage)
 	else	
 		deleteElement profileEnum
 		set profileEnum = copyEnumeration( metamodelEnum, profilePackage)		
 	end if
-
 end sub
 
 function copyEnumeration( enumeration, package)
@@ -160,6 +375,7 @@ sub transformClassGUID( classGUID, profilePackageGUID, fileName)
 	Repository.RefreshModelView profilePackage.PackageID
 end sub
 
+' Subroutine to transform a class element based on its metamodel definition
 sub transformClass( metamodelClass)
 	
 	dim superClass					as EA.Element
@@ -169,7 +385,7 @@ sub transformClass( metamodelClass)
 	dim stereotypeClass				as EA.Element
 	dim metaType				 ' As String
 	metaType = ""
-
+' Check if the provided class has the M3 stereotype of "Concept"
 	if metamodelClass.Stereotype = "Concept" then	
 		set superClass = getRelatedSupplierElement2( metamodelClass, "Generalization", "", "Class", "")
 		metaclassName = getTaggedValueValue( metamodelClass, "Metaclass")
@@ -177,36 +393,43 @@ sub transformClass( metamodelClass)
 
 		if redefinedStereotypeName <> vbNullString or metaclassName <> vbNullString or not( superClass is nothing) then																		   		
 			Session.Output "Generating stereotype for '" & metamodelClass.Name & "' class..."					
-				stereotypeName = metamodelClass.Name		
-			set stereotypeClass = getProfileElement(stereotypeName)			
+				stereotypeName = metamodelClass.Name
+			 ' Check if the stereotype already exists in the profile package
+			set stereotypeClass = getProfileElement(stereotypeName, profilePackage)			
 			if stereotypeClass is nothing then			
 				set stereotypeClass = profilePackage.Elements.AddNew( stereotypeName, "Class")				
 				stereotypeClass.Stereotype = "stereotype"			
 				stereotypeClass.Update				
 				profilePackage.Elements.Refresh			
 			end if
+
 			'setup the catalog name
-		
-			 	if metamodelClass.Alias <> "" then
-				metaType = metamodelClass.Alias
-			else
-					' take off the prefix chars
-			 'metaType = MID (stereotypeName, 2)
-				metaType = metamodelClass.Name				
+			if GenerateCatalogs = 1 then
+					if metamodelClass.Alias <> "" then
+					metaType = metamodelClass.Alias
+				else
+						' take off the prefix chars
+				 'metaType = MID (stereotypeName, 2)
+					metaType = metamodelClass.Name				
+				end if			
+				createCatalog metaType,	metamodelClass.Name	
 			end if			
-			createCatalog metaType	
-				
 			setStereotypeProperties metamodelClass, stereotypeClass, metamodelClass.Name			
 			setTaggedValueValue stereotypeClass, "Profile Type", "Element"
-			setTaggedValueValue stereotypeClass, "Metamodel GUID", metamodelClass.ElementGUID		
+			setTaggedValueValue stereotypeClass, "Metamodel GUID", metamodelClass.ElementGUID
+			if GenerateCSV = 1 then
+				' generate a set of CSV files for import of the element type into EA
+				generateCSVImportFile stereotypeClass
+				' end generate a set of CSV files
+			end if
+					
 			if redefinedStereotypeName <> vbNullString then
 				setProfileRedefinedStereotype stereotypeClass, redefinedStereotypeName
 			elseif superClass is nothing then
 				setProfileMetaclass metamodelClass, stereotypeClass
 			else
 				setProfileSuperclass stereotypeClass, superClass
-			end if
-			
+			end if			
 			'if redefinedStereotypeName <> vbNullString then
 			'	setProfileRedefinedStereotype stereotypeClass, redefinedStereotypeName
 			'end if		
@@ -215,7 +438,31 @@ sub transformClass( metamodelClass)
 	end if	
 end sub
 
-sub createCatalog(stereotypeName)
+'''''''''''''''''''''''
+'''''''''''''''''''''' Catalogs
+'''''''''''''''''''''''
+
+''generate a CSV file associating packages GUIDS with stereotype names
+'' this is called at the end of the script
+sub writeCSVImportFile(CSVImportString)
+		dim scriptFile
+		set scriptFile = New TextFile
+	
+			scriptfile.Contents = CSVImportString
+			'save the script
+			scriptFile.FullPath = CSVPath &  "DAFCatalogs.csv"
+			scriptFile.Save
+			'debug info
+			Session.Output "saved  CSV with catalogs script: " & scriptFile.FullPath
+end sub
+
+'' this is called for each catalog
+sub addlinetoCSVImportFile(metamodelClass, packageGUID)
+	CSVImportString = CSVImportString & vbCrLf & metamodelClass  & "," & packageGUID
+end sub
+
+
+sub createCatalog(stereotypeName, techname)
 ' create a list of packages wit the same name of the stereotypes
 ' this can be included in the technology to create a repository structure according to the metamodel
 			 On Error Resume Next
@@ -224,12 +471,15 @@ sub createCatalog(stereotypeName)
 			''if  subPackage is nothing then
 			If Err.Number <> 0 Then			
 				set subPackage = profilePackage.Packages.AddNew(stereotypeName,"Package")
+				
 				Session.Output "Generating catalog for " & stereotypeName
 				subPackage.Update
 				Err.Clear
 			end if
+			addlinetoCSVImportFile  techname, subPackage.PackageGUID
 end sub
 
+'' set the class that extend the UML type with a stereotype
 function setProfileMetaclass( metamodelItem, stereotypeClass)
 ' add the metaclass to the stereotype
 	dim metaclassName  ' as String
@@ -250,12 +500,13 @@ function setProfileMetaclass( metamodelItem, stereotypeClass)
 	set setProfileMetaclass = profileMetaClass	
 end function
 
+'' set the super class that extend the stereotype
 sub setProfileSuperclass( stereotypeClass, metamodelSuperClass)
-
+'' set a superclass for the stereotype
 	dim stereotypeSuperClass	as EA.Element	
 	set stereotypeSuperClass = getRelatedSupplierElement( stereotypeClass, "Generalization", "Stereotype")	
 	if stereotypeSuperClass is nothing then	
-		set stereotypeSuperClass = getProfileElement( metamodelSuperClass.Name)			
+		set stereotypeSuperClass = getProfileElement( metamodelSuperClass.Name, profilePackage)			
 		if stereotypeSuperClass is nothing then		
 			set stereotypeSuperClass = profilePackage.Elements.AddNew( metamodelSuperClass.Name, "Class")
 			stereotypeSuperClass.Stereotype = "stereotype"
@@ -266,12 +517,16 @@ sub setProfileSuperclass( stereotypeClass, metamodelSuperClass)
 	end if
 end sub
 
+
+'' The setProfileRedefinedStereotype subroutine establishes a "Generalization" 
+'' relationship between a given stereotypeClass and a redefined stereotype 
+'' identified by redefinedStereotypeName. If the redefined stereotype does not exist, it creates one in the profilePackage.
 sub setProfileRedefinedStereotype( stereotypeClass, redefinedStereotypeName)
 
 	dim redefinedStereotypeClass	as EA.Element	
 	set redefinedStereotypeClass = getRelatedSupplierElement2( stereotypeClass, "Generalization", "redefines", "Class", "stereotype")	
 	if redefinedStereotypeClass is nothing then	
-		set redefinedStereotypeClass = getProfileElement( redefinedStereotypeName)			
+		set redefinedStereotypeClass = getProfileElement( redefinedStereotypeName, profilePackage)			
 		if redefinedStereotypeClass is nothing then		
 			set redefinedStereotypeClass = profilePackage.Elements.AddNew( redefinedStereotypeName, "Class")
 			redefinedStereotypeClass.Stereotype = "stereotype"
@@ -283,16 +538,38 @@ sub setProfileRedefinedStereotype( stereotypeClass, redefinedStereotypeName)
 	end if
 end sub
 
+'''''''''''''''''''''''
+'''''''''''''''''''''' ATRIBUTES
+'''''''''''''''''''''''
 sub setStereotypeProperties( metamodelClass, stereotypeClass, stereotypeName)
 	'set properties for elements and connectors
-	setAttribute stereotypeClass, "_metatype", metamodelClass.Alias
+	dim imageAttribute 	as  EA.Attribute
+	setAttribute stereotypeClass, "_metatype", metamodelClass.Alias		
 	setAttribute stereotypeClass, "_strictness", "profile"	
-	setAttribute stereotypeClass, "_Image", ""
+	'' check if image exists
+	'setAttribute stereotypeClass, "_Image", ""		
 	setAttribute stereotypeClass, "icon", IconPath + stereotypeName + ".bmp"
 	deleteTaggedValueAttributes stereotypeClass	
 	if metamodelClass.ObjectType = otElement then
 		addTaggedValueAttributes metamodelClass, stereotypeClass
 	end if
+end sub
+
+sub deleteTaggedValueAttributes( stereotypeClass)
+
+	dim attribute 		as EA.Attribute
+	dim attributeCount 'as Integer
+	dim attributeIndex 'as Integer	
+	attributeCount = stereotypeClass.Attributes.Count
+	for attributeIndex = attributeCount - 1 to 0 step -1	
+		set attribute = stereotypeClass.Attributes.GetAt( attributeIndex)	
+		if left( attribute.Name, 1) <> "_" and attribute.Name <> "icon" then		
+			if attribute.Stereotype = vbNullString then
+				stereotypeClass.Attributes.Delete attributeIndex
+			end if		
+		end if		
+	next	
+	stereotypeClass.Attributes.Refresh
 end sub
 
 sub addTaggedValueAttributes( metamodelClass, stereotypeClass)
@@ -306,6 +583,35 @@ sub addTaggedValueAttributes( metamodelClass, stereotypeClass)
 	metamodelClass.Attributes.Refresh	
 end sub
 
+'''''''''''''''''''''''
+'''''''''''''''''''''' CSV
+'''''''''''''''''''''''
+
+''generate a CSV file for Import a metamodel  element
+sub generateCSVImportFile(metamodelClass)
+		dim scriptFile
+		dim attribute 		as EA.Attribute	
+		dim CSVString '' AS string
+		CSVString = "Name, Notes, Version, Status"
+		set scriptFile = New TextFile
+		for each attribute in metamodelClass.Attributes
+			' Check if the attribute name does not start with "_" and is not named "icon"
+			if Not (Left(attribute.Name, 1) = "_" Or attribute.Name = "icon") then
+				Session.Output " CSV property: "  & attribute.Name
+				CSVString = CSVString & "," & "TagValue_" & ProfileName & "::" & attribute.Name
+			end if
+		next
+			scriptfile.Contents = CSVString
+			'save the script
+			scriptFile.FullPath = CSVPath & metamodelClass.Name & "_"  & "import.csv"
+			scriptFile.Save
+			'debug info
+			'Session.Output "saving  CSV import script: " & scriptFile.FullPath
+end sub
+
+'''''''''''''''''''''''
+'''''''''''''''''''''' TOOLBOX
+'''''''''''''''''''''''
 sub cleanToolboxesAttributes(ToolboxClass)
 ' delete all the attrribute of the template ToolboxClass
 	dim attribute 		as EA.Attribute
@@ -347,7 +653,7 @@ sub addToolboxesAttributes( metamodelClass, ToolboxClass)
 		Session.Output "adding toolbox for " +  metamodelClass.Name + " toolboxClass " + ToolboxClass.Name
 	dim attribute 		as EA.Attribute	
 	dim toolboxAttribute as EA.Attribute
-	set toolboxAttribute = ToolboxClass.Attributes.AddNew(ProfileName +"::"+metamodelClass.Name + "("+ metamodelClass.Type + ")", "string")
+	set toolboxAttribute = ToolboxClass.Attributes.AddNew(ProfileName +"::"+metamodelClass.Name + "(UML::"+ metamodelClass.Type + ")", "")
 	toolboxAttribute.Alias = metamodelClass.Alias
 	toolboxAttribute.Default = metamodelClass.Alias
 	toolboxAttribute.Update()
@@ -360,29 +666,16 @@ sub createtoolboxConnector(connector)
 	dim toolboxAttribute as EA.Attribute
 	dim metaclassName ' as string
 	metaclassName = getTaggedValueValue( connector, "Metaclass")
-	set toolboxAttribute = ToolboxConnector.Attributes.AddNew(ProfileName +"::"+connector.Name + "(UML::"+ metaclassName + ")", "string")
+	set toolboxAttribute = ToolboxConnector.Attributes.AddNew(ProfileName +"::"+connector.Name + "(UML::"+ metaclassName + ")", "")
 	toolboxAttribute.Alias = connector.Alias
 	toolboxAttribute.Default = connector.Alias
 	toolboxAttribute.Update()
 	ToolboxConnector.Attributes.Refresh	
 end sub
 
-sub deleteTaggedValueAttributes( stereotypeClass)
-
-	dim attribute 		as EA.Attribute
-	dim attributeCount 'as Integer
-	dim attributeIndex 'as Integer	
-	attributeCount = stereotypeClass.Attributes.Count
-	for attributeIndex = attributeCount - 1 to 0 step -1	
-		set attribute = stereotypeClass.Attributes.GetAt( attributeIndex)	
-		if left( attribute.Name, 1) <> "_" and attribute.Name <> "icon" then		
-			if attribute.Stereotype = vbNullString then
-				stereotypeClass.Attributes.Delete attributeIndex
-			end if		
-		end if		
-	next	
-	stereotypeClass.Attributes.Refresh
-end sub
+'''''''''''''''''''''''
+'''''''''''''''''''''' RELATIONSHIPS
+'''''''''''''''''''''''
 
 sub transformRelationships( metamodelClass, stereotypeClass)
 	dim connector as EA.Connector	
@@ -396,7 +689,7 @@ sub transformRelationships( metamodelClass, stereotypeClass)
 	next
 end sub
 
-
+' This subroutine transforms a metamodel relationship (connector) into a corresponding UML stereotype in Sparx EA
 sub transformRelationship( metamodelConnector)
 
 	dim metaclassName			  ' as String
@@ -409,8 +702,7 @@ sub transformRelationship( metamodelConnector)
 	metaclassName = getTaggedValueValue( metamodelConnector, "Metaclass")
 	metaclassAlias = metamodelConnector.alias
 	redefinedStereotypeName = getTaggedValueValue( metamodelConnector, "Redefines")
-	
-	
+		
 	if redefinedStereotypeName <> vbNullString or metaclassName <> vbNullString then	
 		Session.Output "Generating stereotype for '" & metamodelConnector.Name & "' relationship..."		
 		'if metamodelConnector.Alias <> "" then
@@ -418,12 +710,12 @@ sub transformRelationship( metamodelConnector)
 		'else
 			stereotypeName = metamodelConnector.Name
 		'end if		
-		set stereotypeClass = getProfileElement( stereotypeName)		
+		set stereotypeClass = getProfileElement( stereotypeName, relationshipPackage)		
 		if stereotypeClass is nothing then		
-			set stereotypeClass = profilePackage.Elements.AddNew( stereotypeName, "Class")
+			set stereotypeClass = relationshipPackage.Elements.AddNew( stereotypeName, "Class")
 			stereotypeClass.Stereotype = "stereotype"	
 			stereotypeClass.Update
-			profilePackage.Elements.Refresh			
+			relationshipPackage.Elements.Refresh			
 		end if		
 		setStereotypeProperties metamodelConnector, stereotypeClass, metamodelConnector.Name
 		set profileMetaclass = setProfileMetaclass( metamodelConnector, stereotypeClass)		
@@ -431,21 +723,44 @@ sub transformRelationship( metamodelConnector)
 			setProfileRedefinedStereotype stereotypeClass, redefinedStereotypeName
 		end if
 		
+		'set tags and properties in the metaclass
 		setAttribute profileMetaclass, "_MeaningForwards", metamodelConnector.SupplierEnd.Role
 		setAttribute profileMetaclass, "_MeaningBackwards", metamodelConnector.ClientEnd.Role
-		setTaggedValueValue profileMetaclass, "Metamodel GUID", metamodelConnector.ConnectorGUID
+	
+	setTaggedValueValue profileMetaclass, "Metamodel GUID", stereotypeClass.ElementGUID
+
 		'setAttribute profileMetaclass, "_lineStyle", "orthogonalR"
 		setAttribute profileMetaclass, "_relatedTo", metaclassAlias		
-		setTaggedValueValue profileMetaclass, "Metamodel GUID", stereotypeClass.ElementGUID
-		setTaggedValueValue stereotypeClass, "Profile Type", "Connector"
-	
 		
+		' set tags to link the connector to the original metamodel relationship
+		setTaggedValueValue stereotypeClass, "Metamodel GUID",  metamodelConnector.ConnectorGUID
+		setTaggedValueValue stereotypeClass, "Profile Type", "Connector"
 		updateQuickLink metamodelConnector
 	end if	
 end sub
 
-sub updateQuickLink( connector)
+'''''''''''''''''''''''
+'''''''''''''''''''''' QuickLink
+'''''''''''''''''''''''
 
+sub createQuickLinkFile
+
+	dim fileSysObj 'as Scripting.FileSystemObject
+	set fileSysObj = CreateObject( "Scripting.FileSystemObject")
+	set quickLinkFileStream = fileSysObj.CreateTextFile( quickLinkFileName, STREAM_FOR_WRITING)
+	quickLinkFileStream.WriteLine "//Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column"
+	quickLinkFileStream.WriteLine "//generated:" & now()
+end sub
+
+sub updateQuickLinkDocument
+	dim quickLinkDoc	as EA.Element
+	Session.Output "Updating QuickLink document..."	
+	set quickLinkDoc = getProfileElement( "QuickLink", profilePackage) 'search for an element called quicklink in the profilePackage
+	quickLinkDoc.LoadLinkedDocument quickLinkFileName	
+	quickLinkDoc.Update
+end sub
+
+sub updateQuickLink( connector)
 	dim connMetaclass      'as String
 	dim connStereotype	   'as String
 	dim toDirection		   'as String
@@ -461,12 +776,11 @@ sub updateQuickLink( connector)
 
 	connMetaclass = getTaggedValueValue( connector, "Metaclass")
 
-	if connector.Alias <> "" then
-		connStereotype = connector.Alias
-	else
+	'if connector.Alias <> "" then
+		'connStereotype = connector.Alias
+	'else
 		connStereotype = connector.Name
-	end if
-	
+	'end if
 	if connMetaclass = "Composition" or connMetaclass = "Aggregation" then
 		toDirection = "from"
 		fromDirection = "to"
@@ -474,21 +788,23 @@ sub updateQuickLink( connector)
 		toDirection = "directed"
 		fromDirection = "from"
 	end if
-
 	set sourceElement = Repository.GetElementByID( connector.ClientID)
 	sourceMetaclass = getTaggedValueValue( sourceElement, "Metaclass")
-	if sourceElement.Alias <> "" then
-		sourceStereotype = sourceElement.Alias
-	else
-		sourceStereotype = sourceElement.Name
-	end if
+	sourceStereotype = sourceElement.Name	
 	set targetElement = Repository.GetElementByID( connector.SupplierID)
-	targetMetaclass = getTaggedValueValue( targetElement, "Metaclass")
-	if targetElement.Alias <> "" then
-		targetStereotype = targetElement.Alias
-	else
-		targetStereotype = targetElement.Name
-	end if
+	targetMetaclass = getTaggedValueValue( targetElement, "Metaclass")	
+	targetStereotype = targetElement.Name
+	
+	' create SQL queries
+	if generateSLQ = 1 then
+		 SQLSimpleRelationship sourceStereotype, targetStereotype, connStereotype
+		 SQLmissingRelationship sourceStereotype, targetStereotype, connStereotype
+		'SQLmissingDiagram sourceStereotype, targetStereotype, connStereotype
+		SQLQueryElement sourceStereotype, targetStereotype, connStereotype
+		SQLmissingNotes sourceStereotype, targetStereotype, connStereotype
+		SQLQueryAllTaggedValues sourceElement
+		
+	end if	
 		
 	' Create relationship group comment row
 	
@@ -606,13 +922,11 @@ sub updateQuickLink( connector)
 	row(20) = vbNullString		' Precedes Separator LEAF
 	row(21) = vbNullString		' Precedes Separator GROUP
 	
-	textRow = Join( row, ",")
-	
+	textRow = Join( row, ",")	
 	quickLinkFileStream.WriteLine textRow
-
 end sub
 
-function getProfileElement( profileElementName)
+function getProfileElement1( profileElementName)
 
 	dim profileElement 	as EA.Element
 	dim element 		as EA.Element	
@@ -622,13 +936,39 @@ function getProfileElement( profileElementName)
 		if element.Name = profileElementName then
 			set profileElement = element
 			exit for
-		end if
-		
+		end if		
 	next
-	
-	set getProfileElement = profileElement
-	
-end function
+    ' Return the found profile element
+    set getProfileElement = profileElement
+end function	
+		
+
+Function getProfileElement(profileElementName, relationshipPackage)
+    ' Declare variables
+    Dim profileElement ' As EA.Element
+    Dim element ' As EA.Element
+    Set profileElement = Nothing
+
+    ' Use the provided relationshipPackage if specified, otherwise default to profilePackage
+    Dim targetPackage
+    If IsObject(relationshipPackage) Then
+        Set targetPackage = relationshipPackage ' Use the specified package
+    Else
+        Set targetPackage = profilePackage ' Default to global profilePackage
+    End If
+
+    ' Search for the element in the selected package
+    For Each element In targetPackage.Elements
+        If element.Name = profileElementName Then
+            Set profileElement = element
+            Exit For ' Exit once the element is found
+        End If
+    Next
+
+    ' Return the found profile element
+    Set getProfileElement = profileElement
+End Function
+
 
 function addStereotypeMetaClass( stereotypeClass, metaclassName)
 
@@ -638,12 +978,10 @@ function addStereotypeMetaClass( stereotypeClass, metaclassName)
 	profileMetaclass.Update
 	profilePackage.Elements.Refresh
 	addConnector stereotypeClass, "Extension", "", profileMetaclass
-	set addStereotypeMetaClass = profileMetaclass
-	
+	set addStereotypeMetaClass = profileMetaclass	
 end function
 
 sub testTransformClassGUID
-
 	dim classGUID		   ' as String
 	dim profilePackageGUID ' as String
 	dim quickLinkFileName    ' as String
@@ -659,16 +997,12 @@ sub testTransformClassGUID
 		Session.Prompt "Please configure the script .", promptOK
 			
 	end if
-	
-												end sub
+end sub
 
 sub testTransformPackageGUID
-	
-
 		transformPackageGUID metamodelPackageGUID, profilePackageGUID, quickLinkFileName
 	
-	Session.Output "Done!"
-	
+	Session.Output "Done!"	
 end sub
 
 testTransformPackageGUID
