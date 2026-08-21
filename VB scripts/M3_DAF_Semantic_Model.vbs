@@ -34,8 +34,27 @@
 '   QuickLink generator. SupplierEnd.Role is the forward meaning; ClientEnd.Role
 '   is the backward meaning.
 '
-' Version: 1.3.1
+' Version: 1.4.0
 ' Date: 2026 / 08 / 07
+'
+' 1.4.0 datatype and base-class changes:
+'   - treats the UML2 primitive type enumeration as authoritative for primitive M3 attributes
+'   - maps Boolean, Date, DateTime, Float, Int32, Int64, String and Uuid explicitly to RDF/XSD
+'   - maps the EA legacy Memo type to xsd:string and marks it as semantic format long-text
+'   - semantically projects every M3 Concept property whose name starts with "is" as xsd:boolean
+'     while retaining EA classifiers such as dboolean only as source-model provenance
+'   - suppresses class-level properties named exactly ID/Id/id (case-insensitive), because
+'     canonical semantic identity is inherited from daf:DAFBase through dafp:id
+'   - derives technology-independent relationship authoring semantics directly from the
+'     authoritative M3 connector definitions, mirroring the legacy UML Profile updateQuickLink transformation
+'   - keeps QuickLink.csv as an audit artifact only; it is not semantic input
+'   - treats <none> or an empty attribute type with no classifier as unresolved, never implicit String
+'   - preserves classifier-based types and enumeration classifiers
+'   - warns and marks unknown textual datatypes instead of silently coercing them to String
+'   - generates a synthetic daf:DAFBase class equivalent to the OpenAPI DAFBase
+'   - defines common dafp:* properties with rdfs:domain daf:DAFBase
+'   - gives daf:DAFBase UUID id, createdBy and modifiedBy semantics and SHACL constraints
+'   - makes every generated M3 class a subclass of daf:DAFBase and every class shape inherit DAFBaseShape
 '
 ' 1.3.1 relationship filtering:
 '   - ignores EA NoteLink connectors because they are diagram/documentation links, not DAF semantic relationships
@@ -72,7 +91,7 @@
 !INC Local Scripts.EAConstants-VBScript
 !INC DAF MDG.DAF M3 Conf
 
-Const SCRIPT_VERSION = "1.3.1"
+Const SCRIPT_VERSION = "1.5.0"
 
 Const NS_DAF      = "https://freetakteam.github.io/DAF/model#"
 Const NS_DAFM     = "https://freetakteam.github.io/DAF/metamodel#"
@@ -96,7 +115,12 @@ Dim legacyProfileConceptGuidMap, legacyProfileRelationshipGuidMap
 Dim conceptCount, supportingClassCount, enumCount, attributeCount, relationshipCount
 Dim inheritanceCount, taggedValueCount, constraintCount, warningCount
 Dim ignoredNoteLinkCount
+Dim explicitPrimitivePropertyCount, classifierTypedPropertyCount, unresolvedPropertyTypeCount, unknownPropertyTypeCount
+Dim legacyConvertedPropertyCount, booleanNamingConventionPropertyCount
+Dim suppressedDuplicateIdPropertyCount
+Dim dafBaseInheritanceCount
 Dim legacyProfileConceptCount, legacyProfileRelationshipCount, quickLinkRuleCount
+Dim authoringEnabledRelationshipCount, derivedQuickLinkEquivalentRuleCount
 
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set conceptIriById = CreateObject("Scripting.Dictionary")
@@ -149,9 +173,19 @@ taggedValueCount = 0
 constraintCount = 0
 warningCount = 0
 ignoredNoteLinkCount = 0
+explicitPrimitivePropertyCount = 0
+legacyConvertedPropertyCount = 0
+booleanNamingConventionPropertyCount = 0
+suppressedDuplicateIdPropertyCount = 0
+classifierTypedPropertyCount = 0
+unresolvedPropertyTypeCount = 0
+unknownPropertyTypeCount = 0
+dafBaseInheritanceCount = 0
 legacyProfileConceptCount = 0
 legacyProfileRelationshipCount = 0
 quickLinkRuleCount = 0
+authoringEnabledRelationshipCount = 0
+derivedQuickLinkEquivalentRuleCount = 0
 
 ' ---------------------------------------------------------------------------
 ' Main
@@ -204,8 +238,10 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
     WritePrefixes
     WriteOntologyHeader metamodelPackage
     WriteMetaMetamodelVocabulary
+    WriteTypingStatusVocabulary
     WriteCommonModelElementVocabulary
     WriteCommonSHACL
+    WriteRelationshipAuthoringVocabulary
 
     ' First pass creates stable IRIs and collects enumeration values so that
     ' all later references can resolve deterministically.
@@ -232,8 +268,19 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
     Report "Supporting M3 classes: " & supportingClassCount
     Report "Enumerations: " & enumCount
     Report "Attributes/property definitions: " & attributeCount
+    Report "Suppressed duplicate class ID properties: " & suppressedDuplicateIdPropertyCount
+    Report "PROPERTY TYPE AUDIT"
+    Report "  Explicit UML2 primitives: " & explicitPrimitivePropertyCount
+    Report "  Legacy semantic conversions: " & legacyConvertedPropertyCount
+    Report "  Boolean is* naming convention: " & booleanNamingConventionPropertyCount
+    Report "  Classifier-typed: " & classifierTypedPropertyCount
+    Report "  Unresolved (<none>/empty): " & unresolvedPropertyTypeCount
+    Report "  Unknown textual/classifier types: " & unknownPropertyTypeCount
     Report "Relationships: " & relationshipCount
+    Report "Authoring-enabled relationships: " & authoringEnabledRelationshipCount
+    Report "Derived EA QuickLink equivalents: " & derivedQuickLinkEquivalentRuleCount
     Report "Ignored NoteLink connectors: " & ignoredNoteLinkCount
+    Report "Synthetic DAFBase inheritances: " & dafBaseInheritanceCount
     Report "Generalizations: " & inheritanceCount
     Report "Tagged values preserved: " & taggedValueCount
     Report "Constraints preserved: " & constraintCount
@@ -574,9 +621,20 @@ Sub AuditGeneratedCompleteness()
         Report "M3 relationships missing from generated relationship profile: " & m3Only
     End If
 
+    Report "Authoring-enabled relationships derived from M3: " & authoringEnabledRelationshipCount
+    Report "Derived EA QuickLink-equivalent rules: " & derivedQuickLinkEquivalentRuleCount
+
     If quickLinkRuleCount > 0 Then
-        Report "QuickLink active rules: " & quickLinkRuleCount
-        Report "NOTE: QuickLink rule count is not expected to equal relationship count because one relationship can generate multiple QuickLink rows."
+        Report "Legacy QuickLink active rules (audit only): " & quickLinkRuleCount
+        If derivedQuickLinkEquivalentRuleCount = quickLinkRuleCount Then
+            Report "QuickLink count equivalence audit: PASS - M3 authoring semantics derive the same number of rules as the legacy QuickLink artifact."
+        Else
+            Warn "QuickLink count equivalence audit: FAIL - semantic derivation produces " _
+                & derivedQuickLinkEquivalentRuleCount & " rules but legacy QuickLink contains " _
+                & quickLinkRuleCount & " active rows."
+        End If
+    Else
+        Report "QuickLink count equivalence audit: NOT RUN - legacy QuickLink artifact unavailable or contains no active rules."
     End If
 
     If missingClasses = 0 And missingRelationships = 0 Then
@@ -651,10 +709,12 @@ Sub WriteMetaMetamodelVocabulary()
     ClassDef "dafm:Constraint", "Constraint", "Constraint preserved from the source M3 model."
     ClassDef "dafm:PackageDefinition", "Package Definition", "Source metamodel package used to organize DAF concepts."
     ClassDef "dafm:SupportingClassDefinition", "Supporting Class Definition", "Class found in the M3 package that is not stereotyped as Concept."
+    ClassDef "dafm:TypingStatus", "Typing Status", "Status describing how an M3 property datatype was resolved during semantic-model generation."
     ClassDef "dafm:OperationDefinition", "Operation Definition", "Operation/method definition preserved from the source M3 model."
     ClassDef "dafm:ParameterDefinition", "Parameter Definition", "Operation parameter definition preserved from the source M3 model."
     ClassDef "dafm:GenerationRecord", "Generation Record", "Metadata describing one generation of the semantic metamodel."
     ClassDef "dafm:GeneralizationDefinition", "Generalization Definition", "Source generalization preserved as both RDFS inheritance and an auditable M3 definition."
+    ClassDef "dafm:AuthoringPolicy", "Authoring Policy", "Technology-independent policy describing how users and tools may create or connect instances of a DAF relationship type."
     W ""
 
     ObjectPropDef "dafm:source", "source", "Source model element of a first-class relationship."
@@ -674,7 +734,10 @@ Sub WriteMetaMetamodelVocabulary()
     ObjectPropDef "dafm:parentPackage", "parent package", "Parent source package."
     ObjectPropDef "dafm:definedBy", "defined by", "Links a property, operation or parameter definition to its defining metamodel object."
     ObjectPropDef "dafm:endClass", "end class", "Class associated with a relationship end."
-    ObjectPropDef "dafm:classifier", "classifier", "Classifier associated with an M3 attribute or parameter."
+    ObjectPropDef "dafm:classifier", "classifier", "Semantic classifier associated with an M3 attribute or parameter."
+    ObjectPropDef "dafm:sourceClassifier", "source classifier", "Original Enterprise Architect classifier retained as source-model provenance when semantic typing overrides it."
+    ObjectPropDef "dafm:typingStatus", "typing status", "How the datatype of an M3 property was resolved."
+    ObjectPropDef "dafm:authoringPolicy", "authoring policy", "Authoring behavior associated with a DAF relationship type."
     W ""
 
     DataPropDef "dafm:eaGuid", "EA GUID", "Original Enterprise Architect GUID used for migration traceability.", "xsd:string"
@@ -685,6 +748,16 @@ Sub WriteMetaMetamodelVocabulary()
     DataPropDef "dafm:backwardRole", "backward role", "Backward semantic role/meaning from target to source.", "xsd:string"
     DataPropDef "dafm:cardinality", "cardinality", "Cardinality text exactly as stored in the source model.", "xsd:string"
     DataPropDef "dafm:relationshipKind", "relationship kind", "UML/DAF relationship kind such as Association, Aggregation, Composition, Dependency, Generalization or Realization.", "xsd:string"
+    DataPropDef "dafm:allowConnectExisting", "allow connect existing", "Whether authoring tools may connect two existing model elements using this relationship policy.", "xsd:boolean"
+    DataPropDef "dafm:allowCreateSource", "allow create source", "Whether an authoring tool may create a new semantic source element while creating the relationship.", "xsd:boolean"
+    DataPropDef "dafm:allowCreateTarget", "allow create target", "Whether an authoring tool may create a new semantic target element while creating the relationship.", "xsd:boolean"
+    DataPropDef "dafm:disallowSelf", "disallow self", "Whether authoring tools should prevent connecting an element to itself through this relationship.", "xsd:boolean"
+    DataPropDef "dafm:noInheritanceFromMetatype", "no inheritance from metatype", "Preserves the legacy QuickLink behavior that does not inherit choices from the underlying UML metatype.", "xsd:boolean"
+    DataPropDef "dafm:authoringMenuGroup", "authoring menu group", "Logical authoring menu group; generated from the configured DAF profile name.", "xsd:string"
+    DataPropDef "dafm:authoringComplexityLevel", "authoring complexity level", "Authoring complexity level preserved from the legacy QuickLink transformation.", "xsd:integer"
+    DataPropDef "dafm:forwardAuthoringDirection", "forward authoring direction", "Direction token derived for source-to-target authoring; mirrors the legacy QuickLink transformation.", "xsd:string"
+    DataPropDef "dafm:backwardAuthoringDirection", "backward authoring direction", "Direction token derived for target-to-source authoring; mirrors the legacy QuickLink transformation.", "xsd:string"
+    DataPropDef "dafm:derivedQuickLinkRowCount", "derived QuickLink row count", "Number of legacy EA QuickLink rows deterministically derivable from this relationship authoring definition.", "xsd:integer"
     DataPropDef "dafm:packagePath", "package path", "Human-readable package path in the source M3 model.", "xsd:string"
     DataPropDef "dafm:isDerived", "is derived", "Indicates a derived property or relationship end.", "xsd:boolean"
     DataPropDef "dafm:tagName", "tag name", "Original tagged-value name.", "xsd:string"
@@ -759,6 +832,21 @@ Sub WriteMetaMetamodelVocabulary()
     DataPropDef "dafm:registeredClassCount", "registered M3 class count", "Number of M3 classes registered during the generation pass.", "xsd:integer"
     DataPropDef "dafm:registeredRelationshipCount", "registered M3 relationship count", "Number of non-generalization M3 relationships registered during the generation pass.", "xsd:integer"
     DataPropDef "dafm:relationshipKindSource", "relationship kind source", "How the semantic relationship kind was determined: Metaclass, Redefines, or EAConnectorTypeFallback.", "xsd:string"
+    DataPropDef "dafm:semanticFormat", "semantic format", "Additional format constraint for a primitive datatype, for example uuid.", "xsd:string"
+    DataPropDef "dafm:synthetic", "synthetic", "Indicates a semantic definition introduced by the generator rather than explicitly present in the M3 source model.", "xsd:boolean"
+    DataPropDef "dafm:explicitPrimitivePropertyCount", "explicit primitive property count", "Number of M3 attributes using an explicit supported UML2 primitive datatype.", "xsd:integer"
+    DataPropDef "dafm:legacyConvertedPropertyCount", "legacy converted property count", "Number of legacy EA property types normalized during semantic export, such as Memo to xsd:string.", "xsd:integer"
+    DataPropDef "dafm:booleanNamingConventionPropertyCount", "Boolean naming-convention property count", "Number of M3 properties semantically projected as Boolean because their name starts with is.", "xsd:integer"
+    DataPropDef "dafm:suppressedDuplicateIdPropertyCount", "suppressed duplicate ID property count", "Number of class-level M3 attributes named exactly ID, Id or id that were intentionally omitted because semantic identity is inherited from DAFBase.", "xsd:integer"
+    DataPropDef "dafm:classifierTypedPropertyCount", "classifier typed property count", "Number of M3 attributes whose datatype is resolved through a classifier.", "xsd:integer"
+    DataPropDef "dafm:unresolvedPropertyTypeCount", "unresolved property type count", "Number of M3 attributes with <none> or empty type and no classifier.", "xsd:integer"
+    DataPropDef "dafm:unknownPropertyTypeCount", "unknown property type count", "Number of M3 attributes with unsupported textual datatype names.", "xsd:integer"
+    DataPropDef "dafm:dafBaseInheritanceCount", "DAFBase inheritance count", "Number of M3 classes to which synthetic DAFBase inheritance was added.", "xsd:integer"
+    DataPropDef "dafm:authoringEnabledRelationshipCount", "authoring-enabled relationship count", "Number of M3 relationship definitions from which authoring semantics were derived.", "xsd:integer"
+    DataPropDef "dafm:derivedQuickLinkEquivalentRuleCount", "derived QuickLink equivalent rule count", "Number of EA QuickLink rules that the semantic authoring definitions would deterministically generate.", "xsd:integer"
+    DataPropDef "dafm:legacyProfileConceptCount", "legacy profile concept count", "Number of legacy profile element mappings found during audit.", "xsd:integer"
+    DataPropDef "dafm:legacyProfileRelationshipCount", "legacy profile relationship count", "Number of legacy relationship profile mappings found during audit.", "xsd:integer"
+    DataPropDef "dafm:quickLinkRuleCount", "legacy QuickLink rule count", "Number of active rows found in the configured legacy QuickLink CSV during audit.", "xsd:integer"
 End Sub
 
 ' ---------------------------------------------------------------------------
@@ -766,13 +854,55 @@ End Sub
 ' These are generated explicitly because they are not M3 tagged-value attributes.
 ' ---------------------------------------------------------------------------
 
+Sub WriteRelationshipAuthoringVocabulary()
+    W "# ---------------------------------------------------------------------"
+    W "# Relationship authoring policy"
+    W "# Derived from the legacy M3 Generate UML Profile.updateQuickLink logic."
+    W "# QuickLink.csv is treated only as a downstream compatibility/audit artifact."
+    W "# ---------------------------------------------------------------------"
+    W ""
+
+    W "dafm:DefaultRelationshipAuthoringPolicy"
+    W "    a dafm:AuthoringPolicy ;"
+    W "    rdfs:label " & Lit("Default DAF relationship authoring policy") & " ;"
+    W "    rdfs:comment " & Lit("Allows connection of existing elements and creation of either endpoint while creating the relationship. This is the platform-independent authoring policy from which the legacy EA QuickLink rows are derived.") & " ;"
+    W "    dafm:allowConnectExisting true ;"
+    W "    dafm:allowCreateSource true ;"
+    W "    dafm:allowCreateTarget true ;"
+    W "    dafm:disallowSelf true ;"
+    W "    dafm:noInheritanceFromMetatype true ;"
+    W "    dafm:authoringMenuGroup " & Lit(CStr(ProfileName)) & " ;"
+    W "    dafm:authoringComplexityLevel 0 ."
+    W ""
+End Sub
+
+Sub WriteTypingStatusVocabulary()
+    W "# Datatype-resolution status values"
+    W "dafm:ExplicitPrimitiveType a dafm:TypingStatus ; rdfs:label " & Lit("Explicit UML2 primitive type") & " ."
+    W "dafm:LegacyTypeConversion a dafm:TypingStatus ; rdfs:label " & Lit("Legacy source type converted to semantic datatype") & " ."
+    W "dafm:BooleanNamingConventionType a dafm:TypingStatus ; rdfs:label " & Lit("Boolean type inferred from is* property naming convention") & " ."
+    W "dafm:ClassifierType a dafm:TypingStatus ; rdfs:label " & Lit("Classifier-resolved type") & " ."
+    W "dafm:EnumerationType a dafm:TypingStatus ; rdfs:label " & Lit("Enumeration type") & " ."
+    W "dafm:UnresolvedType a dafm:TypingStatus ; rdfs:label " & Lit("Unresolved type") & " ."
+    W "dafm:UnknownType a dafm:TypingStatus ; rdfs:label " & Lit("Unknown textual type") & " ."
+    W ""
+End Sub
+
 Sub WriteCommonModelElementVocabulary()
     W "# ---------------------------------------------------------------------"
     W "# Common DAF ModelElement metadata"
     W "# ---------------------------------------------------------------------"
     W ""
 
-    CommonProp "id", "Identifier", "Stable identifier of a model element.", "xsd:string"
+    W "daf:DAFBase"
+    W "    a owl:Class ;"
+    W "    rdfs:label " & Lit("DAF Base") & " ;"
+    W "    rdfs:comment " & Lit("Synthetic common superclass for all DAF M3 classes. It carries the vendor-neutral properties previously represented by the OpenAPI DAFBase schema.") & " ;"
+    W "    rdfs:subClassOf dafm:ModelElement ;"
+    W "    dafm:synthetic true ."
+    W ""
+
+    CommonUuidProp "id", "Identifier", "Stable UUID identifier of a DAF model element."
     CommonProp "name", "Name", "Human-readable name of a model element.", "xsd:string"
     CommonProp "alias", "Alias", "Optional alternate name.", "xsd:string"
     CommonProp "notes", "Notes", "Human-readable documentation.", "xsd:string"
@@ -780,6 +910,8 @@ Sub WriteCommonModelElementVocabulary()
     CommonProp "version", "Version", "Version associated with the model element.", "xsd:string"
     CommonProp "phase", "Phase", "Lifecycle or project phase.", "xsd:string"
     CommonProp "author", "Author", "Author responsible for the model element.", "xsd:string"
+    CommonProp "createdBy", "Created by", "Identity of the user, system or agent that created the model element.", "xsd:string"
+    CommonProp "modifiedBy", "Modified by", "Identity of the user, system or agent that most recently modified the model element.", "xsd:string"
     CommonProp "createdAt", "Created at", "Creation timestamp.", "xsd:dateTime"
     CommonProp "modifiedAt", "Modified at", "Last-modified timestamp.", "xsd:dateTime"
     CommonProp "visibility", "Visibility", "Visibility such as Public, Private, Protected or Package.", "xsd:string"
@@ -806,10 +938,17 @@ Sub WriteCommonSHACL()
     W ""
     W "dafshape:ModelElementShape"
     W "    a sh:NodeShape ;"
-    W "    sh:targetClass dafm:ModelElement ;"
+    W "    sh:targetClass dafm:ModelElement ."
+    W ""
+
+    W "dafshape:DAFBaseShape"
+    W "    a sh:NodeShape ;"
+    W "    sh:targetClass daf:DAFBase ;"
+    W "    sh:node dafshape:ModelElementShape ;"
     W "    sh:property ["
     W "        sh:path dafp:id ;"
     W "        sh:datatype xsd:string ;"
+    W "        sh:pattern " & Lit("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$") & " ;"
     W "        sh:minCount 1 ;"
     W "        sh:maxCount 1"
     W "    ] ;"
@@ -818,7 +957,19 @@ Sub WriteCommonSHACL()
     W "        sh:datatype xsd:string ;"
     W "        sh:minCount 1 ;"
     W "        sh:maxCount 1"
-    W "    ] ."
+    W "    ] ;"
+    W "    sh:property ["
+    W "        sh:path dafp:createdBy ;"
+    W "        sh:datatype xsd:string ;"
+    W "        sh:maxCount 1"
+    W "    ] ;"
+    W "    sh:property ["
+    W "        sh:path dafp:modifiedBy ;"
+    W "        sh:datatype xsd:string ;"
+    W "        sh:maxCount 1"
+    W "    ] ;"
+    W "    sh:property [ sh:path dafp:createdAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;"
+    W "    sh:property [ sh:path dafp:modifiedAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ."
     W ""
 
     W "dafshape:RelationshipShape"
@@ -1026,21 +1177,22 @@ Sub ExportConcept(el, pkg)
     W "    dafm:packagePath " & Lit(GetPackagePath(pkg)) & ConceptMetadataTail(el, metaclassName, redefinesName, refinesName)
     W ""
 
-    ' Every DAF concept is explicitly a ModelElement regardless of its other
-    ' generalizations. This avoids reliance on external superclass reasoning.
+    ' Every generated DAF concept inherits the synthetic DAFBase regardless of its
+    ' other M3 generalizations. DAFBase in turn inherits vendor-neutral ModelElement.
     superCount = ExportGeneralizations(el)
     If metaclassName = "" And redefinesName = "" And superCount = 0 Then
         Warn "Concept '" & el.Name & "' has no Metaclass, Redefines value or superclass. It was exported but would not be transformed by the legacy UML Profile generator."
     End If
-    W iri & " rdfs:subClassOf dafm:ModelElement ."
+    W iri & " rdfs:subClassOf daf:DAFBase ."
+    dafBaseInheritanceCount = dafBaseInheritanceCount + 1
     W ""
 
-    ' A Concept-specific shape inherits the common ModelElement shape and receives
+    ' A Concept-specific shape inherits the common DAFBase shape and receives
     ' generated property/relationship constraints.
     W "dafshape:" & localName & "Shape"
     W "    a sh:NodeShape ;"
     W "    sh:targetClass " & iri & " ;"
-    W "    sh:node dafshape:ModelElementShape ."
+    W "    sh:node dafshape:DAFBaseShape ."
     W ""
 
     ExportElementCommonMetadata iri, el
@@ -1084,13 +1236,14 @@ Sub ExportSupportingClass(el, pkg)
     W ""
 
     superCount = ExportGeneralizations(el)
-    W iri & " rdfs:subClassOf dafm:ModelElement ."
+    W iri & " rdfs:subClassOf daf:DAFBase ."
+    dafBaseInheritanceCount = dafBaseInheritanceCount + 1
     W ""
 
     W "dafshape:" & localName & "Shape"
     W "    a sh:NodeShape ;"
     W "    sh:targetClass " & iri & " ;"
-    W "    sh:node dafshape:ModelElementShape ."
+    W "    sh:node dafshape:DAFBaseShape ."
     W ""
 
     ExportElementCommonMetadata iri, el
@@ -1242,24 +1395,125 @@ End Function
 Sub ExportAttribute(ownerEl, a)
     Dim ownerIri, ownerLocal, propLocal, propIri, defIri
     Dim xsdType, enumIri, lowerBound, upperBound, isEnum, defaultValue
-    Dim classifierIri
+    Dim classifierId, classifierEl, classifierIri, classifierKind
+    Dim typingStatus, propertyKind, sourceType, readableOwner
 
     ownerIri = ClassIri(ownerEl.ElementID)
     ownerLocal = ClassLocal(ownerEl.ElementID)
+    readableOwner = HumanReadableName(ownerEl)
+
+    ' DAFBase owns the canonical semantic identifier dafp:id.
+    ' Legacy M3 classes sometimes repeat the same concept as ID, Id or id.
+    ' Suppress those exact class-level names so the semantic model has one
+    ' authoritative identity property. Names such as externalId, PrincipleID,
+    ' schemaId, etc. are deliberately NOT matched by this rule.
+    If IsDuplicateBaseIdProperty(a.Name) Then
+        suppressedDuplicateIdPropertyCount = suppressedDuplicateIdPropertyCount + 1
+        Report "SUPPRESSED DUPLICATE ID PROPERTY: class '" & readableOwner _
+            & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name _
+            & "' [AttributeGUID=" & a.AttributeGUID & ", sourceType=" _
+            & Trim(CStr(a.Type)) & "] -> inherited dafp:id from daf:DAFBase"
+        Exit Sub
+    End If
+
     propLocal = UniquePropertyLocal(ownerLocal & "__" & SafeLocal(a.Name), a.AttributeGUID)
     propIri = "dafp:" & propLocal
     defIri = "dafdef:Property_" & StableIdentityLocal(a.AttributeGUID, propLocal)
 
     attributeCount = attributeCount + 1
-
-    isEnum = False
+    sourceType = Trim(CStr(a.Type))
+    xsdType = ""
     enumIri = ""
-    If enumMembersByName.Exists(a.Type) Then
+    isEnum = False
+    classifierIri = ""
+    classifierKind = ""
+    classifierId = 0
+
+    On Error Resume Next
+    classifierId = a.ClassifierID
+    If Err.Number <> 0 Then
+        classifierId = 0
+        Err.Clear
+    End If
+    On Error GoTo 0
+
+    ' Semantic naming convention takes precedence over EA typing.
+    '
+    ' The DAF M3 model historically uses the dboolean Enumeration because the
+    ' UML Profile then renders a useful pull-down menu in Enterprise Architect.
+    ' That implementation detail is not the conceptual semantic type. Any
+    ' property whose name starts with "is" is therefore projected as Boolean.
+    '
+    ' The original EA classifier is retained later as dafm:sourceClassifier
+    ' provenance, but it is not used as the RDF range or SHACL enumeration.
+    If StartsWithIsProperty(a.Name) Then
+        booleanNamingConventionPropertyCount = booleanNamingConventionPropertyCount + 1
+        typingStatus = "dafm:BooleanNamingConventionType"
+        xsdType = "xsd:boolean"
+
+    ' Classifier typing otherwise takes precedence over textual primitive typing.
+    ' This covers UML Enumeration/DataType/Class choices made through EA's
+    ' "Select Type..." UI.
+    ElseIf CLng(classifierId) > 0 Then
+        typingStatus = "dafm:ClassifierType"
+
+        If enumIriById.Exists(CStr(classifierId)) Then
+            isEnum = True
+            enumIri = EnumerationIri(classifierId)
+            classifierIri = enumIri
+            classifierKind = "Enumeration"
+            typingStatus = "dafm:EnumerationType"
+        ElseIf classIriById.Exists(CStr(classifierId)) Then
+            classifierIri = ClassIri(classifierId)
+            classifierKind = "Class"
+        Else
+            Set classifierEl = Nothing
+            On Error Resume Next
+            Set classifierEl = Repository.GetElementByID(CLng(classifierId))
+            If Err.Number = 0 And Not classifierEl Is Nothing Then
+                classifierIri = "dafdef:ExternalClassifier_" & SafeLocal(classifierEl.Name) & "_" & ShortGuid(classifierEl.ElementGUID)
+                classifierKind = CStr(classifierEl.Type)
+                If LCase(CStr(classifierEl.Type)) = "enumeration" Then
+                    isEnum = True
+                    enumIri = classifierIri
+                    typingStatus = "dafm:EnumerationType"
+                End If
+                W classifierIri & " a rdfs:Resource ; rdfs:label " & Lit(classifierEl.Name) & " ; dafm:eaGuid " & Lit(classifierEl.ElementGUID) & " ."
+            End If
+            Err.Clear
+            On Error GoTo 0
+        End If
+
+        If classifierIri = "" Then
+            unknownPropertyTypeCount = unknownPropertyTypeCount + 1
+            typingStatus = "dafm:UnknownType"
+            Warn "Unresolved classifier for M3 property: class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & ", ClassifierID=" & CStr(classifierId) & "]. No RDF range or SHACL datatype will be inferred."
+        Else
+            classifierTypedPropertyCount = classifierTypedPropertyCount + 1
+        End If
+    ElseIf enumMembersByName.Exists(sourceType) Then
+        ' Backward-compatible handling for EA models where an Enumeration name is
+        ' stored in Attribute.Type but ClassifierID is not populated.
         isEnum = True
-        enumIri = "dafenum:" & SafeLocal(a.Type)
+        enumIri = "dafenum:" & SafeLocal(sourceType)
+        classifierIri = enumIri
+        typingStatus = "dafm:EnumerationType"
+    ElseIf IsSupportedUML2Primitive(sourceType) Then
+        explicitPrimitivePropertyCount = explicitPrimitivePropertyCount + 1
+        typingStatus = "dafm:ExplicitPrimitiveType"
+        xsdType = MapDatatype(sourceType)
+    ElseIf IsMemoType(sourceType) Then
+        legacyConvertedPropertyCount = legacyConvertedPropertyCount + 1
+        typingStatus = "dafm:LegacyTypeConversion"
         xsdType = "xsd:string"
+    ElseIf IsUnresolvedUML2Type(sourceType) Then
+        unresolvedPropertyTypeCount = unresolvedPropertyTypeCount + 1
+        typingStatus = "dafm:UnresolvedType"
+        Warn "Untyped M3 property: class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. Type is <none>/empty and no classifier is assigned. No RDF range or SHACL datatype will be inferred."
     Else
-        xsdType = MapDatatype(a.Type)
+        unknownPropertyTypeCount = unknownPropertyTypeCount + 1
+        typingStatus = "dafm:UnknownType"
+        Warn "Unknown M3 property datatype '" & sourceType & "': class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. No implicit xsd:string conversion was made."
     End If
 
     lowerBound = SafeAttributeLowerBound(a)
@@ -1270,19 +1524,39 @@ Sub ExportAttribute(ownerEl, a)
     W "    a dafm:PropertyDefinition ;"
     W "    rdfs:label " & Lit(a.Name) & " ;"
     W "    dafm:eaGuid " & Lit(a.AttributeGUID) & " ;"
-    W "    dafm:sourceDatatype " & Lit(a.Type) & " ;"
+    W "    dafm:sourceDatatype " & Lit(sourceType) & " ;"
+    W "    dafm:typingStatus " & typingStatus & " ;"
+    If IsUuidType(sourceType) Then
+        W "    dafm:semanticFormat " & Lit("uuid") & " ;"
+    ElseIf IsMemoType(sourceType) Then
+        W "    dafm:semanticFormat " & Lit("long-text") & " ;"
+    ElseIf StartsWithIsProperty(a.Name) Then
+        W "    dafm:semanticFormat " & Lit("boolean") & " ;"
+    End If
     W "    dafm:isDerived " & BoolLit(a.IsDerived) & " ;"
     W "    dafm:projectionPredicate " & propIri & AttributeDefinitionTail(a, lowerBound, upperBound, defaultValue, isEnum, enumIri)
     W ""
 
     W ownerIri & " dafm:hasPropertyDefinition " & defIri & " ."
+    If classifierIri <> "" Then W defIri & " dafm:classifier " & classifierIri & " ."
     W ""
 
-    W propIri
-    W "    a owl:DatatypeProperty ;"
-    W "    rdfs:label " & Lit(a.Name) & " ;"
-    W "    rdfs:domain " & ownerIri & " ;"
-    W "    rdfs:range " & xsdType & PropertyCommentTail(a)
+    ' Primitive/enumeration/unresolved values remain datatype properties. A
+    ' classifier resolving to an M3 class is represented as an object property.
+    If classifierIri <> "" And Not isEnum Then
+        propertyKind = "object"
+        W propIri
+        W "    a owl:ObjectProperty ;"
+        W "    rdfs:label " & Lit(a.Name) & " ;"
+        W "    rdfs:domain " & ownerIri & " ;"
+        W "    rdfs:range " & classifierIri & PropertyCommentTail(a)
+    Else
+        propertyKind = "datatype"
+        W propIri
+        W "    a owl:DatatypeProperty ;"
+        W "    rdfs:label " & Lit(a.Name) & " ;"
+        W "    rdfs:domain " & ownerIri & DatatypeRangeTail(xsdType, a)
+    End If
     W ""
 
     ExportTaggedValues defIri, a.AttributeGUID, a.TaggedValues, "attribute"
@@ -1294,15 +1568,22 @@ Sub ExportAttribute(ownerEl, a)
     W "    sh:path " & propIri & " ;"
     If isEnum Then
         W "    sh:datatype xsd:string ;"
-        WriteShInList a.Type
-    Else
+        WriteShInListByClassifier classifierId, sourceType
+    ElseIf propertyKind = "object" Then
+        W "    sh:class " & classifierIri & " ;"
+    ElseIf xsdType <> "" Then
         W "    sh:datatype " & xsdType & " ;"
+        If IsUuidType(sourceType) Then
+            W "    sh:pattern " & Lit("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$") & " ;"
+        End If
+    Else
+        ' Unresolved and unknown datatypes intentionally carry no sh:datatype.
+        W "    sh:message " & Lit("M3 property datatype is unresolved; assign an explicit UML2 type or classifier in Enterprise Architect.") & " ;"
     End If
 
     If Not a.IsDerived Then
         WriteMinMaxCount lowerBound, upperBound
     Else
-        ' Derived properties are preserved semantically but not required for input.
         If ParseMaxCardinality(upperBound) >= 0 Then
             W "    sh:maxCount " & ParseMaxCardinality(upperBound) & " ;"
         End If
@@ -1333,6 +1614,29 @@ Function PropertyCommentTail(a)
         PropertyCommentTail = " ."
     End If
 End Function
+
+Function DatatypeRangeTail(xsdType, a)
+    Dim s
+    s = ""
+    If xsdType <> "" Then s = s & " ;" & vbCrLf & "    rdfs:range " & xsdType
+    If a.Notes <> "" Then s = s & " ;" & vbCrLf & "    rdfs:comment " & Lit(a.Notes)
+    s = s & " ."
+    DatatypeRangeTail = s
+End Function
+
+Sub WriteShInListByClassifier(classifierId, fallbackTypeName)
+    Dim enumEl, enumName
+    enumName = ""
+    If CLng(classifierId) > 0 Then
+        On Error Resume Next
+        Set enumEl = Repository.GetElementByID(CLng(classifierId))
+        If Err.Number = 0 And Not enumEl Is Nothing Then enumName = enumEl.Name
+        Err.Clear
+        On Error GoTo 0
+    End If
+    If enumName = "" Then enumName = fallbackTypeName
+    WriteShInList enumName
+End Sub
 
 Sub ExportAttributeExtraMetadata(defIri, a)
     Dim v, classifierId, classifierEl, classifierIri
@@ -1393,7 +1697,13 @@ Sub ExportAttributeExtraMetadata(defIri, a)
             End If
             Err.Clear
         End If
-        If classifierIri <> "" Then W defIri & " dafm:classifier " & classifierIri & " ."
+        If classifierIri <> "" Then
+            If StartsWithIsProperty(a.Name) Then
+                W defIri & " dafm:sourceClassifier " & classifierIri & " ."
+            Else
+                W defIri & " dafm:classifier " & classifierIri & " ."
+            End If
+        End If
     End If
     Err.Clear
     On Error GoTo 0
@@ -1554,6 +1864,9 @@ Sub ExportRelationship(c)
     W "    dafm:relationshipKind " & Lit(relationshipKind) & " ;"
     W "    dafm:relationshipKindSource " & Lit(relationshipKindSource) & RelationshipMetadataTail(c, forwardRole, backwardRole, redefinesName, refinesName)
     W ""
+
+    ExportRelationshipAuthoringSemantics relClassIri, c, metaclassName, redefinesName
+
     W relClassIri & " dafm:sourceConnectorType " & Lit(c.Type) & " ."
     On Error Resume Next
     If c.Direction <> "" Then W relClassIri & " dafm:sourceDirection " & Lit(c.Direction) & " ."
@@ -1598,6 +1911,36 @@ Sub ExportRelationship(c)
 
     ' ClientEnd multiplicity constrains how many sources each target may have.
     WriteProjectedInverseShape targetLocal, predIri, sourceIri, c.ClientEnd.Cardinality, relLocal
+End Sub
+
+Sub ExportRelationshipAuthoringSemantics(relClassIri, c, metaclassName, redefinesName)
+    Dim forwardDirection, backwardDirection
+
+    ' Mirror transformRelationship/updateQuickLink from the legacy UML Profile
+    ' generator: QuickLink behavior is generated only when the M3 connector has
+    ' either a Metaclass or Redefines declaration.
+    If Trim(CStr(metaclassName)) = "" And Trim(CStr(redefinesName)) = "" Then Exit Sub
+
+    ' Exact direction rule used by updateQuickLink:
+    '   Aggregation / Composition -> source-to-target "from", reverse "to"
+    '   everything else           -> source-to-target "directed", reverse "from"
+    If LCase(Trim(CStr(metaclassName))) = "composition" _
+        Or LCase(Trim(CStr(metaclassName))) = "aggregation" Then
+        forwardDirection = "from"
+        backwardDirection = "to"
+    Else
+        forwardDirection = "directed"
+        backwardDirection = "from"
+    End If
+
+    authoringEnabledRelationshipCount = authoringEnabledRelationshipCount + 1
+    derivedQuickLinkEquivalentRuleCount = derivedQuickLinkEquivalentRuleCount + 4
+
+    W relClassIri & " dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy ."
+    W relClassIri & " dafm:forwardAuthoringDirection " & Lit(forwardDirection) & " ."
+    W relClassIri & " dafm:backwardAuthoringDirection " & Lit(backwardDirection) & " ."
+    W relClassIri & " dafm:derivedQuickLinkRowCount 4 ."
+    W ""
 End Sub
 
 Function RelationshipMetadataTail(c, forwardRole, backwardRole, redefinesName, refinesName)
@@ -1885,10 +2228,21 @@ End Sub
 Sub CommonProp(localName, label, comment, rangeIri)
     W "dafp:" & localName
     W "    a owl:DatatypeProperty ;"
-    W "    rdfs:domain dafm:ModelElement ;"
+    W "    rdfs:domain daf:DAFBase ;"
     W "    rdfs:range " & rangeIri & " ;"
     W "    rdfs:label " & Lit(label) & " ;"
     W "    rdfs:comment " & Lit(comment) & " ."
+    W ""
+End Sub
+
+Sub CommonUuidProp(localName, label, comment)
+    W "dafp:" & localName
+    W "    a owl:DatatypeProperty ;"
+    W "    rdfs:domain daf:DAFBase ;"
+    W "    rdfs:range xsd:string ;"
+    W "    rdfs:label " & Lit(label) & " ;"
+    W "    rdfs:comment " & Lit(comment) & " ;"
+    W "    dafm:semanticFormat " & Lit("uuid") & " ."
     W ""
 End Sub
 
@@ -2235,26 +2589,67 @@ End Function
 
 Function MapDatatype(typeName)
     Dim t
-    t = LCase(Trim(typeName))
+    t = LCase(Trim(CStr(typeName)))
 
+    ' The primitive names below mirror the UML2 type enumeration used by the DAF M3 model.
+    ' No default-to-string behavior is allowed: an absent or unknown type stays unresolved.
     Select Case t
-        Case "int", "integer", "long", "short", "byte"
-            MapDatatype = "xsd:integer"
-        Case "float", "double", "real", "decimal", "number"
-            MapDatatype = "xsd:decimal"
-        Case "bool", "boolean"
+        Case "boolean"
             MapDatatype = "xsd:boolean"
         Case "date"
             MapDatatype = "xsd:date"
-        Case "datetime", "date-time", "timestamp"
+        Case "datetime"
             MapDatatype = "xsd:dateTime"
-        Case "time"
-            MapDatatype = "xsd:time"
-        Case "uri", "url", "anyuri"
-            MapDatatype = "xsd:anyURI"
-        Case Else
+        Case "float"
+            MapDatatype = "xsd:float"
+        Case "int32"
+            MapDatatype = "xsd:int"
+        Case "int64"
+            MapDatatype = "xsd:long"
+        Case "string"
             MapDatatype = "xsd:string"
+        Case "uuid"
+            MapDatatype = "xsd:string"
+        Case "", "<none>", "none"
+            MapDatatype = ""
+        Case Else
+            MapDatatype = ""
     End Select
+End Function
+
+Function IsSupportedUML2Primitive(typeName)
+    Dim t
+    t = LCase(Trim(CStr(typeName)))
+    Select Case t
+        Case "boolean", "date", "datetime", "float", "int32", "int64", "string", "uuid"
+            IsSupportedUML2Primitive = True
+        Case Else
+            IsSupportedUML2Primitive = False
+    End Select
+End Function
+
+Function IsMemoType(typeName)
+    IsMemoType = (LCase(Trim(CStr(typeName))) = "memo")
+End Function
+
+Function StartsWithIsProperty(propertyName)
+    Dim n
+    n = LCase(Trim(CStr(propertyName)))
+    StartsWithIsProperty = (Len(n) >= 2 And Left(n, 2) = "is")
+End Function
+
+Function IsDuplicateBaseIdProperty(propertyName)
+    IsDuplicateBaseIdProperty = (LCase(Trim(CStr(propertyName))) = "id")
+End Function
+
+Function IsUnresolvedUML2Type(typeName)
+    Dim t
+    t = LCase(Trim(CStr(typeName)))
+    IsUnresolvedUML2Type = (t = "" Or t = "<none>" Or t = "none")
+End Function
+
+Function IsUuidType(typeName)
+    IsUuidType = (LCase(Trim(CStr(typeName))) = "uuid")
 End Function
 
 Function ParseMinCardinality(cardinality)
@@ -2644,11 +3039,21 @@ Sub WriteGenerationSummary(pkg)
     W "    dafm:propertyCount " & CStr(attributeCount) & " ;"
     W "    dafm:relationshipCount " & CStr(relationshipCount) & " ;"
     W "    dafm:ignoredNoteLinkCount " & CStr(ignoredNoteLinkCount) & " ;"
+    W "    dafm:explicitPrimitivePropertyCount " & CStr(explicitPrimitivePropertyCount) & " ;"
+    W "    dafm:legacyConvertedPropertyCount " & CStr(legacyConvertedPropertyCount) & " ;"
+    W "    dafm:booleanNamingConventionPropertyCount " & CStr(booleanNamingConventionPropertyCount) & " ;"
+    W "    dafm:suppressedDuplicateIdPropertyCount " & CStr(suppressedDuplicateIdPropertyCount) & " ;"
+    W "    dafm:classifierTypedPropertyCount " & CStr(classifierTypedPropertyCount) & " ;"
+    W "    dafm:unresolvedPropertyTypeCount " & CStr(unresolvedPropertyTypeCount) & " ;"
+    W "    dafm:unknownPropertyTypeCount " & CStr(unknownPropertyTypeCount) & " ;"
+    W "    dafm:dafBaseInheritanceCount " & CStr(dafBaseInheritanceCount) & " ;"
     W "    dafm:registeredRelationshipCount " & CStr(registeredRelationshipGuids.Count) & " ;"
     W "    dafm:generalizationCount " & CStr(inheritanceCount) & " ;"
     W "    dafm:warningCount " & CStr(warningCount) & " ;"
     W "    dafm:legacyProfileConceptCount " & CStr(legacyProfileConceptCount) & " ;"
     W "    dafm:legacyProfileRelationshipCount " & CStr(legacyProfileRelationshipCount) & " ;"
+    W "    dafm:authoringEnabledRelationshipCount " & CStr(authoringEnabledRelationshipCount) & " ;"
+    W "    dafm:derivedQuickLinkEquivalentRuleCount " & CStr(derivedQuickLinkEquivalentRuleCount) & " ;"
     W "    dafm:quickLinkRuleCount " & CStr(quickLinkRuleCount) & " ."
     W ""
 End Sub
