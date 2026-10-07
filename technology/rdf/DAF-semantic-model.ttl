@@ -19,7 +19,7 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-08-07T17:25:55"^^xsd:dateTime ;
+    dcterms:created "2026-10-07T11:17:22"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -4905,6 +4905,82 @@ dafdef:TaggedValue__6A5FAFA1_E46D_4e1e_935F_10B58088567C__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface\n" .
 
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061
+    a dafm:PropertyDefinition ;
+    rdfs:label "Category" ;
+    dafm:eaGuid "{F7B29D16-6BB3-4add-B028-8D7D3B3D0061}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dCapability__Category ;
+    rdfs:comment "User-definable categorization for Capability" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+daf:dCapability dafm:hasPropertyDefinition dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 .
+
+dafp:dCapability__Category
+    a owl:DatatypeProperty ;
+    rdfs:label "Category" ;
+    rdfs:domain daf:dCapability ;
+    rdfs:range xsd:string ;
+    rdfs:comment "User-definable categorization for Capability" .
+
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeVisibility "Public" .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isCollection false .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isConst false .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isId false .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isOrdered false .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isStatic false .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeLength "0" .
+dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeContainment "Not Specified" .
+
+dafshape:dCapabilityShape sh:property [
+    sh:path dafp:dCapability__Category ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "Category"
+] .
+
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546
+    a dafm:PropertyDefinition ;
+    rdfs:label "CapabilityLevel" ;
+    dafm:eaGuid "{89223D39-E1D0-496c-A872-7094AEA7F546}" ;
+    dafm:sourceDatatype "Int32" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dCapability__CapabilityLevel ;
+    rdfs:comment "the level of this category in the hierarchy\n" ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" ;
+    dafm:defaultValue "1" .
+
+daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 .
+
+dafp:dCapability__CapabilityLevel
+    a owl:DatatypeProperty ;
+    rdfs:label "CapabilityLevel" ;
+    rdfs:domain daf:dCapability ;
+    rdfs:range xsd:int ;
+    rdfs:comment "the level of this category in the hierarchy\n" .
+
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:attributeVisibility "Public" .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:isCollection false .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:isConst false .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:isId false .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:isOrdered false .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:isStatic false .
+dafdef:Property_n_89223D39E1D0496cA8727094AEA7F546 dafm:attributeContainment "Not Specified" .
+
+dafshape:dCapabilityShape sh:property [
+    sh:path dafp:dCapability__CapabilityLevel ;
+    sh:datatype xsd:int ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "CapabilityLevel"
+] .
+
 dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE a rdfs:Resource ; rdfs:label "CapabilityBusinessValue" ; dafm:eaGuid "{229E78DE-3F30-4749-A6D7-1C7596063A82}" .
 dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3
     a dafm:PropertyDefinition ;
@@ -4945,44 +5021,6 @@ dafshape:dCapabilityShape sh:property [
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "BusinessValue"
-] .
-
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061
-    a dafm:PropertyDefinition ;
-    rdfs:label "Category" ;
-    dafm:eaGuid "{F7B29D16-6BB3-4add-B028-8D7D3B3D0061}" ;
-    dafm:sourceDatatype "String" ;
-    dafm:typingStatus dafm:ExplicitPrimitiveType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dCapability__Category ;
-    rdfs:comment "User-definable categorization for Capability" ;
-    dafm:minimumCardinality "1" ;
-    dafm:maximumCardinality "1" .
-
-daf:dCapability dafm:hasPropertyDefinition dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 .
-
-dafp:dCapability__Category
-    a owl:DatatypeProperty ;
-    rdfs:label "Category" ;
-    rdfs:domain daf:dCapability ;
-    rdfs:range xsd:string ;
-    rdfs:comment "User-definable categorization for Capability" .
-
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeVisibility "Public" .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isCollection false .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isConst false .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isId false .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isOrdered false .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:isStatic false .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeLength "0" .
-dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061 dafm:attributeContainment "Not Specified" .
-
-dafshape:dCapabilityShape sh:property [
-    sh:path dafp:dCapability__Category ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:name "Category"
 ] .
 
 dafdef:Property_n_2D94D45644534eae9B056D535330BD99
@@ -7429,6 +7467,44 @@ dafdef:TaggedValue__CC9E4FF0_D141_46eb_8890_FE077419D53C__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface\n" .
 
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18
+    a dafm:PropertyDefinition ;
+    rdfs:label "Description" ;
+    dafm:eaGuid "{01E50CB7-7E8F-456a-829D-B8B1D3D29E18}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dInitiative__Description ;
+    rdfs:comment "Description for the initiative. " ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 .
+
+dafp:dInitiative__Description
+    a owl:DatatypeProperty ;
+    rdfs:label "Description" ;
+    rdfs:domain daf:dInitiative ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Description for the initiative. " .
+
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeVisibility "Public" .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isCollection false .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isConst false .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isId false .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isOrdered false .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isStatic false .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeLength "0" .
+dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeContainment "Not Specified" .
+
+dafshape:dInitiativeShape sh:property [
+    sh:path dafp:dInitiative__Description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "Description"
+] .
+
 dafdef:Property_n_5E98AD92CF3A4b2384FD55A307A0AC1D
     a dafm:PropertyDefinition ;
     rdfs:label "DetailedDescription" ;
@@ -7502,6 +7578,47 @@ dafshape:dInitiativeShape sh:property [
     sh:class daf:dCapability ;
     sh:minCount 1 ;
     sh:name "Impacted Capability"
+] .
+
+dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 a rdfs:Resource ; rdfs:label "InitiativeStatus" ; dafm:eaGuid "{7EFBDD76-6CA7-4942-B855-921E2AF9D181}" .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C
+    a dafm:PropertyDefinition ;
+    rdfs:label "initiativeHealth" ;
+    dafm:eaGuid "{1694EC2D-A9BD-47e6-A442-50B5F0303F5C}" ;
+    dafm:sourceDatatype "InitiativeStatus" ;
+    dafm:typingStatus dafm:EnumerationType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dInitiative__initiativeHealth ;
+    rdfs:comment "a set of colors to Visually describe the health of the initiative.\n" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" ;
+    dafm:enumeration dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+
+daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+
+dafp:dInitiative__initiativeHealth
+    a owl:DatatypeProperty ;
+    rdfs:label "initiativeHealth" ;
+    rdfs:domain daf:dInitiative ;
+    rdfs:comment "a set of colors to Visually describe the health of the initiative.\n" .
+
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:attributeVisibility "Private" .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isCollection false .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isConst false .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isId false .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isOrdered false .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isStatic false .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:attributeContainment "Not Specified" .
+dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 a rdfs:Resource ; rdfs:label "InitiativeStatus" ; dafm:eaGuid "{7EFBDD76-6CA7-4942-B855-921E2AF9D181}" .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+
+dafshape:dInitiativeShape sh:property [
+    sh:path dafp:dInitiative__initiativeHealth ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "initiativeHealth"
 ] .
 
 dafdef:Property_n_54009213DAAA48e5A68F9F6F47C23FB8
@@ -7764,44 +7881,6 @@ dafshape:dInitiativeShape sh:property [
     sh:name "Rank"
 ] .
 
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18
-    a dafm:PropertyDefinition ;
-    rdfs:label "Description" ;
-    dafm:eaGuid "{01E50CB7-7E8F-456a-829D-B8B1D3D29E18}" ;
-    dafm:sourceDatatype "String" ;
-    dafm:typingStatus dafm:ExplicitPrimitiveType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dInitiative__Description ;
-    rdfs:comment "Description for the initiative. " ;
-    dafm:minimumCardinality "1" ;
-    dafm:maximumCardinality "1" .
-
-daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 .
-
-dafp:dInitiative__Description
-    a owl:DatatypeProperty ;
-    rdfs:label "Description" ;
-    rdfs:domain daf:dInitiative ;
-    rdfs:range xsd:string ;
-    rdfs:comment "Description for the initiative. " .
-
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeVisibility "Public" .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isCollection false .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isConst false .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isId false .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isOrdered false .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:isStatic false .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeLength "0" .
-dafdef:Property_n_01E50CB77E8F456a829DB8B1D3D29E18 dafm:attributeContainment "Not Specified" .
-
-dafshape:dInitiativeShape sh:property [
-    sh:path dafp:dInitiative__Description ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:name "Description"
-] .
-
 dafdef:Property_A2DC02F1DD91423491167C67483D4F05
     a dafm:PropertyDefinition ;
     rdfs:label "ability to Implement" ;
@@ -7821,7 +7900,7 @@ dafp:dInitiative__ability_to_Implement
     rdfs:domain daf:dInitiative ;
     rdfs:range xsd:int .
 
-dafdef:Property_A2DC02F1DD91423491167C67483D4F05 dafm:attributeVisibility "Private" .
+dafdef:Property_A2DC02F1DD91423491167C67483D4F05 dafm:attributeVisibility "Public" .
 dafdef:Property_A2DC02F1DD91423491167C67483D4F05 dafm:isCollection false .
 dafdef:Property_A2DC02F1DD91423491167C67483D4F05 dafm:isConst false .
 dafdef:Property_A2DC02F1DD91423491167C67483D4F05 dafm:isId false .
@@ -7856,7 +7935,7 @@ dafp:dInitiative__Benefit
     rdfs:domain daf:dInitiative ;
     rdfs:range xsd:int .
 
-dafdef:Property_n_244800D6B8804686944E31267C677460 dafm:attributeVisibility "Private" .
+dafdef:Property_n_244800D6B8804686944E31267C677460 dafm:attributeVisibility "Public" .
 dafdef:Property_n_244800D6B8804686944E31267C677460 dafm:isCollection false .
 dafdef:Property_n_244800D6B8804686944E31267C677460 dafm:isConst false .
 dafdef:Property_n_244800D6B8804686944E31267C677460 dafm:isId false .
@@ -26892,28 +26971,28 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-08-07T17:27:33"^^xsd:dateTime ;
+    dcterms:created "2026-10-07T11:18:55"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 72 ;
     dafm:supportingClassCount 0 ;
     dafm:registeredClassCount 72 ;
     dafm:enumerationCount 9 ;
-    dafm:propertyCount 290 ;
+    dafm:propertyCount 292 ;
     dafm:relationshipCount 92 ;
     dafm:ignoredNoteLinkCount 2 ;
-    dafm:explicitPrimitivePropertyCount 226 ;
+    dafm:explicitPrimitivePropertyCount 227 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 22 ;
-    dafm:classifierTypedPropertyCount 42 ;
+    dafm:classifierTypedPropertyCount 43 ;
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
     dafm:dafBaseInheritanceCount 72 ;
     dafm:registeredRelationshipCount 92 ;
     dafm:generalizationCount 3 ;
     dafm:warningCount 0 ;
-    dafm:legacyProfileConceptCount 80 ;
+    dafm:legacyProfileConceptCount 77 ;
     dafm:legacyProfileRelationshipCount 95 ;
     dafm:authoringEnabledRelationshipCount 92 ;
     dafm:derivedQuickLinkEquivalentRuleCount 368 ;
