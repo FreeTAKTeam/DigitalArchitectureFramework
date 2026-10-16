@@ -21,9 +21,15 @@ Option Explicit
 ' - records each shape's EA type and text (source_type, source_label);
 ' - shape nodes never become connector endpoints;
 ' - exports diagrams that contain only shape nodes.
+'
+' Version 0.2.2 changes:
+' - records each node's font from DiagramObject.Style as metadata attributes
+'   (font_family, font_size_pt, font_bold, font_italic, font_underline);
+' - keeps the formatting of note and text shapes as source_label_format, a bounded
+'   subset of EA's note markup (see NormalizeEaRichText); source_label stays plain.
 ' ============================================================================
 
-Const SCRIPT_VERSION = "0.2.1"
+Const SCRIPT_VERSION = "0.2.2"
 Const ROOT_PACKAGE_GUID = "{2B098F05-3CC7-4637-9A68-0DAD07564747}"
 
 Const DAF_MODEL_NAMESPACE = "https://freetakteam.github.io/DAF/model#"
@@ -47,6 +53,8 @@ Const MARGIN = 20
 Const MIN_NODE_SIZE = 1
 Const MAX_CONNECTOR_ERROR_DETAILS_PER_DIAGRAM = 5
 Const MAX_SKIPPED_OBJECT_DETAILS_PER_DIAGRAM = 8
+' Longest source_label_format written; longer formatted text is exported as plain text only.
+Const MAX_LABEL_FORMAT_LENGTH = 8000
 
 Const STATUS_RESOLVED = "resolved"
 Const STATUS_GRAPHICAL_ONLY = "graphical-only"
@@ -1246,6 +1254,7 @@ Function BuildNodeOccurrenceMetadataJson(dobj, resolution)
             J("ea_stereotype_ex") & ": " & J(SafeStringValue(resolution(ER_STEREOTYPE_EX), "")) & ", " & _
             J("semantic_origin") & ": " & J(IIfText(SafeBoolValue(resolution(ER_IS_EXTERNAL), False), _
                                                        "external-daf-resource", "model-resource")) & _
+            BuildFontAttributesJson(dobj) & _
         "}" & _
         "}"
 End Function
@@ -1257,26 +1266,33 @@ Function IsShapeObject(resolution)
 End Function
 
 ' Shape metadata carries what Dafrion needs to draw the object as the EA user saw it:
-' its EA type and the text it shows (the note text for Notes and Text, else the name).
+' its EA type, the text it shows (the note text for Notes and Text, else the name), the
+' formatting of note text and the shape's font.
 Function BuildShapeOccurrenceMetadataJson(dobj, resolution)
-    Dim externalId, sourceType, sourceLabel, element
+    Dim externalId, sourceType, sourceLabel, sourceLabelFormat, formatJson, element
 
     externalId = SafeStringValue(dobj.InstanceGUID, "")
     If Len(externalId) = 0 Then externalId = SafeStringValue(resolution(ER_RAW_GUID), "")
 
     sourceType = SafeStringValue(resolution(ER_TYPE), "")
     sourceLabel = SafeStringValue(resolution(ER_NAME), "")
+    sourceLabelFormat = ""
     If LCase(sourceType) = "note" Or LCase(sourceType) = "text" Then
         Set element = Nothing
         On Error Resume Next
         Set element = Repository.GetElementByID(SafeLongValue(dobj.ElementID, 0))
         If Not element Is Nothing Then
             sourceLabel = Repository.GetFormatFromField("TXT", SafeStringValue(element.Notes, ""))
+            sourceLabelFormat = NormalizeEaRichText(element.Notes)
         End If
         Err.Clear
         On Error GoTo 0
     End If
     sourceLabel = Trim(SafeStringValue(sourceLabel, ""))
+    formatJson = ""
+    If Len(sourceLabelFormat) > 0 Then
+        formatJson = ", " & J("source_label_format") & ": " & J(sourceLabelFormat)
+    End If
 
     BuildShapeOccurrenceMetadataJson = "{" & _
         J("external_id") & ": " & J(externalId) & ", " & _
@@ -1288,8 +1304,176 @@ Function BuildShapeOccurrenceMetadataJson(dobj, resolution)
             J("semantic_origin") & ": " & J("graphical-only") & ", " & _
             J("source_type") & ": " & J(sourceType) & ", " & _
             J("source_label") & ": " & J(sourceLabel) & _
+            formatJson & _
+            BuildFontAttributesJson(dobj) & _
         "}" & _
         "}"
+End Function
+
+' The font the EA user gave a diagram object, from DiagramObject.Style
+' (font=<family>;fontsz=<size>;bold=<0|1>;italic=<0|1>;ul=<0|1>), as metadata attributes
+' that each start with ", ". Only settings present in the style are exported, so objects
+' drawn in the diagram's default font carry none. EA writes fontsz in tenths of a point
+' (fontsz=90 is 9 pt); a value of 40 or less is taken as points already.
+Function BuildFontAttributesJson(dobj)
+    Dim style, json, family, sizeText, points
+
+    style = SafeDiagramObjectStyle(dobj)
+    json = ""
+    family = StyleValue(style, "font")
+    If Len(family) > 0 Then json = json & ", " & J("font_family") & ": " & J(family)
+
+    sizeText = StyleValue(style, "fontsz")
+    If Len(sizeText) > 0 Then
+        If IsNumeric(sizeText) Then
+            points = CDbl(sizeText)
+            If points > 40 Then points = points / 10
+            If points > 0 Then
+                json = json & ", " & J("font_size_pt") & ": " & J(Replace(CStr(points), ",", "."))
+            End If
+        End If
+    End If
+
+    json = json & FontFlagJson(style, "bold", "font_bold")
+    json = json & FontFlagJson(style, "italic", "font_italic")
+    json = json & FontFlagJson(style, "ul", "font_underline")
+    BuildFontAttributesJson = json
+End Function
+
+Function FontFlagJson(style, key, attributeName)
+    Dim value
+    value = StyleValue(style, key)
+    If Len(value) = 0 Then
+        FontFlagJson = ""
+    Else
+        FontFlagJson = ", " & J(attributeName) & ": " & J(IIfText(value <> "0", "true", "false"))
+    End If
+End Function
+
+' The value of one key=value; entry of an EA style string, or "" when it is absent.
+Function StyleValue(styleText, key)
+    Dim parts, part, eq
+    StyleValue = ""
+    parts = Split(SafeStringValue(styleText, ""), ";")
+    For Each part In parts
+        eq = InStr(1, part, "=")
+        If eq > 1 Then
+            If LCase(Trim(Left(part, eq - 1))) = LCase(key) Then
+                StyleValue = Trim(Mid(part, eq + 1))
+                Exit Function
+            End If
+        End If
+    Next
+End Function
+
+' Keeps the formatting of EA note text in the small markup Dafrion reads
+' (crates/dafrion-notation/src/rich_text.rs in Dafrion Core):
+'   <b> <i> <u>                  bold, italic, underline (<strong> and <em> become <b> and <i>)
+'   <font color="#RRGGBB">       text colour; other font attributes are dropped
+'   <ul> <ol> <li>               bulleted and numbered lists
+'   <br>                         line break
+' Entities stay as EA wrote them and line breaks are LF. Every other tag (hyperlinks,
+' super/subscript) is dropped and its text kept; a "<" without a closing ">" becomes "&lt;".
+' Returns "" when the notes have no formatting or the result is longer than
+' MAX_LABEL_FORMAT_LENGTH, so Dafrion draws the plain source_label instead.
+Function NormalizeEaRichText(notes)
+    Dim text, result, position, openAt, closeAt, hasTags
+
+    text = Replace(Replace(SafeStringValue(notes, ""), vbCrLf, vbLf), vbCr, vbLf)
+    result = ""
+    hasTags = False
+    position = 1
+    Do While position <= Len(text)
+        openAt = InStr(position, text, "<")
+        If openAt = 0 Then
+            result = result & Mid(text, position)
+            Exit Do
+        End If
+        result = result & Mid(text, position, openAt - position)
+        closeAt = InStr(openAt, text, ">")
+        If closeAt = 0 Then
+            result = result & Replace(Mid(text, openAt), "<", "&lt;")
+            Exit Do
+        End If
+        result = result & NormalizeEaTag(Mid(text, openAt + 1, closeAt - openAt - 1), hasTags)
+        position = closeAt + 1
+    Loop
+
+    result = Trim(result)
+    If Not hasTags Or Len(result) > MAX_LABEL_FORMAT_LENGTH Then result = ""
+    NormalizeEaRichText = result
+End Function
+
+' One EA note tag in Dafrion's markup, or "" for a tag that is dropped.
+Function NormalizeEaTag(tag, ByRef hasTags)
+    Dim body, closing, name, spaceAt, color
+
+    NormalizeEaTag = ""
+    body = Trim(Replace(Replace(tag, vbLf, " "), vbTab, " "))
+    closing = (Left(body, 1) = "/")
+    If closing Then body = Trim(Mid(body, 2))
+    If Right(body, 1) = "/" Then body = Trim(Left(body, Len(body) - 1))
+    spaceAt = InStr(body, " ")
+    If spaceAt > 0 Then
+        name = LCase(Left(body, spaceAt - 1))
+    Else
+        name = LCase(body)
+    End If
+
+    Select Case name
+        Case "b", "strong"
+            name = "b"
+        Case "i", "em"
+            name = "i"
+        Case "u", "ul", "ol", "li"
+            ' kept as written
+        Case "br"
+            If Not closing Then
+                NormalizeEaTag = "<br>"
+                hasTags = True
+            End If
+            Exit Function
+        Case "font"
+            If Not closing Then
+                color = FontTagColor(body)
+                If Len(color) > 0 Then
+                    NormalizeEaTag = "<font color=" & Chr(34) & color & Chr(34) & ">"
+                Else
+                    NormalizeEaTag = "<font>"
+                End If
+                hasTags = True
+                Exit Function
+            End If
+        Case Else
+            Exit Function
+    End Select
+
+    hasTags = True
+    If closing Then
+        NormalizeEaTag = "</" & name & ">"
+    Else
+        NormalizeEaTag = "<" & name & ">"
+    End If
+End Function
+
+' The #RRGGBB colour of a <font> tag's color attribute, or "" when it has none.
+Function FontTagColor(body)
+    Dim value, at, i
+
+    FontTagColor = ""
+    value = LCase(body)
+    at = InStr(value, "color")
+    If at = 0 Then Exit Function
+    value = LTrim(Mid(value, at + 5))
+    If Left(value, 1) <> "=" Then Exit Function
+    value = LTrim(Mid(value, 2))
+    If Left(value, 1) = Chr(34) Or Left(value, 1) = "'" Then value = Mid(value, 2)
+    If Left(value, 1) <> "#" Or Len(value) < 7 Then Exit Function
+    value = Left(value, 7)
+    For i = 2 To 7
+        If InStr("0123456789abcdef", Mid(value, i, 1)) = 0 Then Exit Function
+    Next
+    FontTagColor = UCase(value)
 End Function
 
 Function BuildConnectorOccurrenceMetadataJson(connectorId, connectorGuid)
