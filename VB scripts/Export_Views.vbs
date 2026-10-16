@@ -14,9 +14,16 @@ Option Explicit
 ' - makes node occurrence IDs collision-safe;
 ' - resolves connector endpoints against exact semantic source/target IRIs;
 ' - removes stale *.view.json files before a new export.
+'
+' Version 0.2.1 changes:
+' - exports graphical-only objects (boundaries, notes, text) as shape nodes with a
+'   non-DAF element_id (urn:dafrion:sparx-object:<guid>) so Dafrion can draw them;
+' - records each shape's EA type and text (source_type, source_label);
+' - shape nodes never become connector endpoints;
+' - exports diagrams that contain only shape nodes.
 ' ============================================================================
 
-Const SCRIPT_VERSION = "0.2.0"
+Const SCRIPT_VERSION = "0.2.1"
 Const ROOT_PACKAGE_GUID = "{2B098F05-3CC7-4637-9A68-0DAD07564747}"
 
 Const DAF_MODEL_NAMESPACE = "https://freetakteam.github.io/DAF/model#"
@@ -27,6 +34,9 @@ Const DAF_METAMODEL_NAMESPACE = "https://freetakteam.github.io/DAF/metamodel#"
 Const SEMANTIC_TTL_PATH = "C:\Users\broth\Documents\work\ATAK\src\Dafrion\models\reference\eurocom\eurocom.ttl"
 
 Const VIEW_IRI_BASE = "urn:dafrion:view:eurocom:"
+' Identity for graphical-only EA objects. Deliberately outside every DAF namespace: it
+' names the EA object, never a semantic resource, so Dafrion draws it as a plain shape.
+Const SPARX_OBJECT_IRI_BASE = "urn:dafrion:sparx-object:"
 Const VIEW_NODE_IRI_BASE = "urn:dafrion:view-node:eurocom:"
 Const VIEW_CONNECTOR_IRI_BASE = "urn:dafrion:view-connector:eurocom:"
 
@@ -111,6 +121,7 @@ Dim gAmbiguousEndpointConnectorCount
 Dim gDuplicateInstanceGuidOccurrenceCount
 
 Dim gGraphicalOnlyObjectCount
+Dim gShapeNodeCount
 Dim gSemanticGapObjectCount
 Dim gAmbiguousObjectCount
 Dim gMissingEaObjectCount
@@ -182,6 +193,7 @@ Sub Main()
     gDuplicateInstanceGuidOccurrenceCount = 0
 
     gGraphicalOnlyObjectCount = 0
+    gShapeNodeCount = 0
     gSemanticGapObjectCount = 0
     gAmbiguousObjectCount = 0
     gMissingEaObjectCount = 0
@@ -269,7 +281,9 @@ Sub Main()
     ReportLine "Diagrams skipped because no DAF semantic node was resolvable: " & CStr(gDiagramSkippedNoSemanticCount)
     ReportLine "DAF node occurrences exported: " & CStr(gNodeCount)
     ReportLine "External DAF node occurrences exported: " & CStr(gExternalDafNodeCount)
-    ReportLine "Graphical-only/non-DAF occurrences skipped: " & CStr(gGraphicalOnlyObjectCount)
+    ReportLine "Graphical-only/non-DAF occurrences exported as shapes: " & CStr(gShapeNodeCount)
+    ReportLine "Graphical-only/non-DAF occurrences skipped: " & _
+               CStr(gGraphicalOnlyObjectCount - gShapeNodeCount)
     ReportLine "DAF semantic export gaps skipped: " & CStr(gSemanticGapObjectCount)
     ReportLine "Ambiguous semantic object occurrences skipped: " & CStr(gAmbiguousObjectCount)
     ReportLine "Missing EA element occurrences skipped: " & CStr(gMissingEaObjectCount)
@@ -380,6 +394,7 @@ Sub ExportDiagram(diagram)
     Dim diagramSemanticNodes
     Dim diagramExternalDafNodes
     Dim diagramGraphicalOnly
+    Dim diagramShapeNodes
     Dim diagramSemanticGaps
     Dim diagramAmbiguousObjects
     Dim diagramMissingEaObjects
@@ -415,6 +430,7 @@ Sub ExportDiagram(diagram)
     diagramSemanticNodes = 0
     diagramExternalDafNodes = 0
     diagramGraphicalOnly = 0
+    diagramShapeNodes = 0
     diagramSemanticGaps = 0
     diagramAmbiguousObjects = 0
     diagramMissingEaObjects = 0
@@ -468,6 +484,30 @@ Sub ExportDiagram(diagram)
             If SafeBoolValue(resolution(ER_IS_EXTERNAL), False) Then
                 diagramExternalDafNodes = diagramExternalDafNodes + 1
             End If
+        ElseIf IsShapeObject(resolution) Then
+            ' A graphical-only object keeps its place in the diagram as a shape. It is not
+            ' registered as a connector endpoint: no semantic relationship can attach to it.
+            leftX = SafeDoubleValue(dobj.Left, 0)
+            rightX = SafeDoubleValue(dobj.Right, leftX + MIN_NODE_SIZE)
+            topY = -SafeDoubleValue(dobj.Top, 0)
+            bottomY = -SafeDoubleValue(dobj.Bottom, -MIN_NODE_SIZE)
+
+            x = MinNumber(leftX, rightX)
+            y = MinNumber(topY, bottomY)
+            w = Abs(rightX - leftX)
+            h = Abs(bottomY - topY)
+
+            If w <= 0 Then w = MIN_NODE_SIZE
+            If h <= 0 Then h = MIN_NODE_SIZE
+
+            UpdateExtent x, y, haveExtent, minX, minY, maxX, maxY
+            UpdateExtent x + w, y + h, haveExtent, minX, minY, maxX, maxY
+
+            ordinalToNodeId(CStr(pass1NodeOrdinal)) = _
+                BuildNodeOccurrenceId(diagramKey, dobj, occurrenceBaseCount)
+            diagramGraphicalOnly = diagramGraphicalOnly + 1
+            diagramShapeNodes = diagramShapeNodes + 1
+            gGraphicalOnlyObjectCount = gGraphicalOnlyObjectCount + 1
         Else
             Select Case SafeStringValue(resolution(ER_STATUS), "")
                 Case STATUS_GRAPHICAL_ONLY
@@ -521,13 +561,15 @@ Sub ExportDiagram(diagram)
     nodeJson = ""
     firstNode = True
 
-    ' Pass 2: serialize only nodes whose exact RDF subject is a DAF semantic element.
+    ' Pass 2: serialize nodes whose exact RDF subject is a DAF semantic element, and
+    ' graphical-only objects as shape nodes.
     nodeOrdinal = 0
     For Each dobj In diagram.DiagramObjects
         nodeOrdinal = nodeOrdinal + 1
         resolution = ordinalToResolution(CStr(nodeOrdinal))
 
-        If SafeStringValue(resolution(ER_STATUS), "") = STATUS_RESOLVED Then
+        If SafeStringValue(resolution(ER_STATUS), "") = STATUS_RESOLVED Or _
+           IsShapeObject(resolution) Then
             leftX = SafeDoubleValue(dobj.Left, 0)
             rightX = SafeDoubleValue(dobj.Right, leftX + MIN_NODE_SIZE)
             topY = -SafeDoubleValue(dobj.Top, 0)
@@ -552,7 +594,11 @@ Sub ExportDiagram(diagram)
             End If
 
             nodeId = ordinalToNodeId(CStr(nodeOrdinal))
-            elementIri = SafeStringValue(resolution(ER_IRI), "")
+            If IsShapeObject(resolution) Then
+                elementIri = SPARX_OBJECT_IRI_BASE & SafeStringValue(resolution(ER_GUID_KEY), "")
+            Else
+                elementIri = SafeStringValue(resolution(ER_IRI), "")
+            End If
 
             If Not firstNode Then nodeJson = nodeJson & "," & vbCrLf
             firstNode = False
@@ -570,8 +616,14 @@ Sub ExportDiagram(diagram)
             nodeJson = nodeJson & "      " & J("z_index") & ": " & CStr(zIndex) & "," & vbCrLf
             nodeJson = nodeJson & "      " & J("presentation") & ": " & _
                        BuildNodePresentationJson(dobj, stereotypeVisible) & "," & vbCrLf
-            nodeJson = nodeJson & "      " & J("metadata") & ": " & _
-                       BuildNodeOccurrenceMetadataJson(dobj, resolution) & vbCrLf
+            If IsShapeObject(resolution) Then
+                nodeJson = nodeJson & "      " & J("metadata") & ": " & _
+                           BuildShapeOccurrenceMetadataJson(dobj, resolution) & vbCrLf
+                gShapeNodeCount = gShapeNodeCount + 1
+            Else
+                nodeJson = nodeJson & "      " & J("metadata") & ": " & _
+                           BuildNodeOccurrenceMetadataJson(dobj, resolution) & vbCrLf
+            End If
             nodeJson = nodeJson & "    }"
 
             gNodeCount = gNodeCount + 1
@@ -622,7 +674,8 @@ Sub ExportDiagram(diagram)
 
     ReportLine "  OBJECT CLASSIFICATION: semantic=" & CStr(diagramSemanticNodes) & _
                " [external=" & CStr(diagramExternalDafNodes) & "], graphical-only=" & _
-               CStr(diagramGraphicalOnly) & ", semantic-gaps=" & CStr(diagramSemanticGaps) & _
+               CStr(diagramGraphicalOnly) & " [shapes=" & CStr(diagramShapeNodes) & "]" & _
+               ", semantic-gaps=" & CStr(diagramSemanticGaps) & _
                ", ambiguous=" & CStr(diagramAmbiguousObjects) & ", missing-EA=" & _
                CStr(diagramMissingEaObjects)
 
@@ -648,10 +701,10 @@ Sub ExportDiagram(diagram)
         gWarningCount = gWarningCount + 1
     End If
 
-    If diagramSemanticNodes = 0 Then
+    If diagramSemanticNodes = 0 And diagramShapeNodes = 0 Then
         gDiagramSkippedNoSemanticCount = gDiagramSkippedNoSemanticCount + 1
         ReportLine "SKIPPED DIAGRAM: " & SafeStringValue(diagram.Name, "Unnamed diagram") & _
-                   " | no exact DAF semantic node could be emitted"
+                   " | no DAF semantic node or shape could be emitted"
         Exit Sub
     End If
 
@@ -1193,6 +1246,48 @@ Function BuildNodeOccurrenceMetadataJson(dobj, resolution)
             J("ea_stereotype_ex") & ": " & J(SafeStringValue(resolution(ER_STEREOTYPE_EX), "")) & ", " & _
             J("semantic_origin") & ": " & J(IIfText(SafeBoolValue(resolution(ER_IS_EXTERNAL), False), _
                                                        "external-daf-resource", "model-resource")) & _
+        "}" & _
+        "}"
+End Function
+
+' True for a graphical-only EA object that can be exported as a shape node.
+Function IsShapeObject(resolution)
+    IsShapeObject = SafeStringValue(resolution(ER_STATUS), "") = STATUS_GRAPHICAL_ONLY And _
+                    Len(SafeStringValue(resolution(ER_GUID_KEY), "")) > 0
+End Function
+
+' Shape metadata carries what Dafrion needs to draw the object as the EA user saw it:
+' its EA type and the text it shows (the note text for Notes and Text, else the name).
+Function BuildShapeOccurrenceMetadataJson(dobj, resolution)
+    Dim externalId, sourceType, sourceLabel, element
+
+    externalId = SafeStringValue(dobj.InstanceGUID, "")
+    If Len(externalId) = 0 Then externalId = SafeStringValue(resolution(ER_RAW_GUID), "")
+
+    sourceType = SafeStringValue(resolution(ER_TYPE), "")
+    sourceLabel = SafeStringValue(resolution(ER_NAME), "")
+    If LCase(sourceType) = "note" Or LCase(sourceType) = "text" Then
+        Set element = Nothing
+        On Error Resume Next
+        Set element = Repository.GetElementByID(SafeLongValue(dobj.ElementID, 0))
+        If Not element Is Nothing Then
+            sourceLabel = Repository.GetFormatFromField("TXT", SafeStringValue(element.Notes, ""))
+        End If
+        Err.Clear
+        On Error GoTo 0
+    End If
+    sourceLabel = Trim(SafeStringValue(sourceLabel, ""))
+
+    BuildShapeOccurrenceMetadataJson = "{" & _
+        J("external_id") & ": " & J(externalId) & ", " & _
+        J("attributes") & ": {" & _
+            J("ea_element_id") & ": " & J(CStr(SafeLongValue(dobj.ElementID, 0))) & ", " & _
+            J("ea_element_guid") & ": " & J(SafeStringValue(resolution(ER_RAW_GUID), "")) & ", " & _
+            J("ea_type") & ": " & J(sourceType) & ", " & _
+            J("ea_meta_type") & ": " & J(SafeStringValue(resolution(ER_META_TYPE), "")) & ", " & _
+            J("semantic_origin") & ": " & J("graphical-only") & ", " & _
+            J("source_type") & ": " & J(sourceType) & ", " & _
+            J("source_label") & ": " & J(sourceLabel) & _
         "}" & _
         "}"
 End Function
