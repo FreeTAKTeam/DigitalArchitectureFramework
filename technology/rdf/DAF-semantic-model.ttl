@@ -19,7 +19,7 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-10-07T11:17:22"^^xsd:dateTime ;
+    dcterms:created "2026-10-16T12:28:47"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -1388,7 +1388,6 @@ dafshape:dActorShape sh:property [
     sh:name "ActorGoal"
 ] .
 
-dafdef:ExternalClassifier_ActorTypes_1EFA9C58 a rdfs:Resource ; rdfs:label "ActorTypes" ; dafm:eaGuid "{1EFA9C58-7AE5-4287-9FAB-0046A9434CA5}" .
 dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE
     a dafm:PropertyDefinition ;
     rdfs:label "ActorType" ;
@@ -1401,10 +1400,10 @@ dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "Not Set" ;
-    dafm:enumeration dafdef:ExternalClassifier_ActorTypes_1EFA9C58 .
+    dafm:enumeration dafenum:ActorTypes .
 
 daf:dActor dafm:hasPropertyDefinition dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE .
-dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:classifier dafdef:ExternalClassifier_ActorTypes_1EFA9C58 .
+dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:classifier dafenum:ActorTypes .
 
 dafp:dActor__ActorType
     a owl:DatatypeProperty ;
@@ -1420,12 +1419,12 @@ dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:isOrdered false .
 dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:isStatic false .
 dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:attributeLength "0" .
 dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_ActorTypes_1EFA9C58 a rdfs:Resource ; rdfs:label "ActorTypes" ; dafm:eaGuid "{1EFA9C58-7AE5-4287-9FAB-0046A9434CA5}" .
-dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:classifier dafdef:ExternalClassifier_ActorTypes_1EFA9C58 .
+dafdef:Property_B3CAE94285D54c36AB4DA81A98710EEE dafm:classifier dafenum:ActorTypes .
 
 dafshape:dActorShape sh:property [
     sh:path dafp:dActor__ActorType ;
     sh:datatype xsd:string ;
+    sh:in ( "Not Set" "Worker" "External Worker" "Internal Worker" "Business Partner" "Active Business Partner" "Passive Business Partner" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "ActorType"
@@ -3157,7 +3156,6 @@ dafshape:dApplicationComponentShape sh:property [
     sh:name "Cost"
 ] .
 
-dafdef:ExternalClassifier_dApplicationStrategy_6A6DE418 a rdfs:Resource ; rdfs:label "dApplicationStrategy" ; dafm:eaGuid "{6A6DE418-7073-4a06-8856-EC0C2B1D40C7}" .
 dafdef:Property_n_4754C9421AD24e89B0817AC09C543689
     a dafm:PropertyDefinition ;
     rdfs:label "InvestmentStrategy" ;
@@ -3169,10 +3167,10 @@ dafdef:Property_n_4754C9421AD24e89B0817AC09C543689
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "Retain" ;
-    dafm:enumeration dafdef:ExternalClassifier_dApplicationStrategy_6A6DE418 .
+    dafm:enumeration dafenum:dApplicationStrategy .
 
 daf:dApplicationComponent dafm:hasPropertyDefinition dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 .
-dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:classifier dafdef:ExternalClassifier_dApplicationStrategy_6A6DE418 .
+dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:classifier dafenum:dApplicationStrategy .
 
 dafp:dApplicationComponent__InvestmentStrategy
     a owl:DatatypeProperty ;
@@ -3187,18 +3185,17 @@ dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:isOrdered false .
 dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:isStatic false .
 dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:attributeLength "0" .
 dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dApplicationStrategy_6A6DE418 a rdfs:Resource ; rdfs:label "dApplicationStrategy" ; dafm:eaGuid "{6A6DE418-7073-4a06-8856-EC0C2B1D40C7}" .
-dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:classifier dafdef:ExternalClassifier_dApplicationStrategy_6A6DE418 .
+dafdef:Property_n_4754C9421AD24e89B0817AC09C543689 dafm:classifier dafenum:dApplicationStrategy .
 
 dafshape:dApplicationComponentShape sh:property [
     sh:path dafp:dApplicationComponent__InvestmentStrategy ;
     sh:datatype xsd:string ;
+    sh:in ( "Retain" "Rehost" "Replatform" "Refactor" "Rewrite" "Retire" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "InvestmentStrategy"
 ] .
 
-dafdef:ExternalClassifier_dApplicationType_1F8DC790 a rdfs:Resource ; rdfs:label "dApplicationType" ; dafm:eaGuid "{1F8DC790-BDA7-4fda-B283-F2FD3B77BF7A}" .
 dafdef:Property_C469347F8EB146fe921B9F170CF6286A
     a dafm:PropertyDefinition ;
     rdfs:label "ApplicationType" ;
@@ -3211,10 +3208,10 @@ dafdef:Property_C469347F8EB146fe921B9F170CF6286A
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "Custom" ;
-    dafm:enumeration dafdef:ExternalClassifier_dApplicationType_1F8DC790 .
+    dafm:enumeration dafenum:dApplicationType .
 
 daf:dApplicationComponent dafm:hasPropertyDefinition dafdef:Property_C469347F8EB146fe921B9F170CF6286A .
-dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:classifier dafdef:ExternalClassifier_dApplicationType_1F8DC790 .
+dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:classifier dafenum:dApplicationType .
 
 dafp:dApplicationComponent__ApplicationType
     a owl:DatatypeProperty ;
@@ -3230,12 +3227,12 @@ dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:isOrdered false .
 dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:isStatic false .
 dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:attributeLength "0" .
 dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dApplicationType_1F8DC790 a rdfs:Resource ; rdfs:label "dApplicationType" ; dafm:eaGuid "{1F8DC790-BDA7-4fda-B283-F2FD3B77BF7A}" .
-dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:classifier dafdef:ExternalClassifier_dApplicationType_1F8DC790 .
+dafdef:Property_C469347F8EB146fe921B9F170CF6286A dafm:classifier dafenum:dApplicationType .
 
 dafshape:dApplicationComponentShape sh:property [
     sh:path dafp:dApplicationComponent__ApplicationType ;
     sh:datatype xsd:string ;
+    sh:in ( "COTS" "Custom" "Module" "Web Site" "Instance" "DB" "Core" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "ApplicationType"
@@ -3783,7 +3780,6 @@ dafshape:dBusinessProcessShape sh:property [
     sh:name "Owner"
 ] .
 
-dafdef:ExternalClassifier_ProcessCriticality_CE13D026 a rdfs:Resource ; rdfs:label "ProcessCriticality" ; dafm:eaGuid "{CE13D026-1E2E-4c50-BAB9-FFE27826BBE8}" .
 dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5
     a dafm:PropertyDefinition ;
     rdfs:label "ProcessCriticality" ;
@@ -3796,10 +3792,10 @@ dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "unknow" ;
-    dafm:enumeration dafdef:ExternalClassifier_ProcessCriticality_CE13D026 .
+    dafm:enumeration dafenum:ProcessCriticality .
 
 daf:dBusinessProcess dafm:hasPropertyDefinition dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 .
-dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:classifier dafdef:ExternalClassifier_ProcessCriticality_CE13D026 .
+dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:classifier dafenum:ProcessCriticality .
 
 dafp:dBusinessProcess__ProcessCriticality
     a owl:DatatypeProperty ;
@@ -3815,18 +3811,17 @@ dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:isOrdered false .
 dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:isStatic false .
 dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:attributeLength "0" .
 dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_ProcessCriticality_CE13D026 a rdfs:Resource ; rdfs:label "ProcessCriticality" ; dafm:eaGuid "{CE13D026-1E2E-4c50-BAB9-FFE27826BBE8}" .
-dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:classifier dafdef:ExternalClassifier_ProcessCriticality_CE13D026 .
+dafdef:Property_n_432D09B225A44d41BB3413EC9A5252F5 dafm:classifier dafenum:ProcessCriticality .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__ProcessCriticality ;
     sh:datatype xsd:string ;
+    sh:in ( "High" "Medium" "Low" "unknow" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "ProcessCriticality"
 ] .
 
-dafdef:ExternalClassifier_dProcessType_B6CE3567 a rdfs:Resource ; rdfs:label "dProcessType" ; dafm:eaGuid "{B6CE3567-ED24-47eb-AEF7-F0D6CE61F9B5}" .
 dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E
     a dafm:PropertyDefinition ;
     rdfs:label "ProcessType" ;
@@ -3838,10 +3833,10 @@ dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E
     rdfs:comment "Whether this process is supported by IT or is a manual process." ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dProcessType_B6CE3567 .
+    dafm:enumeration dafenum:dProcessType .
 
 daf:dBusinessProcess dafm:hasPropertyDefinition dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E .
-dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:classifier dafdef:ExternalClassifier_dProcessType_B6CE3567 .
+dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:classifier dafenum:dProcessType .
 
 dafp:dBusinessProcess__ProcessType
     a owl:DatatypeProperty ;
@@ -3857,12 +3852,12 @@ dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:isOrdered false .
 dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:isStatic false .
 dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:attributeLength "0" .
 dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dProcessType_B6CE3567 a rdfs:Resource ; rdfs:label "dProcessType" ; dafm:eaGuid "{B6CE3567-ED24-47eb-AEF7-F0D6CE61F9B5}" .
-dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:classifier dafdef:ExternalClassifier_dProcessType_B6CE3567 .
+dafdef:Property_n_5633353BEB364f23997D5094DC0EF29E dafm:classifier dafenum:dProcessType .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__ProcessType ;
     sh:datatype xsd:string ;
+    sh:in ( "Manual" "Automatic" "Client facing" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "ProcessType"
@@ -4047,8 +4042,7 @@ dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:isId false .
 dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:isOrdered false .
 dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:isStatic false .
 dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_379C0741FF094fa58765EBDDB496A483 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__isDocumented ;
@@ -4085,8 +4079,7 @@ dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:isId false .
 dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:isOrdered false .
 dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:isStatic false .
 dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_E5E2A5CFFB644d4cA43D1AD4EA2CD2B8 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__isEffective ;
@@ -4123,8 +4116,7 @@ dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:isId false .
 dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:isOrdered false .
 dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:isStatic false .
 dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_F0DE5FCFC3174d29BC50F9DAEEC234ED dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__isOptimized ;
@@ -4161,8 +4153,7 @@ dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:isId false .
 dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:isOrdered false .
 dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:isStatic false .
 dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_46AA30B1857942beA8EC49DED77C6217 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dBusinessProcessShape sh:property [
     sh:path dafp:dBusinessProcess__isAdopted ;
@@ -4981,7 +4972,6 @@ dafshape:dCapabilityShape sh:property [
     sh:name "CapabilityLevel"
 ] .
 
-dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE a rdfs:Resource ; rdfs:label "CapabilityBusinessValue" ; dafm:eaGuid "{229E78DE-3F30-4749-A6D7-1C7596063A82}" .
 dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3
     a dafm:PropertyDefinition ;
     rdfs:label "BusinessValue" ;
@@ -4994,10 +4984,10 @@ dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "Low" ;
-    dafm:enumeration dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE .
+    dafm:enumeration dafenum:CapabilityBusinessValue .
 
 daf:dCapability dafm:hasPropertyDefinition dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 .
-dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:classifier dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE .
+dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:classifier dafenum:CapabilityBusinessValue .
 
 dafp:dCapability__BusinessValue
     a owl:DatatypeProperty ;
@@ -5012,12 +5002,12 @@ dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:isId false .
 dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:isOrdered false .
 dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:isStatic false .
 dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:attributeLength "0" .
-dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE a rdfs:Resource ; rdfs:label "CapabilityBusinessValue" ; dafm:eaGuid "{229E78DE-3F30-4749-A6D7-1C7596063A82}" .
-dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:classifier dafdef:ExternalClassifier_CapabilityBusinessValue_229E78DE .
+dafdef:Property_E7FB871E36F348c7A0D5D1DD13A185E3 dafm:classifier dafenum:CapabilityBusinessValue .
 
 dafshape:dCapabilityShape sh:property [
     sh:path dafp:dCapability__BusinessValue ;
     sh:datatype xsd:string ;
+    sh:in ( "Support" "Differentiator" "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "BusinessValue"
@@ -5099,7 +5089,6 @@ dafshape:dCapabilityShape sh:property [
     sh:name "Source"
 ] .
 
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
 dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18
     a dafm:PropertyDefinition ;
     rdfs:label "Increments" ;
@@ -5112,10 +5101,10 @@ dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "None" ;
-    dafm:enumeration dafdef:ExternalClassifier_dIncrement_85B9204F .
+    dafm:enumeration dafenum:dIncrement .
 
 daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 .
-dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:classifier dafenum:dIncrement .
 
 dafp:dCapability__Increments
     a owl:DatatypeProperty ;
@@ -5131,18 +5120,17 @@ dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:isOrdered false .
 dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:isStatic false .
 dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:attributeLength "0" .
 dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
-dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_8662FADFFEBB495597BD12A887EC1F18 dafm:classifier dafenum:dIncrement .
 
 dafshape:dCapabilityShape sh:property [
     sh:path dafp:dCapability__Increments ;
     sh:datatype xsd:string ;
+    sh:in ( "None" "Initial" "UnderDevelopment" "Defined" "Managed" "Measured" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Increments"
 ] .
 
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
 dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5
     a dafm:PropertyDefinition ;
     rdfs:label "IncrementsToBe" ;
@@ -5155,10 +5143,10 @@ dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "Initial" ;
-    dafm:enumeration dafdef:ExternalClassifier_dIncrement_85B9204F .
+    dafm:enumeration dafenum:dIncrement .
 
 daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 .
-dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:classifier dafenum:dIncrement .
 
 dafp:dCapability__IncrementsToBe
     a owl:DatatypeProperty ;
@@ -5174,18 +5162,17 @@ dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:isOrdered false .
 dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:isStatic false .
 dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:attributeLength "0" .
 dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
-dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_1A176946D8BA4d45A479867B66983EB5 dafm:classifier dafenum:dIncrement .
 
 dafshape:dCapabilityShape sh:property [
     sh:path dafp:dCapability__IncrementsToBe ;
     sh:datatype xsd:string ;
+    sh:in ( "None" "Initial" "UnderDevelopment" "Defined" "Managed" "Measured" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "IncrementsToBe"
 ] .
 
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
 dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B
     a dafm:PropertyDefinition ;
     rdfs:label "IncrementVertical" ;
@@ -5198,10 +5185,10 @@ dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "None" ;
-    dafm:enumeration dafdef:ExternalClassifier_dIncrement_85B9204F .
+    dafm:enumeration dafenum:dIncrement .
 
 daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B .
-dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:classifier dafenum:dIncrement .
 
 dafp:dCapability__IncrementVertical
     a owl:DatatypeProperty ;
@@ -5217,18 +5204,17 @@ dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:isOrdered false .
 dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:isStatic false .
 dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:attributeLength "0" .
 dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
-dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_5DDD425E636F4aec8A0218245F491C4B dafm:classifier dafenum:dIncrement .
 
 dafshape:dCapabilityShape sh:property [
     sh:path dafp:dCapability__IncrementVertical ;
     sh:datatype xsd:string ;
+    sh:in ( "None" "Initial" "UnderDevelopment" "Defined" "Managed" "Measured" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "IncrementVertical"
 ] .
 
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
 dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E
     a dafm:PropertyDefinition ;
     rdfs:label "IncrementSupplyChain" ;
@@ -5241,10 +5227,10 @@ dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "None" ;
-    dafm:enumeration dafdef:ExternalClassifier_dIncrement_85B9204F .
+    dafm:enumeration dafenum:dIncrement .
 
 daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E .
-dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:classifier dafenum:dIncrement .
 
 dafp:dCapability__IncrementSupplyChain
     a owl:DatatypeProperty ;
@@ -5260,12 +5246,12 @@ dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:isOrdered false .
 dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:isStatic false .
 dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:attributeLength "0" .
 dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dIncrement_85B9204F a rdfs:Resource ; rdfs:label "dIncrement" ; dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" .
-dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:classifier dafdef:ExternalClassifier_dIncrement_85B9204F .
+dafdef:Property_n_7FD0069FD7CC4ffaB16508C261F1C62E dafm:classifier dafenum:dIncrement .
 
 dafshape:dCapabilityShape sh:property [
     sh:path dafp:dCapability__IncrementSupplyChain ;
     sh:datatype xsd:string ;
+    sh:in ( "None" "Initial" "UnderDevelopment" "Defined" "Managed" "Measured" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "IncrementSupplyChain"
@@ -5825,8 +5811,7 @@ dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:isId false .
 dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:isOrdered false .
 dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:isStatic false .
 dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_CE927B4A4E7F49338DF6DBC11197C4E4 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dDataEntityShape sh:property [
     sh:path dafp:dDataEntity__isAccessible ;
@@ -5865,8 +5850,7 @@ dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:isId false .
 dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:isOrdered false .
 dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:isStatic false .
 dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_B98FC1E065D441ebAD07745B34795CDC dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dDataEntityShape sh:property [
     sh:path dafp:dDataEntity__isTimely ;
@@ -6611,7 +6595,6 @@ dafshape:dDeploymentNodeShape sh:property [
     sh:name "Owner"
 ] .
 
-dafdef:ExternalClassifier_ArchitectureType_88038075 a rdfs:Resource ; rdfs:label "ArchitectureType" ; dafm:eaGuid "{88038075-E687-4c11-97C0-76B606139508}" .
 dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29
     a dafm:PropertyDefinition ;
     rdfs:label "ArchitectureType" ;
@@ -6624,10 +6607,10 @@ dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "AMD64" ;
-    dafm:enumeration dafdef:ExternalClassifier_ArchitectureType_88038075 .
+    dafm:enumeration dafenum:ArchitectureType .
 
 daf:dDeploymentNode dafm:hasPropertyDefinition dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 .
-dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:classifier dafdef:ExternalClassifier_ArchitectureType_88038075 .
+dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:classifier dafenum:ArchitectureType .
 
 dafp:dDeploymentNode__ArchitectureType
     a owl:DatatypeProperty ;
@@ -6643,12 +6626,12 @@ dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:isOrdered false .
 dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:isStatic false .
 dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:attributeLength "0" .
 dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_ArchitectureType_88038075 a rdfs:Resource ; rdfs:label "ArchitectureType" ; dafm:eaGuid "{88038075-E687-4c11-97C0-76B606139508}" .
-dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:classifier dafdef:ExternalClassifier_ArchitectureType_88038075 .
+dafdef:Property_n_24DDCA11290E4558A7B91C5E5B7E7D29 dafm:classifier dafenum:ArchitectureType .
 
 dafshape:dDeploymentNodeShape sh:property [
     sh:path dafp:dDeploymentNode__ArchitectureType ;
     sh:datatype xsd:string ;
+    sh:in ( "AMD64" "ARM64" "RISC-V" "x86" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "ArchitectureType"
@@ -7097,8 +7080,7 @@ dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:isOrdered false .
 dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:isStatic false .
 dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:attributeLength "0" .
 dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_325D55493B564c79892E2F9D9A5ABC63 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dFeatureShape sh:property [
     sh:path dafp:dFeature__isImplemented ;
@@ -7316,7 +7298,6 @@ dafshape:dGoalShape sh:property [
     sh:name "Value_Name"
 ] .
 
-dafdef:ExternalClassifier_dAssumptionType_366EDF0A a rdfs:Resource ; rdfs:label "dAssumptionType" ; dafm:eaGuid "{366EDF0A-E5AD-4c9e-B3B0-B879A8D3B0C1}" .
 dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC
     a dafm:PropertyDefinition ;
     rdfs:label "dAssumption" ;
@@ -7328,10 +7309,10 @@ dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC
     rdfs:comment "The assumptions made to achieve the goal. " ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "*" ;
-    dafm:enumeration dafdef:ExternalClassifier_dAssumptionType_366EDF0A .
+    dafm:enumeration dafenum:dAssumptionType .
 
 daf:dGoal dafm:hasPropertyDefinition dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC .
-dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:classifier dafdef:ExternalClassifier_dAssumptionType_366EDF0A .
+dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:classifier dafenum:dAssumptionType .
 
 dafp:dGoal__dAssumption
     a owl:DatatypeProperty ;
@@ -7347,12 +7328,12 @@ dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:isOrdered false .
 dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:isStatic false .
 dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:attributeLength "0" .
 dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dAssumptionType_366EDF0A a rdfs:Resource ; rdfs:label "dAssumptionType" ; dafm:eaGuid "{366EDF0A-E5AD-4c9e-B3B0-B879A8D3B0C1}" .
-dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:classifier dafdef:ExternalClassifier_dAssumptionType_366EDF0A .
+dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC dafm:classifier dafenum:dAssumptionType .
 
 dafshape:dGoalShape sh:property [
     sh:path dafp:dGoal__dAssumption ;
     sh:datatype xsd:string ;
+    sh:in ( "Enterprise" "Business" "System" "Application" "Technology" "Data" ) ;
     sh:minCount 1 ;
     sh:name "dAssumption"
 ] .
@@ -7580,7 +7561,6 @@ dafshape:dInitiativeShape sh:property [
     sh:name "Impacted Capability"
 ] .
 
-dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 a rdfs:Resource ; rdfs:label "InitiativeStatus" ; dafm:eaGuid "{7EFBDD76-6CA7-4942-B855-921E2AF9D181}" .
 dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C
     a dafm:PropertyDefinition ;
     rdfs:label "initiativeHealth" ;
@@ -7592,10 +7572,10 @@ dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C
     rdfs:comment "a set of colors to Visually describe the health of the initiative.\n" ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+    dafm:enumeration dafenum:InitiativeStatus .
 
 daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C .
-dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafenum:InitiativeStatus .
 
 dafp:dInitiative__initiativeHealth
     a owl:DatatypeProperty ;
@@ -7610,12 +7590,12 @@ dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isId false .
 dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isOrdered false .
 dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:isStatic false .
 dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 a rdfs:Resource ; rdfs:label "InitiativeStatus" ; dafm:eaGuid "{7EFBDD76-6CA7-4942-B855-921E2AF9D181}" .
-dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafdef:ExternalClassifier_InitiativeStatus_7EFBDD76 .
+dafdef:Property_n_1694EC2DA9BD47e6A44250B5F0303F5C dafm:classifier dafenum:InitiativeStatus .
 
 dafshape:dInitiativeShape sh:property [
     sh:path dafp:dInitiative__initiativeHealth ;
     sh:datatype xsd:string ;
+    sh:in ( "DeepGreen" "Green" "Yellow" "Orange" "Red" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "initiativeHealth"
@@ -7951,6 +7931,44 @@ dafshape:dInitiativeShape sh:property [
     sh:name "Benefit"
 ] .
 
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38
+    a dafm:PropertyDefinition ;
+    rdfs:label "EstimatedTotalCost" ;
+    dafm:eaGuid "{67ABCA53-3A45-4fba-BA94-786D6ED25C38}" ;
+    dafm:sourceDatatype "Float" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dInitiative__EstimatedTotalCost ;
+    rdfs:comment "the current estimation of the cost in the current currency (default USD)" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" ;
+    dafm:defaultValue "10.00" .
+
+daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 .
+
+dafp:dInitiative__EstimatedTotalCost
+    a owl:DatatypeProperty ;
+    rdfs:label "EstimatedTotalCost" ;
+    rdfs:domain daf:dInitiative ;
+    rdfs:range xsd:float ;
+    rdfs:comment "the current estimation of the cost in the current currency (default USD)" .
+
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:attributeVisibility "Private" .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isCollection false .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isConst false .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isId false .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isOrdered false .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isStatic false .
+dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:attributeContainment "Not Specified" .
+
+dafshape:dInitiativeShape sh:property [
+    sh:path dafp:dInitiative__EstimatedTotalCost ;
+    sh:datatype xsd:float ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "EstimatedTotalCost"
+] .
+
 # Concept: IP Range
 daf:dIPRange
     a owl:Class, dafm:ConceptDefinition ;
@@ -8006,7 +8024,6 @@ dafdef:TaggedValue__205E1595_9FBC_4a0e_A033_B5C8E6BE8F49__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface\n" .
 
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
 dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840
     a dafm:PropertyDefinition ;
     rdfs:label "Public" ;
@@ -8017,10 +8034,10 @@ dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840
     dafm:projectionPredicate dafp:dIPRange__Public ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dboolean_C695692B .
+    dafm:enumeration dafenum:dboolean .
 
 daf:dIPRange dafm:hasPropertyDefinition dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 .
-dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:classifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:classifier dafenum:dboolean .
 
 dafp:dIPRange__Public
     a owl:DatatypeProperty ;
@@ -8034,12 +8051,12 @@ dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:isId false .
 dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:isOrdered false .
 dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:isStatic false .
 dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:classifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_80EFA23C0DBF4de6BDCC533709EBC840 dafm:classifier dafenum:dboolean .
 
 dafshape:dIPRangeShape sh:property [
     sh:path dafp:dIPRange__Public ;
     sh:datatype xsd:string ;
+    sh:in ( "true" "false" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Public"
@@ -10051,8 +10068,7 @@ dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:isId false .
 dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:isOrdered false .
 dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:isStatic false .
 dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_A42DDB491F3F4af2AB7209E80973F6B9 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dLogicalAppComponentShape sh:property [
     sh:path dafp:dLogicalAppComponent__isUsable ;
@@ -10089,8 +10105,7 @@ dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:isId false .
 dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:isOrdered false .
 dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:isStatic false .
 dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_AA845F9B75514251ACC450E682F67595 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dLogicalAppComponentShape sh:property [
     sh:path dafp:dLogicalAppComponent__isMeetingBusinessNeeds ;
@@ -10127,8 +10142,7 @@ dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:isId false .
 dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:isOrdered false .
 dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:isStatic false .
 dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_4F4F68E1CAA84b8d8BC6CBF4023D0A71 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dLogicalAppComponentShape sh:property [
     sh:path dafp:dLogicalAppComponent__isMeetingFutureNeeds ;
@@ -10978,8 +10992,7 @@ dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:isOrdered false .
 dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:isStatic false .
 dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:attributeLength "0" .
 dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_E0650CFD7E1B4189933BF231B7746CF7 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dModelClassShape sh:property [
     sh:path dafp:dModelClass__is_searchable ;
@@ -11019,8 +11032,7 @@ dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:isOrdered false .
 dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:isStatic false .
 dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:attributeLength "0" .
 dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_9655BB1795604ddeBD1B904E9D9E5E75 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dModelClassShape sh:property [
     sh:path dafp:dModelClass__is_soap ;
@@ -12148,7 +12160,6 @@ dafshape:dPhysicalServiceShape sh:property [
     sh:name "port"
 ] .
 
-dafdef:ExternalClassifier_ProtocolTypes_1144AB41 a rdfs:Resource ; rdfs:label "ProtocolTypes" ; dafm:eaGuid "{1144AB41-171E-4cb7-AD5F-C70620377250}" .
 dafdef:Property_DEF217B553B34a9dAEE79147205CE082
     a dafm:PropertyDefinition ;
     rdfs:label "protocol" ;
@@ -12159,10 +12170,10 @@ dafdef:Property_DEF217B553B34a9dAEE79147205CE082
     dafm:projectionPredicate dafp:dPhysicalService__protocol ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_ProtocolTypes_1144AB41 .
+    dafm:enumeration dafenum:ProtocolTypes .
 
 daf:dPhysicalService dafm:hasPropertyDefinition dafdef:Property_DEF217B553B34a9dAEE79147205CE082 .
-dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:classifier dafdef:ExternalClassifier_ProtocolTypes_1144AB41 .
+dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:classifier dafenum:ProtocolTypes .
 
 dafp:dPhysicalService__protocol
     a owl:DatatypeProperty ;
@@ -12177,18 +12188,17 @@ dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:isOrdered false .
 dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:isStatic false .
 dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:attributeLength "0" .
 dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_ProtocolTypes_1144AB41 a rdfs:Resource ; rdfs:label "ProtocolTypes" ; dafm:eaGuid "{1144AB41-171E-4cb7-AD5F-C70620377250}" .
-dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:classifier dafdef:ExternalClassifier_ProtocolTypes_1144AB41 .
+dafdef:Property_DEF217B553B34a9dAEE79147205CE082 dafm:classifier dafenum:ProtocolTypes .
 
 dafshape:dPhysicalServiceShape sh:property [
     sh:path dafp:dPhysicalService__protocol ;
     sh:datatype xsd:string ;
+    sh:in ( "All" "http" "https" "Ret" "TCP" "UPD" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "protocol"
 ] .
 
-dafdef:ExternalClassifier_executionMode_B1A6C8E1 a rdfs:Resource ; rdfs:label "executionMode" ; dafm:eaGuid "{B1A6C8E1-F5F8-4b08-B303-11F47AE48F21}" .
 dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686
     a dafm:PropertyDefinition ;
     rdfs:label "execution_mode" ;
@@ -12199,10 +12209,10 @@ dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686
     dafm:projectionPredicate dafp:dPhysicalService__execution_mode ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_executionMode_B1A6C8E1 .
+    dafm:enumeration dafenum:executionMode .
 
 daf:dPhysicalService dafm:hasPropertyDefinition dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 .
-dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:classifier dafdef:ExternalClassifier_executionMode_B1A6C8E1 .
+dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:classifier dafenum:executionMode .
 
 dafp:dPhysicalService__execution_mode
     a owl:DatatypeProperty ;
@@ -12217,12 +12227,12 @@ dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:isOrdered false .
 dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:isStatic false .
 dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:attributeLength "0" .
 dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_executionMode_B1A6C8E1 a rdfs:Resource ; rdfs:label "executionMode" ; dafm:eaGuid "{B1A6C8E1-F5F8-4b08-B303-11F47AE48F21}" .
-dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:classifier dafdef:ExternalClassifier_executionMode_B1A6C8E1 .
+dafdef:Property_n_4B14D88EE4F34fe685DE713149AC9686 dafm:classifier dafenum:executionMode .
 
 dafshape:dPhysicalServiceShape sh:property [
     sh:path dafp:dPhysicalService__execution_mode ;
     sh:datatype xsd:string ;
+    sh:in ( "synchronous" "asynchronous" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "execution_mode"
@@ -12508,7 +12518,6 @@ dafshape:dPrincipleShape sh:property [
     sh:name "Statement"
 ] .
 
-dafdef:ExternalClassifier_dPrincipleType_48777976 a rdfs:Resource ; rdfs:label "dPrincipleType" ; dafm:eaGuid "{48777976-4023-42b3-922F-3842A0192659}" .
 dafdef:Property_BA3868A813A744d4A04D6371D780C1F1
     a dafm:PropertyDefinition ;
     rdfs:label "Type" ;
@@ -12520,10 +12529,10 @@ dafdef:Property_BA3868A813A744d4A04D6371D780C1F1
     rdfs:comment "The category of the principle. " ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dPrincipleType_48777976 .
+    dafm:enumeration dafenum:dPrincipleType .
 
 daf:dPrinciple dafm:hasPropertyDefinition dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 .
-dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:classifier dafdef:ExternalClassifier_dPrincipleType_48777976 .
+dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:classifier dafenum:dPrincipleType .
 
 dafp:dPrinciple__Type
     a owl:DatatypeProperty ;
@@ -12538,12 +12547,12 @@ dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:isId false .
 dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:isOrdered false .
 dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:isStatic false .
 dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:attributeLength "0" .
-dafdef:ExternalClassifier_dPrincipleType_48777976 a rdfs:Resource ; rdfs:label "dPrincipleType" ; dafm:eaGuid "{48777976-4023-42b3-922F-3842A0192659}" .
-dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:classifier dafdef:ExternalClassifier_dPrincipleType_48777976 .
+dafdef:Property_BA3868A813A744d4A04D6371D780C1F1 dafm:classifier dafenum:dPrincipleType .
 
 dafshape:dPrincipleShape sh:property [
     sh:path dafp:dPrinciple__Type ;
     sh:datatype xsd:string ;
+    sh:in ( "Guiding Principle" "Business Principle" "Data Principle" "Application Principle" "Integration Principle" "Technology Principle" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Type"
@@ -13328,7 +13337,6 @@ dafshape:dRequirementShape sh:property [
     sh:name "Proofreader"
 ] .
 
-dafdef:ExternalClassifier_dRequirementType_7DC8BB6B a rdfs:Resource ; rdfs:label "dRequirementType" ; dafm:eaGuid "{7DC8BB6B-47FB-46fb-9EDD-C51B3EFADC29}" .
 dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31
     a dafm:PropertyDefinition ;
     rdfs:label "Type" ;
@@ -13340,10 +13348,10 @@ dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31
     rdfs:comment "The type of requirement. " ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dRequirementType_7DC8BB6B .
+    dafm:enumeration dafenum:dRequirementType .
 
 daf:dRequirement dafm:hasPropertyDefinition dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 .
-dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:classifier dafdef:ExternalClassifier_dRequirementType_7DC8BB6B .
+dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:classifier dafenum:dRequirementType .
 
 dafp:dRequirement__Type
     a owl:DatatypeProperty ;
@@ -13359,12 +13367,12 @@ dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:isOrdered false .
 dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:isStatic false .
 dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:attributeLength "0" .
 dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dRequirementType_7DC8BB6B a rdfs:Resource ; rdfs:label "dRequirementType" ; dafm:eaGuid "{7DC8BB6B-47FB-46fb-9EDD-C51B3EFADC29}" .
-dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:classifier dafdef:ExternalClassifier_dRequirementType_7DC8BB6B .
+dafdef:Property_n_7CAD9477EEF545abB902DB1F738E4A31 dafm:classifier dafenum:dRequirementType .
 
 dafshape:dRequirementShape sh:property [
     sh:path dafp:dRequirement__Type ;
     sh:datatype xsd:string ;
+    sh:in ( "Business Rule" "Security" "Performance" "Persistence" "Scalability" "Transport" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Type"
@@ -13592,7 +13600,6 @@ dafshape:dRiskShape sh:property [
     sh:name "Severity"
 ] .
 
-dafdef:ExternalClassifier_dRiskStrategy_9875870C a rdfs:Resource ; rdfs:label "dRiskStrategy" ; dafm:eaGuid "{9875870C-3427-45dd-9C24-552A2BCD8FB8}" .
 dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14
     a dafm:PropertyDefinition ;
     rdfs:label "RiskStrategy" ;
@@ -13604,10 +13611,10 @@ dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14
     rdfs:comment "the strategy to be adopted to manage the risk." ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dRiskStrategy_9875870C .
+    dafm:enumeration dafenum:dRiskStrategy .
 
 daf:dRisk dafm:hasPropertyDefinition dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 .
-dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:classifier dafdef:ExternalClassifier_dRiskStrategy_9875870C .
+dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:classifier dafenum:dRiskStrategy .
 
 dafp:dRisk__RiskStrategy
     a owl:DatatypeProperty ;
@@ -13623,12 +13630,12 @@ dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:isOrdered false .
 dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:isStatic false .
 dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:attributeLength "0" .
 dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dRiskStrategy_9875870C a rdfs:Resource ; rdfs:label "dRiskStrategy" ; dafm:eaGuid "{9875870C-3427-45dd-9C24-552A2BCD8FB8}" .
-dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:classifier dafdef:ExternalClassifier_dRiskStrategy_9875870C .
+dafdef:Property_A5FFC55FF39C4c998F49A9AB8D0FFB14 dafm:classifier dafenum:dRiskStrategy .
 
 dafshape:dRiskShape sh:property [
     sh:path dafp:dRisk__RiskStrategy ;
     sh:datatype xsd:string ;
+    sh:in ( "Terminate" "Treat" "Tollerate" "Transfer" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "RiskStrategy"
@@ -13869,8 +13876,7 @@ dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:isId false .
 dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:isOrdered false .
 dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:isStatic false .
 dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_461FC7BF74CB49a4BB9DD8DD0E6F8129 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dRoleShape sh:property [
     sh:path dafp:dRole__isSkillsDefined ;
@@ -13947,8 +13953,7 @@ dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:isId false .
 dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:isOrdered false .
 dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:isStatic false .
 dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_n_552FB3CACE4B41d290371DF88CF0F25C dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dRoleShape sh:property [
     sh:path dafp:dRole__isSkillsAvailable ;
@@ -14231,7 +14236,6 @@ dafdef:TaggedValue__156033DC_ED4F_4253_9DBC_04186D20F095__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface\n" .
 
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
 dafdef:Property_B946387C624143cb96E4D7C9D8E39837
     a dafm:PropertyDefinition ;
     rdfs:label "Legitimacy" ;
@@ -14244,10 +14248,10 @@ dafdef:Property_B946387C624143cb96E4D7C9D8E39837
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "medium" ;
-    dafm:enumeration dafdef:ExternalClassifier_dScala_084C0207 .
+    dafm:enumeration dafenum:dScala .
 
 daf:dStakeholder dafm:hasPropertyDefinition dafdef:Property_B946387C624143cb96E4D7C9D8E39837 .
-dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:classifier dafenum:dScala .
 
 dafp:dStakeholder__Legitimacy
     a owl:DatatypeProperty ;
@@ -14263,18 +14267,17 @@ dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:isOrdered false .
 dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:isStatic false .
 dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:attributeLength "0" .
 dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
-dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_B946387C624143cb96E4D7C9D8E39837 dafm:classifier dafenum:dScala .
 
 dafshape:dStakeholderShape sh:property [
     sh:path dafp:dStakeholder__Legitimacy ;
     sh:datatype xsd:string ;
+    sh:in ( "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Legitimacy"
 ] .
 
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
 dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C
     a dafm:PropertyDefinition ;
     rdfs:label "Power" ;
@@ -14287,10 +14290,10 @@ dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "medium" ;
-    dafm:enumeration dafdef:ExternalClassifier_dScala_084C0207 .
+    dafm:enumeration dafenum:dScala .
 
 daf:dStakeholder dafm:hasPropertyDefinition dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C .
-dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:classifier dafenum:dScala .
 
 dafp:dStakeholder__Power
     a owl:DatatypeProperty ;
@@ -14306,12 +14309,12 @@ dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:isOrdered false .
 dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:isStatic false .
 dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:attributeLength "0" .
 dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
-dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_CD7DBB1B3B92414fA689A05473E1231C dafm:classifier dafenum:dScala .
 
 dafshape:dStakeholderShape sh:property [
     sh:path dafp:dStakeholder__Power ;
     sh:datatype xsd:string ;
+    sh:in ( "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Power"
@@ -14354,7 +14357,6 @@ dafshape:dStakeholderShape sh:property [
     sh:name "role"
 ] .
 
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
 dafdef:Property_n_9E613792F78F4391860FC24E1EA28908
     a dafm:PropertyDefinition ;
     rdfs:label "Urgency" ;
@@ -14367,10 +14369,10 @@ dafdef:Property_n_9E613792F78F4391860FC24E1EA28908
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
     dafm:defaultValue "medium" ;
-    dafm:enumeration dafdef:ExternalClassifier_dScala_084C0207 .
+    dafm:enumeration dafenum:dScala .
 
 daf:dStakeholder dafm:hasPropertyDefinition dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 .
-dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:classifier dafenum:dScala .
 
 dafp:dStakeholder__Urgency
     a owl:DatatypeProperty ;
@@ -14386,18 +14388,17 @@ dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:isOrdered false .
 dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:isStatic false .
 dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:attributeLength "0" .
 dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
-dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_n_9E613792F78F4391860FC24E1EA28908 dafm:classifier dafenum:dScala .
 
 dafshape:dStakeholderShape sh:property [
     sh:path dafp:dStakeholder__Urgency ;
     sh:datatype xsd:string ;
+    sh:in ( "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Urgency"
 ] .
 
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
 dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA
     a dafm:PropertyDefinition ;
     rdfs:label "Attitude" ;
@@ -14408,10 +14409,10 @@ dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA
     dafm:projectionPredicate dafp:dStakeholder__Attitude ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dScala_084C0207 .
+    dafm:enumeration dafenum:dScala .
 
 daf:dStakeholder dafm:hasPropertyDefinition dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA .
-dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:classifier dafenum:dScala .
 
 dafp:dStakeholder__Attitude
     a owl:DatatypeProperty ;
@@ -14425,12 +14426,12 @@ dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:isId false .
 dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:isOrdered false .
 dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:isStatic false .
 dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
-dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_BA993A2F0FFB4a27B771FD047AE5A3CA dafm:classifier dafenum:dScala .
 
 dafshape:dStakeholderShape sh:property [
     sh:path dafp:dStakeholder__Attitude ;
     sh:datatype xsd:string ;
+    sh:in ( "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Attitude"
@@ -14474,7 +14475,6 @@ dafshape:dStakeholderShape sh:property [
     sh:name "RACI"
 ] .
 
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
 dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133
     a dafm:PropertyDefinition ;
     rdfs:label "Knowledge" ;
@@ -14485,10 +14485,10 @@ dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133
     dafm:projectionPredicate dafp:dStakeholder__Knowledge ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_dScala_084C0207 .
+    dafm:enumeration dafenum:dScala .
 
 daf:dStakeholder dafm:hasPropertyDefinition dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 .
-dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:classifier dafenum:dScala .
 
 dafp:dStakeholder__Knowledge
     a owl:DatatypeProperty ;
@@ -14502,12 +14502,12 @@ dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:isId false .
 dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:isOrdered false .
 dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:isStatic false .
 dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dScala_084C0207 a rdfs:Resource ; rdfs:label "dScala" ; dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" .
-dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:classifier dafdef:ExternalClassifier_dScala_084C0207 .
+dafdef:Property_n_7D2243ED950242968D6DAF89D01BD133 dafm:classifier dafenum:dScala .
 
 dafshape:dStakeholderShape sh:property [
     sh:path dafp:dStakeholder__Knowledge ;
     sh:datatype xsd:string ;
+    sh:in ( "Low" "Medium" "High" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Knowledge"
@@ -15184,8 +15184,7 @@ dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:isOrdered false .
 dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:isStatic false .
 dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:attributeLength "0" .
 dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_dboolean_C695692B a rdfs:Resource ; rdfs:label "dboolean" ; dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" .
-dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:sourceClassifier dafdef:ExternalClassifier_dboolean_C695692B .
+dafdef:Property_CED8DC24DAD549118ECA8CA8047DE717 dafm:sourceClassifier dafenum:dboolean .
 
 dafshape:dValueShape sh:property [
     sh:path dafp:dValue__is_editable ;
@@ -15729,7 +15728,6 @@ dafdef:TaggedValue__62DF78B4_19F0_4db7_8C01_6A704D8616B2__Redefines_3
     dafm:tagValue "" ;
     dafm:ownerKind "element" .
 
-dafdef:ExternalClassifier_ValueStreamCriticality_FCA0F0F0 a rdfs:Resource ; rdfs:label "ValueStreamCriticality" ; dafm:eaGuid "{FCA0F0F0-8535-412d-8810-F85C279E981B}" .
 dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA
     a dafm:PropertyDefinition ;
     rdfs:label "Criticality" ;
@@ -15740,10 +15738,10 @@ dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA
     dafm:projectionPredicate dafp:dValueStream__Criticality ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" ;
-    dafm:enumeration dafdef:ExternalClassifier_ValueStreamCriticality_FCA0F0F0 .
+    dafm:enumeration dafenum:ValueStreamCriticality .
 
 daf:dValueStream dafm:hasPropertyDefinition dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA .
-dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:classifier dafdef:ExternalClassifier_ValueStreamCriticality_FCA0F0F0 .
+dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:classifier dafenum:ValueStreamCriticality .
 
 dafp:dValueStream__Criticality
     a owl:DatatypeProperty ;
@@ -15758,12 +15756,12 @@ dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:isOrdered false .
 dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:isStatic false .
 dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:attributeLength "0" .
 dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:attributeContainment "Not Specified" .
-dafdef:ExternalClassifier_ValueStreamCriticality_FCA0F0F0 a rdfs:Resource ; rdfs:label "ValueStreamCriticality" ; dafm:eaGuid "{FCA0F0F0-8535-412d-8810-F85C279E981B}" .
-dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:classifier dafdef:ExternalClassifier_ValueStreamCriticality_FCA0F0F0 .
+dafdef:Property_D61812C81B1C435e858CB0D98E43C5DA dafm:classifier dafenum:ValueStreamCriticality .
 
 dafshape:dValueStreamShape sh:property [
     sh:path dafp:dValueStream__Criticality ;
     sh:datatype xsd:string ;
+    sh:in ( "Not Analyzed" "Negligible Impact" "Limited Impact" "Moderate Impact" "Noticeable Impact" "Significant Impact" ) ;
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:name "Criticality"
@@ -16558,6 +16556,1506 @@ dafenum:SchemeType_value_wss
     skos:inScheme dafenum:SchemeType ;
     skos:prefLabel "wss" ;
     dafm:eaGuid "{699E88FF-AE66-42b9-9842-4BBD6B4B2245}" .
+
+# Enumeration: ActorTypes
+dafenum:ActorTypes
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ActorTypes" ;
+    dafm:eaGuid "{1EFA9C58-7AE5-4287-9FAB-0046A9434CA5}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:ActorTypes_value_Not_Set
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Not Set" ;
+    dafm:eaGuid "{4E240BCB-89E1-4dd5-AD64-20CEE1382C46}" .
+
+dafenum:ActorTypes_value_Worker
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Worker" ;
+    dafm:eaGuid "{1687ECCC-ADCC-4fae-AA53-2B1530481ECB}" .
+
+dafenum:ActorTypes_value_External_Worker
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "External Worker" ;
+    dafm:eaGuid "{D2EFDD15-A542-4190-86BB-752CD64FAF13}" .
+
+dafenum:ActorTypes_value_Internal_Worker
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Internal Worker" ;
+    dafm:eaGuid "{D9D95D3F-6CE7-49af-B932-07B8CECD0D74}" .
+
+dafenum:ActorTypes_value_Business_Partner
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Business Partner" ;
+    dafm:eaGuid "{E9485B87-FD9F-4ee9-9B6E-91F37717BF4A}" .
+
+dafenum:ActorTypes_value_Active_Business_Partner
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Active Business Partner" ;
+    dafm:eaGuid "{DD6B79AB-B595-4b6e-AFE6-5CBE1EABE3C8}" .
+
+dafenum:ActorTypes_value_Passive_Business_Partner
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ActorTypes ;
+    skos:prefLabel "Passive Business Partner" ;
+    dafm:eaGuid "{39E6A30D-79CF-458d-8712-507E564327D6}" .
+
+# Enumeration: ArchitectureType
+dafenum:ArchitectureType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ArchitectureType" ;
+    dafm:eaGuid "{88038075-E687-4c11-97C0-76B606139508}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:ArchitectureType_value_AMD64
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ArchitectureType ;
+    skos:prefLabel "AMD64" ;
+    dafm:eaGuid "{8B27FB97-108A-4521-A4C0-A4644CD04098}" .
+
+dafenum:ArchitectureType_value_ARM64
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ArchitectureType ;
+    skos:prefLabel "ARM64" ;
+    dafm:eaGuid "{056E9FB4-99F7-4a82-BC51-827821090E44}" .
+
+dafenum:ArchitectureType_value_RISC_V
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ArchitectureType ;
+    skos:prefLabel "RISC-V" ;
+    dafm:eaGuid "{5CDD2A55-4F48-4d2c-8137-CAEDC94320E3}" .
+
+dafenum:ArchitectureType_value_x86
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ArchitectureType ;
+    skos:prefLabel "x86" ;
+    dafm:eaGuid "{DDCBD214-7CE6-4464-B68F-7A33D67ACBA7}" .
+
+# Enumeration: CapabilityBusinessValue
+dafenum:CapabilityBusinessValue
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "CapabilityBusinessValue" ;
+    dafm:eaGuid "{229E78DE-3F30-4749-A6D7-1C7596063A82}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "the value of a business capability" .
+
+dafenum:CapabilityBusinessValue_value_Support
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:CapabilityBusinessValue ;
+    skos:prefLabel "Support" ;
+    dafm:eaGuid "{12015012-DFFF-4cc7-A485-915FBA76264E}" .
+
+dafenum:CapabilityBusinessValue_value_Differentiator
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:CapabilityBusinessValue ;
+    skos:prefLabel "Differentiator" ;
+    dafm:eaGuid "{04F96DCE-9562-40b2-B65E-D95599B6F6A5}" .
+
+dafenum:CapabilityBusinessValue_value_Low
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:CapabilityBusinessValue ;
+    skos:prefLabel "Low" ;
+    dafm:eaGuid "{D3817CAD-16AC-471f-B408-26AA2DCA2786}" .
+
+dafenum:CapabilityBusinessValue_value_Medium
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:CapabilityBusinessValue ;
+    skos:prefLabel "Medium" ;
+    dafm:eaGuid "{DE9BE415-2038-4261-BC92-1E31905F99AC}" .
+
+dafenum:CapabilityBusinessValue_value_High
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:CapabilityBusinessValue ;
+    skos:prefLabel "High" ;
+    dafm:eaGuid "{C6EBB11B-9700-4243-A8D9-9B6D00F01BF0}" .
+
+# Enumeration: dApplicationStrategy
+dafenum:dApplicationStrategy
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dApplicationStrategy" ;
+    dafm:eaGuid "{6A6DE418-7073-4a06-8856-EC0C2B1D40C7}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "the disposition toward a certain application" .
+
+dafenum:dApplicationStrategy_value_Retain
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Retain" ;
+    dafm:eaGuid "{B955E3B4-5FDD-4e21-923C-767A46687C34}" .
+
+dafenum:dApplicationStrategy_value_Rehost
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Rehost" ;
+    dafm:eaGuid "{C0D91D69-4F85-46a1-8F08-03699FE23289}" .
+
+dafenum:dApplicationStrategy_value_Replatform
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Replatform" ;
+    dafm:eaGuid "{0C23ECC7-DA9E-4383-869D-640E611D1898}" .
+
+dafenum:dApplicationStrategy_value_Refactor
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Refactor" ;
+    dafm:eaGuid "{208D16B0-315B-404a-A221-8E24DEE11C5D}" .
+
+dafenum:dApplicationStrategy_value_Rewrite
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Rewrite" ;
+    dafm:eaGuid "{06AB6904-9AE4-4c3e-AD94-F2B0DF2D392F}" .
+
+dafenum:dApplicationStrategy_value_Retire
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationStrategy ;
+    skos:prefLabel "Retire" ;
+    dafm:eaGuid "{7C0A7FEB-02B4-43e4-A450-BCE71D5E86EC}" .
+
+# Enumeration: dApplicationType
+dafenum:dApplicationType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dApplicationType" ;
+    dafm:eaGuid "{1F8DC790-BDA7-4fda-B283-F2FD3B77BF7A}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "the type of an application" .
+
+dafenum:dApplicationType_value_COTS
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "COTS" ;
+    dafm:eaGuid "{F40073CC-F40E-477c-8880-316A1458CCC3}" .
+
+dafenum:dApplicationType_value_Custom
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "Custom" ;
+    dafm:eaGuid "{D86ACAAC-9D98-4393-8292-361ABDA96B66}" .
+
+dafenum:dApplicationType_value_Module
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "Module" ;
+    dafm:eaGuid "{B8287527-8D21-4235-8E8D-C6B20BE6154D}" .
+
+dafenum:dApplicationType_value_Web_Site
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "Web Site" ;
+    dafm:eaGuid "{86752AEF-6CB8-42fb-BD2D-AD6D1BC72C2B}" .
+
+dafenum:dApplicationType_value_Instance
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "Instance" ;
+    dafm:eaGuid "{8DF16F22-B97D-458c-90B1-7A83E796F8C9}" .
+
+dafenum:dApplicationType_value_DB
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "DB" ;
+    dafm:eaGuid "{6D835E0C-071C-4e96-9D3E-3DEB5908B697}" .
+
+dafenum:dApplicationType_value_Core
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dApplicationType ;
+    skos:prefLabel "Core" ;
+    dafm:eaGuid "{4A56557A-E001-450d-B6AB-D2502DC73E72}" .
+
+# Enumeration: dAssumptionType
+dafenum:dAssumptionType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dAssumptionType" ;
+    dafm:eaGuid "{366EDF0A-E5AD-4c9e-B3B0-B879A8D3B0C1}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Enumeration for various Assumption types. " .
+
+dafenum:dAssumptionType_value_Enterprise
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "Enterprise" ;
+    dafm:eaGuid "{89367686-C794-4e9a-9562-CD6D028923C7}" .
+
+dafenum:dAssumptionType_value_Business
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "Business" ;
+    dafm:eaGuid "{D848DFF4-725F-4d92-9D58-771477E73A47}" .
+
+dafenum:dAssumptionType_value_System
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "System" ;
+    dafm:eaGuid "{73440EB3-0934-438d-AD08-FA8A580D300A}" .
+
+dafenum:dAssumptionType_value_Application
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "Application" ;
+    dafm:eaGuid "{6EFB5205-38F6-46b6-A8A8-C0E5EF1D8BEF}" .
+
+dafenum:dAssumptionType_value_Technology
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "Technology" ;
+    dafm:eaGuid "{1DD30FD0-8A8D-45f5-B17C-5C7BF1AA2AC0}" .
+
+dafenum:dAssumptionType_value_Data
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dAssumptionType ;
+    skos:prefLabel "Data" ;
+    dafm:eaGuid "{335C09D6-45E0-45c6-B2FD-271A06DADFCE}" .
+
+# Enumeration: dBaseStatus
+dafenum:dBaseStatus
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dBaseStatus" ;
+    dafm:eaGuid "{5D018CEC-7D3D-46af-AF8F-421FC4C698C9}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Each daf object has a \"Status\" field " .
+
+dafenum:dBaseStatus_value_Proposed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Proposed" ;
+    dafm:eaGuid "{52E27F82-0466-46be-93F1-E1ED66C0A021}" ;
+    rdfs:comment "the object has been created and is waiting for review" .
+
+dafenum:dBaseStatus_value_Validated
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Validated" ;
+    dafm:eaGuid "{035D2149-3813-4e1b-94C4-4AC0FBD1AC6D}" ;
+    rdfs:comment "The object has been validated in his quality from a technical/model point of view" .
+
+dafenum:dBaseStatus_value_Approved
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Approved" ;
+    dafm:eaGuid "{3F4AC429-5879-457b-8392-E883166131C5}" ;
+    rdfs:comment "The object has been validated from a <b>business</b> point of view" .
+
+dafenum:dBaseStatus_value_Rejected
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Rejected" ;
+    dafm:eaGuid "{419F773E-377B-441c-8FCE-DBD1BFA65E8B}" ;
+    rdfs:comment "The object has been rejected from a technical or <b>Business</b> point of view" .
+
+dafenum:dBaseStatus_value_Solved
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Solved" ;
+    dafm:eaGuid "{A5D262F2-7C9B-4d33-B311-FFF6A32C0CA0}" ;
+    rdfs:comment "The reason for the rejection has been eliminated and the object is awaiting  for a further review" .
+
+dafenum:dBaseStatus_value_Released
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Released" ;
+    dafm:eaGuid "{50E16FF2-0F69-49d2-AE4C-95F214C8CBBB}" ;
+    rdfs:comment "The object has been released and cannot be further be modified in this version of the model" .
+
+dafenum:dBaseStatus_value_Modified
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dBaseStatus ;
+    skos:prefLabel "Modified" ;
+    dafm:eaGuid "{4F545D3C-4ED1-4111-B595-3061AC5C0E88}" ;
+    rdfs:comment "The object has been modified from his original status Proposed or released." .
+
+# Enumeration: dboolean
+dafenum:dboolean
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dboolean" ;
+    dafm:eaGuid "{C695692B-CF93-4205-8B19-A6716BE5AFEE}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "a simple boolean value" .
+
+dafenum:dboolean_value_true
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dboolean ;
+    skos:prefLabel "true" ;
+    dafm:eaGuid "{AFB4E4AA-5EA1-4fd4-AEC6-A6E53FB4E95B}" .
+
+dafenum:dboolean_value_false
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dboolean ;
+    skos:prefLabel "false" ;
+    dafm:eaGuid "{830C349E-0EDE-4960-9FFC-E6F055735B69}" .
+
+# Enumeration: dCloudProvider
+dafenum:dCloudProvider
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dCloudProvider" ;
+    dafm:eaGuid "{99F7368C-2506-4a76-939E-F5120B50BBDB}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "list of common hyperscaler" .
+
+dafenum:dCloudProvider dafm:hasTaggedValue dafdef:TaggedValue__99F7368C_2506_4a76_939E_F5120B50BBDB__Metamodel_GUID_1 .
+dafdef:TaggedValue__99F7368C_2506_4a76_939E_F5120B50BBDB__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{8733E36A-C7D4-4111-919F-4F79F788698F}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:dCloudProvider dafm:hasTaggedValue dafdef:TaggedValue__99F7368C_2506_4a76_939E_F5120B50BBDB__Profile_Type_2 .
+dafdef:TaggedValue__99F7368C_2506_4a76_939E_F5120B50BBDB__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:dCloudProvider_value_AWS
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dCloudProvider ;
+    skos:prefLabel "AWS" ;
+    dafm:eaGuid "{D60A9578-27C8-4406-A690-FB9AA240DF27}" .
+
+dafenum:dCloudProvider_value_Azure
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dCloudProvider ;
+    skos:prefLabel "Azure" ;
+    dafm:eaGuid "{0D91E836-E9FE-4322-8441-9219713B6E7C}" .
+
+dafenum:dCloudProvider_value_DigitalOcean
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dCloudProvider ;
+    skos:prefLabel "DigitalOcean" ;
+    dafm:eaGuid "{2942824A-94FA-4280-B6DE-5EA1E086DCA1}" .
+
+dafenum:dCloudProvider_value_Google
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dCloudProvider ;
+    skos:prefLabel "Google" ;
+    dafm:eaGuid "{566E376C-3209-46ee-9B4D-643D50E20BB2}" .
+
+dafenum:dCloudProvider_value_Other
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dCloudProvider ;
+    skos:prefLabel "Other" ;
+    dafm:eaGuid "{B9F144EF-FF55-464b-8187-B5F8E17EA67C}" .
+
+# Enumeration: dConstraintType
+dafenum:dConstraintType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dConstraintType" ;
+    dafm:eaGuid "{2A32328F-C023-47ad-93EE-918BA4377BBF}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Enumeration containing the various constraint types. " .
+
+dafenum:dConstraintType_value_Invariant
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dConstraintType ;
+    skos:prefLabel "Invariant" ;
+    dafm:eaGuid "{20C9DFE7-D370-46d2-91E6-2FF30A277DA4}" ;
+    rdfs:comment "A property which remains unchanged and must be followed. " .
+
+dafenum:dConstraintType_value_Pre_condition
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dConstraintType ;
+    skos:prefLabel "Pre-condition" ;
+    dafm:eaGuid "{CDC2D29B-D506-4a79-AEFC-ACA902FF1F8F}" ;
+    rdfs:comment "A constraint that should be validated before an event occurs. " .
+
+dafenum:dConstraintType_value_Post_condition
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dConstraintType ;
+    skos:prefLabel "Post-condition" ;
+    dafm:eaGuid "{B15C1E78-E5AF-4f64-8724-E8B4B689431A}" ;
+    rdfs:comment "A constraint that is verified after an event occurs. " .
+
+dafenum:dConstraintType_value_Process
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dConstraintType ;
+    skos:prefLabel "Process" ;
+    dafm:eaGuid "{CB67FD84-1041-4c69-93D7-5DE4968BED65}" ;
+    rdfs:comment "A constraint that should be carried out as part of the process. " .
+
+# Enumeration: dFeatureStatus
+dafenum:dFeatureStatus
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dFeatureStatus" ;
+    dafm:eaGuid "{2FFA723E-44D3-40d7-96BD-4C05FE34CCC4}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:dFeatureStatus_value_Proposed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dFeatureStatus ;
+    skos:prefLabel "Proposed" ;
+    dafm:eaGuid "{233A2D01-712C-4b6d-8C88-D8B0B8FA934A}" .
+
+dafenum:dFeatureStatus_value_Validated
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dFeatureStatus ;
+    skos:prefLabel "Validated" ;
+    dafm:eaGuid "{D6FCF3F0-59C1-494b-962A-DA2BCC6677E9}" .
+
+dafenum:dFeatureStatus_value_Rejected
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dFeatureStatus ;
+    skos:prefLabel "Rejected" ;
+    dafm:eaGuid "{98BE1DA8-9574-4410-ADF5-B84F7BC359B1}" .
+
+dafenum:dFeatureStatus_value_Implemented
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dFeatureStatus ;
+    skos:prefLabel "Implemented" ;
+    dafm:eaGuid "{13AB7B89-A1B1-478f-AEF9-0A01D4AFA672}" .
+
+# Enumeration: dIncrement
+dafenum:dIncrement
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dIncrement" ;
+    dafm:eaGuid "{85B9204F-3EFA-4e01-8EDA-ECFC10F38C96}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "The increment for an entity on its Maturity : None, Initial, UnderDevelopment, Defined, Managed, Measured" .
+
+dafenum:dIncrement_value_None
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "None" ;
+    dafm:eaGuid "{B80C6E32-7135-40e2-B236-DB028577995C}" ;
+    rdfs:comment "Measured at level 0. " .
+
+dafenum:dIncrement_value_Initial
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "Initial" ;
+    dafm:eaGuid "{2946D262-347F-450d-B1BE-A7194A49975A}" ;
+    rdfs:comment "Measured at Level 1. " .
+
+dafenum:dIncrement_value_UnderDevelopment
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "UnderDevelopment" ;
+    dafm:eaGuid "{925F5F7B-0C6D-41f6-9A15-F8B9DD0E6DB7}" ;
+    rdfs:comment "Measured at Level 2. " .
+
+dafenum:dIncrement_value_Defined
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "Defined" ;
+    dafm:eaGuid "{720FE952-5BDE-43a0-A747-60EC99BF581F}" ;
+    rdfs:comment "Measured at Level 3. " .
+
+dafenum:dIncrement_value_Managed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "Managed" ;
+    dafm:eaGuid "{5482648E-5687-471e-B957-26410606AD0E}" ;
+    rdfs:comment "Measured at Level 4. " .
+
+dafenum:dIncrement_value_Measured
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dIncrement ;
+    skos:prefLabel "Measured" ;
+    dafm:eaGuid "{E0B75BCF-C628-45db-83A2-6B7824086D82}" ;
+    rdfs:comment "Measured at Level 5. " .
+
+# Enumeration: dLifecycleStatus
+dafenum:dLifecycleStatus
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dLifecycleStatus" ;
+    dafm:eaGuid "{0E9CCBEA-9DA9-4130-8909-AF0E3763DFD0}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "An enumeration of various Life Cycle Status ." .
+
+dafenum:dLifecycleStatus_value_Proposed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dLifecycleStatus ;
+    skos:prefLabel "Proposed" ;
+    dafm:eaGuid "{D0F61512-989B-4348-9F3B-A809651B02E4}" .
+
+dafenum:dLifecycleStatus_value_In_Development
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dLifecycleStatus ;
+    skos:prefLabel "In Development" ;
+    dafm:eaGuid "{012ADE8F-E113-41ca-A7EE-A577358D0E02}" .
+
+dafenum:dLifecycleStatus_value_Live
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dLifecycleStatus ;
+    skos:prefLabel "Live" ;
+    dafm:eaGuid "{505927DA-9A1F-4da7-8B3B-5D3360C4C179}" .
+
+dafenum:dLifecycleStatus_value_Phasing_Out
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dLifecycleStatus ;
+    skos:prefLabel "Phasing Out" ;
+    dafm:eaGuid "{A823C865-133A-4837-B5E2-3FAE9A2C7DF7}" .
+
+dafenum:dLifecycleStatus_value_Retired
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dLifecycleStatus ;
+    skos:prefLabel "Retired" ;
+    dafm:eaGuid "{AD38B346-C76D-41d7-9D89-559EB47C594D}" .
+
+# Enumeration: InitiativeStatus
+dafenum:InitiativeStatus
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "InitiativeStatus" ;
+    dafm:eaGuid "{7EFBDD76-6CA7-4942-B855-921E2AF9D181}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "a set of colors to Visually describe the health of the initiative." .
+
+dafenum:InitiativeStatus_value_DeepGreen
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:InitiativeStatus ;
+    skos:prefLabel "DeepGreen" ;
+    dafm:eaGuid "{4A254D2B-088F-4273-BB88-0FE5445FF54B}" ;
+    rdfs:comment "Initiative is  faster in time and/or cheaper in budget." .
+
+dafenum:InitiativeStatus_value_Green
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:InitiativeStatus ;
+    skos:prefLabel "Green" ;
+    dafm:eaGuid "{D19E5354-A533-4fc3-8A45-ABAB12F042AB}" ;
+    rdfs:comment "Initiative is  in time and budget." .
+
+dafenum:InitiativeStatus_value_Yellow
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:InitiativeStatus ;
+    skos:prefLabel "Yellow" ;
+    dafm:eaGuid "{798B824F-F173-46d6-8C25-D3B0BE23AD3F}" ;
+    rdfs:comment "Initiative is  &gt;5% late or &gt;5% over budget." .
+
+dafenum:InitiativeStatus_value_Orange
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:InitiativeStatus ;
+    skos:prefLabel "Orange" ;
+    dafm:eaGuid "{7841D5D5-DD7F-4501-9620-5E5FE4DF855F}" ;
+    rdfs:comment "Initiative is  &gt;15% late or &gt;15% over budget." .
+
+dafenum:InitiativeStatus_value_Red
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:InitiativeStatus ;
+    skos:prefLabel "Red" ;
+    dafm:eaGuid "{791DB4A5-A3DF-4393-8DCE-D56A3502F68C}" ;
+    rdfs:comment "Initiative is blocked, or &gt;30% late or &gt;30% over budget." .
+
+# Enumeration: dPrincipleType
+dafenum:dPrincipleType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dPrincipleType" ;
+    dafm:eaGuid "{48777976-4023-42b3-922F-3842A0192659}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "An enumeration providing various principle types. " .
+
+dafenum:dPrincipleType_value_Guiding_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Guiding Principle" ;
+    dafm:eaGuid "{61372812-BAB9-4d73-9B21-A8D2726734B0}" .
+
+dafenum:dPrincipleType_value_Business_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Business Principle" ;
+    dafm:eaGuid "{8CDB3174-10E1-43e7-AA14-B9261AB60196}" .
+
+dafenum:dPrincipleType_value_Data_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Data Principle" ;
+    dafm:eaGuid "{C11D52D9-76A8-4d52-A1B2-7817BE458665}" .
+
+dafenum:dPrincipleType_value_Application_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Application Principle" ;
+    dafm:eaGuid "{CAE7C4E0-07D9-4e35-9D61-5AE6EB895836}" .
+
+dafenum:dPrincipleType_value_Integration_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Integration Principle" ;
+    dafm:eaGuid "{2FA9DCC8-B69A-4d1f-950A-229CBD0DC836}" .
+
+dafenum:dPrincipleType_value_Technology_Principle
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dPrincipleType ;
+    skos:prefLabel "Technology Principle" ;
+    dafm:eaGuid "{AF3945B6-58DD-4ada-9858-3240CD05D740}" .
+
+# Enumeration: dProcessType
+dafenum:dProcessType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dProcessType" ;
+    dafm:eaGuid "{B6CE3567-ED24-47eb-AEF7-F0D6CE61F9B5}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Enumeration for Process Type - Manual or Automated. " .
+
+dafenum:dProcessType_value_Manual
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dProcessType ;
+    skos:prefLabel "Manual" ;
+    dafm:eaGuid "{938C303C-0988-4be9-BC92-F16A04F97A52}" .
+
+dafenum:dProcessType_value_Automatic
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dProcessType ;
+    skos:prefLabel "Automatic" ;
+    dafm:eaGuid "{77D5006C-1D20-4edb-A4E8-82191140812D}" .
+
+dafenum:dProcessType_value_Client_facing
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dProcessType ;
+    skos:prefLabel "Client facing" ;
+    dafm:eaGuid "{42CB7195-19DC-490e-879C-4B9015201D30}" .
+
+# Enumeration: dRequirementStatus
+dafenum:dRequirementStatus
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dRequirementStatus" ;
+    dafm:eaGuid "{B42C66DD-0CA0-41b8-8102-4DB1593CE4FE}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "the type of requirement" .
+
+dafenum:dRequirementStatus_value_Proposed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementStatus ;
+    skos:prefLabel "Proposed" ;
+    dafm:eaGuid "{F049D8D9-F2C0-40c2-9EED-1F4BFAF951F5}" .
+
+dafenum:dRequirementStatus_value_Mandatory
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementStatus ;
+    skos:prefLabel "Mandatory" ;
+    dafm:eaGuid "{310D551A-F8B2-42bf-BA87-4F522480559C}" .
+
+dafenum:dRequirementStatus_value_Validated
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementStatus ;
+    skos:prefLabel "Validated" ;
+    dafm:eaGuid "{9D9CFE70-5094-40bf-B51C-7757B1DF7849}" .
+
+# Enumeration: dRequirementType
+dafenum:dRequirementType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dRequirementType" ;
+    dafm:eaGuid "{7DC8BB6B-47FB-46fb-9EDD-C51B3EFADC29}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Type of requirement" .
+
+dafenum:dRequirementType_value_Business_Rule
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Business Rule" ;
+    dafm:eaGuid "{D9BAF2CA-0B4A-46e9-A35B-95C7FC32683B}" .
+
+dafenum:dRequirementType_value_Security
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Security" ;
+    dafm:eaGuid "{21CAD810-7FD0-4ccb-ACA5-1EEEDA59F39E}" .
+
+dafenum:dRequirementType_value_Performance
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Performance" ;
+    dafm:eaGuid "{8FA909FB-905A-4a54-A82D-C05F66A14397}" .
+
+dafenum:dRequirementType_value_Persistence
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Persistence" ;
+    dafm:eaGuid "{59DB4BBC-886A-4bc7-AD85-56480EF216FD}" .
+
+dafenum:dRequirementType_value_Scalability
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Scalability" ;
+    dafm:eaGuid "{E8FDA249-17BB-4ae9-9D7B-D10F8B0ACCFC}" .
+
+dafenum:dRequirementType_value_Transport
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRequirementType ;
+    skos:prefLabel "Transport" ;
+    dafm:eaGuid "{38534321-4FD9-4e66-832C-EE738390DC5B}" .
+
+# Enumeration: dRiskStrategy
+dafenum:dRiskStrategy
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dRiskStrategy" ;
+    dafm:eaGuid "{9875870C-3427-45dd-9C24-552A2BCD8FB8}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "strategy to address risks" .
+
+dafenum:dRiskStrategy_value_Terminate
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRiskStrategy ;
+    skos:prefLabel "Terminate" ;
+    dafm:eaGuid "{8AD31F4B-0E2A-4fb6-B683-383E1A6D7BAA}" .
+
+dafenum:dRiskStrategy_value_Treat
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRiskStrategy ;
+    skos:prefLabel "Treat" ;
+    dafm:eaGuid "{A639A0CC-7389-4af1-9FC4-49E2CF9A91E6}" .
+
+dafenum:dRiskStrategy_value_Tollerate
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRiskStrategy ;
+    skos:prefLabel "Tollerate" ;
+    dafm:eaGuid "{B28CE587-80FB-4f4f-9640-53810087E8ED}" .
+
+dafenum:dRiskStrategy_value_Transfer
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRiskStrategy ;
+    skos:prefLabel "Transfer" ;
+    dafm:eaGuid "{ABDD0650-28FE-4954-B3ED-05CDA2016374}" .
+
+# Enumeration: dSatisfactionType
+dafenum:dSatisfactionType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dSatisfactionType" ;
+    dafm:eaGuid "{81029B41-A750-4cec-AE75-04266D9A8B4F}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "Enumeration quantifying the Satisfaction level. " .
+
+dafenum:dSatisfactionType_value_Highly_Satisfied
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dSatisfactionType ;
+    skos:prefLabel "Highly Satisfied" ;
+    dafm:eaGuid "{DA97C7FA-19B0-4684-B5A4-36FF9D419064}" ;
+    rdfs:comment "The satisfaction is considered High. " .
+
+dafenum:dSatisfactionType_value_Satisfied
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dSatisfactionType ;
+    skos:prefLabel "Satisfied" ;
+    dafm:eaGuid "{AF2C1369-34EB-4c50-B360-EF0D5AC0F1AD}" ;
+    rdfs:comment "The satisfaction is optimal. " .
+
+dafenum:dSatisfactionType_value_Moderately_Satisfied
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dSatisfactionType ;
+    skos:prefLabel "Moderately Satisfied" ;
+    dafm:eaGuid "{FA35EEA2-88F9-420b-BBED-F9514036AFB6}" ;
+    rdfs:comment "The satisfaction level is sub optimal. " .
+
+dafenum:dSatisfactionType_value_Not_Satisfied
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dSatisfactionType ;
+    skos:prefLabel "Not Satisfied" ;
+    dafm:eaGuid "{294DBC53-8C7E-4214-AF9D-1BF2CF11932E}" ;
+    rdfs:comment "There is no satisfaction. " .
+
+dafenum:dSatisfactionType_value_Highly_Dissatisfied
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dSatisfactionType ;
+    skos:prefLabel "Highly Dissatisfied" ;
+    dafm:eaGuid "{F44FB3D1-8C1D-42de-AF71-D4C26F9D4A24}" ;
+    rdfs:comment "There is dissatisfaction. " .
+
+# Enumeration: dScala
+dafenum:dScala
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dScala" ;
+    dafm:eaGuid "{084C0207-B584-45ff-B6DD-ABEB89F2134B}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "a simple scala to assess status of properties" .
+
+dafenum:dScala_value_Low
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dScala ;
+    skos:prefLabel "Low" ;
+    dafm:eaGuid "{ACB6DEE2-0BD3-45cb-83CC-24A1C3E2B36A}" .
+
+dafenum:dScala_value_Medium
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dScala ;
+    skos:prefLabel "Medium" ;
+    dafm:eaGuid "{4BCA34A3-D096-490d-8A2F-1AA6FAE75E87}" .
+
+dafenum:dScala_value_High
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dScala ;
+    skos:prefLabel "High" ;
+    dafm:eaGuid "{6A15C109-75F4-41f5-9CC9-DEA088E4D883}" .
+
+# Enumeration: executionMode
+dafenum:executionMode
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "executionMode" ;
+    dafm:eaGuid "{B1A6C8E1-F5F8-4b08-B303-11F47AE48F21}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:executionMode_value_synchronous
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:executionMode ;
+    skos:prefLabel "synchronous" ;
+    dafm:eaGuid "{826C273D-21F2-40ae-B66C-812C4281D1F1}" .
+
+dafenum:executionMode_value_asynchronous
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:executionMode ;
+    skos:prefLabel "asynchronous" ;
+    dafm:eaGuid "{E5CF5109-E18F-4644-BEDB-624AD5C2FA0B}" .
+
+# Enumeration: format
+dafenum:format
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "format" ;
+    dafm:eaGuid "{C1D87B2A-5857-4d53-83C7-8849DB73DD61}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:format dafm:hasTaggedValue dafdef:TaggedValue__C1D87B2A_5857_4d53_83C7_8849DB73DD61__Metamodel_GUID_1 .
+dafdef:TaggedValue__C1D87B2A_5857_4d53_83C7_8849DB73DD61__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{DD57E347-590D-408d-80DA-2EC730DE81B6}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:format dafm:hasTaggedValue dafdef:TaggedValue__C1D87B2A_5857_4d53_83C7_8849DB73DD61__Profile_Type_2 .
+dafdef:TaggedValue__C1D87B2A_5857_4d53_83C7_8849DB73DD61__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:format_value__none_
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "<none>" ;
+    dafm:eaGuid "{2A852BD4-BACA-4f45-8DA8-32A2E451B0A8}" .
+
+dafenum:format_value_date
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "date" ;
+    dafm:eaGuid "{41995AA9-A221-439d-B3D5-9DC1741CA801}" .
+
+dafenum:format_value_date_time
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "date-time" ;
+    dafm:eaGuid "{A508D148-FA9A-4f64-B05C-BA58E75A4A4C}" .
+
+dafenum:format_value_email
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "email" ;
+    dafm:eaGuid "{3FBFC26E-5364-451d-9E21-9D12F4727A9C}" .
+
+dafenum:format_value_hostname
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "hostname" ;
+    dafm:eaGuid "{02CB5F63-A7DD-4712-9B34-85BD5E2C5FD1}" .
+
+dafenum:format_value_idn_email
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "idn-email" ;
+    dafm:eaGuid "{F1B658D6-12D1-4796-A318-2A8AC7B67FCF}" .
+
+dafenum:format_value_idn_hostname
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "idn-hostname" ;
+    dafm:eaGuid "{3C5BF612-DDDF-42c1-A432-F04184898B32}" .
+
+dafenum:format_value_ipv4
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "ipv4" ;
+    dafm:eaGuid "{F778C9CB-8DE9-499a-975B-349166E9AC7E}" .
+
+dafenum:format_value_ipv6
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "ipv6" ;
+    dafm:eaGuid "{8E201F7B-98ED-4455-A7D6-C11619785FA7}" .
+
+dafenum:format_value_iri
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "iri" ;
+    dafm:eaGuid "{6CD12C97-79E1-433c-8069-E7EECB65B658}" .
+
+dafenum:format_value_iri_reference
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "iri-reference" ;
+    dafm:eaGuid "{71171FAD-0D54-427c-BFD1-1F4FCF158340}" .
+
+dafenum:format_value_json_pointer
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "json-pointer" ;
+    dafm:eaGuid "{2F9896B3-967A-4f8d-B371-C57747BD3A55}" .
+
+dafenum:format_value_regex
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "regex" ;
+    dafm:eaGuid "{1285F0A4-4C7F-4220-8B34-E07E80883587}" .
+
+dafenum:format_value_relative_json_pointer
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "relative-json-pointer" ;
+    dafm:eaGuid "{C6449829-6354-4364-81B8-8DCFFDA1CE20}" .
+
+dafenum:format_value_time
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "time" ;
+    dafm:eaGuid "{8149780C-487D-4a4b-BB5B-A36F0A621ABF}" .
+
+dafenum:format_value_uri
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "uri" ;
+    dafm:eaGuid "{9B462D5E-3C34-4226-850B-C2469AE008FD}" .
+
+dafenum:format_value_uri_reference
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "uri-reference" ;
+    dafm:eaGuid "{6CE8D4F5-4DEB-4699-98B1-C1B14F193829}" .
+
+dafenum:format_value_uri_template
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:format ;
+    skos:prefLabel "uri-template" ;
+    dafm:eaGuid "{99055408-1BDE-42bd-B760-CD1989BDEEC3}" .
+
+# Enumeration: HTTPMethod
+dafenum:HTTPMethod
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "HTTPMethod" ;
+    dafm:eaGuid "{9BE62E91-601B-48a9-AECB-42B9F75DB428}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:HTTPMethod dafm:hasTaggedValue dafdef:TaggedValue__9BE62E91_601B_48a9_AECB_42B9F75DB428__Metamodel_GUID_1 .
+dafdef:TaggedValue__9BE62E91_601B_48a9_AECB_42B9F75DB428__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{885358C1-A1E4-44fb-A997-A14A19FBE7EE}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:HTTPMethod dafm:hasTaggedValue dafdef:TaggedValue__9BE62E91_601B_48a9_AECB_42B9F75DB428__Profile_Type_2 .
+dafdef:TaggedValue__9BE62E91_601B_48a9_AECB_42B9F75DB428__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:HTTPMethod_value_delete
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "delete" ;
+    dafm:eaGuid "{4D19A32B-7E8B-4795-AFA2-3E83ECE9797D}" .
+
+dafenum:HTTPMethod_value_get
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "get" ;
+    dafm:eaGuid "{BCB3938A-CC51-4824-9A3B-3AFBC1FD9A9D}" .
+
+dafenum:HTTPMethod_value_head
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "head" ;
+    dafm:eaGuid "{13FD589F-151C-4c65-93A3-48CD2802DD4D}" .
+
+dafenum:HTTPMethod_value_options
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "options" ;
+    dafm:eaGuid "{43F00962-8249-401b-AE6F-EC4EC172492C}" .
+
+dafenum:HTTPMethod_value_patch
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "patch" ;
+    dafm:eaGuid "{9ADD3F60-261D-492f-B6F3-FED64D40939D}" .
+
+dafenum:HTTPMethod_value_post
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "post" ;
+    dafm:eaGuid "{341291E4-3809-4cf0-93A8-73116FFEC000}" .
+
+dafenum:HTTPMethod_value_put
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "put" ;
+    dafm:eaGuid "{98C5DF97-AB00-4fbd-AB63-044F6C757182}" .
+
+dafenum:HTTPMethod_value_trace
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:HTTPMethod ;
+    skos:prefLabel "trace" ;
+    dafm:eaGuid "{C458155A-7B16-45bc-B0FD-3D56EAB1A503}" .
+
+# Enumeration: ipRangeType
+dafenum:ipRangeType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ipRangeType" ;
+    dafm:eaGuid "{EA685F87-2676-4554-B5E6-533C19F53894}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:ipRangeType dafm:hasTaggedValue dafdef:TaggedValue__EA685F87_2676_4554_B5E6_533C19F53894__Metamodel_GUID_1 .
+dafdef:TaggedValue__EA685F87_2676_4554_B5E6_533C19F53894__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{E48B46DD-9BD9-40ee-958C-697B77210CEA}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:ipRangeType dafm:hasTaggedValue dafdef:TaggedValue__EA685F87_2676_4554_B5E6_533C19F53894__Profile_Type_2 .
+dafdef:TaggedValue__EA685F87_2676_4554_B5E6_533C19F53894__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:ipRangeType_value_Pod
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ipRangeType ;
+    skos:prefLabel "Pod" ;
+    dafm:eaGuid "{9012F9B5-0E38-4420-9565-8B3A1C0C46EB}" .
+
+dafenum:ipRangeType_value_Service
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ipRangeType ;
+    skos:prefLabel "Service" ;
+    dafm:eaGuid "{944E6405-6405-4bf5-9796-585FDCD84B19}" .
+
+dafenum:ipRangeType_value_subNetwork
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ipRangeType ;
+    skos:prefLabel "subNetwork" ;
+    dafm:eaGuid "{B7513AED-FC30-4acf-BD29-FC8EEE1D1D23}" .
+
+# Enumeration: MimeTypes
+dafenum:MimeTypes
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "MimeTypes" ;
+    dafm:eaGuid "{0B73166A-1BD1-4525-9E98-F1BCA6745A81}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:MimeTypes dafm:hasTaggedValue dafdef:TaggedValue__0B73166A_1BD1_4525_9E98_F1BCA6745A81__Metamodel_GUID_1 .
+dafdef:TaggedValue__0B73166A_1BD1_4525_9E98_F1BCA6745A81__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{E114AB95-4E49-47c4-968B-0B00C91C820C}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:MimeTypes dafm:hasTaggedValue dafdef:TaggedValue__0B73166A_1BD1_4525_9E98_F1BCA6745A81__Profile_Type_2 .
+dafdef:TaggedValue__0B73166A_1BD1_4525_9E98_F1BCA6745A81__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:MimeTypes_value_application_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/json" ;
+    dafm:eaGuid "{A8F45CE8-4E3E-4d11-9657-0F5A3392B855}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_diff
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.diff" ;
+    dafm:eaGuid "{E882ECC3-19E6-4bf1-B7FA-B4A428DFF758}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_full_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.full+json" ;
+    dafm:eaGuid "{3DDBD33C-3C9D-4409-BC5D-7D49066A10BD}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_html_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.html+json" ;
+    dafm:eaGuid "{322849B2-38A9-4c3b-A15C-12BB1BADA5BA}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_patch
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.patch" ;
+    dafm:eaGuid "{678A8D4B-7212-49c7-8332-5150A8E9B3D3}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_raw_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.raw+json" ;
+    dafm:eaGuid "{86A3887E-311B-447b-A47D-7661DF53C354}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_text_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3.text+json" ;
+    dafm:eaGuid "{08128FAA-1558-4278-B9C0-BDFB82B6B91D}" .
+
+dafenum:MimeTypes_value_application_vnd_github_v3_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github.v3+json" ;
+    dafm:eaGuid "{388F3DCA-168A-4bf8-8B08-4269E4B80580}" .
+
+dafenum:MimeTypes_value_application_vnd_github_json
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "application/vnd.github+json" ;
+    dafm:eaGuid "{5AD1DC83-7DFC-475f-9C09-1F48D0C72255}" .
+
+dafenum:MimeTypes_value_text_plain_charset_utf_8
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:MimeTypes ;
+    skos:prefLabel "text/plain; charset=utf-8" ;
+    dafm:eaGuid "{73B5138F-D791-43c3-A5BB-AD79CC2F0E40}" .
+
+# Enumeration: NetworkQuality
+dafenum:NetworkQuality
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "NetworkQuality" ;
+    dafm:eaGuid "{18D84F31-3871-4de8-87DA-FF025F63253E}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:NetworkQuality dafm:hasTaggedValue dafdef:TaggedValue__18D84F31_3871_4de8_87DA_FF025F63253E__Metamodel_GUID_1 .
+dafdef:TaggedValue__18D84F31_3871_4de8_87DA_FF025F63253E__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{A5766397-AF85-406b-865C-EAD78B431834}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:NetworkQuality dafm:hasTaggedValue dafdef:TaggedValue__18D84F31_3871_4de8_87DA_FF025F63253E__Profile_Type_2 .
+dafdef:TaggedValue__18D84F31_3871_4de8_87DA_FF025F63253E__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:NetworkQuality_value_High
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkQuality ;
+    skos:prefLabel "High" ;
+    dafm:eaGuid "{6E739CF7-B7A1-468e-B9E3-CB3D6EFD6A68}" .
+
+dafenum:NetworkQuality_value_Low
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkQuality ;
+    skos:prefLabel "Low" ;
+    dafm:eaGuid "{B74FB0D2-A4CF-4549-B498-804840805DD4}" .
+
+dafenum:NetworkQuality_value_Madium
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkQuality ;
+    skos:prefLabel "Madium" ;
+    dafm:eaGuid "{3C917AAB-75F6-409a-89D7-D5938CCD7A63}" .
+
+# Enumeration: NetworkTypes
+dafenum:NetworkTypes
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "NetworkTypes" ;
+    dafm:eaGuid "{B76B90B2-CF6F-407b-9D48-808411E2B4B0}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:NetworkTypes dafm:hasTaggedValue dafdef:TaggedValue__B76B90B2_CF6F_407b_9D48_808411E2B4B0__Metamodel_GUID_1 .
+dafdef:TaggedValue__B76B90B2_CF6F_407b_9D48_808411E2B4B0__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{4C3491AF-FD08-4286-B0C9-B95F3C82F8A4}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:NetworkTypes dafm:hasTaggedValue dafdef:TaggedValue__B76B90B2_CF6F_407b_9D48_808411E2B4B0__Profile_Type_2 .
+dafdef:TaggedValue__B76B90B2_CF6F_407b_9D48_808411E2B4B0__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:NetworkTypes_value_LAN
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkTypes ;
+    skos:prefLabel "LAN" ;
+    dafm:eaGuid "{7510C820-4D1D-48ee-806B-6C6EC8B71179}" .
+
+dafenum:NetworkTypes_value_Mesh
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkTypes ;
+    skos:prefLabel "Mesh" ;
+    dafm:eaGuid "{5B9E834A-90CC-4036-86FE-E2AF45F567D5}" .
+
+dafenum:NetworkTypes_value_WAN
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:NetworkTypes ;
+    skos:prefLabel "WAN" ;
+    dafm:eaGuid "{A371F98B-FE20-4aee-B0AA-8C0750789235}" .
+
+# Enumeration: ProcessCriticality
+dafenum:ProcessCriticality
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ProcessCriticality" ;
+    dafm:eaGuid "{CE13D026-1E2E-4c50-BAB9-FFE27826BBE8}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:ProcessCriticality_value_High
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProcessCriticality ;
+    skos:prefLabel "High" ;
+    dafm:eaGuid "{B8B5B193-CC48-4892-AF6D-06593A37990B}" .
+
+dafenum:ProcessCriticality_value_Medium
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProcessCriticality ;
+    skos:prefLabel "Medium" ;
+    dafm:eaGuid "{1D1D3363-8332-4f14-9CD6-FF6F172F66B7}" .
+
+dafenum:ProcessCriticality_value_Low
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProcessCriticality ;
+    skos:prefLabel "Low" ;
+    dafm:eaGuid "{B34C9609-84FF-4de3-A0D3-BACF18A662E5}" .
+
+dafenum:ProcessCriticality_value_unknow
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProcessCriticality ;
+    skos:prefLabel "unknow" ;
+    dafm:eaGuid "{5F566778-2EA9-4f71-AF11-5AEF7B67851F}" .
+
+# Enumeration: ProtocolTypes
+dafenum:ProtocolTypes
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ProtocolTypes" ;
+    dafm:eaGuid "{1144AB41-171E-4cb7-AD5F-C70620377250}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:ProtocolTypes dafm:hasTaggedValue dafdef:TaggedValue__1144AB41_171E_4cb7_AD5F_C70620377250__Metamodel_GUID_1 .
+dafdef:TaggedValue__1144AB41_171E_4cb7_AD5F_C70620377250__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:ProtocolTypes dafm:hasTaggedValue dafdef:TaggedValue__1144AB41_171E_4cb7_AD5F_C70620377250__Profile_Type_2 .
+dafdef:TaggedValue__1144AB41_171E_4cb7_AD5F_C70620377250__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:ProtocolTypes_value_All
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "All" ;
+    dafm:eaGuid "{63D308B3-11C1-4ad9-ACDC-434641A7B80C}" .
+
+dafenum:ProtocolTypes_value_http
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "http" ;
+    dafm:eaGuid "{5E142A91-E77C-41cd-B438-DE814306C452}" .
+
+dafenum:ProtocolTypes_value_https
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "https" ;
+    dafm:eaGuid "{564916F0-C43C-4e24-AD44-50B50D9EB212}" .
+
+dafenum:ProtocolTypes_value_Ret
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "Ret" ;
+    dafm:eaGuid "{8D6FC6FD-A170-4748-AC9A-A47AD7D29A1F}" .
+
+dafenum:ProtocolTypes_value_TCP
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "TCP" ;
+    dafm:eaGuid "{F0F1C6B2-6664-48ee-A06A-3531959023A2}" .
+
+dafenum:ProtocolTypes_value_UPD
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ProtocolTypes ;
+    skos:prefLabel "UPD" ;
+    dafm:eaGuid "{8508800E-334C-4ccf-B427-5759DED8A69E}" .
+
+# Enumeration: QualityNetwork
+dafenum:QualityNetwork
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "QualityNetwork" ;
+    dafm:eaGuid "{009FDD64-20FA-4fcc-8A0C-F93BE282FEAC}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:QualityNetwork dafm:hasTaggedValue dafdef:TaggedValue__009FDD64_20FA_4fcc_8A0C_F93BE282FEAC__Metamodel_GUID_1 .
+dafdef:TaggedValue__009FDD64_20FA_4fcc_8A0C_F93BE282FEAC__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{A5766397-AF85-406b-865C-EAD78B431834}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:QualityNetwork dafm:hasTaggedValue dafdef:TaggedValue__009FDD64_20FA_4fcc_8A0C_F93BE282FEAC__Profile_Type_2 .
+dafdef:TaggedValue__009FDD64_20FA_4fcc_8A0C_F93BE282FEAC__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:QualityNetwork_value_High
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:QualityNetwork ;
+    skos:prefLabel "High" ;
+    dafm:eaGuid "{7487170B-77FC-4b27-B485-7DBC308CFA18}" .
+
+dafenum:QualityNetwork_value_Low
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:QualityNetwork ;
+    skos:prefLabel "Low" ;
+    dafm:eaGuid "{6EA774AF-C102-471b-A114-6DAB8A94BA2E}" .
+
+dafenum:QualityNetwork_value_Madium
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:QualityNetwork ;
+    skos:prefLabel "Madium" ;
+    dafm:eaGuid "{94EF65F8-753A-492a-A2E1-1B405B7F9982}" .
+
+# Enumeration: SchemaVersion
+dafenum:SchemaVersion
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "SchemaVersion" ;
+    dafm:eaGuid "{9E6BDE4C-CAB8-45e0-B7C5-9647BAC5F392}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:SchemaVersion dafm:hasTaggedValue dafdef:TaggedValue__9E6BDE4C_CAB8_45e0_B7C5_9647BAC5F392__Metamodel_GUID_1 .
+dafdef:TaggedValue__9E6BDE4C_CAB8_45e0_B7C5_9647BAC5F392__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{12F40DB6-E041-447b-8D0C-0333A9341ABC}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:SchemaVersion dafm:hasTaggedValue dafdef:TaggedValue__9E6BDE4C_CAB8_45e0_B7C5_9647BAC5F392__Profile_Type_2 .
+dafdef:TaggedValue__9E6BDE4C_CAB8_45e0_B7C5_9647BAC5F392__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:SchemaVersion_value_http_json_schema_org_draft_04_schema_
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemaVersion ;
+    skos:prefLabel "http://json-schema.org/draft-04/schema#" ;
+    dafm:eaGuid "{FE4189B6-5349-4ce3-9AD0-D60D7B951F90}" .
+
+dafenum:SchemaVersion_value_http_json_schema_org_draft_05_schema_
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemaVersion ;
+    skos:prefLabel "http://json-schema.org/draft-05/schema#" ;
+    dafm:eaGuid "{FAA7E04A-C611-44d3-82A5-7FC0338589BC}" .
+
+dafenum:SchemaVersion_value_http_json_schema_org_draft_06_schema_
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemaVersion ;
+    skos:prefLabel "http://json-schema.org/draft-06/schema#" ;
+    dafm:eaGuid "{1094F10F-C6F5-48f2-81E7-2F4ECA41A421}" .
+
+dafenum:SchemaVersion_value_http_json_schema_org_draft_07_schema_
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemaVersion ;
+    skos:prefLabel "http://json-schema.org/draft-07/schema#" ;
+    dafm:eaGuid "{66F1B660-9907-4965-8B23-D9AE7AF99A13}" .
+
+# Enumeration: SchemeType
+dafenum:SchemeType
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "SchemeType" ;
+    dafm:eaGuid "{65D172F0-D1E0-4494-932C-5B29F8ABF62A}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 .
+
+dafenum:SchemeType dafm:hasTaggedValue dafdef:TaggedValue__65D172F0_D1E0_4494_932C_5B29F8ABF62A__Metamodel_GUID_1 .
+dafdef:TaggedValue__65D172F0_D1E0_4494_932C_5B29F8ABF62A__Metamodel_GUID_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metamodel GUID" ;
+    dafm:tagValue "{9065CF8E-E053-444c-B7E3-CDE2A8458CDC}" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:SchemeType dafm:hasTaggedValue dafdef:TaggedValue__65D172F0_D1E0_4494_932C_5B29F8ABF62A__Profile_Type_2 .
+dafdef:TaggedValue__65D172F0_D1E0_4494_932C_5B29F8ABF62A__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Element" ;
+    dafm:ownerKind "enumeration" .
+
+dafenum:SchemeType_value_http
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemeType ;
+    skos:prefLabel "http" ;
+    dafm:eaGuid "{1931D64F-65DC-4390-952F-FC01BB671196}" .
+
+dafenum:SchemeType_value_https
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemeType ;
+    skos:prefLabel "https" ;
+    dafm:eaGuid "{2F5602CA-DBB7-46d7-9CC8-F7013AA8216D}" .
+
+dafenum:SchemeType_value_ws
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemeType ;
+    skos:prefLabel "ws" ;
+    dafm:eaGuid "{E7A5AC40-819D-4385-B790-B550CBF79F1E}" .
+
+dafenum:SchemeType_value_wss
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:SchemeType ;
+    skos:prefLabel "wss" ;
+    dafm:eaGuid "{9682AC89-9A3E-415b-8341-E5E6911EE227}" .
+
+# Enumeration: ValueStreamCriticality
+dafenum:ValueStreamCriticality
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "ValueStreamCriticality" ;
+    dafm:eaGuid "{FCA0F0F0-8535-412d-8810-F85C279E981B}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "the criticality of a value stream\n" .
+
+dafenum:ValueStreamCriticality_value_Not_Analyzed
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Not Analyzed" ;
+    dafm:eaGuid "{024464EE-473B-43bc-BDAF-1EDE528823AD}" .
+
+dafenum:ValueStreamCriticality_value_Negligible_Impact
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Negligible Impact" ;
+    dafm:eaGuid "{59111B7D-CF2C-4ffc-9A2A-11E00DD987BB}" .
+
+dafenum:ValueStreamCriticality_value_Limited_Impact
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Limited Impact" ;
+    dafm:eaGuid "{272F2BEC-35A4-46cc-B38B-0C0710C86599}" .
+
+dafenum:ValueStreamCriticality_value_Moderate_Impact
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Moderate Impact" ;
+    dafm:eaGuid "{074A6154-B44C-438a-99D6-44502779D9CE}" .
+
+dafenum:ValueStreamCriticality_value_Noticeable_Impact
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Noticeable Impact" ;
+    dafm:eaGuid "{50D8DECD-2052-4cd6-BF03-BB92644C17FE}" .
+
+dafenum:ValueStreamCriticality_value_Significant_Impact
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:ValueStreamCriticality ;
+    skos:prefLabel "Significant Impact" ;
+    dafm:eaGuid "{B6C07743-C500-4e63-971D-0C48ACAC1C6E}" .
 
 # Relationship: dActivityContainsAction
 dafrel:dActivityContainsAction
@@ -26971,17 +28469,17 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-10-07T11:18:55"^^xsd:dateTime ;
+    dcterms:created "2026-10-16T12:30:21"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 72 ;
     dafm:supportingClassCount 0 ;
     dafm:registeredClassCount 72 ;
-    dafm:enumerationCount 9 ;
-    dafm:propertyCount 292 ;
+    dafm:enumerationCount 43 ;
+    dafm:propertyCount 293 ;
     dafm:relationshipCount 92 ;
     dafm:ignoredNoteLinkCount 2 ;
-    dafm:explicitPrimitivePropertyCount 227 ;
+    dafm:explicitPrimitivePropertyCount 228 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 22 ;
@@ -26991,7 +28489,7 @@ dafshape:dRegionShape sh:property [
     dafm:dafBaseInheritanceCount 72 ;
     dafm:registeredRelationshipCount 92 ;
     dafm:generalizationCount 3 ;
-    dafm:warningCount 0 ;
+    dafm:warningCount 9 ;
     dafm:legacyProfileConceptCount 77 ;
     dafm:legacyProfileRelationshipCount 95 ;
     dafm:authoringEnabledRelationshipCount 92 ;
