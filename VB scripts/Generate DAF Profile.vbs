@@ -52,9 +52,10 @@ dim toolboxClass 	as EA.Element
 dim toolboxConnector as EA.Element
 
 ' lookup tables built once per run, so the profile is never scanned element by element
-dim profileIndexByGuid	' Metamodel GUID -> profile Object_ID
+dim profileIndexByGuid	' Package_ID & ":" & Metamodel GUID -> profile Object_ID
+dim profileGuidAnywhere	' Metamodel GUID -> profile Object_ID in any indexed package
 dim profileIndexByName	' Package_ID & ":" & Name -> profile Object_ID
-dim profileLinkedIDs	' profile Object_IDs that carried a Metamodel GUID tag at start
+dim profileLinkedIDs	' profile Object_ID -> Metamodel GUID tag it carried at start
 dim profileTouched		' profile Object_IDs matched or created in this run
 dim attributeSourceGuid	' profile attribute ID -> Metamodel GUID of the source attribute
 dim renameMap			' new name -> old name, from RenameMappingFile
@@ -153,6 +154,7 @@ end sub
 sub buildProfileIndex
 	dim row, objectID, guid, packageIDs
 	set profileIndexByGuid = CreateObject( "Scripting.Dictionary")
+	set profileGuidAnywhere = CreateObject( "Scripting.Dictionary")
 	set profileIndexByName = CreateObject( "Scripting.Dictionary")
 	set profileLinkedIDs = CreateObject( "Scripting.Dictionary")
 	set profileTouched = CreateObject( "Scripting.Dictionary")
@@ -168,8 +170,9 @@ sub buildProfileIndex
 		profileIndexByName( rowValue( row, "pid") & ":" & rowValue( row, "oname")) = objectID
 		guid = rowValue( row, "mmguid")
 		if guid <> "" then
-			profileIndexByGuid( guid) = objectID
-			profileLinkedIDs( objectID) = true
+			profileIndexByGuid( rowValue( row, "pid") & ":" & guid) = objectID
+			profileGuidAnywhere( guid) = objectID
+			profileLinkedIDs( objectID) = guid
 		end if
 	next
 
@@ -178,20 +181,33 @@ sub buildProfileIndex
 			" WHERE t.Property = 'Metamodel GUID' AND o.Package_ID IN (" & packageIDs & ")")
 		attributeSourceGuid( CLng( rowValue( row, "aid"))) = rowValue( row, "mmguid")
 	next
-	Session.Output "Indexed " & profileIndexByName.Count & " profile stereotypes, " & profileIndexByGuid.Count & " linked by Metamodel GUID"
+	Session.Output "Indexed " & profileIndexByName.Count & " profile stereotypes, " & profileLinkedIDs.Count & " linked by Metamodel GUID"
 end sub
 
-' find the profile element for a metamodel item: Metamodel GUID, then name, then old name from the rename mapping.
+' find the profile element for a metamodel item in its target package: same name (unlinked or linked to this GUID),
+' then Metamodel GUID, then Metamodel GUID in another profile package (moved here), then old name from the rename mapping.
 ' Renames a match whose name differs, creates the element when nothing matches.
+' A second copy linked to the same GUID stays unmatched and ends up in the Obsolete package.
 function resolveProfileElement( metamodelGUID, profileName, package, elementType)
-	dim objectID, oldKey
+	dim objectID, nameKey, oldKey
 	dim profileElement as EA.Element
 	objectID = 0
-	if metamodelGUID <> "" and profileIndexByGuid.Exists( metamodelGUID) then
-		objectID = profileIndexByGuid( metamodelGUID)
-	elseif profileIndexByName.Exists( package.PackageID & ":" & profileName) then
-		objectID = profileIndexByName( package.PackageID & ":" & profileName)
-	elseif renameMap.Exists( profileName) then
+	nameKey = package.PackageID & ":" & profileName
+	if profileIndexByName.Exists( nameKey) then
+		objectID = profileIndexByName( nameKey)
+		if profileLinkedIDs.Exists( objectID) then
+			if profileLinkedIDs( objectID) <> metamodelGUID then objectID = 0
+		end if
+	end if
+	if objectID = 0 and metamodelGUID <> "" then
+		if profileIndexByGuid.Exists( package.PackageID & ":" & metamodelGUID) then
+			objectID = profileIndexByGuid( package.PackageID & ":" & metamodelGUID)
+		elseif profileGuidAnywhere.Exists( metamodelGUID) then
+			objectID = profileGuidAnywhere( metamodelGUID)
+			if profileTouched.Exists( objectID) then objectID = 0
+		end if
+	end if
+	if objectID = 0 and renameMap.Exists( profileName) then
 		oldKey = package.PackageID & ":" & renameMap( profileName)
 		if profileIndexByName.Exists( oldKey) then objectID = profileIndexByName( oldKey)
 	end if
@@ -203,13 +219,29 @@ function resolveProfileElement( metamodelGUID, profileName, package, elementType
 		Session.Output "  created " & elementType & " '" & profileName & "'"
 	else
 		set profileElement = Repository.GetElementByID( objectID)
+		if profileElement.PackageID <> package.PackageID then moveProfileElement profileElement, package
 		if profileElement.Name <> profileName then renameProfileElement profileElement, profileName
 	end if
 	profileIndexByName( profileElement.PackageID & ":" & profileElement.Name) = profileElement.ElementID
-	if metamodelGUID <> "" then profileIndexByGuid( metamodelGUID) = profileElement.ElementID
+	if metamodelGUID <> "" then
+		profileIndexByGuid( profileElement.PackageID & ":" & metamodelGUID) = profileElement.ElementID
+		profileGuidAnywhere( metamodelGUID) = profileElement.ElementID
+	end if
 	profileTouched( profileElement.ElementID) = true
 	set resolveProfileElement = profileElement
 end function
+
+' a linked stereotype found in the wrong profile package, e.g. a relationship stereotype among the element stereotypes
+sub moveProfileElement( profileElement, package)
+	Session.Output "  moved '" & profileElement.Name & "' from '" & Repository.GetPackageByID( profileElement.PackageID).Name & "' to '" & package.Name & "'"
+	dim oldKey
+	oldKey = profileElement.PackageID & ":" & profileElement.Name
+	if profileIndexByName.Exists( oldKey) then
+		if profileIndexByName( oldKey) = profileElement.ElementID then profileIndexByName.Remove oldKey
+	end if
+	profileElement.PackageID = package.PackageID
+	profileElement.Update
+end sub
 
 sub renameProfileElement( profileElement, newName)
 	dim newKey
@@ -239,7 +271,11 @@ sub handleUnmatchedStereotypes
 			set profileElement = Repository.GetElementByID( objectID)
 			if profileLinkedIDs.Exists( objectID) then
 				if obsoletePackage is nothing then set obsoletePackage = getObsoletePackage()
-				Session.Output "Obsolete: moving '" & profileElement.Name & "' to '" & obsoletePackage.Name & "'"
+				if profileTouched.Exists( profileGuidAnywhere( profileLinkedIDs( objectID))) then
+					Session.Output "Obsolete: moving '" & profileElement.Name & "' from '" & Repository.GetPackageByID( profileElement.PackageID).Name & "' to '" & obsoletePackage.Name & "' (duplicate, same Metamodel GUID as the one kept)"
+				else
+					Session.Output "Obsolete: moving '" & profileElement.Name & "' to '" & obsoletePackage.Name & "'"
+				end if
 				set profileMetaclass = getRelatedSupplierElement( profileElement, "Extension", "Metaclass")
 				if not profileMetaclass is nothing then
 					profileMetaclass.PackageID = obsoletePackage.PackageID
@@ -589,7 +625,8 @@ sub transformClass( metamodelClass)
 	metaType = ""
 ' Check if the provided class has the M3 stereotype of "Concept"
 	if metamodelClass.Stereotype = "Concept" then	
-		set superClass = getRelatedSupplierElement2( metamodelClass, "Generalization", "", "Class", "")
+		' any superclass stereotype: metamodel superclasses are Concepts, so an empty stereotype filter never matched
+		set superClass = getRelatedSupplierElement2( metamodelClass, "Generalization", "", "Class", Null)
 		metaclassName = getTaggedValueValue( metamodelClass, "Metaclass")
 		redefinedStereotypeName = getTaggedValueValue( metamodelClass, "Redefines")
 
