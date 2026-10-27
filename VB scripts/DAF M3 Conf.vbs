@@ -22,6 +22,7 @@ dim SQLPath 'as String
 dim GenerateCSV 'as String
 dim CSVPath 'as String
 dim TechFilePath ' as string
+dim RenameMappingFile ' as string
 
 metamodelPackageGUID = "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ' DAF Metamodel package
 profilePackageGUID = "{BEFFD7D1-82EE-478f-A0EE-5670EC836630}" ' DAF Profile Package
@@ -40,3 +41,5 @@ CSVPath ="C:\Users\broth\Dropbox\work\Method\EA method\3.1\csv\"
 GenerateCatalogs = 0
 generateSLQ = 0
 GenerateCSV = 0
+' CSV of stereotype renames, one 'oldName,newName' per line, for concepts without a Metamodel GUID link; empty to disable
+RenameMappingFile = ""
