@@ -43,6 +43,9 @@ const STREAM_FOR_APPENDING = 3
 
 dim profilePackage 			as EA.Package
 dim relationshipPackage		as EA.Package
+dim stereotypePackage		as EA.Package
+dim metaclassPackage		as EA.Package
+dim enumerationPackage		as EA.Package
 dim quickLinkFileStream	   'as Scripting.TextStream
 dim CSVImportString 		' as place where to store packages GUIDs and stereotypes
 dim toolboxClass 	as EA.Element
@@ -70,6 +73,9 @@ sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 	set profilePackage = Repository.GetPackageByGuid( profilePackageGUID)
 	set metamodelPackage = Repository.GetPackageByGuid( metamodelPackageGUID)
 	set relationshipPackage = Repository.GetPackageByGuid( relationshipPackageGUID)
+	set stereotypePackage = getTargetPackage( stereotypePackageGUID)
+	set metaclassPackage = getTargetPackage( metaclassPackageGUID)
+	set enumerationPackage = getTargetPackage( enumerationPackageGUID)
 	set toolboxClass = Repository.GetElementByGuid(ProfileToolboxClassGUID)
 	set toolboxConnector = Repository.GetElementByGuid(ProfileToolboxConnectorGUID)
 	loadRenameMap
@@ -94,6 +100,12 @@ end sub
 '''''''''''''''''''''''
 '''''''''''''''''''''' PROFILE INDEX AND MATCHING
 '''''''''''''''''''''''
+
+' a per-type target package from the configuration; the profile package when not configured
+function getTargetPackage( packageGUID)
+	set getTargetPackage = profilePackage
+	if packageGUID <> "" then set getTargetPackage = Repository.GetPackageByGuid( packageGUID)
+end function
 
 ' run a query and return its rows as an XML node list
 function sqlRows( sqlString)
@@ -137,7 +149,7 @@ sub loadRenameMap
 	Session.Output "Loaded " & renameMap.Count & " rename mappings"
 end sub
 
-' index every stereotype and enumeration of the profile and relationship packages, with their Metamodel GUID tags
+' index every stereotype and enumeration of the profile and its target packages, with their Metamodel GUID tags
 sub buildProfileIndex
 	dim row, objectID, guid, packageIDs
 	set profileIndexByGuid = CreateObject( "Scripting.Dictionary")
@@ -147,7 +159,7 @@ sub buildProfileIndex
 	set attributeSourceGuid = CreateObject( "Scripting.Dictionary")
 	set metamodelElementCache = CreateObject( "Scripting.Dictionary")
 	set metaclassCache = CreateObject( "Scripting.Dictionary")
-	packageIDs = profilePackage.PackageID & "," & relationshipPackage.PackageID
+	packageIDs = profilePackage.PackageID & "," & relationshipPackage.PackageID & "," & stereotypePackage.PackageID & "," & enumerationPackage.PackageID
 
 	for each row in sqlRows( "SELECT o.Object_ID AS oid, o.Name AS oname, o.Package_ID AS pid, tv.Value AS mmguid" & _
 			" FROM t_object o LEFT JOIN t_objectproperties tv ON (tv.Object_ID = o.Object_ID AND tv.Property = 'Metamodel GUID')" & _
@@ -525,7 +537,7 @@ sub transformEnumeration( metamodelEnum)
 	dim attribute	as EA.Attribute
 	dim literalPos	' literal name -> position in the metamodel
 	dim literalName, attributeIndex
-	set profileEnum = resolveProfileElement( metamodelEnum.ElementGUID, metamodelEnum.Name, profilePackage, "Enumeration")
+	set profileEnum = resolveProfileElement( metamodelEnum.ElementGUID, metamodelEnum.Name, enumerationPackage, "Enumeration")
 	set literalPos = CreateObject( "Scripting.Dictionary")
 	for each attribute in metamodelEnum.Attributes
 		literalPos( attribute.Name) = literalPos.Count
@@ -584,7 +596,7 @@ sub transformClass( metamodelClass)
 		if redefinedStereotypeName <> vbNullString or metaclassName <> vbNullString or not( superClass is nothing) then																		   		
 			Session.Output "Generating stereotype for '" & metamodelClass.Name & "' class..."					
 				stereotypeName = metamodelClass.Name
-			set stereotypeClass = resolveProfileElement( metamodelClass.ElementGUID, stereotypeName, profilePackage, "Class")
+			set stereotypeClass = resolveProfileElement( metamodelClass.ElementGUID, stereotypeName, stereotypePackage, "Class")
 
 			'setup the catalog name
 			if GenerateCatalogs = 1 then
@@ -702,7 +714,7 @@ end sub
 '' set the super class that extend the stereotype
 sub setProfileSuperclass( stereotypeClass, metamodelSuperClass)
 	' resolve by GUID so a renamed superclass is found even before its own concept is processed
-	syncGeneralization stereotypeClass, "", resolveProfileElement( metamodelSuperClass.ElementGUID, metamodelSuperClass.Name, profilePackage, "Class")
+	syncGeneralization stereotypeClass, "", resolveProfileElement( metamodelSuperClass.ElementGUID, metamodelSuperClass.Name, stereotypePackage, "Class")
 end sub
 
 ' keep exactly one Generalization with this connector stereotype from stereotypeClass to target; none when target is nothing
@@ -736,10 +748,10 @@ end sub
 
 '' The setProfileRedefinedStereotype subroutine establishes a "Generalization" 
 '' relationship between a given stereotypeClass and a redefined stereotype 
-'' identified by redefinedStereotypeName. If the redefined stereotype does not exist, it creates one in the profilePackage.
+'' identified by redefinedStereotypeName. If the redefined stereotype does not exist, it creates one in the stereotypePackage.
 sub setProfileRedefinedStereotype( stereotypeClass, redefinedStereotypeName)
 
-	syncGeneralization stereotypeClass, "redefines", resolveProfileElement( "", redefinedStereotypeName, profilePackage, "Class")
+	syncGeneralization stereotypeClass, "redefines", resolveProfileElement( "", redefinedStereotypeName, stereotypePackage, "Class")
 end sub
 
 '''''''''''''''''''''''
@@ -1001,7 +1013,11 @@ sub updateQuickLinkDocument
 	dim quickLinkDoc	as EA.Element
 	Session.Output "Updating QuickLink document..."	
 	set quickLinkDoc = getProfileElement( "QuickLink", profilePackage) 'search for an element called quicklink in the profilePackage
-	quickLinkDoc.LoadLinkedDocument quickLinkFileName	
+	if quickLinkDoc is nothing then
+		Session.Output "WARNING: no 'QuickLink' document in '" & profilePackage.Name & "', QuickLink file written to " & quickLinkFileName & " only"
+		exit sub
+	end if
+	quickLinkDoc.LoadLinkedDocument quickLinkFileName
 	quickLinkDoc.Update
 end sub
 
@@ -1211,7 +1227,7 @@ End Function
 function addStereotypeMetaClass( stereotypeClass, metaclassName)
 
 	dim profileMetaclass as EA.Element
-	set profileMetaclass = profilePackage.Elements.AddNew( metaclassName, "Class")
+	set profileMetaclass = metaclassPackage.Elements.AddNew( metaclassName, "Class")
 	profileMetaclass.Stereotype = "metaclass"
 	profileMetaclass.Update
 	addConnector stereotypeClass, "Extension", "", profileMetaclass

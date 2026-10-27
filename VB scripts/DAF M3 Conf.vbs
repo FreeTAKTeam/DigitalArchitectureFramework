@@ -8,6 +8,9 @@
 dim metamodelPackageGUID ' as String
 dim profilePackageGUID   ' as String
 dim relationshipPackageGUID ' as String
+dim stereotypePackageGUID ' as String
+dim metaclassPackageGUID ' as String
+dim enumerationPackageGUID ' as String
 dim quickLinkFileName    ' as String
 dim ProfileName    ' as String
 dim mdgTechFilePath    ' as String
@@ -25,8 +28,12 @@ dim TechFilePath ' as string
 dim RenameMappingFile ' as string
 
 metamodelPackageGUID = "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ' DAF Metamodel package
-profilePackageGUID = "{BEFFD7D1-82EE-478f-A0EE-5670EC836630}" ' DAF Profile Package
+profilePackageGUID = "{9A178708-DB6B-4bd1-9BF5-57E636D90A6B}" ' DAF Profile Package (DAF-MDG / DAF); was {BEFFD7D1-82EE-478f-A0EE-5670EC836630} (Utility / DAF) as a safety copy
 relationshipPackageGUID = "{C3097ACD-177F-4d58-B51F-771989DAFF70}" ' package where to store relationships
+' subpackages of the profile, one per generated type; empty to use the profile package
+stereotypePackageGUID = "{9825B692-2233-47ca-90BA-B84A4CC0BCC6}" ' DAF / Stereotypes: element stereotypes
+metaclassPackageGUID = "{6C3F7478-3283-4a5c-81C2-9C055BAAFFAB}" ' DAF / Metaclasses: extended UML metaclasses
+enumerationPackageGUID = "{4D9E54E1-8964-4311-A4C8-4229E7887D14}" ' DAF / Enumerations: tagged value types
 quickLinkFileName = "C:\Users\broth\Dropbox\work\Method\EA method\3.1\quicklinker\QuickLink.csv" ' DAF location of the Quicklinker file
 ProfileName = "DAF"
 mdgTechFilePath="C:\Users\broth\Dropbox\work\Method\EA method\3.1\DAF40.mts" 'DAF MTS location
