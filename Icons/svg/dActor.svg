@@ -1,94 +1,97 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" role="img" aria-labelledby="dActor-title">
-  <title id="dActor-title">dActor DAF stereotype</title>
-  <g shape-rendering="crispEdges">
-    <rect x="0" y="0" width="6" height="1" fill="#ffffff"/>
-    <rect x="6" y="0" width="1" height="1" fill="#fbfaff"/>
-    <rect x="7" y="0" width="1" height="1" fill="#d3cdff"/>
-    <rect x="8" y="0" width="1" height="1" fill="#d2ccff"/>
-    <rect x="9" y="0" width="1" height="1" fill="#faf9ff"/>
-    <rect x="10" y="0" width="6" height="1" fill="#ffffff"/>
-    <rect x="0" y="1" width="5" height="5" fill="#ffffff"/>
-    <rect x="5" y="1" width="1" height="1" fill="#f1efff"/>
-    <rect x="6" y="1" width="1" height="1" fill="#6a58ff"/>
-    <rect x="7" y="1" width="1" height="1" fill="#5a45ff"/>
-    <rect x="8" y="1" width="1" height="1" fill="#5b47ff"/>
-    <rect x="9" y="1" width="1" height="1" fill="#6754ff"/>
-    <rect x="10" y="1" width="1" height="1" fill="#eeecff"/>
-    <rect x="11" y="1" width="5" height="5" fill="#ffffff"/>
-    <rect x="5" y="2" width="1" height="1" fill="#9688ff"/>
-    <rect x="6" y="2" width="1" height="1" fill="#7e6eff"/>
-    <rect x="7" y="2" width="1" height="1" fill="#fbfbff"/>
-    <rect x="8" y="2" width="1" height="1" fill="#fcfcff"/>
-    <rect x="9" y="2" width="1" height="1" fill="#8475ff"/>
-    <rect x="10" y="2" width="1" height="1" fill="#8e80ff"/>
-    <rect x="5" y="3" width="1" height="2" fill="#5c47ff"/>
-    <rect x="6" y="3" width="1" height="1" fill="#c1b9ff"/>
-    <rect x="7" y="3" width="2" height="2" fill="#ffffff"/>
-    <rect x="9" y="3" width="1" height="1" fill="#c9c2ff"/>
-    <rect x="10" y="3" width="1" height="1" fill="#6653ff"/>
-    <rect x="6" y="4" width="1" height="1" fill="#9b8fff"/>
-    <rect x="9" y="4" width="1" height="1" fill="#a398ff"/>
-    <rect x="10" y="4" width="1" height="1" fill="#7d6dff"/>
-    <rect x="5" y="5" width="1" height="1" fill="#ddd9ff"/>
-    <rect x="6" y="5" width="1" height="1" fill="#503bff"/>
-    <rect x="7" y="5" width="2" height="1" fill="#8373ff"/>
-    <rect x="9" y="5" width="1" height="1" fill="#503aff"/>
-    <rect x="10" y="5" width="1" height="1" fill="#d7d2ff"/>
-    <rect x="0" y="6" width="6" height="1" fill="#ffffff"/>
-    <rect x="6" y="6" width="1" height="1" fill="#e4e1ff"/>
-    <rect x="7" y="6" width="2" height="1" fill="#5c47ff"/>
-    <rect x="9" y="6" width="1" height="1" fill="#e1deff"/>
-    <rect x="10" y="6" width="6" height="1" fill="#ffffff"/>
-    <rect x="0" y="7" width="7" height="1" fill="#ffffff"/>
-    <rect x="7" y="7" width="1" height="1" fill="#a89dff"/>
-    <rect x="8" y="7" width="1" height="1" fill="#5c47ff"/>
-    <rect x="9" y="7" width="7" height="1" fill="#ffffff"/>
-    <rect x="0" y="8" width="3" height="2" fill="#ffffff"/>
-    <rect x="3" y="8" width="1" height="1" fill="#d0caff"/>
-    <rect x="4" y="8" width="8" height="1" fill="#5c47ff"/>
-    <rect x="12" y="8" width="1" height="1" fill="#cec8ff"/>
-    <rect x="13" y="8" width="3" height="2" fill="#ffffff"/>
-    <rect x="3" y="9" width="1" height="1" fill="#dedaff"/>
-    <rect x="4" y="9" width="3" height="1" fill="#a99eff"/>
-    <rect x="7" y="9" width="1" height="1" fill="#7b6aff"/>
-    <rect x="8" y="9" width="1" height="1" fill="#6956ff"/>
-    <rect x="9" y="9" width="3" height="1" fill="#a99eff"/>
-    <rect x="12" y="9" width="1" height="1" fill="#ddd9ff"/>
-    <rect x="0" y="10" width="7" height="2" fill="#ffffff"/>
-    <rect x="7" y="10" width="1" height="1" fill="#aa9fff"/>
-    <rect x="8" y="10" width="1" height="3" fill="#5c47ff"/>
-    <rect x="9" y="10" width="7" height="2" fill="#ffffff"/>
-    <rect x="7" y="11" width="1" height="1" fill="#a89dff"/>
-    <rect x="0" y="12" width="6" height="1" fill="#ffffff"/>
-    <rect x="6" y="12" width="1" height="1" fill="#c1b9ff"/>
-    <rect x="7" y="12" width="1" height="1" fill="#523dff"/>
-    <rect x="9" y="12" width="1" height="1" fill="#a095ff"/>
-    <rect x="10" y="12" width="1" height="1" fill="#fbfaff"/>
-    <rect x="11" y="12" width="5" height="1" fill="#ffffff"/>
-    <rect x="0" y="13" width="4" height="1" fill="#ffffff"/>
-    <rect x="4" y="13" width="1" height="1" fill="#efedff"/>
-    <rect x="5" y="13" width="1" height="1" fill="#5c47ff"/>
-    <rect x="6" y="13" width="1" height="1" fill="#533dff"/>
-    <rect x="7" y="13" width="1" height="1" fill="#b5acff"/>
-    <rect x="8" y="13" width="1" height="1" fill="#dfdaff"/>
-    <rect x="9" y="13" width="2" height="1" fill="#5c47ff"/>
-    <rect x="11" y="13" width="1" height="1" fill="#d9d4ff"/>
-    <rect x="12" y="13" width="4" height="1" fill="#ffffff"/>
-    <rect x="0" y="14" width="3" height="1" fill="#ffffff"/>
-    <rect x="3" y="14" width="1" height="1" fill="#eceaff"/>
-    <rect x="4" y="14" width="1" height="1" fill="#5c47ff"/>
-    <rect x="5" y="14" width="1" height="1" fill="#8172ff"/>
-    <rect x="6" y="14" width="1" height="1" fill="#eeecff"/>
-    <rect x="7" y="14" width="2" height="1" fill="#ffffff"/>
-    <rect x="9" y="14" width="1" height="1" fill="#fbfaff"/>
-    <rect x="10" y="14" width="1" height="1" fill="#a296ff"/>
-    <rect x="11" y="14" width="1" height="1" fill="#5c47ff"/>
-    <rect x="12" y="14" width="1" height="1" fill="#dbd6ff"/>
-    <rect x="13" y="14" width="3" height="1" fill="#ffffff"/>
-    <rect x="0" y="15" width="4" height="1" fill="#ffffff"/>
-    <rect x="4" y="15" width="1" height="1" fill="#d4ceff"/>
-    <rect x="5" y="15" width="6" height="1" fill="#ffffff"/>
-    <rect x="11" y="15" width="1" height="1" fill="#e4e1ff"/>
-    <rect x="12" y="15" width="4" height="1" fill="#ffffff"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   viewBox="0 0 16 16"
+   id="svg4137"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="dActor.svg"
+   inkscape:export-filename="G:\Workspace\EnterpriseArchitecture\Ducen Architecture Framework\Icons\Kumar\dActor.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4139" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="11.2"
+     inkscape:cx="-5.7159199"
+     inkscape:cy="14.451678"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1366"
+     inkscape:window-height="706"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     units="px" />
+  <metadata
+     id="metadata4142">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1036.3622)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:1.45062637;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4138"
+       width="14.549374"
+       height="14.549374"
+       x="0.63602751"
+       y="1037.1233"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <ellipse
+       style="opacity:1;fill:none;stroke:#4730ff;stroke-width:1.12808847;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4145"
+       cx="7.9321113"
+       cy="1040.0387"
+       rx="2.2979236"
+       ry="2.4248743" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#4730ff;stroke-width:1.12808847;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 7.9733151,1048.6058 4.0512759,2.6953"
+       id="path4149-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#4730ff;stroke-width:1.12808847;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 7.9717467,1048.6997 -4.0512755,2.6954"
+       id="path4149-5-9"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#4730ff;stroke-width:1.12808847;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 3.5275527,1045.3193 c 8.7818403,-0.028 8.7818403,-0.028 8.7818403,-0.028"
+       id="path4183"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#4730ff;stroke-width:1.12808847;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 8.0184376,1049.0576 c -0.026551,-6.8839 -0.026551,-6.8839 -0.026551,-6.8839"
+       id="path4183-7"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
