@@ -34,8 +34,11 @@
 '   QuickLink generator. SupplierEnd.Role is the forward meaning; ClientEnd.Role
 '   is the backward meaning.
 '
-' Version: 1.4.0
-' Date: 2026 / 08 / 07
+' Version: 1.5.0
+' Date: 2026 / 10 / 28
+'
+' 1.5.0 datatype changes:
+'   - maps the M3 primitives Decimal and Duration to xsd:decimal and xsd:duration (ISO 8601, e.g. P1M)
 '
 ' 1.4.0 datatype and base-class changes:
 '   - treats the UML2 primitive type enumeration as authoritative for primitive M3 attributes
@@ -2602,6 +2605,10 @@ Function MapDatatype(typeName)
             MapDatatype = "xsd:dateTime"
         Case "float"
             MapDatatype = "xsd:float"
+        Case "decimal"
+            MapDatatype = "xsd:decimal"
+        Case "duration"
+            MapDatatype = "xsd:duration"
         Case "int32"
             MapDatatype = "xsd:int"
         Case "int64"
@@ -2621,7 +2628,7 @@ Function IsSupportedUML2Primitive(typeName)
     Dim t
     t = LCase(Trim(CStr(typeName)))
     Select Case t
-        Case "boolean", "date", "datetime", "float", "int32", "int64", "string", "uuid"
+        Case "boolean", "date", "datetime", "decimal", "duration", "float", "int32", "int64", "string", "uuid"
             IsSupportedUML2Primitive = True
         Case Else
             IsSupportedUML2Primitive = False
