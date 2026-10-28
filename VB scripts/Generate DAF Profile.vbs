@@ -61,6 +61,10 @@ dim attributeSourceGuid	' profile attribute ID -> Metamodel GUID of the source a
 dim renameMap			' new name -> old name, from RenameMappingFile
 dim metamodelElementCache ' metamodel Element ID -> EA.Element
 dim metaclassCache		' metamodel Element ID -> Metaclass tag value
+' the UML profile is saved from this diagram, so every stereotype, metaclass and enumeration must be on it
+dim profileDiagram			as EA.Diagram
+dim profileDiagramIndex	' Element ID -> true for elements on the profile diagram
+dim diagramSlotLeft, diagramSlotTop, diagramRowBottom ' next free place for a new element, below the existing content
 
 sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 
@@ -81,6 +85,7 @@ sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 	set toolboxConnector = Repository.GetElementByGuid(ProfileToolboxConnectorGUID)
 	loadRenameMap
 	buildProfileIndex
+	buildProfileDiagramIndex
 	cleanToolboxAttributes toolboxClass
 	cleanToolboxAttributes toolboxConnector
 	transformPackage metamodelPackage
@@ -94,8 +99,9 @@ sub transformPackageGUID( metamodelPackageGUID, profilePackageGUID, fileName)
 		
 		
 	Repository.RefreshModelView profilePackage.PackageID
+	if not profileDiagram is nothing then Repository.ReloadDiagram profileDiagram.DiagramID
 	Repository.EnableUIUpdates = true
-	Session.Output "Done at " & Now() 
+	Session.Output "Done at " & Now()
 end sub
 
 '''''''''''''''''''''''
@@ -228,8 +234,68 @@ function resolveProfileElement( metamodelGUID, profileName, package, elementType
 		profileGuidAnywhere( metamodelGUID) = profileElement.ElementID
 	end if
 	profileTouched( profileElement.ElementID) = true
+	if elementType = "Class" then ensureOnProfileDiagram profileElement
 	set resolveProfileElement = profileElement
 end function
+
+'''''''''''''''''''''''
+'''''''''''''''''''''' PROFILE DIAGRAM
+'''''''''''''''''''''''
+
+sub buildProfileDiagramIndex
+	dim diagramObject	as EA.DiagramObject
+	set profileDiagramIndex = CreateObject( "Scripting.Dictionary")
+	set profileDiagram = nothing
+	if ProfileDiagramGUID <> "" then set profileDiagram = Repository.GetDiagramByGuid( ProfileDiagramGUID)
+	if profileDiagram is nothing then
+		Session.Output "WARNING: profile diagram " & ProfileDiagramGUID & " not found, new stereotypes are not placed on it"
+		exit sub
+	end if
+	diagramRowBottom = 0
+	for each diagramObject in profileDiagram.DiagramObjects
+		profileDiagramIndex( diagramObject.ElementID) = true
+		if diagramObject.Bottom < diagramRowBottom then diagramRowBottom = diagramObject.Bottom
+	next
+	' new elements go in rows below everything already on the diagram (EA stores top and bottom as negative values)
+	diagramSlotLeft = 20
+	diagramSlotTop = -diagramRowBottom + 80
+	diagramRowBottom = diagramSlotTop
+end sub
+
+' add the element to the profile diagram in the next free place, unless it is already there
+sub ensureOnProfileDiagram( element)
+	dim diagramObject	as EA.DiagramObject
+	dim height
+	if profileDiagram is nothing then exit sub
+	if profileDiagramIndex.Exists( element.ElementID) then exit sub
+	height = 50 + 16 * element.Attributes.Count
+	if diagramSlotLeft > 7000 then
+		diagramSlotLeft = 20
+		diagramSlotTop = diagramRowBottom + 30
+	end if
+	set diagramObject = profileDiagram.DiagramObjects.AddNew( "l=" & diagramSlotLeft & ";r=" & ( diagramSlotLeft + 180) & ";t=" & diagramSlotTop & ";b=" & ( diagramSlotTop + height) & ";", "")
+	diagramObject.ElementID = element.ElementID
+	diagramObject.Update
+	profileDiagramIndex( element.ElementID) = true
+	diagramSlotLeft = diagramSlotLeft + 210
+	if diagramSlotTop + height > diagramRowBottom then diagramRowBottom = diagramSlotTop + height
+	Session.Output "  added '" & element.Name & "' to the profile diagram"
+end sub
+
+' obsolete stereotypes must not be saved with the profile
+sub removeFromProfileDiagram( element)
+	dim objectIndex
+	if profileDiagram is nothing then exit sub
+	if not profileDiagramIndex.Exists( element.ElementID) then exit sub
+	for objectIndex = profileDiagram.DiagramObjects.Count - 1 to 0 step -1
+		if profileDiagram.DiagramObjects.GetAt( objectIndex).ElementID = element.ElementID then
+			profileDiagram.DiagramObjects.DeleteAt objectIndex, false
+		end if
+	next
+	profileDiagram.DiagramObjects.Refresh
+	profileDiagramIndex.Remove element.ElementID
+	Session.Output "  removed '" & element.Name & "' from the profile diagram"
+end sub
 
 ' a linked stereotype found in the wrong profile package, e.g. a relationship stereotype among the element stereotypes
 sub moveProfileElement( profileElement, package)
@@ -278,9 +344,11 @@ sub handleUnmatchedStereotypes
 				end if
 				set profileMetaclass = getRelatedSupplierElement( profileElement, "Extension", "Metaclass")
 				if not profileMetaclass is nothing then
+					removeFromProfileDiagram profileMetaclass
 					profileMetaclass.PackageID = obsoletePackage.PackageID
 					profileMetaclass.Update
 				end if
+				removeFromProfileDiagram profileElement
 				profileElement.PackageID = obsoletePackage.PackageID
 				profileElement.Update
 			else
@@ -573,6 +641,8 @@ sub transformEnumeration( metamodelEnum)
 	dim attribute	as EA.Attribute
 	dim literalPos	' literal name -> position in the metamodel
 	dim literalName, attributeIndex
+	' stereotype properties copy their classifier from the metamodel, so the profile diagram shows the metamodel enumeration
+	ensureOnProfileDiagram metamodelEnum
 	set profileEnum = resolveProfileElement( metamodelEnum.ElementGUID, metamodelEnum.Name, enumerationPackage, "Enumeration")
 	set literalPos = CreateObject( "Scripting.Dictionary")
 	for each attribute in metamodelEnum.Attributes
@@ -736,6 +806,7 @@ function setProfileMetaclass( metamodelItem, stereotypeClass)
 	end if	
 	' add the GUID
 	ensureTag profileMetaClass, "Metamodel GUID", stereotypeClass.ElementGUID
+	ensureOnProfileDiagram profileMetaClass
 	set setProfileMetaclass = profileMetaClass
 end function
 
