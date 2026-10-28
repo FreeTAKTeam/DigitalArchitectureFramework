@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2026-08-07 11:29:20 AM
+//generated:2026-10-28 6:20:39 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -25,11 +25,11 @@ Interface,dAPI,Interface,dPhysicalService,,,,Realization,dServiceRealizedByAPI,d
 Interface,dPhysicalService,Interface,dAPI,,,,Realization,dServiceRealizedByAPI,from,is realized By API,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dAPI,,,,Interface,dPhysicalService,Realization,dServiceRealizedByAPI,directed,,realized Physical Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,,,,Interface,dAPI,Realization,dServiceRealizedByAPI,from,,is realized By API,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> dApplicationComponentRealizesogicalComponent -> dLogicalAppComponent
-Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,dApplicationComponentRealizesogicalComponent,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,dApplicationComponentRealizesogicalComponent,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,dApplicationComponentRealizesogicalComponent,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationComponentRealizesLogicalComponent -> dLogicalAppComponent
+Component,dApplicationComponent,Component,dLogicalAppComponent,,,,Realization,dApplicationComponentRealizesLogicalComponent,directed,Realizes Logical component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,Component,dApplicationComponent,,,,Realization,dApplicationComponentRealizesLogicalComponent,from,is Realized by Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Component,dLogicalAppComponent,Realization,dApplicationComponentRealizesLogicalComponent,directed,,Realizes Logical component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Component,dApplicationComponent,Realization,dApplicationComponentRealizesLogicalComponent,from,,is Realized by Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationconfiguredbySystemConfiguration -> dSystem
 Component,dApplicationComponent,Component,dSystem,,,,Aggregation,dApplicationconfiguredbySystemConfiguration,from,has configuration,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dSystem,Component,dApplicationComponent,,,,Aggregation,dApplicationconfiguredbySystemConfiguration,to,configures Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -50,21 +50,21 @@ Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApp
 Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApplicationConnectedWithApplication,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> dApplicationAgregatesFunction -> dApplicationFunction
-Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAgregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAgregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAgregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAgregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationAggregatesFunction -> dApplicationFunction
+Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAggregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAggregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAggregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAggregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationComponentHasContainer -> dContainer
 Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasContainer,directed,Has Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dBusinessArea -> dBusinessAreadHasCapability -> dCapability
-Class,dBusinessArea,Class,dCapability,,,,Aggregation,dBusinessAreadHasCapability,from,has Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,Class,dBusinessArea,,,,Aggregation,dBusinessAreadHasCapability,to,is organized in Biz Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dBusinessArea,,,,Class,dCapability,Aggregation,dBusinessAreadHasCapability,from,,has Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dCapability,,,,Class,dBusinessArea,Aggregation,dBusinessAreadHasCapability,to,,is organized in Biz Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessArea -> dBusinessAreaHasCapability -> dCapability
+Class,dBusinessArea,Class,dCapability,,,,Aggregation,dBusinessAreaHasCapability,from,has Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,Class,dBusinessArea,,,,Aggregation,dBusinessAreaHasCapability,to,is organized in Biz Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessArea,,,,Class,dCapability,Aggregation,dBusinessAreaHasCapability,from,,has Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dBusinessArea,Aggregation,dBusinessAreaHasCapability,to,,is organized in Biz Area,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessProcess -> dProcessOrchestratesService -> dBusinessService
 Class,dBusinessProcess,Activity,dBusinessService,,,,Aggregation,dProcessOrchestratesService,from,Has Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Class,dBusinessProcess,,,,Aggregation,dProcessOrchestratesService,to,part of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -75,6 +75,11 @@ Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessFlowsToProce
 Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessFlowsToProcess,from,Sequence Flow From,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessFlowsToProcess,directed,,Sequence Flow To,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessFlowsToProcess,from,,Sequence Flow From,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessProcess -> dProcessResultsInEvent -> dEvent
+Class,dBusinessProcess,Event,dEvent,,,,Association,dProcessResultsInEvent,directed,results in Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,Class,dBusinessProcess,,,,Association,dProcessResultsInEvent,from,is result of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Event,dEvent,Association,dProcessResultsInEvent,directed,,results in Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,,,,Class,dBusinessProcess,Association,dProcessResultsInEvent,from,,is result of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessService -> dBizServUsesDataEntity -> dDataEntity
 Activity,dBusinessService,Class,dDataEntity,,,,Association,dBizServUsesDataEntity,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,Activity,dBusinessService,,,,Association,dBizServUsesDataEntity,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -140,6 +145,11 @@ Class,dContainer,Class,dVolume,,,,Aggregation,dContainerAggregatesVolume,from,Ag
 Class,dVolume,Class,dContainer,,,,Aggregation,dContainerAggregatesVolume,to,is Aggregated in Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,,,,Class,dVolume,Aggregation,dContainerAggregatesVolume,from,,Aggregates Volume,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dVolume,,,,Class,dContainer,Aggregation,dContainerAggregatesVolume,to,,is Aggregated in Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dContract -> dContractServesActor -> dActor
+Class,dContract,Actor,dActor,,,,Association,dContractServesActor,directed,is serving actor,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dActor,Class,dContract,,,,Association,dContractServesActor,from,served by contract,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContract,,,,Actor,dActor,Association,dContractServesActor,directed,,is serving actor,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Actor,dActor,,,,Class,dContract,Association,dContractServesActor,from,,served by contract,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dControllerImplementsFunction -> dApplicationFunction
 Class,dController,Class,dApplicationFunction,,,,Realization,dControllerImplementsFunction,directed,Implements function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dApplicationFunction,Class,dController,,,,Realization,dControllerImplementsFunction,from,has Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -150,11 +160,11 @@ Class,dController,Class,dView,,,,Association,dControllerGovernsView,directed,Gov
 Class,dView,Class,dController,,,,Association,dControllerGovernsView,from,is Governed by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dController,,,,Class,dView,Association,dControllerGovernsView,directed,,Governs view,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dView,,,,Class,dController,Association,dControllerGovernsView,from,,is Governed by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dController -> dControllerControllsModel -> dModelClass
-Class,dController,Class,dModelClass,,,,Association,dControllerControllsModel,directed,Controls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,Class,dController,,,,Association,dControllerControllsModel,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dController,,,,Class,dModelClass,Association,dControllerControllsModel,directed,,Controls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dController,Association,dControllerControllsModel,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dController -> dControllerControlsModel -> dModelClass
+Class,dController,Class,dModelClass,,,,Association,dControllerControlsModel,directed,Controls Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,Class,dController,,,,Association,dControllerControlsModel,from,is controlled by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dController,,,,Class,dModelClass,Association,dControllerControlsModel,directed,,Controls Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dController,Association,dControllerControlsModel,from,,is controlled by Controller,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dController -> dUseCaseisImplementedByController -> dBusinessUseCase
 Class,dController,UseCase,dBusinessUseCase,,,,Realization,dUseCaseisImplementedByController,directed,implements Use Case,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 UseCase,dBusinessUseCase,Class,dController,,,,Realization,dUseCaseisImplementedByController,from,Is implemented by Controller,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -185,16 +195,21 @@ Class,dDeploymentModel,Class,dCluster,,,,Aggregation,dDeploymentModelAggregatesC
 Class,dCluster,Class,dDeploymentModel,,,,Aggregation,dDeploymentModelAggregatesCluster,to,is Aggregated in Deployment Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDeploymentModel,,,,Class,dCluster,Aggregation,dDeploymentModelAggregatesCluster,from,,Aggregates Cluster,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,,,,Class,dDeploymentModel,Aggregation,dDeploymentModelAggregatesCluster,to,,is Aggregated in Deployment Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dDeploymentNode -> dApplicationIRunsInNode -> dApplicationComponent
-Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,dApplicationIRunsInNode,directed,Runs Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,dApplicationIRunsInNode,from,is run By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,dApplicationIRunsInNode,directed,,Runs Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,dApplicationIRunsInNode,from,,is run By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dDeploymentNode -> dApplicationRunsInNode -> dApplicationComponent
+Node,dDeploymentNode,Component,dApplicationComponent,,,,Association,dApplicationRunsInNode,directed,Runs Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Node,dDeploymentNode,,,,Association,dApplicationRunsInNode,from,is run By Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Node,dDeploymentNode,,,,Component,dApplicationComponent,Association,dApplicationRunsInNode,directed,,Runs Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Node,dDeploymentNode,Association,dApplicationRunsInNode,from,,is run By Node,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dEvent -> dEventTriggersProcess -> dBusinessProcess
 Event,dEvent,Class,dBusinessProcess,,,,Association,dEventTriggersProcess,directed,triggers Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,Event,dEvent,,,,Association,dEventTriggersProcess,from,is triggered by Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Event,dEvent,,,,Class,dBusinessProcess,Association,dEventTriggersProcess,directed,,triggers Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Event,dEvent,Association,dEventTriggersProcess,from,,is triggered by Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dEvent -> dEventLeadsToEvent -> dEvent
+Event,dEvent,Event,dEvent,,,,Association,dEventLeadsToEvent,directed,leads to Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,Event,dEvent,,,,Association,dEventLeadsToEvent,from,follows Event,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,,,,Event,dEvent,Association,dEventLeadsToEvent,directed,,leads to Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Event,dEvent,,,,Event,dEvent,Association,dEventLeadsToEvent,from,,follows Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dFeature -> dRequirementIsSatisfiedByFeature -> dRequirement
 Class,dFeature,Class,dRequirement,,,,Realization,dRequirementIsSatisfiedByFeature,directed,realizes Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,Class,dFeature,,,,Realization,dRequirementIsSatisfiedByFeature,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -210,6 +225,11 @@ Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,from,parent Goal,,TRU
 Class,dGoal,Class,dGoal,,,,Aggregation,dGoalAggregatesGoal,to,Child Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,,,,Class,dGoal,Aggregation,dGoalAggregatesGoal,from,,parent Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dGoal,,,,Class,dGoal,Aggregation,dGoalAggregatesGoal,to,,Child Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dGoal -> dGoalTargetsdMeasurementIndicator -> dMeasurementIndicator
+Class,dGoal,Class,dMeasurementIndicator,,,,Dependency,dGoalTargetsdMeasurementIndicator,directed,Targets KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dGoal,,,,Dependency,dGoalTargetsdMeasurementIndicator,from,has target Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dGoal,,,,Class,dMeasurementIndicator,Dependency,dGoalTargetsdMeasurementIndicator,directed,,Targets KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dGoal,Dependency,dGoalTargetsdMeasurementIndicator,from,,has target Goal,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dGrowthPackage -> dPackageIsDeliveredByInitiative -> dInitiative
 Package,dGrowthPackage,Activity,dInitiative,,,,Composition,dPackageIsDeliveredByInitiative,from, is delivered by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dInitiative,Package,dGrowthPackage,,,,Composition,dPackageIsDeliveredByInitiative,to,is part of a Package,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -290,6 +310,16 @@ Class,dMeasurementGrouping,Class,dMeasurementIndicator,,,,Aggregation,dGroupAggr
 Class,dMeasurementIndicator,Class,dMeasurementGrouping,,,,Aggregation,dGroupAggregatesKPI,to,part of a Grouping,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dMeasurementGrouping,,,,Class,dMeasurementIndicator,Aggregation,dGroupAggregatesKPI,from,,aggregates KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dMeasurementIndicator,,,,Class,dMeasurementGrouping,Aggregation,dGroupAggregatesKPI,to,,part of a Grouping,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dMeasurementIndicator -> dMeasurementIndicatorImprovesMeasurementIndicator -> dMeasurementIndicator
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,directed,Improves KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,from,Improved KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,directed,,Improves KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,from,,Improved KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dMeasurementIndicator -> dMeasurementIndicatorWorsenMeasurementIndicator -> dMeasurementIndicator
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,is worsen by,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,Worsen KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,,is worsen by,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,,Worsen KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dModelClass -> dModelClassRealizesEntity -> dDataEntity
 Class,dModelClass,Class,dDataEntity,,,,Realization,dModelClassRealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,Class,dModelClass,,,,Realization,dModelClassRealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -301,9 +331,9 @@ Class,dTable,Class,dModelClass,,,,Association,dTableProvidesPersistenceForModelC
 Class,dModelClass,,,,Class,dTable,Association,dTableProvidesPersistenceForModelClass,directed,,is Saved in a Table,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dTable,,,,Class,dModelClass,Association,dTableProvidesPersistenceForModelClass,from,,Provides Persistence For Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dModelClass -> dModelClassAssociatesModelClass -> dModelClass
-Class,dModelClass,Class,dModelClass,,,,Association,dModelClassAssociatesModelClass,directed,Associates Target  Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,Class,dModelClass,,,,Association,dModelClassAssociatesModelClass,directed,Associates Target Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,Class,dModelClass,,,,Association,dModelClassAssociatesModelClass,from,Associates Source Model,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dModelClass,,,,Class,dModelClass,Association,dModelClassAssociatesModelClass,directed,,Associates Target  Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dModelClass,,,,Class,dModelClass,Association,dModelClassAssociatesModelClass,directed,,Associates Target Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dModelClass,,,,Class,dModelClass,Association,dModelClassAssociatesModelClass,from,,Associates Source Model,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dNetwork -> dNetworkContainsNode -> dDeploymentNode
 Node,dNetwork,Node,dDeploymentNode,,,,Aggregation,dNetworkContainsNode,from,Contains Node,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -360,6 +390,11 @@ Component,dProduct,Class,dBusinessProcess,,,,Aggregation,dProductIncludesProcess
 Class,dBusinessProcess,Component,dProduct,,,,Aggregation,dProductIncludesProcess,to,Is part of Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dProduct,,,,Class,dBusinessProcess,Aggregation,dProductIncludesProcess,from,,Includes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Component,dProduct,Aggregation,dProductIncludesProcess,to,,Is part of Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dProduct -> ContractRelatedProduct -> dContract
+Component,dProduct,Class,dContract,,,,Association,ContractRelatedProduct,directed,is related to Product,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dContract,Component,dProduct,,,,Association,ContractRelatedProduct,from,Related to Contract,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dProduct,,,,Class,dContract,Association,ContractRelatedProduct,directed,,is related to Product,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dContract,,,,Component,dProduct,Association,ContractRelatedProduct,from,,Related to Contract,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dProgram -> dProgramIsOrganizedInPackages -> dGrowthPackage
 Package,dProgram,Package,dGrowthPackage,,,,Composition,dProgramIsOrganizedInPackages,from,is organized In Packages,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Package,dGrowthPackage,Package,dProgram,,,,Composition,dProgramIsOrganizedInPackages,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -385,11 +420,11 @@ Class,dResource,Class,dCapability,,,,Association,dResourceSupportsCapability,dir
 Class,dCapability,Class,dResource,,,,Association,dResourceSupportsCapability,from,is supported By Resource,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dResource,,,,Class,dCapability,Association,dResourceSupportsCapability,directed,,Supports Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Class,dResource,Association,dResourceSupportsCapability,from,,is supported By Resource,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dRisk -> dRiskIRelatedToRisk -> dRisk
-Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,Class,dRisk,,,,Dependency,dRiskIRelatedToRisk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dRisk,Dependency,dRiskIRelatedToRisk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dRisk,,,,Class,dRisk,Dependency,dRiskIRelatedToRisk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRisk -> dRiskIsRelatedToRisk -> dRisk
+Class,dRisk,Class,dRisk,,,,Dependency,dRiskIsRelatedToRisk,directed,target Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,Class,dRisk,,,,Dependency,dRiskIsRelatedToRisk,from,Source Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dRisk,Dependency,dRiskIsRelatedToRisk,directed,,target Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dRisk,,,,Class,dRisk,Dependency,dRiskIsRelatedToRisk,from,,Source Risk,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRisk -> dResourceimpactedByRisk -> dResource
 Class,dRisk,Class,dResource,,,,Association,dResourceimpactedByRisk,directed,impact Resouce,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dResource,Class,dRisk,,,,Association,dResourceimpactedByRisk,from,is impacted by Risk,,TRUE,,TRUE,TRUE,DAF,0,,,,,

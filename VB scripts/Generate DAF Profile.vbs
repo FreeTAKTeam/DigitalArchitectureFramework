@@ -287,6 +287,8 @@ sub removeFromProfileDiagram( element)
 	dim objectIndex
 	if profileDiagram is nothing then exit sub
 	if not profileDiagramIndex.Exists( element.ElementID) then exit sub
+	' objects added by ensureOnProfileDiagram are not in Count until the collection is refreshed
+	profileDiagram.DiagramObjects.Refresh
 	for objectIndex = profileDiagram.DiagramObjects.Count - 1 to 0 step -1
 		if profileDiagram.DiagramObjects.GetAt( objectIndex).ElementID = element.ElementID then
 			profileDiagram.DiagramObjects.DeleteAt objectIndex, false
@@ -698,7 +700,8 @@ sub transformClass( metamodelClass)
 		' any superclass stereotype: metamodel superclasses are Concepts, so an empty stereotype filter never matched
 		set superClass = getRelatedSupplierElement2( metamodelClass, "Generalization", "", "Class", Null)
 		metaclassName = getTaggedValueValue( metamodelClass, "Metaclass")
-		redefinedStereotypeName = getTaggedValueValue( metamodelClass, "Redefines")
+		' a blank value (e.g. a single space) means no redefinition
+		redefinedStereotypeName = Trim( getTaggedValueValue( metamodelClass, "Redefines"))
 
 		if redefinedStereotypeName <> vbNullString or metaclassName <> vbNullString or not( superClass is nothing) then																		   		
 			Session.Output "Generating stereotype for '" & metamodelClass.Name & "' class..."					
