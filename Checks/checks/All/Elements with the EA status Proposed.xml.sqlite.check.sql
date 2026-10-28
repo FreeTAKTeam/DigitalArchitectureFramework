@@ -17,7 +17,7 @@ LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
 LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
 LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 WHERE o.ea_guid in (#ElementGuids#)
-AND o.ea_guid not in (
+AND o.ea_guid in (
 
 	Select  o1.ea_guid
 	from t_object as o1

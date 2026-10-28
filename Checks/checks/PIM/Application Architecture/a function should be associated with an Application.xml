@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Check>
   <CheckId>009</CheckId>
-  <CheckDescription>a function should  be associated with an Application </CheckDescription>
+  <CheckDescription>a function should be associated with an Application</CheckDescription>
   <QueryToFindElements>
     <Main>SELECT o1.ea_guid AS ItemGuid
 FROM ((((((t_object as o1
@@ -65,20 +65,19 @@ LEFT JOIN t_package package_p3 ON package_p3.package_ID = package_p2.Parent_ID)
 LEFT JOIN t_package package_p4 on package_p4.package_ID = package_p3.Parent_ID)
 LEFT JOIN t_package package_p5 on package_p5.package_ID = package_p4.Parent_ID)
 WHERE o.ea_guid  in (#ElementGuids#)
-AND o.ea_guid not  in 
+AND o.ea_guid not in
 (
-Select  o2.ea_guid
-from t_object as o1
-
-Inner join t_connector c on o1.Object_ID = c.End_Object_ID
-inner join t_object o2 on c.Start_object_ID = o2.Object_ID
-
-WHERE o2.Stereotype = 'dApplicationFunction'
-AND o1.Stereotype = 'dApplicationComponent'
- )</Main>
+SELECT f.ea_guid
+FROM ((t_object AS app
+INNER JOIN t_connector AS c ON app.Object_ID = c.Start_Object_ID)
+INNER JOIN t_object AS f ON c.End_Object_ID = f.Object_ID)
+WHERE app.Stereotype = 'dApplicationComponent'
+AND f.Stereotype = 'dApplicationFunction'
+AND c.Stereotype IN ('dApplicationAgregatesFunction', 'dApplicationAggregatesFunction')
+)</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>a function should  be associated with an Application </Rationale>
+  <Rationale>an Application Function must be aggregated by an Application Component (dApplicationAggregatesFunction)</Rationale>
   <ProposedSolution></ProposedSolution>
 </Check>

@@ -46,7 +46,7 @@ WHERE o1.stereotype = 'dApplicationComponent' </Main>
   </QueryToFindElements>
   <QueryToCheckFoundElements>
     <Main>SELECT o.Name AS ItemName
-, 'Diagram' as ItemType
+, 'object' as ItemType
 , o.ea_guid AS ItemGuid
 , o.Object_Type AS ElementType
 , o.StereoType AS ElementStereotype
@@ -73,7 +73,7 @@ INNER JOIN t_object AS o2 ON connector.End_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dApplicationComponent' 
 AND  o2.Stereotype = 'dLogicalAppComponent' 
 AND connector.Stereotype IN ('dApplicationComponentRealizesogicalComponent', 'dApplicationComponentRealizesLogicalComponent') 
-AND o.Status != 'TODO'
+AND (o.Status IS NULL OR o.Status <> 'TODO')
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
