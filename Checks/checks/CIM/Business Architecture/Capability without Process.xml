@@ -80,7 +80,7 @@ INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
 INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
 WHERE o.Stereotype = 'dBusinessArea'
 AND  o2.Stereotype = 'dCapability'
-AND connector.Stereotype= 'dBusinessAreadHasCapability'
+AND connector.Stereotype IN ('dBusinessAreadHasCapability', 'dBusinessAreaHasCapability')
 )		</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>

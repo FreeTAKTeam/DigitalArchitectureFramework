@@ -72,12 +72,12 @@ INNER JOIN t_connector as connector ON o.Object_ID = connector.End_Object_ID
 INNER JOIN t_object AS o2 ON connector.Start_Object_ID =  o2.Object_ID
 WHERE o2.Stereotype = 'dApplicationFunction'
 AND  o.Stereotype= 'dApplicationComponent'
-AND connector.Stereotype= 'dApplicationAgregatesFunction'
+AND connector.Stereotype IN ('dApplicationAgregatesFunction', 'dApplicationAggregatesFunction')
 )</Main>
     <Parameters></Parameters>
   </QueryToCheckFoundElements>
   <WarningType>Warning</WarningType>
-  <Rationale>a 'dApplicationComponent' element should be connected to a 'dApplicationFunction' element by a 'ApplicationAgregatesFunction' Connector</Rationale>
+  <Rationale>a 'dApplicationComponent' element should be connected to a 'dApplicationFunction' element by a 'dApplicationAggregatesFunction' Connector</Rationale>
   <ProposedSolution>Create missing connection</ProposedSolution>
   <HelpUrl>https://github.com/FreeTAKTeam/DigitalArchitectureFramework</HelpUrl>
 </Check>
