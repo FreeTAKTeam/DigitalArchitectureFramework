@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="3B5DC1F2-3" name="DAF_Business_Analysis_" version="6.0" notes="DAF_Business_Analysis_"/>
+	<Documentation id="3B5DC1F2-3" name="DAF_Business_Analysis_" version="7.0" notes="DAF_Business_Analysis_"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements">
@@ -10,6 +10,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dObjective(UML::Class)" type="" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dGoal" type="" description="" unit="" values="" default="Goal"/>
 					<Tag name="DAF::dRequirement" type="" description="" unit="" values="" default="Requirement"/>
 					<Tag name="DAF::dFeature" type="" description="" unit="" values="" default="Feature"/>

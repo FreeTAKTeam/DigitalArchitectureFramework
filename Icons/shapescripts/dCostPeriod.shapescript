@@ -1,0 +1,46 @@
+shape main
+{
+	layoutType="border";
+	defsize(120,80);
+	rectangle(0,0,100,100);
+	addsubshape("header","n");
+	addsubshape("name","center");
+
+	// calendar band showing whether the spend is capital or operating
+	shape header
+	{
+		// properties must precede drawing commands
+		preferredheight=20;
+		h_align="left";
+		v_align="center";
+		setpencolor(79,129,189); // Daf blue
+		setfillcolor(79,129,189);
+		rectangle(0,0,100,100);
+		setfontcolor(255,255,255);
+		print(" #TAG:costNature#");
+	}
+
+	shape name
+	{
+		h_align="center";
+		v_align="center";
+		println("#NAME#");
+	}
+}
+
+decoration nature
+{
+	orientation="SW";
+	if(hastag("costNature","Capex"))
+	{
+		setpencolor(24,95,165);
+		setfillcolor(24,95,165);
+		rectangle(0,0,100,100);
+	}
+	if(hastag("costNature","Opex"))
+	{
+		setpencolor(67,174,119); // Daf green
+		setfillcolor(67,174,119);
+		ellipse(0,0,100,100);
+	}
+}

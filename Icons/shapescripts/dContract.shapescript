@@ -1,0 +1,80 @@
+shape main
+{
+	layoutType="border";
+	if(hasproperty("rectanglenotation","0"))
+	{
+		defsize(120,80);
+		// document with a folded top-right corner
+		startpath();
+		moveto(0,0);
+		lineto(85,0);
+		lineto(100,20);
+		lineto(100,100);
+		lineto(0,100);
+		lineto(0,0);
+		endpath();
+		fillandstrokepath();
+		moveto(85,0);
+		lineto(85,20);
+		lineto(100,20);
+		// signature lines
+		setlinestyle("dash");
+		moveto(15,85);
+		lineto(42,85);
+		moveto(58,85);
+		lineto(85,85);
+		setlinestyle("solid");
+		addsubshape("name","center");
+
+		shape name
+		{
+			h_align="center";
+			v_align="center";
+			if(hasproperty("stereotypehidden","false"))
+			{
+				println("<<#stereotype#>>");
+			}
+			println("#NAME#");
+		}
+	}
+	else
+	{
+		rectangle(0,0,100,100);
+		addsubshape("name","center");
+
+		shape name
+		{
+			h_align="center";
+			v_align="center";
+			if(hasproperty("stereotypehidden","false"))
+			{
+				println("<<#stereotype#>>");
+			}
+			println("#NAME#");
+		}
+	}
+}
+
+decoration icon
+{
+	orientation="NE";
+	if(hasproperty("rectanglenotation","1"))
+	{
+		startpath();
+		moveto(10,0);
+		lineto(70,0);
+		lineto(90,25);
+		lineto(90,100);
+		lineto(10,100);
+		lineto(10,0);
+		endpath();
+		fillandstrokepath();
+		moveto(70,0);
+		lineto(70,25);
+		lineto(90,25);
+		moveto(25,50);
+		lineto(75,50);
+		moveto(25,70);
+		lineto(75,70);
+	}
+}

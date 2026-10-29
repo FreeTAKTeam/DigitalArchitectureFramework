@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="6.0 ALFA 2" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
+	<Documentation id="5580F4CE-D" name="DAF_Application_Architecture_TB" version="7.0" alias="DAF Application Architecture" notes="A toolbox for manage Application Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Components" notes="" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -31,19 +31,19 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dApplicationAgregatesFunction(UML::Aggregation)" type="" description="" unit="" values="" default="Affregates Function"/>
+					<Tag name="DAF::dApplicationAggregatesFunction(UML::Aggregation)" type="" description="" unit="" values="" default="Affregates Function"/>
 					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
 					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
 					<Tag name="UML::Association" type="int" description="" unit="" values="" default="Association"/>
 					<Tag name="UML::Assembly" type="int" description="" unit="" values="" default="Assembly"/>
 					<Tag name="UML::ControlFlow" type="int" description="" unit="" values="" default="Delegate"/>
-					<Tag name="DAF::dApplicationComponentRealizesogicalComponent(UML::Realization)" type="string" description="" unit="" values="" default="Realizes Component"/>
+					<Tag name="DAF::dApplicationComponentRealizesLogicalComponent(UML::Realization)" type="string" description="" unit="" values="" default="Realizes Component"/>
 					<Tag name="DAF::dApplicationconfiguredbySystemConfiguration(UML::Aggregation)" type="string" description="" unit="" values="" default="Application configured by System Configuration"/>
 					<Tag name="DAF::dApplicationExposesService(UML::Association)" type="string" description="" unit="" values="" default="Application Exposes Ph. Service"/>
 					<Tag name="DAF::dApplicationHasOwner(UML::Association)" type="string" description="" unit="" values="" default="Application has Owner"/>
 					<Tag name="DAF::dApplicationConnectedWithApplication(UML::Assembly)" type="string" description="" unit="" values="" default="Connects Application"/>
-					<Tag name="DAF::dApplicationComponentHasdContainer(UML::Association)" type="string" description="" unit="" values="" default="Application Has Container"/>
-					<Tag name="DAF::dApplicationIRunsInNode(UML::Association)" type="string" description="" unit="" values="" default="Application is run By Node"/>
+					<Tag name="DAF::dApplicationComponentHasContainer(UML::Association)" type="string" description="" unit="" values="" default="Application Has Container"/>
+					<Tag name="DAF::dApplicationRunsInNode(UML::Association)" type="string" description="" unit="" values="" default="Application is run By Node"/>
 					<Tag name="DAF::dApplicationRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Application Risk"/>
 					<Tag name="DAF::dTest_ApplicationComponent(UML::Association)" type="string" description="" unit="" values="" default="Test validates Component"/>
 				</TaggedValues>

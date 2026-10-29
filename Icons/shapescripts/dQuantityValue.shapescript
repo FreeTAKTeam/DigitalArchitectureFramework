@@ -1,0 +1,33 @@
+shape main
+{
+	layoutType="border";
+	defsize(120,70);
+	roundrect(0,0,100,100,20,20);
+	// ruler ticks along the bottom edge
+	setpencolor(67,174,119); // Daf green
+	moveto(15,100);
+	lineto(15,86);
+	moveto(29,100);
+	lineto(29,92);
+	moveto(43,100);
+	lineto(43,86);
+	moveto(57,100);
+	lineto(57,92);
+	moveto(71,100);
+	lineto(71,86);
+	moveto(85,100);
+	lineto(85,92);
+	setpencolor(GetUserBorderColor());
+	addsubshape("name","center");
+
+	shape name
+	{
+		h_align="center";
+		v_align="center";
+		if(hasproperty("stereotypehidden","false"))
+		{
+			println("<<#stereotype#>>");
+		}
+		println("#NAME#");
+	}
+}

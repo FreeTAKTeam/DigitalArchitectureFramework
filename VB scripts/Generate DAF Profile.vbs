@@ -1040,6 +1040,8 @@ sub createtoolboxConnector(connector)
 	dim toolboxAttribute as EA.Attribute
 	dim metaclassName ' as string
 	metaclassName = getTaggedValueValue( connector, "Metaclass")
+	' generalizations and other untagged connectors are not DAF relationships: they would add an empty "DAF::(UML::)" item
+	if metaclassName = "" or Trim( connector.Name) = "" then exit sub
 	set toolboxAttribute = ToolboxConnector.Attributes.AddNew(ProfileName +"::"+connector.Name + "(UML::"+ metaclassName + ")", "")
 	toolboxAttribute.Alias = connector.Alias
 	toolboxAttribute.Default = connector.Alias

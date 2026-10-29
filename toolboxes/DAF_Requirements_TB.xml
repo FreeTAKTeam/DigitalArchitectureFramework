@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="6.0.1" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
+	<Documentation id="9FCD3478-E" name="DAF_DAF_Requirements_TB" version="7.0" alias="DAF Requirements" notes="A toolbox for managing requirements"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" cx="225" cy="140" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -68,8 +68,9 @@
 					<Tag name="DAF::dRiskRealizedByIssue(UML::Realization)" type="string" description="" unit="" values="" default="realized by Issue"/>
 					<Tag name="DAF::dRequirementIsRelatedToGoal(UML::Association)" type="string" description="" unit="" values="" default="req related to Goal"/>
 					<Tag name="DAF::dRequirementContainsRequirement(UML::Composition)" type="string" description="" unit="" values="" default="Requirement Contains Req"/>
-					<Tag name="DAF::dRiskIRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
+					<Tag name="DAF::dRiskIsRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
 					<Tag name="DAF::dUseCaseHasStory(UML::Association)" type="string" description="" unit="" values="" default="Use Case Has Story"/>
+					<Tag name="DAF::dGoalTargetsdMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default=""/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

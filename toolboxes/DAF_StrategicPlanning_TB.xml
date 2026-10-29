@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="6F5508A1-3" name="DAF_StrategicPlanning" version="6.0 ALFA 7" notes="DAF_StrategicPlanning"/>
+	<Documentation id="6F5508A1-3" name="DAF_StrategicPlanning" version="7.0" notes="DAF_StrategicPlanning"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Strat. Planning Relationships" notes="">
@@ -21,6 +21,7 @@
 					<Tag name="DAF::dResourceimpactedByRisk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted by Risk"/>
 					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
 					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
+					<Tag name="DAF::dBusinessAreaHasCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="has Capability"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Stategic Planning" notes="Contains Elements for Enterprise Architecture Strategic Planning">
@@ -30,6 +31,7 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dBusinessArea(UML::Class)" type="" description="" unit="" values="" default="Biz Area"/>
 					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
 					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
 					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>

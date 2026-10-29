@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A662FF5E-9" name="DAF_TechnologyArchitecture" version="6.0 ALFA 13" alias="DAF Technology Architecture" notes="A toolbox for managing Technology Architecture"/>
+	<Documentation id="A662FF5E-9" name="DAF_TechnologyArchitecture" version="7.0" alias="DAF Technology Architecture" notes="A toolbox for managing Technology Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Technology Elements" notes="tools for technology architecture">
@@ -35,11 +35,11 @@
 					<Apply type="ToolboxPage"/>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::ClusterContainsDeploymentNode(UML::Aggregation)" type="" description="" unit="" values="" default="Cluster Has Node"/>
-					<Tag name="DAF::configured by(UML::Aggregation)" type="" description="" unit="" values="" default="configured by "/>
-					<Tag name="DAF::Hosts Node(UML::Aggregation)" type="" description="" unit="" values="" default="Location hosts Node "/>
-					<Tag name="DAF::isPhysicallyHostedBy(UML::Association)" type="" description="" unit="" values="" default=" is Physically Hosted By"/>
-					<Tag name="DAF::NetworkContainsNode(UML::Aggregation)" type="" description="" unit="" values="" default="Network contains Node"/>
+					<Tag name="DAF::dClusterContainsDeploymentNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Cluster Contains Node"/>
+					<Tag name="DAF::dNetworkContainsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Contains Node"/>
+					<Tag name="DAF::dLocationHostsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Location Hosts Node"/>
+					<Tag name="DAF::dApplicationconfiguredbySystemConfiguration(UML::Aggregation)" type="string" description="" unit="" values="" default="Application configured by System Configuration"/>
+					<Tag name="DAF::dApplicationRunsInNode(UML::Association)" type="string" description="" unit="" values="" default="Application is run By Node"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Other deployment Elements" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. ">
@@ -47,11 +47,11 @@
 					<Apply type="ToolboxPage"/>
 				</AppliesTo>
 				<TaggedValues>
+					<Tag name="DAF::dPublicCluster(UML::Class)" type="" description="" unit="" values="" default="Cluster"/>
+					<Tag name="DAF::dRegion(UML::Class)" type="" description="" unit="" values="" default="Region"/>
+					<Tag name="DAF::dSecurityGroup(UML::Class)" type="" description="" unit="" values="" default="Security Group"/>
+					<Tag name="DAF::dZone(UML::Class)" type="" description="" unit="" values="" default="Zone"/>
 					<Tag name="isCollapsed" type="" description="" unit="" values="" default="true"/>
-					<Tag name="Strereotypes::dPublicCluster(UML::Class)" type="" description="" unit="" values="" default="Cluster"/>
-					<Tag name="Strereotypes::dRegion(UML::Class)" type="" description="" unit="" values="" default="Region"/>
-					<Tag name="Strereotypes::dSecurityGroup(UML::Class)" type="" description="" unit="" values="" default="Security Group"/>
-					<Tag name="Strereotypes::dZone(UML::Class)" type="" description="" unit="" values="" default="Zone"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

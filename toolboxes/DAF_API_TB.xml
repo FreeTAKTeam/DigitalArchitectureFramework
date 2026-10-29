@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="48791CFC-E" name="DAF_API" version="6.1.9" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
+	<Documentation id="48791CFC-E" name="DAF_API" version="7.0" alias="DAF API " notes="a DAF toolbook for OpenAPI "/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="API Elements" notes="toolbox for managing APIs" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -35,8 +35,6 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="DAF::dAPIAggregatesSchema(UML::Association)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
-					<Tag name="DAF::dJsonAttributeAssociattedToType(UML::Association)" type="string" description="" unit="" values="" default=""/>
-					<Tag name="DAF::dDataTypeGeneralizeType(UML::Generatlization)" type="string" description="" unit="" values="" default="Data Type Generalizes Type"/>
 					<Tag name="DAF::dJSONElement_associates_JSONElement(UML::Association)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::dPolymorphicCollection(UML::Association)" type="string" description="" unit="" values="" default="Polymorphic Collection"/>
 					<Tag name="DAF::dJSON_SchemaSubSetGeneralizes_JSON_Schema(UML::Association)" type="string" description="" unit="" values="" default="Schema Generalizes Schema"/>
@@ -49,6 +47,7 @@
 					<Tag name="DAF::dSchemaGeneralizesSchema(UML::Generalization)" type="string" description="" unit="" values="" default="Schema Generalization"/>
 					<Tag name="DAF::dSchemaAssociatesElement(UML::Aggregation)" type="string" description="" unit="" values="" default="Schema Associates Element"/>
 					<Tag name="DAF::dAPIAggregatesSchema(UML::Aggregation)" type="string" description="" unit="" values="" default="Aggregates Schema"/>
+					<Tag name="DAF::dServiceRealizedByAPI(UML::Realization)" type="string" description="" unit="" values="" default="Service Realized By API"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

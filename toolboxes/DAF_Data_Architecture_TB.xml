@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="windows-1252"?>
+<?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="884E7DC1-9" name="DAF_Data_Architecture_TB" version="5.0 Alpha2" alias="DAF Data Architecture" notes="A toolbox for managing Data Architecture"/>
+	<Documentation id="884E7DC1-9" name="DAF_Data_Architecture_TB" version="7.0" alias="DAF Data Architecture" notes="A toolbox for managing Data Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="DataEntities" notes="Contains he elements for the Data Architecture" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -28,6 +28,9 @@
 					<Tag name="UML::Generalization" type="int" description="" unit="" values="" default="Generalization"/>
 					<Tag name="UML::Realization" type="int" description="" unit="" values="" default="Realization"/>
 					<Tag name="UML::Association" type="int" description="" unit="" values="" default="Association"/>
+					<Tag name="DAF::dDataEntityInformsCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="informs Capability"/>
+					<Tag name="DAF::dEntityAssociatesEntity(UML::Association)" type="string" description="" unit="" values="" default="Entity Associates Entity"/>
+					<Tag name="DAF::dModelClassRealizesEntity(UML::Realization)" type="string" description="" unit="" values="" default="Model Class Realizes Entity"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Model" alias="Model" notes="Contains elements for MVC architecture. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -37,8 +40,8 @@
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dController" type="" description="" unit="" values="" default="Controller"/>
+					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
 					<Tag name="DAF::dModelClass" type="" description="" unit="" values="" default="ModelClass"/>
 					<Tag name="DAF::dValue" type="" description="" unit="" values="" default="Property"/>

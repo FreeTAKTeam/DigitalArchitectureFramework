@@ -1,6 +1,6 @@
 <?xml  version='1.0' encoding='utf-8' ?>
 <UMLProfile profiletype="uml2">
-	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="6.1.4" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
+	<Documentation id="A3385740-F" name="DAF_Business_Architecture_TB" version="7.0" alias="DAF  Business Architecture" notes="A toolbox for manage Business Architecture"/>
 	<Content>
 		<Stereotypes>
 			<Stereotype name="Analysis" alias="Analysis" notes="Contains the list of elements used in Analysis Phase. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -19,6 +19,7 @@
 					<Tag name="DAF::dRole" type="" description="" unit="" values="" default="Role"/>
 					<Tag name="DAF::dBusinessUseCase" type="" description="" unit="" values="" default="Business Use Case"/>
 					<Tag name="DAF::dActor" type="" description="" unit="" values="" default="Actor"/>
+					<Tag name="DAF::dContract(UML::Class)" type="string" description="" unit="" values="" default="Contract"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Measurement" alias="Measurement" notes="Contains the elements for Measurement. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -32,6 +33,7 @@
 					<Tag name="DAF::dMeasurementIndicator" type="" description="" unit="" values="" default="Measurement Indicator"/>
 					<Tag name="DAF::dMeasurementGrouping" type="" description="" unit="" values="" default="Measurement Grouping"/>
 					<Tag name="DAF::dMeasurementCategory" type="" description="" unit="" values="" default="Measurement Category"/>
+					<Tag name="DAF::dQuantityValue(UML::Class)" type="string" description="" unit="" values="" default="Quantity"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Requirement" alias="Requirement" notes="Contains the elements to capture the requirements" bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">
@@ -122,6 +124,8 @@
 					<Tag name="DAF::dAreaAggregatesCategories(UML::Aggregation)" type="string" description="" unit="" values="" default="Area aggregates Categories"/>
 					<Tag name="DAF::dCategoryaggregatesGroups(UML::Aggregation)" type="string" description="" unit="" values="" default="aggregates Groups"/>
 					<Tag name="DAF::dGroupAggregatesKPI(UML::Aggregation)" type="string" description="" unit="" values="" default="Group aggregates KPI"/>
+					<Tag name="DAF::dMeasurementIndicatorImprovesMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default="KPI influences KPI"/>
+					<Tag name="DAF::dMeasurementIndicatorWorsenMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default="Worsen KPI"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>
