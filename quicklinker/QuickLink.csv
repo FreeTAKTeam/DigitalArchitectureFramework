@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2026-10-28 8:24:21 PM
+//generated:2026-10-29 9:17:54 AM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -316,10 +316,10 @@ Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasureme
 Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,directed,,Improves KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorImprovesMeasurementIndicator,from,,Improved KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dMeasurementIndicator -> dMeasurementIndicatorWorsenMeasurementIndicator -> dMeasurementIndicator
-Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,is worsen by,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,Worsen KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,,is worsen by,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,,Worsen KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,Worsen KPI,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,Class,dMeasurementIndicator,,,,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,is worsen by,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,directed,,Worsen KPI,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dMeasurementIndicator,,,,Class,dMeasurementIndicator,Dependency,dMeasurementIndicatorWorsenMeasurementIndicator,from,,is worsen by,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dModelClass -> dModelClassRealizesEntity -> dDataEntity
 Class,dModelClass,Class,dDataEntity,,,,Realization,dModelClassRealizesEntity,directed,Realizes Entity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,Class,dModelClass,,,,Realization,dModelClassRealizesEntity,from,is realized by Class,,TRUE,,TRUE,TRUE,DAF,0,,,,,

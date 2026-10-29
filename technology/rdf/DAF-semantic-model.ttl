@@ -19,7 +19,7 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-10-28T21:01:53"^^xsd:dateTime ;
+    dcterms:created "2026-10-29T09:19:15"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -5687,6 +5687,15 @@ dafdef:TaggedValue__00F3A002_FC67_4ec2_A3A2_5F7942AEFEB2__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
 
+daf:dContract dafm:hasConstraint dafdef:Constraint__00F3A002_FC67_4ec2_A3A2_5F7942AEFEB2__effectiveTo_is_after_effectiveFrom_when_both_are_set_1 .
+dafdef:Constraint__00F3A002_FC67_4ec2_A3A2_5F7942AEFEB2__effectiveTo_is_after_effectiveFrom_when_both_are_set_1
+    a dafm:Constraint ;
+    dafm:constraintName "effectiveTo is after effectiveFrom when both are set" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
 dafdef:Property_F6239137BB184bb39AB6F2210334B042
     a dafm:PropertyDefinition ;
     rdfs:label "ConsumingService" ;
@@ -5696,7 +5705,7 @@ dafdef:Property_F6239137BB184bb39AB6F2210334B042
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__ConsumingService ;
     rdfs:comment "The service which consumes the contract. " ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_F6239137BB184bb39AB6F2210334B042 .
@@ -5719,7 +5728,7 @@ dafdef:Property_F6239137BB184bb39AB6F2210334B042 dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__ConsumingService ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "ConsumingService"
 ] .
@@ -5733,7 +5742,7 @@ dafdef:Property_n_2A1BF67E6ACF489fB3D12C978DF742EF
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__Description ;
     rdfs:comment "Description for the contract. " ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_2A1BF67E6ACF489fB3D12C978DF742EF .
@@ -5757,7 +5766,7 @@ dafdef:Property_n_2A1BF67E6ACF489fB3D12C978DF742EF dafm:attributeContainment "No
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__Description ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "Description"
 ] .
@@ -5771,7 +5780,7 @@ dafdef:Property_n_811AD92DD0D0474692088F7923B27FB9
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__Growth ;
     rdfs:comment "Expected future growth rate of service request." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_811AD92DD0D0474692088F7923B27FB9 .
@@ -5794,7 +5803,7 @@ dafdef:Property_n_811AD92DD0D0474692088F7923B27FB9 dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__Growth ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "Growth"
 ] .
@@ -5808,7 +5817,7 @@ dafdef:Property_E2DAEE11866D46e3BDF7DF9928A000B0
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__ProvidingService ;
     rdfs:comment "The service which provides this Contract. " ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_E2DAEE11866D46e3BDF7DF9928A000B0 .
@@ -5831,7 +5840,7 @@ dafdef:Property_E2DAEE11866D46e3BDF7DF9928A000B0 dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__ProvidingService ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "ProvidingService"
 ] .
@@ -5845,7 +5854,7 @@ dafdef:Property_n_119C71E1767F4b9aA6461E0BBDCF8C78
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__ResponseRequirements ;
     rdfs:comment "Response SLA times that the service provider must meet for particular operations." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_119C71E1767F4b9aA6461E0BBDCF8C78 .
@@ -5868,7 +5877,7 @@ dafdef:Property_n_119C71E1767F4b9aA6461E0BBDCF8C78 dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__ResponseRequirements ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "ResponseRequirements"
 ] .
@@ -5882,7 +5891,7 @@ dafdef:Property_E6809DB5B7CF4ace9111983FB2CFAE3C
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__ServiceTimes ;
     rdfs:comment "Hours during which the service must be available." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_E6809DB5B7CF4ace9111983FB2CFAE3C .
@@ -5905,7 +5914,7 @@ dafdef:Property_E6809DB5B7CF4ace9111983FB2CFAE3C dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__ServiceTimes ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "ServiceTimes"
 ] .
@@ -5919,7 +5928,7 @@ dafdef:Property_D68BDBF4F53F40f58D8618DDAA205512
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__Throughput ;
     rdfs:comment "Required throughput capacity." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_D68BDBF4F53F40f58D8618DDAA205512 .
@@ -5942,7 +5951,7 @@ dafdef:Property_D68BDBF4F53F40f58D8618DDAA205512 dafm:attributeLength "0" .
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__Throughput ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "Throughput"
 ] .
@@ -5956,7 +5965,7 @@ dafdef:Property_F19F0D7300AE406bB2B716E1EDAB21A1
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__AvailabilityCharacteristics ;
     rdfs:comment "Degree to which something is available for use." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_F19F0D7300AE406bB2B716E1EDAB21A1 .
@@ -5980,7 +5989,7 @@ dafdef:Property_F19F0D7300AE406bB2B716E1EDAB21A1 dafm:attributeContainment "Not 
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__AvailabilityCharacteristics ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "AvailabilityCharacteristics"
 ] .
@@ -5989,21 +5998,22 @@ dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6
     a dafm:PropertyDefinition ;
     rdfs:label "Owner" ;
     dafm:eaGuid "{50CF2F91-F420-4de8-BF54-982D818AD6E6}" ;
-    dafm:sourceDatatype "String" ;
-    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:sourceDatatype "dRole" ;
+    dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__Owner ;
     rdfs:comment "Owner of the architecture entity." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 .
+dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:classifier daf:dRole .
 
 dafp:dContract__Owner
-    a owl:DatatypeProperty ;
+    a owl:ObjectProperty ;
     rdfs:label "Owner" ;
     rdfs:domain daf:dContract ;
-    rdfs:range xsd:string ;
+    rdfs:range daf:dRole ;
     rdfs:comment "Owner of the architecture entity." .
 
 dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:attributeVisibility "Public" .
@@ -6014,11 +6024,12 @@ dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:isOrdered false .
 dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:isStatic false .
 dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:attributeLength "0" .
 dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:attributeContainment "Not Specified" .
+dafdef:Property_n_50CF2F91F4204de8BF54982D818AD6E6 dafm:classifier daf:dRole .
 
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__Owner ;
-    sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:class daf:dRole ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "Owner"
 ] .
@@ -6032,7 +6043,7 @@ dafdef:Property_n_725865BBE464413e848C4B4EB06257C7
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__Source ;
     rdfs:comment "Location from where the information was collected." ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_725865BBE464413e848C4B4EB06257C7 .
@@ -6056,7 +6067,7 @@ dafdef:Property_n_725865BBE464413e848C4B4EB06257C7 dafm:attributeContainment "No
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__Source ;
     sh:datatype xsd:string ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "Source"
 ] .
@@ -6065,21 +6076,22 @@ dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB
     a dafm:PropertyDefinition ;
     rdfs:label "pricingBasis" ;
     dafm:eaGuid "{F22DD63E-7201-4925-AE4F-A88D9A139EEB}" ;
-    dafm:sourceDatatype "dQuantityValue" ;
-    dafm:typingStatus dafm:ClassifierType ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__pricingBasis ;
-    dafm:minimumCardinality "1" ;
+    rdfs:comment "What the price is charged for, e.g. per subscriber, per transaction, flat fee." ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB .
-dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:classifier daf:dQuantityValue .
 
 dafp:dContract__pricingBasis
-    a owl:ObjectProperty ;
+    a owl:DatatypeProperty ;
     rdfs:label "pricingBasis" ;
     rdfs:domain daf:dContract ;
-    rdfs:range daf:dQuantityValue .
+    rdfs:range xsd:string ;
+    rdfs:comment "What the price is charged for, e.g. per subscriber, per transaction, flat fee." .
 
 dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:attributeVisibility "Private" .
 dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:isCollection false .
@@ -6088,12 +6100,11 @@ dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:isId false .
 dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:isOrdered false .
 dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:isStatic false .
 dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:attributeContainment "Not Specified" .
-dafdef:Property_F22DD63E72014925AE4FA88D9A139EEB dafm:classifier daf:dQuantityValue .
 
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__pricingBasis ;
-    sh:class daf:dQuantityValue ;
-    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "pricingBasis"
 ] .
@@ -6102,11 +6113,12 @@ dafdef:Property_E115E10DA71246e2B108F243E080A9F4
     a dafm:PropertyDefinition ;
     rdfs:label "billableUnit" ;
     dafm:eaGuid "{E115E10D-A712-46e2-B108-F243E080A9F4}" ;
-    dafm:sourceDatatype "Int32" ;
+    dafm:sourceDatatype "String" ;
     dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__billableUnit ;
-    dafm:minimumCardinality "1" ;
+    rdfs:comment "The unit that is billed, as an ISO 4217 or UCUM code, e.g. {transaction}, GBy." ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_E115E10DA71246e2B108F243E080A9F4 .
@@ -6115,7 +6127,8 @@ dafp:dContract__billableUnit
     a owl:DatatypeProperty ;
     rdfs:label "billableUnit" ;
     rdfs:domain daf:dContract ;
-    rdfs:range xsd:int .
+    rdfs:range xsd:string ;
+    rdfs:comment "The unit that is billed, as an ISO 4217 or UCUM code, e.g. {transaction}, GBy." .
 
 dafdef:Property_E115E10DA71246e2B108F243E080A9F4 dafm:attributeVisibility "Private" .
 dafdef:Property_E115E10DA71246e2B108F243E080A9F4 dafm:isCollection false .
@@ -6127,8 +6140,8 @@ dafdef:Property_E115E10DA71246e2B108F243E080A9F4 dafm:attributeContainment "Not 
 
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__billableUnit ;
-    sh:datatype xsd:int ;
-    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "billableUnit"
 ] .
@@ -6141,7 +6154,8 @@ dafdef:Property_n_3E87A066355A43a6B21D881995D8D270
     dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__tariff ;
-    dafm:minimumCardinality "1" ;
+    rdfs:comment "The price per billable unit, e.g. 0.02 EUR per {transaction}." ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_3E87A066355A43a6B21D881995D8D270 .
@@ -6151,7 +6165,8 @@ dafp:dContract__tariff
     a owl:ObjectProperty ;
     rdfs:label "tariff" ;
     rdfs:domain daf:dContract ;
-    rdfs:range daf:dQuantityValue .
+    rdfs:range daf:dQuantityValue ;
+    rdfs:comment "The price per billable unit, e.g. 0.02 EUR per {transaction}." .
 
 dafdef:Property_n_3E87A066355A43a6B21D881995D8D270 dafm:attributeVisibility "Private" .
 dafdef:Property_n_3E87A066355A43a6B21D881995D8D270 dafm:isCollection false .
@@ -6165,29 +6180,31 @@ dafdef:Property_n_3E87A066355A43a6B21D881995D8D270 dafm:classifier daf:dQuantity
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__tariff ;
     sh:class daf:dQuantityValue ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "tariff"
 ] .
 
 dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51
     a dafm:PropertyDefinition ;
-    rdfs:label "effectivePeriod" ;
+    rdfs:label "effectiveFrom" ;
     dafm:eaGuid "{83484B37-AC90-4d2d-B81F-687AFFC44A51}" ;
-    dafm:sourceDatatype "DateTime" ;
+    dafm:sourceDatatype "Date" ;
     dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dContract__effectivePeriod ;
-    dafm:minimumCardinality "1" ;
+    dafm:projectionPredicate dafp:dContract__effectiveFrom ;
+    rdfs:comment "The first day the contract applies." ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51 .
 
-dafp:dContract__effectivePeriod
+dafp:dContract__effectiveFrom
     a owl:DatatypeProperty ;
-    rdfs:label "effectivePeriod" ;
+    rdfs:label "effectiveFrom" ;
     rdfs:domain daf:dContract ;
-    rdfs:range xsd:dateTime .
+    rdfs:range xsd:date ;
+    rdfs:comment "The first day the contract applies." .
 
 dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51 dafm:attributeVisibility "Private" .
 dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51 dafm:isCollection false .
@@ -6198,22 +6215,60 @@ dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51 dafm:isStatic false .
 dafdef:Property_n_83484B37AC904d2dB81F687AFFC44A51 dafm:attributeContainment "Not Specified" .
 
 dafshape:dContractShape sh:property [
-    sh:path dafp:dContract__effectivePeriod ;
-    sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
+    sh:path dafp:dContract__effectiveFrom ;
+    sh:datatype xsd:date ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
-    sh:name "effectivePeriod"
+    sh:name "effectiveFrom"
+] .
+
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8
+    a dafm:PropertyDefinition ;
+    rdfs:label "effectiveTo" ;
+    dafm:eaGuid "{1B902070-7B1A-499e-9AF3-BBA63B4D9CB8}" ;
+    dafm:sourceDatatype "Date" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dContract__effectiveTo ;
+    rdfs:comment "The last day the contract applies; after effectiveFrom." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" .
+
+daf:dContract dafm:hasPropertyDefinition dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 .
+
+dafp:dContract__effectiveTo
+    a owl:DatatypeProperty ;
+    rdfs:label "effectiveTo" ;
+    rdfs:domain daf:dContract ;
+    rdfs:range xsd:date ;
+    rdfs:comment "The last day the contract applies; after effectiveFrom." .
+
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:attributeVisibility "Public" .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:isCollection false .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:isConst false .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:isId false .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:isOrdered false .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:isStatic false .
+dafdef:Property_n_1B9020707B1A499e9AF3BBA63B4D9CB8 dafm:attributeContainment "Not Specified" .
+
+dafshape:dContractShape sh:property [
+    sh:path dafp:dContract__effectiveTo ;
+    sh:datatype xsd:date ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "effectiveTo"
 ] .
 
 dafdef:Property_F29354DD4C8E4318A30FBB42924A523F
     a dafm:PropertyDefinition ;
     rdfs:label "renewal" ;
     dafm:eaGuid "{F29354DD-4C8E-4318-A30F-BB42924A523F}" ;
-    dafm:sourceDatatype "DateTime" ;
+    dafm:sourceDatatype "Duration" ;
     dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dContract__renewal ;
-    dafm:minimumCardinality "1" ;
+    rdfs:comment "The renewal term, e.g. P1Y." ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dContract dafm:hasPropertyDefinition dafdef:Property_F29354DD4C8E4318A30FBB42924A523F .
@@ -6222,7 +6277,8 @@ dafp:dContract__renewal
     a owl:DatatypeProperty ;
     rdfs:label "renewal" ;
     rdfs:domain daf:dContract ;
-    rdfs:range xsd:dateTime .
+    rdfs:range xsd:duration ;
+    rdfs:comment "The renewal term, e.g. P1Y." .
 
 dafdef:Property_F29354DD4C8E4318A30FBB42924A523F dafm:attributeVisibility "Private" .
 dafdef:Property_F29354DD4C8E4318A30FBB42924A523F dafm:isCollection false .
@@ -6234,8 +6290,8 @@ dafdef:Property_F29354DD4C8E4318A30FBB42924A523F dafm:attributeContainment "Not 
 
 dafshape:dContractShape sh:property [
     sh:path dafp:dContract__renewal ;
-    sh:datatype xsd:dateTime ;
-    sh:minCount 1 ;
+    sh:datatype xsd:duration ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "renewal"
 ] .
@@ -8422,7 +8478,7 @@ dafdef:Property_n_333056F114854771AA4DD9811E4B3F09
     dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dGoal__Value_Goal ;
-    rdfs:comment "The amount by which the current value is to be altered" ;
+    rdfs:comment "The target value this goal intend to achieve" ;
     dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
@@ -8434,7 +8490,7 @@ dafp:dGoal__Value_Goal
     rdfs:label "Value_Goal" ;
     rdfs:domain daf:dGoal ;
     rdfs:range daf:dQuantityValue ;
-    rdfs:comment "The amount by which the current value is to be altered" .
+    rdfs:comment "The target value this goal intend to achieve" .
 
 dafdef:Property_n_333056F114854771AA4DD9811E4B3F09 dafm:attributeVisibility "Public" .
 dafdef:Property_n_333056F114854771AA4DD9811E4B3F09 dafm:isCollection false .
@@ -8540,7 +8596,7 @@ dafdef:Property_n_45B4050ED2454a93885C73AE08198ECC
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dGoal__AssumptionType ;
     rdfs:comment "The assumptions made to achieve the goal. " ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "*" ;
     dafm:enumeration dafenum:dAssumptionType .
 
@@ -8567,7 +8623,7 @@ dafshape:dGoalShape sh:property [
     sh:path dafp:dGoal__AssumptionType ;
     sh:datatype xsd:string ;
     sh:in ( "Enterprise" "Business" "System" "Application" "Technology" "Data" ) ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:name "AssumptionType"
 ] .
 
@@ -11977,7 +12033,7 @@ dafdef:Property_n_8F1F48E2514B45b980EEF4AA27367B00
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dMeasurementIndicator__SatisfactionLevel ;
     rdfs:comment "Satisfaction level for the Measurement Indicator, target amount to be reached and/or Max value" ;
-    dafm:minimumCardinality "1" ;
+    dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dMeasurementIndicator dafm:hasPropertyDefinition dafdef:Property_n_8F1F48E2514B45b980EEF4AA27367B00 .
@@ -12003,7 +12059,7 @@ dafdef:Property_n_8F1F48E2514B45b980EEF4AA27367B00 dafm:classifier daf:dQuantity
 dafshape:dMeasurementIndicatorShape sh:property [
     sh:path dafp:dMeasurementIndicator__SatisfactionLevel ;
     sh:class daf:dQuantityValue ;
-    sh:minCount 1 ;
+    sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "SatisfactionLevel"
 ] .
@@ -26549,7 +26605,7 @@ dafshape:dMeasurementIndicatorShape sh:property [
 dafrel:dMeasurementIndicatorWorsenMeasurementIndicator
     a owl:Class, dafm:RelationshipType ;
     rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "dMeasurementIndicatorWorsenMeasurementIndicator" ;
+    rdfs:label "Worsen KPI" ;
     skos:notation "dMeasurementIndicatorWorsenMeasurementIndicator" ;
     dafm:eaGuid "{87D1A30B-1DCD-434d-A5E4-D59B6908F538}" ;
     dafm:sourceClass daf:dMeasurementIndicator ;
@@ -26558,8 +26614,9 @@ dafrel:dMeasurementIndicatorWorsenMeasurementIndicator
     dafm:inversePredicate dafpred:dMeasurementIndicatorWorsenMeasurementIndicator_inverse ;
     dafm:relationshipKind "Dependency" ;
     dafm:relationshipKindSource "Metaclass" ;
-    dafm:forwardRole "is worsen by" ;
-    dafm:backwardRole "Worsen KPI" ;
+    skos:altLabel "dMeasurementIndicatorWorsenMeasurementIndicator" ;
+    dafm:forwardRole "Worsen KPI" ;
+    dafm:backwardRole "is worsen by" ;
     dafm:targetMultiplicity "0..*" ;
     dafm:sourceMultiplicity "0..*" .
 
@@ -26577,14 +26634,14 @@ dafpred:dMeasurementIndicatorWorsenMeasurementIndicator
     rdfs:domain daf:dMeasurementIndicator ;
     rdfs:range daf:dMeasurementIndicator ;
     owl:inverseOf dafpred:dMeasurementIndicatorWorsenMeasurementIndicator_inverse ;
-    rdfs:label "is worsen by" .
+    rdfs:label "Worsen KPI" .
 
 dafpred:dMeasurementIndicatorWorsenMeasurementIndicator_inverse
     a owl:ObjectProperty ;
     rdfs:domain daf:dMeasurementIndicator ;
     rdfs:range daf:dMeasurementIndicator ;
     owl:inverseOf dafpred:dMeasurementIndicatorWorsenMeasurementIndicator ;
-    rdfs:label "Worsen KPI" .
+    rdfs:label "is worsen by" .
 
 dafrel:dMeasurementIndicatorWorsenMeasurementIndicator dafm:sourceEnd dafdef:RelationshipEnd_dMeasurementIndicatorWorsenMeasurementIndicator_source ; dafm:targetEnd dafdef:RelationshipEnd_dMeasurementIndicatorWorsenMeasurementIndicator_target .
 
@@ -26594,7 +26651,7 @@ dafdef:RelationshipEnd_dMeasurementIndicatorWorsenMeasurementIndicator_source
     dafm:endClass daf:dMeasurementIndicator ;
     dafm:cardinality "0..*" ;
     dafm:aggregation "None" ;
-    dafm:role "Worsen KPI" ;
+    dafm:role "is worsen by" ;
     dafm:navigable "Non-Navigable" ;
     dafm:containment "Unspecified" ;
     dafm:visibility "Public" ;
@@ -26611,7 +26668,7 @@ dafdef:RelationshipEnd_dMeasurementIndicatorWorsenMeasurementIndicator_target
     dafm:endClass daf:dMeasurementIndicator ;
     dafm:cardinality "0..*" ;
     dafm:aggregation "None" ;
-    dafm:role "is worsen by" ;
+    dafm:role "Worsen KPI" ;
     dafm:navigable "Navigable" ;
     dafm:containment "Unspecified" ;
     dafm:visibility "Public" ;
@@ -30666,20 +30723,20 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-10-28T21:02:39"^^xsd:dateTime ;
+    dcterms:created "2026-10-29T09:20:00"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 75 ;
     dafm:supportingClassCount 2 ;
     dafm:registeredClassCount 77 ;
     dafm:enumerationCount 38 ;
-    dafm:propertyCount 326 ;
+    dafm:propertyCount 327 ;
     dafm:relationshipCount 99 ;
     dafm:ignoredNoteLinkCount 2 ;
-    dafm:explicitPrimitivePropertyCount 237 ;
+    dafm:explicitPrimitivePropertyCount 238 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
-    dafm:suppressedDuplicateIdPropertyCount 22 ;
+    dafm:suppressedDuplicateIdPropertyCount 21 ;
     dafm:classifierTypedPropertyCount 67 ;
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
