@@ -19,7 +19,7 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-10-29T09:19:15"^^xsd:dateTime ;
+    dcterms:created "2026-10-29T11:28:49"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -6351,14 +6351,15 @@ dafdef:TaggedValue__BC912C94_840F_402e_A9CC_AB8B40D652CC__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
 
-# Concept: dCostPeriod
+# Concept: Cost Period
 daf:dCostPeriod
     a owl:Class, dafm:ConceptDefinition ;
-    rdfs:label "dCostPeriod" ;
+    rdfs:label "Cost Period" ;
     skos:notation "dCostPeriod" ;
     dafm:eaGuid "{A3395B0C-6254-46cb-B818-C0CA9765F4F6}" ;
     dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
     dafm:packagePath "Delta Architectural Framework/DAF/Metamodel" ;
+    skos:altLabel "dCostPeriod" ;
     rdfs:comment "The spend of an initiative in one period, planned or actual. A value type: it has no identity of its own." ;
     dafm:umlMetaclass "Class" .
 
@@ -6379,7 +6380,7 @@ daf:dCostPeriod dafm:sourceVisibility "Public" .
 daf:dCostPeriod dafm:sourceComplexity "1" .
 daf:dCostPeriod dafm:sourceLanguage "Java" .
 daf:dCostPeriod dcterms:created "2026-10-28T15:12:29"^^xsd:dateTime .
-daf:dCostPeriod dcterms:modified "2026-10-28T15:12:29"^^xsd:dateTime .
+daf:dCostPeriod dcterms:modified "2026-10-29T10:44:58"^^xsd:dateTime .
 
 daf:dCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1 .
 dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1
@@ -22719,11 +22720,125 @@ dafshape:dVolumeShape sh:property [
     sh:name "inverse dContainerAggregatesVolume"
 ] .
 
+# Relationship: ContractRelatedProduct
+dafrel:ContractRelatedProduct
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Contract is Related to Product" ;
+    skos:notation "ContractRelatedProduct" ;
+    dafm:eaGuid "{D386F73A-E834-4f36-86E7-361EA989672A}" ;
+    dafm:sourceClass daf:dContract ;
+    dafm:targetClass daf:dProduct ;
+    dafm:projectionPredicate dafpred:ContractRelatedProduct ;
+    dafm:inversePredicate dafpred:ContractRelatedProduct_inverse ;
+    dafm:relationshipKind "Association" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "ContractRelatedProduct" ;
+    dafm:forwardRole "relates to Product" ;
+    dafm:backwardRole "is related to Contract" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..*" .
+
+dafrel:ContractRelatedProduct dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:ContractRelatedProduct dafm:forwardAuthoringDirection "directed" .
+dafrel:ContractRelatedProduct dafm:backwardAuthoringDirection "from" .
+dafrel:ContractRelatedProduct dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:ContractRelatedProduct dafm:sourceConnectorType "Association" .
+dafrel:ContractRelatedProduct dafm:sourceDirection "Source -> Destination" .
+dafrel:ContractRelatedProduct dafm:sourceStereotype "Link" .
+
+dafpred:ContractRelatedProduct
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dContract ;
+    rdfs:range daf:dProduct ;
+    owl:inverseOf dafpred:ContractRelatedProduct_inverse ;
+    rdfs:label "relates to Product" .
+
+dafpred:ContractRelatedProduct_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dProduct ;
+    rdfs:range daf:dContract ;
+    owl:inverseOf dafpred:ContractRelatedProduct ;
+    rdfs:label "is related to Contract" .
+
+dafrel:ContractRelatedProduct dafm:sourceEnd dafdef:RelationshipEnd_ContractRelatedProduct_source ; dafm:targetEnd dafdef:RelationshipEnd_ContractRelatedProduct_target .
+
+dafdef:RelationshipEnd_ContractRelatedProduct_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dContract ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "is related to Contract" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:containment "Unspecified" ;
+    dafm:visibility "Public" ;
+    dafm:isChangeable "none" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_ContractRelatedProduct_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dProduct ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "relates to Product" ;
+    dafm:navigable "Navigable" ;
+    dafm:containment "Unspecified" ;
+    dafm:visibility "Public" ;
+    dafm:isChangeable "none" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:ContractRelatedProduct dafm:hasTaggedValue dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Metaclass_1 .
+dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Association" ;
+    dafm:ownerKind "connector" ;
+    dafm:tagNotes "Values: Aggregation,Association,Composition,Dependency,Generatlization,Realization,Abstraction,Assembly,Include,Trace\nDefault: Association\n" .
+
+dafrel:ContractRelatedProduct dafm:hasTaggedValue dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Redefines_2 .
+dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:ContractRelatedProductRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:ContractRelatedProduct ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dContract ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dProduct ] .
+
+dafshape:dContractShape sh:property [
+    sh:path dafpred:ContractRelatedProduct ;
+    sh:class daf:dProduct ;
+    sh:minCount 0 ;
+    sh:name "ContractRelatedProduct"
+] .
+
+dafshape:dProductShape sh:property [
+    sh:path [ sh:inversePath dafpred:ContractRelatedProduct ] ;
+    sh:class daf:dContract ;
+    sh:minCount 0 ;
+    sh:name "inverse ContractRelatedProduct"
+] .
+
 # Relationship: dContractServesActor
 dafrel:dContractServesActor
     a owl:Class, dafm:RelationshipType ;
     rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "dContractServesActor" ;
+    rdfs:label "Contract Serves Actor" ;
     skos:notation "dContractServesActor" ;
     dafm:eaGuid "{F8FB72D5-3DC3-43de-9C92-A1353AA3C86C}" ;
     dafm:sourceClass daf:dContract ;
@@ -22732,6 +22847,7 @@ dafrel:dContractServesActor
     dafm:inversePredicate dafpred:dContractServesActor_inverse ;
     dafm:relationshipKind "Association" ;
     dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dContractServesActor" ;
     rdfs:comment "a contract is serving a actor of type Partner" ;
     dafm:forwardRole "is serving actor" ;
     dafm:backwardRole "served by contract" ;
@@ -24547,7 +24663,7 @@ dafshape:dGoalShape sh:property [
 dafrel:dGoalTargetsdMeasurementIndicator
     a owl:Class, dafm:RelationshipType ;
     rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "dGoalTargetsdMeasurementIndicator" ;
+    rdfs:label "Goal Targets KPI" ;
     skos:notation "dGoalTargetsdMeasurementIndicator" ;
     dafm:eaGuid "{C6DAB034-0EFC-4593-9184-51C53F1FF20D}" ;
     dafm:sourceClass daf:dGoal ;
@@ -24556,6 +24672,7 @@ dafrel:dGoalTargetsdMeasurementIndicator
     dafm:inversePredicate dafpred:dGoalTargetsdMeasurementIndicator_inverse ;
     dafm:relationshipKind "Dependency" ;
     dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dGoalTargetsdMeasurementIndicator" ;
     dafm:forwardRole "Targets KPI" ;
     dafm:backwardRole "has target Goal" ;
     dafm:targetMultiplicity "0..*" ;
@@ -26491,7 +26608,7 @@ dafshape:dMeasurementIndicatorShape sh:property [
 dafrel:dMeasurementIndicatorImprovesMeasurementIndicator
     a owl:Class, dafm:RelationshipType ;
     rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "KPI influences KPI" ;
+    rdfs:label "KPI Improves KPI" ;
     skos:notation "dMeasurementIndicatorImprovesMeasurementIndicator" ;
     dafm:eaGuid "{18257BB6-4E53-4977-965E-DC51D9C0EF78}" ;
     dafm:sourceClass daf:dMeasurementIndicator ;
@@ -28315,119 +28432,6 @@ dafshape:dBusinessProcessShape sh:property [
     sh:class daf:dProduct ;
     sh:minCount 0 ;
     sh:name "inverse dProductIncludesProcess"
-] .
-
-# Relationship: ContractRelatedProduct
-dafrel:ContractRelatedProduct
-    a owl:Class, dafm:RelationshipType ;
-    rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "ContractRelatedProduct" ;
-    skos:notation "ContractRelatedProduct" ;
-    dafm:eaGuid "{D386F73A-E834-4f36-86E7-361EA989672A}" ;
-    dafm:sourceClass daf:dProduct ;
-    dafm:targetClass daf:dContract ;
-    dafm:projectionPredicate dafpred:ContractRelatedProduct ;
-    dafm:inversePredicate dafpred:ContractRelatedProduct_inverse ;
-    dafm:relationshipKind "Association" ;
-    dafm:relationshipKindSource "Metaclass" ;
-    dafm:forwardRole "is related to Product" ;
-    dafm:backwardRole "Related to Contract" ;
-    dafm:targetMultiplicity "0..*" ;
-    dafm:sourceMultiplicity "0..*" .
-
-dafrel:ContractRelatedProduct dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
-dafrel:ContractRelatedProduct dafm:forwardAuthoringDirection "directed" .
-dafrel:ContractRelatedProduct dafm:backwardAuthoringDirection "from" .
-dafrel:ContractRelatedProduct dafm:derivedQuickLinkRowCount 4 .
-
-dafrel:ContractRelatedProduct dafm:sourceConnectorType "Association" .
-dafrel:ContractRelatedProduct dafm:sourceDirection "Destination -> Source" .
-dafrel:ContractRelatedProduct dafm:sourceStereotype "Link" .
-
-dafpred:ContractRelatedProduct
-    a owl:ObjectProperty ;
-    rdfs:domain daf:dProduct ;
-    rdfs:range daf:dContract ;
-    owl:inverseOf dafpred:ContractRelatedProduct_inverse ;
-    rdfs:label "is related to Product" .
-
-dafpred:ContractRelatedProduct_inverse
-    a owl:ObjectProperty ;
-    rdfs:domain daf:dContract ;
-    rdfs:range daf:dProduct ;
-    owl:inverseOf dafpred:ContractRelatedProduct ;
-    rdfs:label "Related to Contract" .
-
-dafrel:ContractRelatedProduct dafm:sourceEnd dafdef:RelationshipEnd_ContractRelatedProduct_source ; dafm:targetEnd dafdef:RelationshipEnd_ContractRelatedProduct_target .
-
-dafdef:RelationshipEnd_ContractRelatedProduct_source
-    a dafm:RelationshipEnd ;
-    dafm:endKind "source" ;
-    dafm:endClass daf:dProduct ;
-    dafm:cardinality "0..*" ;
-    dafm:aggregation "None" ;
-    dafm:role "Related to Contract" ;
-    dafm:navigable "Navigable" ;
-    dafm:containment "Unspecified" ;
-    dafm:visibility "Public" ;
-    dafm:isChangeable "none" ;
-    dafm:isDerived false ;
-    dafm:derivedUnion false ;
-    dafm:allowDuplicates false ;
-    dafm:ownedByClassifier false ;
-    dafm:ordering 0 .
-
-dafdef:RelationshipEnd_ContractRelatedProduct_target
-    a dafm:RelationshipEnd ;
-    dafm:endKind "target" ;
-    dafm:endClass daf:dContract ;
-    dafm:cardinality "0..*" ;
-    dafm:aggregation "None" ;
-    dafm:role "is related to Product" ;
-    dafm:navigable "Unspecified" ;
-    dafm:containment "Unspecified" ;
-    dafm:visibility "Public" ;
-    dafm:isChangeable "none" ;
-    dafm:isDerived false ;
-    dafm:derivedUnion false ;
-    dafm:allowDuplicates false ;
-    dafm:ownedByClassifier false ;
-    dafm:ordering 0 .
-
-dafrel:ContractRelatedProduct dafm:hasTaggedValue dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Metaclass_1 .
-dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Metaclass_1
-    a dafm:TaggedValue ;
-    dafm:tagName "Metaclass" ;
-    dafm:tagValue "Association" ;
-    dafm:ownerKind "connector" ;
-    dafm:tagNotes "Values: Aggregation,Association,Composition,Dependency,Generatlization,Realization,Abstraction,Assembly,Include,Trace\nDefault: Association\n" .
-
-dafrel:ContractRelatedProduct dafm:hasTaggedValue dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Redefines_2 .
-dafdef:TaggedValue__D386F73A_E834_4f36_86E7_361EA989672A__Redefines_2
-    a dafm:TaggedValue ;
-    dafm:tagName "Redefines" ;
-    dafm:tagValue "" ;
-    dafm:ownerKind "connector" .
-
-dafshape:ContractRelatedProductRelationshipShape
-    a sh:NodeShape ;
-    sh:targetClass dafrel:ContractRelatedProduct ;
-    sh:node dafshape:RelationshipShape ;
-    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dProduct ] ;
-    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dContract ] .
-
-dafshape:dProductShape sh:property [
-    sh:path dafpred:ContractRelatedProduct ;
-    sh:class daf:dContract ;
-    sh:minCount 0 ;
-    sh:name "ContractRelatedProduct"
-] .
-
-dafshape:dContractShape sh:property [
-    sh:path [ sh:inversePath dafpred:ContractRelatedProduct ] ;
-    sh:class daf:dProduct ;
-    sh:minCount 0 ;
-    sh:name "inverse ContractRelatedProduct"
 ] .
 
 # Relationship: dProgramIsOrganizedInPackages
@@ -30723,7 +30727,7 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-10-29T09:20:00"^^xsd:dateTime ;
+    dcterms:created "2026-10-29T11:29:38"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 75 ;
