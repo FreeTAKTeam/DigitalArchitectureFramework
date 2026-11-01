@@ -20,6 +20,7 @@
 					<Tag name="DAF::dBusinessUseCase" type="" description="" unit="" values="" default="Business Use Case"/>
 					<Tag name="DAF::dActor" type="" description="" unit="" values="" default="Actor"/>
 					<Tag name="DAF::dContract(UML::Class)" type="string" description="" unit="" values="" default="Contract"/>
+					<Tag name="DAF::dFinancialPeriod(UML::Class)" type="string" description="" unit="" values="" default="Financial Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="DataEntities" notes="Contains he elements for the Data Architecture">
@@ -236,6 +237,9 @@
 					<Tag name="DAF::dRoleHasSkill(UML::Aggregation)" type="string" description="" unit="" values="" default="Role has skill"/>
 					<Tag name="DAF::dStakeholderHasInnerOpinion(UML::Association)" type="string" description="" unit="" values="" default="Stakeholde Has Inner Opinion"/>
 					<Tag name="DAF::dStakeholderHasOpinion(UML::Association)" type="string" description="" unit="" values="" default="Stakeholder Has Opinion"/>
+					<Tag name="DAF::dOrganizationUnitReportsFinancialPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Org Unit Reports Financial Period"/>
+					<Tag name="DAF::dRoleStaffsService(UML::Association)" type="string" description="" unit="" values="" default="Role Staffs Service"/>
+					<Tag name="DAF::dRoleMaintainsApplication(UML::Association)" type="string" description="" unit="" values="" default="Role Maintains Application"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Stakeholders elements" alias="Diagram" notes="UML Diagrams that are represented in the architecture framework. ">
@@ -274,6 +278,7 @@
 					<Tag name="DAF::dEventLeadsToEvent(UML::Association)" type="string" description="" unit="" values="" default="Event Leads to Event"/>
 					<Tag name="DAF::ContractRelatedProduct(UML::Association)" type="string" description="" unit="" values="" default=""/>
 					<Tag name="DAF::dContractServesActor(UML::Association)" type="string" description="" unit="" values="" default=""/>
+					<Tag name="DAF::dProcessControlsProcess(UML::Dependency)" type="string" description="" unit="" values="" default="Process Controls Process"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

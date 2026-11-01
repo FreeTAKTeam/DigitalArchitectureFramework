@@ -3,45 +3,139 @@
 	<Documentation id="6F5508A1-3" name="DAF_StrategicPlanning" version="7.0" notes="DAF_StrategicPlanning"/>
 	<Content>
 		<Stereotypes>
-			<Stereotype name="Strat. Planning Relationships" notes="">
+			<Stereotype name="Strategy" notes="">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dInitiativeIncreasesMaturityOf(UML::Association)" type="" description="" unit="" values="" default="Increases Maturity"/>
-					<Tag name="DAF::dProcessEnsureCorrectOperationOfCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="Ensure the correct Operation of"/>
-					<Tag name="DAF::dCapabilityisMeasuredByKPI(UML::Association)" type="string" description="" unit="" values="" default="is Measured By KPI"/>
-					<Tag name="DAF::dRoleExecutesCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="role Executes Capability"/>
-					<Tag name="DAF::dLogicalApplicationComponentSupportsCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="App Supports Capability"/>
-					<Tag name="DAF::dLocationHostsNode(UML::Aggregation)" type="string" description="" unit="" values="" default="Location Hosts Node"/>
-					<Tag name="DAF::dProductIncludesProcess(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Includes Process"/>
-					<Tag name="DAF::dResourceSupportsCapability(UML::Association)" type="string" description="" unit="" values="" default="Resource supports Capability"/>
-					<Tag name="DAF::dResourceimpactedByRisk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted by Risk"/>
-					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
-					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
-					<Tag name="DAF::dBusinessAreaHasCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="has Capability"/>
+					<Tag name="DAF::dGoal(UML::Class)" type="string" description="" unit="" values="" default="Goal"/>
+					<Tag name="DAF::dObjective(UML::Class)" type="string" description="" unit="" values="" default="Objective"/>
+					<Tag name="DAF::dMeasurementIndicator(UML::Class)" type="string" description="" unit="" values="" default="Measurement Indicator"/>
+					<Tag name="DAF::dCapability(UML::Class)" type="string" description="" unit="" values="" default="Capability"/>
+					<Tag name="DAF::dBusinessArea(UML::Class)" type="string" description="" unit="" values="" default="Business Area"/>
+					<Tag name="DAF::dValueStream(UML::Class)" type="string" description="" unit="" values="" default="Value Stream"/>
+					<Tag name="DAF::dPrinciple(UML::Class)" type="string" description="" unit="" values="" default="Principle"/>
+					<Tag name="DAF::dRisk(UML::Class)" type="string" description="" unit="" values="" default="Risk"/>
 				</TaggedValues>
 			</Stereotype>
-			<Stereotype name="Stategic Planning" notes="Contains Elements for Enterprise Architecture Strategic Planning">
+			<Stereotype name="Strategy Relationships" notes="">
 				<AppliesTo>
 					<Apply type="ToolboxPage">
 						<Property name="isCollapsed" value="true"/>
 					</Apply>
 				</AppliesTo>
 				<TaggedValues>
-					<Tag name="DAF::dBusinessArea(UML::Class)" type="" description="" unit="" values="" default="Biz Area"/>
-					<Tag name="DAF::dDataEntity(UML::Class)" type="" description="" unit="" values="" default="Entity"/>
-					<Tag name="DAF::dObjective" type="int" description="" unit="" values="" default="Objective"/>
-					<Tag name="DAF::dCapability" type="" description="" unit="" values="" default="Capability"/>
-					<Tag name="DAF::dResource" type="" description="" unit="" values="" default="Resource"/>
-					<Tag name="DAF::dProduct" type="" description="" unit="" values="" default="Product"/>
-					<Tag name="DAF::dProgram" type="" description="" unit="" values="" default="Program"/>
-					<Tag name="DAF::dGrowthPackage" type="" description="" unit="" values="" default="Growth Package"/>
-					<Tag name="DAF::dInitiative" type="" description="" unit="" values="" default="Initiative"/>
-					<Tag name="DAF::dPrinciple" type="" description="" unit="" values="" default="Principle"/>
-					<Tag name="DAF::dValueStream(UML::Class)" type="" description="" unit="" values="" default="Value Stream"/>
+					<Tag name="DAF::dGoalAggregatesGoal(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal Aggregates Goal"/>
+					<Tag name="DAF::dGoalhasObjective(UML::Aggregation)" type="string" description="" unit="" values="" default="Goal has Milestone"/>
+					<Tag name="DAF::dGoalTargetsdMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default="Goal Targets KPI"/>
+					<Tag name="DAF::dGoalisOperationalizedByCapability(UML::Realization)" type="string" description="" unit="" values="" default="goal is Operationalized By Capability"/>
+					<Tag name="DAF::dCapabilityisMeasuredByKPI(UML::Association)" type="string" description="" unit="" values="" default="is Measured By KPI"/>
+					<Tag name="DAF::dMeasurementIndicatorImprovesMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default="KPI Improves KPI"/>
+					<Tag name="DAF::dMeasurementIndicatorWorsenMeasurementIndicator(UML::Dependency)" type="string" description="" unit="" values="" default="Worsen KPI"/>
+					<Tag name="DAF::dBusinessAreaHasCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="has Capability"/>
+					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
+					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
+					<Tag name="DAF::dProcessEnsureCorrectOperationOfCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="Ensure the correct Operation of"/>
+					<Tag name="DAF::dLogicalApplicationComponentSupportsCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="App Supports Capability"/>
+					<Tag name="DAF::dRoleExecutesCapability(UML::Aggregation)" type="string" description="" unit="" values="" default="role Executes Capability"/>
+					<Tag name="DAF::dResourceSupportsCapability(UML::Association)" type="string" description="" unit="" values="" default="Resource supports Capability"/>
+					<Tag name="DAF::dRiskIsRelatedToRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Risk is related to Risk"/>
+					<Tag name="DAF::dResourceimpactedByRisk(UML::Association)" type="string" description="" unit="" values="" default="Resource impacted by Risk"/>
+					<Tag name="DAF::dApplicationRisk(UML::Dependency)" type="string" description="" unit="" values="" default="Application Risk"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Portfolio" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dProgram(UML::Class)" type="string" description="" unit="" values="" default="Program"/>
+					<Tag name="DAF::dGrowthPackage(UML::Class)" type="string" description="" unit="" values="" default="Growth Package"/>
+					<Tag name="DAF::dInitiative(UML::Class)" type="string" description="" unit="" values="" default="Initiative"/>
+					<Tag name="DAF::dDecision(UML::Class)" type="string" description="" unit="" values="" default="Decision"/>
+					<Tag name="DAF::dResource(UML::Class)" type="string" description="" unit="" values="" default="Resource"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Portfolio Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dProgramIsOrganizedInPackages(UML::Composition)" type="string" description="" unit="" values="" default="Program is organized In Packages"/>
+					<Tag name="DAF::dPackageIsDeliveredByInitiative(UML::Composition)" type="string" description="" unit="" values="" default="Package is delivered by Initiative"/>
+					<Tag name="DAF::dInitiativeIncreasesMaturityOf(UML::Association)" type="string" description="" unit="" values="" default="Initiative Increases Maturity Of Capability"/>
+					<Tag name="DAF::dInitiativeDeploysApplication(UML::Association)" type="string" description="" unit="" values="" default="Initiative Deploys Application"/>
+					<Tag name="DAF::dInitiativeRetiresApplication(UML::Association)" type="string" description="" unit="" values="" default="Initiative Retires Application"/>
+					<Tag name="DAF::dInitiativeChangesProcess(UML::Association)" type="string" description="" unit="" values="" default="Initiative Changes Process"/>
+					<Tag name="DAF::dInitiativeChangesLogicalComponent(UML::Association)" type="string" description="" unit="" values="" default="Initiative Changes Logical Component"/>
+					<Tag name="DAF::dInitiativeisMakingUseOfDecision(UML::Association)" type="string" description="" unit="" values="" default="Initiative is Making Use Of Decision"/>
+					<Tag name="DAF::dDecisionRefersToPrinciple(UML::Dependency)" type="string" description="" unit="" values="" default="Decision refers To Principle"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Finance" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dOrganizationUnit(UML::Class)" type="string" description="" unit="" values="" default="Org Unit"/>
+					<Tag name="DAF::dFinancialPeriod(UML::Class)" type="string" description="" unit="" values="" default="Financial Period"/>
+					<Tag name="DAF::dProduct(UML::Class)" type="string" description="" unit="" values="" default="Product"/>
+					<Tag name="DAF::dContract(UML::Class)" type="string" description="" unit="" values="" default="Contract"/>
+					<Tag name="DAF::dRole(UML::Class)" type="string" description="" unit="" values="" default="Role"/>
+					<Tag name="DAF::dCostPeriod(UML::Class)" type="string" description="" unit="" values="" default="Cost Period"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Finance Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dOrganizationUnitReportsFinancialPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Org Unit Reports Financial Period"/>
+					<Tag name="DAF::dRoleisAssociatedToOrganization(UML::Association)" type="string" description="" unit="" values="" default="Role is Associated To Organization"/>
+					<Tag name="DAF::ContractRelatedProduct(UML::Association)" type="string" description="" unit="" values="" default="Contract is Related to Product"/>
+					<Tag name="DAF::dProductIncludesProcess(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Includes Process"/>
+					<Tag name="DAF::dInitiativeHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Initiative Has Cost Period"/>
+					<Tag name="DAF::dProgramHasBudgetPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Program Has Budget Period"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Operating Model" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dBusinessProcess(UML::Class)" type="string" description="" unit="" values="" default="Business Process"/>
+					<Tag name="DAF::dApplicationComponent(UML::Class)" type="string" description="" unit="" values="" default="Application Component"/>
+					<Tag name="DAF::dLogicalAppComponent(UML::Class)" type="string" description="" unit="" values="" default="Logical App Component"/>
+					<Tag name="DAF::dBusinessService(UML::Class)" type="string" description="" unit="" values="" default="Business Service"/>
+				</TaggedValues>
+			</Stereotype>
+			<Stereotype name="Operating Model Relationships" notes="">
+				<AppliesTo>
+					<Apply type="ToolboxPage">
+						<Property name="isCollapsed" value="true"/>
+					</Apply>
+				</AppliesTo>
+				<TaggedValues>
+					<Tag name="DAF::dProcessControlsProcess(UML::Dependency)" type="string" description="" unit="" values="" default="Process Controls Process"/>
+					<Tag name="DAF::dProcessFlowsToProcess(UML::Dependency)" type="string" description="" unit="" values="" default="Process Flows to Process"/>
+					<Tag name="DAF::dProcessOrchestratesService(UML::Aggregation)" type="string" description="" unit="" values="" default="Process Orchestrates Service"/>
+					<Tag name="DAF::dRoleStaffsService(UML::Association)" type="string" description="" unit="" values="" default="Role Staffs Service"/>
+					<Tag name="DAF::dRoleConsumesService(UML::Association)" type="string" description="" unit="" values="" default="Role Consumes Service"/>
+					<Tag name="DAF::dRoleMaintainsApplication(UML::Association)" type="string" description="" unit="" values="" default="Role Maintains Application"/>
+					<Tag name="DAF::dApplicationComponentRealizesLogicalComponent(UML::Realization)" type="string" description="" unit="" values="" default="Realizes Component"/>
+					<Tag name="DAF::dLogAppCompExposesBizService(UML::Association)" type="string" description="" unit="" values="" default="exposes Biz Service"/>
 				</TaggedValues>
 			</Stereotype>
 		</Stereotypes>

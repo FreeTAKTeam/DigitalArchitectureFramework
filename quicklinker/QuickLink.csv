@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2026-10-29 11:27:48 AM
+//generated:2026-11-01 12:57:35 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -80,6 +80,11 @@ Class,dBusinessProcess,Event,dEvent,,,,Association,dProcessResultsInEvent,direct
 Event,dEvent,Class,dBusinessProcess,,,,Association,dProcessResultsInEvent,from,is result of Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dBusinessProcess,,,,Event,dEvent,Association,dProcessResultsInEvent,directed,,results in Event,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Event,dEvent,,,,Class,dBusinessProcess,Association,dProcessResultsInEvent,from,,is result of Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dBusinessProcess -> dProcessControlsProcess -> dBusinessProcess
+Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessControlsProcess,directed,controls Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Class,dBusinessProcess,,,,Dependency,dProcessControlsProcess,from,is controlled by Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessControlsProcess,directed,,controls Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Class,dBusinessProcess,Dependency,dProcessControlsProcess,from,,is controlled by Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessService -> dBizServUsesDataEntity -> dDataEntity
 Activity,dBusinessService,Class,dDataEntity,,,,Association,dBizServUsesDataEntity,directed,uses Data,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,Activity,dBusinessService,,,,Association,dBizServUsesDataEntity,from,is used by service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -245,6 +250,31 @@ Activity,dInitiative,Class,dCapability,,,,Association,dInitiativeIncreasesMaturi
 Class,dCapability,Activity,dInitiative,,,,Association,dInitiativeIncreasesMaturityOf,from,is matured by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dInitiative,,,,Class,dCapability,Association,dInitiativeIncreasesMaturityOf,directed,,Increases Maturity Of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Activity,dInitiative,Association,dInitiativeIncreasesMaturityOf,from,,is matured by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeDeploysApplication -> dApplicationComponent
+Activity,dInitiative,Component,dApplicationComponent,,,,Association,dInitiativeDeploysApplication,directed,deploys Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Activity,dInitiative,,,,Association,dInitiativeDeploysApplication,from,is deployed by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Component,dApplicationComponent,Association,dInitiativeDeploysApplication,directed,,deploys Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Activity,dInitiative,Association,dInitiativeDeploysApplication,from,,is deployed by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeRetiresApplication -> dApplicationComponent
+Activity,dInitiative,Component,dApplicationComponent,,,,Association,dInitiativeRetiresApplication,directed,retires Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Activity,dInitiative,,,,Association,dInitiativeRetiresApplication,from,is retired by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Component,dApplicationComponent,Association,dInitiativeRetiresApplication,directed,,retires Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Activity,dInitiative,Association,dInitiativeRetiresApplication,from,,is retired by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeChangesProcess -> dBusinessProcess
+Activity,dInitiative,Class,dBusinessProcess,,,,Association,dInitiativeChangesProcess,directed,changes Process,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,Activity,dInitiative,,,,Association,dInitiativeChangesProcess,from,is changed by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Class,dBusinessProcess,Association,dInitiativeChangesProcess,directed,,changes Process,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dBusinessProcess,,,,Activity,dInitiative,Association,dInitiativeChangesProcess,from,,is changed by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeChangesLogicalComponent -> dLogicalAppComponent
+Activity,dInitiative,Component,dLogicalAppComponent,,,,Association,dInitiativeChangesLogicalComponent,directed,changes Logical Component,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,Activity,dInitiative,,,,Association,dInitiativeChangesLogicalComponent,from,is changed by Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Component,dLogicalAppComponent,Association,dInitiativeChangesLogicalComponent,directed,,changes Logical Component,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Activity,dInitiative,Association,dInitiativeChangesLogicalComponent,from,,is changed by Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dInitiative -> dInitiativeHasCostPeriod -> dCostPeriod
+Activity,dInitiative,Class,dCostPeriod,,,,Aggregation,dInitiativeHasCostPeriod,from,has Cost Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Activity,dInitiative,,,,Aggregation,dInitiativeHasCostPeriod,to,is cost of Initiative,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dInitiative,,,,Class,dCostPeriod,Aggregation,dInitiativeHasCostPeriod,from,,has Cost Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Activity,dInitiative,Aggregation,dInitiativeHasCostPeriod,to,,is cost of Initiative,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dIssue -> dIssueStopsRealizationOfRequirement -> dRequirement
 Class,dIssue,Class,dRequirement,,,,Association,dIssueStopsRealizationOfRequirement,directed,stop Requirement,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,Class,dIssue,,,,Association,dIssueStopsRealizationOfRequirement,from,is stopped by Issue,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -385,6 +415,11 @@ Class,dOrganizationUnit,Actor,dStakeholder,,,,Association,dOrgUnitHasStakeholder
 Actor,dStakeholder,Class,dOrganizationUnit,,,,Association,dOrgUnitHasStakeholders,from,is concerned with Organization,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dOrganizationUnit,,,,Actor,dStakeholder,Association,dOrgUnitHasStakeholders,directed,,has Stakeholder,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Actor,dStakeholder,,,,Class,dOrganizationUnit,Association,dOrgUnitHasStakeholders,from,,is concerned with Organization,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dOrganizationUnit -> dOrganizationUnitReportsFinancialPeriod -> dFinancialPeriod
+Class,dOrganizationUnit,Class,dFinancialPeriod,,,,Aggregation,dOrganizationUnitReportsFinancialPeriod,from,reports Financial Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dFinancialPeriod,Class,dOrganizationUnit,,,,Aggregation,dOrganizationUnitReportsFinancialPeriod,to,is reported by Org Unit,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dOrganizationUnit,,,,Class,dFinancialPeriod,Aggregation,dOrganizationUnitReportsFinancialPeriod,from,,reports Financial Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dFinancialPeriod,,,,Class,dOrganizationUnit,Aggregation,dOrganizationUnitReportsFinancialPeriod,to,,is reported by Org Unit,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dPhysicalService -> dPhysicalServiceImplementsBusinessService -> dBusinessService
 Interface,dPhysicalService,Activity,dBusinessService,,,,Realization,dPhysicalServiceImplementsBusinessService,directed,Implement Biz Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,Interface,dPhysicalService,,,,Realization,dPhysicalServiceImplementsBusinessService,from,is Implemented by physical service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -400,6 +435,11 @@ Package,dProgram,Package,dGrowthPackage,,,,Composition,dProgramIsOrganizedInPack
 Package,dGrowthPackage,Package,dProgram,,,,Composition,dProgramIsOrganizedInPackages,to,part of a Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Package,dProgram,,,,Package,dGrowthPackage,Composition,dProgramIsOrganizedInPackages,from,,is organized In Packages,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Package,dGrowthPackage,,,,Package,dProgram,Composition,dProgramIsOrganizedInPackages,to,,part of a Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dProgram -> dProgramHasBudgetPeriod -> dCostPeriod
+Package,dProgram,Class,dCostPeriod,,,,Aggregation,dProgramHasBudgetPeriod,from,has Budget Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Package,dProgram,,,,Aggregation,dProgramHasBudgetPeriod,to,is budget of Program,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Package,dProgram,,,,Class,dCostPeriod,Aggregation,dProgramHasBudgetPeriod,from,,has Budget Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Package,dProgram,Aggregation,dProgramHasBudgetPeriod,to,,is budget of Program,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dRegion -> dRegionAggregatesCluster -> dCluster
 Class,dRegion,Class,dCluster,,,,Aggregation,dRegionAggregatesCluster,from,Aggregates Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCluster,Class,dRegion,,,,Aggregation,dRegionAggregatesCluster,to,is Aggregated in Region,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -450,6 +490,16 @@ Actor,dRole,Class,dSkill,,,,Aggregation,dRoleHasSkill,from,has SKill,,TRUE,,TRUE
 Class,dSkill,Actor,dRole,,,,Aggregation,dRoleHasSkill,to,known by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Class,dSkill,Aggregation,dRoleHasSkill,from,,has SKill,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dSkill,,,,Actor,dRole,Aggregation,dRoleHasSkill,to,,known by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRole -> dRoleStaffsService -> dBusinessService
+Actor,dRole,Activity,dBusinessService,,,,Association,dRoleStaffsService,directed,staffs Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,Actor,dRole,,,,Association,dRoleStaffsService,from,is staffed by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Activity,dBusinessService,Association,dRoleStaffsService,directed,,staffs Service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Activity,dBusinessService,,,,Actor,dRole,Association,dRoleStaffsService,from,,is staffed by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRole -> dRoleMaintainsApplication -> dApplicationComponent
+Actor,dRole,Component,dApplicationComponent,,,,Association,dRoleMaintainsApplication,directed,maintains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,Actor,dRole,,,,Association,dRoleMaintainsApplication,from,is maintained by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Component,dApplicationComponent,Association,dRoleMaintainsApplication,directed,,maintains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Actor,dRole,Association,dRoleMaintainsApplication,from,,is maintained by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dSecurityGroup -> dSecurityGroupHasPhysicalService -> dPhysicalService
 Class,dSecurityGroup,Interface,dPhysicalService,,,,Association,dSecurityGroupHasPhysicalService,directed,has Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,Class,dSecurityGroup,,,,Association,dSecurityGroupHasPhysicalService,from,Asociated to Sec. group,,TRUE,,TRUE,TRUE,DAF,0,,,,,

@@ -19,12 +19,12 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-01T11:23:05"^^xsd:dateTime ;
+    dcterms:created "2026-11-01T12:59:33"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
     dafm:profileName "DAF" ;
-    dafm:configuredProfilePackageGuid "{BEFFD7D1-82EE-478f-A0EE-5670EC836630}" ;
+    dafm:configuredProfilePackageGuid "{9A178708-DB6B-4bd1-9BF5-57E636D90A6B}" ;
     dafm:configuredRelationshipPackageGuid "{C3097ACD-177F-4d58-B51F-771989DAFF70}" ;
     dafm:configuredProfileDiagramGuid "{B91435BE-4D2E-4511-8A96-481522342E3A}" .
 
@@ -6468,7 +6468,7 @@ daf:dCostPeriod
     dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
     dafm:packagePath "Delta Architectural Framework/DAF/Metamodel" ;
     skos:altLabel "dCostPeriod" ;
-    rdfs:comment "Spend, or a spending cap, in one period, planned or actual. A value type: it has no identity of its own." ;
+    rdfs:comment "Spend, or a spending cap, in one period, planned or actual. Linked to the initiative that spends it (dInitiativeHasCostPeriod) or to the program whose budget it caps (dProgramHasBudgetPeriod), so it can be traced and referenced like any other element." ;
     dafm:umlMetaclass "Class" .
 
 daf:dCostPeriod rdfs:subClassOf daf:DAFBase .
@@ -6488,7 +6488,7 @@ daf:dCostPeriod dafm:sourceVisibility "Public" .
 daf:dCostPeriod dafm:sourceComplexity "1" .
 daf:dCostPeriod dafm:sourceLanguage "Java" .
 daf:dCostPeriod dcterms:created "2026-10-28T15:12:29"^^xsd:dateTime .
-daf:dCostPeriod dcterms:modified "2026-11-01T10:42:00"^^xsd:dateTime .
+daf:dCostPeriod dcterms:modified "2026-11-01T12:57:09"^^xsd:dateTime .
 
 daf:dCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1 .
 dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1
@@ -6518,6 +6518,15 @@ daf:dCostPeriod dafm:hasConstraint dafdef:Constraint__A3395B0C_6254_46cb_B818_C0
 dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__amount_is_money_its_unit_is_an_ISO_4217_code_1
     a dafm:Constraint ;
     dafm:constraintName "amount is money: its unit is an ISO 4217 code" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dCostPeriod dafm:hasConstraint dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_dInitiativeHasCostPeriod_or_one_program_dProgramHasBudgetPeriod__2 .
+dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_dInitiativeHasCostPeriod_or_one_program_dProgramHasBudgetPeriod__2
+    a dafm:Constraint ;
+    dafm:constraintName "belongs to exactly one initiative (dInitiativeHasCostPeriod) or one program (dProgramHasBudgetPeriod)" ;
     dafm:constraintType "Invariant" ;
     dafm:constraintBody "" ;
     dafm:ownerKind "element" ;
@@ -6568,7 +6577,7 @@ dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3
     dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dCostPeriod__periodLength ;
-    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. Periods of the same profile must not overlap." ;
+    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The periods of one initiative, or of one program, must not overlap." ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" .
 
@@ -6579,7 +6588,7 @@ dafp:dCostPeriod__periodLength
     rdfs:label "periodLength" ;
     rdfs:domain daf:dCostPeriod ;
     rdfs:range xsd:duration ;
-    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. Periods of the same profile must not overlap." .
+    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The periods of one initiative, or of one program, must not overlap." .
 
 dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3 dafm:attributeVisibility "Public" .
 dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3 dafm:isCollection false .
@@ -9283,28 +9292,28 @@ dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__InitiativeDuration_must
     dafm:ownerKind "element" ;
     dafm:constraintStatus "Implemented" .
 
-daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__costProfile_periods_do_not_overlap_2 .
-dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__costProfile_periods_do_not_overlap_2
-    a dafm:Constraint ;
-    dafm:constraintName "costProfile periods do not overlap" ;
-    dafm:constraintType "Invariant" ;
-    dafm:constraintBody "" ;
-    dafm:ownerKind "element" ;
-    dafm:constraintStatus "Proposed" .
-
-daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_sum_of_costProfile_amounts_equals_EstimatedTotalCost_when_both_are_set_warning__3 .
-dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_sum_of_costProfile_amounts_equals_EstimatedTotalCost_when_both_are_set_warning__3
-    a dafm:Constraint ;
-    dafm:constraintName "the sum of costProfile amounts equals EstimatedTotalCost when both are set (warning)" ;
-    dafm:constraintType "Invariant" ;
-    dafm:constraintBody "" ;
-    dafm:ownerKind "element" ;
-    dafm:constraintStatus "Proposed" .
-
-daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__actualFinishDate_is_not_before_actualStartDate_4 .
-dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__actualFinishDate_is_not_before_actualStartDate_4
+daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__actualFinishDate_is_not_before_actualStartDate_2 .
+dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__actualFinishDate_is_not_before_actualStartDate_2
     a dafm:Constraint ;
     dafm:constraintName "actualFinishDate is not before actualStartDate" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_cost_periods_of_the_initiative_dInitiativeHasCostPeriod_do_not_overlap_3 .
+dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_cost_periods_of_the_initiative_dInitiativeHasCostPeriod_do_not_overlap_3
+    a dafm:Constraint ;
+    dafm:constraintName "the cost periods of the initiative (dInitiativeHasCostPeriod) do not overlap" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dInitiative dafm:hasConstraint dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_sum_of_the_amounts_of_its_cost_periods_equals_EstimatedTotalCost_when_both_are_set_warning__4 .
+dafdef:Constraint__CC9E4FF0_D141_46eb_8890_FE077419D53C__the_sum_of_the_amounts_of_its_cost_periods_equals_EstimatedTotalCost_when_both_are_set_warning__4
+    a dafm:Constraint ;
+    dafm:constraintName "the sum of the amounts of its cost periods equals EstimatedTotalCost when both are set (warning)" ;
     dafm:constraintType "Invariant" ;
     dafm:constraintBody "" ;
     dafm:ownerKind "element" ;
@@ -9768,7 +9777,7 @@ dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38
     dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dInitiative__EstimatedTotalCost ;
-    rdfs:comment "The current estimate of the total cost, with an ISO 4217 currency as unit. When costProfile is also set, the two should agree." ;
+    rdfs:comment "The current estimate of the total cost, with an ISO 4217 currency as unit. When the initiative also has cost periods (dInitiativeHasCostPeriod), their amounts should add up to it." ;
     dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
@@ -9780,7 +9789,7 @@ dafp:dInitiative__EstimatedTotalCost
     rdfs:label "EstimatedTotalCost" ;
     rdfs:domain daf:dInitiative ;
     rdfs:range daf:dQuantityValue ;
-    rdfs:comment "The current estimate of the total cost, with an ISO 4217 currency as unit. When costProfile is also set, the two should agree." .
+    rdfs:comment "The current estimate of the total cost, with an ISO 4217 currency as unit. When the initiative also has cost periods (dInitiativeHasCostPeriod), their amounts should add up to it." .
 
 dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:attributeVisibility "Private" .
 dafdef:Property_n_67ABCA533A454fbaBA94786D6ED25C38 dafm:isCollection false .
@@ -9797,44 +9806,6 @@ dafshape:dInitiativeShape sh:property [
     sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "EstimatedTotalCost"
-] .
-
-dafdef:Property_F891496E369742b391FED11B32AA7490
-    a dafm:PropertyDefinition ;
-    rdfs:label "costProfile" ;
-    dafm:eaGuid "{F891496E-3697-42b3-91FE-D11B32AA7490}" ;
-    dafm:sourceDatatype "dCostPeriod" ;
-    dafm:typingStatus dafm:ClassifierType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dInitiative__costProfile ;
-    rdfs:comment "The spend per period, planned (kind Estimate) or actual (kind Actual), ordered by periodStart. Periods must not overlap." ;
-    dafm:minimumCardinality "0" ;
-    dafm:maximumCardinality "*" .
-
-daf:dInitiative dafm:hasPropertyDefinition dafdef:Property_F891496E369742b391FED11B32AA7490 .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:classifier daf:dCostPeriod .
-
-dafp:dInitiative__costProfile
-    a owl:ObjectProperty ;
-    rdfs:label "costProfile" ;
-    rdfs:domain daf:dInitiative ;
-    rdfs:range daf:dCostPeriod ;
-    rdfs:comment "The spend per period, planned (kind Estimate) or actual (kind Actual), ordered by periodStart. Periods must not overlap." .
-
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:attributeVisibility "Public" .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:isCollection false .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:isConst false .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:isId false .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:isOrdered true .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:isStatic false .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:attributeContainment "Not Specified" .
-dafdef:Property_F891496E369742b391FED11B32AA7490 dafm:classifier daf:dCostPeriod .
-
-dafshape:dInitiativeShape sh:property [
-    sh:path dafp:dInitiative__costProfile ;
-    sh:class daf:dCostPeriod ;
-    sh:minCount 0 ;
-    sh:name "costProfile"
 ] .
 
 dafdef:Property_n_68DFFD59C8CA4603830FAD94F3A4862E
@@ -15013,52 +14984,14 @@ dafdef:TaggedValue__AD22A5C6_F0D3_4215_99B0_34D22828492A__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
 
-daf:dProgram dafm:hasConstraint dafdef:Constraint__AD22A5C6_F0D3_4215_99B0_34D22828492A__budgetProfile_periods_do_not_overlap_1 .
-dafdef:Constraint__AD22A5C6_F0D3_4215_99B0_34D22828492A__budgetProfile_periods_do_not_overlap_1
+daf:dProgram dafm:hasConstraint dafdef:Constraint__AD22A5C6_F0D3_4215_99B0_34D22828492A__the_budget_periods_of_the_program_dProgramHasBudgetPeriod_do_not_overlap_1 .
+dafdef:Constraint__AD22A5C6_F0D3_4215_99B0_34D22828492A__the_budget_periods_of_the_program_dProgramHasBudgetPeriod_do_not_overlap_1
     a dafm:Constraint ;
-    dafm:constraintName "budgetProfile periods do not overlap" ;
+    dafm:constraintName "the budget periods of the program (dProgramHasBudgetPeriod) do not overlap" ;
     dafm:constraintType "Invariant" ;
     dafm:constraintBody "" ;
     dafm:ownerKind "element" ;
     dafm:constraintStatus "Proposed" .
-
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08
-    a dafm:PropertyDefinition ;
-    rdfs:label "budgetProfile" ;
-    dafm:eaGuid "{4E6590CB-385D-4ca8-9330-0B588DF66C08}" ;
-    dafm:sourceDatatype "dCostPeriod" ;
-    dafm:typingStatus dafm:ClassifierType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dProgram__budgetProfile ;
-    rdfs:comment "The spending cap per period for all initiatives in the program (through its growth packages), ordered by periodStart. Leave costNature empty when the cap covers both capex and opex. Periods must not overlap." ;
-    dafm:minimumCardinality "0" ;
-    dafm:maximumCardinality "*" .
-
-daf:dProgram dafm:hasPropertyDefinition dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:classifier daf:dCostPeriod .
-
-dafp:dProgram__budgetProfile
-    a owl:ObjectProperty ;
-    rdfs:label "budgetProfile" ;
-    rdfs:domain daf:dProgram ;
-    rdfs:range daf:dCostPeriod ;
-    rdfs:comment "The spending cap per period for all initiatives in the program (through its growth packages), ordered by periodStart. Leave costNature empty when the cap covers both capex and opex. Periods must not overlap." .
-
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:attributeVisibility "Public" .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:isCollection false .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:isConst false .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:isId false .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:isOrdered true .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:isStatic false .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:attributeContainment "Not Specified" .
-dafdef:Property_n_4E6590CB385D4ca893300B588DF66C08 dafm:classifier daf:dCostPeriod .
-
-dafshape:dProgramShape sh:property [
-    sh:path dafp:dProgram__budgetProfile ;
-    sh:class daf:dCostPeriod ;
-    sh:minCount 0 ;
-    sh:name "budgetProfile"
-] .
 
 # Concept: Public Cluster
 daf:dPublicCluster
@@ -26442,6 +26375,117 @@ dafshape:dLogicalAppComponentShape sh:property [
     sh:name "inverse dInitiativeChangesLogicalComponent"
 ] .
 
+# Relationship: dInitiativeHasCostPeriod
+dafrel:dInitiativeHasCostPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Initiative Has Cost Period" ;
+    skos:notation "dInitiativeHasCostPeriod" ;
+    dafm:eaGuid "{5E2F6A8A-741A-4001-A8FD-AC8D5058B43C}" ;
+    dafm:sourceClass daf:dInitiative ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dInitiativeHasCostPeriod ;
+    dafm:inversePredicate dafpred:dInitiativeHasCostPeriod_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dInitiativeHasCostPeriod" ;
+    rdfs:comment "The initiative's spend in one period, planned (kind Estimate) or actual (kind Actual). The cost periods of one initiative do not overlap." ;
+    dafm:forwardRole "has Cost Period" ;
+    dafm:backwardRole "is cost of Initiative" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dInitiativeHasCostPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dInitiativeHasCostPeriod dafm:forwardAuthoringDirection "from" .
+dafrel:dInitiativeHasCostPeriod dafm:backwardAuthoringDirection "to" .
+dafrel:dInitiativeHasCostPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dInitiativeHasCostPeriod dafm:sourceConnectorType "Association" .
+dafrel:dInitiativeHasCostPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dInitiativeHasCostPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dInitiativeHasCostPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dInitiative ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dInitiativeHasCostPeriod_inverse ;
+    rdfs:label "has Cost Period" .
+
+dafpred:dInitiativeHasCostPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dInitiative ;
+    owl:inverseOf dafpred:dInitiativeHasCostPeriod ;
+    rdfs:label "is cost of Initiative" .
+
+dafrel:dInitiativeHasCostPeriod dafm:sourceEnd dafdef:RelationshipEnd_dInitiativeHasCostPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dInitiativeHasCostPeriod_target .
+
+dafdef:RelationshipEnd_dInitiativeHasCostPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dInitiative ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is cost of Initiative" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dInitiativeHasCostPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "has Cost Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dInitiativeHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__5E2F6A8A_741A_4001_A8FD_AC8D5058B43C__Metaclass_1 .
+dafdef:TaggedValue__5E2F6A8A_741A_4001_A8FD_AC8D5058B43C__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dInitiativeHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__5E2F6A8A_741A_4001_A8FD_AC8D5058B43C__Redefines_2 .
+dafdef:TaggedValue__5E2F6A8A_741A_4001_A8FD_AC8D5058B43C__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dInitiativeHasCostPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dInitiativeHasCostPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dInitiative ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dInitiativeShape sh:property [
+    sh:path dafpred:dInitiativeHasCostPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dInitiativeHasCostPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dInitiativeHasCostPeriod ] ;
+    sh:class daf:dInitiative ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dInitiativeHasCostPeriod"
+] .
+
 # Relationship: dIssueStopsRealizationOfRequirement
 dafrel:dIssueStopsRealizationOfRequirement
     a owl:Class, dafm:RelationshipType ;
@@ -30100,6 +30144,117 @@ dafshape:dGrowthPackageShape sh:property [
     sh:name "inverse dProgramIsOrganizedInPackages"
 ] .
 
+# Relationship: dProgramHasBudgetPeriod
+dafrel:dProgramHasBudgetPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Program Has Budget Period" ;
+    skos:notation "dProgramHasBudgetPeriod" ;
+    dafm:eaGuid "{5EE6054F-E60F-46e6-9730-37FF41B5B92F}" ;
+    dafm:sourceClass daf:dProgram ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dProgramHasBudgetPeriod ;
+    dafm:inversePredicate dafpred:dProgramHasBudgetPeriod_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dProgramHasBudgetPeriod" ;
+    rdfs:comment "The spending cap for all initiatives in the program (through its growth packages) in one period. The budget periods of one program do not overlap." ;
+    dafm:forwardRole "has Budget Period" ;
+    dafm:backwardRole "is budget of Program" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dProgramHasBudgetPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dProgramHasBudgetPeriod dafm:forwardAuthoringDirection "from" .
+dafrel:dProgramHasBudgetPeriod dafm:backwardAuthoringDirection "to" .
+dafrel:dProgramHasBudgetPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dProgramHasBudgetPeriod dafm:sourceConnectorType "Association" .
+dafrel:dProgramHasBudgetPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dProgramHasBudgetPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dProgramHasBudgetPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dProgram ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dProgramHasBudgetPeriod_inverse ;
+    rdfs:label "has Budget Period" .
+
+dafpred:dProgramHasBudgetPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dProgram ;
+    owl:inverseOf dafpred:dProgramHasBudgetPeriod ;
+    rdfs:label "is budget of Program" .
+
+dafrel:dProgramHasBudgetPeriod dafm:sourceEnd dafdef:RelationshipEnd_dProgramHasBudgetPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dProgramHasBudgetPeriod_target .
+
+dafdef:RelationshipEnd_dProgramHasBudgetPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dProgram ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is budget of Program" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dProgramHasBudgetPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "has Budget Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dProgramHasBudgetPeriod dafm:hasTaggedValue dafdef:TaggedValue__5EE6054F_E60F_46e6_9730_37FF41B5B92F__Metaclass_1 .
+dafdef:TaggedValue__5EE6054F_E60F_46e6_9730_37FF41B5B92F__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dProgramHasBudgetPeriod dafm:hasTaggedValue dafdef:TaggedValue__5EE6054F_E60F_46e6_9730_37FF41B5B92F__Redefines_2 .
+dafdef:TaggedValue__5EE6054F_E60F_46e6_9730_37FF41B5B92F__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dProgramHasBudgetPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dProgramHasBudgetPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dProgram ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dProgramShape sh:property [
+    sh:path dafpred:dProgramHasBudgetPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dProgramHasBudgetPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dProgramHasBudgetPeriod ] ;
+    sh:class daf:dProgram ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dProgramHasBudgetPeriod"
+] .
+
 # Relationship: dRegionAggregatesCluster
 dafrel:dRegionAggregatesCluster
     a owl:Class, dafm:RelationshipType ;
@@ -32498,30 +32653,30 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-01T11:23:52"^^xsd:dateTime ;
+    dcterms:created "2026-11-01T13:00:28"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 76 ;
     dafm:supportingClassCount 2 ;
     dafm:registeredClassCount 78 ;
     dafm:enumerationCount 40 ;
-    dafm:propertyCount 341 ;
-    dafm:relationshipCount 107 ;
+    dafm:propertyCount 339 ;
+    dafm:relationshipCount 109 ;
     dafm:ignoredNoteLinkCount 2 ;
     dafm:explicitPrimitivePropertyCount 240 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 21 ;
-    dafm:classifierTypedPropertyCount 79 ;
+    dafm:classifierTypedPropertyCount 77 ;
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
     dafm:dafBaseInheritanceCount 78 ;
-    dafm:registeredRelationshipCount 107 ;
+    dafm:registeredRelationshipCount 109 ;
     dafm:generalizationCount 4 ;
-    dafm:warningCount 1 ;
-    dafm:legacyProfileConceptCount 0 ;
-    dafm:legacyProfileRelationshipCount 99 ;
-    dafm:authoringEnabledRelationshipCount 107 ;
-    dafm:derivedQuickLinkEquivalentRuleCount 428 ;
-    dafm:quickLinkRuleCount 396 .
+    dafm:warningCount 0 ;
+    dafm:legacyProfileConceptCount 116 ;
+    dafm:legacyProfileRelationshipCount 109 ;
+    dafm:authoringEnabledRelationshipCount 109 ;
+    dafm:derivedQuickLinkEquivalentRuleCount 436 ;
+    dafm:quickLinkRuleCount 436 .
 

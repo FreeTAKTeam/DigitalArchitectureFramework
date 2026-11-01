@@ -20,6 +20,7 @@
 					<Tag name="DAF::dBusinessUseCase" type="" description="" unit="" values="" default="Business Use Case"/>
 					<Tag name="DAF::dActor" type="" description="" unit="" values="" default="Actor"/>
 					<Tag name="DAF::dContract(UML::Class)" type="string" description="" unit="" values="" default="Contract"/>
+					<Tag name="DAF::dFinancialPeriod(UML::Class)" type="string" description="" unit="" values="" default="Financial Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Measurement" alias="Measurement" notes="Contains the elements for Measurement. " bgcolor="-1" fontcolor="-1" bordercolor="-1" borderwidth="-1" hideicon="0">

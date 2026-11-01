@@ -19,6 +19,12 @@
 					<Tag name="DAF::dProgramIsOrganizedInPackages(UML::Composition)" type="string" description="" unit="" values="" default="Program is organized In Packages"/>
 					<Tag name="DAF::dValueStreamIncludesProcesses(UML::Composition)" type="string" description="" unit="" values="" default="Value Stream Includes Processes"/>
 					<Tag name="DAF::dValueStreamEnablesCapability(UML::Association)" type="string" description="" unit="" values="" default="Value Stream Enables Capability"/>
+					<Tag name="DAF::dInitiativeDeploysApplication(UML::Association)" type="string" description="" unit="" values="" default="Initiative Deploys Application"/>
+					<Tag name="DAF::dInitiativeRetiresApplication(UML::Association)" type="string" description="" unit="" values="" default="Initiative Retires Application"/>
+					<Tag name="DAF::dInitiativeChangesProcess(UML::Association)" type="string" description="" unit="" values="" default="Initiative Changes Process"/>
+					<Tag name="DAF::dInitiativeChangesLogicalComponent(UML::Association)" type="string" description="" unit="" values="" default="Initiative Changes Logical Component"/>
+					<Tag name="DAF::dInitiativeHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Initiative Has Cost Period"/>
+					<Tag name="DAF::dProgramHasBudgetPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Program Has Budget Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Delivery" notes="Contains Elements for Enterprise Architecture Strategic Planning">
