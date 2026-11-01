@@ -1,6 +1,6 @@
 # Migrating models to DAF 7.0
 
-This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 4**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing.
+This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 4**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing. Dafrion implements these rules in its `dafrion-metamodel` crate, against the pinned export `models/metamodels/daf/7.0.0-beta.4`; its README there lists, for each rule, whether it converts a value or only flags it for review.
 
 **Principle: nothing is guessed.** A value that cannot be converted stays unknown and produces a diagnostic with the element, the property, the original value and the reason. Every diagnostic is listed in a migration report.
 
@@ -57,6 +57,8 @@ Tracked in [issue #5](https://github.com/FreeTAKTeam/DigitalArchitectureFramewor
 
 A cost or result for a period is now an element (`dCostPeriod` or `dFinancialPeriod`) linked to its owner, so it can be traced and referenced. Each period carries `periodStart`, `periodLength` and its amounts as `dQuantityValue`.
 
+`dInitiative.costProfile` is in the 7.0 Alpha release. `dOrganizationUnit.financials`, `dProgram.budgetProfile` and `dCapability.CostScope` only existed in pre-Beta drafts (DAF commit `ea85979`); the rules below still apply to models made with those drafts.
+
 **Turning one quantity into one period.** A quantity with `per` (e.g. `P1Y`) and `asOf` becomes one period that ends on `asOf`: `periodLength` = `per`, `periodStart` = `asOf` − `per` + 1 day, `amount` = the quantity without `per`. Without `per`, the value is not spend per period: diagnostic. Without `asOf`, the period is unknown: diagnostic, and the value is kept in the report.
 
 | 7.0 Alpha | 7.0.0 Beta 3 | Rule |
@@ -97,7 +99,7 @@ A cost or result for a period is now an element (`dCostPeriod` or `dFinancialPer
 |---|---|
 | `dInitiative.RelatedProgram` | the path `dProgram` → `dGrowthPackage` → `dInitiative` |
 | `dInitiative.Impacted Capability` | `dInitiativeIncreasesMaturityOf` |
-| `dCapability.CostScope` | nothing: `dCapability.Cost` is removed (see 2.2) |
+| `dCapability.CostScope` | nothing for new models: `dCapability.Cost` is removed. A migrator still reads it, to decide whether an old `Cost` is converted (see 2.2). |
 
 ### 2.6 New, no migration needed
 
@@ -119,7 +121,7 @@ Beta 4 adds revenue, the income-statement line of each cost, assets and deprecia
 | Inclusion check on `dFinancialPeriod` | Opex ≤ `operatingExpense`, Capex ≤ `capitalExpenditure` | by line: CostOfRevenue ≤ `costOfRevenue`; SellingGeneralAdmin and ResearchDevelopment ≤ `operatingExpense`; Capex ≤ `capitalExpenditure` | No data change; checks follow `costFunction`. |
 | `dFinancialPeriod.operatingExpense` | all other operating cost | the same, **excluding depreciation** | When the source states a depreciation figure that was inside operating expense, move it to the new `depreciation` line and reduce `operatingExpense` by it. When it is unknown whether depreciation was included, keep the value and add a diagnostic. |
 | `dFinancialPeriod` wording | "a cash view" | holds income-statement lines plus the cash line `capitalExpenditure`; subtotals (gross margin, EBITDA, EBIT, net income, free cash flow) are derived and never stored | Remove stored subtotals, if a twin carries any, after checking they match the derived value; a mismatch is a diagnostic. |
-| `dContract.tariff` | `0..1` | `0..*`: price components, each with its own `basis` | An existing tariff becomes a list of one. No conversion. A price written as text with several parts (e.g. "105/unit/month + 1/door/month") becomes one tariff per part, with a diagnostic for review. |
+| `dContract.tariff` | `0..1` | `0..*`: price components, each with its own `basis` | An existing tariff becomes a list of one. No conversion: tariff was already a single quantity, so a multi-part price could not be stored before and has to be entered by hand. |
 
 ### 3.2 New, no migration needed
 
@@ -132,4 +134,4 @@ Beta 4 adds revenue, the income-statement line of each cost, assets and deprecia
 
 ## Files still on old names
 
-These artefacts are not yet regenerated for Beta 4 and still use names or types changed above: `Metamodel_json/DAFSchema.json`, `API/` (OAS), `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, the test model, and the manual in `Docs/`.
+The JSON schema (`Metamodel_json/DAFSchema.json`) and the OpenAPI description (`API/`) are generated from the Beta 4 semantic model; their property and relationship names are the metamodel's, so API clients built on the older OAS (camelCase names such as `fteCount`) must follow the renames above. These artefacts are not yet regenerated for Beta 4 and still use names or types changed above: `Metamodel_json/DigitalArchitectureFramework.json` (an older draft-04 export), `Metamodel/DAF_Metamodel.xmi`, `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, and the test model.

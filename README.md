@@ -18,7 +18,7 @@ DAF 7.0 is a major release: it changes datatypes, renames relationships and adds
 
 **No invented values.** An absent value now stays unknown.
 * Money, volume and duration properties use the new Quantity value type and are optional, for example `dCapability.Cost`, `dRole.FTEs`, `dOrganizationUnit.HeadCount`, `dInitiative.EstimatedTotalCost`, `dProduct.Price` and `dMeasurementIndicator.CurrentLevel`.
-* Only 28 properties are required; all others are `0..1` or `0..*`. Optional properties have no default value, so a model, or an LLM filling it, never inherits a value nobody assessed.
+* Only 31 properties are required; all others are `0..1` or `0..*`. Optional properties have no default value, so a model, or an LLM filling it, never inherits a value nobody assessed.
 * Every property has a description that says what it holds, its format or unit with an example, and what an empty value means.
 * `RetireDate` is a `Date`, `0..1`, on all five concepts that have it. All JSON Schema facets are optional.
 * `dInitiative.InitiativeDuration` is a `Duration`, and `dInitiative.Benefit` is removed. `dRisk.likelihood` is an optional `Int32` from 1 to 100.
@@ -85,7 +85,7 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 
 # Folder Structure
 * AddIns: Sparx EA add-ins, e.g. the Relationship Manager and the OAS generator.
-* API: OpenAPI description of the DAF metamodel.
+* API: OpenAPI description of the DAF metamodel, generated from the semantic model.
 * Checks: model validation rules for the EA Validator, organized by All, CIM, PIM and PSM.
 * csv, excel: templates for importing model data into EA from CSV files.
 * Diagrams: diagram type profiles used in the MDG.
@@ -94,7 +94,7 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 * EA searches, Queries: model searches and SQL queries.
 * Icons, shapescripts: the DAF icons and the shape scripts for DAF elements.
 * MatrixProfiles: relationship matrix profiles.
-* Metamodel, Metamodel_json: the metamodel as XMI and as JSON schema.
+* Metamodel, Metamodel_json: the metamodel as XMI and as JSON schema (`DAFSchema.json`, generated from the semantic model).
 * Model: the Sparx EA project that defines the metamodel used by the MDG.
 * ModelWizardTemplate: model wizard templates.
 * mts: MDG technology selector files.
@@ -104,7 +104,7 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 * quicklinker: the QuickLink definition of the metamodel, for creating only valid connections.
 * referenceData: reference data and script groups used in the MDG.
 * Repository Structure: the TOGAF-based catalog structure for an enterprise repository.
-* technology: the DAF MDG technology file (`DAF.xml`) and, under `rdf`, the generated semantic model.
+* technology: the DAF MDG technology file (`DAF.xml`) and, under `rdf`, the generated semantic model. `generate_schema_oas.py` regenerates the JSON schema and the OpenAPI description from the semantic model (Python with rdflib and PyYAML: `python technology/generate_schema_oas.py technology/rdf/DAF-semantic-model.ttl API/DigitalArchitectureFramework-OAS.yaml Metamodel_json/DAFSchema.json API/DigitalArchitectureFramework-OAS.yaml "7.0.0 Beta 4"`).
 * test model: models for testing the metamodel and the MDG.
 * toolboxes: the toolbox profiles, organized by role.
 * VB scripts: scripts that automate tasks within EA, such as profile and semantic model generation.
