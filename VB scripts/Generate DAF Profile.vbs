@@ -1125,9 +1125,11 @@ end sub
 sub updateQuickLinkDocument
 	dim quickLinkDoc	as EA.Element
 	Session.Output "Updating QuickLink document..."	
-	set quickLinkDoc = getProfileElement( "QuickLink", profilePackage) 'search for an element called quicklink in the profilePackage
+	set quickLinkDoc = nothing
+	if quickLinkDocumentGUID <> "" then set quickLinkDoc = Repository.GetElementByGuid(quickLinkDocumentGUID)
+	if quickLinkDoc is nothing then set quickLinkDoc = getProfileElement( "QuickLink", profilePackage) 'search for an element called quicklink in the profilePackage
 	if quickLinkDoc is nothing then
-		Session.Output "WARNING: no 'QuickLink' document in '" & profilePackage.Name & "', QuickLink file written to " & quickLinkFileName & " only"
+		Session.Output "WARNING: no QuickLink document " & quickLinkDocumentGUID & " or 'QuickLink' in '" & profilePackage.Name & "', QuickLink file written to " & quickLinkFileName & " only"
 		exit sub
 	end if
 	quickLinkDoc.LoadLinkedDocument quickLinkFileName

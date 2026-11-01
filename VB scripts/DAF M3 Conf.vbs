@@ -12,6 +12,7 @@ dim stereotypePackageGUID ' as String
 dim metaclassPackageGUID ' as String
 dim enumerationPackageGUID ' as String
 dim quickLinkFileName    ' as String
+dim quickLinkDocumentGUID ' as String
 dim ProfileName    ' as String
 dim mdgTechFilePath    ' as String
 dim ProfileDiagramGUID ' as String 
@@ -34,6 +35,7 @@ relationshipPackageGUID = "{C3097ACD-177F-4d58-B51F-771989DAFF70}" ' package whe
 stereotypePackageGUID = "{9825B692-2233-47ca-90BA-B84A4CC0BCC6}" ' DAF / Stereotypes: element stereotypes
 metaclassPackageGUID = "{6C3F7478-3283-4a5c-81C2-9C055BAAFFAB}" ' DAF / Metaclasses: extended UML metaclasses
 enumerationPackageGUID = "{4D9E54E1-8964-4311-A4C8-4229E7887D14}" ' DAF / Enumerations: tagged value types
+quickLinkDocumentGUID = "{47423E25-620C-42fc-B8CC-60BC81FD0C6E}" ' DAF / QuickLink: document that holds the QuickLink file; empty to look it up by name in the profile package
 quickLinkFileName = "C:\Users\broth\Dropbox\work\Method\EA method\3.1\quicklinker\QuickLink.csv" ' DAF location of the Quicklinker file
 ProfileName = "DAF"
 mdgTechFilePath="C:\Users\broth\Dropbox\work\Method\EA method\3.1\DAF40.mts" 'DAF MTS location
