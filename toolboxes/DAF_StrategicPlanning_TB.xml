@@ -91,6 +91,7 @@
 					<Tag name="DAF::dContract(UML::Class)" type="string" description="" unit="" values="" default="Contract"/>
 					<Tag name="DAF::dRole(UML::Class)" type="string" description="" unit="" values="" default="Role"/>
 					<Tag name="DAF::dCostPeriod(UML::Class)" type="string" description="" unit="" values="" default="Cost Period"/>
+					<Tag name="DAF::dRevenuePeriod(UML::Class)" type="string" description="" unit="" values="" default="Revenue Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Finance Relationships" notes="">
@@ -110,6 +111,11 @@
 					<Tag name="DAF::dApplicationComponentHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Application Has Cost Period"/>
 					<Tag name="DAF::dRoleHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Role Has Cost Period"/>
 					<Tag name="DAF::dCapabilityHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Capability Has Cost Period"/>
+					<Tag name="DAF::dProductHasRevenuePeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Has Revenue Period"/>
+					<Tag name="DAF::dContractHasRevenuePeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Contract Has Revenue Period"/>
+					<Tag name="DAF::dFinancialPeriodIncludesRevenuePeriod(UML::Association)" type="string" description="" unit="" values="" default="Financial Period Includes Revenue Period"/>
+					<Tag name="DAF::dProductHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Has Cost Period"/>
+					<Tag name="DAF::dResourceHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Resource Has Cost Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Operating Model" notes="">

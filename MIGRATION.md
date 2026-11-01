@@ -1,6 +1,6 @@
 # Migrating models to DAF 7.0
 
-This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 3**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing.
+This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 4**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing.
 
 **Principle: nothing is guessed.** A value that cannot be converted stays unknown and produces a diagnostic with the element, the property, the original value and the reason. Every diagnostic is listed in a migration report.
 
@@ -69,7 +69,7 @@ A cost or result for a period is now an element (`dCostPeriod` or `dFinancialPer
 | `dCapability.Cost` with `CostScope` = `Direct` | `dCostPeriod` element + `dCapabilityHasCostPeriod` | One period, by the rule above. |
 | `dCapability.Cost` with `CostScope` = `Aggregated` or absent | none | **Not converted**, to avoid counting the cost of linked roles and applications twice. A diagnostic keeps the value; the full cost of a capability is now derived from the cost periods of its linked roles and applications. |
 
-**Including costs in statements.** A cost period may be included in the financial period of the organisation unit whose books it lands in (`dFinancialPeriodIncludesCostPeriod`). The migration does not create these links, because which unit pays is not recorded in 7.0 Alpha. Add them afterwards. A financial period is a cash view: Opex lands in `operatingExpense` and Capex in the new `capitalExpenditure`.
+**Including costs in statements.** A cost period may be included in the financial period of the organisation unit whose books it lands in (`dFinancialPeriodIncludesCostPeriod`). The migration does not create these links, because which unit pays is not recorded in 7.0 Alpha. Add them afterwards. In Beta 3, Opex landed in `operatingExpense` and Capex in the new `capitalExpenditure`; Beta 4 refines this by income-statement line (Part 3).
 
 ### 2.3 Type changes
 
@@ -105,6 +105,31 @@ A cost or result for a period is now an element (`dCostPeriod` or `dFinancialPer
 
 Meaning changes without a data change: `dGoal.Value_Goal` is the change from `Value_amount`, not a level; a goal's deadline is the latest `finishDate` of its objectives; `dRoleConsumesService` means the role uses the service's output, and the roles that do its work move to `dRoleStaffsService` (a person must decide; the migration flags each `dRoleConsumesService` link for review).
 
-### 2.7 Files still on the old names
+---
 
-These artefacts are not yet regenerated for Beta 3 and still use names or types removed above: `Metamodel_json/DAFSchema.json`, `API/` (OAS), `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, the test model, and the manual in `Docs/`.
+## Part 3: DAF 7.0.0 Beta 3 to 7.0.0 Beta 4
+
+Beta 4 adds revenue, the income-statement line of each cost, assets and depreciation. It is **breaking** only in one rule: which statement line an included cost is checked against. It follows a review of a driver-based financial model (EuroCom/Expedibox: revenue streams, cost of goods sold per stream, SG&A, Capex and straight-line depreciation, P&L, cash flow and DCF).
+
+### 3.1 Changed rules and meanings
+
+| Element | Beta 3 | Beta 4 | Rule |
+|---|---|---|---|
+| `dCostPeriod` | `costNature` only (Capex/Opex) | adds `costFunction` (`dCostFunction`: CostOfRevenue, SellingGeneralAdmin, ResearchDevelopment) | Set `costFunction` when the source names the line: "COGS", "cost of sales", "cost of revenue" → `CostOfRevenue`; "SG&A", "opex", "overhead", "maintenance" → `SellingGeneralAdmin`; "R&D" → `ResearchDevelopment`. Otherwise leave it absent. A cost period with `costNature` Opex that is included in a financial period and has no `costFunction` gets a diagnostic, because its statement line cannot be checked. Never set `costFunction` on Capex. |
+| Inclusion check on `dFinancialPeriod` | Opex ≤ `operatingExpense`, Capex ≤ `capitalExpenditure` | by line: CostOfRevenue ≤ `costOfRevenue`; SellingGeneralAdmin and ResearchDevelopment ≤ `operatingExpense`; Capex ≤ `capitalExpenditure` | No data change; checks follow `costFunction`. |
+| `dFinancialPeriod.operatingExpense` | all other operating cost | the same, **excluding depreciation** | When the source states a depreciation figure that was inside operating expense, move it to the new `depreciation` line and reduce `operatingExpense` by it. When it is unknown whether depreciation was included, keep the value and add a diagnostic. |
+| `dFinancialPeriod` wording | "a cash view" | holds income-statement lines plus the cash line `capitalExpenditure`; subtotals (gross margin, EBITDA, EBIT, net income, free cash flow) are derived and never stored | Remove stored subtotals, if a twin carries any, after checking they match the derived value; a mismatch is a diagnostic. |
+| `dContract.tariff` | `0..1` | `0..*`: price components, each with its own `basis` | An existing tariff becomes a list of one. No conversion. A price written as text with several parts (e.g. "105/unit/month + 1/door/month") becomes one tariff per part, with a diagnostic for review. |
+
+### 3.2 New, no migration needed
+
+* `dRevenuePeriod` (revenue of a product or contract in one period), with `dProductHasRevenuePeriod`, `dContractHasRevenuePeriod` and `dFinancialPeriodIncludesRevenuePeriod`. Revenue per product or contract that a twin kept outside DAF can be loaded as revenue periods; the rule for one quantity → one period in 2.2 applies.
+* `dProductHasCostPeriod` (direct costs of a product, e.g. hardware for resale) and `dResourceHasCostPeriod` (purchase and upkeep of a resource, e.g. an owned fleet).
+* On `dResource` and `dApplicationComponent`: `inServiceDate`, `usefulLife` (Duration) and `depreciationMethod` (`dDepreciationMethod`: StraightLine, DecliningBalance). The depreciation schedule is derived from the Capex cost periods and these properties and is not stored.
+* On `dFinancialPeriod`: `depreciation` and `interestExpense`.
+
+---
+
+## Files still on old names
+
+These artefacts are not yet regenerated for Beta 4 and still use names or types changed above: `Metamodel_json/DAFSchema.json`, `API/` (OAS), `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, the test model, and the manual in `Docs/`.

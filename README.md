@@ -2,7 +2,7 @@
 ## Welcome!
 Welcome to the repository for the DAF MDG (Model Driven Generation) technology for Sparx Enterprise Architect. This repository contains the metamodel, the MDG technology and the resources that support modeling with DAF in Sparx EA.
 
-**Current version: DAF 7.0.0 Beta 3** — 76 concepts, 113 relationship types and 40 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
+**Current version: DAF 7.0.0 Beta 4** — 77 concepts, 118 relationship types and 42 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
 
 ## About
 The Digital Architecture Framework (DAF) is a set of modeling tools for Digital Engineering.
@@ -27,13 +27,16 @@ DAF 7.0 is a major release: it changes datatypes, renames relationships and adds
 | Concept | Purpose |
 |---|---|
 | Quantity (`dQuantityValue`) | A value with a unit: `amount` (Decimal), `unit` (ISO 4217 currency or UCUM code), `per`, `basis`, `asOf` and `kind` (Actual, Estimate, Assumption). |
-| Cost Period (`dCostPeriod`) | All spend in DAF: the cost of an initiative, application, role or capability in one period (Capex, Opex or both), or the budget cap of a program. Linked by `dInitiativeHasCostPeriod`, `dApplicationComponentHasCostPeriod`, `dRoleHasCostPeriod`, `dCapabilityHasCostPeriod` and `dProgramHasBudgetPeriod`. |
+| Cost Period (`dCostPeriod`) | All spend in DAF: the cost of an initiative, application, role, capability, product or resource in one period, or the budget cap of a program. `costNature` says Capex or Opex; `costFunction` says which income-statement line an operating cost lands on (cost of revenue, SG&A, R&D). |
+| Revenue Period (`dRevenuePeriod`) | Revenue earned by a product (`dProductHasRevenuePeriod`) or a contract (`dContractHasRevenuePeriod`) in one period. |
 | Financial Period (`dFinancialPeriod`) | An organisation unit's reported or planned results in one period: revenue, cost of revenue, operating and revenue-linked expense, investment income, invested assets and income tax. Linked by `dOrganizationUnitReportsFinancialPeriod`. |
 | Contract (`dContract`) | Commercial terms: `pricingBasis` (`dPricingBasis`), `billableUnit`, `tariff`, `effectiveFrom`/`effectiveTo` and `renewal`. Linked to products and actors. |
 
-Cost and financial periods are elements linked by relationships, not property values, so each period can be traced, referenced and compared. A financial period includes the cost periods that land in its organisation unit's books (`dFinancialPeriodIncludesCostPeriod`). It is a cash view: Opex is part of `operatingExpense` and Capex of `capitalExpenditure`, so an included cost is never added twice. A program's budget periods are caps and are never included. `dRole.CostRate` holds the cost per FTE, a rate rather than spend.
+Cost and financial periods are elements linked by relationships, not property values, so each period can be traced, referenced and compared. A financial period includes the cost and revenue periods that land in its organisation unit's books (`dFinancialPeriodIncludesCostPeriod`, `dFinancialPeriodIncludesRevenuePeriod`), so every figure can be traced to its source and is never added twice. It holds the income-statement lines (revenue, cost of revenue, operating expense, depreciation, interest, tax) and the cash line `capitalExpenditure`; subtotals such as gross margin, EBITDA, EBIT, net income and free cash flow are derived, never stored. A program's budget periods are caps and are never included. `dRole.CostRate` holds the cost per FTE, a rate rather than spend, and a contract's `tariff` can have several price components.
 
-M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), plus the new enumerations `dCostNature`, `dCostScope`, `dEventType`, `dEventNature`, `dPricingBasis` and `dQuantityKind`.
+**Assets and depreciation.** Resources and applications can be capitalised assets, with `inServiceDate`, `usefulLife` and `depreciationMethod`. Their Capex is recorded as cost periods; the depreciation schedule is derived from it and is not stored.
+
+M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), plus the new enumerations `dCostNature`, `dCostFunction`, `dCostScope`, `dDepreciationMethod`, `dEventType`, `dEventNature`, `dPricingBasis` and `dQuantityKind`.
 
 **Events, KPIs and goals.**
 * `dEvent` is both a trigger and an effect, with `eventType`, `nature`, `frequency`, `likelihood`, `startDate`, `endDate`, `duration` and `owner` (a `dRole`), all optional.
@@ -76,7 +79,7 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 **MDG technology.**
 * UML profile and MDG technology regenerated.
 * Every stereotype appears on a toolbox page, and the new stereotypes have icons and shape scripts.
-* The Strategic Planning toolbox has eight pages: Strategy, Portfolio, Finance and Operating Model, each with its relationships. Finance holds Org Unit, Financial Period, Cost Period, Product, Contract and Role.
+* The Strategic Planning toolbox has eight pages: Strategy, Portfolio, Finance and Operating Model, each with its relationships. Finance holds Org Unit, Financial Period, Cost Period, Revenue Period, Product, Contract and Role.
 * The QuickLink carries the 7.0 rules.
 * The semantic model [technology/rdf/DAF-semantic-model.ttl](technology/rdf/DAF-semantic-model.ttl) (RDF/OWL with SHACL shapes) is generated from the Sparx model.
 
