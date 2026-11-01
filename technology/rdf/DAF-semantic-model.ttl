@@ -19,7 +19,7 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-01T12:59:33"^^xsd:dateTime ;
+    dcterms:created "2026-11-01T13:41:58"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -3321,46 +3321,6 @@ dafshape:dApplicationComponentShape sh:property [
     sh:name "BizCriticality"
 ] .
 
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB
-    a dafm:PropertyDefinition ;
-    rdfs:label "Cost" ;
-    dafm:eaGuid "{5337D51B-421D-4e7a-8F9D-3BE5396D33BB}" ;
-    dafm:sourceDatatype "dQuantityValue" ;
-    dafm:typingStatus dafm:ClassifierType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dApplicationComponent__Cost ;
-    rdfs:comment "The run cost of the application per period, e.g. 450000 CAD per P1Y. Use an ISO 4217 currency as unit and per for the period. Absent means not known." ;
-    dafm:minimumCardinality "0" ;
-    dafm:maximumCardinality "1" .
-
-daf:dApplicationComponent dafm:hasPropertyDefinition dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:classifier daf:dQuantityValue .
-
-dafp:dApplicationComponent__Cost
-    a owl:ObjectProperty ;
-    rdfs:label "Cost" ;
-    rdfs:domain daf:dApplicationComponent ;
-    rdfs:range daf:dQuantityValue ;
-    rdfs:comment "The run cost of the application per period, e.g. 450000 CAD per P1Y. Use an ISO 4217 currency as unit and per for the period. Absent means not known." .
-
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:attributeVisibility "Public" .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:isCollection false .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:isConst false .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:isId false .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:isOrdered false .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:isStatic false .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:attributeLength "0" .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:attributeContainment "Not Specified" .
-dafdef:Property_n_5337D51B421D4e7a8F9D3BE5396D33BB dafm:classifier daf:dQuantityValue .
-
-dafshape:dApplicationComponentShape sh:property [
-    sh:path dafp:dApplicationComponent__Cost ;
-    sh:class daf:dQuantityValue ;
-    sh:minCount 0 ;
-    sh:maxCount 1 ;
-    sh:name "Cost"
-] .
-
 dafdef:Property_n_4754C9421AD24e89B0817AC09C543689
     a dafm:PropertyDefinition ;
     rdfs:label "InvestmentStrategy" ;
@@ -5116,6 +5076,15 @@ dafdef:TaggedValue__6A5FAFA1_E46D_4e1e_935F_10B58088567C__Redefines_3
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
 
+daf:dCapability dafm:hasConstraint dafdef:Constraint__6A5FAFA1_E46D_4e1e_935F_10B58088567C__its_own_cost_periods_dCapabilityHasCostPeriod_hold_only_cost_that_no_linked_role_or_application_carries_1 .
+dafdef:Constraint__6A5FAFA1_E46D_4e1e_935F_10B58088567C__its_own_cost_periods_dCapabilityHasCostPeriod_hold_only_cost_that_no_linked_role_or_application_carries_1
+    a dafm:Constraint ;
+    dafm:constraintName "its own cost periods (dCapabilityHasCostPeriod) hold only cost that no linked role or application carries" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
 dafdef:Property_F7B29D166BB34addB0288D7D3B3D0061
     a dafm:PropertyDefinition ;
     rdfs:label "Category" ;
@@ -5471,46 +5440,6 @@ dafshape:dCapabilityShape sh:property [
     sh:name "IncrementSupplyChain"
 ] .
 
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992
-    a dafm:PropertyDefinition ;
-    rdfs:label "Cost" ;
-    dafm:eaGuid "{5F19D960-BA51-4c8f-9B9C-1EE48B8E1992}" ;
-    dafm:sourceDatatype "dQuantityValue" ;
-    dafm:typingStatus dafm:ClassifierType ;
-    dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dCapability__Cost ;
-    rdfs:comment "The cost of the capability per period, e.g. 2.4 M CAD per P1Y. Set CostScope to say whether it includes the roles and applications linked to the capability, so a model does not count them twice. Absent means not known." ;
-    dafm:minimumCardinality "0" ;
-    dafm:maximumCardinality "1" .
-
-daf:dCapability dafm:hasPropertyDefinition dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:classifier daf:dQuantityValue .
-
-dafp:dCapability__Cost
-    a owl:ObjectProperty ;
-    rdfs:label "Cost" ;
-    rdfs:domain daf:dCapability ;
-    rdfs:range daf:dQuantityValue ;
-    rdfs:comment "The cost of the capability per period, e.g. 2.4 M CAD per P1Y. Set CostScope to say whether it includes the roles and applications linked to the capability, so a model does not count them twice. Absent means not known." .
-
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:attributeVisibility "Public" .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:isCollection false .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:isConst false .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:isId false .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:isOrdered false .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:isStatic false .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:attributeLength "0" .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:attributeContainment "Not Specified" .
-dafdef:Property_n_5F19D960BA514c8f9B9C1EE48B8E1992 dafm:classifier daf:dQuantityValue .
-
-dafshape:dCapabilityShape sh:property [
-    sh:path dafp:dCapability__Cost ;
-    sh:class daf:dQuantityValue ;
-    sh:minCount 0 ;
-    sh:maxCount 1 ;
-    sh:name "Cost"
-] .
-
 dafdef:Property_FBC42CD9293546a195D32E133D34738C
     a dafm:PropertyDefinition ;
     rdfs:label "Criticality" ;
@@ -5595,7 +5524,7 @@ dafdef:Property_n_8D1D2174CD3B4d67AFCB680B9173B2B0
     dafm:typingStatus dafm:EnumerationType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dCapability__CostScope ;
-    rdfs:comment "What Cost covers. Direct: only cost not already carried by the roles and applications linked to the capability. Aggregated: includes them. Absent means unknown, so a model should not add Cost to role and application costs." ;
+    rdfs:comment "Deprecated: dCapability.Cost is removed. A capability's own cost periods (dCapabilityHasCostPeriod) hold only direct cost, and its full cost is derived from the cost periods of its linked roles and applications. Ignored by tools; do not set." ;
     dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" ;
     dafm:enumeration dafenum:dCostScope .
@@ -5607,7 +5536,7 @@ dafp:dCapability__CostScope
     a owl:DatatypeProperty ;
     rdfs:label "CostScope" ;
     rdfs:domain daf:dCapability ;
-    rdfs:comment "What Cost covers. Direct: only cost not already carried by the roles and applications linked to the capability. Aggregated: includes them. Absent means unknown, so a model should not add Cost to role and application costs." .
+    rdfs:comment "Deprecated: dCapability.Cost is removed. A capability's own cost periods (dCapabilityHasCostPeriod) hold only direct cost, and its full cost is derived from the cost periods of its linked roles and applications. Ignored by tools; do not set." .
 
 dafdef:Property_n_8D1D2174CD3B4d67AFCB680B9173B2B0 dafm:attributeVisibility "Public" .
 dafdef:Property_n_8D1D2174CD3B4d67AFCB680B9173B2B0 dafm:isCollection false .
@@ -6468,7 +6397,7 @@ daf:dCostPeriod
     dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
     dafm:packagePath "Delta Architectural Framework/DAF/Metamodel" ;
     skos:altLabel "dCostPeriod" ;
-    rdfs:comment "Spend, or a spending cap, in one period, planned or actual. Linked to the initiative that spends it (dInitiativeHasCostPeriod) or to the program whose budget it caps (dProgramHasBudgetPeriod), so it can be traced and referenced like any other element." ;
+    rdfs:comment "Spend, or a spending cap, of one element in one period, planned or actual. Spend belongs to an initiative, application, role or capability; a cap belongs to a program (its budget). Spend can be included in the financial period of the organisation unit whose books it lands in (dFinancialPeriodIncludesCostPeriod), so every cost can be traced to the statement that contains it." ;
     dafm:umlMetaclass "Class" .
 
 daf:dCostPeriod rdfs:subClassOf daf:DAFBase .
@@ -6488,7 +6417,7 @@ daf:dCostPeriod dafm:sourceVisibility "Public" .
 daf:dCostPeriod dafm:sourceComplexity "1" .
 daf:dCostPeriod dafm:sourceLanguage "Java" .
 daf:dCostPeriod dcterms:created "2026-10-28T15:12:29"^^xsd:dateTime .
-daf:dCostPeriod dcterms:modified "2026-11-01T12:57:09"^^xsd:dateTime .
+daf:dCostPeriod dcterms:modified "2026-11-01T13:37:03"^^xsd:dateTime .
 
 daf:dCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1 .
 dafdef:TaggedValue__A3395B0C_6254_46cb_B818_C0CA9765F4F6__Architecture_Domain_1
@@ -6523,10 +6452,19 @@ dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__amount_is_money_its_uni
     dafm:ownerKind "element" ;
     dafm:constraintStatus "Proposed" .
 
-daf:dCostPeriod dafm:hasConstraint dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_dInitiativeHasCostPeriod_or_one_program_dProgramHasBudgetPeriod__2 .
-dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_dInitiativeHasCostPeriod_or_one_program_dProgramHasBudgetPeriod__2
+daf:dCostPeriod dafm:hasConstraint dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__a_budget_period_dProgramHasBudgetPeriod_is_a_cap_not_spend_it_is_never_included_in_a_financial_period_2 .
+dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__a_budget_period_dProgramHasBudgetPeriod_is_a_cap_not_spend_it_is_never_included_in_a_financial_period_2
     a dafm:Constraint ;
-    dafm:constraintName "belongs to exactly one initiative (dInitiativeHasCostPeriod) or one program (dProgramHasBudgetPeriod)" ;
+    dafm:constraintName "a budget period (dProgramHasBudgetPeriod) is a cap, not spend: it is never included in a financial period" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dCostPeriod dafm:hasConstraint dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_program_application_role_or_capability_dInitiativeHasCostPeriod_dProgramHasBudgetPeriod_dApplicationComponentHasCostPeriod_dRoleHasCostPeriod_dCapabilityHasCostPeriod__3 .
+dafdef:Constraint__A3395B0C_6254_46cb_B818_C0CA9765F4F6__belongs_to_exactly_one_initiative_program_application_role_or_capability_dInitiativeHasCostPeriod_dProgramHasBudgetPeriod_dApplicationComponentHasCostPeriod_dRoleHasCostPeriod_dCapabilityHasCostPeriod__3
+    a dafm:Constraint ;
+    dafm:constraintName "belongs to exactly one initiative, program, application, role or capability (dInitiativeHasCostPeriod, dProgramHasBudgetPeriod, dApplicationComponentHasCostPeriod, dRoleHasCostPeriod, dCapabilityHasCostPeriod)" ;
     dafm:constraintType "Invariant" ;
     dafm:constraintBody "" ;
     dafm:ownerKind "element" ;
@@ -6577,7 +6515,7 @@ dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3
     dafm:typingStatus dafm:ExplicitPrimitiveType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dCostPeriod__periodLength ;
-    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The periods of one initiative, or of one program, must not overlap." ;
+    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The cost periods of one owner must not overlap." ;
     dafm:minimumCardinality "1" ;
     dafm:maximumCardinality "1" .
 
@@ -6588,7 +6526,7 @@ dafp:dCostPeriod__periodLength
     rdfs:label "periodLength" ;
     rdfs:domain daf:dCostPeriod ;
     rdfs:range xsd:duration ;
-    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The periods of one initiative, or of one program, must not overlap." .
+    rdfs:comment "The length of the period, as an xsd:duration, e.g. P1M, P3M, P1Y. The cost periods of one owner must not overlap." .
 
 dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3 dafm:attributeVisibility "Public" .
 dafdef:Property_CCBF36B2AEB442ab8D348661558E74C3 dafm:isCollection false .
@@ -8502,7 +8440,7 @@ daf:dFinancialPeriod
     dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
     dafm:packagePath "Delta Architectural Framework/DAF/Metamodel" ;
     skos:altLabel "dFinancialPeriod" ;
-    rdfs:comment "An organisation unit's reported or planned results for one period: revenue, costs, investment income and tax. Linked to its unit by dOrganizationUnitReportsFinancialPeriod, so it can be traced, compared and referenced like any other element. Use kind Actual on its amounts for reported results and Estimate for a plan." ;
+    rdfs:comment "An organisation unit's reported or planned results for one period: revenue, costs, investment income and tax. A cash view: Capex and Opex are both spend. The cost periods it includes (dFinancialPeriodIncludesCostPeriod) show where its spend comes from. Linked to its unit by dOrganizationUnitReportsFinancialPeriod. Use kind Actual on its amounts for reported results and Estimate for a plan." ;
     dafm:umlMetaclass "Class" .
 
 daf:dFinancialPeriod rdfs:subClassOf daf:DAFBase .
@@ -8522,7 +8460,7 @@ daf:dFinancialPeriod dafm:sourceVisibility "Public" .
 daf:dFinancialPeriod dafm:sourceComplexity "1" .
 daf:dFinancialPeriod dafm:sourceLanguage "Java" .
 daf:dFinancialPeriod dcterms:created "2026-11-01T10:42:08"^^xsd:dateTime .
-daf:dFinancialPeriod dcterms:modified "2026-11-01T11:13:19"^^xsd:dateTime .
+daf:dFinancialPeriod dcterms:modified "2026-11-01T13:37:03"^^xsd:dateTime .
 
 daf:dFinancialPeriod dafm:hasTaggedValue dafdef:TaggedValue__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__Architecture_Domain_1 .
 dafdef:TaggedValue__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__Architecture_Domain_1
@@ -8552,6 +8490,24 @@ daf:dFinancialPeriod dafm:hasConstraint dafdef:Constraint__7FB9A977_7BB0_44de_8E
 dafdef:Constraint__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__all_amounts_in_one_period_use_the_same_ISO_4217_currency_1
     a dafm:Constraint ;
     dafm:constraintName "all amounts in one period use the same ISO 4217 currency" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dFinancialPeriod dafm:hasConstraint dafdef:Constraint__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__an_included_cost_period_dFinancialPeriodIncludesCostPeriod_lies_within_the_financial_period_and_uses_its_currency_2 .
+dafdef:Constraint__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__an_included_cost_period_dFinancialPeriodIncludesCostPeriod_lies_within_the_financial_period_and_uses_its_currency_2
+    a dafm:Constraint ;
+    dafm:constraintName "an included cost period (dFinancialPeriodIncludesCostPeriod) lies within the financial period and uses its currency" ;
+    dafm:constraintType "Invariant" ;
+    dafm:constraintBody "" ;
+    dafm:ownerKind "element" ;
+    dafm:constraintStatus "Proposed" .
+
+daf:dFinancialPeriod dafm:hasConstraint dafdef:Constraint__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__the_Opex_cost_periods_it_includes_add_up_to_no_more_than_operatingExpense_and_the_Capex_ones_to_no_more_than_capitalExpenditure_warning__3 .
+dafdef:Constraint__7FB9A977_7BB0_44de_8E29_BB7B49B80FCA__the_Opex_cost_periods_it_includes_add_up_to_no_more_than_operatingExpense_and_the_Capex_ones_to_no_more_than_capitalExpenditure_warning__3
+    a dafm:Constraint ;
+    dafm:constraintName "the Opex cost periods it includes add up to no more than operatingExpense, and the Capex ones to no more than capitalExpenditure (warning)" ;
     dafm:constraintType "Invariant" ;
     dafm:constraintBody "" ;
     dafm:ownerKind "element" ;
@@ -8717,7 +8673,7 @@ dafdef:Property_n_1F0816EC8C3C419590617CCA4B582812
     dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
     dafm:projectionPredicate dafp:dFinancialPeriod__operatingExpense ;
-    rdfs:comment "All other operating cost in the period, including revenueLinkedExpense. Same currency as revenue." ;
+    rdfs:comment "All other operating cost in the period, including revenueLinkedExpense and the Opex cost periods the statement includes (dFinancialPeriodIncludesCostPeriod). Same currency as revenue." ;
     dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
@@ -8729,7 +8685,7 @@ dafp:dFinancialPeriod__operatingExpense
     rdfs:label "operatingExpense" ;
     rdfs:domain daf:dFinancialPeriod ;
     rdfs:range daf:dQuantityValue ;
-    rdfs:comment "All other operating cost in the period, including revenueLinkedExpense. Same currency as revenue." .
+    rdfs:comment "All other operating cost in the period, including revenueLinkedExpense and the Opex cost periods the statement includes (dFinancialPeriodIncludesCostPeriod). Same currency as revenue." .
 
 dafdef:Property_n_1F0816EC8C3C419590617CCA4B582812 dafm:attributeVisibility "Public" .
 dafdef:Property_n_1F0816EC8C3C419590617CCA4B582812 dafm:isCollection false .
@@ -8902,6 +8858,45 @@ dafshape:dFinancialPeriodShape sh:property [
     sh:minCount 0 ;
     sh:maxCount 1 ;
     sh:name "incomeTax"
+] .
+
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C
+    a dafm:PropertyDefinition ;
+    rdfs:label "capitalExpenditure" ;
+    dafm:eaGuid "{C378B837-5F0C-4429-BC7B-447D086B964C}" ;
+    dafm:sourceDatatype "dQuantityValue" ;
+    dafm:typingStatus dafm:ClassifierType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dFinancialPeriod__capitalExpenditure ;
+    rdfs:comment "Capital spend in the period, with the same currency as revenue. It includes the Capex cost periods the statement includes (dFinancialPeriodIncludesCostPeriod)." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" .
+
+daf:dFinancialPeriod dafm:hasPropertyDefinition dafdef:Property_C378B8375F0C4429BC7B447D086B964C .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:classifier daf:dQuantityValue .
+
+dafp:dFinancialPeriod__capitalExpenditure
+    a owl:ObjectProperty ;
+    rdfs:label "capitalExpenditure" ;
+    rdfs:domain daf:dFinancialPeriod ;
+    rdfs:range daf:dQuantityValue ;
+    rdfs:comment "Capital spend in the period, with the same currency as revenue. It includes the Capex cost periods the statement includes (dFinancialPeriodIncludesCostPeriod)." .
+
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:attributeVisibility "Public" .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:isCollection false .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:isConst false .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:isId false .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:isOrdered false .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:isStatic false .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:attributeContainment "Not Specified" .
+dafdef:Property_C378B8375F0C4429BC7B447D086B964C dafm:classifier daf:dQuantityValue .
+
+dafshape:dFinancialPeriodShape sh:property [
+    sh:path dafp:dFinancialPeriod__capitalExpenditure ;
+    sh:class daf:dQuantityValue ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "capitalExpenditure"
 ] .
 
 # Concept: Goal
@@ -16357,25 +16352,25 @@ dafshape:dRoleShape sh:property [
 
 dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91
     a dafm:PropertyDefinition ;
-    rdfs:label "Cost" ;
+    rdfs:label "CostRate" ;
     dafm:eaGuid "{0B5E819A-F063-4d49-AA0E-43892FFC4C91}" ;
     dafm:sourceDatatype "dQuantityValue" ;
     dafm:typingStatus dafm:ClassifierType ;
     dafm:isDerived false ;
-    dafm:projectionPredicate dafp:dRole__Cost ;
-    rdfs:comment "The cost of the role per period, e.g. 85000 CAD per P1Y basis \"per FTE\", or the total for all FTEs without basis. Absent means not known." ;
+    dafm:projectionPredicate dafp:dRole__CostRate ;
+    rdfs:comment "The cost of one unit of the role's capacity, e.g. 85000 CAD per P1Y with basis \"per FTE\". It is a rate, not spend: the spend on the role goes into its cost periods (dRoleHasCostPeriod). Absent means not known." ;
     dafm:minimumCardinality "0" ;
     dafm:maximumCardinality "1" .
 
 daf:dRole dafm:hasPropertyDefinition dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 .
 dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 dafm:classifier daf:dQuantityValue .
 
-dafp:dRole__Cost
+dafp:dRole__CostRate
     a owl:ObjectProperty ;
-    rdfs:label "Cost" ;
+    rdfs:label "CostRate" ;
     rdfs:domain daf:dRole ;
     rdfs:range daf:dQuantityValue ;
-    rdfs:comment "The cost of the role per period, e.g. 85000 CAD per P1Y basis \"per FTE\", or the total for all FTEs without basis. Absent means not known." .
+    rdfs:comment "The cost of one unit of the role's capacity, e.g. 85000 CAD per P1Y with basis \"per FTE\". It is a rate, not spend: the spend on the role goes into its cost periods (dRoleHasCostPeriod). Absent means not known." .
 
 dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 dafm:attributeVisibility "Private" .
 dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 dafm:isCollection false .
@@ -16388,11 +16383,11 @@ dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 dafm:attributeContainment "No
 dafdef:Property_n_0B5E819AF0634d49AA0E43892FFC4C91 dafm:classifier daf:dQuantityValue .
 
 dafshape:dRoleShape sh:property [
-    sh:path dafp:dRole__Cost ;
+    sh:path dafp:dRole__CostRate ;
     sh:class daf:dQuantityValue ;
     sh:minCount 0 ;
     sh:maxCount 1 ;
-    sh:name "Cost"
+    sh:name "CostRate"
 ] .
 
 # Concept: Security Group
@@ -21610,6 +21605,117 @@ dafshape:dContainerShape sh:property [
     sh:name "inverse dApplicationComponentHasContainer"
 ] .
 
+# Relationship: dApplicationComponentHasCostPeriod
+dafrel:dApplicationComponentHasCostPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Application Has Cost Period" ;
+    skos:notation "dApplicationComponentHasCostPeriod" ;
+    dafm:eaGuid "{C729A81E-6391-4164-B838-2B1FCDFF6F1E}" ;
+    dafm:sourceClass daf:dApplicationComponent ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dApplicationComponentHasCostPeriod ;
+    dafm:inversePredicate dafpred:dApplicationComponentHasCostPeriod_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dApplicationComponentHasCostPeriod" ;
+    rdfs:comment "The application's run or change cost in one period, e.g. licences, hosting and support." ;
+    dafm:forwardRole "has Cost Period" ;
+    dafm:backwardRole "is cost of Application" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dApplicationComponentHasCostPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dApplicationComponentHasCostPeriod dafm:forwardAuthoringDirection "from" .
+dafrel:dApplicationComponentHasCostPeriod dafm:backwardAuthoringDirection "to" .
+dafrel:dApplicationComponentHasCostPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dApplicationComponentHasCostPeriod dafm:sourceConnectorType "Association" .
+dafrel:dApplicationComponentHasCostPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dApplicationComponentHasCostPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dApplicationComponentHasCostPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dApplicationComponent ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dApplicationComponentHasCostPeriod_inverse ;
+    rdfs:label "has Cost Period" .
+
+dafpred:dApplicationComponentHasCostPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dApplicationComponent ;
+    owl:inverseOf dafpred:dApplicationComponentHasCostPeriod ;
+    rdfs:label "is cost of Application" .
+
+dafrel:dApplicationComponentHasCostPeriod dafm:sourceEnd dafdef:RelationshipEnd_dApplicationComponentHasCostPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dApplicationComponentHasCostPeriod_target .
+
+dafdef:RelationshipEnd_dApplicationComponentHasCostPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dApplicationComponent ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is cost of Application" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dApplicationComponentHasCostPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "has Cost Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dApplicationComponentHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__C729A81E_6391_4164_B838_2B1FCDFF6F1E__Metaclass_1 .
+dafdef:TaggedValue__C729A81E_6391_4164_B838_2B1FCDFF6F1E__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dApplicationComponentHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__C729A81E_6391_4164_B838_2B1FCDFF6F1E__Redefines_2 .
+dafdef:TaggedValue__C729A81E_6391_4164_B838_2B1FCDFF6F1E__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dApplicationComponentHasCostPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dApplicationComponentHasCostPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dApplicationComponent ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dApplicationComponentShape sh:property [
+    sh:path dafpred:dApplicationComponentHasCostPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dApplicationComponentHasCostPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dApplicationComponentHasCostPeriod ] ;
+    sh:class daf:dApplicationComponent ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dApplicationComponentHasCostPeriod"
+] .
+
 # Relationship: dBusinessAreaHasCapability
 dafrel:dBusinessAreaHasCapability
     a owl:Class, dafm:RelationshipType ;
@@ -23425,6 +23531,117 @@ dafshape:dDataEntityShape sh:property [
     sh:class daf:dCapability ;
     sh:minCount 0 ;
     sh:name "inverse dDataEntityInformsCapability"
+] .
+
+# Relationship: dCapabilityHasCostPeriod
+dafrel:dCapabilityHasCostPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Capability Has Cost Period" ;
+    skos:notation "dCapabilityHasCostPeriod" ;
+    dafm:eaGuid "{EDCE9B73-3081-438f-8764-35FA7264F001}" ;
+    dafm:sourceClass daf:dCapability ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dCapabilityHasCostPeriod ;
+    dafm:inversePredicate dafpred:dCapabilityHasCostPeriod_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dCapabilityHasCostPeriod" ;
+    rdfs:comment "The direct cost of the capability in one period: cost no linked role or application carries. Its full cost is derived by adding the cost periods of its linked roles and applications." ;
+    dafm:forwardRole "has Cost Period" ;
+    dafm:backwardRole "is direct cost of Capability" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dCapabilityHasCostPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dCapabilityHasCostPeriod dafm:forwardAuthoringDirection "from" .
+dafrel:dCapabilityHasCostPeriod dafm:backwardAuthoringDirection "to" .
+dafrel:dCapabilityHasCostPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dCapabilityHasCostPeriod dafm:sourceConnectorType "Association" .
+dafrel:dCapabilityHasCostPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dCapabilityHasCostPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dCapabilityHasCostPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCapability ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dCapabilityHasCostPeriod_inverse ;
+    rdfs:label "has Cost Period" .
+
+dafpred:dCapabilityHasCostPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dCapability ;
+    owl:inverseOf dafpred:dCapabilityHasCostPeriod ;
+    rdfs:label "is direct cost of Capability" .
+
+dafrel:dCapabilityHasCostPeriod dafm:sourceEnd dafdef:RelationshipEnd_dCapabilityHasCostPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dCapabilityHasCostPeriod_target .
+
+dafdef:RelationshipEnd_dCapabilityHasCostPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dCapability ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is direct cost of Capability" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dCapabilityHasCostPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "has Cost Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dCapabilityHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__EDCE9B73_3081_438f_8764_35FA7264F001__Metaclass_1 .
+dafdef:TaggedValue__EDCE9B73_3081_438f_8764_35FA7264F001__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dCapabilityHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__EDCE9B73_3081_438f_8764_35FA7264F001__Redefines_2 .
+dafdef:TaggedValue__EDCE9B73_3081_438f_8764_35FA7264F001__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dCapabilityHasCostPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dCapabilityHasCostPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCapability ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dCapabilityShape sh:property [
+    sh:path dafpred:dCapabilityHasCostPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dCapabilityHasCostPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dCapabilityHasCostPeriod ] ;
+    sh:class daf:dCapability ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dCapabilityHasCostPeriod"
 ] .
 
 # Relationship: dClusterContainsDeploymentNode
@@ -25365,6 +25582,117 @@ dafshape:dRequirementShape sh:property [
     sh:class daf:dFeature ;
     sh:minCount 0 ;
     sh:name "inverse dRequirementIsSatisfiedByFeature"
+] .
+
+# Relationship: dFinancialPeriodIncludesCostPeriod
+dafrel:dFinancialPeriodIncludesCostPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Financial Period Includes Cost Period" ;
+    skos:notation "dFinancialPeriodIncludesCostPeriod" ;
+    dafm:eaGuid "{00EF5D0E-D7FA-49fd-B108-4E149E9D2B90}" ;
+    dafm:sourceClass daf:dFinancialPeriod ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dFinancialPeriodIncludesCostPeriod ;
+    dafm:inversePredicate dafpred:dFinancialPeriodIncludesCostPeriod_inverse ;
+    dafm:relationshipKind "Association" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dFinancialPeriodIncludesCostPeriod" ;
+    rdfs:comment "The cost period is recorded in this statement: its amount is already part of the statement's operatingExpense (Opex) or capitalExpenditure (Capex). A model must not add it again." ;
+    dafm:forwardRole "includes Cost Period" ;
+    dafm:backwardRole "is included in Financial Period" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:forwardAuthoringDirection "directed" .
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:backwardAuthoringDirection "from" .
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:sourceConnectorType "Association" .
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dFinancialPeriodIncludesCostPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dFinancialPeriod ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dFinancialPeriodIncludesCostPeriod_inverse ;
+    rdfs:label "includes Cost Period" .
+
+dafpred:dFinancialPeriodIncludesCostPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dFinancialPeriod ;
+    owl:inverseOf dafpred:dFinancialPeriodIncludesCostPeriod ;
+    rdfs:label "is included in Financial Period" .
+
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:sourceEnd dafdef:RelationshipEnd_dFinancialPeriodIncludesCostPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dFinancialPeriodIncludesCostPeriod_target .
+
+dafdef:RelationshipEnd_dFinancialPeriodIncludesCostPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dFinancialPeriod ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is included in Financial Period" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dFinancialPeriodIncludesCostPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "includes Cost Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__00EF5D0E_D7FA_49fd_B108_4E149E9D2B90__Metaclass_1 .
+dafdef:TaggedValue__00EF5D0E_D7FA_49fd_B108_4E149E9D2B90__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Association" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dFinancialPeriodIncludesCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__00EF5D0E_D7FA_49fd_B108_4E149E9D2B90__Redefines_2 .
+dafdef:TaggedValue__00EF5D0E_D7FA_49fd_B108_4E149E9D2B90__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dFinancialPeriodIncludesCostPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dFinancialPeriodIncludesCostPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dFinancialPeriod ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dFinancialPeriodShape sh:property [
+    sh:path dafpred:dFinancialPeriodIncludesCostPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dFinancialPeriodIncludesCostPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dFinancialPeriodIncludesCostPeriod ] ;
+    sh:class daf:dFinancialPeriod ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dFinancialPeriodIncludesCostPeriod"
 ] .
 
 # Relationship: dGoalhasObjective
@@ -31618,6 +31946,117 @@ dafshape:dApplicationComponentShape sh:property [
     sh:name "inverse dRoleMaintainsApplication"
 ] .
 
+# Relationship: dRoleHasCostPeriod
+dafrel:dRoleHasCostPeriod
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "Role Has Cost Period" ;
+    skos:notation "dRoleHasCostPeriod" ;
+    dafm:eaGuid "{C398FA1F-DF6F-41c5-97E0-D6F60463084A}" ;
+    dafm:sourceClass daf:dRole ;
+    dafm:targetClass daf:dCostPeriod ;
+    dafm:projectionPredicate dafpred:dRoleHasCostPeriod ;
+    dafm:inversePredicate dafpred:dRoleHasCostPeriod_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dRoleHasCostPeriod" ;
+    rdfs:comment "The spend on the role in one period, e.g. salaries of its FTEs. The rate per FTE is CostRate." ;
+    dafm:forwardRole "has Cost Period" ;
+    dafm:backwardRole "is cost of Role" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..1" .
+
+dafrel:dRoleHasCostPeriod dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dRoleHasCostPeriod dafm:forwardAuthoringDirection "from" .
+dafrel:dRoleHasCostPeriod dafm:backwardAuthoringDirection "to" .
+dafrel:dRoleHasCostPeriod dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dRoleHasCostPeriod dafm:sourceConnectorType "Association" .
+dafrel:dRoleHasCostPeriod dafm:sourceDirection "Source -> Destination" .
+dafrel:dRoleHasCostPeriod dafm:sourceStereotype "Link" .
+
+dafpred:dRoleHasCostPeriod
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dRole ;
+    rdfs:range daf:dCostPeriod ;
+    owl:inverseOf dafpred:dRoleHasCostPeriod_inverse ;
+    rdfs:label "has Cost Period" .
+
+dafpred:dRoleHasCostPeriod_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dCostPeriod ;
+    rdfs:range daf:dRole ;
+    owl:inverseOf dafpred:dRoleHasCostPeriod ;
+    rdfs:label "is cost of Role" .
+
+dafrel:dRoleHasCostPeriod dafm:sourceEnd dafdef:RelationshipEnd_dRoleHasCostPeriod_source ; dafm:targetEnd dafdef:RelationshipEnd_dRoleHasCostPeriod_target .
+
+dafdef:RelationshipEnd_dRoleHasCostPeriod_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dRole ;
+    dafm:cardinality "0..1" ;
+    dafm:aggregation "None" ;
+    dafm:role "is cost of Role" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dRoleHasCostPeriod_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dCostPeriod ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "has Cost Period" ;
+    dafm:navigable "Navigable" ;
+    dafm:visibility "Public" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dRoleHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__C398FA1F_DF6F_41c5_97E0_D6F60463084A__Metaclass_1 .
+dafdef:TaggedValue__C398FA1F_DF6F_41c5_97E0_D6F60463084A__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" .
+
+dafrel:dRoleHasCostPeriod dafm:hasTaggedValue dafdef:TaggedValue__C398FA1F_DF6F_41c5_97E0_D6F60463084A__Redefines_2 .
+dafdef:TaggedValue__C398FA1F_DF6F_41c5_97E0_D6F60463084A__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dRoleHasCostPeriodRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dRoleHasCostPeriod ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dRole ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dCostPeriod ] .
+
+dafshape:dRoleShape sh:property [
+    sh:path dafpred:dRoleHasCostPeriod ;
+    sh:class daf:dCostPeriod ;
+    sh:minCount 0 ;
+    sh:name "dRoleHasCostPeriod"
+] .
+
+dafshape:dCostPeriodShape sh:property [
+    sh:path [ sh:inversePath dafpred:dRoleHasCostPeriod ] ;
+    sh:class daf:dRole ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "inverse dRoleHasCostPeriod"
+] .
+
 # Relationship: dSecurityGroupHasPhysicalService
 dafrel:dSecurityGroupHasPhysicalService
     a owl:Class, dafm:RelationshipType ;
@@ -32653,30 +33092,30 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-01T13:00:28"^^xsd:dateTime ;
+    dcterms:created "2026-11-01T13:42:50"^^xsd:dateTime ;
     dafm:generatorVersion "1.5.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 76 ;
     dafm:supportingClassCount 2 ;
     dafm:registeredClassCount 78 ;
     dafm:enumerationCount 40 ;
-    dafm:propertyCount 339 ;
-    dafm:relationshipCount 109 ;
+    dafm:propertyCount 338 ;
+    dafm:relationshipCount 113 ;
     dafm:ignoredNoteLinkCount 2 ;
     dafm:explicitPrimitivePropertyCount 240 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 21 ;
-    dafm:classifierTypedPropertyCount 77 ;
+    dafm:classifierTypedPropertyCount 76 ;
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
     dafm:dafBaseInheritanceCount 78 ;
-    dafm:registeredRelationshipCount 109 ;
+    dafm:registeredRelationshipCount 113 ;
     dafm:generalizationCount 4 ;
     dafm:warningCount 0 ;
     dafm:legacyProfileConceptCount 116 ;
-    dafm:legacyProfileRelationshipCount 109 ;
-    dafm:authoringEnabledRelationshipCount 109 ;
-    dafm:derivedQuickLinkEquivalentRuleCount 436 ;
-    dafm:quickLinkRuleCount 436 .
+    dafm:legacyProfileRelationshipCount 113 ;
+    dafm:authoringEnabledRelationshipCount 113 ;
+    dafm:derivedQuickLinkEquivalentRuleCount 452 ;
+    dafm:quickLinkRuleCount 452 .
 

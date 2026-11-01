@@ -106,6 +106,10 @@
 					<Tag name="DAF::dProductIncludesProcess(UML::Aggregation)" type="string" description="" unit="" values="" default="Product Includes Process"/>
 					<Tag name="DAF::dInitiativeHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Initiative Has Cost Period"/>
 					<Tag name="DAF::dProgramHasBudgetPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Program Has Budget Period"/>
+					<Tag name="DAF::dFinancialPeriodIncludesCostPeriod(UML::Association)" type="string" description="" unit="" values="" default="Financial Period Includes Cost Period"/>
+					<Tag name="DAF::dApplicationComponentHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Application Has Cost Period"/>
+					<Tag name="DAF::dRoleHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Role Has Cost Period"/>
+					<Tag name="DAF::dCapabilityHasCostPeriod(UML::Aggregation)" type="string" description="" unit="" values="" default="Capability Has Cost Period"/>
 				</TaggedValues>
 			</Stereotype>
 			<Stereotype name="Operating Model" notes="">

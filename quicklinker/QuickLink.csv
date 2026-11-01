@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2026-11-01 12:57:35 PM
+//generated:2026-11-01 1:40:16 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -60,6 +60,11 @@ Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComp
 Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Class,dContainer,Association,dApplicationComponentHasContainer,directed,,Has Container,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,,,,Component,dApplicationComponent,Association,dApplicationComponentHasContainer,from,,contains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dApplicationComponent -> dApplicationComponentHasCostPeriod -> dCostPeriod
+Component,dApplicationComponent,Class,dCostPeriod,,,,Aggregation,dApplicationComponentHasCostPeriod,from,has Cost Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Component,dApplicationComponent,,,,Aggregation,dApplicationComponentHasCostPeriod,to,is cost of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dApplicationComponent,,,,Class,dCostPeriod,Aggregation,dApplicationComponentHasCostPeriod,from,,has Cost Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Component,dApplicationComponent,Aggregation,dApplicationComponentHasCostPeriod,to,,is cost of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dBusinessArea -> dBusinessAreaHasCapability -> dCapability
 Class,dBusinessArea,Class,dCapability,,,,Aggregation,dBusinessAreaHasCapability,from,has Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,Class,dBusinessArea,,,,Aggregation,dBusinessAreaHasCapability,to,is organized in Biz Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -140,6 +145,11 @@ Class,dCapability,Class,dDataEntity,,,,Aggregation,dDataEntityInformsCapability,
 Class,dDataEntity,Class,dCapability,,,,Aggregation,dDataEntityInformsCapability,to,Informs Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dCapability,,,,Class,dDataEntity,Aggregation,dDataEntityInformsCapability,from,,is informed by Data Entity,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dDataEntity,,,,Class,dCapability,Aggregation,dDataEntityInformsCapability,to,,Informs Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dCapability -> dCapabilityHasCostPeriod -> dCostPeriod
+Class,dCapability,Class,dCostPeriod,,,,Aggregation,dCapabilityHasCostPeriod,from,has Cost Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Class,dCapability,,,,Aggregation,dCapabilityHasCostPeriod,to,is direct cost of Capability,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCapability,,,,Class,dCostPeriod,Aggregation,dCapabilityHasCostPeriod,from,,has Cost Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Class,dCapability,Aggregation,dCapabilityHasCostPeriod,to,,is direct cost of Capability,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dCluster -> dClusterContainsDeploymentNode -> dDeploymentNode
 Class,dCluster,Node,dDeploymentNode,,,,Aggregation,dClusterContainsDeploymentNode,from,Contains DeploymentNode,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Node,dDeploymentNode,Class,dCluster,,,,Aggregation,dClusterContainsDeploymentNode,to,is Contained in Cluster,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -225,6 +235,11 @@ Class,dFeature,Class,dRequirement,,,,Realization,dRequirementIsSatisfiedByFeatur
 Class,dRequirement,Class,dFeature,,,,Realization,dRequirementIsSatisfiedByFeature,from,is realized by Feature,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dFeature,,,,Class,dRequirement,Realization,dRequirementIsSatisfiedByFeature,directed,,realizes Requirement,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Class,dRequirement,,,,Class,dFeature,Realization,dRequirementIsSatisfiedByFeature,from,,is realized by Feature,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dFinancialPeriod -> dFinancialPeriodIncludesCostPeriod -> dCostPeriod
+Class,dFinancialPeriod,Class,dCostPeriod,,,,Association,dFinancialPeriodIncludesCostPeriod,directed,includes Cost Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Class,dFinancialPeriod,,,,Association,dFinancialPeriodIncludesCostPeriod,from,is included in Financial Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dFinancialPeriod,,,,Class,dCostPeriod,Association,dFinancialPeriodIncludesCostPeriod,directed,,includes Cost Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Class,dFinancialPeriod,Association,dFinancialPeriodIncludesCostPeriod,from,,is included in Financial Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dGoal -> dGoalhasObjective -> dObjective
 Class,dGoal,Class,dObjective,,,,Aggregation,dGoalhasObjective,from,Has Objective,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dObjective,Class,dGoal,,,,Aggregation,dGoalhasObjective,to,is related to Goal,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -500,6 +515,11 @@ Actor,dRole,Component,dApplicationComponent,,,,Association,dRoleMaintainsApplica
 Component,dApplicationComponent,Actor,dRole,,,,Association,dRoleMaintainsApplication,from,is maintained by Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Actor,dRole,,,,Component,dApplicationComponent,Association,dRoleMaintainsApplication,directed,,maintains Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Actor,dRole,Association,dRoleMaintainsApplication,from,,is maintained by Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dRole -> dRoleHasCostPeriod -> dCostPeriod
+Actor,dRole,Class,dCostPeriod,,,,Aggregation,dRoleHasCostPeriod,from,has Cost Period,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,Actor,dRole,,,,Aggregation,dRoleHasCostPeriod,to,is cost of Role,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Actor,dRole,,,,Class,dCostPeriod,Aggregation,dRoleHasCostPeriod,from,,has Cost Period,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dCostPeriod,,,,Actor,dRole,Aggregation,dRoleHasCostPeriod,to,,is cost of Role,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dSecurityGroup -> dSecurityGroupHasPhysicalService -> dPhysicalService
 Class,dSecurityGroup,Interface,dPhysicalService,,,,Association,dSecurityGroupHasPhysicalService,directed,has Physical Service,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Interface,dPhysicalService,Class,dSecurityGroup,,,,Association,dSecurityGroupHasPhysicalService,from,Asociated to Sec. group,,TRUE,,TRUE,TRUE,DAF,0,,,,,
