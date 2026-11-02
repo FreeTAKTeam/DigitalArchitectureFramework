@@ -90,11 +90,17 @@
 '   ProfileToolboxConnectorGUID, IconPath, SQLPath, CSVPath,
 '   GenerateCatalogs, generateSLQ and GenerateCSV.
 '
+' 1.6.0:
+'   - a Concept with Metaclass = Class and the tagged value ExtendsMetaclass = true
+'     becomes rdfs:subClassOf uml:Class, so its M1 instances carry the full UML
+'     Class content (attributes, operations, generalization, association ends)
+'     defined in <TechFilePath>\rdf\DAF-uml.ttl, which the ontology imports
+'
 
 !INC Local Scripts.EAConstants-VBScript
 !INC DAF MDG.DAF M3 Conf
 
-Const SCRIPT_VERSION = "1.5.0"
+Const SCRIPT_VERSION = "1.6.0"
 
 Const NS_DAF      = "https://freetakteam.github.io/DAF/model#"
 Const NS_DAFM     = "https://freetakteam.github.io/DAF/metamodel#"
@@ -105,6 +111,7 @@ Const NS_DAFSHAPE = "https://freetakteam.github.io/DAF/shape#"
 Const NS_DAFENUM  = "https://freetakteam.github.io/DAF/enum#"
 Const NS_DAFPKG   = "https://freetakteam.github.io/DAF/package#"
 Const NS_DAFDEF   = "https://freetakteam.github.io/DAF/definition#"
+Const NS_UML      = "https://freetakteam.github.io/DAF/uml#"
 
 Dim fso, rdfStream, reportStream
 Dim conceptIriById, conceptLocalById, classIriById, classLocalById
@@ -122,6 +129,7 @@ Dim explicitPrimitivePropertyCount, classifierTypedPropertyCount, unresolvedProp
 Dim legacyConvertedPropertyCount, booleanNamingConventionPropertyCount
 Dim suppressedDuplicateIdPropertyCount
 Dim dafBaseInheritanceCount
+Dim umlClassExtensionCount
 Dim legacyProfileConceptCount, legacyProfileRelationshipCount, quickLinkRuleCount
 Dim authoringEnabledRelationshipCount, derivedQuickLinkEquivalentRuleCount
 
@@ -184,6 +192,7 @@ classifierTypedPropertyCount = 0
 unresolvedPropertyTypeCount = 0
 unknownPropertyTypeCount = 0
 dafBaseInheritanceCount = 0
+umlClassExtensionCount = 0
 legacyProfileConceptCount = 0
 legacyProfileRelationshipCount = 0
 quickLinkRuleCount = 0
@@ -284,6 +293,7 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
     Report "Derived EA QuickLink equivalents: " & derivedQuickLinkEquivalentRuleCount
     Report "Ignored NoteLink connectors: " & ignoredNoteLinkCount
     Report "Synthetic DAFBase inheritances: " & dafBaseInheritanceCount
+    Report "UML Class extensions (ExtendsMetaclass): " & umlClassExtensionCount
     Report "Generalizations: " & inheritanceCount
     Report "Tagged values preserved: " & taggedValueCount
     Report "Constraints preserved: " & constraintCount
@@ -661,7 +671,8 @@ Sub WritePrefixes()
     W "@prefix dafenum:  <" & NS_DAFENUM & "> ."
     W "@prefix dafpkg:   <" & NS_DAFPKG & "> ."
     W "@prefix dafdef:   <" & NS_DAFDEF & "> ."
-    W "@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ."
+    W "@prefix uml:      <" & NS_UML & "> ."
+    W "@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ."
     W "@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> ."
     W "@prefix owl:      <http://www.w3.org/2002/07/owl#> ."
     W "@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> ."
@@ -674,6 +685,7 @@ End Sub
 Sub WriteOntologyHeader(pkg)
     W "<https://freetakteam.github.io/DAF/ontology>"
     W "    a owl:Ontology ;"
+    W "    owl:imports <https://freetakteam.github.io/DAF/uml> ;"
     W "    dcterms:title " & Lit(CStr(ProfileName) & " Semantic Metamodel") & " ;"
     W "    dcterms:description " & Lit("Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model.") & " ;"
     W "    dcterms:created " & TypedLit(IsoDateTime(Now()), "xsd:dateTime") & " ;"
@@ -844,6 +856,7 @@ Sub WriteMetaMetamodelVocabulary()
     DataPropDef "dafm:classifierTypedPropertyCount", "classifier typed property count", "Number of M3 attributes whose datatype is resolved through a classifier.", "xsd:integer"
     DataPropDef "dafm:unresolvedPropertyTypeCount", "unresolved property type count", "Number of M3 attributes with <none> or empty type and no classifier.", "xsd:integer"
     DataPropDef "dafm:unknownPropertyTypeCount", "unknown property type count", "Number of M3 attributes with unsupported textual datatype names.", "xsd:integer"
+    DataPropDef "dafm:umlClassExtensionCount", "UML Class extension count", "Number of Concepts with ExtendsMetaclass = true made a subclass of uml:Class.", "xsd:integer"
     DataPropDef "dafm:dafBaseInheritanceCount", "DAFBase inheritance count", "Number of M3 classes to which synthetic DAFBase inheritance was added.", "xsd:integer"
     DataPropDef "dafm:authoringEnabledRelationshipCount", "authoring-enabled relationship count", "Number of M3 relationship definitions from which authoring semantics were derived.", "xsd:integer"
     DataPropDef "dafm:derivedQuickLinkEquivalentRuleCount", "derived QuickLink equivalent rule count", "Number of EA QuickLink rules that the semantic authoring definitions would deterministically generate.", "xsd:integer"
@@ -1188,6 +1201,14 @@ Sub ExportConcept(el, pkg)
     End If
     W iri & " rdfs:subClassOf daf:DAFBase ."
     dafBaseInheritanceCount = dafBaseInheritanceCount + 1
+    If LCase(Trim(GetTaggedValue(el, "ExtendsMetaclass"))) = "true" Then
+        If metaclassName = "Class" Then
+            W iri & " rdfs:subClassOf uml:Class ."
+            umlClassExtensionCount = umlClassExtensionCount + 1
+        Else
+            Warn "Concept '" & el.Name & "' has ExtendsMetaclass = true but Metaclass '" & metaclassName & "'; only Class is supported by DAF-uml.ttl. Not extended."
+        End If
+    End If
     W ""
 
     ' A Concept-specific shape inherits the common DAFBase shape and receives
@@ -3054,6 +3075,7 @@ Sub WriteGenerationSummary(pkg)
     W "    dafm:unresolvedPropertyTypeCount " & CStr(unresolvedPropertyTypeCount) & " ;"
     W "    dafm:unknownPropertyTypeCount " & CStr(unknownPropertyTypeCount) & " ;"
     W "    dafm:dafBaseInheritanceCount " & CStr(dafBaseInheritanceCount) & " ;"
+    W "    dafm:umlClassExtensionCount " & CStr(umlClassExtensionCount) & " ;"
     W "    dafm:registeredRelationshipCount " & CStr(registeredRelationshipGuids.Count) & " ;"
     W "    dafm:generalizationCount " & CStr(inheritanceCount) & " ;"
     W "    dafm:warningCount " & CStr(warningCount) & " ;"
