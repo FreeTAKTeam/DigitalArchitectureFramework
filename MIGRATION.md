@@ -1,6 +1,6 @@
 # Migrating models to DAF 7.0
 
-This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 4**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing. Dafrion implements these rules in its `dafrion-metamodel` crate, against the pinned export `models/metamodels/daf/7.0.0-beta.4`; its README there lists, for each rule, whether it converts a value or only flags it for review.
+This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 5**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing. Dafrion implements these rules in its `dafrion-metamodel` crate, against the pinned export `models/metamodels/daf/7.0.0-beta.4`; its README there lists, for each rule, whether it converts a value or only flags it for review.
 
 **Principle: nothing is guessed.** A value that cannot be converted stays unknown and produces a diagnostic with the element, the property, the original value and the reason. Every diagnostic is listed in a migration report.
 
@@ -132,6 +132,22 @@ Beta 4 adds revenue, the income-statement line of each cost, assets and deprecia
 
 ---
 
+## Part 4: DAF 7.0.0 Beta 4 to 7.0.0 Beta 5
+
+Beta 5 prepares DAF for industry packs (see [packs/telecom/MAPPING.md](packs/telecom/MAPPING.md)). It is **not breaking**: every Beta 4 model is a valid Beta 5 model.
+
+### 4.1 Changed rules and meanings
+
+| Element | Beta 4 | Beta 5 | Rule |
+|---|---|---|---|
+| `dApplicationAggregatesFunction` | from `dApplicationComponent`; a function is part of `0..1` applications | from `dLogicalAppComponent`, which `dApplicationComponent` specialises; a function is part of `0..*` applications | No data change: every existing link stays valid. In EA the QuickLinker offers the link from logical components, like the other relationships that start from `dLogicalAppComponent`; it can still be drawn from the toolbox. |
+
+### 4.2 New, no migration needed
+
+* On `DAFBase`, so on every concept: `pack` (the key of the industry pack that supplied the element, e.g. `tel`) and `inspiredBy` (the concept area a pack element is inspired by). Both are optional and stay absent for elements authored in the model itself.
+
+---
+
 ## Files still on old names
 
-The JSON schema (`Metamodel_json/DAFSchema.json`) and the OpenAPI description (`API/`) are generated from the Beta 4 semantic model; their property and relationship names are the metamodel's, so API clients built on the older OAS (camelCase names such as `fteCount`) must follow the renames above. These artefacts are not yet regenerated for Beta 4 and still use names or types changed above: `Metamodel_json/DigitalArchitectureFramework.json` (an older draft-04 export), `Metamodel/DAF_Metamodel.xmi`, `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, and the test model.
+The JSON schema (`Metamodel_json/DAFSchema.json`) and the OpenAPI description (`API/`) are generated from the Beta 5 semantic model; their property and relationship names are the metamodel's, so API clients built on the older OAS (camelCase names such as `fteCount`) must follow the renames above. These artefacts are not yet regenerated for Beta 5 and still use names or types changed above: `Metamodel_json/DigitalArchitectureFramework.json` (an older draft-04 export), `Metamodel/DAF_Metamodel.xmi`, `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, and the test model.

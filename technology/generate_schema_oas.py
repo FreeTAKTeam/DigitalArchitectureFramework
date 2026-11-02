@@ -241,6 +241,12 @@ def oas_fix(node):
 
 schemas = OrderedDict()
 schemas["DAFBase"] = old["components"]["schemas"]["DAFBase"]
+# industry pack provenance, defined on the semantic DAFBase; added once to the curated block
+base_oas_props = schemas["DAFBase"]["allOf"][0]["properties"]
+for key, label in (("pack", "Pack"), ("inspiredBy", "Inspired by")):
+    if key not in base_oas_props:
+        prop = next(p for p in g.subjects(RDFS.domain, DAF.DAFBase) if text(p, RDFS.label) == label)
+        base_oas_props[key] = {"type": "string", "description": text(prop, RDFS.comment) + " Writable by clients."}
 for name, e in enums.items():
     schemas[name] = {"description": e["description"], "type": "string", "enum": e["values"]}
 for c in concepts:

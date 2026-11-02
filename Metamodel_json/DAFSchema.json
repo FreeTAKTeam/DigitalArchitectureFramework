@@ -2,8 +2,8 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://freetakteam.github.io/DAF/schema/DigitalArchitectureFramework.schema.json",
     "title": "DigitalArchitectureFramework",
-    "description": "JSON Schema of the DAF 7.0.0 Beta 4 metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationships hold the ids of the related elements (x-reference names the target).",
-    "x-daf-version": "7.0.0 Beta 4",
+    "description": "JSON Schema of the DAF 7.0.0 Beta 5 metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationships hold the ids of the related elements (x-reference names the target).",
+    "x-daf-version": "7.0.0 Beta 5",
     "type": "object",
     "properties": {
         "dAPI": {
@@ -481,6 +481,10 @@
                     "type": "string",
                     "description": "Stable UUID identifier of a DAF model element."
                 },
+                "Inspired by": {
+                    "type": "string",
+                    "description": "The industry concept area a pack element is inspired by, for example process framework. It names an area, never an element of an industry standard. Empty for elements not supplied by a pack."
+                },
                 "Modified at": {
                     "type": "string",
                     "format": "date-time",
@@ -493,6 +497,10 @@
                 "Name": {
                     "type": "string",
                     "description": "Human-readable name of a model element."
+                },
+                "Pack": {
+                    "type": "string",
+                    "description": "Key of the industry pack that supplies the model element, for example tel. Empty for elements authored in the model itself."
                 }
             },
             "required": [
@@ -1368,15 +1376,6 @@
                             "format": "duration",
                             "description": "How long the asset is depreciated over, as an xsd:duration, e.g. P5Y. Absent means the asset is not capitalised or the life is not recorded."
                         },
-                        "dApplicationAggregatesFunction": {
-                            "type": "array",
-                            "items": {
-                                "type": "string",
-                                "format": "uuid",
-                                "x-reference": "#/$defs/dApplicationFunction"
-                            },
-                            "description": "aggregates Function (aggregates Function). Ids of the dApplicationFunction elements; multiplicity 0..*."
-                        },
                         "dApplicationComponentHasContainer": {
                             "type": "array",
                             "items": {
@@ -1514,10 +1513,13 @@
                     "type": "object",
                     "properties": {
                         "dApplicationAggregatesFunction_inverse": {
-                            "type": "string",
-                            "format": "uuid",
-                            "x-reference": "#/$defs/dApplicationComponent",
-                            "description": "part of Application (aggregates Function). Ids of the dApplicationComponent elements; multiplicity 0..1."
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid",
+                                "x-reference": "#/$defs/dLogicalAppComponent"
+                            },
+                            "description": "part of Application (aggregates Function). Ids of the dLogicalAppComponent elements; multiplicity 0..*."
                         },
                         "dControllerImplementsFunction_inverse": {
                             "type": "array",
@@ -3703,6 +3705,15 @@
                         "isUsable": {
                             "type": "boolean",
                             "description": "true when users find the component usable for their work; otherwise false."
+                        },
+                        "dApplicationAggregatesFunction": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "format": "uuid",
+                                "x-reference": "#/$defs/dApplicationFunction"
+                            },
+                            "description": "aggregates Function (aggregates Function). Ids of the dApplicationFunction elements; multiplicity 0..*."
                         },
                         "dApplicationComponentRealizesLogicalComponent_inverse": {
                             "type": "array",

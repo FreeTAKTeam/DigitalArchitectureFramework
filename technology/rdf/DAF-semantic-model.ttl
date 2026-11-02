@@ -19,8 +19,8 @@
     a owl:Ontology ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-01T14:22:00"^^xsd:dateTime ;
-    dafm:generatorVersion "1.5.0" ;
+    dcterms:created "2026-11-02T15:20:54"^^xsd:dateTime ;
+    dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
     dafm:profileName "DAF" ;
@@ -1057,6 +1057,20 @@ dafp:isRoot
     rdfs:label "Is root" ;
     rdfs:comment "Whether the model element is a root." .
 
+dafp:pack
+    a owl:DatatypeProperty ;
+    rdfs:domain daf:DAFBase ;
+    rdfs:range xsd:string ;
+    rdfs:label "Pack" ;
+    rdfs:comment "Key of the industry pack that supplies the model element, for example tel. Empty for elements authored in the model itself." .
+
+dafp:inspiredBy
+    a owl:DatatypeProperty ;
+    rdfs:domain daf:DAFBase ;
+    rdfs:range xsd:string ;
+    rdfs:label "Inspired by" ;
+    rdfs:comment "The industry concept area a pack element is inspired by, for example process framework. It names an area, never an element of an industry standard. Empty for elements not supplied by a pack." .
+
 dafp:package
     a owl:ObjectProperty ;
     rdfs:label "package" ;
@@ -1104,7 +1118,9 @@ dafshape:DAFBaseShape
         sh:maxCount 1
     ] ;
     sh:property [ sh:path dafp:createdAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;
-    sh:property [ sh:path dafp:modifiedAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] .
+    sh:property [ sh:path dafp:modifiedAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dafp:pack ; sh:datatype xsd:string ; sh:maxCount 1 ] ;
+    sh:property [ sh:path dafp:inspiredBy ; sh:datatype xsd:string ; sh:maxCount 1 ] .
 
 dafshape:RelationshipShape
     a sh:NodeShape ;
@@ -21985,121 +22001,6 @@ dafshape:dApplicationComponentShape sh:property [
     sh:name "inverse dApplicationConnectedWithApplication"
 ] .
 
-# Relationship: dApplicationAggregatesFunction
-dafrel:dApplicationAggregatesFunction
-    a owl:Class, dafm:RelationshipType ;
-    rdfs:subClassOf dafm:Relationship ;
-    rdfs:label "aggregates Function" ;
-    skos:notation "dApplicationAggregatesFunction" ;
-    dafm:eaGuid "{F31C4D79-7C5B-4d02-9EB0-098F9CED02A6}" ;
-    dafm:sourceClass daf:dApplicationComponent ;
-    dafm:targetClass daf:dApplicationFunction ;
-    dafm:projectionPredicate dafpred:dApplicationAggregatesFunction ;
-    dafm:inversePredicate dafpred:dApplicationAggregatesFunction_inverse ;
-    dafm:relationshipKind "Aggregation" ;
-    dafm:relationshipKindSource "Metaclass" ;
-    skos:altLabel "dApplicationAggregatesFunction" ;
-    dafm:forwardRole "aggregates Function" ;
-    dafm:backwardRole "part of Application" ;
-    dafm:targetMultiplicity "0..*" ;
-    dafm:sourceMultiplicity "0..1" .
-
-dafrel:dApplicationAggregatesFunction dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
-dafrel:dApplicationAggregatesFunction dafm:forwardAuthoringDirection "from" .
-dafrel:dApplicationAggregatesFunction dafm:backwardAuthoringDirection "to" .
-dafrel:dApplicationAggregatesFunction dafm:derivedQuickLinkRowCount 4 .
-
-dafrel:dApplicationAggregatesFunction dafm:sourceConnectorType "Association" .
-dafrel:dApplicationAggregatesFunction dafm:sourceDirection "Source -> Destination" .
-dafrel:dApplicationAggregatesFunction dafm:sourceStereotype "Link" .
-
-dafpred:dApplicationAggregatesFunction
-    a owl:ObjectProperty ;
-    rdfs:domain daf:dApplicationComponent ;
-    rdfs:range daf:dApplicationFunction ;
-    owl:inverseOf dafpred:dApplicationAggregatesFunction_inverse ;
-    rdfs:label "aggregates Function" .
-
-dafpred:dApplicationAggregatesFunction_inverse
-    a owl:ObjectProperty ;
-    rdfs:domain daf:dApplicationFunction ;
-    rdfs:range daf:dApplicationComponent ;
-    owl:inverseOf dafpred:dApplicationAggregatesFunction ;
-    rdfs:label "part of Application" .
-
-dafrel:dApplicationAggregatesFunction dafm:sourceEnd dafdef:RelationshipEnd_dApplicationAggregatesFunction_source ; dafm:targetEnd dafdef:RelationshipEnd_dApplicationAggregatesFunction_target .
-
-dafdef:RelationshipEnd_dApplicationAggregatesFunction_source
-    a dafm:RelationshipEnd ;
-    dafm:endKind "source" ;
-    dafm:endClass daf:dApplicationComponent ;
-    dafm:cardinality "0..1" ;
-    dafm:aggregation "None" ;
-    dafm:role "part of Application" ;
-    dafm:navigable "Non-Navigable" ;
-    dafm:containment "Unspecified" ;
-    dafm:visibility "Public" ;
-    dafm:isChangeable "none" ;
-    dafm:isDerived false ;
-    dafm:derivedUnion false ;
-    dafm:allowDuplicates false ;
-    dafm:ownedByClassifier false ;
-    dafm:ordering 0 .
-
-dafdef:RelationshipEnd_dApplicationAggregatesFunction_target
-    a dafm:RelationshipEnd ;
-    dafm:endKind "target" ;
-    dafm:endClass daf:dApplicationFunction ;
-    dafm:cardinality "0..*" ;
-    dafm:aggregation "None" ;
-    dafm:role "aggregates Function" ;
-    dafm:navigable "Navigable" ;
-    dafm:containment "Unspecified" ;
-    dafm:visibility "Public" ;
-    dafm:isChangeable "none" ;
-    dafm:isDerived false ;
-    dafm:derivedUnion false ;
-    dafm:allowDuplicates false ;
-    dafm:ownedByClassifier false ;
-    dafm:ordering 0 .
-
-dafrel:dApplicationAggregatesFunction dafm:hasTaggedValue dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Metaclass_1 .
-dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Metaclass_1
-    a dafm:TaggedValue ;
-    dafm:tagName "Metaclass" ;
-    dafm:tagValue "Aggregation" ;
-    dafm:ownerKind "connector" ;
-    dafm:tagNotes "Values: Aggregation,Association,Composition,Dependency,Generatlization,Realization,Abstraction,Assembly,Include,Trace\nDefault: Association\n" .
-
-dafrel:dApplicationAggregatesFunction dafm:hasTaggedValue dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Redefines_2 .
-dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Redefines_2
-    a dafm:TaggedValue ;
-    dafm:tagName "Redefines" ;
-    dafm:tagValue "" ;
-    dafm:ownerKind "connector" .
-
-dafshape:dApplicationAggregatesFunctionRelationshipShape
-    a sh:NodeShape ;
-    sh:targetClass dafrel:dApplicationAggregatesFunction ;
-    sh:node dafshape:RelationshipShape ;
-    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dApplicationComponent ] ;
-    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dApplicationFunction ] .
-
-dafshape:dApplicationComponentShape sh:property [
-    sh:path dafpred:dApplicationAggregatesFunction ;
-    sh:class daf:dApplicationFunction ;
-    sh:minCount 0 ;
-    sh:name "dApplicationAggregatesFunction"
-] .
-
-dafshape:dApplicationFunctionShape sh:property [
-    sh:path [ sh:inversePath dafpred:dApplicationAggregatesFunction ] ;
-    sh:class daf:dApplicationComponent ;
-    sh:minCount 0 ;
-    sh:maxCount 1 ;
-    sh:name "inverse dApplicationAggregatesFunction"
-] .
-
 # Relationship: dApplicationComponentHasContainer
 dafrel:dApplicationComponentHasContainer
     a owl:Class, dafm:RelationshipType ;
@@ -28902,6 +28803,120 @@ dafshape:dBusinessServiceShape sh:property [
     sh:name "inverse dLogAppCompExposesBizService"
 ] .
 
+# Relationship: dApplicationAggregatesFunction
+dafrel:dApplicationAggregatesFunction
+    a owl:Class, dafm:RelationshipType ;
+    rdfs:subClassOf dafm:Relationship ;
+    rdfs:label "aggregates Function" ;
+    skos:notation "dApplicationAggregatesFunction" ;
+    dafm:eaGuid "{F31C4D79-7C5B-4d02-9EB0-098F9CED02A6}" ;
+    dafm:sourceClass daf:dLogicalAppComponent ;
+    dafm:targetClass daf:dApplicationFunction ;
+    dafm:projectionPredicate dafpred:dApplicationAggregatesFunction ;
+    dafm:inversePredicate dafpred:dApplicationAggregatesFunction_inverse ;
+    dafm:relationshipKind "Aggregation" ;
+    dafm:relationshipKindSource "Metaclass" ;
+    skos:altLabel "dApplicationAggregatesFunction" ;
+    dafm:forwardRole "aggregates Function" ;
+    dafm:backwardRole "part of Application" ;
+    dafm:targetMultiplicity "0..*" ;
+    dafm:sourceMultiplicity "0..*" .
+
+dafrel:dApplicationAggregatesFunction dafm:authoringPolicy dafm:DefaultRelationshipAuthoringPolicy .
+dafrel:dApplicationAggregatesFunction dafm:forwardAuthoringDirection "from" .
+dafrel:dApplicationAggregatesFunction dafm:backwardAuthoringDirection "to" .
+dafrel:dApplicationAggregatesFunction dafm:derivedQuickLinkRowCount 4 .
+
+dafrel:dApplicationAggregatesFunction dafm:sourceConnectorType "Association" .
+dafrel:dApplicationAggregatesFunction dafm:sourceDirection "Source -> Destination" .
+dafrel:dApplicationAggregatesFunction dafm:sourceStereotype "Link" .
+
+dafpred:dApplicationAggregatesFunction
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dLogicalAppComponent ;
+    rdfs:range daf:dApplicationFunction ;
+    owl:inverseOf dafpred:dApplicationAggregatesFunction_inverse ;
+    rdfs:label "aggregates Function" .
+
+dafpred:dApplicationAggregatesFunction_inverse
+    a owl:ObjectProperty ;
+    rdfs:domain daf:dApplicationFunction ;
+    rdfs:range daf:dLogicalAppComponent ;
+    owl:inverseOf dafpred:dApplicationAggregatesFunction ;
+    rdfs:label "part of Application" .
+
+dafrel:dApplicationAggregatesFunction dafm:sourceEnd dafdef:RelationshipEnd_dApplicationAggregatesFunction_source ; dafm:targetEnd dafdef:RelationshipEnd_dApplicationAggregatesFunction_target .
+
+dafdef:RelationshipEnd_dApplicationAggregatesFunction_source
+    a dafm:RelationshipEnd ;
+    dafm:endKind "source" ;
+    dafm:endClass daf:dLogicalAppComponent ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "part of Application" ;
+    dafm:navigable "Non-Navigable" ;
+    dafm:containment "Unspecified" ;
+    dafm:visibility "Public" ;
+    dafm:isChangeable "none" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafdef:RelationshipEnd_dApplicationAggregatesFunction_target
+    a dafm:RelationshipEnd ;
+    dafm:endKind "target" ;
+    dafm:endClass daf:dApplicationFunction ;
+    dafm:cardinality "0..*" ;
+    dafm:aggregation "None" ;
+    dafm:role "aggregates Function" ;
+    dafm:navigable "Navigable" ;
+    dafm:containment "Unspecified" ;
+    dafm:visibility "Public" ;
+    dafm:isChangeable "none" ;
+    dafm:isDerived false ;
+    dafm:derivedUnion false ;
+    dafm:allowDuplicates false ;
+    dafm:ownedByClassifier false ;
+    dafm:ordering 0 .
+
+dafrel:dApplicationAggregatesFunction dafm:hasTaggedValue dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Metaclass_1 .
+dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Aggregation" ;
+    dafm:ownerKind "connector" ;
+    dafm:tagNotes "Values: Aggregation,Association,Composition,Dependency,Generatlization,Realization,Abstraction,Assembly,Include,Trace\nDefault: Association\n" .
+
+dafrel:dApplicationAggregatesFunction dafm:hasTaggedValue dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Redefines_2 .
+dafdef:TaggedValue__F31C4D79_7C5B_4d02_9EB0_098F9CED02A6__Redefines_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "connector" .
+
+dafshape:dApplicationAggregatesFunctionRelationshipShape
+    a sh:NodeShape ;
+    sh:targetClass dafrel:dApplicationAggregatesFunction ;
+    sh:node dafshape:RelationshipShape ;
+    sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dLogicalAppComponent ] ;
+    sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dApplicationFunction ] .
+
+dafshape:dLogicalAppComponentShape sh:property [
+    sh:path dafpred:dApplicationAggregatesFunction ;
+    sh:class daf:dApplicationFunction ;
+    sh:minCount 0 ;
+    sh:name "dApplicationAggregatesFunction"
+] .
+
+dafshape:dApplicationFunctionShape sh:property [
+    sh:path [ sh:inversePath dafpred:dApplicationAggregatesFunction ] ;
+    sh:class daf:dLogicalAppComponent ;
+    sh:minCount 0 ;
+    sh:name "inverse dApplicationAggregatesFunction"
+] .
+
 # Relationship: dAreaAggregatesCategories
 dafrel:dAreaAggregatesCategories
     a owl:Class, dafm:RelationshipType ;
@@ -34256,8 +34271,8 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-01T14:22:59"^^xsd:dateTime ;
-    dafm:generatorVersion "1.5.0" ;
+    dcterms:created "2026-11-02T15:21:47"^^xsd:dateTime ;
+    dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 77 ;
     dafm:supportingClassCount 2 ;

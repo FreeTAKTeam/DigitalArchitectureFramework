@@ -34,8 +34,12 @@
 '   QuickLink generator. SupplierEnd.Role is the forward meaning; ClientEnd.Role
 '   is the backward meaning.
 '
-' Version: 1.5.0
-' Date: 2026 / 10 / 28
+' Version: 1.6.0
+' Date: 2026 / 11 / 02
+'
+' 1.6.0 industry pack changes:
+'   - adds the optional DAFBase properties pack (key of the industry pack that supplies the element)
+'     and inspiredBy (the concept area the pack element is inspired by)
 '
 ' 1.5.0 datatype changes:
 '   - maps the M3 primitives Decimal and Duration to xsd:decimal and xsd:duration (ISO 8601, e.g. P1M)
@@ -94,7 +98,7 @@
 !INC Local Scripts.EAConstants-VBScript
 !INC DAF MDG.DAF M3 Conf
 
-Const SCRIPT_VERSION = "1.5.0"
+Const SCRIPT_VERSION = "1.6.0"
 
 Const NS_DAF      = "https://freetakteam.github.io/DAF/model#"
 Const NS_DAFM     = "https://freetakteam.github.io/DAF/metamodel#"
@@ -929,6 +933,8 @@ Sub WriteCommonModelElementVocabulary()
     CommonBoolProp "isAbstract", "Is abstract", "Whether the model element is abstract."
     CommonBoolProp "isLeaf", "Is leaf", "Whether the model element is final/leaf."
     CommonBoolProp "isRoot", "Is root", "Whether the model element is a root."
+    CommonProp "pack", "Pack", "Key of the industry pack that supplies the model element, for example tel. Empty for elements authored in the model itself.", "xsd:string"
+    CommonProp "inspiredBy", "Inspired by", "The industry concept area a pack element is inspired by, for example process framework. It names an area, never an element of an industry standard. Empty for elements not supplied by a pack.", "xsd:string"
     ObjectPropDef "dafp:package", "package", "Package containing the model element."
     ObjectPropDef "dafp:parent", "parent", "Parent model element."
     W ""
@@ -972,7 +978,9 @@ Sub WriteCommonSHACL()
     W "        sh:maxCount 1"
     W "    ] ;"
     W "    sh:property [ sh:path dafp:createdAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;"
-    W "    sh:property [ sh:path dafp:modifiedAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ."
+    W "    sh:property [ sh:path dafp:modifiedAt ; sh:datatype xsd:dateTime ; sh:maxCount 1 ] ;"
+    W "    sh:property [ sh:path dafp:pack ; sh:datatype xsd:string ; sh:maxCount 1 ] ;"
+    W "    sh:property [ sh:path dafp:inspiredBy ; sh:datatype xsd:string ; sh:maxCount 1 ] ."
     W ""
 
     W "dafshape:RelationshipShape"

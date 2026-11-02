@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: DigitalArchitectureFramework
-  version: 7.0.0 Beta 4
+  version: 7.0.0 Beta 5
   description: The Digital Architecture Framework (DAF) is a metamodel and set of modeling tools for Digital Engineering. Its goal is to bridge the classic gaps between strategy, design, and execution by
     enabling collaboration between enterprise architects, solution architects, business analysts, and engineers. DAF provides standardised concepts and relationships (based on UML, ArchiMate, TOGAF, RUP,
     and SPEM) to create high-quality models (digital twins) that can be transformed into executable artifacts . This DAF OpenAPI makes those models accessible as services. It exposes the core DAF concepts—such
@@ -4436,6 +4436,13 @@ components:
             format: uuid
             nullable: true
             description: Identifier of the parent model element.
+          pack:
+            type: string
+            description: Key of the industry pack that supplies the model element, for example tel. Empty for elements authored in the model itself. Writable by clients.
+          inspiredBy:
+            type: string
+            description: The industry concept area a pack element is inspired by, for example process framework. It names an area, never an element of an industry standard. Empty for elements not supplied
+              by a pack. Writable by clients.
     ActorTypes:
       description: ''
       type: string
@@ -5154,13 +5161,6 @@ components:
             format: duration
             description: How long the asset is depreciated over, as an xsd:duration, e.g. P5Y. Absent means the asset is not capitalised or the life is not recorded.
             nullable: true
-          dApplicationAggregatesFunction:
-            type: array
-            items:
-              type: string
-              format: uuid
-              x-reference: '#/components/schemas/dApplicationFunction'
-            description: aggregates Function (aggregates Function). Ids of the dApplicationFunction elements; multiplicity 0..*.
           dApplicationComponentHasContainer:
             type: array
             items:
@@ -5266,11 +5266,12 @@ components:
       - type: object
         properties:
           dApplicationAggregatesFunction_inverse:
-            type: string
-            format: uuid
-            x-reference: '#/components/schemas/dApplicationComponent'
-            description: part of Application (aggregates Function). Ids of the dApplicationComponent elements; multiplicity 0..1.
-            nullable: true
+            type: array
+            items:
+              type: string
+              format: uuid
+              x-reference: '#/components/schemas/dLogicalAppComponent'
+            description: part of Application (aggregates Function). Ids of the dLogicalAppComponent elements; multiplicity 0..*.
           dControllerImplementsFunction_inverse:
             type: array
             items:
@@ -7077,6 +7078,13 @@ components:
             type: boolean
             description: true when users find the component usable for their work; otherwise false.
             nullable: true
+          dApplicationAggregatesFunction:
+            type: array
+            items:
+              type: string
+              format: uuid
+              x-reference: '#/components/schemas/dApplicationFunction'
+            description: aggregates Function (aggregates Function). Ids of the dApplicationFunction elements; multiplicity 0..*.
           dApplicationComponentRealizesLogicalComponent_inverse:
             type: array
             items:
@@ -11603,8 +11611,8 @@ x-uml-relationships:
   alias: aggregates Function
   kind: Aggregation
   source:
-    schema: '#/components/schemas/dApplicationComponent'
-    multiplicity: 0..1
+    schema: '#/components/schemas/dLogicalAppComponent'
+    multiplicity: 0..*
     role: part of Application
   target:
     schema: '#/components/schemas/dApplicationFunction'

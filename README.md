@@ -2,7 +2,7 @@
 ## Welcome!
 Welcome to the repository for the DAF MDG (Model Driven Generation) technology for Sparx Enterprise Architect. This repository contains the metamodel, the MDG technology and the resources that support modeling with DAF in Sparx EA.
 
-**Current version: DAF 7.0.0 Beta 4** — 77 concepts, 118 relationship types and 42 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
+**Current version: DAF 7.0.0 Beta 5** — 77 concepts, 118 relationship types and 42 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
 
 ## About
 The Digital Architecture Framework (DAF) is a set of modeling tools for Digital Engineering.
@@ -49,6 +49,11 @@ M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), pl
 * `dRoleStaffsService` (the role does the service's work) is separate from `dRoleConsumesService` (the role uses its output). `dRoleMaintainsApplication` and `dProcessControlsProcess` are new.
 * Capability maturity is optional (absent means not assessed), and `dIncrement` members carry their order 0 to 5. `CapabilityLevel` is renamed `HierarchyLevel`. A capability's own cost periods hold only direct cost; its full cost is derived from its linked roles and applications, so `CostScope` is deprecated.
 * Types are fixed: `dRisk.Severity` is an `Int32`, `dRole.DegreeOfUtilisation` a Quantity in %, yes/no fields are `Boolean`, and JSON size limits are `Int32`.
+
+**Industry packs (Beta 5).**
+* An industry pack is reference content for one industry, made of plain DAF instances. Packs are inspired by industry frameworks but do not copy them. The first is telecom; see [packs/telecom/MAPPING.md](packs/telecom/MAPPING.md).
+* Every element can say which pack supplied it and what it is inspired by: `DAFBase` gains the optional properties `pack` (the pack key, e.g. `tel`) and `inspiredBy` (a concept area, e.g. "process framework").
+* `dApplicationAggregatesFunction` starts from `dLogicalAppComponent`, so it holds for logical and physical components alike, and a function can be part of several applications (`0..*`).
 
 **Relationships and names.**
 Every relationship end has a multiplicity, and ends that blocked realistic models are opened. Misspelled names are corrected:
@@ -98,13 +103,14 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 * Model: the Sparx EA project that defines the metamodel used by the MDG.
 * ModelWizardTemplate: model wizard templates.
 * mts: MDG technology selector files.
+* packs: industry packs, with the mapping from their source to DAF.
 * patterns: predefined diagram patterns for quick modeling.
 * profile: the DAF UML profile.
 * profile_ecore: the Ecore variant of the DAF UML profile.
 * quicklinker: the QuickLink definition of the metamodel, for creating only valid connections.
 * referenceData: reference data and script groups used in the MDG.
 * Repository Structure: the TOGAF-based catalog structure for an enterprise repository.
-* technology: the DAF MDG technology file (`DAF.xml`) and, under `rdf`, the generated semantic model. `generate_schema_oas.py` regenerates the JSON schema and the OpenAPI description from the semantic model (Python with rdflib and PyYAML: `python technology/generate_schema_oas.py technology/rdf/DAF-semantic-model.ttl API/DigitalArchitectureFramework-OAS.yaml Metamodel_json/DAFSchema.json API/DigitalArchitectureFramework-OAS.yaml "7.0.0 Beta 4"`).
+* technology: the DAF MDG technology file (`DAF.xml`) and, under `rdf`, the generated semantic model. `generate_schema_oas.py` regenerates the JSON schema and the OpenAPI description from the semantic model (Python with rdflib and PyYAML: `python technology/generate_schema_oas.py technology/rdf/DAF-semantic-model.ttl API/DigitalArchitectureFramework-OAS.yaml Metamodel_json/DAFSchema.json API/DigitalArchitectureFramework-OAS.yaml "7.0.0 Beta 5"`).
 * test model: models for testing the metamodel and the MDG.
 * toolboxes: the toolbox profiles, organized by role.
 * VB scripts: scripts that automate tasks within EA, such as profile and semantic model generation.

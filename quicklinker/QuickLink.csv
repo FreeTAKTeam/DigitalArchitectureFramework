@@ -1,5 +1,5 @@
 //Source Element Type,Source Stereotype Filter,Target Element Type,Target Stereotype Filter,Diagram Filter,New Element Type,New Element Stereotype,New Link Type,New Link Stereotype,New Link Direction,New Link Caption,New Link & Element Caption,Create Link,Create Element,Disallow Self connector,No inherit from Metatype,Menu Group,Complexity Level,Target Must Be Parent,Embed element,Precedes Separator LEAF,Precedes Separator GROUP,Dummy Column
-//generated:2026-11-01 2:20:04 PM
+//generated:2026-11-02 3:18:50 PM
 // dActivity -> dActivityContainsAction -> dAction
 Activity,dActivity,Class,dAction,,,,Composition,dActivityContainsAction,from,is contained in Activity,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dAction,Activity,dActivity,,,,Composition,dActivityContainsAction,to,contains Action,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -50,11 +50,6 @@ Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApp
 Component,dApplicationComponent,Component,dApplicationComponent,,,,Assembly,dApplicationConnectedWithApplication,from,Connected to Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,directed,,connected From Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Component,dApplicationComponent,,,,Component,dApplicationComponent,Assembly,dApplicationConnectedWithApplication,from,,Connected to Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-// dApplicationComponent -> dApplicationAggregatesFunction -> dApplicationFunction
-Component,dApplicationComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAggregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,Component,dApplicationComponent,,,,Aggregation,dApplicationAggregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
-Component,dApplicationComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAggregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
-Class,dApplicationFunction,,,,Component,dApplicationComponent,Aggregation,dApplicationAggregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dApplicationComponent -> dApplicationComponentHasContainer -> dContainer
 Component,dApplicationComponent,Class,dContainer,,,,Association,dApplicationComponentHasContainer,directed,Has Container,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dContainer,Component,dApplicationComponent,,,,Association,dApplicationComponentHasContainer,from,contains Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
@@ -355,6 +350,11 @@ Component,dLogicalAppComponent,Activity,dBusinessService,,,,Association,dLogAppC
 Activity,dBusinessService,Component,dLogicalAppComponent,,,,Association,dLogAppCompExposesBizService,from,service run by application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Component,dLogicalAppComponent,,,,Activity,dBusinessService,Association,dLogAppCompExposesBizService,directed,,application runs service,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 Activity,dBusinessService,,,,Component,dLogicalAppComponent,Association,dLogAppCompExposesBizService,from,,service run by application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+// dLogicalAppComponent -> dApplicationAggregatesFunction -> dApplicationFunction
+Component,dLogicalAppComponent,Class,dApplicationFunction,,,,Aggregation,dApplicationAggregatesFunction,from,aggregates Function,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,Component,dLogicalAppComponent,,,,Aggregation,dApplicationAggregatesFunction,to,part of Application,,TRUE,,TRUE,TRUE,DAF,0,,,,,
+Component,dLogicalAppComponent,,,,Class,dApplicationFunction,Aggregation,dApplicationAggregatesFunction,from,,aggregates Function,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
+Class,dApplicationFunction,,,,Component,dLogicalAppComponent,Aggregation,dApplicationAggregatesFunction,to,,part of Application,TRUE,TRUE,TRUE,TRUE,DAF,0,,,,,
 // dMeasurementArea -> dAreaAggregatesCategories -> dMeasurementCategory
 Class,dMeasurementArea,Class,dMeasurementCategory,,,,Aggregation,dAreaAggregatesCategories,from,aggregates categories,,TRUE,,TRUE,TRUE,DAF,0,,,,,
 Class,dMeasurementCategory,Class,dMeasurementArea,,,,Aggregation,dAreaAggregatesCategories,to,has Measurement Area,,TRUE,,TRUE,TRUE,DAF,0,,,,,
