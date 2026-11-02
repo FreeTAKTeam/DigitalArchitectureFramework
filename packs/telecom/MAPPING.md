@@ -54,7 +54,7 @@ The pack is **inspired by** telecom industry frameworks (TM Forum SID, eTOM, TAM
 | isDeleted = true | — | Element excluded. |
 
 ## Structure
-Every hierarchy is expressed by **packages**: the parent becomes a package of the same name that holds the parent element and its children. This covers domains, process in process, function in parent function, data entity in data entity, logical component in logical component, and group in group. Only two hierarchies stay relationships, because DAF 7.0 already has them:
+Every framework hierarchy is expressed by **packages**: the parent becomes a package of the same name that holds the parent element and its children. This covers domains, process in process, function in parent function, data entity in data entity, logical component in logical component, and group in group. Associations, aggregations and compositions between business entities are not framework hierarchy but class model, so they stay connectors (see [Model classes](#model-classes)). Only two hierarchies stay relationships, because DAF 7.0 already has them:
 
 | Source connector | DAF 7.0 |
 |---|---|
@@ -68,10 +68,23 @@ In JSON and RDF exports, packages are `dafpkg:` nodes and each element is `dcter
 |---|---|---|
 | `TMF_ApplicationAssociatesFunction` | 948 | `dApplicationAggregatesFunction` (see [Metamodel changes](#metamodel-changes)) |
 | `TMF_ProcessProducesABE`, `TMF_MakesUseOfABE` | 144 | `dBizServUsesDataEntity` |
-| Association between business entities | ~2,060 | `dModelClassAssociatesModelClass` |
+| Association, aggregation or composition between business entities | ~2,080 | `dModelClassAssociatesModelClass`, keeping its UML ends |
 | Generalization between business entities | ~1,165 | UML Generalization |
 | `TMF_MetricNumenator`, `TMF_MetricDenominator` | ~600 | folded into `dMeasurementIndicator.Definition` |
 | Aggregations and compositions not listed above | — | package structure |
+
+## Model classes
+`dModelClass` extends the full UML Class (tagged value `ExtendsMetaclass = true`), so the RDF export carries each business entity's class content, not only its header and tagged values.
+
+| Source | Pack | Treatment |
+|---|---|---|
+| Attribute name and notes | attribute name and notes | Rewritten in DAF vocabulary, never copied. |
+| Attribute bounds, visibility, static, read-only, ordered, position | the same | Carried; these are facts. |
+| Attribute type | UML primitive, or the pack's rewritten Enumeration or DataType | A type that is neither is reported. |
+| Attribute default | — | Dropped, as for tagged values: no invented values. |
+| Operations | — | None in the source; any found are reported. |
+| Generalization | `uml:superClass` | Carried. |
+| Association, aggregation, composition | `dModelClassAssociatesModelClass` with `uml:Association` ends | Multiplicity, navigability and aggregation kind are carried; role names are rewritten. |
 
 ## Excluded or deferred
 | What | Count | Reason |
