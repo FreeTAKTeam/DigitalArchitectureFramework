@@ -1,0 +1,175 @@
+@prefix uml:      <https://freetakteam.github.io/DAF/uml#> .
+@prefix dafshape: <https://freetakteam.github.io/DAF/shape#> .
+@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:      <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:       <http://www.w3.org/ns/shacl#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+
+# Hand-maintained. The subset of UML 2.5 Class content that DAF concepts with
+# the tagged value ExtendsMetaclass = true inherit (dModelClass first).
+# Names follow UML 2.5 (Class::ownedAttribute, Class::superClass, ...).
+
+<https://freetakteam.github.io/DAF/uml>
+    a owl:Ontology ;
+    dcterms:title "DAF UML Class vocabulary" ;
+    dcterms:description "UML 2.5 Class features (attributes, operations, parameters, generalization, association ends) that DAF concepts extending the UML Class metaclass carry in M1 exports." ;
+    owl:versionInfo "1.0.0" .
+
+# ---------------------------------------------------------------------
+# Classes
+# ---------------------------------------------------------------------
+
+uml:Class a owl:Class ;
+    rdfs:label "Class" ;
+    rdfs:comment "UML 2.5 Class. A DAF concept with ExtendsMetaclass = true is an rdfs:subClassOf this class." .
+
+uml:Property a owl:Class ;
+    rdfs:label "Property" ;
+    rdfs:comment "An attribute owned by a Class (UML 2.5 Property)." .
+
+uml:Operation a owl:Class ;
+    rdfs:label "Operation" ;
+    rdfs:comment "A behavioral feature owned by a Class." .
+
+uml:Parameter a owl:Class ;
+    rdfs:label "Parameter" ;
+    rdfs:comment "A parameter of an Operation." .
+
+uml:Association a owl:Class ;
+    rdfs:label "Association" ;
+    rdfs:comment "Added to an M1 relationship resource whose two endpoints are UML Classes and whose EA connector is an Association or Aggregation. The ends are described by uml:source* and uml:target*." .
+
+# ---------------------------------------------------------------------
+# Class features
+# ---------------------------------------------------------------------
+
+uml:isAbstract a owl:DatatypeProperty ;
+    rdfs:label "is abstract" ;
+    rdfs:range xsd:boolean .
+
+uml:superClass a owl:ObjectProperty ;
+    rdfs:label "super class" ;
+    rdfs:comment "Direct generalization of a Class (UML 2.5 Class::superClass)." ;
+    rdfs:domain uml:Class ;
+    rdfs:range uml:Class .
+
+uml:ownedAttribute a owl:ObjectProperty ;
+    rdfs:label "owned attribute" ;
+    rdfs:domain uml:Class ;
+    rdfs:range uml:Property .
+
+uml:ownedOperation a owl:ObjectProperty ;
+    rdfs:label "owned operation" ;
+    rdfs:domain uml:Class ;
+    rdfs:range uml:Operation .
+
+uml:ownedParameter a owl:ObjectProperty ;
+    rdfs:label "owned parameter" ;
+    rdfs:domain uml:Operation ;
+    rdfs:range uml:Parameter .
+
+# ---------------------------------------------------------------------
+# Typed and multiplicity elements (Property, Operation, Parameter)
+# ---------------------------------------------------------------------
+
+uml:name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:range xsd:string .
+
+uml:typeName a owl:DatatypeProperty ;
+    rdfs:label "type name" ;
+    rdfs:comment "The type as written in the source model (a primitive or a classifier name). For an Operation it is the return type." ;
+    rdfs:range xsd:string .
+
+uml:type a owl:ObjectProperty ;
+    rdfs:label "type" ;
+    rdfs:comment "The classifier resource, when the type is an element of the exported model." .
+
+uml:lower a owl:DatatypeProperty ;
+    rdfs:label "lower" ;
+    rdfs:range xsd:string .
+
+uml:upper a owl:DatatypeProperty ;
+    rdfs:label "upper" ;
+    rdfs:comment "Upper bound; \"*\" for unlimited." ;
+    rdfs:range xsd:string .
+
+uml:defaultValue a owl:DatatypeProperty ;
+    rdfs:label "default value" ;
+    rdfs:range xsd:string .
+
+uml:visibility a owl:DatatypeProperty ;
+    rdfs:label "visibility" ;
+    rdfs:range xsd:string .
+
+uml:isStatic a owl:DatatypeProperty ;
+    rdfs:label "is static" ;
+    rdfs:range xsd:boolean .
+
+uml:isReadOnly a owl:DatatypeProperty ;
+    rdfs:label "is read only" ;
+    rdfs:range xsd:boolean .
+
+uml:isOrdered a owl:DatatypeProperty ;
+    rdfs:label "is ordered" ;
+    rdfs:range xsd:boolean .
+
+uml:isQuery a owl:DatatypeProperty ;
+    rdfs:label "is query" ;
+    rdfs:domain uml:Operation ;
+    rdfs:range xsd:boolean .
+
+uml:direction a owl:DatatypeProperty ;
+    rdfs:label "direction" ;
+    rdfs:comment "in, out, inout or return." ;
+    rdfs:domain uml:Parameter ;
+    rdfs:range xsd:string .
+
+uml:position a owl:DatatypeProperty ;
+    rdfs:label "position" ;
+    rdfs:comment "Order of the feature or parameter in its owner, as in the source model." ;
+    rdfs:range xsd:integer .
+
+# ---------------------------------------------------------------------
+# Association ends
+# ---------------------------------------------------------------------
+
+uml:sourceMultiplicity a owl:DatatypeProperty ; rdfs:label "source multiplicity" ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+uml:targetMultiplicity a owl:DatatypeProperty ; rdfs:label "target multiplicity" ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+uml:sourceAggregation  a owl:DatatypeProperty ; rdfs:label "source aggregation"  ; rdfs:comment "none, shared or composite." ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+uml:targetAggregation  a owl:DatatypeProperty ; rdfs:label "target aggregation"  ; rdfs:comment "none, shared or composite." ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+uml:sourceNavigability a owl:DatatypeProperty ; rdfs:label "source navigability" ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+uml:targetNavigability a owl:DatatypeProperty ; rdfs:label "target navigability" ; rdfs:domain uml:Association ; rdfs:range xsd:string .
+
+# ---------------------------------------------------------------------
+# SHACL
+# ---------------------------------------------------------------------
+
+dafshape:UmlPropertyShape
+    a sh:NodeShape ;
+    sh:targetClass uml:Property ;
+    sh:property [ sh:path uml:name ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path uml:lower ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9]+$" ] ;
+    sh:property [ sh:path uml:upper ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^([0-9]+|\\*)$" ] .
+
+dafshape:UmlOperationShape
+    a sh:NodeShape ;
+    sh:targetClass uml:Operation ;
+    sh:property [ sh:path uml:name ; sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path uml:ownedParameter ; sh:class uml:Parameter ] .
+
+dafshape:UmlParameterShape
+    a sh:NodeShape ;
+    sh:targetClass uml:Parameter ;
+    sh:property [ sh:path uml:name ; sh:maxCount 1 ; sh:datatype xsd:string ] ;
+    sh:property [ sh:path uml:direction ; sh:maxCount 1 ; sh:in ( "in" "out" "inout" "return" ) ] .
+
+dafshape:UmlClassShape
+    a sh:NodeShape ;
+    sh:targetClass uml:Class ;
+    sh:property [ sh:path uml:ownedAttribute ; sh:class uml:Property ] ;
+    sh:property [ sh:path uml:ownedOperation ; sh:class uml:Operation ] ;
+    sh:property [ sh:path uml:superClass ; sh:class uml:Class ] ;
+    sh:property [ sh:path uml:isAbstract ; sh:maxCount 1 ; sh:datatype xsd:boolean ] .

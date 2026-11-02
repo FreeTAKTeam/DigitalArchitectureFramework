@@ -4,7 +4,7 @@
 ' =============================================================================
 ' DAF 6.3 M1 RDF Model Exporter
 '
-' Exporter version:              0.5.0
+' Exporter version:              0.6.0
 ' DAF framework version:         6.3
 ' Semantic metamodel export:     1.5.0
 '
@@ -76,13 +76,17 @@
 ' - Diagrams/views are deliberately deferred to the next iteration.
 ' - Unknown/legacy stereotypes and tags are preserved and reported, not dropped.
 '
+' - Concepts listed in umlClassConcepts (dModelClass) extend the UML Class
+'   metaclass (ExtendsMetaclass = true in the M3 model): their attributes,
+'   operations, parameters, isAbstract, generalizations and association ends
+'   are exported with the DAF UML vocabulary (technology/rdf/DAF-uml.ttl).
 ' This script does NOT require the M3 source package to exist in the model being
 ' exported. It is therefore suitable for existing DAF repositories such as
 ' EuroCOM that only have the DAF MDG/profile installed.
 ' =============================================================================
 
 
-Const EXPORTER_VERSION = "0.5.0"
+Const EXPORTER_VERSION = "0.6.0"
 Const DAF_VERSION = "6.3"
 Const METAMODEL_EXPORT_VERSION = "1.5.0"
 Const PROFILE_NAME = "DAF"
@@ -151,6 +155,12 @@ Dim elementCount
 Dim relationshipCount
 Dim projectionCount
 Dim genericConnectorCount
+Dim umlClassConcepts
+Dim umlAttributeCount
+Dim umlOperationCount
+Dim umlParameterCount
+Dim umlGeneralizationCount
+Dim umlAssociationCount
 Dim suppressedIdTagCount
 Dim mappedPropertyValueCount
 Dim rawTaggedValueCount
@@ -231,6 +241,7 @@ End Sub
 
 Sub InitState()
     Set classMap = CreateObject("Scripting.Dictionary")
+    Set umlClassConcepts = CreateObject("Scripting.Dictionary")
     classMap.CompareMode = 1
 
     Set propertyMap = CreateObject("Scripting.Dictionary")
@@ -364,6 +375,11 @@ Sub InitState()
     relationshipCount = 0
     projectionCount = 0
     genericConnectorCount = 0
+    umlAttributeCount = 0
+    umlOperationCount = 0
+    umlParameterCount = 0
+    umlGeneralizationCount = 0
+    umlAssociationCount = 0
     suppressedIdTagCount = 0
     mappedPropertyValueCount = 0
     rawTaggedValueCount = 0
@@ -388,6 +404,9 @@ Sub InitState()
 End Sub
 
 Sub InitMetamodelMaps()
+    ' Concepts with ExtendsMetaclass = true in the M3 model (rdfs:subClassOf uml:Class).
+    umlClassConcepts.Add "dModelClass", True
+
     AddClass "dAPI"
     AddClass "dAPIOperation"
     AddClass "dAPIParameter"
@@ -1004,6 +1023,7 @@ Sub WriteHeader()
     W "@prefix dafrel:   <https://freetakteam.github.io/DAF/relationship#> ."
     W "@prefix dafpred:  <https://freetakteam.github.io/DAF/predicate#> ."
     W "@prefix dafi:     <https://freetakteam.github.io/DAF/instance#> ."
+    W "@prefix uml:      <https://freetakteam.github.io/DAF/uml#> ."
     W "@prefix m:        <" & modelPrefixBase & "> ."
     W "@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ."
     W "@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> ."
@@ -1236,6 +1256,7 @@ Sub WriteElementRecursive(el, packageIri, parentDafElementIri)
         If Trim(CStr(el.Name)) = "" Then unnamedElementCount = unnamedElementCount + 1
 
         ExportElementTaggedValues el, eIri, dafStereo
+        If umlClassConcepts.Exists(dafStereo) Then WriteUmlClassFeatures el, eIri
     End If
 
     Dim child
@@ -1358,6 +1379,140 @@ Function EmitObjectProperty(ownerIri, predicateLocal, rawValue)
     Next
 
     EmitObjectProperty = foundAny
+End Function
+
+' =============================================================================
+' UML CLASS FEATURES (concepts in umlClassConcepts)
+' =============================================================================
+
+Sub WriteUmlClassFeatures(el, ownerIri)
+    W ownerIri & " uml:isAbstract " & BooleanLiteral(EAFlag(el.Abstract)) & " ."
+
+    Dim a, attrIri
+    For Each a In el.Attributes
+        attrIri = ResourceIri("attribute", a.AttributeGUID)
+        W ownerIri & " uml:ownedAttribute " & attrIri & " ."
+        W attrIri
+        W "    a uml:Property ;"
+        W "    uml:name " & Lit(a.Name) & " ;"
+        WriteUmlType a.Type, a.ClassifierID
+        W "    uml:lower " & Lit(BoundOrOne(a.LowerBound)) & " ;"
+        W "    uml:upper " & Lit(BoundOrOne(a.UpperBound)) & " ;"
+        If Trim(CStr(a.Default)) <> "" Then W "    uml:defaultValue " & Lit(a.Default) & " ;"
+        If Trim(CStr(a.Notes)) <> "" Then W "    dafp:notes " & Lit(a.Notes) & " ;"
+        W "    uml:visibility " & Lit(a.Visibility) & " ;"
+        W "    uml:isStatic " & BooleanLiteral(EAFlag(a.IsStatic)) & " ;"
+        W "    uml:isReadOnly " & BooleanLiteral(EAFlag(a.IsConst)) & " ;"
+        W "    uml:isOrdered " & BooleanLiteral(EAFlag(a.IsOrdered)) & " ;"
+        W "    uml:position " & TypedLit(CStr(a.Pos), "integer") & " ;"
+        W "    dafm:eaGuid " & Lit(a.AttributeGUID) & " ."
+        W ""
+        umlAttributeCount = umlAttributeCount + 1
+    Next
+
+    Dim m, opIri, p, parIri, index
+    For Each m In el.Methods
+        opIri = ResourceIri("operation", m.MethodGUID)
+        W ownerIri & " uml:ownedOperation " & opIri & " ."
+        W opIri
+        W "    a uml:Operation ;"
+        W "    uml:name " & Lit(m.Name) & " ;"
+        WriteUmlType m.ReturnType, m.ClassifierID
+        If Trim(CStr(m.Notes)) <> "" Then W "    dafp:notes " & Lit(m.Notes) & " ;"
+        W "    uml:visibility " & Lit(m.Visibility) & " ;"
+        W "    uml:isAbstract " & BooleanLiteral(EAFlag(m.Abstract)) & " ;"
+        W "    uml:isStatic " & BooleanLiteral(EAFlag(m.IsStatic)) & " ;"
+        W "    uml:isQuery " & BooleanLiteral(EAFlag(m.IsQuery)) & " ;"
+        W "    uml:position " & TypedLit(CStr(m.Pos), "integer") & " ;"
+        W "    dafm:eaGuid " & Lit(m.MethodGUID) & " ."
+        W ""
+        umlOperationCount = umlOperationCount + 1
+
+        index = 0
+        For Each p In m.Parameters
+            index = index + 1
+            ' Suffix by order, not ParameterGUID, which older EA builds do not expose.
+            parIri = ResourceIriWithSuffix("parameter", m.MethodGUID, CStr(index))
+            W opIri & " uml:ownedParameter " & parIri & " ."
+            W parIri
+            W "    a uml:Parameter ;"
+            W "    uml:name " & Lit(p.Name) & " ;"
+            WriteUmlType p.Type, p.ClassifierID
+            If Trim(CStr(p.Default)) <> "" Then W "    uml:defaultValue " & Lit(p.Default) & " ;"
+            W "    uml:direction " & Lit(LCase(Trim(CStr(p.Kind)))) & " ;"
+            W "    uml:position " & TypedLit(CStr(index), "integer") & " ."
+            W ""
+            umlParameterCount = umlParameterCount + 1
+        Next
+    Next
+End Sub
+
+' Writes uml:typeName, plus uml:type when the classifier is an exported element.
+Sub WriteUmlType(typeName, classifierId)
+    If Trim(CStr(typeName)) <> "" Then W "    uml:typeName " & Lit(typeName) & " ;"
+    Dim cid
+    cid = 0
+    If IsNumeric(classifierId) Then cid = CLng(classifierId)
+    If cid > 0 Then
+        If elementIriById.Exists(CStr(cid)) Then W "    uml:type " & elementIriById(CStr(cid)) & " ;"
+    End If
+End Sub
+
+' Generalization and association ends between two exported UML Classes.
+' EA ClientID is the child of a Generalization and the source of an Association.
+Sub WriteUmlConnectorFeatures(c, relIri, clientIri, supplierIri)
+    If Not IsUmlClassElement(c.ClientID) Or Not IsUmlClassElement(c.SupplierID) Then Exit Sub
+
+    Select Case LCase(c.Type)
+        Case "generalization"
+            W clientIri & " uml:superClass " & supplierIri & " ."
+            W ""
+            umlGeneralizationCount = umlGeneralizationCount + 1
+        Case "association", "aggregation"
+            W relIri & " a uml:Association ;"
+            If Trim(CStr(c.ClientEnd.Cardinality)) <> "" Then W "    uml:sourceMultiplicity " & Lit(c.ClientEnd.Cardinality) & " ;"
+            If Trim(CStr(c.SupplierEnd.Cardinality)) <> "" Then W "    uml:targetMultiplicity " & Lit(c.SupplierEnd.Cardinality) & " ;"
+            If Trim(CStr(c.ClientEnd.Navigable)) <> "" Then W "    uml:sourceNavigability " & Lit(c.ClientEnd.Navigable) & " ;"
+            If Trim(CStr(c.SupplierEnd.Navigable)) <> "" Then W "    uml:targetNavigability " & Lit(c.SupplierEnd.Navigable) & " ;"
+            W "    uml:sourceAggregation " & Lit(UmlAggregationName(c.ClientEnd.Aggregation)) & " ;"
+            W "    uml:targetAggregation " & Lit(UmlAggregationName(c.SupplierEnd.Aggregation)) & " ."
+            W ""
+            umlAssociationCount = umlAssociationCount + 1
+    End Select
+End Sub
+
+Function IsUmlClassElement(elementId)
+    IsUmlClassElement = False
+    If elementStereoById.Exists(CStr(elementId)) Then
+        IsUmlClassElement = umlClassConcepts.Exists(elementStereoById(CStr(elementId)))
+    End If
+End Function
+
+Function UmlAggregationName(value)
+    Select Case CInt(value)
+        Case 1
+            UmlAggregationName = "shared"
+        Case 2
+            UmlAggregationName = "composite"
+        Case Else
+            UmlAggregationName = "none"
+    End Select
+End Function
+
+' EA returns flags as Boolean, "0"/"1" or blank depending on the property.
+Function EAFlag(value)
+    Dim v
+    v = LCase(Trim(CStr(value)))
+    EAFlag = (v = "1" Or v = "true" Or v = "-1")
+End Function
+
+' UML rule: a blank attribute bound means 1.
+Function BoundOrOne(value)
+    If Trim(CStr(value)) = "" Then
+        BoundOrOne = "1"
+    Else
+        BoundOrOne = Trim(CStr(value))
+    End If
 End Function
 
 Sub WriteConnectorsRecursive(el)
@@ -1506,6 +1661,7 @@ Sub WriteConnector(c)
     End If
 
     ExportConnectorTaggedValues c, relIri
+    WriteUmlConnectorFeatures c, relIri, clientIri, supplierIri
 
     If isExternalConnector And resolvedRelationship = "" Then
         WriteExternalRelationshipSemanticMapping c, relIri
@@ -2899,6 +3055,8 @@ Sub WriteAuditSummary()
     Report "  resolved deterministically from endpoint types: " & relationshipResolvedByEndpointsCount
     Report "  semantic direction reversed from EA Client/Supplier: " & relationshipDirectionReversedCount
     Report "Generic/unresolved connectors exported: " & genericConnectorCount
+    Report "UML attributes / operations / parameters exported: " & umlAttributeCount & " / " & umlOperationCount & " / " & umlParameterCount
+    Report "UML generalizations / associations between UML Classes: " & umlGeneralizationCount & " / " & umlAssociationCount
     Report "Ambiguous endpoint relationship resolutions: " & ambiguousRelationshipCount
     Report "Materialized relationship projection triples: " & projectionCount
     Report "External/cross-boundary connectors preserved: " & externalConnectorCount
