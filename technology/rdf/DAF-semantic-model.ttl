@@ -7,7 +7,8 @@
 @prefix dafenum:  <https://freetakteam.github.io/DAF/enum#> .
 @prefix dafpkg:   <https://freetakteam.github.io/DAF/package#> .
 @prefix dafdef:   <https://freetakteam.github.io/DAF/definition#> .
-@prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix uml:      <https://freetakteam.github.io/DAF/uml#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
@@ -17,9 +18,10 @@
 
 <https://freetakteam.github.io/DAF/ontology>
     a owl:Ontology ;
+    owl:imports <https://freetakteam.github.io/DAF/uml> ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-02T15:20:54"^^xsd:dateTime ;
+    dcterms:created "2026-11-02T15:52:29"^^xsd:dateTime ;
     dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -830,6 +832,12 @@ dafm:unknownPropertyTypeCount
     a owl:DatatypeProperty ;
     rdfs:label "unknown property type count" ;
     rdfs:comment "Number of M3 attributes with unsupported textual datatype names." ;
+    rdfs:range xsd:integer .
+
+dafm:umlClassExtensionCount
+    a owl:DatatypeProperty ;
+    rdfs:label "UML Class extension count" ;
+    rdfs:comment "Number of Concepts with ExtendsMetaclass = true made a subclass of uml:Class." ;
     rdfs:range xsd:integer .
 
 dafm:dafBaseInheritanceCount
@@ -13034,6 +13042,7 @@ daf:dModelClass
     dafm:umlMetaclass "Class" .
 
 daf:dModelClass rdfs:subClassOf daf:DAFBase .
+daf:dModelClass rdfs:subClassOf uml:Class .
 
 dafshape:dModelClassShape
     a sh:NodeShape ;
@@ -13060,16 +13069,23 @@ dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Architecture_Domain_1
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Business,Data,Application,Technology,Implementation,Strategy,Security,Other\nDefault: Other\n" .
 
-daf:dModelClass dafm:hasTaggedValue dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Metaclass_2 .
-dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Metaclass_2
+daf:dModelClass dafm:hasTaggedValue dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__ExtendsMetaclass_2 .
+dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__ExtendsMetaclass_2
+    a dafm:TaggedValue ;
+    dafm:tagName "ExtendsMetaclass" ;
+    dafm:tagValue "true" ;
+    dafm:ownerKind "element" .
+
+daf:dModelClass dafm:hasTaggedValue dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Metaclass_3 .
+dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Metaclass_3
     a dafm:TaggedValue ;
     dafm:tagName "Metaclass" ;
     dafm:tagValue "Class" ;
     dafm:ownerKind "element" ;
     dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\nDefault: Class\n" .
 
-daf:dModelClass dafm:hasTaggedValue dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Redefines_3 .
-dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Redefines_3
+daf:dModelClass dafm:hasTaggedValue dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Redefines_4 .
+dafdef:TaggedValue__7433DCDF_332F_413a_B09F_318C5DF7B51F__Redefines_4
     a dafm:TaggedValue ;
     dafm:tagName "Redefines" ;
     dafm:tagValue "" ;
@@ -34271,7 +34287,7 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-02T15:21:47"^^xsd:dateTime ;
+    dcterms:created "2026-11-02T15:53:22"^^xsd:dateTime ;
     dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 77 ;
@@ -34289,6 +34305,7 @@ dafshape:dRegionShape sh:property [
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
     dafm:dafBaseInheritanceCount 79 ;
+    dafm:umlClassExtensionCount 1 ;
     dafm:registeredRelationshipCount 118 ;
     dafm:generalizationCount 4 ;
     dafm:warningCount 0 ;
