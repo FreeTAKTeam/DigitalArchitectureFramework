@@ -14,3 +14,4 @@ EA_DAF_courseware
 
 # industry pack working files (source ledger, extraction report, rephrasing batches)
 packs/*/.local/
+__pycache__/
