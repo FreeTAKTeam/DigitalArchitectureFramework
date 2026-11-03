@@ -33,6 +33,7 @@ The pack is **inspired by** telecom industry frameworks (TM Forum SID, eTOM, TAM
 | `TMF_AF` | 349 | `dApplicationFunction` | A parent function; its children sit in its package. |
 | `TMF_Capability` | 534 | `dCapability` | Has no links in the source; linking is a follow-up, not extraction. |
 | `TMF_Metric` | 2,846 | `dMeasurementIndicator` | |
+| — | — | `dMeasurementArea` | One area, *Telecom Measures*, aggregates every category with `dAreaAggregatesCategories`. Added after export, see [Measurement hierarchy](#measurement-hierarchy). |
 | `TMF_MetricGroup`, top level | — | `dMeasurementCategory` | Linked to its groups with `dCategoryaggregatesGroups`. |
 | `TMF_MetricGroup` with a metric attached | — | `dMeasurementGrouping` | Placed under its top-level category, whatever its depth. Groups without a metric are dropped. |
 | `TMF_Domain` | 13 | package only | No element. An element takes the domain of the root of its hierarchy; a root without a domain link takes the domain named in its source package path (`.../Service Domain/...`). Capabilities take it from their source package (Customer, Market, Sales, ...). The 10 elements with no domain at all go to `Cross-Domain`; KPIs go to `Business Metrics`, enumerations and datatypes to `Information Types`. |
@@ -48,7 +49,7 @@ The pack is **inspired by** telecom industry frameworks (TM Forum SID, eTOM, TAM
 | HierarchyLevel on other stereotypes | — | Derived from the package structure. |
 | `TMF_Metric` units | `dMeasurementIndicator.UnitOfMeasure` | UCUM code where possible. |
 | `TMF_Metric` txtformula, numerator, denominator | `dMeasurementIndicator.Definition` | Restated as a formula over pack KPI names. |
-| `TMF_Metric` category1-3, metrictype, group | `dMeasurementCategory`, `dMeasurementGrouping.MeasurementCategory` | Pack names. |
+| `TMF_Metric` category1-3, metrictype, group | — | Not carried. A KPI is placed by its `TMF_MetricGroupMetric` link; the `MeasurementCategory` and `MeasurementArea` tags stay empty, because the `dCategoryaggregatesGroups` and `dAreaAggregatesCategories` relationships carry the hierarchy. |
 | Maturity, TMFStatus, Issue, Comment, SortID, Origin, system ID, entrydate, busvalue, IsCoreEntity, RSA_GUID | — | Dropped: editorial metadata of the source. RSA_GUID goes to the ledger. |
 | `TMF_Process` Criticality, Cost, Risk, BusinessValue, Increments* | — | Dropped: assessments of one organisation, not reference content. |
 | isDeleted = true | — | Element excluded. |
@@ -85,6 +86,19 @@ In the RDF export each package is a `dafi:Package` with `dafi:parentPackage`, an
 | Operations | — | None in the source; any found are reported. |
 | Generalization | `uml:superClass` | Carried. |
 | Association, aggregation, composition | `dModelClassAssociatesModelClass` with `uml:Association` ends | Multiplicity, navigability and aggregation kind are carried; each role name is derived from the pack name of the class at that end (lowerCamelCase). |
+
+## Measurement hierarchy
+DAF requires each category to sit in exactly one area and each KPI in at least one grouping. The 1.0.0 export had no area, and 570 KPIs had no `TMF_MetricGroupMetric` link to a kept group. `packs/tools/fix_measurement_hierarchy.py` completes the exported TTL:
+
+* the area *Telecom Measures* aggregates all 13 categories and the new one below;
+* the category *General Measures* holds one grouping, *Unclassified Measures* (a grouping must belong to exactly one category);
+* *Unclassified Measures* aggregates the 570 KPIs. Each still needs a proper grouping.
+
+The added elements and links live only in the TTL (no EA GUID, `dcterms:source` names the script). Rerun the script after every export until they are modelled in EA:
+
+```bash
+python3 packs/tools/fix_measurement_hierarchy.py packs/telecom/telecom-pack-1.0.0.ttl "Telecom Measures"
+```
 
 ## Excluded or deferred
 | What | Count | Reason |
