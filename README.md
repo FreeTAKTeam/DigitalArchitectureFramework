@@ -51,7 +51,7 @@ M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), pl
 * Types are fixed: `dRisk.Severity` is an `Int32`, `dRole.DegreeOfUtilisation` a Quantity in %, yes/no fields are `Boolean`, and JSON size limits are `Int32`.
 
 **Industry packs (Beta 5).**
-* An industry pack is reference content for one industry, made of plain DAF instances. Packs are inspired by industry frameworks but do not copy them. The first is telecom; see [packs/telecom/MAPPING.md](packs/telecom/MAPPING.md).
+* An industry pack is reference content for one industry, made of plain DAF instances. Packs are inspired by industry frameworks but do not copy them: every name and definition is rewritten and checked against the source. The first is telecom, with 9,973 elements (processes and services, applications and functions, data entities and model classes, capabilities and KPIs); see [packs/telecom/MAPPING.md](packs/telecom/MAPPING.md).
 * Every element can say which pack supplied it and what it is inspired by: `DAFBase` gains the optional properties `pack` (the pack key, e.g. `tel`) and `inspiredBy` (a concept area, e.g. "process framework").
 * `dApplicationAggregatesFunction` starts from `dLogicalAppComponent`, so it holds for logical and physical components alike, and a function can be part of several applications (`0..*`).
 
@@ -103,7 +103,7 @@ The properties `Likehood`, `MounthPath` and `plattform` are now `likelihood`, `M
 * Model: the Sparx EA project that defines the metamodel used by the MDG.
 * ModelWizardTemplate: model wizard templates.
 * mts: MDG technology selector files.
-* packs: industry packs, with the mapping from their source to DAF.
+* packs: industry packs, with the mapping from their source to DAF (`MAPPING.md`) and the pack as RDF (`telecom-pack-1.0.0.ttl`). `packs/tools` holds the pipeline that builds a pack: read-only extraction from EA, mapping, rephrasing by agents with a copy check, and writing into EA.
 * patterns: predefined diagram patterns for quick modeling.
 * profile: the DAF UML profile.
 * profile_ecore: the Ecore variant of the DAF UML profile.

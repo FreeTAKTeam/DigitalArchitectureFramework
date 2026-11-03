@@ -25,7 +25,7 @@ The pack is **inspired by** telecom industry frameworks (TM Forum SID, eTOM, TAM
 | `TMF_Process`, level 2-3 | 677 | `dBusinessProcess` | Unless linked to an ABE (next row). |
 | `TMF_Process`, level 4-7 | 1,655 | `dBusinessService` | |
 | `TMF_Process` linked to a `TMF_ABE` | 139 | `dBusinessService` | At every level. The link becomes `dBizServUsesDataEntity`. |
-| `TMF_Process` without a level | 191 | by rule above | Level derived from package depth under the nearest process with a known level; still unknown → excluded and reported. |
+| `TMF_Process` without a level | 191 | by rule above | Level derived from the process structure: the level of the process it is composed in, plus one. Still unknown → excluded and reported. |
 | `TMF_Application` | 483 | `dLogicalAppComponent` | |
 | `TMF_ABE` | 362 | `dDataEntity` | |
 | `TMF_BusinessEntity` | 1,715 | `dModelClass` | |
@@ -34,14 +34,14 @@ The pack is **inspired by** telecom industry frameworks (TM Forum SID, eTOM, TAM
 | `TMF_Capability` | 534 | `dCapability` | Has no links in the source; linking is a follow-up, not extraction. |
 | `TMF_Metric` | 2,846 | `dMeasurementIndicator` | |
 | `TMF_MetricGroup`, top level | — | `dMeasurementCategory` | Linked to its groups with `dCategoryaggregatesGroups`. |
-| `TMF_MetricGroup`, below top level | — | `dMeasurementGrouping` | Deeper levels are flattened. |
-| `TMF_Domain` | 13 | package only | No element. |
+| `TMF_MetricGroup` with a metric attached | — | `dMeasurementGrouping` | Placed under its top-level category, whatever its depth. Groups without a metric are dropped. |
+| `TMF_Domain` | 13 | package only | No element. An element takes the domain of the root of its hierarchy; a root without a domain link takes the domain named in its source package path (`.../Service Domain/...`). Capabilities take it from their source package (Customer, Market, Sales, ...). The 10 elements with no domain at all go to `Cross-Domain`; KPIs go to `Business Metrics`, enumerations and datatypes to `Information Types`. |
 | Enumeration, DataType used by a model class attribute | — | UML Enumeration, DataType | Names and literals rewritten. Unused ones are dropped. |
 
 ## Tagged values
 | Source tag | DAF 7.0 | Treatment |
 |---|---|---|
-| Process / Function / Application / BusinessCapability Identifier, FunctionID, UID, gid, tid, egid, DomainID | `Identifier` | New pack key (see [Pack identity](#pack-identity)). Source id to the ledger only. |
+| Process / Function / Application / BusinessCapability Identifier, FunctionID, UID, gid, tid, egid, DomainID | — | Not carried. `Identifier` is the element's own UUID (see [Pack identity](#pack-identity)); the source id goes to the ledger only. |
 | BriefDescription, ShortDescription, Characteristics, Definition, Comment | element notes; `Definition` on KPIs and groups | Written fresh in DAF vocabulary. |
 | TangibleExamples, DecompositionExamples, References | — | Dropped. |
 | `TMF_Capability` HierarchyLevel | `dCapability.HierarchyLevel` | Carried. |
@@ -61,7 +61,7 @@ Every framework hierarchy is expressed by **packages**: the parent becomes a pac
 | `TMF_ABEIsComposedByEntity` (model class to data entity) | `dModelClassRealizesEntity` |
 | `TMF_MetricGroupMetric` (KPI to group) | `dGroupAggregatesKPI` |
 
-In JSON and RDF exports, packages are `dafpkg:` nodes and each element is `dcterms:isPartOf` its package.
+In the RDF export each package is a `dafi:Package` with `dafi:parentPackage`, and each element has `dafi:containedInPackage`, so the hierarchy is readable outside EA.
 
 ## Relationships
 | Source connector | Count | DAF 7.0 |
@@ -84,7 +84,7 @@ In JSON and RDF exports, packages are `dafpkg:` nodes and each element is `dcter
 | Attribute default | — | Dropped, as for tagged values: no invented values. |
 | Operations | — | None in the source; any found are reported. |
 | Generalization | `uml:superClass` | Carried. |
-| Association, aggregation, composition | `dModelClassAssociatesModelClass` with `uml:Association` ends | Multiplicity, navigability and aggregation kind are carried; role names are rewritten. |
+| Association, aggregation, composition | `dModelClassAssociatesModelClass` with `uml:Association` ends | Multiplicity, navigability and aggregation kind are carried; each role name is derived from the pack name of the class at that end (lowerCamelCase). |
 
 ## Excluded or deferred
 | What | Count | Reason |
@@ -98,7 +98,9 @@ In JSON and RDF exports, packages are `dafpkg:` nodes and each element is `dcter
 | Earlier DAF stereotypes on source elements (`dMeasurementIndicator`, `dCapability`, `dProduct`) | 26 | Ignored; the source stereotype and the rules above decide the type. |
 | State, unused Enumeration and DataType, unstereotyped Class and Object | ~600 | Dropped. |
 | BPMN, MindMap, BPSim, navigation, image, note, text, boundary | ~900 | Diagram content. |
-| Everything in `Deleted*` packages | 1,101 | Excluded. |
+| Everything in `Deleted*` packages, or flagged `isDeleted` | 1,140 | Excluded. |
+| Everything in `UNUSED ABEs` packages | 84 | Marked unused in the source. |
+| `MODA Help/Examples` | 18 | Help examples, not reference content. |
 
 ## Metamodel changes
 The pack needs two generic changes in DAF, released as **7.0.0 Beta 5** before extraction:
@@ -117,22 +119,34 @@ The UML profile, QuickLink, JSON schema, OpenAPI and SHACL shapes are regenerate
 | Version | `1.0.0` |
 | Requires | DAF `>= 7.0.0 Beta 5` |
 | Root package | `Telecom pack 1.0.0`, with one package per domain below it |
+| Built in | the `Industry Models` repository, under `DAF Industry Packages` `{2568AC87-29D1-4d8f-8F68-AA2A2B3930D6}`, next to the source |
 
-* `Identifier` is `tel.<kind>.<nnnn>`, for example `tel.svc.0042`. An identifier is never reused.
-* The EA GUID is a UUID v5 of namespace and identifier, so a new extraction updates elements in place. The namespace must not change once the pack is released.
+* `Identifier` (`dafp:id`) is the element's UUID, as for any DAF element: the GUID EA assigns when the pack is written through its automation interface. A pack key would break the UUID rule of `DAFBase`.
+* Each element carries the tags `pack = tel` and `inspiredBy`.
+* The ledger maps each source GUID to the EA GUID of its pack element, so a new extraction updates elements in place instead of duplicating them. The namespace must not change once the pack is released.
 * Each element has `pack = tel` and `inspiredBy` set to one of: process framework, information framework, application map, business metrics, business capability map.
 
 ## Composition with other packs
 * Each pack has a key and namespace reserved in `packs/registry.json`. The namespace pattern is `https://dafriontechnologies.inc/daf/pack/<name>#`. Core DAF IRIs do not change.
 * A pack never changes another pack's elements or the core metamodel. Metamodel changes go into DAF first, with a version bump.
-* A pack may link only to packs it declares as dependencies, by `Identifier`.
+* A pack may link only to packs it declares as dependencies, by `Identifier` (UUID).
 * Elements with the same name in different packs stay distinct and are never merged automatically.
+
+## Rewriting
+The pipeline is in `packs/tools/`: `extract_source.ps1` (read-only dump of the source tree), `build_model.py` (applies this mapping), `rephrase_instructions.md` (what each Haiku agent follows), `check_results.py` (copy check and merge), `build_plan.py` and `write_plan.ps1` (writes the pack into EA through COM). A source description that only says "Not used for this process element" counts as empty: the definition is written from the name. Attribute types are UML primitives (`URL` becomes `URI`) or the pack's datatypes and enumerations; an attribute with no type in the source stays untyped and is reported.
+
+Names and definitions are rephrased by Haiku agents, one batch per source package. Each agent gets the source name and text of its batch, and returns a DAF name and a one- or two-sentence DAF definition per element. A copy check runs on every result before it is written:
+* a definition must not share a sequence of 6 or more words with the source text;
+* a name of 3 or more words must not equal the source name.
+
+A result that fails is sent back once; if it fails again it is reported and the element is left out.
 
 ## Files
 | Path | Content | Published |
 |---|---|---|
 | `packs/telecom/MAPPING.md` | This file | yes |
 | `packs/telecom/pack.json` | Manifest | yes |
-| `packs/telecom/` generated XMI | The pack | yes |
-| `packs/telecom/.local/ledger` | Source id to pack id | no (gitignored) |
+| `packs/telecom/telecom-pack-1.0.0.ttl` | The pack as RDF (Turtle), exported from EA with `VB scripts/DAF_model_RDF_Exporter.vbs` under the pack namespace | yes |
+| `packs/telecom/telecom-pack-1.0.0.report.txt` | The exporter's report for that file | yes |
+| `packs/telecom/.local/ledger.json` | Source GUID to pack element GUID | no (gitignored) |
 | `packs/telecom/.local/report` | Elements not imported, with reason | no (gitignored) |

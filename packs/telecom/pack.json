@@ -1,0 +1,17 @@
+{
+  "key": "tel",
+  "name": "Telecom",
+  "namespace": "https://dafriontechnologies.inc/daf/pack/telecom#",
+  "version": "1.0.0",
+  "requires": { "daf": ">= 7.0.0 Beta 5" },
+  "dependsOn": [],
+  "rootPackage": "Telecom pack 1.0.0",
+  "inspiredBy": [
+    "process framework",
+    "information framework",
+    "application map",
+    "business metrics",
+    "business capability map"
+  ],
+  "mapping": "MAPPING.md"
+}

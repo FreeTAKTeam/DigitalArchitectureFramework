@@ -1,0 +1,7 @@
+{
+  "description": "Industry packs for DAF. Each key and namespace is reserved for one pack.",
+  "namespacePattern": "https://dafriontechnologies.inc/daf/pack/<name>#",
+  "packs": [
+    { "key": "tel", "name": "Telecom", "namespace": "https://dafriontechnologies.inc/daf/pack/telecom#", "path": "packs/telecom" }
+  ]
+}

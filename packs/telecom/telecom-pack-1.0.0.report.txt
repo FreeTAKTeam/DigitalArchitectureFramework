@@ -1,0 +1,111 @@
+﻿DAF M1 RDF MODEL EXPORT REPORT
+Generated: 2026-11-02 7:36:32 PM
+Exporter version: 0.7.0
+DAF framework version: 6.3
+Semantic metamodel export contract: 1.5.0
+Root package: Telecom pack 1.0.0
+Root package GUID: {F0E7A262-C987-4af9-9F2F-ECD2768A1102}
+Output: C:\Users\broth\Dropbox\work\Method\EA method\3.1\packs\telecom\telecom-pack-1.0.0.ttl
+
+SUMMARY
+Packages exported: 1630
+DAF elements exported: 9924
+Relationships exported: 8201
+Semantic DAF relationships resolved: 7067
+  resolved by exact current stereotype: 7067
+  resolved deterministically from endpoint types: 0
+  semantic direction reversed from EA Client/Supplier: 0
+Generic/unresolved connectors exported: 1134
+UML attributes / operations / parameters exported: 2512 / 0 / 0
+UML generalizations / associations between UML Classes: 1134 / 1988
+Ambiguous endpoint relationship resolutions: 0
+Materialized relationship projection triples: 14134
+External/cross-boundary connectors preserved: 0
+External relationships explicitly represented: 0
+First-level external elements fully imported: 0
+External elements with EA FQStereotype recovered: 0
+External connectors with EA FQStereotype recovered: 0
+External element SemanticMappings emitted: 0
+  trusted foreign elements transformed to DAF: 0
+  non-trusted/cautious element mapping candidates: 0
+External relationship SemanticMappings emitted: 0
+  trusted source relationships transformed to DAF: 0
+  structural relationship mapping candidates: 0
+Raw tagged values preserved: 89660
+Mapped semantic property values emitted: 58354
+Legacy qualitative satisfaction values converted to percentage: 0
+Suppressed legacy ID/Id/id tags: 6426
+Unresolved object-property references: 223
+Unnamed DAF elements: 0
+Diagrams/views exported: 0 (deferred)
+
+LEGACY ELEMENT MIGRATIONS APPLIED
+  none
+
+LEGACY PROPERTY MIGRATIONS APPLIED
+  dLogicalAppComponent.meetsBizNeeds -> isMeetingBusinessNeeds: 393
+  dLogicalAppComponent.meetsTomorrowNeeds -> isMeetingFutureNeeds: 393
+
+SATISFACTION ENUMERATION -> PERCENTAGE CONVERSIONS
+  none
+
+EXTERNAL SOURCE PROFILES (EA FQStereotype)
+  none
+
+EXTERNAL SOURCE METATYPES
+  none
+
+EXTERNAL SOURCE STEREOTYPES
+  none
+
+EXTERNAL ELEMENT SEMANTIC MAPPINGS
+  none
+
+TRUSTED PROFILE ELEMENT TRANSFORMATIONS APPLIED
+  none
+
+EXTERNAL RELATIONSHIP SOURCE PROFILES
+  none
+
+EXTERNAL RELATIONSHIP SEMANTIC MAPPINGS
+  none
+
+TRUSTED PROFILE RELATIONSHIP TRANSFORMATIONS APPLIED
+  none
+
+TRUSTED PROFILE RELATIONSHIPS WITH NO DAF 6.3 EQUIVALENT
+  none
+
+LEGACY RELATIONSHIPS RESOLVED FROM M2 ENDPOINT TYPES
+  none
+
+UNRESOLVED / LEGACY DAF ELEMENT TYPES
+  none
+
+UNRESOLVED / LEGACY DAF RELATIONSHIP TYPES
+  none
+
+RELATIONSHIP ENDPOINT TYPE MISMATCHES
+  none
+
+AMBIGUOUS RELATIONSHIP ENDPOINT PAIRS
+  none
+
+UNMAPPED TAGGED PROPERTIES (raw value preserved)
+  dMeasurementIndicator.Measurement Grouping: 2843
+  dCapability.CostScope: 531
+  dCapability.HierarchyLevel: 531
+
+INVALID OR UNRESOLVED TYPED VALUES (raw value preserved)
+  dMeasurementCategory.MeasurementArea [unresolved object reference]: 13
+  dMeasurementGrouping.MeasurementCategory [unresolved object reference]: 210
+
+EXPORT COMPLETENESS
+PASS: DAF elements were exported.
+NOTE: Semantic validation against DAF 6.3 / metamodel export 1.5.0 is intentionally performed by the Rust runtime, not by this EA exporter.
+NOTE: Legacy migrations in exporter 0.5.0 are explicit DAF 6.3 mappings; relationship inference is only emitted when M2 endpoint typing identifies exactly one compatible RelationshipType.
+NOTE: Out-of-scope elements directly referenced by in-scope DAF elements are fully imported at depth 1. Their other connectors are intentionally not traversed.
+NOTE: Chronos, TMF, BIZBOK and TOGAF are trusted DAF ancestor/sibling source metamodels. Approved mappings are applied as DAF types while preserving the original external resource and provenance.
+NOTE: Trusted source relationships are transformed only where an explicit or semantically defensible DAF 6.3 relationship equivalent exists. Otherwise they remain generic and are reported.
+NOTE: Other external technologies remain candidate mappings only. Structural endpoint compatibility is reported with confidence=structural and is not treated as semantic equivalence.
+NOTE: FQStereotype is used where supported by the EA Automation Interface to recover Profile::Stereotype identity for elements and connectors.

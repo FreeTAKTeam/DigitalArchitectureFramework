@@ -11,3 +11,6 @@ EA_DAF_courseware
 ~WRL*.tmp
 /technology/rdf/DAF-semantic-model-report.txt
 /Model/*.ldb
+
+# industry pack working files (source ledger, extraction report, rephrasing batches)
+packs/*/.local/

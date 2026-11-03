@@ -80,13 +80,18 @@
 '   metaclass (ExtendsMetaclass = true in the M3 model): their attributes,
 '   operations, parameters, isAbstract, generalizations and association ends
 '   are exported with the DAF UML vocabulary (technology/rdf/DAF-uml.ttl).
+' - Industry packs (DAF 7.0.0 Beta 5): the tags pack and inspiredBy are the
+'   DAFBase properties dafp:pack and dafp:inspiredBy on every concept, and
+'   dApplicationAggregatesFunction (7.0 name) runs from dLogicalAppComponent.
+'   A Generalization connector is never resolved to a DAF relationship from its
+'   endpoint types; between UML classes it is exported as uml:superClass.
 ' This script does NOT require the M3 source package to exist in the model being
 ' exported. It is therefore suitable for existing DAF repositories such as
 ' EuroCOM that only have the DAF MDG/profile installed.
 ' =============================================================================
 
 
-Const EXPORTER_VERSION = "0.6.0"
+Const EXPORTER_VERSION = "0.7.0"
 Const DAF_VERSION = "6.3"
 Const METAMODEL_EXPORT_VERSION = "1.5.0"
 Const PROFILE_NAME = "DAF"
@@ -777,6 +782,7 @@ Sub InitMetamodelMaps()
     AddRelationship "dActorParticipatesInBizUseCase", "dActorParticipatesInBizUseCase", "dActorParticipatesInBizUseCase_inverse", "dActor", "dBusinessUseCase"
     AddRelationship "dAPIAggregatesSchema", "dAPIAggregatesSchema", "dAPIAggregatesSchema_inverse", "dAPI", "dJSON_Schema"
     AddRelationship "dApplicationAgregatesFunction", "dApplicationAgregatesFunction", "dApplicationAgregatesFunction_inverse", "dApplicationComponent", "dApplicationFunction"
+    AddRelationship "dApplicationAggregatesFunction", "dApplicationAggregatesFunction", "dApplicationAggregatesFunction_inverse", "dLogicalAppComponent", "dApplicationFunction"
     AddRelationship "dApplicationComponentHasContainer", "dApplicationComponentHasContainer", "dApplicationComponentHasContainer_inverse", "dApplicationComponent", "dContainer"
     AddRelationship "dApplicationComponentRealizesogicalComponent", "dApplicationComponentRealizesogicalComponent", "dApplicationComponentRealizesogicalComponent_inverse", "dApplicationComponent", "dLogicalAppComponent"
     AddRelationship "dApplicationconfiguredbySystemConfiguration", "dApplicationconfiguredbySystemConfiguration", "dApplicationconfiguredbySystemConfiguration_inverse", "dApplicationComponent", "dSystem"
@@ -1311,6 +1317,14 @@ Sub ExportMappedPropertyValue(ownerIri, dafStereo, tagName, rawValue)
     effectiveTagName = CStr(tagName)
     key = dafStereo & "|" & effectiveTagName
 
+    ' DAFBase industry pack provenance, common to every concept
+    If (effectiveTagName = "pack" Or effectiveTagName = "inspiredBy") And Trim(CStr(rawValue)) <> "" Then
+        W ownerIri & " dafp:" & effectiveTagName & " " & Lit(rawValue) & " ."
+        W ""
+        mappedPropertyValueCount = mappedPropertyValueCount + 1
+        Exit Sub
+    End If
+
     If Not propertyMap.Exists(key) Then
         If legacyPropertyAliasMap.Exists(key) Then
             effectiveTagName = legacyPropertyAliasMap(key)
@@ -1571,8 +1585,11 @@ Sub WriteConnector(c)
     semanticTargetIri = supplierIri
     reversedDirection = False
 
-    ResolveRelationshipSemantics sourceStereo, clientType, supplierType, _
-        resolvedRelationship, resolutionMode, reversedDirection
+    ' A generalization is inheritance (uml:superClass), never a DAF relationship
+    If LCase(CStr(c.Type)) <> "generalization" Then
+        ResolveRelationshipSemantics sourceStereo, clientType, supplierType, _
+            resolvedRelationship, resolutionMode, reversedDirection
+    End If
 
     If resolvedRelationship <> "" Then
         If reversedDirection Then
