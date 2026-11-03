@@ -1346,6 +1346,8 @@ Sub ExportMappedPropertyValue(ownerIri, dafStereo, tagName, rawValue)
     targetType = parts(2)
 
     If kind = "object" Then
+        ' An empty reference is an unset value, not an unresolved one.
+        If Trim(CStr(rawValue)) = "" Then Exit Sub
         If EmitObjectProperty(ownerIri, predicateLocal, rawValue) Then
             mappedPropertyValueCount = mappedPropertyValueCount + 1
         Else
