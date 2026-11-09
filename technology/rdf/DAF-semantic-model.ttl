@@ -21,7 +21,7 @@
     owl:imports <https://freetakteam.github.io/DAF/uml> ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-02T15:52:29"^^xsd:dateTime ;
+    dcterms:created "2026-11-09T12:45:45"^^xsd:dateTime ;
     dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
@@ -16980,6 +16980,215 @@ dafshape:dRoleShape sh:property [
     sh:name "CostRate"
 ] .
 
+# Concept: Rule
+daf:dRule
+    a owl:Class, dafm:ConceptDefinition ;
+    rdfs:label "Rule" ;
+    skos:notation "dRule" ;
+    dafm:eaGuid "{4934021D-4E77-4ea4-9CFD-1549CCB3B4D3}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    dafm:packagePath "Delta Architectural Framework/DAF/Metamodel" ;
+    skos:altLabel "dRule" ;
+    rdfs:comment "A precise business condition or constraint, implemented at a specific point in an application. Modeled as an operation with package visibility on a dController, which acts as the rule set. Its Statement is the human-readable rule passed to an LLM to generate the implementation." ;
+    dafm:umlMetaclass "Operation" .
+
+daf:dRule rdfs:subClassOf daf:DAFBase .
+
+dafshape:dRuleShape
+    a sh:NodeShape ;
+    sh:targetClass daf:dRule ;
+    sh:node dafshape:DAFBaseShape .
+
+daf:dRule dafm:sourceStatus "Approved" .
+daf:dRule dafm:sourceVersion "7.0" .
+daf:dRule dafm:sourcePhase "2.0" .
+daf:dRule dcterms:creator "Giuseppe Platania" .
+daf:dRule dafm:sourceStereotype "Concept" .
+daf:dRule dafm:sourceModelType "Class" .
+daf:dRule dafm:sourceVisibility "Public" .
+daf:dRule dafm:sourceComplexity "1" .
+daf:dRule dafm:sourceLanguage "UML2" .
+daf:dRule dcterms:created "2026-11-09T09:26:08"^^xsd:dateTime .
+daf:dRule dcterms:modified "2026-11-09T09:56:01"^^xsd:dateTime .
+
+daf:dRule dafm:hasTaggedValue dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Architecture_Domain_1 .
+dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Architecture_Domain_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Architecture Domain" ;
+    dafm:tagValue "Other" ;
+    dafm:ownerKind "element" ;
+    dafm:tagNotes "Values: Business,Data,Application,Technology,Implementation,Strategy,Security,Other\nDefault: Other\n" .
+
+daf:dRule dafm:hasTaggedValue dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Metaclass_2 .
+dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Metaclass_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Operation" ;
+    dafm:ownerKind "element" ;
+    dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\nDefault: Class\n" .
+
+daf:dRule dafm:hasTaggedValue dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Redefines_3 .
+dafdef:TaggedValue__4934021D_4E77_4ea4_9CFD_1549CCB3B4D3__Redefines_3
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "element" ;
+    dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
+
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8
+    a dafm:PropertyDefinition ;
+    rdfs:label "RuleKind" ;
+    dafm:eaGuid "{F855D5D9-AB5E-4dd8-87D3-6586A91202D8}" ;
+    dafm:sourceDatatype "dRuleKind" ;
+    dafm:typingStatus dafm:EnumerationType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dRule__RuleKind ;
+    rdfs:comment "The OMG category of the rule: Production, Integrity, Derivation or Reaction." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" ;
+    dafm:enumeration dafenum:dRuleKind .
+
+daf:dRule dafm:hasPropertyDefinition dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:classifier dafenum:dRuleKind .
+
+dafp:dRule__RuleKind
+    a owl:DatatypeProperty ;
+    rdfs:label "RuleKind" ;
+    rdfs:domain daf:dRule ;
+    rdfs:comment "The OMG category of the rule: Production, Integrity, Derivation or Reaction." .
+
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:attributeVisibility "Public" .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:isCollection false .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:isConst false .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:isId false .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:isOrdered false .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:isStatic false .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:attributeContainment "Not Specified" .
+dafdef:Property_F855D5D9AB5E4dd887D36586A91202D8 dafm:classifier dafenum:dRuleKind .
+
+dafshape:dRuleShape sh:property [
+    sh:path dafp:dRule__RuleKind ;
+    sh:datatype xsd:string ;
+    sh:in ( "Production" "Integrity" "Derivation" "Reaction" ) ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "RuleKind"
+] .
+
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33
+    a dafm:PropertyDefinition ;
+    rdfs:label "Statement" ;
+    dafm:eaGuid "{E661A06C-B43D-4c17-8830-B2CC78DE5A33}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dRule__Statement ;
+    rdfs:comment "Human-readable statement of the rule, precise enough to pass to an LLM for implementation, e.g. \"Ensure Customer.Age >= 18 before Account.Creation\"." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" .
+
+daf:dRule dafm:hasPropertyDefinition dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 .
+
+dafp:dRule__Statement
+    a owl:DatatypeProperty ;
+    rdfs:label "Statement" ;
+    rdfs:domain daf:dRule ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Human-readable statement of the rule, precise enough to pass to an LLM for implementation, e.g. \"Ensure Customer.Age >= 18 before Account.Creation\"." .
+
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:attributeVisibility "Public" .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:isCollection false .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:isConst false .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:isId false .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:isOrdered false .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:isStatic false .
+dafdef:Property_E661A06CB43D4c178830B2CC78DE5A33 dafm:attributeContainment "Not Specified" .
+
+dafshape:dRuleShape sh:property [
+    sh:path dafp:dRule__Statement ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "Statement"
+] .
+
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098
+    a dafm:PropertyDefinition ;
+    rdfs:label "SourceEvidence" ;
+    dafm:eaGuid "{5E5F9CBF-631C-4ecf-9714-557A024A6098}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dRule__SourceEvidence ;
+    rdfs:comment "Where the rule was found in legacy code: program, paragraph or section, and line range, e.g. \"LGICUS01 / 2000-VALIDATE-AGE / L412-L431\"." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" .
+
+daf:dRule dafm:hasPropertyDefinition dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 .
+
+dafp:dRule__SourceEvidence
+    a owl:DatatypeProperty ;
+    rdfs:label "SourceEvidence" ;
+    rdfs:domain daf:dRule ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Where the rule was found in legacy code: program, paragraph or section, and line range, e.g. \"LGICUS01 / 2000-VALIDATE-AGE / L412-L431\"." .
+
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:attributeVisibility "Public" .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:isCollection false .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:isConst false .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:isId false .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:isOrdered false .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:isStatic false .
+dafdef:Property_n_5E5F9CBF631C4ecf9714557A024A6098 dafm:attributeContainment "Not Specified" .
+
+dafshape:dRuleShape sh:property [
+    sh:path dafp:dRule__SourceEvidence ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "SourceEvidence"
+] .
+
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C
+    a dafm:PropertyDefinition ;
+    rdfs:label "Certainty" ;
+    dafm:eaGuid "{6D11766C-8D54-4de2-A86C-421B669E196C}" ;
+    dafm:sourceDatatype "dRuleCertainty" ;
+    dafm:typingStatus dafm:EnumerationType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dRule__Certainty ;
+    rdfs:comment "Explicit when modeled directly; Inferred when extracted from legacy code." ;
+    dafm:minimumCardinality "0" ;
+    dafm:maximumCardinality "1" ;
+    dafm:enumeration dafenum:dRuleCertainty .
+
+daf:dRule dafm:hasPropertyDefinition dafdef:Property_n_6D11766C8D544de2A86C421B669E196C .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:classifier dafenum:dRuleCertainty .
+
+dafp:dRule__Certainty
+    a owl:DatatypeProperty ;
+    rdfs:label "Certainty" ;
+    rdfs:domain daf:dRule ;
+    rdfs:comment "Explicit when modeled directly; Inferred when extracted from legacy code." .
+
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:attributeVisibility "Public" .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:isCollection false .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:isConst false .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:isId false .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:isOrdered false .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:isStatic false .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:attributeContainment "Not Specified" .
+dafdef:Property_n_6D11766C8D544de2A86C421B669E196C dafm:classifier dafenum:dRuleCertainty .
+
+dafshape:dRuleShape sh:property [
+    sh:path dafp:dRule__Certainty ;
+    sh:datatype xsd:string ;
+    sh:in ( "Explicit" "Inferred" ) ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:name "Certainty"
+] .
+
 # Concept: Security Group
 daf:dSecurityGroup
     a owl:Class, dafm:ConceptDefinition ;
@@ -19392,6 +19601,64 @@ dafenum:dQuantityKind_value_unspecified
     skos:inScheme dafenum:dQuantityKind ;
     skos:prefLabel "unspecified" ;
     dafm:eaGuid "{094804F3-6D21-49cc-A6C1-C67462449720}" .
+
+# Enumeration: dRuleCertainty
+dafenum:dRuleCertainty
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dRuleCertainty" ;
+    dafm:eaGuid "{5800ADC7-7A94-44ba-9673-432745372FC7}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "How the rule entered the model." .
+
+dafenum:dRuleCertainty_value_Explicit
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleCertainty ;
+    skos:prefLabel "Explicit" ;
+    dafm:eaGuid "{C2759765-F9FB-4811-A60F-88F8DEAAA5EF}" ;
+    rdfs:comment "Modeled directly by an architect or analyst." .
+
+dafenum:dRuleCertainty_value_Inferred
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleCertainty ;
+    skos:prefLabel "Inferred" ;
+    dafm:eaGuid "{7F4863F6-F72B-4fba-B776-EED361099949}" ;
+    rdfs:comment "Extracted from legacy code and awaiting or past review." .
+
+# Enumeration: dRuleKind
+dafenum:dRuleKind
+    a dafm:Enumeration, skos:ConceptScheme ;
+    rdfs:label "dRuleKind" ;
+    dafm:eaGuid "{2FE3A20F-1A49-4c9b-9D68-648F36CAD141}" ;
+    dafm:definedInPackage dafpkg:Package_n_02BC7973 ;
+    rdfs:comment "OMG business rule categories." .
+
+dafenum:dRuleKind_value_Production
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleKind ;
+    skos:prefLabel "Production" ;
+    dafm:eaGuid "{7232FC97-B201-4a23-96AD-B56933B91499}" ;
+    rdfs:comment "IF a condition on business variables holds THEN one or more actions run (OMG PRR)." .
+
+dafenum:dRuleKind_value_Integrity
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleKind ;
+    skos:prefLabel "Integrity" ;
+    dafm:eaGuid "{EB9CE367-0452-4961-BEA0-7DCDB9267A17}" ;
+    rdfs:comment "A constraint that keeps data or a process valid, e.g. Customer.Age >= 18." .
+
+dafenum:dRuleKind_value_Derivation
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleKind ;
+    skos:prefLabel "Derivation" ;
+    dafm:eaGuid "{9F22DB8E-F2A2-4bfe-A129-2CD6C44785E1}" ;
+    rdfs:comment "Computes new information from existing facts, e.g. Order.FinalPrice." .
+
+dafenum:dRuleKind_value_Reaction
+    a dafm:EnumerationValue, skos:Concept ;
+    skos:inScheme dafenum:dRuleKind ;
+    skos:prefLabel "Reaction" ;
+    dafm:eaGuid "{95E463F8-7629-4a71-AE60-C557197A92E1}" ;
+    rdfs:comment "Triggered by an event, e.g. stock below threshold sends a reorder request." .
 
 # Enumeration: ActorTypes
 dafenum:ActorTypes
@@ -34287,29 +34554,29 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-02T15:53:22"^^xsd:dateTime ;
+    dcterms:created "2026-11-09T12:46:57"^^xsd:dateTime ;
     dafm:generatorVersion "1.6.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
-    dafm:conceptCount 77 ;
+    dafm:conceptCount 78 ;
     dafm:supportingClassCount 2 ;
-    dafm:registeredClassCount 79 ;
-    dafm:enumerationCount 42 ;
-    dafm:propertyCount 350 ;
+    dafm:registeredClassCount 80 ;
+    dafm:enumerationCount 44 ;
+    dafm:propertyCount 354 ;
     dafm:relationshipCount 118 ;
     dafm:ignoredNoteLinkCount 2 ;
-    dafm:explicitPrimitivePropertyCount 246 ;
+    dafm:explicitPrimitivePropertyCount 248 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 21 ;
-    dafm:classifierTypedPropertyCount 82 ;
+    dafm:classifierTypedPropertyCount 84 ;
     dafm:unresolvedPropertyTypeCount 0 ;
     dafm:unknownPropertyTypeCount 0 ;
-    dafm:dafBaseInheritanceCount 79 ;
+    dafm:dafBaseInheritanceCount 80 ;
     dafm:umlClassExtensionCount 1 ;
     dafm:registeredRelationshipCount 118 ;
     dafm:generalizationCount 4 ;
     dafm:warningCount 0 ;
-    dafm:legacyProfileConceptCount 119 ;
+    dafm:legacyProfileConceptCount 122 ;
     dafm:legacyProfileRelationshipCount 118 ;
     dafm:authoringEnabledRelationshipCount 118 ;
     dafm:derivedQuickLinkEquivalentRuleCount 472 ;
