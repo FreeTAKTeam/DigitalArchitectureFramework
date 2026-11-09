@@ -2,7 +2,7 @@
 ## Welcome!
 Welcome to the repository for the DAF MDG (Model Driven Generation) technology for Sparx Enterprise Architect. This repository contains the metamodel, the MDG technology and the resources that support modeling with DAF in Sparx EA.
 
-**Current version: DAF 7.0.0 Beta 5** — 77 concepts, 118 relationship types and 42 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
+**Current version: DAF 7.0.0 Beta 6** — 78 concepts, 118 relationship types and 44 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
 
 ## About
 The Digital Architecture Framework (DAF) is a set of modeling tools for Digital Engineering.
@@ -31,12 +31,13 @@ DAF 7.0 is a major release: it changes datatypes, renames relationships and adds
 | Revenue Period (`dRevenuePeriod`) | Revenue earned by a product (`dProductHasRevenuePeriod`) or a contract (`dContractHasRevenuePeriod`) in one period. |
 | Financial Period (`dFinancialPeriod`) | An organisation unit's reported or planned results in one period: revenue, cost of revenue, operating and revenue-linked expense, investment income, invested assets and income tax. Linked by `dOrganizationUnitReportsFinancialPeriod`. |
 | Contract (`dContract`) | Commercial terms: `pricingBasis` (`dPricingBasis`), `billableUnit`, `tariff`, `effectiveFrom`/`effectiveTo` and `renewal`. Linked to products and actors. |
+| Rule (`dRule`) | A business rule: a precise condition or constraint, enforced at one point in an application. A stereotyped operation, with visibility package, of the `dController` that enforces it; the controller is the rule set. `RuleKind` (`dRuleKind`) says Production, Integrity, Derivation or Reaction, `Statement` holds the rule in plain language, and `SourceEvidence` and `Certainty` (`dRuleCertainty`) say whether it was modeled or found in existing code. See [Logic and business rules](#whats-new-in-daf-70). |
 
 Cost and financial periods are elements linked by relationships, not property values, so each period can be traced, referenced and compared. A financial period includes the cost and revenue periods that land in its organisation unit's books (`dFinancialPeriodIncludesCostPeriod`, `dFinancialPeriodIncludesRevenuePeriod`), so every figure can be traced to its source and is never added twice. It holds the income-statement lines (revenue, cost of revenue, operating expense, depreciation, interest, tax) and the cash line `capitalExpenditure`; subtotals such as gross margin, EBITDA, EBIT, net income and free cash flow are derived, never stored. A program's budget periods are caps and are never included. `dRole.CostRate` holds the cost per FTE, a rate rather than spend, and a contract's `tariff` can have several price components.
 
 **Assets and depreciation.** Resources and applications can be capitalised assets, with `inServiceDate`, `usefulLife` and `depreciationMethod`. Their Capex is recorded as cost periods; the depreciation schedule is derived from it and is not stored.
 
-M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), plus the new enumerations `dCostNature`, `dCostFunction`, `dCostScope`, `dDepreciationMethod`, `dEventType`, `dEventNature`, `dPricingBasis` and `dQuantityKind`.
+M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), plus the new enumerations `dCostNature`, `dCostFunction`, `dCostScope`, `dDepreciationMethod`, `dEventType`, `dEventNature`, `dPricingBasis`, `dQuantityKind`, `dRuleKind` and `dRuleCertainty`.
 
 **Events, KPIs and goals.**
 * `dEvent` is both a trigger and an effect, with `eventType`, `nature`, `frequency`, `likelihood`, `startDate`, `endDate`, `duration` and `owner` (a `dRole`), all optional.
@@ -54,6 +55,20 @@ M3 gains the primitive types `Decimal` and `Duration` (ISO 8601, e.g. `P1M`), pl
 * An industry pack is reference content for one industry, made of plain DAF instances. Packs are inspired by industry frameworks but do not copy them: every name and definition is rewritten and checked against the source. The first is telecom, with 9,973 elements (processes and services, applications and functions, data entities and model classes, capabilities and KPIs); see [packs/telecom/MAPPING.md](packs/telecom/MAPPING.md).
 * Every element can say which pack supplied it and what it is inspired by: `DAFBase` gains the optional properties `pack` (the pack key, e.g. `tel`) and `inspiredBy` (a concept area, e.g. "process framework").
 * `dApplicationAggregatesFunction` starts from `dLogicalAppComponent`, so it holds for logical and physical components alike, and a function can be part of several applications (`0..*`).
+
+**Logic and business rules (Beta 6).**
+DAF separates three kinds of logic and models each with its own concepts:
+
+| Kind of logic | What it is | Modeled with |
+|---|---|---|
+| Process logic | The flow of a business process, usually across several applications. | `dBusinessProcess` and `dEvent`, linked by `dProcessFlowsToProcess`, `dEventTriggersProcess` and `dProcessResultsInEvent`. |
+| Application logic | The coordination of modules or services inside one application. | `dController`, which implements a business use case (`dUseCaseisImplementedByController`) and governs views and model classes. |
+| Business rule | A precise condition or constraint, enforced at one point in an application. | `dRule`, an operation of a `dController`. |
+
+* The new concept `dRule` (Rule) is a stereotyped operation, with visibility package, of the `dController` that enforces it; the controller is the rule set. The rule's statement can be passed to an LLM to generate its implementation, one rule at a time.
+* Its tagged values are `RuleKind` (`dRuleKind`: Production, Integrity, Derivation or Reaction, the OMG rule categories), `Statement`, `SourceEvidence` (where a rule was found in existing code) and `Certainty` (`dRuleCertainty`: Explicit or Inferred). Inputs and result are the operation's own parameters and return type.
+* Rule is on the Model page of the Digital Engineering toolbox, after Controller.
+* The manual's new section "Logic in DAF" explains the three kinds of logic, the rule kinds with examples, how to model controllers and rules, and how to record rules found in existing code.
 
 **Relationships and names.**
 Every relationship end has a multiplicity, and ends that blocked realistic models are opened. Misspelled names are corrected:

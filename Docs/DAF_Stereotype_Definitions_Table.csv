@@ -30,6 +30,7 @@ Implementation,dUserStory,User Story,Captures user-centric requirements expresse
 Implementation,dInitiative,Initiative,Represents activities or projects with specific business goals.,Activity
 Application,dTest,Test,Defines tests to verify or validate functionality or compliance.,Class
 Application,dController,Controller,Encapsulates application behavior and flow logic.,Class
+Application,dRule,Rule,"A precise business condition or constraint, enforced at one point in an application as an operation of a dController.",Operation
 Application,dView,View,Defines views for presenting information or interactions.,Class
 Application,dTable,Table,Represents physical tables in a database schema.,Activity
 Data,dActivity,Activity,Represents business or system activities.,Activity

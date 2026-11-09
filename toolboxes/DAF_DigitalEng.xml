@@ -11,6 +11,7 @@
 				</AppliesTo>
 				<TaggedValues>
 					<Tag name="DAF::dController" type="" description="" unit="" values="" default="Controller"/>
+					<Tag name="DAF::dRule(UML::Operation)" type="" description="" unit="" values="" default="Rule"/>
 					<Tag name="DAF::dActionKey(UML::Dependency)" type="" description="" unit="" values="" default="Action Key"/>
 					<Tag name="DAF::dView" type="" description="" unit="" values="" default="View"/>
 					<Tag name="DAF::dModelClass" type="" description="" unit="" values="" default="ModelClass"/>
