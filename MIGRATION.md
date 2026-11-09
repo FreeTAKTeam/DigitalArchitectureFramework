@@ -1,6 +1,6 @@
 # Migrating models to DAF 7.0
 
-This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 5**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing. Dafrion implements these rules in its `dafrion-metamodel` crate, against the pinned export `models/metamodels/daf/7.0.0-beta.4`; its README there lists, for each rule, whether it converts a value or only flags it for review.
+This file records every change a DAF model must go through to reach the current version, **DAF 7.0.0 Beta 6**, and the rule for converting each one. A migrator (for example Dafrion's) should be able to apply it without guessing. Dafrion implements these rules in its `dafrion-metamodel` crate, against the pinned export `models/metamodels/daf/7.0.0-beta.4`; its README there lists, for each rule, whether it converts a value or only flags it for review.
 
 **Principle: nothing is guessed.** A value that cannot be converted stays unknown and produces a diagnostic with the element, the property, the original value and the reason. Every diagnostic is listed in a migration report.
 
@@ -148,6 +148,17 @@ Beta 5 prepares DAF for industry packs (see [packs/telecom/MAPPING.md](packs/tel
 
 ---
 
+## Part 5: DAF 7.0.0 Beta 5 to 7.0.0 Beta 6
+
+Beta 6 adds business rules and lets model classes carry their full UML content. It is **not breaking**: every Beta 5 model is a valid Beta 6 model.
+
+### 5.1 New, no migration needed
+
+* `dRule` (Rule): a business rule, a precise condition or constraint enforced at one point in an application. It is a stereotyped UML operation, with visibility package, of the `dController` that enforces it; the controller is the rule set. Its properties are `RuleKind` (`dRuleKind`: Production, Integrity, Derivation, Reaction), `Statement` (the rule in plain language), `SourceEvidence` (where it was found in existing code) and `Certainty` (`dRuleCertainty`: Explicit, Inferred). Its inputs and result are the operation's own parameters and return type.
+* `dModelClass` extends the UML Class (`ExtendsMetaclass = true`): in the semantic model it is a subclass of `uml:Class` from `technology/rdf/DAF-uml.ttl`, so its instances keep their attributes, operations, generalizations and association ends.
+
+---
+
 ## Files still on old names
 
-The JSON schema (`Metamodel_json/DAFSchema.json`) and the OpenAPI description (`API/`) are generated from the Beta 5 semantic model; their property and relationship names are the metamodel's, so API clients built on the older OAS (camelCase names such as `fteCount`) must follow the renames above. These artefacts are not yet regenerated for Beta 5 and still use names or types changed above: `Metamodel_json/DigitalArchitectureFramework.json` (an older draft-04 export), `Metamodel/DAF_Metamodel.xmi`, `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, and the test model.
+The JSON schema (`Metamodel_json/DAFSchema.json`) and the OpenAPI description (`API/`) are generated from the Beta 6 semantic model; their property and relationship names are the metamodel's, so API clients built on the older OAS (camelCase names such as `fteCount`) must follow the renames above. These artefacts are not yet regenerated for Beta 5 and still use names or types changed above: `Metamodel_json/DigitalArchitectureFramework.json` (an older draft-04 export), `Metamodel/DAF_Metamodel.xmi`, `Queries/*.sql` (they read the `Cost` tag), `VB scripts/DAF_model_RDF_Exporter.vbs` (`Cost` on applications, capabilities and roles), the CSV templates in `csv/` and `excel/`, and the test model.
