@@ -2,8 +2,8 @@
     "$schema": "https://json-schema.org/draft/2020-12/schema",
     "$id": "https://freetakteam.github.io/DAF/schema/DigitalArchitectureFramework.schema.json",
     "title": "DigitalArchitectureFramework",
-    "description": "JSON Schema of the DAF 7.0.0 Beta 5 metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationships hold the ids of the related elements (x-reference names the target).",
-    "x-daf-version": "7.0.0 Beta 5",
+    "description": "JSON Schema of the DAF 7.0.0 Beta 6 metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationships hold the ids of the related elements (x-reference names the target).",
+    "x-daf-version": "7.0.0 Beta 6",
     "type": "object",
     "properties": {
         "dAPI": {
@@ -376,6 +376,12 @@
             "type": "array",
             "items": {
                 "$ref": "#/$defs/dRole"
+            }
+        },
+        "dRule": {
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/dRule"
             }
         },
         "dSecurityGroup": {
@@ -895,6 +901,24 @@
                 "Tolerate",
                 "Transfer",
                 "Treat"
+            ]
+        },
+        "dRuleCertainty": {
+            "description": "How the rule entered the model.",
+            "type": "string",
+            "enum": [
+                "Explicit",
+                "Inferred"
+            ]
+        },
+        "dRuleKind": {
+            "description": "OMG business rule categories.",
+            "type": "string",
+            "enum": [
+                "Derivation",
+                "Integrity",
+                "Production",
+                "Reaction"
             ]
         },
         "dSatisfactionType": {
@@ -5057,6 +5081,35 @@
                                 "x-reference": "#/$defs/dBusinessService"
                             },
                             "description": "staffs Service (Role Staffs Service). Ids of the dBusinessService elements; multiplicity 0..*. The role's capacity delivers the service: it does the service's work."
+                        }
+                    }
+                }
+            ]
+        },
+        "dRule": {
+            "description": "A precise business condition or constraint, implemented at a specific point in an application. Modeled as an operation with package visibility on a dController, which acts as the rule set. Its Statement is the human-readable rule passed to an LLM to generate the implementation.",
+            "allOf": [
+                {
+                    "$ref": "#/$defs/DAFBase"
+                },
+                {
+                    "type": "object",
+                    "properties": {
+                        "Certainty": {
+                            "$ref": "#/$defs/dRuleCertainty",
+                            "description": "Explicit when modeled directly; Inferred when extracted from legacy code."
+                        },
+                        "RuleKind": {
+                            "$ref": "#/$defs/dRuleKind",
+                            "description": "The OMG category of the rule: Production, Integrity, Derivation or Reaction."
+                        },
+                        "SourceEvidence": {
+                            "type": "string",
+                            "description": "Where the rule was found in legacy code: program, paragraph or section, and line range, e.g. \"LGICUS01 / 2000-VALIDATE-AGE / L412-L431\"."
+                        },
+                        "Statement": {
+                            "type": "string",
+                            "description": "Human-readable statement of the rule, precise enough to pass to an LLM for implementation, e.g. \"Ensure Customer.Age >= 18 before Account.Creation\"."
                         }
                     }
                 }

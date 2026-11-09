@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: DigitalArchitectureFramework
-  version: 7.0.0 Beta 5
+  version: 7.0.0 Beta 6
   description: The Digital Architecture Framework (DAF) is a metamodel and set of modeling tools for Digital Engineering. Its goal is to bridge the classic gaps between strategy, design, and execution by
     enabling collaboration between enterprise architects, solution architects, business analysts, and engineers. DAF provides standardised concepts and relationships (based on UML, ArchiMate, TOGAF, RUP,
     and SPEM) to create high-quality models (digital twins) that can be transformed into executable artifacts . This DAF OpenAPI makes those models accessible as services. It exposes the core DAF concepts—such
@@ -3547,6 +3547,63 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/200dRole_delete'
+  /dRule:
+    post:
+      x-scope: public
+      tags:
+      - dRule
+      summary: Creates a new dRule record.
+      operationId: CreatedRule
+      requestBody:
+        $ref: '#/components/requestBodies/dRule'
+      responses:
+        '200':
+          $ref: '#/components/responses/200dRule_post'
+    get:
+      x-scope: public
+      tags:
+      - dRule
+      summary: Retrieves a list of all dRule records.
+      operationId: ListdRule
+      responses:
+        '200':
+          $ref: '#/components/responses/200dRule_get'
+  /dRule/{id}:
+    get:
+      x-scope: public
+      tags:
+      - dRule
+      summary: Retrieves an existing dRule record by its id.
+      operationId: RetrievedRule
+      parameters:
+      - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200dRule_get_one'
+    patch:
+      x-scope: public
+      tags:
+      - dRule
+      summary: Updates an existing dRule record.
+      operationId: PatchdRule
+      parameters:
+      - $ref: '#/components/parameters/id'
+      requestBody:
+        $ref: '#/components/requestBodies/dRule'
+      responses:
+        '200':
+          $ref: '#/components/responses/200dRule_patch'
+    delete:
+      x-scope: public
+      tags:
+      - dRule
+      summary: Deletes an existing dRule record by its id.
+      operationId: DeletedRule
+      parameters:
+      - $ref: '#/components/parameters/id'
+      responses:
+        '200':
+          $ref: '#/components/responses/200dRule_delete'
   /dSecurityGroup:
     post:
       x-scope: public
@@ -4760,6 +4817,20 @@ components:
       - Tolerate
       - Transfer
       - Treat
+    dRuleCertainty:
+      description: How the rule entered the model.
+      type: string
+      enum:
+      - Explicit
+      - Inferred
+    dRuleKind:
+      description: OMG business rule categories.
+      type: string
+      enum:
+      - Derivation
+      - Integrity
+      - Production
+      - Reaction
     dSatisfactionType:
       description: Enumeration quantifying the Satisfaction level.
       type: string
@@ -8154,6 +8225,31 @@ components:
               format: uuid
               x-reference: '#/components/schemas/dBusinessService'
             description: 'staffs Service (Role Staffs Service). Ids of the dBusinessService elements; multiplicity 0..*. The role''s capacity delivers the service: it does the service''s work.'
+    dRule:
+      description: A precise business condition or constraint, implemented at a specific point in an application. Modeled as an operation with package visibility on a dController, which acts as the rule
+        set. Its Statement is the human-readable rule passed to an LLM to generate the implementation.
+      allOf:
+      - $ref: '#/components/schemas/DAFBase'
+      - type: object
+        properties:
+          Certainty:
+            allOf:
+            - $ref: '#/components/schemas/dRuleCertainty'
+            description: Explicit when modeled directly; Inferred when extracted from legacy code.
+            nullable: true
+          RuleKind:
+            allOf:
+            - $ref: '#/components/schemas/dRuleKind'
+            description: 'The OMG category of the rule: Production, Integrity, Derivation or Reaction.'
+            nullable: true
+          SourceEvidence:
+            type: string
+            description: 'Where the rule was found in legacy code: program, paragraph or section, and line range, e.g. "LGICUS01 / 2000-VALIDATE-AGE / L412-L431".'
+            nullable: true
+          Statement:
+            type: string
+            description: Human-readable statement of the rule, precise enough to pass to an LLM for implementation, e.g. "Ensure Customer.Age >= 18 before Account.Creation".
+            nullable: true
     dSecurityGroup:
       description: Controls and manages access and permissions between services, in line with TOGAF's Security Architecture for protecting digital assets.
       allOf:
@@ -10515,6 +10611,38 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/dRole'
+    200dRule_post:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/dRule'
+    200dRule_delete:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/dRule'
+    200dRule_get:
+      description: Success
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '#/components/schemas/dRule'
+    200dRule_patch:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/dRule'
+    200dRule_get_one:
+      description: Success
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/dRule'
     200dSecurityGroup_post:
       description: Success
       content:
@@ -11428,6 +11556,14 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/dRole'
+      required: true
+    dRule:
+      description: A precise business condition or constraint, implemented at a specific point in an application. Modeled as an operation with package visibility on a dController, which acts as the rule
+        set. Its Statement is the human-readable rule passed to an LLM to generate the implementation.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/dRule'
       required: true
     dSecurityGroup:
       description: Controls and manages access and permissions between services, in line with TOGAF's Security Architecture for protecting digital assets.
