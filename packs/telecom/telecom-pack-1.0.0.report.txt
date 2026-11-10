@@ -1,8 +1,8 @@
-﻿DAF M1 RDF MODEL EXPORT REPORT
+DAF M1 RDF MODEL EXPORT REPORT
 Generated: 2026-11-02 7:36:32 PM
 Exporter version: 0.7.0
-DAF framework version: 6.3
-Semantic metamodel export contract: 1.5.0
+DAF framework version: 7.0.0 Beta 6
+Semantic metamodel export contract: 1.6.0
 Root package: Telecom pack 1.0.0
 Root package GUID: {F0E7A262-C987-4af9-9F2F-ECD2768A1102}
 Output: C:\Users\broth\Dropbox\work\Method\EA method\3.1\packs\telecom\telecom-pack-1.0.0.ttl
@@ -109,3 +109,11 @@ NOTE: Chronos, TMF, BIZBOK and TOGAF are trusted DAF ancestor/sibling source met
 NOTE: Trusted source relationships are transformed only where an explicit or semantically defensible DAF 6.3 relationship equivalent exists. Otherwise they remain generic and are reported.
 NOTE: Other external technologies remain candidate mappings only. Structural endpoint compatibility is reported with confidence=structural and is not treated as semantic equivalence.
 NOTE: FQStereotype is used where supported by the EA Automation Interface to recover Profile::Stereotype identity for elements and connectors.
+
+POST-PROCESSING (packs/tools/fix_daf_version.py)
+dafi:dafVersion set to 7.0.0 Beta 6; dafi:metamodelExportVersion set to 1.6.0.
+dafi:sourceDirection aligned with the metamodel (EA had reversed the connector):
+  dApplicationAggregatesFunction: 883
+  dCategoryaggregatesGroups: 210
+  dGroupAggregatesKPI: 2274
+  dModelClassAssociatesModelClass: 2

@@ -3,7 +3,7 @@
   "name": "Telecom",
   "namespace": "https://dafriontechnologies.inc/daf/pack/telecom#",
   "version": "1.0.0",
-  "requires": { "daf": ">= 7.0.0 Beta 5" },
+  "requires": { "daf": ">= 7.0.0 Beta 6" },
   "dependsOn": [],
   "rootPackage": "Telecom pack 1.0.0",
   "inspiredBy": [

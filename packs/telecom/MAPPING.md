@@ -100,6 +100,13 @@ The added elements and links live only in the TTL (no EA GUID, `dcterms:source` 
 python3 packs/tools/fix_measurement_hierarchy.py packs/telecom/telecom-pack-1.0.0.ttl "Telecom Measures"
 ```
 
+## DAF version of the export
+The M1 exporter writes its own DAF 6.3 contract into the model header, and copies each EA connector's direction into `dafi:sourceDirection`. EA reverses an aggregation's direction when its DAF stereotype is applied, so 3,369 links (883 `dApplicationAggregatesFunction`, 2,274 `dGroupAggregatesKPI`, 210 `dCategoryaggregatesGroups`, 2 `dModelClassAssociatesModelClass`) read "Destination -> Source", although their `dafm:source` and `dafm:target` already run as DAF defines them. `packs/tools/fix_daf_version.py` sets `dafi:dafVersion` and `dafi:metamodelExportVersion` to the target DAF version and the semantic model's generator version, aligns those directions with the metamodel, and records both in the export report. Run it after every export, after the measurement fix:
+
+```bash
+python3 packs/tools/fix_daf_version.py packs/telecom/telecom-pack-1.0.0.ttl technology/rdf/DAF-semantic-model.ttl "7.0.0 Beta 6"
+```
+
 ## Excluded or deferred
 | What | Count | Reason |
 |---|---|---|
@@ -131,7 +138,7 @@ The UML profile, QuickLink, JSON schema, OpenAPI and SHACL shapes are regenerate
 | Name | Telecom |
 | Namespace | `https://dafriontechnologies.inc/daf/pack/telecom#` |
 | Version | `1.0.0` |
-| Requires | DAF `>= 7.0.0 Beta 5` |
+| Requires | DAF `>= 7.0.0 Beta 6` |
 | Root package | `Telecom pack 1.0.0`, with one package per domain below it |
 | Built in | the `Industry Models` repository, under `DAF Industry Packages` `{2568AC87-29D1-4d8f-8F68-AA2A2B3930D6}`, next to the source |
 
