@@ -3,6 +3,7 @@
 The semantic model (technology/rdf/DAF-semantic-model.ttl) is the authoritative M2 definition; its SHACL shapes give
 every property's type and multiplicity. Names are the metamodel's: properties keep their labels, relationships are
 keyed by their predicate (forward) and predicate + "_inverse" (backward).
+Property-bearing relationships also have an instance schema linked from x-uml-relationships.
 
 The curated parts of the existing OAS are kept: info (version updated), DAFBase with its read-only policy, and the
 "id" parameter. Everything else is regenerated.
@@ -60,11 +61,8 @@ def text(node, pred):
 
 
 # ---------------------------------------------------------------- concepts and their shapes
-shapes = {}
-for shape, cls in g.subject_objects(SH.targetClass):
-    if str(cls).startswith(str(DAF)):  # relationship types have shapes too
-        shapes[local(cls)] = shape
-concepts = sorted(c for c in shapes if c != "DAFBase")
+shapes = {cls: shape for shape, cls in g.subject_objects(SH.targetClass)}
+concepts = sorted(local(cls) for cls in shapes if str(cls).startswith(str(DAF)) and cls != DAF.DAFBase)
 concept_notes = {c: text(DAF[c], RDFS.comment) for c in concepts}
 parents = {}
 for c in concepts:
@@ -122,6 +120,7 @@ def shape_properties(cls):
             spec["name"] = text(bn, SH.name) or text(path, RDFS.label)
             spec["description"] = text(path, RDFS.comment)
             spec["range"] = g.value(path, RDFS.range)
+            spec["path"] = path
             attrs.append((spec["name"], spec))
         elif str(path).startswith(str(DAFPRED)):
             pred = local(path)
@@ -174,6 +173,59 @@ def wrap(spec, item):
     return out
 
 
+def relationship_component(name):
+    return f"Relationship_{name}"
+
+
+def relationship_instances(ref_prefix, reference):
+    """Yield schemas for concrete links whose M3 definition declares properties."""
+    for rel in relationships:
+        name = rel["name"]
+        cls = DAFREL[name]
+        if cls not in shapes:
+            continue
+        attrs = [(key, spec) for key, spec in shape_properties(cls) if not spec.get("relationship")]
+        if not attrs:
+            continue
+        defaults = {
+            g.value(definition, DAFM.projectionPredicate): value
+            for definition in g.objects(cls, DAFM.hasPropertyDefinition)
+            if (value := g.value(definition, DAFM.defaultValue)) is not None
+        }
+        properties = {end: reference(rel[end]) for end in ("source", "target")}
+        required = list(properties)
+        for key, spec in attrs:
+            if key in properties:
+                raise ValueError(f"Relationship {name} property conflicts with endpoint field {key}")
+            item = json_type(spec, ref_prefix, reference)
+            prop = wrap(spec, item)
+            if spec["min"] > 0:
+                required.append(key)
+            if prop.get("type") == "array":
+                if spec["min"] > 0:
+                    prop["minItems"] = spec["min"]
+                if spec["max"] is not None:
+                    prop["maxItems"] = spec["max"]
+            if spec["path"] in defaults:
+                lexical = str(defaults[spec["path"]])
+                if item.get("type") == "boolean":
+                    default = {"true": True, "1": True, "false": False, "0": False}[lexical.lower()]
+                elif item.get("type") == "integer":
+                    default = int(lexical)
+                elif item.get("type") == "number":
+                    default = float(lexical)
+                else:
+                    default = lexical
+                prop["default"] = [default] if prop.get("type") == "array" else default
+            properties[key] = prop
+        yield name, {
+            "type": "object",
+            "description": rel["description"] or rel["alias"],
+            "properties": properties,
+            "required": required,
+        }
+
+
 # ---------------------------------------------------------------- JSON Schema (draft 2020-12)
 def schema_ref(cls):
     return {"type": "string", "format": "uuid", "x-reference": "#/$defs/" + cls}
@@ -181,7 +233,7 @@ def schema_ref(cls):
 
 defs = OrderedDict()
 base_props, base_required = OrderedDict(), []
-for key, spec in shape_properties("DAFBase"):
+for key, spec in shape_properties(DAF.DAFBase):
     base_props[key] = wrap(spec, json_type(spec, "#/$defs/", schema_ref))
     if spec["min"] >= 1:
         base_required.append(key)
@@ -192,7 +244,7 @@ for name, e in enums.items():
     defs[name] = {"description": e["description"], "type": "string", "enum": e["values"]}
 for c in concepts:
     props, required = OrderedDict(), []
-    for key, spec in shape_properties(c):
+    for key, spec in shape_properties(DAF[c]):
         props[key] = wrap(spec, json_type(spec, "#/$defs/", schema_ref))
         if spec["min"] >= 1:
             required.append(key)
@@ -203,11 +255,16 @@ for c in concepts:
     defs[c] = {"description": concept_notes[c], "allOf": [{"$ref": base}, own]}
     if c in VALUE_TYPES:
         defs[c] = dict(own, description=concept_notes[c])
+for name, instance in relationship_instances("#/$defs/", schema_ref):
+    component = relationship_component(name)
+    if component in defs:
+        raise ValueError(f"Relationship schema name already in use: {component}")
+    defs[component] = instance
 schema = OrderedDict([
     ("$schema", "https://json-schema.org/draft/2020-12/schema"),
     ("$id", "https://freetakteam.github.io/DAF/schema/DigitalArchitectureFramework.schema.json"),
     ("title", "DigitalArchitectureFramework"),
-    ("description", f"JSON Schema of the DAF {VERSION} metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationships hold the ids of the related elements (x-reference names the target)."),
+    ("description", f"JSON Schema of the DAF {VERSION} metamodel, generated from technology/rdf/DAF-semantic-model.ttl. Relationship references hold the ids of related elements (x-reference names the target). Relationship_* definitions describe links with their own properties."),
     ("x-daf-version", VERSION),
     ("type", "object"),
     ("properties", OrderedDict((c, {"type": "array", "items": {"$ref": "#/$defs/" + c}}) for c in concepts if c not in VALUE_TYPES)),
@@ -251,7 +308,7 @@ for name, e in enums.items():
     schemas[name] = {"description": e["description"], "type": "string", "enum": e["values"]}
 for c in concepts:
     props, required = OrderedDict(), []
-    for key, spec in shape_properties(c):
+    for key, spec in shape_properties(DAF[c]):
         item = json_type(spec, "#/components/schemas/", oas_ref)
         p = wrap(spec, item)
         if spec["min"] == 0 and not (spec["max"] is None or spec["max"] > 1):
@@ -266,6 +323,13 @@ for c in concepts:
         schemas[c] = dict(own, description=concept_notes[c])
     else:
         schemas[c] = {"description": concept_notes[c], "allOf": [{"$ref": "#/components/schemas/" + parents.get(c, "DAFBase")}, own]}
+
+instance_schemas = dict(relationship_instances("#/components/schemas/", oas_ref))
+for name, instance in instance_schemas.items():
+    component = relationship_component(name)
+    if component in schemas:
+        raise ValueError(f"Relationship schema name already in use: {component}")
+    schemas[component] = oas_fix(instance)
 
 paths, responses, bodies = OrderedDict(), OrderedDict(), OrderedDict()
 for c in concepts:
@@ -289,11 +353,14 @@ for c in concepts:
 
 uml = []
 for r in relationships:
-    uml.append(OrderedDict([
+    definition = OrderedDict([
         ("name", r["name"]), ("x-ea-guid", r["guid"]), ("alias", r["alias"]), ("kind", r["kind"]),
         ("source", OrderedDict([("schema", "#/components/schemas/" + r["source"]), ("multiplicity", r["sourceMultiplicity"]), ("role", r["backwardRole"])])),
         ("target", OrderedDict([("schema", "#/components/schemas/" + r["target"]), ("multiplicity", r["targetMultiplicity"]), ("role", r["forwardRole"])])),
-    ]))
+    ])
+    if r["name"] in instance_schemas:
+        definition["instanceSchema"] = {"$ref": "#/components/schemas/" + relationship_component(r["name"])}
+    uml.append(definition)
 
 oas = OrderedDict([
     ("openapi", "3.0.1"),

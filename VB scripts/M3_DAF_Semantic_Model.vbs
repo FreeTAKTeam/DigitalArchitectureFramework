@@ -34,8 +34,13 @@
 '   QuickLink generator. SupplierEnd.Role is the forward meaning; ClientEnd.Role
 '   is the backward meaning.
 '
-' Version: 1.6.0
-' Date: 2026 / 11 / 02
+' Version: 1.7.0
+' Date: 2026 / 11 / 24
+'
+' 1.7.0 relationship properties:
+'   - owns native M3 Association Class attributes on the relationship type
+'   - emits typed predicates and SHACL on relationship instances
+'   - ignores Related Concept diagram links without a semantic declaration
 '
 ' 1.6.0 UML Class extension and industry pack changes:
 '   - a Concept with Metaclass = Class and the tagged value ExtendsMetaclass = true
@@ -102,7 +107,8 @@
 !INC Local Scripts.EAConstants-VBScript
 !INC DAF MDG.DAF M3 Conf
 
-Const SCRIPT_VERSION = "1.6.0"
+Const SCRIPT_VERSION = "1.7.0"
+Const DAF_RELEASE_VERSION = "7.0.0 Beta 7"
 
 Const NS_DAF      = "https://freetakteam.github.io/DAF/model#"
 Const NS_DAFM     = "https://freetakteam.github.io/DAF/metamodel#"
@@ -121,12 +127,12 @@ Dim enumIriById, enumMembersByName
 Dim usedConceptLocals, usedClassLocals, usedRelationshipLocals, usedPropertyLocals
 Dim registeredClassGuids, exportedClassGuids
 Dim registeredRelationshipGuids, generatedRelationshipGuids, generatedRelationshipLabels
-Dim ignoredRelationshipGuids
+Dim ignoredRelationshipGuids, relationshipLocalByGuid, associationClassByConnector, associationClassById
 Dim generatedConceptGuids
 Dim legacyProfileConceptGuidMap, legacyProfileRelationshipGuidMap
 Dim conceptCount, supportingClassCount, enumCount, attributeCount, relationshipCount
 Dim inheritanceCount, taggedValueCount, constraintCount, warningCount
-Dim ignoredNoteLinkCount
+Dim ignoredNoteLinkCount, ignoredRelatedConceptCount
 Dim explicitPrimitivePropertyCount, classifierTypedPropertyCount, unresolvedPropertyTypeCount, unknownPropertyTypeCount
 Dim legacyConvertedPropertyCount, booleanNamingConventionPropertyCount
 Dim suppressedDuplicateIdPropertyCount
@@ -152,6 +158,9 @@ Set registeredRelationshipGuids = CreateObject("Scripting.Dictionary")
 Set generatedRelationshipGuids = CreateObject("Scripting.Dictionary")
 Set generatedRelationshipLabels = CreateObject("Scripting.Dictionary")
 Set ignoredRelationshipGuids = CreateObject("Scripting.Dictionary")
+Set relationshipLocalByGuid = CreateObject("Scripting.Dictionary")
+Set associationClassByConnector = CreateObject("Scripting.Dictionary")
+Set associationClassById = CreateObject("Scripting.Dictionary")
 Set generatedConceptGuids = CreateObject("Scripting.Dictionary")
 Set legacyProfileConceptGuidMap = CreateObject("Scripting.Dictionary")
 Set legacyProfileRelationshipGuidMap = CreateObject("Scripting.Dictionary")
@@ -186,6 +195,7 @@ taggedValueCount = 0
 constraintCount = 0
 warningCount = 0
 ignoredNoteLinkCount = 0
+ignoredRelatedConceptCount = 0
 explicitPrimitivePropertyCount = 0
 legacyConvertedPropertyCount = 0
 booleanNamingConventionPropertyCount = 0
@@ -227,6 +237,7 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
 
     Report "DAF RDF Semantic Model generation report"
     Report "Generated: " & CStr(Now())
+    Report "DAF release version: " & DAF_RELEASE_VERSION
     Report "Script version: " & SCRIPT_VERSION
     Report "Profile name: " & CStr(ProfileName)
     Report ""
@@ -260,6 +271,7 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
     ' First pass creates stable IRIs and collects enumeration values so that
     ' all later references can resolve deterministically.
     RegisterPackage metamodelPackage
+    PrepareRelationshipTypes
 
     ' Preserve source package structure/provenance.
     ExportPackageTree metamodelPackage
@@ -291,6 +303,8 @@ Sub GenerateDAFSemanticModel(packageGuid, outputFolder)
     Report "  Unresolved (<none>/empty): " & unresolvedPropertyTypeCount
     Report "  Unknown textual/classifier types: " & unknownPropertyTypeCount
     Report "Relationships: " & relationshipCount
+    Report "Association Classes represented by their relationship types: " & associationClassById.Count
+    Report "Ignored Related Concept diagram links: " & ignoredRelatedConceptCount
     Report "Authoring-enabled relationships: " & authoringEnabledRelationshipCount
     Report "Derived EA QuickLink equivalents: " & derivedQuickLinkEquivalentRuleCount
     Report "Ignored NoteLink connectors: " & ignoredNoteLinkCount
@@ -616,7 +630,7 @@ Sub AuditGeneratedCompleteness()
             If generatedRelationshipGuids.Exists(k) Then
                 matched = matched + 1
             ElseIf ignoredRelationshipGuids.Exists(k) Then
-                Report "IGNORED NOTELINK PROFILE MAPPING: " & legacyProfileRelationshipGuidMap(k) & " -> M3 connector GUID " & k
+                Report "IGNORED DIAGRAM CONNECTOR PROFILE MAPPING: " & legacyProfileRelationshipGuidMap(k) & " -> M3 connector GUID " & k
             Else
                 profileOnly = profileOnly + 1
                 Report "PROFILE-ONLY RELATIONSHIP MAPPING: " & legacyProfileRelationshipGuidMap(k) & " -> M3 connector GUID " & k
@@ -632,7 +646,7 @@ Sub AuditGeneratedCompleteness()
         Next
 
         Report "Profile relationship mappings matched by Metamodel GUID: " & matched
-        Report "Profile-only relationship mappings (excluding ignored NoteLinks): " & profileOnly
+        Report "Profile-only relationship mappings (excluding ignored diagram connectors): " & profileOnly
         Report "M3 relationships missing from generated relationship profile: " & m3Only
     End If
 
@@ -653,7 +667,7 @@ Sub AuditGeneratedCompleteness()
     End If
 
     If missingClasses = 0 And missingRelationships = 0 Then
-        Report "RDF completeness gate: PASS - every registered M3 class and exportable non-generalization relationship was represented; NoteLink connectors were intentionally ignored."
+        Report "RDF completeness gate: PASS - every registered M3 class and exportable non-generalization relationship was represented; NoteLink and undeclared Related Concept diagram connectors were intentionally ignored."
     Else
         Warn "RDF completeness gate: FAIL - " & missingClasses & " class(es) and " & missingRelationships & " relationship(s) disappeared during generation."
     End If
@@ -688,6 +702,7 @@ Sub WriteOntologyHeader(pkg)
     W "<https://freetakteam.github.io/DAF/ontology>"
     W "    a owl:Ontology ;"
     W "    owl:imports <https://freetakteam.github.io/DAF/uml> ;"
+    W "    owl:versionInfo " & Lit(DAF_RELEASE_VERSION) & " ;"
     W "    dcterms:title " & Lit(CStr(ProfileName) & " Semantic Metamodel") & " ;"
     W "    dcterms:description " & Lit("Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model.") & " ;"
     W "    dcterms:created " & TypedLit(IsoDateTime(Now()), "xsd:dateTime") & " ;"
@@ -744,7 +759,7 @@ Sub WriteMetaMetamodelVocabulary()
     ObjectPropDef "dafm:projectionPredicate", "projection predicate", "OWL/RDF object property used as the direct graph projection of a first-class relationship."
     ObjectPropDef "dafm:inversePredicate", "inverse predicate", "Inverse OWL/RDF projection predicate."
     ObjectPropDef "dafm:definedInPackage", "defined in package", "Source package containing this metamodel definition."
-    ObjectPropDef "dafm:hasPropertyDefinition", "has property definition", "Links a concept definition to one of its M3 attribute/property definitions."
+    ObjectPropDef "dafm:hasPropertyDefinition", "has property definition", "Links a concept or relationship type to one of its M3 attribute/property definitions."
     ObjectPropDef "dafm:hasTaggedValue", "has tagged value", "Links a metamodel object to a preserved tagged value."
     ObjectPropDef "dafm:hasConstraint", "has constraint", "Links a metamodel object to a preserved constraint."
     ObjectPropDef "dafm:enumeration", "enumeration", "Enumeration constraining a property definition."
@@ -841,6 +856,7 @@ Sub WriteMetaMetamodelVocabulary()
     DataPropDef "dafm:enumerationCount", "enumeration count", "Number of generated enumerations.", "xsd:integer"
     DataPropDef "dafm:propertyCount", "property count", "Number of generated semantic property definitions.", "xsd:integer"
     DataPropDef "dafm:relationshipCount", "relationship count", "Number of generated relationship types.", "xsd:integer"
+    DataPropDef "dafm:associationClassGuid", "association class GUID", "GUID of the M3 Association Class defining properties for this relationship type.", "xsd:string"
     DataPropDef "dafm:ignoredNoteLinkCount", "ignored NoteLink count", "Number of EA NoteLink connectors intentionally excluded from semantic relationship generation.", "xsd:integer"
     DataPropDef "dafm:generalizationCount", "generalization count", "Number of generated inheritance links.", "xsd:integer"
     DataPropDef "dafm:warningCount", "warning count", "Number of generator warnings.", "xsd:integer"
@@ -1026,7 +1042,11 @@ Sub RegisterPackage(pkg)
                     If IsIgnoredRelationshipConnector(c) Then
                         If Not ignoredRelationshipGuids.Exists(connectorKey) Then
                             ignoredRelationshipGuids.Add connectorKey, RelationshipRegistrationLabel(c)
-                            ignoredNoteLinkCount = ignoredNoteLinkCount + 1
+                            If LCase(Trim(CStr(c.Type))) = "notelink" Then
+                                ignoredNoteLinkCount = ignoredNoteLinkCount + 1
+                            Else
+                                ignoredRelatedConceptCount = ignoredRelatedConceptCount + 1
+                            End If
                         End If
                     ElseIf LCase(c.Type) <> "generalization" Then
                         If Not registeredRelationshipGuids.Exists(connectorKey) Then
@@ -1042,6 +1062,37 @@ Sub RegisterPackage(pkg)
 
     For Each subPkg In pkg.Packages
         RegisterPackage subPkg
+    Next
+End Sub
+
+Sub PrepareRelationshipTypes()
+    Dim k, c, el, relLocal, connectorGuid, elementId
+
+    ' Allocate relationship names before remapping any class used as an endpoint.
+    For Each k In registeredRelationshipGuids.Keys
+        Set c = Repository.GetConnectorByGuid(CStr(k))
+        If classIriById.Exists(CStr(c.ClientID)) And classIriById.Exists(CStr(c.SupplierID)) Then
+            relLocal = RelationshipLocal(c, ClassLocal(c.ClientID), ClassLocal(c.SupplierID))
+            relationshipLocalByGuid.Add CStr(k), relLocal
+
+            If LCase(c.Type) = "association" Then
+                Set el = c.AssociationClass
+                If Not el Is Nothing Then
+                    If classIriById.Exists(CStr(el.ElementID)) Then
+                        associationClassByConnector.Add CStr(k), el
+                        associationClassById.Add CStr(el.ElementID), CStr(k)
+                    End If
+                End If
+            End If
+        End If
+    Next
+
+    ' The connector and its class are two EA records for one semantic type.
+    For Each elementId In associationClassById.Keys
+        connectorGuid = associationClassById(elementId)
+        relLocal = relationshipLocalByGuid(connectorGuid)
+        classIriById(elementId) = "dafrel:" & relLocal
+        classLocalById(elementId) = relLocal
     Next
 End Sub
 
@@ -1160,10 +1211,12 @@ Sub ExportDefinitions(pkg)
 
     For Each el In pkg.Elements
         If LCase(el.Type) = "class" Then
-            If LCase(el.Stereotype) = "concept" Then
-                ExportConcept el, pkg
-            Else
-                ExportSupportingClass el, pkg
+            If Not associationClassById.Exists(CStr(el.ElementID)) Then
+                If LCase(el.Stereotype) = "concept" Then
+                    ExportConcept el, pkg
+                Else
+                    ExportSupportingClass el, pkg
+                End If
             End If
         ElseIf LCase(el.Type) = "enumeration" Then
             ExportEnumeration el, pkg
@@ -1423,28 +1476,25 @@ End Function
 ' ---------------------------------------------------------------------------
 
 Sub ExportAttribute(ownerEl, a)
-    Dim ownerIri, ownerLocal, propLocal, propIri, defIri
-    Dim xsdType, enumIri, lowerBound, upperBound, isEnum, defaultValue
-    Dim classifierId, classifierEl, classifierIri, classifierKind
-    Dim typingStatus, propertyKind, sourceType, readableOwner
-
-    ownerIri = ClassIri(ownerEl.ElementID)
-    ownerLocal = ClassLocal(ownerEl.ElementID)
-    readableOwner = HumanReadableName(ownerEl)
-
-    ' DAFBase owns the canonical semantic identifier dafp:id.
-    ' Legacy M3 classes sometimes repeat the same concept as ID, Id or id.
-    ' Suppress those exact class-level names so the semantic model has one
-    ' authoritative identity property. Names such as externalId, PrincipleID,
-    ' schemaId, etc. are deliberately NOT matched by this rule.
+    ' Concept and supporting class identity is already inherited from DAFBase.
     If IsDuplicateBaseIdProperty(a.Name) Then
         suppressedDuplicateIdPropertyCount = suppressedDuplicateIdPropertyCount + 1
-        Report "SUPPRESSED DUPLICATE ID PROPERTY: class '" & readableOwner _
+        Report "SUPPRESSED DUPLICATE ID PROPERTY: class '" & HumanReadableName(ownerEl) _
             & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name _
             & "' [AttributeGUID=" & a.AttributeGUID & ", sourceType=" _
             & Trim(CStr(a.Type)) & "] -> inherited dafp:id from daf:DAFBase"
         Exit Sub
     End If
+
+    ExportOwnedAttribute ClassIri(ownerEl.ElementID), ClassLocal(ownerEl.ElementID), _
+        ClassShapeIri(ownerEl.ElementID), HumanReadableName(ownerEl), ownerEl.Name, a
+End Sub
+
+Sub ExportOwnedAttribute(ownerIri, ownerLocal, ownerShapeIri, readableOwner, ownerName, a)
+    Dim propLocal, propIri, defIri
+    Dim xsdType, enumIri, lowerBound, upperBound, isEnum, defaultValue
+    Dim classifierId, classifierEl, classifierIri, classifierKind
+    Dim typingStatus, propertyKind, sourceType
 
     propLocal = UniquePropertyLocal(ownerLocal & "__" & SafeLocal(a.Name), a.AttributeGUID)
     propIri = "dafp:" & propLocal
@@ -1517,7 +1567,7 @@ Sub ExportAttribute(ownerEl, a)
         If classifierIri = "" Then
             unknownPropertyTypeCount = unknownPropertyTypeCount + 1
             typingStatus = "dafm:UnknownType"
-            Warn "Unresolved classifier for M3 property: class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & ", ClassifierID=" & CStr(classifierId) & "]. No RDF range or SHACL datatype will be inferred."
+            Warn "Unresolved classifier for M3 property: class '" & readableOwner & "' (DAF name: '" & ownerName & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & ", ClassifierID=" & CStr(classifierId) & "]. No RDF range or SHACL datatype will be inferred."
         Else
             classifierTypedPropertyCount = classifierTypedPropertyCount + 1
         End If
@@ -1539,11 +1589,11 @@ Sub ExportAttribute(ownerEl, a)
     ElseIf IsUnresolvedUML2Type(sourceType) Then
         unresolvedPropertyTypeCount = unresolvedPropertyTypeCount + 1
         typingStatus = "dafm:UnresolvedType"
-        Warn "Untyped M3 property: class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. Type is <none>/empty and no classifier is assigned. No RDF range or SHACL datatype will be inferred."
+        Warn "Untyped M3 property: class '" & readableOwner & "' (DAF name: '" & ownerName & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. Type is <none>/empty and no classifier is assigned. No RDF range or SHACL datatype will be inferred."
     Else
         unknownPropertyTypeCount = unknownPropertyTypeCount + 1
         typingStatus = "dafm:UnknownType"
-        Warn "Unknown M3 property datatype '" & sourceType & "': class '" & readableOwner & "' (DAF name: '" & ownerEl.Name & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. No implicit xsd:string conversion was made."
+        Warn "Unknown M3 property datatype '" & sourceType & "': class '" & readableOwner & "' (DAF name: '" & ownerName & "'), property '" & a.Name & "' [AttributeGUID=" & a.AttributeGUID & "]. No implicit xsd:string conversion was made."
     End If
 
     lowerBound = SafeAttributeLowerBound(a)
@@ -1593,8 +1643,8 @@ Sub ExportAttribute(ownerEl, a)
     ExportConstraints defIri, a.AttributeGUID, a.Constraints, "attribute"
     ExportAttributeExtraMetadata defIri, a
 
-    ' Property SHACL is attached to the owning M3 class shape.
-    W "dafshape:" & ownerLocal & "Shape sh:property ["
+    ' Attach SHACL to the owning concept or relationship instance shape.
+    W ownerShapeIri & " sh:property ["
     W "    sh:path " & propIri & " ;"
     If isEnum Then
         W "    sh:datatype xsd:string ;"
@@ -1827,7 +1877,7 @@ Sub ExportRelationships(pkg)
 End Sub
 
 Sub ExportRelationship(c)
-    Dim sourceEl, targetEl, sourceIri, targetIri, sourceLocal, targetLocal
+    Dim sourceEl, targetEl, sourceIri, targetIri, connectorGuid
     Dim relLocal, relClassIri, predIri, inversePredIri
     Dim metaclassName, redefinesName, refinesName, forwardRole, backwardRole
     Dim relationshipKind, relationshipKindSource, sourceEndIri, targetEndIri
@@ -1850,10 +1900,8 @@ Sub ExportRelationship(c)
 
     sourceIri = ClassIri(c.ClientID)
     targetIri = ClassIri(c.SupplierID)
-    sourceLocal = ClassLocal(c.ClientID)
-    targetLocal = ClassLocal(c.SupplierID)
-
-    relLocal = RelationshipLocal(c, sourceLocal, targetLocal)
+    connectorGuid = LCase(c.ConnectorGUID)
+    relLocal = relationshipLocalByGuid(connectorGuid)
     relClassIri = "dafrel:" & relLocal
     predIri = "dafpred:" & relLocal
     inversePredIri = "dafpred:" & relLocal & "_inverse"
@@ -1934,13 +1982,37 @@ Sub ExportRelationship(c)
     ExportConstraints relClassIri, c.ConnectorGUID, c.Constraints, "connector"
 
     WriteRelationshipInstanceShape relLocal, relClassIri, sourceIri, targetIri
+    If associationClassByConnector.Exists(connectorGuid) Then
+        ExportAssociationClass associationClassByConnector(connectorGuid), c, relLocal, relClassIri
+    End If
 
     ' Constraints on projected triples:
     ' SupplierEnd multiplicity constrains how many targets each source may have.
-    WriteProjectedForwardShape sourceLocal, predIri, targetIri, c.SupplierEnd.Cardinality, relLocal
+    WriteProjectedForwardShape ClassShapeIri(c.ClientID), predIri, targetIri, c.SupplierEnd.Cardinality, relLocal
 
     ' ClientEnd multiplicity constrains how many sources each target may have.
-    WriteProjectedInverseShape targetLocal, predIri, sourceIri, c.ClientEnd.Cardinality, relLocal
+    WriteProjectedInverseShape ClassShapeIri(c.SupplierID), predIri, sourceIri, c.ClientEnd.Cardinality, relLocal
+End Sub
+
+Sub ExportAssociationClass(el, c, relLocal, relClassIri)
+    Dim a, superCount
+    exportedClassGuids(LCase(el.ElementGUID)) = relClassIri
+
+    W relClassIri & " dafm:associationClassGuid " & Lit(el.ElementGUID) & " ."
+    If Trim(el.Notes) <> "" And Trim(c.Notes) <> Trim(el.Notes) Then
+        W relClassIri & " rdfs:comment " & Lit(el.Notes) & " ."
+    End If
+    W ""
+
+    ExportTaggedValues relClassIri, el.ElementGUID, el.TaggedValues, "associationClass"
+    ExportConstraints relClassIri, el.ElementGUID, el.Constraints, "associationClass"
+    superCount = ExportGeneralizations(el)
+    ExportMethods el
+
+    For Each a In el.Attributes
+        ExportOwnedAttribute relClassIri, relLocal, ClassShapeIri(el.ElementID), _
+            HumanReadableName(el), el.Name, a
+    Next
 End Sub
 
 Sub ExportRelationshipAuthoringSemantics(relClassIri, c, metaclassName, redefinesName)
@@ -2055,8 +2127,8 @@ Sub WriteRelationshipInstanceShape(relLocal, relClassIri, sourceIri, targetIri)
     W ""
 End Sub
 
-Sub WriteProjectedForwardShape(sourceLocal, predIri, targetIri, cardinality, relLocal)
-    W "dafshape:" & sourceLocal & "Shape sh:property ["
+Sub WriteProjectedForwardShape(sourceShapeIri, predIri, targetIri, cardinality, relLocal)
+    W sourceShapeIri & " sh:property ["
     W "    sh:path " & predIri & " ;"
     W "    sh:class " & targetIri & " ;"
     WriteCardinality cardinality
@@ -2065,8 +2137,8 @@ Sub WriteProjectedForwardShape(sourceLocal, predIri, targetIri, cardinality, rel
     W ""
 End Sub
 
-Sub WriteProjectedInverseShape(targetLocal, predIri, sourceIri, cardinality, relLocal)
-    W "dafshape:" & targetLocal & "Shape sh:property ["
+Sub WriteProjectedInverseShape(targetShapeIri, predIri, sourceIri, cardinality, relLocal)
+    W targetShapeIri & " sh:property ["
     W "    sh:path [ sh:inversePath " & predIri & " ] ;"
     W "    sh:class " & sourceIri & " ;"
     WriteCardinality cardinality
@@ -2358,6 +2430,14 @@ Function ClassLocal(elementId)
     End If
 End Function
 
+Function ClassShapeIri(elementId)
+    If associationClassById.Exists(CStr(elementId)) Then
+        ClassShapeIri = "dafshape:" & ClassLocal(elementId) & "RelationshipShape"
+    Else
+        ClassShapeIri = "dafshape:" & ClassLocal(elementId) & "Shape"
+    End If
+End Function
+
 Function EnumerationIri(elementId)
     If enumIriById.Exists(CStr(elementId)) Then
         EnumerationIri = enumIriById(CStr(elementId))
@@ -2378,6 +2458,9 @@ Function IsIgnoredRelationshipConnector(c)
     Dim connectorType
     connectorType = LCase(Trim(CStr(c.Type)))
     IsIgnoredRelationshipConnector = (connectorType = "notelink")
+    If Not IsIgnoredRelationshipConnector And LCase(Trim(CStr(c.Stereotype))) = "related concept" Then
+        IsIgnoredRelationshipConnector = (GetTaggedValue(c, "Metaclass") = "" And GetTaggedValue(c, "Redefines") = "")
+    End If
 End Function
 
 Function HumanReadableRelationshipName(c, sourceEl, targetEl)

@@ -1,7 +1,7 @@
 openapi: 3.0.1
 info:
   title: DigitalArchitectureFramework
-  version: 7.0.0 Beta 6
+  version: 7.0.0 Beta 7
   description: The Digital Architecture Framework (DAF) is a metamodel and set of modeling tools for Digital Engineering. Its goal is to bridge the classic gaps between strategy, design, and execution by
     enabling collaboration between enterprise architects, solution architects, business analysts, and engineers. DAF provides standardised concepts and relationships (based on UML, ArchiMate, TOGAF, RUP,
     and SPEM) to create high-quality models (digital twins) that can be transformed into executable artifacts . This DAF OpenAPI makes those models accessible as services. It exposes the core DAF concepts—such
@@ -5994,7 +5994,8 @@ components:
               type: string
               format: uuid
               x-reference: '#/components/schemas/dController'
-            description: target Controller (Action Key). Ids of the dController elements; multiplicity 0..*.
+            description: target Controller (Action Key). Ids of the dController elements; multiplicity 0..*. Associates two dController instances (to define a control flow) or a dView with a dController
+              (to define a view attachment), must be one directional
           dActionKey_inverse:
             type: array
             items:
@@ -8617,6 +8618,42 @@ components:
               format: uuid
               x-reference: '#/components/schemas/dRegion'
             description: Aggregates Region (Zone Aggregates Region). Ids of the dRegion elements; multiplicity 0..*.
+    Relationship_dActionKey:
+      type: object
+      description: Associates two dController instances (to define a control flow) or a dView with a dController (to define a view attachment), must be one directional
+      properties:
+        source:
+          type: string
+          format: uuid
+          x-reference: '#/components/schemas/dController'
+        target:
+          type: string
+          format: uuid
+          x-reference: '#/components/schemas/dController'
+        action:
+          type: string
+          description: The action, which is triggered by this relationship. If empty, any action is valid
+        config:
+          type: string
+          description: The configuration or configuration section, in which this Key is defined
+          default: config.ini
+        context:
+          type: string
+          description: The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice
+        decorator:
+          type: string
+          description: Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this action as a REST service.
+        method:
+          type: string
+          description: a.k.a “behaviour”. the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name.
+      required:
+      - source
+      - target
+      - action
+      - config
+      - context
+      - decorator
+      - method
   parameters:
     id:
       name: id
@@ -11718,6 +11755,8 @@ x-uml-relationships:
     schema: '#/components/schemas/dController'
     multiplicity: 0..*
     role: target Controller
+  instanceSchema:
+    $ref: '#/components/schemas/Relationship_dActionKey'
 - name: dActivityContainsAction
   x-ea-guid: BFAD410F-4096-4cc7-BC46-30C2222261A8
   alias: Activity contains Action

@@ -19,10 +19,11 @@
 <https://freetakteam.github.io/DAF/ontology>
     a owl:Ontology ;
     owl:imports <https://freetakteam.github.io/DAF/uml> ;
+    owl:versionInfo "7.0.0 Beta 7" ;
     dcterms:title "DAF Semantic Metamodel" ;
     dcterms:description "Technology-independent RDF/OWL/SHACL representation generated from the authoritative DAF M3/M2 model." ;
-    dcterms:created "2026-11-09T12:45:45"^^xsd:dateTime ;
-    dafm:generatorVersion "1.6.0" ;
+    dcterms:created "2026-11-24T12:16:40"^^xsd:dateTime ;
+    dafm:generatorVersion "1.7.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:sourcePackageName "Metamodel" ;
     dafm:profileName "DAF" ;
@@ -180,7 +181,7 @@ dafm:definedInPackage
 dafm:hasPropertyDefinition
     a owl:ObjectProperty ;
     rdfs:label "has property definition" ;
-    rdfs:comment "Links a concept definition to one of its M3 attribute/property definitions." .
+    rdfs:comment "Links a concept or relationship type to one of its M3 attribute/property definitions." .
 
 dafm:hasTaggedValue
     a owl:ObjectProperty ;
@@ -736,6 +737,12 @@ dafm:relationshipCount
     rdfs:label "relationship count" ;
     rdfs:comment "Number of generated relationship types." ;
     rdfs:range xsd:integer .
+
+dafm:associationClassGuid
+    a owl:DatatypeProperty ;
+    rdfs:label "association class GUID" ;
+    rdfs:comment "GUID of the M3 Association Class defining properties for this relationship type." ;
+    rdfs:range xsd:string .
 
 dafm:ignoredNoteLinkCount
     a owl:DatatypeProperty ;
@@ -25565,6 +25572,223 @@ dafshape:dActionKeyRelationshipShape
     sh:property [ sh:path dafm:source ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dController ] ;
     sh:property [ sh:path dafm:target ; sh:minCount 1 ; sh:maxCount 1 ; sh:class daf:dController ] .
 
+dafrel:dActionKey dafm:associationClassGuid "{0BA39698-349C-4613-80AA-646B65B3E735}" .
+dafrel:dActionKey rdfs:comment "Associates two dController instances (to define a control flow) or a dView with a dController (to define a view attachment), must be one directional" .
+
+dafrel:dActionKey dafm:hasTaggedValue dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Metaclass_1 .
+dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Metaclass_1
+    a dafm:TaggedValue ;
+    dafm:tagName "Metaclass" ;
+    dafm:tagValue "Class" ;
+    dafm:ownerKind "associationClass" ;
+    dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\nDefault: Class\n" .
+
+dafrel:dActionKey dafm:hasTaggedValue dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Profile_Type_2 .
+dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Profile_Type_2
+    a dafm:TaggedValue ;
+    dafm:tagName "Profile Type" ;
+    dafm:tagValue "Connector" ;
+    dafm:ownerKind "associationClass" .
+
+dafrel:dActionKey dafm:hasTaggedValue dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Redefines_3 .
+dafdef:TaggedValue__0BA39698_349C_4613_80AA_646B65B3E735__Redefines_3
+    a dafm:TaggedValue ;
+    dafm:tagName "Redefines" ;
+    dafm:tagValue "" ;
+    dafm:ownerKind "associationClass" ;
+    dafm:tagNotes "Values: Class,UseCase,Component,Action,Activity,Node,Object,Requirement,Enumeration,Actor,Interface,Attribute,Operation,Interaction\n" .
+
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9
+    a dafm:PropertyDefinition ;
+    rdfs:label "action" ;
+    dafm:eaGuid "{21157B64-52FB-4c2f-8A17-C872E6B5F8A9}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dActionKey__action ;
+    rdfs:comment "The action, which is triggered by this relationship. If empty, any action is valid" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+dafrel:dActionKey dafm:hasPropertyDefinition dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 .
+
+dafp:dActionKey__action
+    a owl:DatatypeProperty ;
+    rdfs:label "action" ;
+    rdfs:domain dafrel:dActionKey ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The action, which is triggered by this relationship. If empty, any action is valid" .
+
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:attributeVisibility "Private" .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:isCollection false .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:isConst false .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:isId false .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:isOrdered false .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:isStatic false .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:attributeLength "0" .
+dafdef:Property_n_21157B6452FB4c2f8A17C872E6B5F8A9 dafm:attributeContainment "Not Specified" .
+
+dafshape:dActionKeyRelationshipShape sh:property [
+    sh:path dafp:dActionKey__action ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "action"
+] .
+
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2
+    a dafm:PropertyDefinition ;
+    rdfs:label "method" ;
+    dafm:eaGuid "{D9FE471B-8BC3-4a7f-9770-2CF53133D7B2}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dActionKey__method ;
+    rdfs:comment "a.k.a “behaviour”. the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+dafrel:dActionKey dafm:hasPropertyDefinition dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 .
+
+dafp:dActionKey__method
+    a owl:DatatypeProperty ;
+    rdfs:label "method" ;
+    rdfs:domain dafrel:dActionKey ;
+    rdfs:range xsd:string ;
+    rdfs:comment "a.k.a “behaviour”. the operation name assigned to the target of this action key, if left empty the operation name will be equal to the action name." .
+
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:attributeVisibility "Private" .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:isCollection false .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:isConst false .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:isId false .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:isOrdered false .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:isStatic false .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:attributeLength "0" .
+dafdef:Property_D9FE471B8BC34a7f97702CF53133D7B2 dafm:attributeContainment "Not Specified" .
+
+dafshape:dActionKeyRelationshipShape sh:property [
+    sh:path dafp:dActionKey__method ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "method"
+] .
+
+dafdef:Property_B741850A8D494fee8742F264B238FB32
+    a dafm:PropertyDefinition ;
+    rdfs:label "context" ;
+    dafm:eaGuid "{B741850A-8D49-4fee-8742-F264B238FB32}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dActionKey__context ;
+    rdfs:comment "The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+dafrel:dActionKey dafm:hasPropertyDefinition dafdef:Property_B741850A8D494fee8742F264B238FB32 .
+
+dafp:dActionKey__context
+    a owl:DatatypeProperty ;
+    rdfs:label "context" ;
+    rdfs:domain dafrel:dActionKey ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The context, in which this association is valid. If empty, any context is valid. e.g. when 2 controllers are linked twice" .
+
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:attributeVisibility "Private" .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:isCollection false .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:isConst false .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:isId false .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:isOrdered false .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:isStatic false .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:attributeLength "0" .
+dafdef:Property_B741850A8D494fee8742F264B238FB32 dafm:attributeContainment "Not Specified" .
+
+dafshape:dActionKeyRelationshipShape sh:property [
+    sh:path dafp:dActionKey__context ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "context"
+] .
+
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F
+    a dafm:PropertyDefinition ;
+    rdfs:label "config" ;
+    dafm:eaGuid "{8D99FFD7-AED5-40a0-A0F3-C0097B07A39F}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dActionKey__config ;
+    rdfs:comment "The configuration or configuration section, in which this Key is defined" ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" ;
+    dafm:defaultValue "config.ini" .
+
+dafrel:dActionKey dafm:hasPropertyDefinition dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F .
+
+dafp:dActionKey__config
+    a owl:DatatypeProperty ;
+    rdfs:label "config" ;
+    rdfs:domain dafrel:dActionKey ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The configuration or configuration section, in which this Key is defined" .
+
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:attributeVisibility "Private" .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:isCollection false .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:isConst false .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:isId false .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:isOrdered false .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:isStatic false .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:attributeLength "0" .
+dafdef:Property_n_8D99FFD7AED540a0A0F3C0097B07A39F dafm:attributeContainment "Not Specified" .
+
+dafshape:dActionKeyRelationshipShape sh:property [
+    sh:path dafp:dActionKey__config ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "config"
+] .
+
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A
+    a dafm:PropertyDefinition ;
+    rdfs:label "decorator" ;
+    dafm:eaGuid "{91BD0917-1D60-4245-99A4-1A1D2D5CF83A}" ;
+    dafm:sourceDatatype "String" ;
+    dafm:typingStatus dafm:ExplicitPrimitiveType ;
+    dafm:isDerived false ;
+    dafm:projectionPredicate dafp:dActionKey__decorator ;
+    rdfs:comment "Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this action as a REST service." ;
+    dafm:minimumCardinality "1" ;
+    dafm:maximumCardinality "1" .
+
+dafrel:dActionKey dafm:hasPropertyDefinition dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A .
+
+dafp:dActionKey__decorator
+    a owl:DatatypeProperty ;
+    rdfs:label "decorator" ;
+    rdfs:domain dafrel:dActionKey ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Allows to dynamically attach special behaviors to the result operation without changing his implementation . e.g. a decorator REST, will expose this action as a REST service." .
+
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:attributeVisibility "Private" .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:isCollection false .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:isConst false .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:isId false .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:isOrdered false .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:isStatic false .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:attributeLength "0" .
+dafdef:Property_n_91BD09171D60424599A41A1D2D5CF83A dafm:attributeContainment "Not Specified" .
+
+dafshape:dActionKeyRelationshipShape sh:property [
+    sh:path dafp:dActionKey__decorator ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:name "decorator"
+] .
+
 dafshape:dControllerShape sh:property [
     sh:path dafpred:dActionKey ;
     sh:class daf:dController ;
@@ -34554,17 +34778,17 @@ dafshape:dRegionShape sh:property [
 
 <https://freetakteam.github.io/DAF/generation/n_02BC7973>
     a dafm:GenerationRecord ;
-    dcterms:created "2026-11-09T12:46:57"^^xsd:dateTime ;
-    dafm:generatorVersion "1.6.0" ;
+    dcterms:created "2026-11-24T12:17:43"^^xsd:dateTime ;
+    dafm:generatorVersion "1.7.0" ;
     dafm:sourcePackageGuid "{02BC7973-A0CB-4865-A42E-ECA442FF2D0D}" ;
     dafm:conceptCount 78 ;
     dafm:supportingClassCount 2 ;
-    dafm:registeredClassCount 80 ;
+    dafm:registeredClassCount 81 ;
     dafm:enumerationCount 44 ;
-    dafm:propertyCount 354 ;
+    dafm:propertyCount 359 ;
     dafm:relationshipCount 118 ;
     dafm:ignoredNoteLinkCount 2 ;
-    dafm:explicitPrimitivePropertyCount 248 ;
+    dafm:explicitPrimitivePropertyCount 253 ;
     dafm:legacyConvertedPropertyCount 1 ;
     dafm:booleanNamingConventionPropertyCount 18 ;
     dafm:suppressedDuplicateIdPropertyCount 21 ;
@@ -34577,7 +34801,7 @@ dafshape:dRegionShape sh:property [
     dafm:generalizationCount 4 ;
     dafm:warningCount 0 ;
     dafm:legacyProfileConceptCount 122 ;
-    dafm:legacyProfileRelationshipCount 118 ;
+    dafm:legacyProfileRelationshipCount 117 ;
     dafm:authoringEnabledRelationshipCount 118 ;
     dafm:derivedQuickLinkEquivalentRuleCount 472 ;
     dafm:quickLinkRuleCount 472 .

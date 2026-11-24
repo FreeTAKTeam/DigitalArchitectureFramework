@@ -2,7 +2,7 @@
 ## Welcome!
 Welcome to the repository for the DAF MDG (Model Driven Generation) technology for Sparx Enterprise Architect. This repository contains the metamodel, the MDG technology and the resources that support modeling with DAF in Sparx EA.
 
-**Current version: DAF 7.0.0 Beta 6** — 78 concepts, 118 relationship types and 44 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
+**Current version: DAF 7.0.0 Beta 7** — 78 concepts, 118 relationship types and 44 enumerations. See [What's new in DAF 7.0](#whats-new-in-daf-70). To migrate existing models, see [MIGRATION.md](MIGRATION.md).
 
 ## About
 The Digital Architecture Framework (DAF) is a set of modeling tools for Digital Engineering.

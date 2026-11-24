@@ -625,9 +625,10 @@ sub transformPackage( metamodelPackage)
 	for each element in metamodelPackage.Elements
 		select case element.Type
 		case "Class"
-			transformClass element
-			''create the toolbox for elements
-			addToolboxesAttributes element, toolboxClass
+			if not definesRelationshipProperties(element) then
+				transformClass element
+				addToolboxesAttributes element, toolboxClass
+			end if
 		case "Enumeration"
 			transformEnumeration element
 		end select
@@ -636,6 +637,18 @@ sub transformPackage( metamodelPackage)
 		transformPackage subPackage
 	next	
 end sub
+
+' A native Association Class provides connector tags when its association defines a profile relationship.
+function definesRelationshipProperties(element)
+	dim connector
+	definesRelationshipProperties = false
+	if not element.IsAssociationClass() then exit function
+	if element.AssociationClassConnectorID <= 0 then exit function
+
+	set connector = Repository.GetConnectorByID(element.AssociationClassConnectorID)
+	definesRelationshipProperties = (Trim(getTaggedValueValue(connector, "Metaclass")) <> "" or _
+		Trim(getTaggedValueValue(connector, "Redefines")) <> "")
+end function
 
 sub transformEnumeration( metamodelEnum)
 
@@ -971,7 +984,8 @@ end sub
 ' like copyAttribute, but on a known target and writes only when something changes
 sub copyAttributeValues( stereotypeClass, target, sourceAttribute)
 	if target.Name = sourceAttribute.Name and target.Default = sourceAttribute.Default and target.Type = sourceAttribute.Type _
-			and target.ClassifierID = sourceAttribute.ClassifierID and target.Notes = sourceAttribute.Notes then exit sub
+			and target.ClassifierID = sourceAttribute.ClassifierID and target.Notes = sourceAttribute.Notes _
+			and target.LowerBound = sourceAttribute.LowerBound and target.UpperBound = sourceAttribute.UpperBound then exit sub
 	if target.Name <> sourceAttribute.Name then
 		Session.Output "  renamed property " & stereotypeClass.Name & "." & target.Name & " -> " & sourceAttribute.Name
 	end if
@@ -980,6 +994,8 @@ sub copyAttributeValues( stereotypeClass, target, sourceAttribute)
 	target.Type = sourceAttribute.Type
 	target.ClassifierID = sourceAttribute.ClassifierID
 	target.Notes = sourceAttribute.Notes
+	target.LowerBound = sourceAttribute.LowerBound
+	target.UpperBound = sourceAttribute.UpperBound
 	target.Update
 end sub
 
@@ -1064,6 +1080,25 @@ sub transformRelationships( metamodelClass, stereotypeClass)
 	next
 end sub
 
+' Reuse a legacy connector stereotype stored in the element stereotype package.
+' Its explicit Profile Type distinguishes it from an element with the same name.
+sub indexLegacyConnectorStereotype(connector)
+	dim guid, targetKey, legacyKey, element, existingGuid
+	guid = connector.ConnectorGUID
+	targetKey = relationshipPackage.PackageID & ":" & connector.Name
+	if profileGuidAnywhere.Exists(guid) or profileIndexByName.Exists(targetKey) then exit sub
+
+	legacyKey = stereotypePackage.PackageID & ":" & connector.Name
+	if not profileIndexByName.Exists(legacyKey) then exit sub
+	set element = Repository.GetElementByID(profileIndexByName(legacyKey))
+	if StrComp(Trim(getTaggedValueValue(element, "Profile Type")), "Connector", vbTextCompare) <> 0 then exit sub
+
+	existingGuid = Trim(getTaggedValueValue(element, "Metamodel GUID"))
+	if existingGuid = "" or StrComp(existingGuid, guid, vbTextCompare) = 0 then
+		profileGuidAnywhere(guid) = element.ElementID
+	end if
+end sub
+
 ' This subroutine transforms a metamodel relationship (connector) into a corresponding UML stereotype in Sparx EA
 sub transformRelationship( metamodelConnector)
 
@@ -1073,7 +1108,7 @@ sub transformRelationship( metamodelConnector)
 	dim stereotypeName		 	  ' as String
 	dim stereotypeClass				as EA.Element
 	dim profileMetaclass			as EA.Element
-	dim metaclassAttributes
+	dim metaclassAttributes, associationClass
 
 	metaclassName = getTaggedValueValue( metamodelConnector, "Metaclass")
 	metaclassAlias = metamodelConnector.alias
@@ -1086,8 +1121,19 @@ sub transformRelationship( metamodelConnector)
 		'else
 			stereotypeName = metamodelConnector.Name
 		'end if		
+		indexLegacyConnectorStereotype metamodelConnector
 		set stereotypeClass = resolveProfileElement( metamodelConnector.ConnectorGUID, stereotypeName, relationshipPackage, "Class")
 		setStereotypeProperties metamodelConnector, stereotypeClass, metamodelConnector.Name
+		if metamodelConnector.Type = "Association" then
+			set associationClass = metamodelConnector.AssociationClass
+			if not associationClass is nothing then
+				syncTaggedValueAttributes associationClass, stereotypeClass
+				if stereotypeClass.Notes <> associationClass.Notes then
+					stereotypeClass.Notes = associationClass.Notes
+					stereotypeClass.Update
+				end if
+			end if
+		end if
 		set profileMetaclass = setProfileMetaclass( metamodelConnector, stereotypeClass)
 		if redefinedStereotypeName <> vbNullString then
 			setProfileRedefinedStereotype stereotypeClass, redefinedStereotypeName
