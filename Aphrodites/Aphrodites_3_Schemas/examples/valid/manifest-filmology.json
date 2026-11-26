@@ -1,0 +1,50 @@
+{
+  "schema": "aphrodites/manifest/v1",
+  "component": {
+    "id": "filmology",
+    "name": "Filmology",
+    "version": "1.0.0",
+    "needs": {
+      "specification": "3.0",
+      "level": "T2"
+    },
+    "operations": [
+      {
+        "name": "create_movie"
+      },
+      {
+        "name": "read_movie"
+      },
+      {
+        "name": "update_movie"
+      },
+      {
+        "name": "delete_movie"
+      }
+    ]
+  },
+  "binding": {
+    "twin": "example-twin",
+    "metamodel": {
+      "name": "DAF",
+      "version": "7.0.0-beta.6"
+    },
+    "model_revision": "example-revision-1",
+    "element": "urn:example:model#component-filmology",
+    "input_digest": "sha256:45ffccaa37eef88f1268a469ebe033b980dc325eda5d94be5e528e41efa8cc00",
+    "build_digest": "sha256:441140d16047682a5e01ed277b954d131794df371912f5a2f23a12e7e9d31df6",
+    "control": {
+      "classes": [
+        "L2"
+      ],
+      "rules": [
+        {
+          "key": "silent_era_color",
+          "element": "urn:example:model#rule-silent-era-color",
+          "kind": "production"
+        }
+      ],
+      "proof": "example-hmac-sha256"
+    }
+  }
+}

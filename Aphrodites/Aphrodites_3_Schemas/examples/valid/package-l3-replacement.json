@@ -1,0 +1,26 @@
+{
+  "schema": "aphrodites/change-package/v1",
+  "change": "change-0003",
+  "class": "L3",
+  "component": "customer-inquiry",
+  "binding": "sha256:5ce2d8d72ce65c20ab735805c80047f2fc566171790149ff06c75ae31e78d979",
+  "expects": "1.0.0",
+  "brings": "1.0.1",
+  "content": {
+    "package": {
+      "reference": "example://packages/customer-inquiry-1.0.1",
+      "digest": "sha256:7d8f34fcdd80e351c71e5dacfeb4620f63f4034ed90ba210976297440f84567d"
+    },
+    "brings_binding": "sha256:e4a5f37945a2e95d252dd6770fb13ab5b64d795b05c62cf03cdfbece18caf705"
+  },
+  "valid_until": "2027-01-31T00:00:00Z",
+  "approval": {
+    "package_digest": "sha256:1bb11fd66a3c2c8a5ffa60165320e056ad39c32259efd9c4e0531b8ce4baa929",
+    "approved_by": "example-approver",
+    "approved_at": "2026-11-23T12:00:00Z"
+  },
+  "proof": {
+    "kind": "example-hmac-sha256",
+    "value": "e57525fb060cfae75b1ba970dd53261199cf8f150318840837f09796cea0e8de"
+  }
+}

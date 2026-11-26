@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aphrodites:3.0:manifest:v1",
+  "title": "Aphrodites 3.0 component manifest",
+  "description": "One manifest per component (specification, rules 2.2 and 3.1). An invalid component part refuses the component. A missing or invalid binding part leaves it running and unbound. A first proposal: expect the fields to change.",
+  "type": "object",
+  "required": ["schema", "component"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "aphrodites/manifest/v1"},
+    "component": {"$ref": "#/$defs/componentPart"},
+    "binding": {"$ref": "#/$defs/bindingPart"}
+  },
+  "if": {
+    "required": ["binding"],
+    "properties": {"component": {"properties": {"needs": {"properties": {"level": {"enum": ["T2", "T3"]}}}}}}
+  },
+  "then": {"properties": {"binding": {"required": ["control"]}}},
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "key": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "text": {"type": "string", "minLength": 1},
+    "componentPart": {
+      "type": "object",
+      "required": ["id", "name", "version", "needs", "operations"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {"$ref": "#/$defs/text", "description": "Stays the same across versions."},
+        "name": {"$ref": "#/$defs/text"},
+        "version": {"$ref": "#/$defs/text"},
+        "needs": {
+          "type": "object",
+          "required": ["specification", "level"],
+          "additionalProperties": false,
+          "properties": {
+            "specification": {"$ref": "#/$defs/text"},
+            "level": {
+              "enum": ["C", "T1", "T2", "T3"],
+              "description": "The level the component cannot run without. A framework below it refuses the component."
+            }
+          }
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {"name": {"$ref": "#/$defs/text"}}
+          },
+          "description": "The public operations, by name."
+        }
+      }
+    },
+    "bindingPart": {
+      "type": "object",
+      "required": ["twin", "metamodel", "model_revision", "element", "input_digest", "build_digest"],
+      "additionalProperties": false,
+      "properties": {
+        "twin": {"$ref": "#/$defs/text"},
+        "metamodel": {
+          "type": "object",
+          "required": ["name", "version"],
+          "additionalProperties": false,
+          "properties": {"name": {"$ref": "#/$defs/text"}, "version": {"$ref": "#/$defs/text"}}
+        },
+        "model_revision": {"$ref": "#/$defs/text", "description": "One text, as issued by the twin host."},
+        "element": {"$ref": "#/$defs/text", "description": "The model element the component is the deployed form of."},
+        "input_digest": {
+          "$ref": "#/$defs/digest",
+          "description": "Digest of the approved input the generator worked from. Written by the generator."
+        },
+        "build_digest": {
+          "$ref": "#/$defs/digest",
+          "description": "Digest of the built component without its manifest. Written by the build."
+        },
+        "measures": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["key", "element", "property", "unit", "datatype"],
+            "additionalProperties": false,
+            "properties": {
+              "key": {"$ref": "#/$defs/key"},
+              "element": {"$ref": "#/$defs/text"},
+              "property": {"$ref": "#/$defs/text"},
+              "unit": {"$ref": "#/$defs/text"},
+              "datatype": {"$ref": "#/$defs/text"}
+            }
+          }
+        },
+        "control": {
+          "type": "object",
+          "required": ["classes", "proof"],
+          "additionalProperties": false,
+          "properties": {
+            "classes": {"type": "array", "items": {"enum": ["L1", "L2", "L3"]}, "minItems": 1, "uniqueItems": true},
+            "settings": {
+              "type": "array",
+              "items": {"$ref": "#/$defs/text"},
+              "description": "Names of the settings the twin may change."
+            },
+            "rules": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["key", "element", "kind"],
+                "additionalProperties": false,
+                "properties": {
+                  "key": {"$ref": "#/$defs/key"},
+                  "element": {"$ref": "#/$defs/text"},
+                  "kind": {"enum": ["production", "integrity", "derivation", "reaction"]}
+                }
+              },
+              "description": "The rules the twin may change, each with its binding key and its model element. The manifest has no other list of rules."
+            },
+            "proof": {
+              "$ref": "#/$defs/text",
+              "description": "The kind of proof the component accepts on a change package."
+            }
+          },
+          "description": "What the twin may change: L1 settings, L2 rules, L3 the component itself. Required when the component needs level T2 or T3."
+        }
+      }
+    }
+  }
+}

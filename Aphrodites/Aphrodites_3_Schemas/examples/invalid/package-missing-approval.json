@@ -1,0 +1,19 @@
+{
+  "schema": "aphrodites/change-package/v1",
+  "change": "change-0001",
+  "class": "L1",
+  "component": "customer-inquiry",
+  "binding": "sha256:5ce2d8d72ce65c20ab735805c80047f2fc566171790149ff06c75ae31e78d979",
+  "expects": "revision-1",
+  "brings": "revision-2",
+  "content": {
+    "settings": {
+      "retry_after_seconds": 30
+    }
+  },
+  "valid_until": "2027-01-31T00:00:00Z",
+  "proof": {
+    "kind": "example-hmac-sha256",
+    "value": "dc46dcd2d079ec88b0a83e5797b7621cc8a758e40c803566d652852e33579f09"
+  }
+}

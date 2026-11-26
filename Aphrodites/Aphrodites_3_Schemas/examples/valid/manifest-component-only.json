@@ -1,0 +1,17 @@
+{
+  "schema": "aphrodites/manifest/v1",
+  "component": {
+    "id": "customer-inquiry",
+    "name": "Customer Inquiry",
+    "version": "1.0.0",
+    "needs": {
+      "specification": "3.0",
+      "level": "C"
+    },
+    "operations": [
+      {
+        "name": "inquire_customer"
+      }
+    ]
+  }
+}

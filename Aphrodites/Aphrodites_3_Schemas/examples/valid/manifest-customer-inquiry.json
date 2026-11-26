@@ -1,0 +1,68 @@
+{
+  "schema": "aphrodites/manifest/v1",
+  "component": {
+    "id": "customer-inquiry",
+    "name": "Customer Inquiry",
+    "version": "1.0.0",
+    "needs": {
+      "specification": "3.0",
+      "level": "T3"
+    },
+    "operations": [
+      {
+        "name": "inquire_customer"
+      }
+    ]
+  },
+  "binding": {
+    "twin": "example-twin",
+    "metamodel": {
+      "name": "DAF",
+      "version": "7.0.0-beta.6"
+    },
+    "model_revision": "example-revision-1",
+    "element": "urn:example:model#component-customer-inquiry",
+    "input_digest": "sha256:bbd19a39dfb68f9849c8a8e5f6d36fd7ea0f2a4cbbfe96759305c31ce1c7fd00",
+    "build_digest": "sha256:b8ef41ef7feeecaa96a42f634028eba54be943fc6b705c99d13a5899488c6f1d",
+    "measures": [
+      {
+        "key": "inquire.found.count",
+        "element": "urn:example:model#indicator-found",
+        "property": "urn:example:property#CurrentLevel",
+        "unit": "{inquiry}",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+      },
+      {
+        "key": "inquire.not_found.count",
+        "element": "urn:example:model#indicator-not-found",
+        "property": "urn:example:property#CurrentLevel",
+        "unit": "{inquiry}",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+      },
+      {
+        "key": "inquire.contention.count",
+        "element": "urn:example:model#indicator-contention",
+        "property": "urn:example:property#CurrentLevel",
+        "unit": "{inquiry}",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+      },
+      {
+        "key": "inquire.storage_error.count",
+        "element": "urn:example:model#indicator-storage-error",
+        "property": "urn:example:property#CurrentLevel",
+        "unit": "{inquiry}",
+        "datatype": "http://www.w3.org/2001/XMLSchema#decimal"
+      }
+    ],
+    "control": {
+      "classes": [
+        "L1",
+        "L3"
+      ],
+      "settings": [
+        "retry_after_seconds"
+      ],
+      "proof": "example-hmac-sha256"
+    }
+  }
+}

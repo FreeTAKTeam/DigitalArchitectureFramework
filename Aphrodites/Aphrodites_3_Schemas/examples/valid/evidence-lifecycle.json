@@ -1,0 +1,19 @@
+{
+  "specversion": "1.0",
+  "id": "lifecycle/instance-1/1",
+  "source": "urn:example:source:customer-inquiry-lab",
+  "type": "org.freetakteam.aphrodites.lifecycle.v1",
+  "time": "2026-11-23T12:00:05Z",
+  "twin": "example-twin",
+  "datacontenttype": "application/json",
+  "data": {
+    "binding": "sha256:5ce2d8d72ce65c20ab735805c80047f2fc566171790149ff06c75ae31e78d979",
+    "instance": "instance-1",
+    "build": "sha256:b8ef41ef7feeecaa96a42f634028eba54be943fc6b705c99d13a5899488c6f1d",
+    "deployment": "lab-1",
+    "state": "running",
+    "revision": "revision-2",
+    "observed_at": "2026-11-23T12:00:00Z",
+    "origin": "measured_lab"
+  }
+}

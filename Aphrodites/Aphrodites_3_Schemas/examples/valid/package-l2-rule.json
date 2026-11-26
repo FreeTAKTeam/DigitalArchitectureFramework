@@ -1,0 +1,23 @@
+{
+  "schema": "aphrodites/change-package/v1",
+  "change": "change-0002",
+  "class": "L2",
+  "component": "filmology",
+  "binding": "sha256:bc4cc908af6425bb6e48b891dd783930c72ffafe98692a66b2d91906a046a6ed",
+  "expects": "revision-1",
+  "brings": "revision-2",
+  "content": {
+    "rule": "silent_era_color",
+    "content": "if the release year is before 1935 and the color is empty, set the color to 'black and white'"
+  },
+  "valid_until": "2027-01-31T00:00:00Z",
+  "approval": {
+    "package_digest": "sha256:f28be5d77143718600107b7bcbd1dc02791c54c195013677e357d1f5acc87540",
+    "approved_by": "example-approver",
+    "approved_at": "2026-11-23T12:00:00Z"
+  },
+  "proof": {
+    "kind": "example-hmac-sha256",
+    "value": "756b7c6448ae7bc0c301574c482398ca7c0535470224ebb5979ab0bdd8222a91"
+  }
+}

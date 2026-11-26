@@ -1,0 +1,95 @@
+<scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/controllers/FilmologyManagement_persistence_controller.py:502: SAWarning: relationship 'Movie.Date' will copy column Date.oid to column Movie.Date_oid, which conflicts with relationship(s): 'Date.DateAggregationMovie' (copies Date.oid to Movie.Date_oid). If this is not the intention, consider if these relationships should be linked with back_populates, or if viewonly=True should be applied to one or more if they are read-only. For the less common case that foreign key constraints are partially overlapping, the orm.foreign() annotation can be used to isolate the columns that should be written towards.   To silence this warning, add the parameter 'overlaps="DateAggregationMovie"' to the 'Movie.Date' relationship. (Background on this warning at: https://sqlalche.me/e/21/qzyx) (This warning originated from the `configure_mappers()` process, which was invoked automatically in response to a user-initiated operation.)
+  query = session.query(DBMovie)
+
+== step 1: create a date with year 1927
+   action POSTDate  body {'year': '1927', 'name': 'd1'}  values {}
+executing method POSTDate
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/date.json not found
+   response has no message; other values: {}
+
+== step 2: create a date with year 927 (must be refused)
+   action POSTDate  body {'year': '927', 'name': 'bad'}  values {}
+executing method POSTDate
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/date.json not found
+   response has no message; other values: {}
+   Date rows in the store: 0
+
+== check 4: a date whose year is a list, not text or a number
+   action POSTDate  body {'year': [1, 2], 'name': 'wrong type'}  values {}
+executing method POSTDate
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/date.json not found
+   response has no message; other values: {}
+   Date rows in the store: 0
+
+== step 3: create a director
+   action POSTDirector  body {'name': 'Director One'}  values {}
+executing method POSTDirector
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/director.json not found
+   response has no message; other values: {}
+   Director rows: 0
+
+== step 4: create movie 'Film One', empty color, release date D1
+   action POSTMovie  body {'name': 'Film One', 'color': '', 'Date': None}  values {}
+executing method POSTMovie
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/movie.json not found
+   response has no message; other values: {}
+   Movie rows: 0 | Poster rows: 0
+
+== step 5a: create movie 'Film X' with nothing but its name
+   action POSTMovie  body {'name': 'Film X'}  values {}
+executing method POSTMovie
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/movie.json not found
+   response has no message; other values: {}
+   Movie rows: 0 | Poster rows: 0 | Date rows: 0 | Director rows: 0
+
+== read one movie by its identifier (Film One)
+   action GETMovieId  body None  values {'ID': None}
+executing method GETMovieId
+   message holds 0 record(s)
+
+== step 14 shape: read a movie that does not exist
+   action GETMovieId  body None  values {'ID': 'Movie:does-not-exist'}
+executing method GETMovieId
+   message holds 0 record(s)
+
+== step 5b: delete movie 'Film X' only
+   action DELETEMovie  body None  values {'ID': None}
+executing method DELETEMovie
+   message holds 0 record(s)
+   Movie rows left (1 expected, 'Film One'): 0
+
+== identifier: create a director and give an identifier in the body
+   action POSTDirector  body {'name': 'Director Two', 'oid': 'Director:chosen-by-the-caller'}  values {}
+executing method POSTDirector
+   FACADE LOGGED FATAL: configuration for <scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/configuration/model_definitions/director.json not found
+   response has no message; other values: {}
+
+== unknown operation
+   action NoSuchOperation  body None  values {}
+   FACADE LOGGED FATAL: No action key found for ActionKey(name=, action=, context=, decorator=, config=, target=, source=FilmologyManagement, referencedBehaviour=)
+   response has no message; other values: {}
+
+== check 3: read all dates while the store cannot be opened
+   action GETDate  body None  values {}
+   RAISED OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/21/e3q8)
+Traceback (most recent call last):
+  File "<scratch>/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 154, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "<scratch>/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 3303, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<scratch>/driver/run_baseline.py", line 60, in call
+    facade = initialize_facade(FACADE, request, response)
+  File "<scratch>/DigitalPy/digitalpy/testing/facade_utilities.py", line 54, in initialize_facade
+    facade = ObjectFactory.get_instance_of(
+        facade_class, dynamic_configuration={"request": request, "response": response, **dynamic_configuration}
+    )
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/21/e3q8)

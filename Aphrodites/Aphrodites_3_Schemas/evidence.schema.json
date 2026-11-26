@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aphrodites:3.0:evidence:v1",
+  "title": "Aphrodites 3.0 report (evidence event)",
+  "description": "A CloudEvents 1.0 structured JSON event carrying one report (specification, step 4; the change report belongs to step 5). The envelope and the measure follow the existing twin host. The other two kinds and the event type names are proposals. A business outcome is counted and the count is sent as a measure; no report is sent for a single execution. A report is never changed: a correction is a new report that names the earlier one in supersedes_digest (rule 4.6).",
+  "type": "object",
+  "required": ["specversion", "id", "source", "type", "time", "twin", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "specversion": {"const": "1.0"},
+    "id": {"$ref": "#/$defs/text", "description": "Unique within its source. A resend reuses it."},
+    "source": {"$ref": "#/$defs/text", "description": "From the deployment's settings."},
+    "type": {
+      "enum": [
+        "org.freetakteam.aphrodites.measure.v1",
+        "org.freetakteam.aphrodites.lifecycle.v1",
+        "org.freetakteam.aphrodites.change.v1"
+      ]
+    },
+    "time": {"$ref": "#/$defs/time"},
+    "twin": {"$ref": "#/$defs/text"},
+    "datacontenttype": {"const": "application/json"},
+    "data": {"type": "object"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"type": {"const": "org.freetakteam.aphrodites.measure.v1"}}},
+      "then": {"properties": {"data": {"$ref": "#/$defs/measure"}}}
+    },
+    {
+      "if": {"properties": {"type": {"const": "org.freetakteam.aphrodites.lifecycle.v1"}}},
+      "then": {"properties": {"data": {"$ref": "#/$defs/lifecycle"}}}
+    },
+    {
+      "if": {"properties": {"type": {"const": "org.freetakteam.aphrodites.change.v1"}}},
+      "then": {"properties": {"data": {"$ref": "#/$defs/change"}}}
+    }
+  ],
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "key": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "text": {"type": "string", "minLength": 1},
+    "time": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "origin": {"enum": ["authored_demo", "measured_lab", "authorized_operational"]},
+    "corrects": {
+      "$ref": "#/$defs/text",
+      "description": "Only in a correction: what the twin host's receipt gave for the report this one corrects. The corrected report stays as it is."
+    },
+    "measure": {
+      "type": "object",
+      "required": [
+        "binding",
+        "instance",
+        "metric",
+        "value",
+        "datatype",
+        "unit",
+        "observed_at",
+        "record_id",
+        "revision",
+        "origin"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "binding": {"$ref": "#/$defs/digest", "description": "Manifest digest."},
+        "instance": {"$ref": "#/$defs/text"},
+        "metric": {"$ref": "#/$defs/key", "description": "Binding key of the measure."},
+        "value": {"type": "string", "pattern": "^-?[0-9]+(\\.[0-9]+)?$", "description": "Decimal value as text."},
+        "datatype": {"$ref": "#/$defs/text"},
+        "unit": {"$ref": "#/$defs/text"},
+        "observed_at": {"$ref": "#/$defs/time"},
+        "period": {
+          "type": "object",
+          "required": ["start", "end"],
+          "additionalProperties": false,
+          "properties": {"start": {"$ref": "#/$defs/time"}, "end": {"$ref": "#/$defs/time"}}
+        },
+        "record_id": {"$ref": "#/$defs/text"},
+        "revision": {"$ref": "#/$defs/text"},
+        "origin": {"$ref": "#/$defs/origin"},
+        "supersedes_digest": {"$ref": "#/$defs/corrects"}
+      },
+      "description": "A number for a declared measure, for example the count of one outcome in a period. All fields except binding and instance are the existing twin host's today."
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["binding", "build", "instance", "deployment", "state", "observed_at", "origin"],
+      "additionalProperties": false,
+      "properties": {
+        "binding": {"$ref": "#/$defs/digest"},
+        "build": {"$ref": "#/$defs/digest", "description": "Digest of the build that is running."},
+        "instance": {"$ref": "#/$defs/text"},
+        "deployment": {"$ref": "#/$defs/text"},
+        "state": {"enum": ["running", "degraded", "stopped"]},
+        "observed_at": {"$ref": "#/$defs/time"},
+        "origin": {"$ref": "#/$defs/origin"},
+        "reason": {"$ref": "#/$defs/text"},
+        "revision": {
+          "$ref": "#/$defs/text",
+          "description": "The one revision of what the twin has changed while the component runs: settings and rules. From step 5."
+        },
+        "supersedes_digest": {"$ref": "#/$defs/corrects"}
+      },
+      "description": "The state of a bound instance. An unbound instance sends nothing."
+    },
+    "change": {
+      "type": "object",
+      "required": ["binding", "instance", "change", "class", "step", "revision", "observed_at", "origin"],
+      "additionalProperties": false,
+      "properties": {
+        "binding": {"$ref": "#/$defs/digest"},
+        "instance": {"$ref": "#/$defs/text"},
+        "change": {"$ref": "#/$defs/text"},
+        "class": {"enum": ["L1", "L2", "L3"]},
+        "step": {"enum": ["applied", "pending", "refused", "failed"]},
+        "revision": {"$ref": "#/$defs/text", "description": "The revision in effect after this step."},
+        "observed_at": {"$ref": "#/$defs/time"},
+        "origin": {"$ref": "#/$defs/origin"},
+        "reason": {"$ref": "#/$defs/text"},
+        "supersedes_digest": {"$ref": "#/$defs/corrects"}
+      },
+      "description": "What happened to a change package.",
+      "if": {"properties": {"step": {"enum": ["refused", "failed"]}}},
+      "then": {"required": ["reason"]}
+    }
+  }
+}

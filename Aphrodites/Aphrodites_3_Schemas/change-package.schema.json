@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:aphrodites:3.0:change-package:v1",
+  "title": "Aphrodites 3.0 change package",
+  "description": "One approved change, sent from the twin host to a component (specification, steps 5 to 7). Nothing can send one today: every field is an assumption.",
+  "type": "object",
+  "required": [
+    "schema",
+    "change",
+    "class",
+    "component",
+    "binding",
+    "expects",
+    "brings",
+    "content",
+    "valid_until",
+    "approval",
+    "proof"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema": {"const": "aphrodites/change-package/v1"},
+    "change": {"$ref": "#/$defs/text", "description": "Change identifier, unique for the twin host."},
+    "class": {"enum": ["L1", "L2", "L3"], "description": "L1 a setting, L2 a rule, L3 the component itself."},
+    "component": {"$ref": "#/$defs/text"},
+    "binding": {"$ref": "#/$defs/digest", "description": "Digest of the manifest in effect now."},
+    "expects": {
+      "$ref": "#/$defs/text",
+      "description": "What the component must have now. For L1 and L2: the revision of its settings and rules. For L3: its version."
+    },
+    "brings": {
+      "$ref": "#/$defs/text",
+      "description": "What the component has afterwards. For L1 and L2: the new revision. For L3: the new version; the revision of settings and rules stays as it is."
+    },
+    "content": {"type": "object"},
+    "valid_until": {"$ref": "#/$defs/time"},
+    "approval": {
+      "type": "object",
+      "required": ["package_digest", "approved_by", "approved_at"],
+      "additionalProperties": false,
+      "properties": {
+        "package_digest": {"$ref": "#/$defs/digest", "description": "Digest of the package without approval and proof."},
+        "approved_by": {"$ref": "#/$defs/text"},
+        "approved_at": {"$ref": "#/$defs/time"}
+      }
+    },
+    "proof": {
+      "type": "object",
+      "required": ["kind", "value"],
+      "additionalProperties": false,
+      "properties": {
+        "kind": {"$ref": "#/$defs/text"},
+        "value": {"$ref": "#/$defs/text", "description": "The twin host's signature over the digest of approval, and so on the content. The examples use a made-up stand-in."}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"class": {"const": "L1"}}},
+      "then": {"properties": {"content": {"$ref": "#/$defs/setting"}}}
+    },
+    {
+      "if": {"properties": {"class": {"const": "L2"}}},
+      "then": {"properties": {"content": {"$ref": "#/$defs/rule"}}}
+    },
+    {
+      "if": {"properties": {"class": {"const": "L3"}}},
+      "then": {"properties": {"content": {"$ref": "#/$defs/replacement"}}}
+    }
+  ],
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+    "key": {"type": "string", "pattern": "^[a-z][a-z0-9_.-]*$"},
+    "text": {"type": "string", "minLength": 1},
+    "time": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}(\\.[0-9]+)?(Z|[+-][0-9]{2}:[0-9]{2})$"
+    },
+    "setting": {
+      "type": "object",
+      "required": ["settings"],
+      "additionalProperties": false,
+      "properties": {
+        "settings": {"type": "object", "minProperties": 1, "description": "Setting names and their new values."}
+      }
+    },
+    "rule": {
+      "type": "object",
+      "required": ["rule", "content"],
+      "additionalProperties": false,
+      "properties": {
+        "rule": {"$ref": "#/$defs/key", "description": "Binding key of the rule."},
+        "content": {
+          "type": ["string", "object"],
+          "description": "The new content of the rule, written the way the framework reads it."
+        }
+      }
+    },
+    "replacement": {
+      "type": "object",
+      "required": ["package", "brings_binding"],
+      "additionalProperties": false,
+      "properties": {
+        "package": {
+          "type": "object",
+          "required": ["reference", "digest"],
+          "additionalProperties": false,
+          "properties": {"reference": {"$ref": "#/$defs/text"}, "digest": {"$ref": "#/$defs/digest"}}
+        },
+        "brings_binding": {"$ref": "#/$defs/digest", "description": "Digest of the manifest inside the new component."}
+      }
+    }
+  }
+}

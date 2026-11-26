@@ -1,0 +1,161 @@
+<scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/controllers/FilmologyManagement_persistence_controller.py:393: SAWarning: relationship 'Movie.Date' will copy column Date.oid to column Movie.Date_oid, which conflicts with relationship(s): 'Date.DateAggregationMovie' (copies Date.oid to Movie.Date_oid). If this is not the intention, consider if these relationships should be linked with back_populates, or if viewonly=True should be applied to one or more if they are read-only. For the less common case that foreign key constraints are partially overlapping, the orm.foreign() annotation can be used to isolate the columns that should be written towards.   To silence this warning, add the parameter 'overlaps="DateAggregationMovie"' to the 'Movie.Date' relationship. (Background on this warning at: https://sqlalche.me/e/21/qzyx) (This warning originated from the `configure_mappers()` process, which was invoked automatically in response to a user-initiated operation.)
+  db_date = DBDate()
+<scratch>/DigitalPy/examples/filmology_app/components/FilmologyManagement/controllers/FilmologyManagement_persistence_controller.py:414: SAWarning: Object of type <Movie> not in session, delete operation along 'Date.DateAggregationMovie' will not proceed
+  session.commit()
+NOTE: running with the file-name case work-around
+
+== step 1: create a date with year 1927
+   action POSTDate  body {'year': '1927', 'name': 'd1'}  values {}
+executing method POSTDate
+   message holds 1 record(s)
+   {'oid': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051', 'year': '1927'}
+
+== step 2: create a date with year 927 (must be refused)
+   action POSTDate  body {'year': '927', 'name': 'bad'}  values {}
+executing method POSTDate
+   message holds 1 record(s)
+   {'oid': 'Date:a6376d04-e9b5-11f1-b900-85af5cd38051', 'year': '927'}
+   Date rows in the store: 2
+
+== check 4: a date whose year is a list, not text or a number
+   action POSTDate  body {'year': [1, 2], 'name': 'wrong type'}  values {}
+executing method POSTDate
+   message holds 1 record(s)
+   {'oid': 'Date:a638b830-e9b5-11f1-b900-85af5cd38051', 'year': '[1, 2]'}
+   Date rows in the store: 3
+
+== step 3: create a director
+   action POSTDirector  body {'name': 'Director One'}  values {}
+executing method POSTDirector
+   FACADE LOGGED FATAL: (sqlite3.IntegrityError) NOT NULL constraint failed: Director.creator
+[SQL: INSERT INTO "Director" (oid, creator, nationality, surname, created, last_editor, name, birth, description, modified) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Director:a63a087a-e9b5-11f1-b900-85af5cd38051', None
+   response has no message; other values: {}
+   Director rows: 0
+
+== step 4: create movie 'Film One', empty color, release date D1
+   action POSTMovie  body {'name': 'Film One', 'color': '', 'Date': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051'}  values {}
+executing method POSTMovie
+   FACADE LOGGED FATAL: (sqlite3.IntegrityError) NOT NULL constraint failed: Movie.date
+[SQL: INSERT INTO "Movie" (oid, date, country, creator, color, created, last_editor, runtime, description, "URL", plot, name, alias, modified, "CompositionPosterPrimary_oid", "Date_oid", "CompositionActor_oid", "Director_oid") VALUES (?
+   response has no message; other values: {}
+   Movie rows: 0 | Poster rows: 0
+
+== step 5a: create movie 'Film X' with nothing but its name
+   action POSTMovie  body {'name': 'Film X'}  values {}
+executing method POSTMovie
+   FACADE LOGGED FATAL: (sqlite3.IntegrityError) NOT NULL constraint failed: Movie.date
+[SQL: INSERT INTO "Movie" (oid, date, country, creator, color, created, last_editor, runtime, description, "URL", plot, name, alias, modified, "CompositionPosterPrimary_oid", "Date_oid", "CompositionActor_oid", "Director_oid") VALUES (?
+   response has no message; other values: {}
+   Movie rows: 0 | Poster rows: 0 | Date rows: 3 | Director rows: 0
+
+== read one movie by its identifier (Film One)
+   action GETMovieId  body None  values {'ID': None}
+executing method GETMovieId
+   message holds 0 record(s)
+
+== step 14 shape: read a movie that does not exist
+   action GETMovieId  body None  values {'ID': 'Movie:does-not-exist'}
+executing method GETMovieId
+   message holds 0 record(s)
+
+== step 5b: delete movie 'Film X' only
+   action DELETEMovie  body None  values {'ID': None}
+executing method DELETEMovie
+   message holds 0 record(s)
+   Movie rows left (1 expected, 'Film One'): 0
+
+== identifier: create a director and give an identifier in the body
+   action POSTDirector  body {'name': 'Director Two', 'oid': 'Director:chosen-by-the-caller'}  values {}
+executing method POSTDirector
+   FACADE LOGGED FATAL: (sqlite3.IntegrityError) NOT NULL constraint failed: Director.creator
+[SQL: INSERT INTO "Director" (oid, creator, nationality, surname, created, last_editor, name, birth, description, modified) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: ('Director:chosen-by-the-caller', None, None, None, No
+   response has no message; other values: {}
+
+== unknown operation
+   action NoSuchOperation  body None  values {}
+   FACADE LOGGED FATAL: No action key found for ActionKey(name=, action=, context=, decorator=, config=, target=, source=FilmologyManagement, referencedBehaviour=)
+   response has no message; other values: {}
+
+== second pass, step 3: create a director with every field
+   action POSTDirector  body {'created': '2026-11-26', 'creator': 'tester', 'last_editor': 'tester', 'modified': '2026-11-26T12:00:00Z', 'description': 'd', 'surname': 'One', 'birth': '1900-01-01', 'nationality': 'n', 'name': 'Director One'}  values {}
+executing method POSTDirector
+   message holds 1 record(s)
+   {'oid': 'Director:a643388c-e9b5-11f1-b900-85af5cd38051', 'name': 'Director One'}
+   Director rows: 1
+
+== create a poster on its own
+   action POSTPoster  body {'name': 'film-one.png'}  values {}
+executing method POSTPoster
+   message holds 1 record(s)
+   {'oid': 'Poster:a64482c8-e9b5-11f1-b900-85af5cd38051', 'name': 'film-one.png'}
+   Poster rows: 1
+
+== second pass, step 4: movie 'Film One', empty color, date D1 (1927), poster given
+   action POSTMovie  body {'created': '2026-11-26', 'creator': 'tester', 'last_editor': 'tester', 'modified': '2026-11-26T12:00:00Z', 'description': 'd', 'alias': '', 'plot': 'p', 'runtime': '90', 'country': 'c', 'date': '1927-01-01', 'URL': 'u', 'name': 'Film One', 'color': '', 'Date': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051', 'CompositionPosterPrimary': 'Poster:a64482c8-e9b5-11f1-b900-85af5cd38051'}  values {}
+executing method POSTMovie
+   message holds 1 record(s)
+   {'oid': 'Movie:a6462e98-e9b5-11f1-b900-85af5cd38051', 'name': 'Film One', 'color': '', 'CompositionPosterPrimary': 'Poster:a64482c8-e9b5-11f1-b900-85af5cd38051', 'Date': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051'}
+   Movie rows: 1 | Poster rows: 1
+
+== movie 'Film Two' with no poster, no release date, no director
+   action POSTMovie  body {'created': '2026-11-26', 'creator': 'tester', 'last_editor': 'tester', 'modified': '2026-11-26T12:00:00Z', 'description': 'd', 'alias': '', 'plot': 'p', 'runtime': '90', 'country': 'c', 'date': '1927-01-01', 'URL': 'u', 'name': 'Film Two', 'color': 'color'}  values {}
+executing method POSTMovie
+   FACADE LOGGED FATAL: (sqlite3.IntegrityError) NOT NULL constraint failed: Movie.CompositionPosterPrimary_oid
+[SQL: INSERT INTO "Movie" (oid, date, country, creator, color, created, last_editor, runtime, description, "URL", plot, name, alias, modified, "CompositionPosterPrimary_oid", "Date_oid", "CompositionActor_oid", "
+   response has no message; other values: {}
+   Movie rows: 1 | Poster rows: 1
+
+== read ONE movie by its identifier (Film One); 1 record expected
+   action GETMovieId  body None  values {'ID': 'Movie:a6462e98-e9b5-11f1-b900-85af5cd38051'}
+executing method GETMovieId
+   message holds 1 record(s)
+   {'oid': 'Movie:a6462e98-e9b5-11f1-b900-85af5cd38051', 'name': 'Film One'}
+
+== read a movie that does not exist; 'not found' expected
+   action GETMovieId  body None  values {'ID': 'Movie:does-not-exist'}
+executing method GETMovieId
+   message holds 1 record(s)
+   {'oid': 'Movie:a6462e98-e9b5-11f1-b900-85af5cd38051', 'name': 'Film One'}
+
+== delete the date D1 that 'Film One' is released on; refusal expected
+   action DELETEDate  body None  values {'ID': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051'}
+executing method DELETEDate
+   message holds 3 record(s)
+   {'oid': 'Date:a6356a04-e9b5-11f1-b900-85af5cd38051', 'year': '1927'}
+   {'oid': 'Date:a6376d04-e9b5-11f1-b900-85af5cd38051', 'year': '927'}
+   {'oid': 'Date:a638b830-e9b5-11f1-b900-85af5cd38051', 'year': '[1, 2]'}
+   Date rows left (3 expected): 0 | Movie rows: 1
+
+== delete ONLY 'Film Two'
+   action DELETEMovie  body None  values {'ID': None}
+executing method DELETEMovie
+   message holds 1 record(s)
+   {'oid': 'Movie:a6462e98-e9b5-11f1-b900-85af5cd38051', 'name': 'Film One'}
+   Movie rows left (1 expected): 0 | Poster rows left: 1
+
+== check 3: read all dates while the store cannot be opened
+   action GETDate  body None  values {}
+   RAISED OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/21/e3q8)
+Traceback (most recent call last):
+  File "<scratch>/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 154, in __init__
+    self._dbapi_connection = engine.raw_connection()
+                             ~~~~~~~~~~~~~~~~~~~~~^^
+  File "<scratch>/venv/lib/python3.13/site-packages/sqlalchemy/engine/base.py", line 3303, in raw_connection
+    return self.pool.connect()
+           ~~~~~~~~~~~~~~~~~^^
+sqlite3.OperationalError: unable to open database file
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<scratch>/driver/run_baseline.py", line 89, in call
+    facade = initialize_facade(FACADE, request, response)
+  File "<scratch>/DigitalPy/digitalpy/testing/facade_utilities.py", line 54, in initialize_facade
+    facade = ObjectFactory.get_instance_of(
+        facade_class, dynamic_configuration={"request": request, "response": response, **dynamic_configuration}
+    )
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) unable to open database file
+(Background on this error at: https://sqlalche.me/e/21/e3q8)
